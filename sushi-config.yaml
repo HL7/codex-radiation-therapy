@@ -10,7 +10,19 @@ version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
-
+title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
+publisher:
+  name: HL7 International Clinical Interoperability Council
+  url: http://www.hl7.org/Special/committees/cic
+  email: ciclist@lists.HL7.org
+jurisdiction: urn:iso:std:iso:3166#US "United States of America"
+description: CodeX™ Radiation Therapy is an initiative
+  intended to assemble a core set of structured data elements for radiation therapy
+  electronic health records.
+license: CC0-1.0
+dependencies:
+  hl7.fhir.us.core: 3.1.0
+  hl7.fhir.us.mcode: current
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
