@@ -10,7 +10,7 @@ version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
-title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
+title: "CodeX™ Radiation Therapy"
 publisher:
   name: HL7 International Clinical Interoperability Council
   url: http://www.hl7.org/Special/committees/cic
