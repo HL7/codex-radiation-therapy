@@ -5,13 +5,13 @@
 
 Profile: RadiotherapyCourseSummary
 Parent: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary
-Id: RadiotherapyCourseSummary
+Id: codex-radiotherapy-course-summary
 Title: "Radiotherapy Course Summary"
 Description: "A Summary of the Treatment Progress in a Radiotherapy Course. 
 Whenever new contributions in the scope of the same Course are delivered, this resource is updated (no new resource created)."
 * obeys xrts-procedure-status
 * basedOn MS
-* basedOn ^short = "Should Reference a https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCoursePrescription" //only Reference(RadiotherapyCoursePrescription)
+* basedOn ^short = "Should Reference a http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-course-prescription" //only Reference(RadiotherapyCoursePrescription)
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
@@ -34,7 +34,7 @@ Usage: #example
 * id = "RadiotherapyCourseSummary-04-XRTS-Prostate" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCourseSummary"
+* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-course-summary"
 * meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept.text = "Curative"   

@@ -61,41 +61,29 @@ RuleSet: RadiotherapyPhasePrescriptionCommon
 * occurrenceTiming.repeat.period 0..1
 * occurrenceTiming.repeat.periodUnit 0..1 
 
-// Modelled in alignment with mCODE Teleradiotherapy Treatment Phase.
-Profile: TeleradiotherapyPhasePrescription
-Parent: ServiceRequest 
-Id: TeleradiotherapyPhasePrescription
-Title: "(Future) Teleradiotherapy Phase Prescription"
-Description: "A Teleradioherapy Phase Prescription is a request for one series of fractionated treatments using External Beam Radiotherapy. It can define treatment parameters such as modality or technique,
+// Modelled in alignment with Radiotherapy Treatment Phase moved here from mCODE.
+Profile: RadiotherapyPhasePrescription
+Parent:  ServiceRequest 
+Id:      codex-radiotherapy-phase-prescription
+Title: "(Future) Radiotherapy Phase Prescription"
+Description: "A Radioherapy Phase Prescription is a request for one series of fractionated treatments. It can define treatment parameters such as modality or technique,
 and prescribe dose to multiple targets."
 * insert RadiotherapyRequestCommon
 * insert RadiotherapyPhasePrescriptionCommon
-* code = RadiotherapyRequest#teleradiotherapy-phase-prescription "Teleradiotherapy Phase Prescription" 	
-
-// Modelled in alignment with mCODE Teleradiotherapy Treatment Phase.
-Profile: BrachytherapyPhasePrescription
-Parent: ServiceRequest 
-Id: BrachytherapyPhasePrescription
-Title: "(Future) Brachytherapy Phase Prescription"
-Description: "A Brachytherapy Phase Prescription is a request for one series of fractionated treatments using Brachytherapy. It can define treatment parameters such as modality or technique,
-and prescribe dose to multiple targets."
-* insert RadiotherapyRequestCommon
-* insert RadiotherapyPhasePrescriptionCommon
-* code = RadiotherapyRequest#brachytherapy-phase-prescription "Brachytherapy Phase Prescription" 	
-
+* code = ResourceIdentifierCS#codexrt-phase-prescription "Radiotherapy Phase Prescription" 	
 
 // -------- Example Instances ---------------------------------------------------------
 
-Instance: TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-04-XRTS-Prostate-Phase1
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 1."
 Usage: #example
-* id = "TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" //id of the FHIR Resource
+* id = "RadiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
@@ -134,16 +122,16 @@ Usage: #example
 * bodySite.text = "Prostate" 
 * note.text = "Free text note in Radiotherapy Prescription"
 
-Instance: TeleradiotherapyPhasePrescription-05-XRTS-Prostate-Phase2
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-05-XRTS-Prostate-Phase2
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 2."
 Usage: #example
-* id = "TeleradiotherapyPhasePrescription-05-XRTS-Prostate-Phase2" //id of the FHIR Resource
+* id = "RadiotherapyPhasePrescription-05-XRTS-Prostate-Phase2" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 19

@@ -6,12 +6,12 @@ InstanceOf: RadiotherapyCoursePrescription
 Description: "Radiotherapy Course Prescription example from Codex RTTD collection."
 Usage: #example
 * id = "RadiotherapyCoursePrescription-101-RTTD-BilateralBreast" //id of the FHIR Resource
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCoursePrescription"
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-course-prescription"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept.text = "Curative"   
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][1].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][1].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-sessions].valueUnsignedInt = 30
 // Prescription Target Site "Left Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-101-LeftBreast"
@@ -39,14 +39,14 @@ Usage: #example
 
 // --- Phase Prescriptions ---------------------------------------------------------------------------------
 
-Instance: TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+* id = "RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Left Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-101-LeftBreast"
@@ -68,14 +68,14 @@ Usage: #example
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
-Instance: TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost" //id of the FHIR Resource
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* id = "RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost" //id of the FHIR Resource
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 5
 // Prescription Target Site "Left Breast Boost"
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-102-LeftBreastBoost"
@@ -93,14 +93,14 @@ Usage: #example
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
-Instance: TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-103-RTTD-RightBreastTangents
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents" //id of the FHIR Resource
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+* id = "RadiotherapyPhasePrescription-103-RTTD-RightBreastTangents" //id of the FHIR Resource
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Right Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-103-RightBreast"
@@ -126,13 +126,13 @@ Usage: #example
 * id = "RadiotherapyCourseSummary-101-RTTD-BilateralBreast" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCourseSummary"
+* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-course-summary"
 * meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept.text = "Curative"   
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][1].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][1].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-sessions].valueUnsignedInt = 31
 // Prescription Target Site "Left Breast"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-101-LeftBreast"
@@ -160,17 +160,17 @@ Usage: #example
 
 // --- Phase Summaries ---------------------------------------------------------------------------------
 
-Instance: TeleradiotherapyTreatmentPhase-101-RTTD-LeftBreastTangents
-InstanceOf: TeleradiotherapyTreatmentPhase
-Description: "Teleradiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatmentPhase-101-RTTD-LeftBreastTangents
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyTreatmentPhase-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
+* id = "RadiotherapyTreatmentPhase-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-treatment-phase"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 25
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 25
 // Prescription Target Site "Left Breast"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-101-LeftBreast"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[totalDoseDelivered].valueQuantity.value = 5000 
@@ -180,7 +180,7 @@ Usage: #example
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
 * identifier[0].value = "Left Breast Tangents"
-* basedOn.reference = "ServiceRequest/TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents" 
+* basedOn.reference = "ServiceRequest/RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents" 
 * partOf.reference = "Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast" 
 * status = #completed
 * subject.reference = "Patient/Patient-101"
@@ -189,24 +189,24 @@ Usage: #example
 * bodySite = SCT#76752008 "Breast structure (body structure)" 
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
-Instance: TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost
-InstanceOf: TeleradiotherapyTreatmentPhase
-Description: "Teleradiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost" //id of the FHIR Resource
+* id = "RadiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 5
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-treatment-phase"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 5
 // Prescription Target Site "Left Breast Boost"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-102-LeftBreastBoost"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[totalDoseDelivered].valueQuantity.value = 1000 
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
 * identifier[0].value = "Left Breast Boost"
-* basedOn.reference = "ServiceRequest/TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost" 
+* basedOn.reference = "ServiceRequest/RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost" 
 * partOf.reference = "Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast" 
 * status = #completed
 * subject.reference = "Patient/Patient-101"
@@ -214,24 +214,24 @@ Usage: #example
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)" 
 
-Instance: TeleradiotherapyTreatmentPhase-103-RTTD-RightBreastTangents
-InstanceOf: TeleradiotherapyTreatmentPhase
-Description: "Teleradiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatmentPhase-103-RTTD-RightBreastTangents
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyTreatmentPhase-103-RTTD-RightBreastTangents" //id of the FHIR Resource
+* id = "RadiotherapyTreatmentPhase-103-RTTD-RightBreastTangents" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-treatment-phase"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 25
+* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 25
 // Prescription Target Site "Right Breast"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-103-RightBreast"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[totalDoseDelivered].valueQuantity.value = 5000 
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
 * identifier[0].value = "Right Breast Tangents"
-* basedOn.reference = "ServiceRequest/TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents" 
+* basedOn.reference = "ServiceRequest/RadiotherapyPhasePrescription-103-RTTD-RightBreastTangents" 
 * partOf.reference = "Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast" 
 * status = #completed
 * subject.reference = "Patient/Patient-101"
@@ -248,7 +248,7 @@ Usage: #example
 * id = "RadiotherapyVolume-101-LeftBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyVolume"
+* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-volume"
 * meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
@@ -269,7 +269,7 @@ Usage: #example
 * id = "RadiotherapyVolume-102-LeftBreastBoost" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyVolume"
+* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-volume"
 * meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
@@ -290,7 +290,7 @@ Usage: #example
 * id = "RadiotherapyVolume-103-RightBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyVolume"
+* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-volume"
 * meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
