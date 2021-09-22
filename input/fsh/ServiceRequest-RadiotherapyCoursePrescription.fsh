@@ -4,8 +4,8 @@
 //--------------------------------------------------------------------------------------------------------
 
 Profile: RadiotherapyCoursePrescription
-Parent: ServiceRequest
-Id: RadiotherapyCoursePrescription
+Parent:  ServiceRequest
+Id:      codex-radiotherapy-course-prescription
 Title: "(Future) Radiotherapy Course Prescription"
 Description: "Radiotherapy Course Prescription is the high-level request for Radiotherapy that may be fulfilled by one or multiple Phases. 
 Usually, the Course addresses one disease and anatomical treatment site and covers the whole treatment of that site."
@@ -17,7 +17,7 @@ Usually, the Course addresses one disease and anatomical treatment site and cove
 * extension[radiotherapy-dose-prescribed-to-volume].extension[fractionDosePrescribed] 0..0
 * extension[radiotherapy-dose-prescribed-to-volume].extension[fractionDosePrescribed] ^short = "Not used in this profile. See Phase Prescriptions for detailed Fractionation."
 * extension[radiotherapy-dose-prescribed-to-volume].extension[fractionDosePrescribed] ^definition = "Fraction dose is only defined in Phases, where all fractions are equivalent. On Course the number of fractions is summarized over all Phase Prescriptions, which may prescribe different dose per Fraction."
-* code = RadiotherapyRequest#radiotherapy-course-prescription "Radiotherapy Course Prescription" 	
+* code = ResourceIdentifierCS#codexrt-course-prescription "Radiotherapy Course Prescription" 	
 * occurrencePeriod only Period
 * occurrencePeriod MS
 
@@ -30,13 +30,13 @@ Usage: #example
 * id = "RadiotherapyCoursePrescription-04-XRTS-Prostate" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Added modification date of clinical contents as extension.
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCoursePrescription"
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-course-prescription"
 // * extension[concurrentTherapy].valueCodeableConcept = SCT#367336001 "Chemotherapy"
 // * extension[concurrentTherapy].valueCodeableConcept.text = "Chemotherapy"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept.text = "Curative"   
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 // * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-sessions].valueUnsignedInt = 44
 // Prescription Target Site "Prostate"
@@ -58,7 +58,7 @@ Usage: #example
 * identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456.2" 
 //* replaces.reference = ... //XRTSIntent."Predecessor" In FHIR, this can reference another resource instead of only identifier.
 * status = #active
-* code = RadiotherapyRequest#radiotherapy-course-prescription	"Radiotherapy Course Prescription" 	
+* code = ResourceIdentifierCS#codexrt-course-prescription	"Radiotherapy Course Prescription" 	
 * subject.reference = "Patient/Patient-6"
 * subject.display = "Pater Venkman"
 * occurrencePeriod.start = "2020-07-03T00:00:00+02:00"

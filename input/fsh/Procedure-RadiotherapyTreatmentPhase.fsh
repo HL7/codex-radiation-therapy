@@ -1,51 +1,124 @@
-//--------------------------------------------------------------------------------------------------------
-// First drafts for XRTS/RTTD discussions. Not reviewed with IHE-RO XRTS yet.
-// Contact: martin.vonsiebenthal@varian.com
-//--------------------------------------------------------------------------------------------------------
 
-RuleSet: RadiotherapyTreatmentPhaseCommon
-* obeys xrts-procedure-status
-* partOf MS
-* partOf only Reference(RadiotherapyCourseSummary)
-* basedOn MS
+RuleSet: RadiotherapyCommon
+* category 1.. MS
+* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
 * performedPeriod.end MS
 * performedPeriod.end ^short = "An end date is expected if the status is 'stopped' or 'completed'"
+* subject only Reference(CancerPatient)
+* extension and category MS
 
-Profile: TeleradiotherapyTreatmentPhase
-Parent: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase
-Id: TeleradiotherapyTreatmentPhase
-Title: "Teleradiotherapy Treatment Phase"
-Description: "A Summary of the Treatment Progress over an External Beam Treatment Phase. 
-Whenever new contributions in the scope of the same Phase are delivered, this resource is updated (no new resource created)."
-* insert RadiotherapyTreatmentPhaseCommon
+// Combined from TeleradiotherapyTreatmentPhase and BrachytherapyTreatmentPhase that were moved here from mCODE
+Profile:  RadiotherapyTreatmentPhase
+Parent:   USCoreProcedure
+Id:       codex-radiotherapy-treatment-phase
+Title: "Radiotherapy Treatment Phase"
+Description: "A summary of a Phase of radiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions.  
+A Phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used,  all treatment volumes do not necessarily receive the same total dose during a phase."
 * ^status = #draft
-* basedOn ^short = "Should Reference a https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription" // only Reference(TeleradiotherapyPhasePrescription)
+* insert RadiotherapyCommon
+* partOf only Reference(RadiotherapyCourseSummary)
+* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyCourseSummary-conforming Procedure resource."
+* extension contains
+    RadiotherapyModality named modality 0..1 MS and
+    RadiotherapyTechnique named technique 0..1 MS and
+    RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
+    RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
+* extension[modality].value[x] from TeleradiotherapyModalityVS (required)
+* extension[modality] ^short = "Radiotherapy Modality"
+* extension[modality] ^definition = "The modality (radiation type) for the external beam radiation therapy."
+* extension[technique].value[x] from TeleradiotherapyTechniqueVS (required)
+* extension[technique] ^short = "Radiotherapy Technique"
+* extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
+* extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this phase, not including dose from any other phase. For summary over multiple phases, see Radiotherapy Course Summary."
+* extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
+* extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
+//* basedOn MS when prescription is modelled
+//* basedOn ^short = "Should Reference a http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription" // only Reference(RadiotherapyPhasePrescription)
+* code = ResourceIdentifierCS#codexrt-treatment-phase 
+* bodySite from RadiotherapyTreatmentLocationVS (required)
+* bodySite ^short = "All body structure(s) treated in this phase"
+* bodySite ^definition = "Coded body structure(s) treated in this phase of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
+* obeys xrts-procedure-status
 
-Profile: BrachytherapyTreatmentPhase
-Parent: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase
-Id: BrachytherapyTreatmentPhase
-Title: "Brachytherapy Treatment Phase"
-Description: "A Summary of the Treatment Progress over a Brachytherapy Treatment Phase. 
-Whenever new contributions in the scope of the same Phase are delivered, this resource is updated (no new resource created)."
-* insert RadiotherapyTreatmentPhaseCommon
-* ^status = #draft
-* basedOn ^short = "Should Reference a https://profiles.ihe.net/RO.XRTS/StructureDefinition/BrachytherapyPhasePrescription" // only Reference(BrachytherapyPhasePrescription)
+//Moved from mCODE because only used in Phase Summaries
+Extension: RadiotherapyFractionsDelivered
+Id:        mcode-radiotherapy-fractions-delivered
+Title:     "Radiotherapy Fractions Delivered"
+Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
+* insert ExtensionContext(Procedure)
+* value[x] only unsignedInt
+* value[x] 1..1
 
 // -------- Example Instances ---------------------------------------------------------
 
-Instance: TeleradiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1
-InstanceOf: TeleradiotherapyTreatmentPhase
+Instance: radiotherapy-treatment-phase-low-dose-rate-temporary
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Example of a brachytherapy therapy phase."
+* status = #completed "completed"
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
+* code = ResourceIdentifierCS#codexrt-treatment-phase
+* extension[modality].valueCodeableConcept = SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
+* extension[technique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+* subject = Reference(cancer-patient-john-anyperson)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* performedPeriod.start = "2019-03-01"
+* performedPeriod.end = "2019-03-01"
+* reasonReference = Reference(primary-cancer-condition-nsclc)
+* extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(john-anyperson-treatment-volume)
+
+Instance: radiotherapy-treatment-phase-chest-wall-jenny-m
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Example of radiotherapy treatment phase involving external beam radiation to chest wall and regional node radiation"
+* status = #completed "completed"
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
+* code = ResourceIdentifierCS#codexrt-treatment-phase
+* partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
+* performedPeriod.start = "2018-05-01"
+* performedPeriod.end = "2018-06-29"
+* extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[technique].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+* extension[fractionsDelivered].valueUnsignedInt = 25
+* extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToVolume][1].extension[volume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
+* extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* subject = Reference(cancer-patient-jenny-m)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+
+Instance: Radiotherapy-treatment-phase-boost-jenny-m
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Example of radiotherapy treatment boost phase"
+* status = #completed "completed"
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
+* code = ResourceIdentifierCS#codexrt-treatment-phase
+* partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
+* performedPeriod.start = "2018-08-01"
+* performedPeriod.end = "2018-09-30"
+* extension[modality].valueCodeableConcept = SCT#45643008  "External beam radiation therapy using electrons (procedure)"
+* extension[technique].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy"
+* extension[fractionsDelivered].valueUnsignedInt = 5
+* extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToVolume].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
+* subject = Reference(cancer-patient-jenny-m)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+
+
+Instance: RadiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1
+InstanceOf: RadiotherapyTreatmentPhase
 Description: "Treatment Summary for first phase"
 Usage: #example
-* id = "TeleradiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1" //id of the FHIR Resource
+* id = "RadiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 2
+* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-treatment-phase"
+* extension[http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 2
 // Prescription Target Site "Prostate"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate"
 * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[totalDoseDelivered].valueQuantity.value = 360 
@@ -58,11 +131,12 @@ Usage: #example
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
 * identifier.system = "http://varian.com/fhir/identifier/radiotherapPrescriptionId"
 * identifier.value = "Prostate-Phase1"
-* basedOn.reference = "ServiceRequest/TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" 
+* basedOn.reference = "ServiceRequest/RadiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" 
 * basedOn.display = "Prostate-Phase1"
 * partOf.reference = "Procedure/RadiotherapyCourseSummary-04-XRTS-Prostate" //Can reference another summary of larger scope
 * status = #in-progress
-//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
+* code = ResourceIdentifierCS#codexrt-treatment-phase
 * subject.reference = "Patient/Patient-6"
 * subject.display = "Peter Venkman"
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
