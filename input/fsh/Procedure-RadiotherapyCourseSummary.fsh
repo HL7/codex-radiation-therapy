@@ -34,8 +34,8 @@ Usage: #example
 * id = "RadiotherapyCourseSummary-04-XRTS-Prostate" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile[0] = Canonical(RadiotherapyCourseSummary)
-* meta.profile[1] = MCodeCourseSummary
+* meta.profile[+] = Canonical(RadiotherapyCourseSummary)
+* meta.profile[+] = MCodeCourseSummary
 * extension[MCodeProcedureIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"   
@@ -46,13 +46,15 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 360 
   * extension[fractionsDelivered].valueUnsignedInt = 2 
 // Target Volume "Pelv Ns"
-* extension[MCodeDoseDelivered][+].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
-* extension[MCodeDoseDelivered][=].extension[totalDoseDelivered].valueQuantity.value = 360 
-* extension[MCodeDoseDelivered][=].extension[fractionsDelivered].valueUnsignedInt = 2 
+* extension[MCodeDoseDelivered][+]
+  * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
+  * extension[totalDoseDelivered].valueQuantity.value = 360 
+  * extension[fractionsDelivered].valueUnsignedInt = 2 
 // Target Volume "Sem Vs"
-* extension[MCodeDoseDelivered][+].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
-* extension[MCodeDoseDelivered][=].extension[totalDoseDelivered].valueQuantity.value = 360 
-* extension[MCodeDoseDelivered][=].extension[fractionsDelivered].valueUnsignedInt = 2 
+* extension[MCodeDoseDelivered][+]
+  * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
+  * extension[totalDoseDelivered].valueQuantity.value = 360 
+  * extension[fractionsDelivered].valueUnsignedInt = 2 
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
 * identifier.system = "http://varian.com/fhir/identifier/radiotherapyCourseId" //Use same id as for Course
 * identifier.value = "Prostate-2Phases"

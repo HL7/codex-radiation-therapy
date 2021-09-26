@@ -26,19 +26,22 @@ A Phase consists of a set of identical fractions. In this context, identical mea
     RadiotherapyTechnique named technique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
-* extension[modality].value[x] from TeleradiotherapyModalityVS (required)
-* extension[modality] ^short = "Radiotherapy Modality"
-* extension[modality] ^definition = "The modality (radiation type) for the external beam radiation therapy."
-* extension[technique].value[x] from TeleradiotherapyTechniqueVS (required)
-* extension[technique] ^short = "Radiotherapy Technique"
-* extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
-* extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
-* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
-* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
-* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
-* extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this phase, not including dose from any other phase. For summary over multiple phases, see Radiotherapy Course Summary."
-* extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
-* extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
+* extension[modality]
+  * value[x] from TeleradiotherapyModalityVS (required)
+  * ^short = "Radiotherapy Modality"
+  * ^definition = "The modality (radiation type) for the external beam radiation therapy."
+* extension[technique]
+  * value[x] from TeleradiotherapyTechniqueVS (required)
+  * ^short = "Radiotherapy Technique"
+  * ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
+* extension[doseDeliveredToVolume]
+  * extension[fractionsDelivered] 0..0
+    * ^short = "Not used in this profile."
+    * ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
+  * extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this phase, not including dose from any other phase. For summary over multiple phases, see Radiotherapy Course Summary."
+* extension[fractionsDelivered] 
+  * ^short = "Number of Fractions Delivered"
+  * ^definition = "The number of fractions delivered during this phase."
 //* basedOn MS when prescription is modelled
 //* basedOn ^short = "Should Reference a http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription" // only Reference(RadiotherapyPhasePrescription)
 * code = ResourceIdentifierCS#codexrt-treatment-phase 
@@ -85,10 +88,12 @@ Description: "Example of radiotherapy treatment phase involving external beam ra
 * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 * extension[technique].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
-* extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-* extension[doseDeliveredToVolume][1].extension[volume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
-* extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+  * extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
+  * extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
@@ -104,8 +109,9 @@ Description: "Example of radiotherapy treatment boost phase"
 * extension[modality].valueCodeableConcept = SCT#45643008  "External beam radiation therapy using electrons (procedure)"
 * extension[technique].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 5
-* extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-* extension[doseDeliveredToVolume].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
+* extension[doseDeliveredToVolume]
+  * extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+  * extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
@@ -120,17 +126,21 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[fractionsDelivered].valueUnsignedInt = 2
 // Prescription Target Site "Prostate"
-* extension[doseDeliveredToVolume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate"
-* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity.value = 360 
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate"
+  * extension[totalDoseDelivered].valueQuantity.value = 360 
 // Prescription Target Site "Pelv Ns"
-* extension[doseDeliveredToVolume][1].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
-* extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity.value = 360 
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
+  * extension[totalDoseDelivered].valueQuantity.value = 360 
 // Prescription Target Site "Sem Vs"
-* extension[doseDeliveredToVolume][2].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
-* extension[doseDeliveredToVolume][2].extension[totalDoseDelivered].valueQuantity.value = 360 
-* identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-* identifier.system = "http://varian.com/fhir/identifier/radiotherapPrescriptionId"
-* identifier.value = "Prostate-Phase1"
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
+  * extension[totalDoseDelivered].valueQuantity.value = 360 
+* identifier
+  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+  * system = "http://varian.com/fhir/identifier/radiotherapPrescriptionId"
+  * value = "Prostate-Phase1"
 * basedOn.reference = "ServiceRequest/RadiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" 
 * basedOn.display = "Prostate-Phase1"
 * partOf.reference = "Procedure/RadiotherapyCourseSummary-04-XRTS-Prostate" //Can reference another summary of larger scope
