@@ -117,17 +117,17 @@ Usage: #example
 * id = "RadiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-treatment-phase"
-* extension[http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 2
+* meta.profile = Canonical(RadiotherapyTreatmentPhase)
+* extension[fractionsDelivered].valueUnsignedInt = 2
 // Prescription Target Site "Prostate"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[totalDoseDelivered].valueQuantity.value = 360 
+* extension[doseDeliveredToVolume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate"
+* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity.value = 360 
 // Prescription Target Site "Pelv Ns"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][1].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][1].extension[totalDoseDelivered].valueQuantity.value = 360 
+* extension[doseDeliveredToVolume][1].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
+* extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity.value = 360 
 // Prescription Target Site "Sem Vs"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][2].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][2].extension[totalDoseDelivered].valueQuantity.value = 360 
+* extension[doseDeliveredToVolume][2].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
+* extension[doseDeliveredToVolume][2].extension[totalDoseDelivered].valueQuantity.value = 360 
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
 * identifier.system = "http://varian.com/fhir/identifier/radiotherapPrescriptionId"
 * identifier.value = "Prostate-Phase1"

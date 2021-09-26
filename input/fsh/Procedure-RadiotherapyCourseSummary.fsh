@@ -4,7 +4,7 @@
 //--------------------------------------------------------------------------------------------------------
 
 Profile: RadiotherapyCourseSummary
-Parent: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary
+Parent: MCodeCourseSummary
 Id: codex-radiotherapy-course-summary
 Title: "Radiotherapy Course Summary"
 Description: "A Summary of the Treatment Progress in a Radiotherapy Course. 
@@ -12,7 +12,6 @@ Whenever new contributions in the scope of the same Course are delivered, this r
 * obeys xrts-procedure-status
 * basedOn MS
 * basedOn ^short = "Should Reference a http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-course-prescription" //only Reference(RadiotherapyCoursePrescription)
-* performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
 * performedPeriod.end MS
@@ -22,7 +21,8 @@ Whenever new contributions in the scope of the same Course are delivered, this r
 // preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown
 Invariant:  xrts-procedure-status
 Description: "Only the following status values are supported for Radiotherapy Summaries: in-progress | not-done | on-hold | stopped | completed"
-Expression: "status = 'in-progress' or status = 'not-done' or status = 'on-hold' or status = 'stopped' or status = 'completed'"
+Expression: "status = 'preparation' or status = 'in-progress' or status = 'not-done' or status = 'on-hold' or status = 'stopped' or status = 'completed'"
+//TODO Period.start when delivered or planned to be delivered. If status preparation then start date must be in the future or still undefined.
 Severity:   #error
 
 // -------- Example Instances ---------------------------------------------------------
@@ -34,23 +34,25 @@ Usage: #example
 * id = "RadiotherapyCourseSummary-04-XRTS-Prostate" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-course-summary"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept.text = "Curative"   
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-sessions].valueUnsignedInt = 2
+* meta.profile[0] = Canonical(RadiotherapyCourseSummary)
+* meta.profile[1] = MCodeCourseSummary
+* extension[MCodeProcedureIntent]
+  * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+    * text = "Curative"   
+* extension[MCodeSessions].valueUnsignedInt = 2
 // Target Volume "Prostate"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[totalDoseDelivered].valueQuantity.value = 360 
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][0].extension[fractionsDelivered].valueUnsignedInt = 2 
+* extension[MCodeDoseDelivered][+]
+  * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate"
+  * extension[totalDoseDelivered].valueQuantity.value = 360 
+  * extension[fractionsDelivered].valueUnsignedInt = 2 
 // Target Volume "Pelv Ns"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][1].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][1].extension[totalDoseDelivered].valueQuantity.value = 360 
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][1].extension[fractionsDelivered].valueUnsignedInt = 2 
+* extension[MCodeDoseDelivered][+].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
+* extension[MCodeDoseDelivered][=].extension[totalDoseDelivered].valueQuantity.value = 360 
+* extension[MCodeDoseDelivered][=].extension[fractionsDelivered].valueUnsignedInt = 2 
 // Target Volume "Sem Vs"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][2].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][2].extension[totalDoseDelivered].valueQuantity.value = 360 
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume][2].extension[fractionsDelivered].valueUnsignedInt = 2 
+* extension[MCodeDoseDelivered][+].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
+* extension[MCodeDoseDelivered][=].extension[totalDoseDelivered].valueQuantity.value = 360 
+* extension[MCodeDoseDelivered][=].extension[fractionsDelivered].valueUnsignedInt = 2 
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
 * identifier.system = "http://varian.com/fhir/identifier/radiotherapyCourseId" //Use same id as for Course
 * identifier.value = "Prostate-2Phases"

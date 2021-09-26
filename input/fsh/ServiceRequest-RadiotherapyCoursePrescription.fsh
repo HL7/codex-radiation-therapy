@@ -12,8 +12,8 @@ Usually, the Course addresses one disease and anatomical treatment site and cove
 * ^status = #draft
 * insert RadiotherapyRequestCommon // See service-Request-RadiotherapyPhasePrescripion.fsh
 * extension contains
-    http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent named mcode-treatment-intent 0..1 MS and
-    http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-sessions named mcode-radiotherapy-sessions 0..1 MS
+    MCodeProcedureIntent named procedure-intent 0..1 MS and
+    MCodeSessions named mcode-radiotherapy-sessions 0..1 MS
 * extension[radiotherapy-dose-prescribed-to-volume].extension[fractionDosePrescribed] 0..0
 * extension[radiotherapy-dose-prescribed-to-volume].extension[fractionDosePrescribed] ^short = "Not used in this profile. See Phase Prescriptions for detailed Fractionation."
 * extension[radiotherapy-dose-prescribed-to-volume].extension[fractionDosePrescribed] ^definition = "Fraction dose is only defined in Phases, where all fractions are equivalent. On Course the number of fractions is summarized over all Phase Prescriptions, which may prescribe different dose per Fraction."
@@ -30,27 +30,27 @@ Usage: #example
 * id = "RadiotherapyCoursePrescription-04-XRTS-Prostate" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Added modification date of clinical contents as extension.
-* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-course-prescription"
+* meta.profile = Canonical(RadiotherapyCoursePrescription)
 // * extension[concurrentTherapy].valueCodeableConcept = SCT#367336001 "Chemotherapy"
 // * extension[concurrentTherapy].valueCodeableConcept.text = "Chemotherapy"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent].valueCodeableConcept.text = "Curative"   
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-sessions].valueUnsignedInt = 44
+* extension[procedure-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[procedure-intent].valueCodeableConcept.text = "Curative"   
+* extension[MCodeModality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+// * extension[MCodeTechnique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+// * extension[MCodeTechnique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+* extension[MCodeSessions].valueUnsignedInt = 44
 // Prescription Target Site "Prostate"
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate" 
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[totalDosePrescribed].valueQuantity.value = 8300 //unit cGy is automatically added because fixed in the profile 
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[fractionsPrescribed].valuePositiveInt = 44 
+* extension[radiotherapy-dose-prescribed-to-volume][+].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate" 
+* extension[radiotherapy-dose-prescribed-to-volume][=].extension[totalDosePrescribed].valueQuantity.value = 8300 //unit cGy is automatically added because fixed in the profile 
+* extension[radiotherapy-dose-prescribed-to-volume][=].extension[fractionsPrescribed].valuePositiveInt = 44 
 // Prescription Target Site "Pelv Ns"
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[totalDosePrescribed].valueQuantity.value = 4500 
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[fractionsPrescribed].valuePositiveInt = 25 
+* extension[radiotherapy-dose-prescribed-to-volume][+].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
+* extension[radiotherapy-dose-prescribed-to-volume][=].extension[totalDosePrescribed].valueQuantity.value = 4500 
+* extension[radiotherapy-dose-prescribed-to-volume][=].extension[fractionsPrescribed].valuePositiveInt = 25 
 // Prescription Target Site "Sem Vs"
-* extension[radiotherapy-dose-prescribed-to-volume][2].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
-* extension[radiotherapy-dose-prescribed-to-volume][2].extension[totalDosePrescribed].valueQuantity.value = 7920 
-* extension[radiotherapy-dose-prescribed-to-volume][2].extension[fractionsPrescribed].valuePositiveInt = 44 
+* extension[radiotherapy-dose-prescribed-to-volume][+].extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
+* extension[radiotherapy-dose-prescribed-to-volume][=].extension[totalDosePrescribed].valueQuantity.value = 7920 
+* extension[radiotherapy-dose-prescribed-to-volume][=].extension[fractionsPrescribed].valuePositiveInt = 44 
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyCourseId"
 * identifier[0].value = "Prostate-2Phases"

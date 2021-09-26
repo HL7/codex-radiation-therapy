@@ -1,6 +1,6 @@
 
 Profile: RadiotherapyVolume
-Parent:  http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume 
+Parent:  MCodeVolume 
 Id:      codex-radiotherapy-volume
 Title: "Radiotherapy Volume"
 Description: "A volume of the body used in Radiotherapy planning or treatment delivery. This corresponds to the Conceptual Volume in DICOM."
@@ -33,8 +33,8 @@ Usage: #example
 * id = "RadiotherapyVolume-01-PTV50" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-volume"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
+* meta.profile[0] = Canonical(RadiotherapyVolume)
+* meta.profile[1] = MCodeVolume
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
 * identifier[0].value = "PTV50" // display id
@@ -51,8 +51,8 @@ Usage: #example
 * id = "RadiotherapyVolume-02-PTV64" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-volume"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
+* meta.profile[0] = Canonical(RadiotherapyVolume)
+* meta.profile[1] = MCodeVolume
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
 * identifier[0].value = "PTV64" // display id
@@ -69,8 +69,8 @@ Usage: #example
 * id = "RadiotherapyVolume-03-Prostate" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-volume"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
+* meta.profile[0] = Canonical(RadiotherapyVolume)
+* meta.profile[1] = MCodeVolume
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
 * identifier[0].value = "Prostate" // display id
@@ -87,8 +87,8 @@ Usage: #example
 * id = "RadiotherapyVolume-04-PelvNs" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-volume"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
+* meta.profile[0] = Canonical(RadiotherapyVolume)
+* meta.profile[1] = MCodeVolume
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
 * identifier[0].value = "Pelv Ns" // display id
@@ -105,8 +105,8 @@ Usage: #example
 * id = "RadiotherapyVolume-05-SemVs" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-volume"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
+* meta.profile[0] = Canonical(RadiotherapyVolume)
+* meta.profile[1] = MCodeVolume
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
 * identifier[0].value = "Sem Vs" // display id

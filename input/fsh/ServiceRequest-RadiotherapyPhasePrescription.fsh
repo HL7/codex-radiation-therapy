@@ -10,11 +10,11 @@ RuleSet: RadiotherapyRequestCommon
 // * meta.lastUpdated MS
 * extension MS 
 * extension contains
-    http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality named mcode-radiotherapy-modality 0..* MS and
-    http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique named mcode-radiotherapy-technique 0..* and    
+    MCodeModality named radiotherapy-modality 0..* MS and
+    MCodeTechnique named radiotherapy-technique 0..* and    
     radiotherapy-dose-prescribed-to-volume named radiotherapy-dose-prescribed-to-volume 0..* MS
-* extension[mcode-radiotherapy-modality].value[x] from http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs (required) //Probably required in mCODE prescription.
-* extension[mcode-radiotherapy-technique].value[x] from http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-technique-vs (required) //Probably  required in mCODE prescription.
+* extension[radiotherapy-modality].value[x] from MCodeModalityVS (required) 
+* extension[radiotherapy-technique].value[x] from MCodeTechniqueVS (required) 
 * identifier MS
 * identifier.system MS
 * identifier.value 1..1 MS
@@ -48,7 +48,7 @@ RuleSet: RadiotherapyPhasePrescriptionCommon
     radiotherapy-fractions-prescribed named radiotherapy-fractions-prescribed 1..1 MS and
     radiotherapy-energy named radiotherapy-energy 0..* and
     radiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..*
-* extension[mcode-radiotherapy-technique] MS
+* extension[radiotherapy-technique] MS
 * extension[radiotherapy-dose-prescribed-to-volume] 0..* MS
 * extension[radiotherapy-dose-prescribed-to-volume].extension[fractionsPrescribed] 0..0
 * extension[radiotherapy-dose-prescribed-to-volume].extension[fractionsPrescribed] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
@@ -81,10 +81,10 @@ Usage: #example
 * id = "RadiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
-* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+* meta.profile = Canonical(RadiotherapyPhasePrescription)
+* extension[radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Prostate"
@@ -129,10 +129,10 @@ Usage: #example
 * id = "RadiotherapyPhasePrescription-05-XRTS-Prostate-Phase2" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
-* meta.profile = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codex-radiotherapy-phase-prescription"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+* meta.profile = Canonical(RadiotherapyPhasePrescription)
+* extension[radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 19
 // Prescription Target Site "Prostate"
