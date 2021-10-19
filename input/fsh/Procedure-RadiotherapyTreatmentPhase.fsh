@@ -22,18 +22,9 @@ A Phase consists of a set of identical fractions. In this context, identical mea
 * partOf only Reference(RadiotherapyCourseSummary)
 * partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyCourseSummary-conforming Procedure resource."
 * extension contains
-    RadiotherapyModality named modality 0..1 MS and
-    RadiotherapyTechnique named technique 0..1 MS and
+    MCodeModalityAndTechnique named modalityAndTechnique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
-* extension[modality]
-  * value[x] from TeleradiotherapyModalityVS (required)
-  * ^short = "Radiotherapy Modality"
-  * ^definition = "The modality (radiation type) for the external beam radiation therapy."
-* extension[technique]
-  * value[x] from TeleradiotherapyTechniqueVS (required)
-  * ^short = "Radiotherapy Technique"
-  * ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 * extension[doseDeliveredToVolume]
   * extension[fractionsDelivered] 0..0
     * ^short = "Not used in this profile."
@@ -67,8 +58,9 @@ Description: "Example of a brachytherapy therapy phase."
 * status = #completed "completed"
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * code = ResourceIdentifierCS#codexrt-treatment-phase
-* extension[modality].valueCodeableConcept = SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
-* extension[technique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+* extension[modalityAndTechnique][+]
+  * extension[modality].valueCodeableConcept = SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
+  * extension[technique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
 * subject = Reference(cancer-patient-john-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 * performedPeriod.start = "2019-03-01"
@@ -85,8 +77,9 @@ Description: "Example of radiotherapy treatment phase involving external beam ra
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[technique].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+* extension[modalityAndTechnique][+]
+  * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
@@ -106,8 +99,9 @@ Description: "Example of radiotherapy treatment boost phase"
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-08-01"
 * performedPeriod.end = "2018-09-30"
-* extension[modality].valueCodeableConcept = SCT#45643008  "External beam radiation therapy using electrons (procedure)"
-* extension[technique].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy"
+* extension[modalityAndTechnique][+]
+  * extension[modality].valueCodeableConcept = SCT#45643008  "External beam radiation therapy using electrons (procedure)"
+  * extension[technique].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume]
   * extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
@@ -116,11 +110,11 @@ Description: "Example of radiotherapy treatment boost phase"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 
-Instance: RadiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1
+Instance: RadiotherapyTreatmentPhase-05-Prostate-Phase1
 InstanceOf: RadiotherapyTreatmentPhase
 Description: "Treatment Summary for first phase"
 Usage: #example
-* id = "RadiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1" //id of the FHIR Resource
+* id = "RadiotherapyTreatmentPhase-05-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = Canonical(RadiotherapyTreatmentPhase)
@@ -141,9 +135,9 @@ Usage: #example
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = "http://varian.com/fhir/identifier/radiotherapPrescriptionId"
   * value = "Prostate-Phase1"
-* basedOn.reference = "ServiceRequest/RadiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" 
+* basedOn.reference = "ServiceRequest/RadiotherapyPhasePrescription-04-Prostate-Phase1" 
 * basedOn.display = "Prostate-Phase1"
-* partOf.reference = "Procedure/RadiotherapyCourseSummary-04-XRTS-Prostate" //Can reference another summary of larger scope
+* partOf.reference = "Procedure/RadiotherapyCourseSummary-04-Prostate" //Can reference another summary of larger scope
 * status = #in-progress
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * code = ResourceIdentifierCS#codexrt-treatment-phase

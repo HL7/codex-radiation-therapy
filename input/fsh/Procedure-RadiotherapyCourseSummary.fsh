@@ -27,11 +27,11 @@ Severity:   #error
 
 // -------- Example Instances ---------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-04-XRTS-Prostate
+Instance: RadiotherapyCourseSummary-04-Prostate
 InstanceOf: RadiotherapyCourseSummary
 Description: "Treatment Summary over Radiotherapy Course with all elements expected in XRTS."
 Usage: #example
-* id = "RadiotherapyCourseSummary-04-XRTS-Prostate" //id of the FHIR Resource
+* id = "RadiotherapyCourseSummary-04-Prostate" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
@@ -39,19 +39,19 @@ Usage: #example
 * extension[MCodeProcedureIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"   
-* extension[MCodeSessions].valueUnsignedInt = 2
+* extension[actualNumberOfSessions].valueUnsignedInt = 2
 // Target Volume "Prostate"
-* extension[MCodeDoseDelivered][+]
+* extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 360 
   * extension[fractionsDelivered].valueUnsignedInt = 2 
 // Target Volume "Pelv Ns"
-* extension[MCodeDoseDelivered][+]
+* extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-04-PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 360 
   * extension[fractionsDelivered].valueUnsignedInt = 2 
 // Target Volume "Sem Vs"
-* extension[MCodeDoseDelivered][+]
+* extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-05-SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 360 
   * extension[fractionsDelivered].valueUnsignedInt = 2 

@@ -10,11 +10,8 @@ RuleSet: RadiotherapyRequestCommon
 // * meta.lastUpdated MS
 * extension MS 
 * extension contains
-    MCodeModality named modality 0..* MS and
-    MCodeTechnique named technique 0..* and    
+    MCodeModalityAndTechnique named modalityAndTechnique 0..* MS and  
     radiotherapy-dose-prescribed-to-volume named dose-prescribed-to-volume 0..* MS
-* extension[modality].value[x] from MCodeModalityVS (required) 
-* extension[technique].value[x] from MCodeTechniqueVS (required) 
 * identifier MS
 * identifier.system MS
 * identifier.value 1..1 MS
@@ -48,7 +45,6 @@ RuleSet: RadiotherapyPhasePrescriptionCommon
     radiotherapy-fractions-prescribed named fractions-prescribed 1..1 MS and
     radiotherapy-energy named energy 0..* and
     radiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..*
-* extension[technique] MS
 * extension[dose-prescribed-to-volume] 0..* MS
   * extension[fractionsPrescribed] 0..0
     * ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
@@ -74,18 +70,19 @@ and prescribe dose to multiple targets."
 
 // -------- Example Instances ---------------------------------------------------------
 
-Instance: RadiotherapyPhasePrescription-04-XRTS-Prostate-Phase1
+Instance: RadiotherapyPhasePrescription-04-Prostate-Phase1
 InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 1."
 Usage: #example
-* id = "RadiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" //id of the FHIR Resource
+* id = "RadiotherapyPhasePrescription-04-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
-* extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[technique][+]
-  * valueCodeableConcept.coding[+] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  * valueCodeableConcept.coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+* extension[modalityAndTechnique][+]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+]
+    * valueCodeableConcept.coding[+] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+    * valueCodeableConcept.coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Prostate"
@@ -110,7 +107,7 @@ Usage: #example
 * identifier[+]
   * system = "urn:dicom:uid"
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456" 
-* basedOn.reference = "ServiceRequest/RadiotherapyCoursePrescription-04-XRTS-Prostate" //Intent that this prescription bases on
+* basedOn.reference = "ServiceRequest/RadiotherapyCoursePrescription-04-Prostate" //Intent that this prescription bases on
 //* replaces.reference = "ServiceRequest/RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
 * subject.reference = "Patient/Patient-6"
@@ -128,18 +125,19 @@ Usage: #example
 * bodySite.text = "Prostate" 
 * note.text = "Free text note in Radiotherapy Prescription"
 
-Instance: RadiotherapyPhasePrescription-05-XRTS-Prostate-Phase2
+Instance: RadiotherapyPhasePrescription-05-Prostate-Phase2
 InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 2."
 Usage: #example
-* id = "RadiotherapyPhasePrescription-05-XRTS-Prostate-Phase2" //id of the FHIR Resource
+* id = "RadiotherapyPhasePrescription-05-Prostate-Phase2" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
-* extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[technique][+]
-  * valueCodeableConcept.coding[+] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  * valueCodeableConcept.coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+* extension[modalityAndTechnique][+]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+]
+    * valueCodeableConcept.coding[+] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+    * valueCodeableConcept.coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[fractions-prescribed].valuePositiveInt = 19
 // Prescription Target Site "Prostate"
@@ -159,7 +157,7 @@ Usage: #example
 * identifier[+]
   * system = "urn:dicom:uid"
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456" 
-* basedOn.reference = "ServiceRequest/RadiotherapyCoursePrescription-04-XRTS-Prostate" //Intent that this prescription bases on
+* basedOn.reference = "ServiceRequest/RadiotherapyCoursePrescription-04-Prostate" //Intent that this prescription bases on
 * basedOn.display =  "Prostate-2Phases"
 //* replaces.reference = "ServiceRequest/RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
