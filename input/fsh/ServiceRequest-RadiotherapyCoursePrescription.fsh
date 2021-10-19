@@ -24,11 +24,11 @@ Usually, the Course addresses one disease and anatomical treatment site and cove
 
 // -------- Example Instances ---------------------------------------------------------
 
-Instance: RadiotherapyCoursePrescription-04-XRTS-Prostate
+Instance: RadiotherapyCoursePrescription-04-Prostate
 InstanceOf: RadiotherapyCoursePrescription
 Description: "Radiotherapy CoursePrescription with elements of IHE-RO XRTS profile for a prostate example."
 Usage: #example
-* id = "RadiotherapyCoursePrescription-04-XRTS-Prostate" //id of the FHIR Resource
+* id = "RadiotherapyCoursePrescription-04-Prostate" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Added modification date of clinical contents as extension.
 * meta.profile = Canonical(RadiotherapyCoursePrescription)
@@ -40,7 +40,7 @@ Usage: #example
 * extension[MCodeModality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 // * extension[MCodeTechnique][+].valueCodeableConcept.coding[+] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 // * extension[MCodeTechnique][=].valueCodeableConcept.coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
-* extension[MCodeSessions].valueUnsignedInt = 44
+* extension[sessions].valueUnsignedInt = 44
 // Prescription Target Site "Prostate"
 * extension[dose-prescribed-to-volume][+]
   * extension[volume].valueReference.reference = "BodyStructure/RadiotherapyVolume-03-Prostate" 

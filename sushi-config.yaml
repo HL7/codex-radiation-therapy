@@ -22,7 +22,10 @@ description: CodeX™ Radiation Therapy is an initiative
 license: CC0-1.0
 dependencies:
     hl7.fhir.us.core: 3.1.0
-    hl7.fhir.us.mcode: 1.16.0
+    hl7.fhir.us.mcode: 
+      id: mcode
+      uri: http://build.fhir.org/ig/HL7/fhir-mCODE-ig
+      version: current
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

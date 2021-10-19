@@ -16,12 +16,13 @@ Description: "A volume of the body used in Radiotherapy planning or treatment de
   * ^slicing.description = "At least one display name and and one DICOM style UID as technical globally unqiue key"
 
 * identifier contains
-    displayName 1..1 MS and
+ //   displayName 1..1 MS and 
     dicomUid 1..1 MS
 
-* identifier[displayName]
-  * use = #usual
-  * value 1..1 MS
+// defined in mCODE. How to make it 1..1 here?
+//* identifier[displayName]
+//  * use = #usual
+//  * value 1..1 MS
 * identifier[dicomUid]
   * use = #official
   * system = "urn:dicom:uid"
