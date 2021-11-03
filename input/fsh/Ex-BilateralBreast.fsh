@@ -12,10 +12,10 @@ Usage: #example
     * text = "Curative"   
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[sessions].valueUnsignedInt = 30
 // Prescription Target Site "Left Breast"
 * extension[dose-prescribed-to-volume][+]
@@ -56,7 +56,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Left Breast"
 * extension[dose-prescribed-to-volume][+]
@@ -90,7 +90,7 @@ Usage: #example
 * meta.profile =  Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractions-prescribed].valuePositiveInt = 5
 // Prescription Target Site "Left Breast Boost"
 * extension[dose-prescribed-to-volume][+]
@@ -119,7 +119,7 @@ Usage: #example
 * meta.profile =  Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Right Breast"
 * extension[dose-prescribed-to-volume][+]
@@ -155,10 +155,10 @@ Usage: #example
     * text = "Curative"   
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 31
 // Prescription Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
@@ -200,7 +200,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 // Prescription Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
@@ -233,7 +233,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 // Prescription Target Site "Left Breast Boost"
 * extension[doseDeliveredToVolume][+]
@@ -261,7 +261,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/mcode-radiotherapy-fractions-delivered].valueUnsignedInt = 25
 // Prescription Target Site "Right Breast"
 * extension[doseDeliveredToVolume][+]

@@ -38,7 +38,7 @@ Usage: #example
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"   
 * extension[MCodeModality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-// * extension[MCodeTechnique][+].valueCodeableConcept.coding[+] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+// * extension[MCodeTechnique][+].valueCodeableConcept.coding[+] = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 // * extension[MCodeTechnique][=].valueCodeableConcept.coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[sessions].valueUnsignedInt = 44
 // Prescription Target Site "Prostate"
@@ -76,6 +76,6 @@ Usage: #example
 * reasonCode = ICD10#C61.0 "Malignant neoplasm of prostate" 
 * reasonCode.text = "Malignant neoplasm of prostate" 
 * reasonReference.reference = "Condition/Diagnosis-2-Prostate"
-* bodySite = SCT#181422007 "Entire prostate" 
+* bodySite = SCT#41216001 "Prostatic structure (body structure)" 
 * bodySite.text = "Prostate"
 * note.text = "Free text note in Radiotherapy CoursePrescription"

@@ -81,7 +81,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+]
-    * valueCodeableConcept.coding[+] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+    * valueCodeableConcept.coding[+] = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
     * valueCodeableConcept.coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[fractions-prescribed].valuePositiveInt = 25
@@ -121,7 +121,7 @@ Usage: #example
 * reasonCode = ICD10#C61.0 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS 
 * reasonReference.reference = "Condition/Diagnosis-2-Prostate" 
-* bodySite = SCT#181422007 "Entire prostate" // "Body site that is treated with Radiotherapy"
+* bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
 * bodySite.text = "Prostate" 
 * note.text = "Free text note in Radiotherapy Prescription"
 
@@ -136,7 +136,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+]
-    * valueCodeableConcept.coding[+] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+    * valueCodeableConcept.coding[+] = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
     * valueCodeableConcept.coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[fractions-prescribed].valuePositiveInt = 19
@@ -172,6 +172,6 @@ Usage: #example
 * reasonCode = ICD10#C61.0 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS 
 * reasonReference.reference = "Condition/Diagnosis-2-Prostate" 
-* bodySite = SCT#181422007 "Entire prostate" // "Body site that is treated with Radiotherapy"
+* bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
 * bodySite.text = "Prostate"
 * note.text = "Free text note in Radiotherapy PhasePrescription"
