@@ -29,3 +29,7 @@ dependencies:
 menu:
   Home: index.html
   Artifacts: artifacts.html
+parameters:
+  show-inherited-invariants: false
+  version-comparison: n/a
+  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
