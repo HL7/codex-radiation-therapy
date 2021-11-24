@@ -47,7 +47,7 @@ Usage: #example
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * reasonCode.text = "Malignant neoplasm of prostate"
 * reasonReference.reference = "Condition/Diagnosis-2-Prostate"
-* bodySite = SCT#181422007 "Entire prostate"
+* bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
 * note.text = "Free text note in Radiotherapy CoursePrescription"
 
