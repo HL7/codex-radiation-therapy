@@ -44,7 +44,7 @@ Usage: #example
 * authoredOn =  "2020-07-02T00:00:00+02:00" // "Date and time the Prescription was signed"
 * requester.reference = "Practitioner/Practitioner-1005"
 * requester.display = "aria\\user1"
-* reasonCode = ICD10#C61.0 "Malignant neoplasm of prostate"
+* reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * reasonCode.text = "Malignant neoplasm of prostate"
 * reasonReference.reference = "Condition/Diagnosis-2-Prostate"
 * bodySite = SCT#181422007 "Entire prostate"
