@@ -3,30 +3,6 @@
 // Contact: martin.vonsiebenthal@varian.com
 //--------------------------------------------------------------------------------------------------------
 
-Profile: RadiotherapyVolume
-Parent: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume 
-Id: RadiotherapyVolume
-Title: "Radiotherapy Volume"
-Description: "A volume of the body used in Radiotherapy planning or treatment delivery. This corresponds to the Conceptual Volume in DICOM."
-// * obeys mcode-description-or-id-required
-* ^status = #draft
-* identifier 2..* MS // SHOULD have both a globally unique technical identifier and a display name in mCODE, but we require both
-* identifier ^definition = "SHALL have a display name with use = usual and at least one globally unique technical identifier, for example, the Conceptual Volume UID used in DICOM."
-
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "use"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.description = "At least one display name and and one DICOM style UID as technical globally unqiue key"
-
-* identifier contains
-    displayName 1..1 MS and
-    dicomUid 1..1 MS
-
-* identifier[displayName].use = #usual
-* identifier[displayName].value 1..1 MS
-* identifier[dicomUid].use = #official
-* identifier[dicomUid].system = "urn:dicom:uid"
-* identifier[dicomUid].value 1..1 MS
 
 // -------- Example Instances ---------------------------------------------------------
 
@@ -34,7 +10,7 @@ Instance: RadiotherapyVolume-01-PTV50
 InstanceOf: RadiotherapyVolume
 Description: "Target Volume."
 Usage: #example
-* id = "RadiotherapyVolume-01-PTV50" //id of the FHIR Resource
+* id = "radiotherapyVolume-01-PTV50" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
 * meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyVolume"

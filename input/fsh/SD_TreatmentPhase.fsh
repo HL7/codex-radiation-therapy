@@ -1,3 +1,5 @@
+/*  We have an open request for a Radiotherapy Treatment Phase (USCRS-33527)
+//  If we need distinct codes for Brachy and teleRadio we should request them
 CodeSystem: ResourceIdentifierCS
 Id: codexrt-resource-identifier-cs
 Title: "codexrt Resource Identifier Code System"
@@ -11,17 +13,29 @@ Please note that while these codes may imply conformance to the profiles that us
 
 * #codexrt-teleradiotherapy-treatment-phase "Teleradiotherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatmentPhase profile." // SNOMED Code Requested USCRS-33293
 * #codexrt-brachytherapy-treatment-phase "Brachytherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile." // SNOMED Code Requested USCRS-33294
+*/
+
+RuleSet: RadiotherapyCommon
+* category 1.. MS
+* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
+* performed[x] only Period
+* subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
+* extension and category MS
 
 // ------------- Phase Summaries -----------------
-RuleSet: RadiotherapyPhaseCommon
+Profile:  RadiotherapyTreatmentPhase
+Parent:   USCoreProcedure
+Id:       codexrt-radiotherapy-treatment-phase
+Title: "Radiotherapy Treatment Phase"
+Description: "A summary of a phase of radiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions.  A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used,  all treatment volumes do not necessarily receive the same total dose during a phase."
 * insert RadiotherapyCommon
-* partOf only Reference(RadiotherapyCourseSummary)
-* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyCourseSummary-conforming Procedure resource."
+* code = SnomedRequestedCS#USCRS-33527  // Radiotherapy Treatment Phase (therapy/regime)
+* partOf only Reference($mCODERadiotherapyCourseSummary)
+* partOf ^definition = "The partOf element, if present, MUST reference an mCODE RadiotherapyCourseSummary-conforming Procedure resource."
 * extension contains
-    RadiotherapyModality named modality 0..1 MS and
-    RadiotherapyTechnique named technique 0..1 MS and
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
-    RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
+    $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
@@ -29,10 +43,13 @@ RuleSet: RadiotherapyPhaseCommon
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this phase, not including dose from any other phase. For summary over multiple phases, see Radiotherapy Course Summary."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
-* bodySite from RadiotherapyTreatmentLocationVS (required)
+* bodySite from $mCODERadiotherapyTreatmentLocationVS (required)
 * bodySite ^short = "All body structure(s) treated in this phase"
 * bodySite ^definition = "Coded body structure(s) treated in this phase of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 
+
+
+/*
 Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-teleradiotherapy-treatment-phase
@@ -48,6 +65,8 @@ Description: "A summary of a phase of teleradiotherapy treatment that has been d
 * extension[technique] ^short = "Teleradiotherapy (EBRT) Technique"
 * extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 //* usedCode from TeleradiotherapyDeviceVS (extensible) // device-related, defer
+
+
 
 
 Profile:  BrachytherapyTreatmentPhase
@@ -116,3 +135,4 @@ Description: "Example of a brachytherapy therapy phase."
 * performedPeriod.end = "2019-03-01"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
 * extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(john-anyperson-treatment-volume)
+*/

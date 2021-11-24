@@ -10,4 +10,5 @@ Alias:   CondCat = http://terminology.hl7.org/CodeSystem/condition-category
 Alias:   ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 
-Alias: RID = Canonical(ResourceIdentifierCS)
+// Local
+Alias: $SCT_TBD = SnomedRequestedCS
