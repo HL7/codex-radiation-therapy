@@ -192,7 +192,7 @@ Instance: TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost
 InstanceOf: TeleradiotherapyTreatmentPhase
 Description: "Teleradiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost" //id of the FHIR Resource
+* id = "TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost" //id of the FHIR Resource -- unnecessary
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
