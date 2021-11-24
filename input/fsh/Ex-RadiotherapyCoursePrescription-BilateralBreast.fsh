@@ -205,8 +205,8 @@ Usage: #example
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
 * identifier[0].value = "Left Breast Boost"
-* basedOn.reference = "ServiceRequest/TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost"
-* partOf.reference = "Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast"
+* basedOn = Reference(TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost)
+* partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
 * status = #completed
 * subject.reference = "Patient/Patient-101"
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
