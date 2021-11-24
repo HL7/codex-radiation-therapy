@@ -22,6 +22,7 @@ Id: radiotherapy-request
 Title: "(Future) Radiotherapy Request"
 Description: "Specifies which kind of Radiotherapy request is covered by a request resource."
 * ^status = #draft
+* ^caseSensitive = true
 * #radiotherapy-course-prescription	"Radiotherapy Course Prescription" 	"Identifies a ServiceRequest resource for a complete Course of Radiotherapy treatment."
 * #teleradiotherapy-phase-prescription "Teleradiotherapy Phase Prescription" "Identifies a ServiceRequest resource for a single Phase of external beam radiotherapy treatment."
 * #brachytherapy-phase-prescription	"Brachytherapy Phase Prescription" 	"Identifies a ServiceRequest resource for  a single Phase of brachytherapy."
