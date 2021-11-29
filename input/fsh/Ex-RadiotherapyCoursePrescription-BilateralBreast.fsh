@@ -187,7 +187,7 @@ Usage: #example
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
-Instance: TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost
+Instance: TeleradiotherapyTreatmentPhase-102-LeftBreastBoost
 InstanceOf: RadiotherapyTreatmentPhase
 Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
