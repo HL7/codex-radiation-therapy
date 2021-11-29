@@ -40,20 +40,24 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
     fractionDosePrescribed 0..1 MS and
     totalDosePrescribed 0..1 MS and
     fractionsPrescribed 0..1 MS
-* extension[volume].value[x] only Reference(RadiotherapyVolume)
-* extension[volume] ^short = "Volume to which Dose is Prescribed"
-* extension[volume] ^definition = "A BodyStructure resource representing the body structure treated, for example, Chest Wall Lymph Nodes."
-* extension[fractionDosePrescribed].value[x] only Quantity
-* extension[fractionDosePrescribed].valueQuantity = UCUM#cGy
-* extension[fractionDosePrescribed] ^short = "Radiation Dose Prescribed per Fraction"
-* extension[fractionDosePrescribed] ^definition = "The dose prescribed per Fraction to this volume."
-* extension[totalDosePrescribed].value[x] only Quantity
-* extension[totalDosePrescribed].valueQuantity = UCUM#cGy
-* extension[totalDosePrescribed] ^short = "Total Radiation Dose Prescribed"
-* extension[totalDosePrescribed] ^definition = "The total dose prescribed to this volume within the scope of this ServiceRequest."
-* extension[fractionsPrescribed].value[x] only positiveInt
-* extension[fractionsPrescribed] ^short = "Number of Prescribed Fractions"
-* extension[fractionsPrescribed] ^definition = "The number of Fraction in which dose to this volume is prescribed. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in Phase Prescriptions or Plans."
+* extension[volume]
+  * value[x] only Reference(RadiotherapyVolume)
+  * ^short = "Volume to which Dose is Prescribed"
+  * ^definition = "A BodyStructure resource representing the body structure treated, for example, Chest Wall Lymph Nodes."
+* extension[fractionDosePrescribed]
+  * value[x] only Quantity
+  * valueQuantity = UCUM#cGy
+  * ^short = "Radiation Dose Prescribed per Fraction"
+  * ^definition = "The dose prescribed per Fraction to this volume."
+* extension[totalDosePrescribed]
+  * value[x] only Quantity
+  * valueQuantity = UCUM#cGy
+  * ^short = "Total Radiation Dose Prescribed"
+  * ^definition = "The total dose prescribed to this volume within the scope of this ServiceRequest."
+* extension[fractionsPrescribed]
+  * value[x] only positiveInt
+  * ^short = "Number of Prescribed Fractions"
+  * ^definition = "The number of Fraction in which dose to this volume is prescribed. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in Phase Prescriptions or Plans."
 
 Extension: RadiotherapyEnergy
 Id: codexrt-radiotherapy-energy

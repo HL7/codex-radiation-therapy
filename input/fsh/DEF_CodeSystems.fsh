@@ -1,8 +1,3 @@
-//--------------------------------------------------------------------------------------------------------
-// First drafts for XRTS/RTTD discussions. Not reviewed with IHE-RO XRTS yet.
-// Contact: martin.vonsiebenthal@varian.com
-//--------------------------------------------------------------------------------------------------------
-
 CodeSystem: SnomedRequestedCS
 Id: snomed-requested-cs
 Title: "Requested SNOMED Codes Code System"

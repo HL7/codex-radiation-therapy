@@ -1,4 +1,5 @@
 Alias: SCT = http://snomed.info/sct
+Alias: SCTREQ = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs
 Alias: UCUM = http://unitsofmeasure.org
 Alias: LOINC = http://loinc.org
 Alias: DCM = http://dicom.nema.org/resources/ontology/DCM

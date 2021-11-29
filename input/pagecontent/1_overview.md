@@ -11,7 +11,7 @@
 
 The following figure shows the main entities modelled in the scope of this IG for exchanging Radiotherapy Summary information between RT Systems and Hospital Information Systems.
 
-![RT Summary Model for XRTS](XRTSScope.svg)
+![RT Summary Model for XRTS](RTResourcesOverview.svg)
 
 <div style="clear: left"/>
 <div style="clear: left"/>

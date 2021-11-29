@@ -1,7 +1,7 @@
 
 // --- Course Prescription ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCoursePrescription-101-RTTD-BilateralBreast
+Instance: RadiotherapyCoursePrescription-101-BilateralBreast
 InstanceOf: RadiotherapyCoursePrescription
 Description: "Radiotherapy Course Prescription example from Codex RTTD collection."
 Usage: #example
@@ -39,7 +39,7 @@ Usage: #example
 
 // --- Phase Prescriptions ---------------------------------------------------------------------------------
 
-Instance: TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents
+Instance: RadiotherapyPhasePrescription-101-LeftBreastTangents
 InstanceOf: TeleradiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
@@ -68,7 +68,7 @@ Usage: #example
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
-Instance: TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost
+Instance: RadiotherapyPhasePrescription-102-LeftBreastBoost
 InstanceOf: TeleradiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
@@ -93,7 +93,7 @@ Usage: #example
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
-Instance: TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents
+Instance: RadiotherapyPhasePrescription-103-RightBreastTangents
 InstanceOf: TeleradiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
@@ -119,11 +119,11 @@ Usage: #example
 
 // --- Course Summary ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-101-RTTD-BilateralBreast
+Instance: RadiotherapyCourseSummary-101-BilateralBreast
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
-* id = "RadiotherapyCourseSummary-101-RTTD-BilateralBreast" //id of the FHIR Resource
+* id = "RadiotherapyCourseSummary-101-BilateralBreast" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCourseSummary"
@@ -159,11 +159,11 @@ Usage: #example
 
 // --- Phase Summaries ---------------------------------------------------------------------------------
 
-Instance: TeleradiotherapyTreatmentPhase-101-RTTD-LeftBreastTangents
-InstanceOf: TeleradiotherapyTreatmentPhase
-Description: "Teleradiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatmentPhase-101-LeftBreastTangents
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyTreatmentPhase-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
+* id = "RadiotherapyTreatmentPhase-101-LeftBreastTangents" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
@@ -188,9 +188,9 @@ Usage: #example
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
-Instance: TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost
-InstanceOf: TeleradiotherapyTreatmentPhase
-Description: "Teleradiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatmentPhase-102-LeftBreastBoost
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
 * id = "TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost" //id of the FHIR Resource -- unnecessary
 * meta.versionId = "1233456"
@@ -213,11 +213,11 @@ Usage: #example
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
-Instance: TeleradiotherapyTreatmentPhase-103-RTTD-RightBreastTangents
-InstanceOf: TeleradiotherapyTreatmentPhase
-Description: "Teleradiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatmentPhase-103-RightBreastTangents
+InstanceOf: RadiotherapyTreatmentPhase
+Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
-* id = "TeleradiotherapyTreatmentPhase-103-RTTD-RightBreastTangents" //id of the FHIR Resource
+* id = "RadiotherapyTreatmentPhase-103-RightBreastTangents" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
@@ -247,14 +247,16 @@ Usage: #example
 * id = "RadiotherapyVolume-101-LeftBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyVolume"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
-* identifier[0].use = #usual
-* identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
-* identifier[0].value = "Left Breast" // display id
-* identifier[1].use = #official
-* identifier[1].system = "urn:dicom:uid"
-* identifier[1].value = "1.2.246.352.71.10.842421386418.21321.20150602151.101" // DICOM UID
+* meta.profile[+] = Canonical(RadiotherapyVolume)
+* meta.profile[+] = $mCODERadiotherapyVolume
+* identifier[+]
+  * use = #usual
+  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * value = "Left Breast" // display id
+* identifier[+]
+  * use = #official
+  * system = "urn:dicom:uid"
+  * value = "1.2.246.352.71.10.842421386418.21321.20150602151.101" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[0] = SCT#7771000 "Left (qualifier value)"
@@ -268,14 +270,16 @@ Usage: #example
 * id = "RadiotherapyVolume-102-LeftBreastBoost" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyVolume"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
-* identifier[0].use = #usual
-* identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
-* identifier[0].value = "Left Breast Boost" // display id
-* identifier[1].use = #official
-* identifier[1].system = "urn:dicom:uid"
-* identifier[1].value = "1.2.246.352.71.10.842421386418.21321.20150602151.102" // DICOM UID
+* meta.profile[+] = Canonical(RadiotherapyVolume)
+* meta.profile[+] = $mCODERadiotherapyVolume
+* identifier[+]
+  * use = #usual
+  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * value = "Left Breast Boost" // display id
+* identifier[+]
+  * use = #official
+  * system = "urn:dicom:uid"
+  * value = "1.2.246.352.71.10.842421386418.21321.20150602151.102" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[0] = SCT#7771000 "Left (qualifier value)"
@@ -289,14 +293,16 @@ Usage: #example
 * id = "RadiotherapyVolume-103-RightBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyVolume"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume"
-* identifier[0].use = #usual
-* identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
-* identifier[0].value = "Right Breast" // display id
-* identifier[1].use = #official
-* identifier[1].system = "urn:dicom:uid"
-* identifier[1].value = "1.2.246.352.71.10.842421386418.21321.20150602151.103" // DICOM UID
+* meta.profile[+] = Canonical(RadiotherapyVolume)
+* meta.profile[+] = $mCODERadiotherapyVolume
+* identifier[+]
+  * use = #usual
+  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * value = "Right Breast" // display id
+* identifier[+]
+  * use = #official
+  * system = "urn:dicom:uid"
+  * value = "1.2.246.352.71.10.842421386418.21321.20150602151.103" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[0] = SCT#24028007 "Right (qualifier value)"
@@ -311,25 +317,29 @@ Title: "Example Female Patient"
 Description: "An example patient to relate Radiotherapy resources to."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* identifier[0].use = #usual
-* identifier[0].type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
-* identifier[0].system = "http://hospital.smarthealthit.org"
-* identifier[0].value = "101101101"
-* name[0].use = #usual
-* name[0].family = "BilateralBreast"
-* name[0].given = "Alice"
-* telecom.system = #phone
-* telecom.value = "555-555-5555"
-* telecom.use = #home
+* identifier[+]
+  * use = #usual
+  * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
+  * system = "http://hospital.smarthealthit.org"
+  * value = "101101101"
+* name[+]
+  * use = #usual
+  * family = "BilateralBreast"
+  * given = "Alice"
+* telecom
+  * system = #phone
+  * value = "555-555-5555"
+  * use = #home
 * gender = #female
 * birthDate = "1973-07-25"
-* address.state = "WI"
-* address.country = "USA"
-* address.line = "49 Meadow St"
-* address.city = "Mounds"
-* address.state = "OK"
-* address.postalCode = "74047"
-* address.country = "US"
+* address
+  * state = "WI"
+  * country = "USA"
+  * line = "49 Meadow St"
+  * city = "Mounds"
+  * state = "OK"
+  * postalCode = "74047"
+  * country = "US"
 
 // --- Diagnosis ---------------------------------------------------------------------------------
 

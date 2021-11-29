@@ -4,7 +4,7 @@
 
 **Please see the [Artifacts Page](artifacts.html) for resource profiles.**
 
-![RT Summary Model for XRTS](XRTSScope.svg)
+![RT Summary Model for XRTS](RTResourcesOverview.svg)
 
 <div style="clear: left"/>
 
