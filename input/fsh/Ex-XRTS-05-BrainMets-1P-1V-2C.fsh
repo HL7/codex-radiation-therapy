@@ -134,7 +134,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Brain Mets" // display id
 * identifier[+]
   * use = #official

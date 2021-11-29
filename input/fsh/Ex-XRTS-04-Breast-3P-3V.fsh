@@ -156,7 +156,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Left Breast" // display id
 * identifier[+]
   * use = #official
@@ -178,7 +178,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Left Breast Boost" // display id
 * identifier[+]
   * use = #official
@@ -200,7 +200,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Right Breast" // display id
 * identifier[+]
   * use = #official

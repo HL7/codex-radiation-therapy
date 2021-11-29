@@ -29,13 +29,13 @@ Usage: #example
 * identifier.value = "Prostate-2Phases"
 * status = #in-progress
 //* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.
-* subject.reference = "Patient/Patient-6"
+* subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
-* reasonReference.reference = "Condition/Diagnosis-2-Prostate" //In ARIA, diagnoses related to Course
+* reasonReference = Reference(Diagnosis-2-Prostate) //In ARIA, diagnoses related to Course
 // * bodySite = SCT#181422007 "Entire prostate" // "Body site that is treated with Radiotherapy"
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"

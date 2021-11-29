@@ -5,6 +5,9 @@ Alias: LOINC = http://loinc.org
 Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
 Alias: ICD10 = http://hl7.org/fhir/sid/icd-10-cm
 Alias: ReqIntent = http://hl7.org/fhir/request-intent
+Alias: ActReason =  http://terminology.hl7.org/CodeSystem/v3-ActReason
+Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: DICOMUID = urn:dicom:uid
 
 //Same as in mCODE.
 Alias:   CondCat = http://terminology.hl7.org/CodeSystem/condition-category
@@ -13,3 +16,6 @@ Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 
 // Local
 Alias: $SCT_TBD = SnomedRequestedCS
+
+// Varian
+Alias: VarianDoseReferenceId = http://varian.com/fhir/identifier/radiotherapyDoseReferenceId

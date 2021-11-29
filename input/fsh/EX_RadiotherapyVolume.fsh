@@ -13,7 +13,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "PTV50" // display id
 * identifier[+]
   * use = #official
@@ -33,7 +33,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "PTV64" // display id
 * identifier[+]
   * use = #official
@@ -53,7 +53,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Prostate" // display id
 * identifier[+]
   * use = #official
@@ -73,7 +73,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Pelv Ns" // display id
 * identifier[+]
   * use = #official
@@ -93,11 +93,11 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Sem Vs" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151827" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient.reference = "Patient/Patient-6"

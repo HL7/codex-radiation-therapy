@@ -220,7 +220,7 @@ Usage: #example
 * id = "RadiotherapyTreatmentPhase-103-RightBreastTangents" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
+* meta.profile = Canonical(RadiotherapyTreatmentPhase) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
 * extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 * extension[mcode-radiotherapy-modality-and-technique][0].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
@@ -230,10 +230,10 @@ Usage: #example
 * identifier[0].use = #usual
 * identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
 * identifier[0].value = "Right Breast Tangents"
-* basedOn.reference = "ServiceRequest/TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents"
-* partOf.reference = "Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast"
+* basedOn = Reference(TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents)
+* partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
 * status = #completed
-* subject.reference = "Patient/Patient-101"
+* subject = Reference(Patient-101)
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
@@ -251,7 +251,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Left Breast" // display id
 * identifier[+]
   * use = #official
@@ -261,7 +261,7 @@ Usage: #example
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[0] = SCT#7771000 "Left (qualifier value)"
 * locationQualifier[1] = SCT#255503000 "Entire (qualifier value)"
-* patient.reference = "Patient/Patient-101"
+* patient = Reference(Patient-101)
 
 Instance: RadiotherapyVolume-102-LeftBreastBoost
 InstanceOf: RadiotherapyVolume
@@ -274,11 +274,11 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Left Breast Boost" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.102" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
@@ -297,7 +297,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Right Breast" // display id
 * identifier[+]
   * use = #official

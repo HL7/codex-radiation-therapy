@@ -31,4 +31,4 @@ Usage: #example
 * code = ICD10#C61 "Malignant neoplasm of prostate"
 * subject = Reference(Patient/Patient-6)
 * onsetDateTime = "2018-03-16"
-* asserter = Reference(Practitioner/Practitioner-1005)
+* asserter = Reference(Practitioner-1005)
