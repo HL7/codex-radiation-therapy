@@ -9,9 +9,17 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyCoursePrescription)
 * extension[treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[treatment-intent].valueCodeableConcept.text = "Curative"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][1].extension[modality][0].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][1].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+// * extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+// * extension[mcode-radiotherapy-modality-and-technique][1].extension[modality][0].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
+// * extension[mcode-radiotherapy-modality-and-technique][1].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[mcode-radiotherapy-modality-and-technique][0]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[mcode-radiotherapy-technique][+].valueCodeableConcept = SCT#1156530009	"Volumetric Modulated Arc Therapy (procedure)" // http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+* extension[mcode-radiotherapy-modality-and-technique][1]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+
 * extension[radiotherapy-sessions].valueUnsignedInt = 30
 // Prescription Target Site "Left Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
@@ -45,8 +53,10 @@ Description: "Radiotherapy Phase Prescription example from Codex RTTD collection
 Usage: #example
 // * id = "TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
 * meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[mcode-radiotherapy-modality-and-technique][0]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Left Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
@@ -74,8 +84,9 @@ Description: "Radiotherapy Phase Prescription example from Codex RTTD collection
 Usage: #example
 // * id = "TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost" //id of the FHIR Resource
 * meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[mcode-radiotherapy-modality-and-technique][0]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 5
 // Prescription Target Site "Left Breast Boost"
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
@@ -98,8 +109,9 @@ InstanceOf: TeleradiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
 * meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[mcode-radiotherapy-modality-and-technique][0]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Right Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
@@ -129,8 +141,9 @@ Usage: #example
 * meta.profile[1] = $mCODERadiotherapyCourseSummary // "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[treatmentIntent].valueCodeableConcept.text = "Curative"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[mcode-radiotherapy-modality-and-technique][0]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
 * extension[mcode-radiotherapy-sessions].valueUnsignedInt = 31
 // Prescription Target Site "Left Breast"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
@@ -166,8 +179,9 @@ Usage: #example
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = Canonical(RadiotherapyTreatmentPhase) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[mcode-radiotherapy-modality-and-technique][0]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 // Prescription Target Site "Left Breast"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
@@ -195,8 +209,9 @@ Usage: #example
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = Canonical(RadiotherapyTreatmentPhase) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[mcode-radiotherapy-modality-and-technique][0]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#45643008 "Teleradiotherapy using electrons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 // Prescription Target Site "Left Breast Boost"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
@@ -220,8 +235,9 @@ Usage: #example
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = Canonical(RadiotherapyTreatmentPhase) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[mcode-radiotherapy-modality-and-technique][0].extension[technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+* extension[mcode-radiotherapy-modality-and-technique][0]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 // Prescription Target Site "Right Breast"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
