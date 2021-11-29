@@ -41,7 +41,7 @@ Usage: #example
   * extension[fractionsDelivered].valueUnsignedInt = 3
 * identifier
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-  * system = "http://varian.com/fhir/identifier/radiotherapyCourseId"
+  * system = VarianRadiotherapyCourseId
   * value = "C1_Both_Breast"
 //* basedOn = Reference(ServiceRequest/RadiotherapyCoursePrescription-XRTS-04-Breast"
 * status = #completed

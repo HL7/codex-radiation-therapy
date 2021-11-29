@@ -8,7 +8,7 @@ Usage: #example
 * id = "RadiotherapyCoursePrescription-04-XRTS-Prostate" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Added modification date of clinical contents as extension.
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCoursePrescription"
+* meta.profile = Canonical(RadiotherapyCoursePrescription) //"https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCoursePrescription"
 // * extension[concurrentTherapy].valueCodeableConcept = SCT#367336001 "Chemotherapy"
 // * extension[concurrentTherapy].valueCodeableConcept.text = "Chemotherapy"
 * extension[treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
@@ -30,9 +30,9 @@ Usage: #example
 * extension[radiotherapy-dose-prescribed-to-volume][=].extension[totalDosePrescribed].valueQuantity.value = 7920
 * extension[radiotherapy-dose-prescribed-to-volume][=].extension[fractionsPrescribed].valuePositiveInt = 44
 * identifier[0].use = #usual
-* identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyCourseId"
+* identifier[0].system = VarianRadiotherapyCourseId
 * identifier[0].value = "Prostate-2Phases"
-* identifier[1].system = "urn:dicom:uid"
+* identifier[1].system = DICOMUID
 * identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456.2"
 //* replaces.reference = ... //XRTSIntent."Predecessor" In FHIR, this can reference another resource instead of only identifier.
 * status = #active

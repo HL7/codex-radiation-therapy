@@ -25,7 +25,7 @@ Usage: #example
 * extension[doseDeliveredToVolume][=].extension[totalDoseDelivered].valueQuantity.value = 360
 * extension[doseDeliveredToVolume][=].extension[fractionsDelivered].valueUnsignedInt = 2
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-* identifier.system = "http://varian.com/fhir/identifier/radiotherapyCourseId" //Use same id as for Course
+* identifier.system = VarianRadiotherapyCourseId //Use same id as for Course
 * identifier.value = "Prostate-2Phases"
 * status = #in-progress
 //* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.

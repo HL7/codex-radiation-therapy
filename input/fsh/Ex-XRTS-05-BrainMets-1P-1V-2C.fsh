@@ -23,7 +23,7 @@ Usage: #example
   * extension[fractionsDelivered].valueUnsignedInt = 5
 * identifier
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-  * system = "http://varian.com/fhir/identifier/radiotherapyCourseId"
+  * system = VarianRadiotherapyCourseId
   * value = "C1BrainMets"
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
@@ -55,7 +55,7 @@ Usage: #example
   * extension[fractionsDelivered].valueUnsignedInt = 5
 * identifier
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-  * system = "http://varian.com/fhir/identifier/radiotherapyCourseId"
+  * system = VarianRadiotherapyCourseId
   * value = "C2BrainMets"
 * status = #completed
 * subject = Reference(Patient-XRTS-05)

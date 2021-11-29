@@ -20,7 +20,7 @@ Usage: #example
 * extension[$mCODERadiotherapyDoseDeliveredToVolume][2].extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
 * extension[$mCODERadiotherapyDoseDeliveredToVolume][2].extension[totalDoseDelivered].valueQuantity.value = 360
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-* identifier.system = "http://varian.com/fhir/identifier/radiotherapPrescriptionId"
+* identifier.system = VarianRadiotheraphyPrescriptionId
 * identifier.value = "Prostate-Phase1"
 * basedOn = Reference (TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1)
 * basedOn.display = "Prostate-Phase1"

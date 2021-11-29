@@ -20,7 +20,7 @@ Usage: #example
   * system = "urn:dicom:uid"
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151823" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
-* patient.reference = "Patient/Patient-6"
+* patient = Reference(Patient-6)
 
 Instance: RadiotherapyVolume-02-PTV64
 InstanceOf: RadiotherapyVolume
@@ -40,7 +40,7 @@ Usage: #example
   * system = "urn:dicom:uid"
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151824" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
-* patient.reference = "Patient/Patient-6"
+* patient = Reference(Patient-6)
 
 Instance: RadiotherapyVolume-03-Prostate
 InstanceOf: RadiotherapyVolume
@@ -60,7 +60,7 @@ Usage: #example
   * system = "urn:dicom:uid"
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151825" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
-* patient.reference = "Patient/Patient-6"
+* patient = Reference(Patient-6)
 
 Instance: RadiotherapyVolume-04-PelvNs
 InstanceOf: RadiotherapyVolume
@@ -80,7 +80,7 @@ Usage: #example
   * system = "urn:dicom:uid"
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151826" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
-* patient.reference = "Patient/Patient-6"
+* patient = Reference(Patient-6)
 
 Instance: RadiotherapyVolume-05-SemVs
 InstanceOf: RadiotherapyVolume
@@ -100,4 +100,4 @@ Usage: #example
   * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151827" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
-* patient.reference = "Patient/Patient-6"
+* patient = Reference(Patient-6)
