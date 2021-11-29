@@ -8,9 +8,10 @@ Usage: #example
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
-* extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+* extension[mcode-radiotherapy-modality-and-technique]
+  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[mcode-radiotherapy-technique].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[mcode-radiotherapy-technique].valueCodeableConcept = SCT#1156530009	"Volumetric Modulated Arc Therapy (procedure)" // http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 * extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Prostate"
