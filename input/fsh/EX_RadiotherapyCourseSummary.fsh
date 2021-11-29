@@ -4,11 +4,11 @@ Instance: RadiotherapyCourseSummary-04-XRTS-Prostate
 InstanceOf: RadiotherapyCourseSummary
 Description: "Treatment Summary over Radiotherapy Course with all elements expected in XRTS."
 Usage: #example
-* id = "RadiotherapyCourseSummary-04-XRTS-Prostate" //id of the FHIR Resource
+// * id = "RadiotherapyCourseSummary-04-XRTS-Prostate" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile[0] = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCourseSummary"
-* meta.profile[1] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
+* meta.profile[0] = Canonical(RadiotherapyCourseSummary)
+* meta.profile[1] = $mCODERadiotherapyCourseSummary
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[treatmentIntent].valueCodeableConcept.text = "Curative"
 * extension[actualNumberOfSessions].valueUnsignedInt = 2

@@ -4,10 +4,10 @@ Instance: TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1
 InstanceOf: TeleradiotherapyPhasePrescription
 Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 1."
 Usage: #example
-* id = "TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" //id of the FHIR Resource
+//* id = "TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
-* meta.profile = "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+* meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
 * extension[mcode-radiotherapy-modality-and-technique]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = SCT#1156526006 "Three dimensional external beam radiation therapy (procedure)"
@@ -27,7 +27,7 @@ Usage: #example
 * extension[radiotherapy-dose-prescribed-to-volume][2].extension[fractionDosePrescribed].valueQuantity.value = 180
 * extension[radiotherapy-dose-prescribed-to-volume][2].extension[totalDosePrescribed].valueQuantity.value = 4500
 * identifier[0].use = #usual
-* identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyPhasePrescriptionId"
+* identifier[0].system = VarianRadiotherapyPrescriptionId // "http://varian.com/fhir/identifier/radiotherapyPhasePrescriptionId"
 * identifier[0].value = "Prostate-Phase1"
 * identifier[1].system = DICOMUID
 * identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
@@ -72,7 +72,7 @@ Usage: #example
 * extension[radiotherapy-dose-prescribed-to-volume][1].extension[fractionDosePrescribed].valueQuantity.value = 180
 * extension[radiotherapy-dose-prescribed-to-volume][1].extension[totalDosePrescribed].valueQuantity.value = 3420
 * identifier[0].use = #usual
-* identifier[0].system = "http://varian.com/fhir/identifier/radiotherapyPhasePrescriptionId"
+* identifier[0].system = VarianRadiotherapyPrescriptionId
 * identifier[0].value = "Prostate-Phase2"
 * identifier[1].system = "urn:dicom:uid"
 * identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
