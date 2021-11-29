@@ -17,7 +17,7 @@ Usage: #example
   * value = "PTV50" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151823" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)
@@ -37,7 +37,7 @@ Usage: #example
   * value = "PTV64" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151824" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)
@@ -57,7 +57,7 @@ Usage: #example
   * value = "Prostate" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151825" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)
@@ -77,7 +77,7 @@ Usage: #example
   * value = "Pelv Ns" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151826" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)
