@@ -67,7 +67,7 @@ Usage: #example
 * extension[radiotherapy-dose-prescribed-to-volume][1].extension[fractionDosePrescribed].valueQuantity.value = 200
 * extension[radiotherapy-dose-prescribed-to-volume][1].extension[totalDosePrescribed].valueQuantity.value = 5000
 * identifier[0].use = #usual
-* identifier[0].system = VarianRadiotheraphyPhaseId
+* identifier[0].system = VarianRadiotherapyPhaseId
 * identifier[0].value = "Left Breast Tangents"
 * identifier[1].system = DICOMUID
 * identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.333.101"
@@ -93,7 +93,7 @@ Usage: #example
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[fractionDosePrescribed].valueQuantity.value = 200
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[totalDosePrescribed].valueQuantity.value = 1000
 * identifier[0].use = #usual
-* identifier[0].system = VarianRadiotheraphyPhaseId
+* identifier[0].system = VarianRadiotherapyPhaseId
 * identifier[0].value = "Left Breast Boost"
 * identifier[1].system = DICOMUID
 * identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.333.102"
@@ -118,7 +118,7 @@ Usage: #example
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[fractionDosePrescribed].valueQuantity.value = 200
 * extension[radiotherapy-dose-prescribed-to-volume][0].extension[totalDosePrescribed].valueQuantity.value = 5000
 * identifier[0].use = #usual
-* identifier[0].system = VarianRadiotheraphyPhaseId
+* identifier[0].system = VarianRadiotherapyPhaseId
 * identifier[0].value = "Right Breast Tangents"
 * identifier[1].system = DICOMUID
 * identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.333.103"
@@ -190,7 +190,7 @@ Usage: #example
 * extension[doseDeliveredToVolume][1].extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
 * extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity.value = 5000
 * identifier[0].use = #usual
-* identifier[0].system = VarianRadiotheraphyPhaseId
+* identifier[0].system = VarianRadiotherapyPhaseId
 * identifier[0].value = "Left Breast Tangents"
 * basedOn = Reference(TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents)
 * partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
@@ -217,7 +217,7 @@ Usage: #example
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity.value = 1000
 * identifier[0].use = #usual
-* identifier[0].system = VarianRadiotheraphyPhaseId
+* identifier[0].system = VarianRadiotherapyPhaseId
 * identifier[0].value = "Left Breast Boost"
 * basedOn = Reference(TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost)
 * partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
@@ -243,7 +243,7 @@ Usage: #example
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity.value = 5000
 * identifier[0].use = #usual
-* identifier[0].system = VarianRadiotheraphyPhaseId
+* identifier[0].system = VarianRadiotherapyPhaseId
 * identifier[0].value = "Right Breast Tangents"
 * basedOn = Reference(TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents)
 * partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)

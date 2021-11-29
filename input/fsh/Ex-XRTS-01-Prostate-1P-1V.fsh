@@ -47,9 +47,9 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-XRTS-01-01-Prostate)
   * extension[volume].valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
-* identifier[+]
+* identifier
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
+  * system = VarianRadiotherapyPhaseId
   * value = "Primary"
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-01-Prostate-1P-3V)
 * status = #completed
@@ -69,7 +69,7 @@ Usage: #example
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyVolume)
 * meta.profile[+] = $mCODERadiotherapyVolume
-* identifier[+]
+* identifier
   * use = #usual
   * system = VarianDoseReferenceId
   * value = "Prostate" // display id

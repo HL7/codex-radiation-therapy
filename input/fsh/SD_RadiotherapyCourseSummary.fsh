@@ -11,7 +11,7 @@ Description: "A Summary of the Treatment Progress in a Radiotherapy Course.
 Whenever new contributions in the scope of the same Course are delivered, this resource is updated (no new resource created)."
 * obeys xrts-procedure-status
 * basedOn MS
-* basedOn ^short = "Should Reference a https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCoursePrescription" //only Reference(RadiotherapyCoursePrescription)
+* basedOn ^short = "Should Reference a RadiotherapyCoursePrescription" //only Reference(RadiotherapyCoursePrescription)
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."

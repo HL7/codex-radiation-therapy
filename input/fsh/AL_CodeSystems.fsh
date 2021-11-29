@@ -20,5 +20,5 @@ Alias: $SCT_TBD = SnomedRequestedCS
 // Varian
 Alias: VarianDoseReferenceId = http://varian.com/fhir/identifier/radiotherapyDoseReferenceId
 Alias: VarianRadiotherapyCourseId = http://varian.com/fhir/identifier/radiotherapyCourseId
-Alias: VarianRadiotheraphyPhaseId = http://varian.com/fhir/identifier/radiotheraphyPhaseId
-Alias: VarianRadiotherapyPrescriptionId = http://varian.com/fhir/identifier/radiotherapPrescriptionId
+Alias: VarianRadiotherapyPhaseId = http://varian.com/fhir/identifier/radiotherapyPhaseId
+Alias: VarianRadiotherapyPrescriptionId = http://varian.com/fhir/identifier/radiotherapyPrescriptionId
