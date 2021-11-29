@@ -118,7 +118,7 @@ Usage: #example
 
 // --- Course Summary ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-101-BilateralBreast
+Instance: RadiotherapyCourseSummary-101-RTTD-BilateralBreast
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
