@@ -10,3 +10,5 @@ Alias: $mCODEProcedureIntent = http://hl7.org/fhir/us/mcode/StructureDefinition/
 Alias: $mCODERadiotherapySessions = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-sessions
 // ValueSets
 Alias: $mCODERadiotherapyTreatmentLocationVS = http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-treatment-location-vs
+// Codesystems
+Alias: $mCODESCT_TBD = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs
