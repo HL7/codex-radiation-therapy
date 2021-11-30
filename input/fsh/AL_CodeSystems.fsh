@@ -15,7 +15,8 @@ Alias:   ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 
 // Local
-
+// Codesystems
+Alias: $SCT_TBD = SnomedRequestedCS
 
 // Varian
 Alias: VarianDoseReferenceId = http://varian.com/fhir/identifier/radiotherapyDoseReferenceId

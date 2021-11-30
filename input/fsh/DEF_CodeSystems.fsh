@@ -4,7 +4,6 @@ Title: "Requested SNOMED Codes Code System"
 Description: "Codes requested from SNOMED by mCODE, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
 * #USCRS-33527  "Radiotherapy Treatment Phase (therapy/regime)"
-* #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2022 internationally, and March 2022 in US
 
 ValueSet: RadiotherapyRequest
 Id: radiotherapy-request
