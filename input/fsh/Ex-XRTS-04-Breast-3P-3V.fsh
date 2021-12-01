@@ -13,10 +13,10 @@ Usage: #example
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 8
 // Prescription Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
@@ -63,7 +63,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference
@@ -97,7 +97,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference
@@ -125,7 +125,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCTREQ#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference
@@ -160,7 +160,7 @@ Usage: #example
   * value = "Left Breast" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.04.01" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
@@ -182,7 +182,7 @@ Usage: #example
   * value = "Left Breast Boost" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.04.02" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
@@ -204,7 +204,7 @@ Usage: #example
   * value = "Right Breast" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.04.03" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
