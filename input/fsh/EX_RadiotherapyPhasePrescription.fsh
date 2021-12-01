@@ -11,26 +11,31 @@ Usage: #example
 * extension[mcode-radiotherapy-modality-and-technique]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  * extension[mcode-radiotherapy-technique][+].valueCodeableConcept = SCT#1156530009	"Volumetric Modulated Arc Therapy (procedure)" // http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+  //* extension[mcode-radiotherapy-technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
 * extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Prostate"
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[fractionDosePrescribed].valueQuantity.value = 180 //unit cGy is automatically added because fixed in the profile
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[totalDosePrescribed].valueQuantity.value = 4500
+* extension[radiotherapy-dose-prescribed-to-volume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
+  * extension[fractionDosePrescribed].valueQuantity.value = 180 //unit cGy is automatically added because fixed in the profile
+  * extension[totalDosePrescribed].valueQuantity.value = 4500
 // Prescription Target Site "Pelv Ns"
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[fractionDosePrescribed].valueQuantity.value = 180
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[totalDosePrescribed].valueQuantity.value = 4500
+* extension[radiotherapy-dose-prescribed-to-volume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
+  * extension[fractionDosePrescribed].valueQuantity.value = 180
+  * extension[totalDosePrescribed].valueQuantity.value = 4500
 // Prescription Target Site "Sem Vs"
-* extension[radiotherapy-dose-prescribed-to-volume][2].extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-* extension[radiotherapy-dose-prescribed-to-volume][2].extension[fractionDosePrescribed].valueQuantity.value = 180
-* extension[radiotherapy-dose-prescribed-to-volume][2].extension[totalDosePrescribed].valueQuantity.value = 4500
-* identifier[0].use = #usual
-* identifier[0].system = VarianRadiotherapyPrescriptionId // "http://varian.com/fhir/identifier/radiotherapyPhasePrescriptionId"
-* identifier[0].value = "Prostate-Phase1"
-* identifier[1].system = DICOMUID
-* identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
+* extension[radiotherapy-dose-prescribed-to-volume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
+  * extension[fractionDosePrescribed].valueQuantity.value = 180
+  * extension[totalDosePrescribed].valueQuantity.value = 4500
+* identifier[+]
+  * use = #usual
+  * system = VarianRadiotherapyPrescriptionId // "http://varian.com/fhir/identifier/radiotherapyPhasePrescriptionId"
+  * value = "Prostate-Phase1"
+* identifier[+]
+  * system = DICOMUID
+  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456" 
 * basedOn = Reference(RadiotherapyCoursePrescription-04-XRTS-Prostate) //Intent that this prescription bases on
 //* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
@@ -45,7 +50,7 @@ Usage: #example
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonReference = Reference(Diagnosis-2-Prostate)
-* bodySite = SCT#181422007 "Entire prostate" // "Body site that is treated with Radiotherapy"
+* bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
 * bodySite.text = "Prostate"
 * note.text = "Free text note in Radiotherapy Prescription"
 
@@ -60,22 +65,26 @@ Usage: #example
 * extension[mcode-radiotherapy-modality-and-technique]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  * extension[mcode-radiotherapy-technique][+].valueCodeableConcept = SCT#1156530009	"Volumetric Modulated Arc Therapy (procedure)" // http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+  //* extension[mcode-radiotherapy-technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
 * extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 19
 // Prescription Target Site "Prostate"
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[fractionDosePrescribed].valueQuantity.value = 200 //unit cGy is automatically added because fixed in the profile
-* extension[radiotherapy-dose-prescribed-to-volume][0].extension[totalDosePrescribed].valueQuantity.value = 3800
+* extension[radiotherapy-dose-prescribed-to-volume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
+  * extension[fractionDosePrescribed].valueQuantity.value = 200 //unit cGy is automatically added because fixed in the profile
+  * extension[totalDosePrescribed].valueQuantity.value = 3800
 // Prescription Target Site "Sem Vs"
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[fractionDosePrescribed].valueQuantity.value = 180
-* extension[radiotherapy-dose-prescribed-to-volume][1].extension[totalDosePrescribed].valueQuantity.value = 3420
-* identifier[0].use = #usual
-* identifier[0].system = VarianRadiotherapyPrescriptionId
-* identifier[0].value = "Prostate-Phase2"
-* identifier[1].system = DICOMUID
-* identifier[1].value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
+* extension[radiotherapy-dose-prescribed-to-volume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
+  * extension[fractionDosePrescribed].valueQuantity.value = 180
+  * extension[totalDosePrescribed].valueQuantity.value = 3420
+* identifier[+]
+  * use = #usual
+  * system = VarianRadiotherapyPrescriptionId
+  * value = "Prostate-Phase2"
+* identifier[+]
+  * system = DICOMUID
+  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456" 
 * basedOn = Reference(RadiotherapyCoursePrescription-04-XRTS-Prostate) //Intent that this prescription bases on
 * basedOn.display =  "Prostate-2Phases"
 //* replaces = Reference(RadiotherapyPhasePrescription-0) //Previous retired PhasePrescription that is replaced by this PhasePrescription

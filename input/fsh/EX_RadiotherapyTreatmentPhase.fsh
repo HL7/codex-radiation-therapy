@@ -11,18 +11,22 @@ Usage: #example
 * meta.profile[0] = Canonical(TeleradiotherapyTreatmentPhase)
 * extension[fractionsDelivered].valueUnsignedInt = 2
 // Prescription Target Site "Prostate"
-* extension[$mCODERadiotherapyDoseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-* extension[$mCODERadiotherapyDoseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity.value = 360
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
+  * extension[totalDoseDelivered].valueQuantity.value = 360
 // Prescription Target Site "Pelv Ns"
-* extension[$mCODERadiotherapyDoseDeliveredToVolume][1].extension[volume].valueReference. = Reference(RadiotherapyVolume-04-PelvNs)
-* extension[$mCODERadiotherapyDoseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity.value = 360
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][+]
+  * extension[volume].valueReference. = Reference(RadiotherapyVolume-04-PelvNs)
+  * extension[totalDoseDelivered].valueQuantity.value = 360
 // Prescription Target Site "Sem Vs"
-* extension[$mCODERadiotherapyDoseDeliveredToVolume][2].extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-* extension[$mCODERadiotherapyDoseDeliveredToVolume][2].extension[totalDoseDelivered].valueQuantity.value = 360
-* identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-* identifier.system = VarianRadiotherapyPrescriptionId
-* identifier.value = "Prostate-Phase1"
-* basedOn = Reference (TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1)
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
+  * extension[totalDoseDelivered].valueQuantity.value = 360
+* identifier[+]
+  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+  * system = VarianRadiotherapyPrescriptionId
+  * value = "Prostate-Phase1"
+* basedOn = Reference(TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1)
 * basedOn.display = "Prostate-Phase1"
 * partOf = Reference(RadiotherapyCourseSummary-04-XRTS-Prostate) //Can reference another summary of larger scope
 * status = #in-progress
