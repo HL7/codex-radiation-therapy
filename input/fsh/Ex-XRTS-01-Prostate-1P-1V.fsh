@@ -15,10 +15,11 @@ Usage: #example
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 2
-* extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-* extension[doseDeliveredToVolume][0].extension[volume].valueReference.display = "Prostate"
-* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity.value = 400
-* extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 2
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
+  * extension[volume].valueReference.display = "Prostate"
+  * extension[totalDoseDelivered].valueQuantity.value = 400
+  * extension[fractionsDelivered].valueUnsignedInt = 2
 * identifier
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
@@ -75,7 +76,7 @@ Usage: #example
   * value = "Prostate" // display id
 * identifier[+]
   * use = #official
-  * system = "urn:dicom:uid"
+  * system = DICOMUID
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.01.01" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#41216001 "Prostatic structure (body structure)"

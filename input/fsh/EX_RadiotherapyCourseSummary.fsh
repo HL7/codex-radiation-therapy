@@ -13,17 +13,20 @@ Usage: #example
 * extension[treatmentIntent].valueCodeableConcept.text = "Curative"
 * extension[actualNumberOfSessions].valueUnsignedInt = 2
 // Target Volume "Prostate"
-* extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-* extension[doseDeliveredToVolume][=].extension[totalDoseDelivered].valueQuantity.value = 360
-* extension[doseDeliveredToVolume][=].extension[fractionsDelivered].valueUnsignedInt = 2
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
+  * extension[totalDoseDelivered].valueQuantity.value = 360
+  * extension[fractionsDelivered].valueUnsignedInt = 2
 // Target Volume "Pelv Ns"
-* extension[doseDeliveredToVolume][+].extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
-* extension[doseDeliveredToVolume][=].extension[totalDoseDelivered].valueQuantity.value = 360
-* extension[doseDeliveredToVolume][=].extension[fractionsDelivered].valueUnsignedInt = 2
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
+  * extension[totalDoseDelivered].valueQuantity.value = 360
+  * extension[fractionsDelivered].valueUnsignedInt = 2
 // Target Volume "Sem Vs"
-* extension[doseDeliveredToVolume][+].extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-* extension[doseDeliveredToVolume][=].extension[totalDoseDelivered].valueQuantity.value = 360
-* extension[doseDeliveredToVolume][=].extension[fractionsDelivered].valueUnsignedInt = 2
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
+  * extension[totalDoseDelivered].valueQuantity.value = 360
+  * extension[fractionsDelivered].valueUnsignedInt = 2
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
 * identifier.system = VarianRadiotherapyCourseId //Use same id as for Course
 * identifier.value = "Prostate-2Phases"
@@ -36,6 +39,5 @@ Usage: #example
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonReference = Reference(Diagnosis-2-Prostate) //In ARIA, diagnoses related to Course
-// * bodySite = SCT#181422007 "Entire prostate" // "Body site that is treated with Radiotherapy"
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
