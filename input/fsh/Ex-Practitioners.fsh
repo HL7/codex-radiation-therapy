@@ -9,7 +9,7 @@ Title: "Example Practitioner"
 Description: "An example patient to relate Radiotherapy resources to."
 Usage: #example
 * id = "Practitioner-1005"
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* meta.security = ActReason#HTEST
 * identifier[+]
   * use = #official
   * system = "http://hl7.org.fhir/sid/us-npi"

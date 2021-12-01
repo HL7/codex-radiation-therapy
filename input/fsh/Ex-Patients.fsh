@@ -8,10 +8,10 @@ InstanceOf: Patient
 Title: "Example Female Patient"
 Description: "An example patient to relate Radiotherapy resources to."
 Usage: #example
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* meta.security = ActReason#HTEST
 * identifier[+]
   * use = #usual
-  * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
+  * type = v2-0203#MR "Medical Record Number"
   * system = "http://hospital.smarthealthit.org"
   * value = "1032705"
 * name[+]
@@ -38,10 +38,10 @@ InstanceOf: Patient
 Title: "Example Male Patient"
 Description: "An example patient to relate Radiotherapy resources to."
 Usage: #example
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* meta.security = ActReason#HTEST
 * identifier[+].
   * use = #usual
-  * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
+  * type = v2-0203#MR "Medical Record Number"
   * system = "http://hospital.smarthealthit.org"
   * value = "1032706"
 * name[+]

@@ -7,10 +7,10 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
-* meta.profile[+] = MCodeCourseSummary
-* extension[MCodeProcedureIntent]
+* meta.profile[+] = $mCODERadiotherapyCourseSummary
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-    * text = "Curative"   
+    * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
@@ -20,7 +20,7 @@ Usage: #example
     * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-01-Prostate"
     * display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 800
-  * extension[fractionsDelivered].valueUnsignedInt = 4 
+  * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference
     * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-02-PelvNs"
@@ -31,18 +31,18 @@ Usage: #example
   * extension[volume].valueReference
     * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-03-SemVs"
     * display = "SemVs"
-  * extension[totalDoseDelivered].valueQuantity.value = 800 
-  * extension[fractionsDelivered].valueUnsignedInt = 4 
+  * extension[totalDoseDelivered].valueQuantity.value = 800
+  * extension[fractionsDelivered].valueUnsignedInt = 4
 * identifier
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-  * system = "http://varian.com/fhir/identifier/radiotherapyCourseId"
+  * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
 * status = #completed
-* subject.reference = "Patient/Patient-XRTS-03"
+* subject = Reference(Patient-XRTS-03)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
-* reasonCode = ICD10CM#C61 "Malignant neoplasm of prostate"
-* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)" 
+* reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
+* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
 
@@ -63,29 +63,29 @@ Usage: #example
   * extension[volume].valueReference
     * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-01-Prostate"
     * display = "Prostate"
-  * extension[totalDoseDelivered].valueQuantity.value = 800 
+  * extension[totalDoseDelivered].valueQuantity.value = 800
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference
     * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-02-PelvNs"
     * display = "PelvNs"
-  * extension[totalDoseDelivered].valueQuantity.value = 720 
+  * extension[totalDoseDelivered].valueQuantity.value = 720
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference
     * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-03-SemVs"
     * display = "SemVs"
-  * extension[totalDoseDelivered].valueQuantity.value = 800 
+  * extension[totalDoseDelivered].valueQuantity.value = 800
 * identifier[+]
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
-* partOf.reference = "Procedure/RadiotherapyCourseSummary-XRTS-03-Prostate-1P-3V" 
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-03-Prostate-1P-3V)
 * status = #completed
-* subject.reference = "Patient/Patient-XRTS-03"
+* subject = Reference(Patient-XRTS-03)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
-* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)" 
+* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
-* bodySite[+] = SCT#64739004 "Seminal vesicle" 
+* bodySite[+] = SCT#64739004 "Seminal vesicle"
 * note.text = "Free text note in Radiotherapy Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
@@ -97,19 +97,19 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyVolume)
-* meta.profile[+] = MCodeVolume
+* meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "Prostate" // display id
 * identifier[+]
   * use = #official
   * system = "urn:dicom:uid"
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.03.01" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
-* location = SCT#41216001 "Prostatic structure (body structure)" 
-* locationQualifier[+] = SCT#255503000 "Entire (qualifier value)" 
-* patient.reference = "Patient/Patient-XRTS-03"
+* location = SCT#41216001 "Prostatic structure (body structure)"
+* locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
+* patient = Reference(Patient-XRTS-03)
 
 Instance: RadiotherapyVolume-XRTS-03-02-PelvNs
 InstanceOf: RadiotherapyVolume
@@ -118,10 +118,10 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyVolume)
-* meta.profile[+] = MCodeVolume
+* meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "PelvNs" // display id
 * identifier[+]
   * use = #official
@@ -129,7 +129,7 @@ Usage: #example
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.03.02" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#245294005 "Pelvic lymph node group (body structure)"
-* patient.reference = "Patient/Patient-XRTS-03"
+* patient = Reference(Patient-XRTS-03)
 
 Instance: RadiotherapyVolume-XRTS-03-03-SemVs
 InstanceOf: RadiotherapyVolume
@@ -138,29 +138,29 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyVolume)
-* meta.profile[+] = MCodeVolume
+* meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyDoseReferenceId"
+  * system = VarianDoseReferenceId
   * value = "SemVs" // display id
 * identifier[+]
   * use = #official
   * system = "urn:dicom:uid"
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.03.03" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
-* location = SCT#64739004 "Seminal vesicle" 
-* patient.reference = "Patient/Patient-XRTS-03"
+* location = SCT#64739004 "Seminal vesicle"
+* patient = Reference(Patient-XRTS-03)
 
 // --- Patient ---------------------------------------------------------------------------------
 
 Instance:   Patient-XRTS-03
-InstanceOf: MCodeCancerPatient
+InstanceOf: $mCODECancerPatient
 Title: "Example XRTS Patient"
 Description: "An example patient to relate Radiotherapy resources to."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
-* meta.profile[+] = MCodeCancerPatient
+* meta.profile[+] = $mCODECancerPatient
 * meta.profile[+] = USCorePatient
 * extension[birthsex].valueCode = #M
 * identifier[+]

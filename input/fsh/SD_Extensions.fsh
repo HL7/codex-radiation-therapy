@@ -11,7 +11,7 @@ RuleSet: ExtensionContext(path)
 Extension: RadiotherapyTreatmentDeviceType
 Id: radiotherapyTreatmentDeviceType
 Title: "(Future) Type of Treatment Device"
-Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device. 
+Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device.
 Device instances are not specified here. Those are represented by resources of type Device."
 * . ^short = "Type of Treatment Device"
 * value[x] ^short = "Type of Treatment Device"
@@ -22,16 +22,16 @@ Device instances are not specified here. Those are represented by resources of t
 Extension: RadiotherapyFractionsPrescribed
 Id: radiotherapy-fractions-prescribed
 Title: "(Future) Number of Prescribed Fractions"
-Description: "The number of prescribed Fractions in this scope. 
+Description: "The number of prescribed Fractions in this scope.
 This extension SHALL only be present if the treatment is structured as countable Fractions, for example in a Phase Prescription."
 * . ^short = "Number of Prescribed Fractions"
 * value[x] ^short = "Number of Prescribed Fractions"
 * value[x] only positiveInt
 
-//mCODE has no prescription yet, but expect that to be symmetric to 
+//mCODE has no prescription yet, but expect that to be symmetric to
 //http://hl7.org/fhir/us/mcode/2021May/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
 Extension: RadiotherapyDosePrescribedToVolume
-Id: radiotherapy-dose-prescribed-to-volume
+Id: codexrt-radiotherapy-dose-prescribed-to-volume
 Title: "(Future) Dose Prescribed to Volume"
 Description: "Dose parameters prescribed for one radiotherapy volume."
 * . ^short = "Prescribed Dose to a Dose Reference"
@@ -60,10 +60,16 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
   * ^definition = "The number of Fraction in which dose to this volume is prescribed. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in Phase Prescriptions or Plans."
 
 Extension: RadiotherapyEnergy
-Id: radiotherapy-energy
+Id: codexrt-radiotherapy-energy
 Title: "(Future) Radiotherapy Energy"
 Description: "The radiation energy, preferably specified as decimal in MV. Can alternatively be represented as string or CodeableConcept."
 * . ^short = "Radiotherapy Energy"
-* value[x] ^short = "The radiation energy as decimal in MV. Can alternatively be represented as string or CodeableConcept." 
-* value[x] only SimpleQuantity or CodeableConcept 
+* value[x] ^short = "The radiation energy as decimal in MV. Can alternatively be represented as string or CodeableConcept."
+* value[x] only SimpleQuantity or CodeableConcept
 * valueQuantity = UCUM#MV "megavolt"
+
+Extension: RadiotherapyFractionsDelivered
+Id: radiotherapy-fractions-delivered
+Title: "Radiotherapy Fractions Delivered"
+Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
+* value[x] only unsignedInt

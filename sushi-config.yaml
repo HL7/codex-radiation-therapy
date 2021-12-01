@@ -2,7 +2,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.us.codexrt
+id: hl7.fhir.us.codex-radiation-therapy
 canonical: http://hl7.org/fhir/us/codex-radiation-therapy
 name: CodeX-Radiation-Therapy
 status: draft
@@ -21,14 +21,15 @@ description: CodeX™ Radiation Therapy is an initiative
   electronic health records.
 license: CC0-1.0
 dependencies:
-    hl7.fhir.us.core: 3.1.0
-    hl7.fhir.us.mcode: 
-      id: mcode
-      uri: http://build.fhir.org/ig/HL7/fhir-mCODE-ig
-      version: current
+  hl7.fhir.us.core: 4.0.0
+  hl7.fhir.us.mcode: current
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
   Artifacts: artifacts.html
+parameters:
+  show-inherited-invariants: false
+  version-comparison: n/a
+  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources

@@ -1,0 +1,38 @@
+
+// -------- Example Instances ---------------------------------------------------------
+
+Instance: TeleradiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1
+InstanceOf: TeleradiotherapyTreatmentPhase
+Description: "Treatment Summary for first phase"
+Usage: #example
+* id = "TeleradiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1" //id of the FHIR Resource
+* meta.versionId = "1233456"
+* meta.lastUpdated = "2020-10-28T13:22:17+01:00"
+* meta.profile[0] = Canonical(TeleradiotherapyTreatmentPhase)
+* extension[fractionsDelivered].valueUnsignedInt = 2
+// Prescription Target Site "Prostate"
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity.value = 360
+// Prescription Target Site "Pelv Ns"
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][1].extension[volume].valueReference. = Reference(RadiotherapyVolume-04-PelvNs)
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity.value = 360
+// Prescription Target Site "Sem Vs"
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][2].extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
+* extension[$mCODERadiotherapyDoseDeliveredToVolume][2].extension[totalDoseDelivered].valueQuantity.value = 360
+* identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+* identifier.system = VarianRadiotherapyPrescriptionId
+* identifier.value = "Prostate-Phase1"
+* basedOn = Reference (TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1)
+* basedOn.display = "Prostate-Phase1"
+* partOf = Reference(RadiotherapyCourseSummary-04-XRTS-Prostate) //Can reference another summary of larger scope
+* status = #in-progress
+//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.
+* subject = Reference(Patient-6)
+* subject.display = "Peter Venkman"
+* performedPeriod.start = "2020-10-27T13:15:17+01:00"
+* performedPeriod.end = "2020-10-28T13:21:17+01:00"
+* reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
+* reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
+* reasonReference = Reference(Diagnosis-2-Prostate) //In ARIA, diagnoses related to Course
+* bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
+* bodySite.text = "Prostate"

@@ -28,7 +28,7 @@ Usage: #example
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
-* code = ICD10#C61.0 "Malignant neoplasm of prostate"
+* code = ICD10#C61 "Malignant neoplasm of prostate"
 * subject = Reference(Patient/Patient-6)
 * onsetDateTime = "2018-03-16"
-* asserter = Reference(Practitioner/Practitioner-1005)
+* asserter = Reference(Practitioner-1005)
