@@ -9,7 +9,7 @@ RuleSet: ExtensionContext(path)
 * ^context[=].expression = "{path}"
 
 Extension: RadiotherapyTreatmentDeviceType
-Id: radiotherapyTreatmentDeviceType
+Id: codexrt-radiotheraphy-treatment-device-type
 Title: "(Future) Type of Treatment Device"
 Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device.
 Device instances are not specified here. Those are represented by resources of type Device."
@@ -20,7 +20,7 @@ Device instances are not specified here. Those are represented by resources of t
 // mCODE has no prescription yet. But defined already symmetric with delivery in mCODE:
 // http://hl7.org/fhir/us/mcode/2021May/StructureDefinition-mcode-radiotherapy-fractions-delivered.html
 Extension: RadiotherapyFractionsPrescribed
-Id: radiotherapy-fractions-prescribed
+Id: codexrt-radiotherapy-fractions-prescribed
 Title: "(Future) Number of Prescribed Fractions"
 Description: "The number of prescribed Fractions in this scope.
 This extension SHALL only be present if the treatment is structured as countable Fractions, for example in a Phase Prescription."
@@ -69,7 +69,7 @@ Description: "The radiation energy, preferably specified as decimal in MV. Can a
 * valueQuantity = UCUM#MV "megavolt"
 
 Extension: RadiotherapyFractionsDelivered
-Id: radiotherapy-fractions-delivered
+Id: codexrt-radiotherapy-fractions-delivered
 Title: "Radiotherapy Fractions Delivered"
 Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
 * value[x] only unsignedInt

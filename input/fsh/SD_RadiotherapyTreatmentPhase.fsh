@@ -3,7 +3,7 @@
 
 Profile: TeleradiotherapyTreatmentPhase
 Parent: RadiotherapyTreatmentPhase
-Id: TeleradiotherapyTreatmentPhase
+Id: codexrt-teleradiotherapy-treatmentphase
 Title: "Teleradiotherapy Treatment Phase"
 Description: "A Summary of the Treatment Progress over an External Beam Treatment Phase.
 Whenever new contributions in the scope of the same Phase are delivered, this resource is updated (no new resource created)."
@@ -13,7 +13,7 @@ Whenever new contributions in the scope of the same Phase are delivered, this re
 
 Profile: BrachytherapyTreatmentPhase
 Parent: RadiotherapyTreatmentPhase
-Id: BrachytherapyTreatmentPhase
+Id: codexrt-brachytherapy-treatmentphase
 Title: "Brachytherapy Treatment Phase"
 Description: "A Summary of the Treatment Progress over a Brachytherapy Treatment Phase.
 Whenever new contributions in the scope of the same Phase are delivered, this resource is updated (no new resource created)."
