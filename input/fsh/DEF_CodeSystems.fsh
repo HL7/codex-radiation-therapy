@@ -19,8 +19,7 @@ Description: "Specifies which kind of Radiotherapy request is covered by a reque
 * ^status = #draft
 * ^caseSensitive = true
 * #radiotherapy-course-prescription	"Radiotherapy Course Prescription" 	"Identifies a ServiceRequest resource for a complete Course of Radiotherapy treatment."
-* #teleradiotherapy-phase-prescription "Teleradiotherapy Phase Prescription" "Identifies a ServiceRequest resource for a single Phase of external beam radiotherapy treatment."
-* #brachytherapy-phase-prescription	"Brachytherapy Phase Prescription" 	"Identifies a ServiceRequest resource for  a single Phase of brachytherapy."
-* #teleradiotherapy-treatment-plan	"Teleradiotherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one External Beam Radiotherapy Treatment Plan."
-* #teleradiotherapy-QA-plan	"Teleradiotherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one External Beam Radiotherapy QA Plan."
-* #brachytherapy-treatment-plan	"Brachytherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one Brachytherapy Treatment Plan."
+* #radiotherapy-phase-prescription "Radiotherapy Phase Prescription" "Identifies a ServiceRequest resource for a single Phase of radiotherapy treatment."
+* #radiotherapy-treatment-plan	"Radiotherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one Radiotherapy Treatment Plan."
+* #radiotherapy-QA-plan	"Radiotherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one Radiotherapy QA Plan."
+

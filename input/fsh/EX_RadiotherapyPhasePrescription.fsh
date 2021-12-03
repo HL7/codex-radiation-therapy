@@ -1,13 +1,13 @@
 // -------- Example Instances ---------------------------------------------------------
 
-Instance: TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1
-InstanceOf: TeleradiotherapyPhasePrescription
-Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 1."
+Instance: RadiotherapyPhasePrescription-04-Prostate-Phase1
+InstanceOf: RadiotherapyPhasePrescription
+Description: "Radiotherapy Phase Prescription to cover IHE-RO XRTS profile for a Prostate example, phase 1."
 Usage: #example
-//* id = "TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1" //id of the FHIR Resource
+//* id = "RadiotherapyPhasePrescription-04-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
-* meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+* meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[mcode-radiotherapy-modality-and-technique]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -31,12 +31,12 @@ Usage: #example
   * extension[totalDosePrescribed].valueQuantity.value = 4500
 * identifier[+]
   * use = #usual
-  * system = VarianRadiotherapyPrescriptionId // "http://varian.com/fhir/identifier/radiotherapyPhasePrescriptionId"
+  * system = VarianRadiotherapyPrescriptionId
   * value = "Prostate-Phase1"
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456" 
-* basedOn = Reference(RadiotherapyCoursePrescription-04-XRTS-Prostate) //Intent that this prescription bases on
+* basedOn = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
 //* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
 * subject = Reference(Patient-6)
@@ -54,14 +54,14 @@ Usage: #example
 * bodySite.text = "Prostate"
 * note.text = "Free text note in Radiotherapy Prescription"
 
-Instance: TeleradiotherapyPhasePrescription-05-XRTS-Prostate-Phase2
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-05-Prostate-Phase2
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 2."
 Usage: #example
-* id = "TeleradiotherapyPhasePrescription-05-XRTS-Prostate-Phase2" //id of the FHIR Resource
+//* id = "RadiotherapyPhasePrescription-05-Prostate-Phase2" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
-* meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+* meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[mcode-radiotherapy-modality-and-technique]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -85,7 +85,7 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456" 
-* basedOn = Reference(RadiotherapyCoursePrescription-04-XRTS-Prostate) //Intent that this prescription bases on
+* basedOn = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
 * basedOn.display =  "Prostate-2Phases"
 //* replaces = Reference(RadiotherapyPhasePrescription-0) //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
