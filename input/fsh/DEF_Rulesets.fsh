@@ -53,7 +53,7 @@ RuleSet: RadiotherapyRequestCommon
 * note MS
 
 RuleSet: RadiotherapyTreatmentPhaseCommon
-* obeys xrts-procedure-status
+* obeys codexrt-procedure-status
 * partOf MS
 * partOf only Reference(RadiotherapyCourseSummary)
 * basedOn MS

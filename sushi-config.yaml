@@ -26,10 +26,64 @@ dependencies:
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home: index.html
-  Artifacts: artifacts.html
+
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+pages:
+  index.md:
+    title: Home
+  overview.md:
+    title: Overview
+  conformance-general.md:
+    title: Conformance Expectations
+  conformance-profiles.md:
+    title: Profile Conformance
+  terminology.md:
+    title: Terminology
+  profiles.md:
+    title: Profiles
+  extensions.md:
+    title: Extensions
+  valuesets.md:
+    title: Value Sets
+  codesystems.md:
+    title: Code Systems
+  capabilitystatements.md:
+    title: Capability Statements
+  artifacts.html:
+    title: Artifacts Summary
+  basic_examples.md:
+    title: Basic Examples
+  examples.md:
+    title: Extended Example
+  dictionary.md:
+    title: Data Dictionary
+  change_log.md:
+    title: Change Log
+  downloads.md:
+    title: Download Specification
+
+menu:
+  Home: index.html
+  Overview: overview.html
+  Conformance:
+    General Expectations: conformance-general.html
+    Profile Conformance: conformance-profiles.html
+    Terminology: terminology.html
+  FHIR Artifacts:
+    Profiles: profiles.html
+    Extensions: extensions.html
+    Value Sets: valuesets.html
+    Code Systems: codesystems.html
+    Capability Statements: capabilitystatements.html
+    Complete Listing: artifacts.html
+  More:
+    Basic Examples: basic_examples.html
+    Extended Example: examples.html
+    Data Dictionary: dictionary.html
+    Radiotherapy Glossary:  glossary.html
+    Change Log: change_log.html
+    Download Specification: downloads.html
+    Other Versions: http://hl7.org/fhir/us/codex-radiation-therapy/history.html
