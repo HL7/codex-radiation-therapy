@@ -16,9 +16,9 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 6
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-05-01-BrainMets"
-    * display = "Brain Mets"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-05-01-BrainMets)
+    * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2500
   * extension[fractionsDelivered].valueUnsignedInt = 5
 * identifier
@@ -78,9 +78,9 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-05-01-BrainMets"
-    * display = "Brain Mets"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-05-01-BrainMets)
+    * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2500
 * identifier[+]
   * use = #usual
@@ -106,9 +106,9 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-05-01-BrainMets"
-    * display = "Brain Mets"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-05-01-BrainMets)
+    * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2000
 * identifier[+]
   * use = #usual

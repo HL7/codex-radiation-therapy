@@ -19,7 +19,7 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 9
 * extension[doseDeliveredToVolume][+]
-  * extension[volume]
+  * extension[volume] 
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 1340
@@ -49,7 +49,7 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
-  * extension[volume]
+  * extension[volume] 
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 540
@@ -77,7 +77,7 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
-  * extension[volume]
+  * extension[volume] 
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 800
