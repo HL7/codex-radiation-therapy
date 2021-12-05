@@ -19,26 +19,26 @@ Usage: #example
 * extension[radiotherapy-sessions].valueUnsignedInt = 44
 // Prescription Target Site "Prostate"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
-  * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate) 
-  * extension[totalDosePrescribed].valueQuantity.value = 8300 //unit cGy is automatically added because fixed in the profile 
-  * extension[fractionsPrescribed].valuePositiveInt = 44 
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
+  * extension[totalDosePrescribed].valueQuantity.value = 8300 //unit cGy is automatically added because fixed in the profile
+  * extension[fractionsPrescribed].valuePositiveInt = 44
 // Prescription Target Site "Pelv Ns"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
-  * extension[totalDosePrescribed].valueQuantity.value = 4500 
-  * extension[fractionsPrescribed].valuePositiveInt = 25 
+  * extension[totalDosePrescribed].valueQuantity.value = 4500
+  * extension[fractionsPrescribed].valuePositiveInt = 25
 // Prescription Target Site "Sem Vs"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-  * extension[totalDosePrescribed].valueQuantity.value = 7920 
-  * extension[fractionsPrescribed].valuePositiveInt = 44 
+  * extension[totalDosePrescribed].valueQuantity.value = 7920
+  * extension[fractionsPrescribed].valuePositiveInt = 44
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyCourseId
   * value = "Prostate-2Phases"
 * identifier[+]
   * system = DICOMUID
-  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456.2" 
+  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456.2"
 //* replaces.reference = ... //XRTSIntent."Predecessor" In FHIR, this can reference another resource instead of only identifier.
 * status = #active
 * code = RadiotherapyRequest#radiotherapy-course-prescription	"Radiotherapy Course Prescription"

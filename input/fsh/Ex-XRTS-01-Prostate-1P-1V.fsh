@@ -16,7 +16,7 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 2
 * extension[doseDeliveredToVolume][+]
-  * extension[volume] 
+  * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-01-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
@@ -46,7 +46,7 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 2
 * extension[doseDeliveredToVolume]
-  * extension[volume] 
+  * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-01-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
