@@ -1,6 +1,6 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-XRTS-01-Prostate-1P-3V
+Instance: RadiotherapyCourseSummary-XRTS-01-Prostate-1P-1V
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -16,8 +16,9 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 2
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-  * extension[volume].valueReference.display = "Prostate"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-01-Prostate)
+    * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
   * extension[fractionsDelivered].valueUnsignedInt = 2
 * identifier
@@ -45,14 +46,15 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 2
 * extension[doseDeliveredToVolume]
-  * extension[volume].valueReference = Reference(RadiotherapyVolume-XRTS-01-01-Prostate)
-  * extension[volume].valueReference.display = "Prostate"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-01-Prostate)
+    * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
 * identifier
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-01-Prostate-1P-3V)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-01-Prostate-1P-1V)
 * status = #completed
 * subject = Reference(Patient-XRTS-01)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"

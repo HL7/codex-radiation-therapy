@@ -20,30 +20,30 @@ Usage: #example
 * extension[actualNumberOfSessions].valueUnsignedInt = 8
 // Prescription Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-04-01-LeftBreast"
-    * display = "Left Breast"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-01-LeftBreast)
+    * valueReference.display = "Left Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
   * extension[fractionsDelivered].valueUnsignedInt = 3
 // Prescription Target Site "Left Breast Boost"
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-04-02-LeftBreastBoost"
-    * display = "Left Breast Boost"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 2000
   * extension[fractionsDelivered].valueUnsignedInt = 7
 // Prescription Target Site "Right Breast"
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-04-03-RightBreast"
-    * display = "Right Breast"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-03-RightBreast)
+    * valueReference.display = "Right Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
   * extension[fractionsDelivered].valueUnsignedInt = 3
 * identifier
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "C1_Both_Breast"
-//* basedOn = Reference(ServiceRequest/RadiotherapyCoursePrescription-XRTS-04-Breast"
+//* basedOn = Reference(ServiceRequest/RadiotherapyCoursePrescription-XRTS-04-Breast)
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
@@ -66,14 +66,14 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-04-01-LeftBreast"
-    * display = "Left Breast"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-01-LeftBreast)
+    * valueReference.display = "Left Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-04-02-LeftBreastBoost"
-    * display = "Left Breast Boost"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 1200
 * identifier[+]
   * use = #usual
@@ -100,9 +100,9 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-04-03-RightBreast"
-    * display = "Right Breast"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-03-RightBreast)
+    * valueReference.display = "Right Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
 * identifier[+]
   * use = #usual
@@ -128,9 +128,9 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-04-02-LeftBreastBoost"
-    * display = "Left Breast Boost"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 800
 * identifier[+]
   * use = #usual
