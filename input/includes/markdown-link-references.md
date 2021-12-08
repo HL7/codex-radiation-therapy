@@ -1,70 +1,70 @@
-<!-- Temporary changes to fix formatting for changelog -->
-<style>
-  ul.new-content {
-    padding-left: 25px !important;
-  }
-</style>
-
-<!-- codex-radiotherapy Profiles -->
-[RadiotherapyCoursePrescription]: StructureDefinition-radiotherapy-course-prescription.html
-[RadiotherapyCourseSummary]: StructureDefinition-radiotherapy-course-prescription.html
-[RadiotherapyPhasePrescription]: StructureDefinition-radiotherapy-course-prescription.html
-[RadiotherapyTreatmentPrescription]: StructureDefinition-radiotherapy-course-prescription.html
-[RadiotherapyVolume]: StructureDefinition-radiotherapy-course-prescription.html
-
-<!-- codex-radiotherapy Extensions -->
-[RadiotherapyDosePresecribedToVolume]: StructureDefinition-codexrt-radiotherapy-dose-prescribed-to-volume.html
-[RadiotheraphyFractionsDelivered]: StructureDefinition-codexrt-radiotherapy-fractions-delivered.html
-[RadiotherapyTreatmentDeviceType]: StructureDefinition-codexrt-radiotheraphy-treatment-device-type.html
-[RadiotherapyFractionsPrescribed]: StructureDefinition-codexrt-radiotherapy-fractions-prescribed.html
-[RadiotherapyFractionsDelivered]: StructureDefinition-codexrt-radiotherapy-fractions-delivered.html
-
-<!-- mCODE Profiles -->
-[mCODERadiotherapyCourseSummary]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-course-summary.html
-[mCODERadiotherapyVolume]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-volume.html
-
-<!-- mCODE Extensions -->
-[RadiotherapyDoseDeliveredToVolume]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
-[RadiotherapyModality]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-modality.html
-[RadiotherapyModalityAndTechnique]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-modality-and-technique.html
-[RadiotherapySessions]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-sessions.html
-[RadiotherapyTechnique]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-technique.html
-
-<!-- mCODE Value Sets  -->
-[mCODEProcedureIntentVS]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-procedure-intent-vs.html
-[mCODERadiotherapyModalityVS]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-radiotherapy-modality-vs.html
-[mCODERadiotherapyTechniqueVS]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-radiotherapy-technique-vs.html
-[mCODERadiotherapyTreatmentLocationQualifierVS]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs.html
-[mCODERadiotherapyTreatmentLocationVS]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-radiotherapy-treatment-location-vs.html
-[mCODERadiotherapyVolumeTypeVS]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-radiotherapy-volume-type-vs.html
-[mCODETreatmentTerminationReasonVS]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-treatment-termination-reason-vs.html
-
-<!-- External Value Sets -->
-
-
-<!-- codex radiotherapy Code Systems -->
-[LoincRequestedCS]: CodeSystem-loinc-requested-cs.html
-[SnomedRequestedCS]: CodeSystem-snomed-requested-cs.html
-
-<!-- codex radiotherapy CapabilityStatements -->
-
-<!-- Operations -->
-
-<!-- US Core -->
-[USCoreMedicationRequest]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html
-[USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
-[USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
-[USCoreCondition]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html
-[USCoreProcedure]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html
-[USCorePractitioner]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html
-[USCoreSmokingStatus]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html
-[USCoreDiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html
-
-<!-- R4 -->
-[CapabilityStatement]: StructureDefinition-CapabilityStatement.html
-[R4MedicationAdministration]: http://hl7.org/fhir/R4/medicationadministration.html
-[R4Specimen]: http://hl7.org/fhir/R4/specimen.html
-[R4Bundle]: http://hl7.org/fhir/R4/bundle.html
-[R4ServiceRequest]:  http://hl7.org/fhir/R4/servicerequest.html
-[R4Procedure]:  http://hl7.org/fhir/R4/procedure.html
-<!-- Other links -->
+[CodexrtRadiotherapyCoursePrescription]: StructureDefinition-codexrt-radiotherapy-course-prescription.html
+[CodexrtRadiotherapyCourseSummary]: StructureDefinition-codexrt-radiotherapy-course-summary.html
+[CodexrtRadiotheraphyPhasePrescription]: StructureDefinition-codexrt-radiotheraphy-phase-prescription.html
+[CodexrtRadiotherapyTreatmentPhase]: StructureDefinition-codexrt-radiotherapy-treatment-phase.html
+[CodexrtRadiotherapyVolume]: StructureDefinition-codexrt-radiotherapy-volume.html
+[CodexrtRadiotherapyDosePrescribedToVolume]: StructureDefinition-codexrt-radiotherapy-dose-prescribed-to-volume.html
+[CodexrtRadiotherapyEnergy]: StructureDefinition-codexrt-radiotherapy-energy.html
+[CodexrtRadiotherapyFractionsDelivered]: StructureDefinition-codexrt-radiotherapy-fractions-delivered.html
+[CodexrtRadiotherapyFractionsPrescribed]: StructureDefinition-codexrt-radiotherapy-fractions-prescribed.html
+[CodexrtRadiotheraphyTreatmentDeviceType]: StructureDefinition-codexrt-radiotheraphy-treatment-device-type.html
+[RadiotherapyRequest]: ValueSet-radiotherapy-request.html
+[RadiotherapyRequest]: CodeSystem-radiotherapy-request.html
+[SnomedRequestedCs]: CodeSystem-snomed-requested-cs.html
+[Diagnosis1Breast]: Condition-Diagnosis-1-Breast.html
+[Diagnosis101Breast]: Condition-Diagnosis-101-Breast.html
+[Diagnosis2Prostate]: Condition-Diagnosis-2-Prostate.html
+[Patient101]: Patient-Patient-101.html
+[Patient5]: Patient-Patient-5.html
+[Patient6]: Patient-Patient-6.html
+[PatientXRTS01]: Patient-Patient-XRTS-01.html
+[PatientXRTS02]: Patient-Patient-XRTS-02.html
+[PatientXRTS03]: Patient-Patient-XRTS-03.html
+[PatientXRTS04]: Patient-Patient-XRTS-04.html
+[PatientXRTS05]: Patient-Patient-XRTS-05.html
+[Practitioner1005]: Practitioner-Practitioner-1005.html
+[RadiotherapyCoursePrescription04Prostate]: ServiceRequest-RadiotherapyCoursePrescription-04-Prostate.html
+[RadiotherapyCoursePrescription101RTTDBilateralBreast]: ServiceRequest-RadiotherapyCoursePrescription-101-RTTD-BilateralBreast.html
+[RadiotherapyCourseSummary04Prostate]: Procedure-RadiotherapyCourseSummary-04-Prostate.html
+[RadiotherapyCourseSummary101RTTDBilateralBreast]: Procedure-RadiotherapyCourseSummary-101-RTTD-BilateralBreast.html
+[RadiotherapyCourseSummaryXRTS01Prostate1P1V]: Procedure-RadiotherapyCourseSummary-XRTS-01-Prostate-1P-1V.html
+[RadiotherapyCourseSummaryXRTS02Prostate2P1V]: Procedure-RadiotherapyCourseSummary-XRTS-02-Prostate-2P-1V.html
+[RadiotherapyCourseSummaryXRTS03Prostate1P3V]: Procedure-RadiotherapyCourseSummary-XRTS-03-Prostate-1P-3V.html
+[RadiotherapyCourseSummaryXRTS04Breast2P3V]: Procedure-RadiotherapyCourseSummary-XRTS-04-Breast-2P-3V.html
+[RadiotherapyCourseSummaryXRTS05BrainMets1P1VC1BrainMets]: Procedure-RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C1BrainMets.html
+[RadiotherapyCourseSummaryXRTS05BrainMets1P1VC2BrainMets]: Procedure-RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C2BrainMets.html
+[RadiotherapyPhasePrescription04ProstatePhase1]: ServiceRequest-RadiotherapyPhasePrescription-04-Prostate-Phase1.html
+[RadiotherapyPhasePrescription05ProstatePhase2]: ServiceRequest-RadiotherapyPhasePrescription-05-Prostate-Phase2.html
+[RadiotherapyPhasePrescription101RTTDLeftBreastTangents]: ServiceRequest-RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents.html
+[RadiotherapyPhasePrescription102RTTDLeftBreastBoost]: ServiceRequest-RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost.html
+[RadiotherapyPhasePrescription103RTTDRightBreastTangents]: ServiceRequest-RadiotherapyPhasePrescription-103-RTTD-RightBreastTangents.html
+[RadiotherapyTreatmentPhase05ProstatePhase1]: Procedure-RadiotherapyTreatmentPhase-05-Prostate-Phase1.html
+[RadiotherapyTreatmentPhase101LeftBreastTangents]: Procedure-RadiotherapyTreatmentPhase-101-LeftBreastTangents.html
+[RadiotherapyTreatmentPhase102LeftBreastBoost]: Procedure-RadiotherapyTreatmentPhase-102-LeftBreastBoost.html
+[RadiotherapyTreatmentPhase103RightBreastTangents]: Procedure-RadiotherapyTreatmentPhase-103-RightBreastTangents.html
+[RadiotherapyTreatmentPhaseXRTS0101Primary]: Procedure-RadiotherapyTreatmentPhase-XRTS-01-01-Primary.html
+[RadiotherapyTreatmentPhaseXRTS0201Primary]: Procedure-RadiotherapyTreatmentPhase-XRTS-02-01-Primary.html
+[RadiotherapyTreatmentPhaseXRTS0202Boost]: Procedure-RadiotherapyTreatmentPhase-XRTS-02-02-Boost.html
+[RadiotherapyTreatmentPhaseXRTS0301Primary]: Procedure-RadiotherapyTreatmentPhase-XRTS-03-01-Primary.html
+[RadiotherapyTreatmentPhaseXRTS0401LeftBreastTangents]: Procedure-RadiotherapyTreatmentPhase-XRTS-04-01-LeftBreastTangents.html
+[RadiotherapyTreatmentPhaseXRTS0402RightBreastTangents]: Procedure-RadiotherapyTreatmentPhase-XRTS-04-02-RightBreastTangents.html
+[RadiotherapyTreatmentPhaseXRTS0403LeftBreastBoost]: Procedure-RadiotherapyTreatmentPhase-XRTS-04-03-LeftBreastBoost.html
+[RadiotherapyTreatmentPhaseXRTS050101Primary]: Procedure-RadiotherapyTreatmentPhase-XRTS-05-01-01-Primary.html
+[RadiotherapyTreatmentPhaseXRTS050102Primary]: Procedure-RadiotherapyTreatmentPhase-XRTS-05-01-02-Primary.html
+[RadiotherapyVolume02PTV64]: BodyStructure-RadiotherapyVolume-02-PTV64.html
+[RadiotherapyVolume03Prostate]: BodyStructure-RadiotherapyVolume-03-Prostate.html
+[RadiotherapyVolume04PelvNs]: BodyStructure-RadiotherapyVolume-04-PelvNs.html
+[RadiotherapyVolume05SemVs]: BodyStructure-RadiotherapyVolume-05-SemVs.html
+[RadiotherapyVolume101LeftBreast]: BodyStructure-RadiotherapyVolume-101-LeftBreast.html
+[RadiotherapyVolume102LeftBreastBoost]: BodyStructure-RadiotherapyVolume-102-LeftBreastBoost.html
+[RadiotherapyVolume103RightBreast]: BodyStructure-RadiotherapyVolume-103-RightBreast.html
+[RadiotherapyVolumeXRTS0101Prostate]: BodyStructure-RadiotherapyVolume-XRTS-01-01-Prostate.html
+[RadiotherapyVolumeXRTS0201Prostate]: BodyStructure-RadiotherapyVolume-XRTS-02-01-Prostate.html
+[RadiotherapyVolumeXRTS0301Prostate]: BodyStructure-RadiotherapyVolume-XRTS-03-01-Prostate.html
+[RadiotherapyVolumeXRTS0302PelvNs]: BodyStructure-RadiotherapyVolume-XRTS-03-02-PelvNs.html
+[RadiotherapyVolumeXRTS0303SemVs]: BodyStructure-RadiotherapyVolume-XRTS-03-03-SemVs.html
+[RadiotherapyVolumeXRTS0401LeftBreast]: BodyStructure-RadiotherapyVolume-XRTS-04-01-LeftBreast.html
+[RadiotherapyVolumeXRTS0402LeftBreastBoost]: BodyStructure-RadiotherapyVolume-XRTS-04-02-LeftBreastBoost.html
+[RadiotherapyVolumeXRTS0403RightBreast]: BodyStructure-RadiotherapyVolume-XRTS-04-03-RightBreast.html
+[RadiotherapyVolumeXRTS0501BrainMets]: BodyStructure-RadiotherapyVolume-XRTS-05-01-BrainMets.html
+[RadiotherapyVolume01PTV50]: BodyStructure-radiotherapyVolume-01-PTV50.html
