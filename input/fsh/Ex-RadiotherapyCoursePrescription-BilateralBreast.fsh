@@ -21,18 +21,18 @@ Usage: #example
 // Prescription Target Site "Left Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
-  * extension[totalDosePrescribed].valueQuantity.value = 5000 
-  * extension[fractionsPrescribed].valuePositiveInt = 25  
+  * extension[totalDosePrescribed].valueQuantity.value = 5000
+  * extension[fractionsPrescribed].valuePositiveInt = 25
 // Prescription Target Site "Left Breast Boost"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
-  * extension[totalDosePrescribed].valueQuantity.value = 6000 
-  * extension[fractionsPrescribed].valuePositiveInt = 30 
+  * extension[totalDosePrescribed].valueQuantity.value = 6000
+  * extension[fractionsPrescribed].valuePositiveInt = 30
 // Prescription Target Site "Right Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
-  * extension[totalDosePrescribed].valueQuantity.value = 5000 
-  * extension[fractionsPrescribed].valuePositiveInt = 25 
+  * extension[totalDosePrescribed].valueQuantity.value = 5000
+  * extension[fractionsPrescribed].valuePositiveInt = 25
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyCourseId
@@ -296,8 +296,8 @@ Usage: #example
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.101" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
-* locationQualifier[+] = SCT#7771000 "Left (qualifier value)" 
-* locationQualifier[+] = SCT#255503000 "Entire (qualifier value)" 
+* locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
+* locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
 * patient = Reference(Patient-101)
 
 Instance: RadiotherapyVolume-102-LeftBreastBoost
@@ -319,7 +319,7 @@ Usage: #example
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.102" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
-* locationQualifier[+] = SCT#7771000 "Left (qualifier value)" 
+* locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
 * locationQualifier[+] = SCT#255609007 "Partial (qualifier value)"
 * patient = Reference(Patient-101)
 
@@ -342,8 +342,8 @@ Usage: #example
   * value = "1.2.246.352.71.10.842421386418.21321.20150602151.103" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
-* locationQualifier[+] = SCT#24028007 "Right (qualifier value)" 
-* locationQualifier[+] = SCT#255503000 "Entire (qualifier value)" 
+* locationQualifier[+] = SCT#24028007 "Right (qualifier value)"
+* locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
 * patient = Reference(Patient-101)
 
 // --- Patient ---------------------------------------------------------------------------------

@@ -16,21 +16,21 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-01-Prostate"
-    * display = "Prostate"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-01-Prostate)
+    * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 800
   * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-02-PelvNs"
-    * display = "PelvNs"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-02-PelvNs)
+    * valueReference.display = "PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 720
   * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-03-SemVs"
-    * display = "SemVs"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-03-SemVs)
+    * valueReference.display = "SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 800
   * extension[fractionsDelivered].valueUnsignedInt = 4
 * identifier
@@ -60,19 +60,19 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-01-Prostate"
-    * display = "Prostate"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-01-Prostate)
+    * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 800
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-02-PelvNs"
-    * display = "PelvNs"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-02-PelvNs)
+    * valueReference.display = "PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 720
 * extension[doseDeliveredToVolume][+]
-  * extension[volume].valueReference
-    * reference = "BodyStructure/RadiotherapyVolume-XRTS-03-03-SemVs"
-    * display = "SemVs"
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-03-SemVs)
+    * valueReference.display = "SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 800
 * identifier[+]
   * use = #usual
