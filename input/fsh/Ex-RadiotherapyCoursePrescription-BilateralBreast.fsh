@@ -49,12 +49,12 @@ Usage: #example
 
 // --- Phase Prescriptions ---------------------------------------------------------------------------------
 
-Instance: TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
-// * id = "TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
-* meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+// * id = "RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
+* meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[mcode-radiotherapy-modality-and-technique][+]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -84,12 +84,12 @@ Usage: #example
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
-Instance: TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
-// * id = "TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost" //id of the FHIR Resource
-* meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+// * id = "RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost" //id of the FHIR Resource
+* meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[mcode-radiotherapy-modality-and-technique][0]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -113,11 +113,11 @@ Usage: #example
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
-Instance: TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents
-InstanceOf: TeleradiotherapyPhasePrescription
+Instance: RadiotherapyPhasePrescription-103-RTTD-RightBreastTangents
+InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
-* meta.profile = Canonical(TeleradiotherapyPhasePrescription) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyPhasePrescription"
+* meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[mcode-radiotherapy-modality-and-technique][0]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -194,7 +194,7 @@ Usage: #example
 // * id = "RadiotherapyTreatmentPhase-101-LeftBreastTangents" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile = Canonical(RadiotherapyTreatmentPhase) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
+* meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[mcode-radiotherapy-modality-and-technique][0]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -211,7 +211,7 @@ Usage: #example
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Left Breast Tangents"
-* basedOn = Reference(TeleradiotherapyPhasePrescription-101-RTTD-LeftBreastTangents)
+* basedOn = Reference(RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents)
 * partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
 * status = #completed
 * subject = Reference(Patient-101)
@@ -220,14 +220,14 @@ Usage: #example
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: TeleradiotherapyTreatmentPhase-102-LeftBreastBoost
+Instance: RadiotherapyTreatmentPhase-102-LeftBreastBoost
 InstanceOf: RadiotherapyTreatmentPhase
 Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
 Usage: #example
-// * id = "TeleradiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost" //id of the FHIR Resource -- unnecessary
+// * id = "RadiotherapyTreatmentPhase-102-RTTD-LeftBreastBoost" //id of the FHIR Resource -- unnecessary
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile = Canonical(RadiotherapyTreatmentPhase) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
+* meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[mcode-radiotherapy-modality-and-technique][0]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -240,7 +240,7 @@ Usage: #example
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Left Breast Boost"
-* basedOn = Reference(TeleradiotherapyPhasePrescription-102-RTTD-LeftBreastBoost)
+* basedOn = Reference(RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost)
 * partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
 * status = #completed
 * subject = Reference(Patient-101)
@@ -255,7 +255,7 @@ Usage: #example
 // * id = "RadiotherapyTreatmentPhase-103-RightBreastTangents" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile = Canonical(RadiotherapyTreatmentPhase) // "https://profiles.ihe.net/RO.XRTS/StructureDefinition/TeleradiotherapyTreatmentPhase"
+* meta.profile = Canonical(RadiotherapyTreatmentPhase)
 * extension[mcode-radiotherapy-modality-and-technique][0]
   * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -267,7 +267,7 @@ Usage: #example
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Right Breast Tangents"
-* basedOn = Reference(TeleradiotherapyPhasePrescription-103-RTTD-RightBreastTangents)
+* basedOn = Reference(RadiotherapyPhasePrescription-103-RTTD-RightBreastTangents)
 * partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
 * status = #completed
 * subject = Reference(Patient-101)

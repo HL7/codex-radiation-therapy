@@ -1,14 +1,14 @@
 
 // -------- Example Instances ---------------------------------------------------------
 
-Instance: TeleradiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1
-InstanceOf: TeleradiotherapyTreatmentPhase
+Instance: RadiotherapyTreatmentPhase-05-Prostate-Phase1
+InstanceOf: RadiotherapyTreatmentPhase
 Description: "Treatment Summary for first phase"
 Usage: #example
-* id = "TeleradiotherapyTreatmentPhase-05-XRTS-Prostate-Phase1" //id of the FHIR Resource
+//* id = "RadiotherapyTreatmentPhase-05-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile[0] = Canonical(TeleradiotherapyTreatmentPhase)
+* meta.profile[0] = Canonical(RadiotherapyTreatmentPhase)
 * extension[fractionsDelivered].valueUnsignedInt = 2
 // Prescription Target Site "Prostate"
 * extension[$mCODERadiotherapyDoseDeliveredToVolume][+]
@@ -26,9 +26,9 @@ Usage: #example
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyPrescriptionId
   * value = "Prostate-Phase1"
-* basedOn = Reference(TeleradiotherapyPhasePrescription-04-XRTS-Prostate-Phase1)
+* basedOn = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1)
 * basedOn.display = "Prostate-Phase1"
-* partOf = Reference(RadiotherapyCourseSummary-04-XRTS-Prostate) //Can reference another summary of larger scope
+* partOf = Reference(RadiotherapyCourseSummary-04-Prostate) //Can reference another summary of larger scope
 * status = #in-progress
 //* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.
 * subject = Reference(Patient-6)

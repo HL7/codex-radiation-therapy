@@ -1,11 +1,11 @@
 
 // -------- Example Instances ---------------------------------------------------------
 
-Instance: RadiotherapyCoursePrescription-04-XRTS-Prostate
+Instance: RadiotherapyCoursePrescription-04-Prostate
 InstanceOf: RadiotherapyCoursePrescription
 Description: "Radiotherapy CoursePrescription with elements of IHE-RO XRTS profile for a prostate example."
 Usage: #example
-* id = "RadiotherapyCoursePrescription-04-XRTS-Prostate" //id of the FHIR Resource
+//* id = "RadiotherapyCoursePrescription-04-Prostate" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Added modification date of clinical contents as extension.
 * meta.profile = Canonical(RadiotherapyCoursePrescription) //"https://profiles.ihe.net/RO.XRTS/StructureDefinition/RadiotherapyCoursePrescription"

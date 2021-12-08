@@ -1,20 +1,3 @@
-// Common for External Beam and Brachy Phase Prescription
-RuleSet: RadiotherapyPhasePrescriptionCommon
-* extension contains
-    RadiotherapyFractionsPrescribed named radiotherapy-fractions-prescribed 1..1 MS and
-    RadiotherapyEnergy named radiotherapy-energy 0..* and
-    RadiotherapyTreatmentDeviceType named radiotherapy-treatment-device-type 0..*
-* extension[radiotherapy-dose-prescribed-to-volume] 0..* MS
-* extension[radiotherapy-dose-prescribed-to-volume].extension[fractionsPrescribed] 0..0
-* extension[radiotherapy-dose-prescribed-to-volume].extension[fractionsPrescribed] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
-* extension[radiotherapy-dose-prescribed-to-volume].extension[fractionsPrescribed] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-prescribed. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
-* occurrenceTiming only Timing
-* occurrenceTiming MS
-* occurrenceTiming.repeat.boundsPeriod 0..1
-* occurrenceTiming.repeat.boundsPeriod only Period
-* occurrenceTiming.repeat.frequency 0..1
-* occurrenceTiming.repeat.period 0..1
-* occurrenceTiming.repeat.periodUnit 0..1
 
 // Common for all RT Requests including Course Summary
 RuleSet: RadiotherapyRequestCommon
@@ -51,14 +34,3 @@ RuleSet: RadiotherapyRequestCommon
 * bodySite MS
 * bodySite ^short = "Body site that is treated with Radiotherapy"
 * note MS
-
-RuleSet: RadiotherapyTreatmentPhaseCommon
-* obeys codexrt-procedure-status
-* partOf MS
-* partOf only Reference(RadiotherapyCourseSummary)
-* basedOn MS
-* performed[x] only Period
-* performedPeriod.start MS
-* performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
-* performedPeriod.end MS
-* performedPeriod.end ^short = "An end date is expected if the status is 'stopped' or 'completed'"
