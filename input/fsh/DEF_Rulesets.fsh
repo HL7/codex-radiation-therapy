@@ -6,8 +6,7 @@ RuleSet: RadiotherapyRequestCommon
 // * meta.lastUpdated MS
 * extension MS
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modality-and-technique 0..* MS and
-    RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS
+    $mCODERadiotherapyModalityAndTechnique named modality-and-technique 0..* MS
 * identifier MS
 * identifier.system MS
 * identifier.value 1..1 MS

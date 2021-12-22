@@ -9,6 +9,7 @@ Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefiniti
 Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
+Alias:   USCoreServiceRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
 Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
 Alias:   USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 
