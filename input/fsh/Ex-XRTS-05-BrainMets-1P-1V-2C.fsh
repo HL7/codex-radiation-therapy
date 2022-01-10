@@ -27,8 +27,8 @@ Usage: #example
   * value = "C1BrainMets"
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
-* performedPeriod.start = "2020-09-06T13:15:17+01:00"
-* performedPeriod.end = "2020-09-13T13:21:17+01:00"
+* performedPeriod.start = "2020-09-07T13:15:17+01:00"
+* performedPeriod.end = "2020-09-14T13:21:17+01:00"
 * reasonCode = ICD10#C71.9 "Malignant neoplasm of brain, unspecified"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
 
@@ -89,8 +89,8 @@ Usage: #example
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C1BrainMets)
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
-* performedPeriod.start = "2020-09-06T13:15:17+01:00"
-* performedPeriod.end = "2020-09-13T13:21:17+01:00"
+* performedPeriod.start = "2020-09-07T13:15:17+01:00"
+* performedPeriod.end = "2020-09-14T13:21:17+01:00"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
@@ -114,7 +114,7 @@ Usage: #example
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C1BrainMets)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C2BrainMets)
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
 * performedPeriod.start = "2021-09-20T13:15:17+01:00"
