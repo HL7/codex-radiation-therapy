@@ -34,13 +34,13 @@ Usage: #example
 
 // --- Phase Summaries ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyTreatmentPhase-XRTS-01-01-Primary
-InstanceOf: RadiotherapyTreatmentPhase
-Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatedPhase-XRTS-01-01-Primary
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
-* meta.profile = Canonical(RadiotherapyTreatmentPhase)
+* meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"

@@ -1,7 +1,4 @@
 
-
-// -------- Example Instances ---------------------------------------------------------
-
 Instance: RadiotherapyVolume-01-PTV50
 InstanceOf: RadiotherapyVolume
 Description: "Target Volume."

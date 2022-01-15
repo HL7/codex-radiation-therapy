@@ -54,13 +54,13 @@ Usage: #example
 
 // --- Phase Summaries ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyTreatmentPhase-XRTS-04-01-LeftBreastTangents
-InstanceOf: RadiotherapyTreatmentPhase
-Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatedPhase-XRTS-04-01-LeftBreastTangents
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
-* meta.profile = Canonical(RadiotherapyTreatmentPhase)
+* meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -88,13 +88,13 @@ Usage: #example
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyTreatmentPhase-XRTS-04-02-RightBreastTangents
-InstanceOf: RadiotherapyTreatmentPhase
-Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatedPhase-XRTS-04-02-RightBreastTangents
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
-* meta.profile = Canonical(RadiotherapyTreatmentPhase)
+* meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -116,13 +116,13 @@ Usage: #example
 * performedPeriod.end = "2021-09-15T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
-Instance: RadiotherapyTreatmentPhase-XRTS-04-03-LeftBreastBoost
-InstanceOf: RadiotherapyTreatmentPhase
-Description: "Radiotherapy Treatment Phase example from Codex RTTD collection."
+Instance: RadiotherapyTreatedPhase-XRTS-04-03-LeftBreastBoost
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
-* meta.profile = Canonical(RadiotherapyTreatmentPhase)
+* meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"

@@ -1,8 +1,3 @@
-//--------------------------------------------------------------------------------------------------------
-// First drafts for XRTS/RTTD discussions. Not reviewed with IHE-RO XRTS yet.
-// Contact: martin.vonsiebenthal@varian.com
-//--------------------------------------------------------------------------------------------------------
-
 Instance:   Patient-5
 InstanceOf: Patient
 Title: "Example Female Patient"

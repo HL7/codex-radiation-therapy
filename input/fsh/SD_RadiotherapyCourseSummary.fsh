@@ -1,8 +1,3 @@
-//--------------------------------------------------------------------------------------------------------
-// First drafts for XRTS/RTTD discussions. Not reviewed with IHE-RO XRTS yet.
-// Contact: martin.vonsiebenthal@varian.com
-//--------------------------------------------------------------------------------------------------------
-
 Profile: RadiotherapyCourseSummary
 Parent: $mCODERadiotherapyCourseSummary
 Id: codexrt-radiotherapy-course-summary
@@ -10,8 +5,11 @@ Title: "Radiotherapy Course Summary"
 Description: "A Summary of the Treatment Progress in a Radiotherapy Course.
 Whenever new contributions in the scope of the same Course are delivered, this resource is updated (no new resource created)."
 * obeys codexrt-procedure-status
+* extension[modalityAndTechnique].extension contains
+    RadiotherapyEnergy named radiotherapyEnergy 0..* MS and
+    RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS
 * basedOn MS
-* basedOn ^short = "Should Reference a RadiotherapyCoursePrescription" //only Reference(RadiotherapyCoursePrescription)
+* basedOn ^short = "Should Reference a RadiotherapyPlannedCourse" //and/or prescription? only Reference(RadiotherapyCoursePrescription)
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."

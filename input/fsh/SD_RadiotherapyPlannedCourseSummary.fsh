@@ -1,8 +1,8 @@
-Profile: RadiotherapyPlannedCourseSummary
+Profile: RadiotherapyPlannedCourse
 Parent: ServiceRequest
-Id: codexrt-radiotherapy-planned-course-summary
-Title: "Radiotherapy Planned Course Summary"
-Description: "Planned Course Summary is the summary of all Radiotherapy Plans to deliver a complete Course."
+Id: codexrt-radiotherapy-planned-course
+Title: "Radiotherapy Planned Course"
+Description: "Planned Course covers all Radiotherapy Plans to deliver a complete Course."
 * ^status = #draft
 * insert RadiotherapyRequestCommon
 * extension contains
@@ -10,9 +10,9 @@ Description: "Planned Course Summary is the summary of all Radiotherapy Plans to
     $mCODERadiotherapySessions named radiotherapy-sessions 0..1 MS and
     RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS
 * extension[radiotherapy-dose-planned-to-volume]
-  * extension[fractionDosePlanned] 0..0
   * extension[fractionDosePlanned] ^short = "Not used in this profile. See Planned Phase for detailed Fractionation."
-  * extension[fractionDosePlanned] ^definition = "Fraction dose is not defined in the Planned Course Summary because dose may not be equal in all Fractions in which this volume receives dose."
-* code = RadiotherapyRequest#radiotherapy-planned-course-summary "Radiotherapy Planned Course Summary"
+  * extension[fractionDosePlanned] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all Fractions in which this volume receives dose."
+  * extension[fractionDosePlanned] 0..0
+* code = RadiotherapyRequest#radiotherapy-planned-course "Radiotherapy Planned Course"
 * occurrencePeriod only Period
 * occurrencePeriod MS

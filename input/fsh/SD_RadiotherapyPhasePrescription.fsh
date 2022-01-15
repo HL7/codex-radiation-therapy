@@ -2,14 +2,12 @@
 Profile: RadiotherapyPhasePrescription
 Parent: ServiceRequest
 Id: codexrt-radiotheraphy-phase-prescription
-Title: "Radiotherapy Phase Prescription"
+Title: "Radiotherapy Phase Cumulative Prescription"
 Description: "A Radioherapy Phase Prescription is a request for one series of fractionated treatments using Radiotherapy. It can define treatment parameters such as modality or technique,
 and prescribe dose to multiple targets."
 * insert RadiotherapyRequestCommon
 * extension contains
     RadiotherapyFractionsPrescribed named radiotherapy-fractions-prescribed 1..1 MS and
-    RadiotherapyEnergy named radiotherapy-energy 0..* and
-    RadiotherapyTreatmentDeviceType named radiotherapy-treatment-device-type 0..* and
     RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS
 * extension[radiotherapy-dose-prescribed-to-volume] 0..* MS
   * extension[fractionsPrescribed] 0..0

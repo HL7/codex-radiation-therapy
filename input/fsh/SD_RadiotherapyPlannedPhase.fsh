@@ -7,8 +7,6 @@ Description: "Radiotherapy Planned Phase is the summary over all Radiotherapy Pl
 * insert RadiotherapyRequestCommon
 * extension contains
     RadiotherapyFractionsPlanned named radiotherapy-fractions-planned 1..1 MS and
-    RadiotherapyEnergy named radiotherapy-energy 0..* and
-    RadiotherapyTreatmentDeviceType named radiotherapy-treatment-device-type 0..* and
     RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS
 * extension[radiotherapy-dose-planned-to-volume]
   * extension[fractionsPlanned] 0..0

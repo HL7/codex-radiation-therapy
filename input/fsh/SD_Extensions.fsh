@@ -1,8 +1,3 @@
-//--------------------------------------------------------------------------------------------------------
-// First drafts for XRTS/RTTD discussions. Not reviewed with IHE-RO XRTS yet.
-// Contact: martin.vonsiebenthal@varian.com
-//--------------------------------------------------------------------------------------------------------
-
 //From mCODE:
 RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
@@ -75,18 +70,13 @@ Description: "Dose parameters planned for one radiotherapy volume."
 * . ^short = "Planned Dose to a Dose Reference"
 * extension contains
     volume 1..1 MS and
-    fractionDosePlanned 0..1 MS and
     totalDosePlanned 0..1 MS and
-    fractionsPlanned 0..1 MS
+    fractionsPlanned 0..1 MS and
+    fractionDosePlanned 0..1 MS
 * extension[volume]
   * value[x] only Reference(RadiotherapyVolume)
   * ^short = "Volume to which Dose is Planned"
   * ^definition = "A BodyStructure resource representing the body structure treated, for example, Chest Wall Lymph Nodes."
-* extension[fractionDosePlanned]
-  * value[x] only Quantity
-  * valueQuantity = UCUM#cGy
-  * ^short = "Radiation Dose Planned per Fraction"
-  * ^definition = "The dose Planned per Fraction to this volume."
 * extension[totalDosePlanned]
   * value[x] only Quantity
   * valueQuantity = UCUM#cGy
@@ -96,6 +86,11 @@ Description: "Dose parameters planned for one radiotherapy volume."
   * value[x] only positiveInt
   * ^short = "Number of Planned Fractions"
   * ^definition = "The number of Fraction in which dose to this volume is planned. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
+* extension[fractionDosePlanned]
+  * value[x] only Quantity
+  * valueQuantity = UCUM#cGy
+  * ^short = "Radiation Dose Planned per Fraction"
+  * ^definition = "The dose Planned per Fraction to this volume."
 
 Extension: RadiotherapyEnergy
 Id: codexrt-radiotherapy-energy

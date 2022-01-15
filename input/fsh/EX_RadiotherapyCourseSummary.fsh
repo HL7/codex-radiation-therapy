@@ -1,5 +1,3 @@
-// -------- Example Instances ---------------------------------------------------------
-
 Instance: RadiotherapyCourseSummary-04-Prostate
 InstanceOf: RadiotherapyCourseSummary
 Description: "Treatment Summary over Radiotherapy Course with all elements expected in XRTS."
