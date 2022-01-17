@@ -6,6 +6,7 @@ RuleSet: RadiotherapyRequestCommon
 // * meta.lastUpdated MS
 * extension MS
 * extension contains
+    RadioTherapyModalityTechniqueEnergyAndDeviceType named modality-technique-energy-and-device-type 0..* MS and
     $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergy named radiotherapyEnergy 0..* MS and
