@@ -47,7 +47,7 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
 * extension[volume]
   * value[x] only Reference(RadiotherapyVolume)
   * ^short = "Volume to which Dose is Prescribed"
-  * ^definition = "A BodyStructure resource representing the body structure treated, for example, Chest Wall Lymph Nodes."
+  * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
 * extension[fractionDosePrescribed]
   * value[x] only Quantity
   * valueQuantity = UCUM#cGy
@@ -61,7 +61,7 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
 * extension[fractionsPrescribed]
   * value[x] only positiveInt
   * ^short = "Number of Prescribed Fractions"
-  * ^definition = "The number of Fraction in which dose to this volume is prescribed. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in Phase Prescriptions or Plans."
+  * ^definition = "The prescribed number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in Phase Prescriptions or Plans."
 
 Extension: RadiotherapyDosePlannedToVolume
 Id: codexrt-radiotherapy-dose-planned-to-volume
@@ -75,8 +75,8 @@ Description: "Dose parameters planned for one radiotherapy volume."
     fractionDosePlanned 0..1 MS
 * extension[volume]
   * value[x] only Reference(RadiotherapyVolume)
-  * ^short = "Volume to which Dose is Planned"
-  * ^definition = "A BodyStructure resource representing the body structure treated, for example, Chest Wall Lymph Nodes."
+  * ^short = "Volume for which Dose is Planned"
+  * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
 * extension[totalDosePlanned]
   * value[x] only Quantity
   * valueQuantity = UCUM#cGy
@@ -85,7 +85,7 @@ Description: "Dose parameters planned for one radiotherapy volume."
 * extension[fractionsPlanned]
   * value[x] only positiveInt
   * ^short = "Number of Planned Fractions"
-  * ^definition = "The number of Fraction in which dose to this volume is planned. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
+  * ^definition = "The planned number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
 * extension[fractionDosePlanned]
   * value[x] only Quantity
   * valueQuantity = UCUM#cGy
@@ -95,10 +95,10 @@ Description: "Dose parameters planned for one radiotherapy volume."
 Extension: RadiotherapyEnergy
 Id: codexrt-radiotherapy-energy
 Title: "Radiotherapy Energy"
-Description: "The radiation energy, preferably specified as decimal in MV. Can alternatively be represented as string or CodeableConcept."
+Description: "The radiation energy, preferably specified as decimal in MV."
 * . ^short = "Radiotherapy Energy"
-* value[x] ^short = "The radiation energy as decimal in MV. Can alternatively be represented as string or CodeableConcept."
-* value[x] only SimpleQuantity or CodeableConcept
+* value[x] only SimpleQuantity
+* valueQuantity ^short = "The radiation energy as decimal in MV."
 * valueQuantity = UCUM#MV "megavolt"
 
 Extension: RadiotherapyFractionsDelivered

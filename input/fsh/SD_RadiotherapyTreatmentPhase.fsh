@@ -1,21 +1,3 @@
-
-
-/*  We have an open request for a Radiotherapy Treatment Phase (USCRS-33527)
-CodeSystem: ResourceIdentifierCS
-Id: codexrt-resource-identifier-cs
-Title: "codexrt Resource Identifier Code System"
-Description: "Concepts describing instance types, to be used in the `code` element of instances. These codes were created because no appropriate concept could be found in established vocabularies. These concepts are analogous to LOINC codes for laboratory observations: they identify the type of thing an instance represents.
-
-Please note that while these codes may imply conformance to the profiles that use them, they are not synonymous with profiles and do not serve the same purpose in a FHIR resource for several reasons:
-
-1. An instance of a resource like Group, Observation, or Procedure may conform to multiple profiles, but may only have one 'type of thing' as determined by the value of `code` (which has a maximum cardinality of 1).
-2. `Procedure.code`, `Observation.code`, and `Group.code` elements require a [CodeableConcept data type](http://www.hl7.org/fhir/datatypes.html#CodeableConcept), which can be satisfied with a code from this code system. In contrast, a profile is identified with a [canonical URL](http://www.hl7.org/fhir/structuredefinition-definitions.html#StructureDefinition.url), which is represented by a [URI data type](http://www.hl7.org/fhir/datatypes.html#uri). In other words, a profile's canonical URL belongs in the `meta.profile` element, whereas the codes in this code system belong in `Resource.code` elements.
-3. The same `code` can correspond to more than one profile (although not the case here)."
-
-* #codexrt-teleradiotherapy-treatment-phase "Teleradiotherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatedPhase profile." // SNOMED Code Requested USCRS-33293
-* #codexrt-brachytherapy-treatment-phase "Brachytherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatedPhase profile." // SNOMED Code Requested USCRS-33294
-*/
-
 Profile:  RadiotherapyTreatedPhase
 Parent:   USCoreProcedure
 Id:       codexrt-radiotherapy-treatment-phase
@@ -54,5 +36,3 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
 * bodySite from $mCODERadiotherapyTreatmentLocationVS (required)
 * bodySite ^short = "All body structure(s) treated in this phase"
 * bodySite ^definition = "Coded body structure(s) treated in this phase of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
-
-
