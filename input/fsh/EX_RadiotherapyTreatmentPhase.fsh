@@ -1,14 +1,12 @@
 
-// -------- Example Instances ---------------------------------------------------------
-
-Instance: RadiotherapyTreatmentPhase-05-Prostate-Phase1
-InstanceOf: RadiotherapyTreatmentPhase
+Instance: RadiotherapyTreatedPhase-05-Prostate-Phase1
+InstanceOf: RadiotherapyTreatedPhase
 Description: "Treatment Summary for first phase"
 Usage: #example
-//* id = "RadiotherapyTreatmentPhase-05-Prostate-Phase1" //id of the FHIR Resource
+//* id = "RadiotherapyTreatedPhase-05-Prostate-Phase1" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
-* meta.profile[0] = Canonical(RadiotherapyTreatmentPhase)
+* meta.profile[0] = Canonical(RadiotherapyTreatedPhase)
 * extension[fractionsDelivered].valueUnsignedInt = 2
 // Prescription Target Site "Prostate"
 * extension[$mCODERadiotherapyDoseDeliveredToVolume][+]

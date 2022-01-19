@@ -1,8 +1,3 @@
-//--------------------------------------------------------------------------------------------------------
-// First drafts for XRTS/RTTD discussions. Not reviewed with IHE-RO XRTS yet.
-// Contact: martin.vonsiebenthal@varian.com
-//--------------------------------------------------------------------------------------------------------
-
 Instance:   Practitioner-1005
 InstanceOf: Practitioner
 Title: "Example Practitioner"

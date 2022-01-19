@@ -1,6 +1,4 @@
 
-// -------- Example Instances ---------------------------------------------------------
-
 Instance: RadiotherapyCoursePrescription-04-Prostate
 InstanceOf: RadiotherapyCoursePrescription
 Description: "Radiotherapy CoursePrescription with elements of IHE-RO XRTS profile for a prostate example."
@@ -13,10 +11,9 @@ Usage: #example
 // * extension[concurrentTherapy].valueCodeableConcept.text = "Chemotherapy"
 * extension[treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[treatment-intent].valueCodeableConcept.text = "Curative"
-* extension[modality-and-technique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 // * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 // * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
-* extension[radiotherapy-sessions].valueUnsignedInt = 44
 // Prescription Target Site "Prostate"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)

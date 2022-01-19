@@ -1,8 +1,3 @@
-//--------------------------------------------------------------------------------------------------------
-// First drafts for XRTS/RTTD discussions. Not reviewed with IHE-RO XRTS yet.
-// Contact: martin.vonsiebenthal@varian.com
-//--------------------------------------------------------------------------------------------------------
-
 Instance: Diagnosis-1-Breast
 InstanceOf: Condition
 Title: "Example Diagnosis"

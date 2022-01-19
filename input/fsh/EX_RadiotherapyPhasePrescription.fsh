@@ -1,5 +1,3 @@
-// -------- Example Instances ---------------------------------------------------------
-
 Instance: RadiotherapyPhasePrescription-04-Prostate-Phase1
 InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription to cover IHE-RO XRTS profile for a Prostate example, phase 1."
@@ -8,11 +6,11 @@ Usage: #example
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
-* extension[mcode-radiotherapy-modality-and-technique]
-  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  //* extension[mcode-radiotherapy-technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
-* extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
+* extension[modalityAndTechnique]
+  * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
+  * extension[radiotherapyEnergy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
 // Prescription Target Site "Prostate"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
@@ -35,7 +33,7 @@ Usage: #example
   * value = "Prostate-Phase1"
 * identifier[+]
   * system = DICOMUID
-  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456" 
+  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
 //* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
@@ -62,11 +60,11 @@ Usage: #example
 * meta.versionId = "219952" //Version of the resource on the server
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
-* extension[mcode-radiotherapy-modality-and-technique]
-  * extension[mcode-radiotherapy-modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[mcode-radiotherapy-technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  //* extension[mcode-radiotherapy-technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
-* extension[radiotherapy-energy].valueQuantity.value = 18 //unit is fixed in profile
+* extension[modalityAndTechnique]
+  * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
+  * extension[radiotherapyEnergy].valueQuantity.value = 18 //unit is fixed in profile
 * extension[radiotherapy-fractions-prescribed].valuePositiveInt = 19
 // Prescription Target Site "Prostate"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
@@ -84,7 +82,7 @@ Usage: #example
   * value = "Prostate-Phase2"
 * identifier[+]
   * system = DICOMUID
-  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456" 
+  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
 * basedOn.display =  "Prostate-2Phases"
 //* replaces = Reference(RadiotherapyPhasePrescription-0) //Previous retired PhasePrescription that is replaced by this PhasePrescription

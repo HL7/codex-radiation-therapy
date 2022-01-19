@@ -1,13 +1,15 @@
 
-// Common for all RT Requests including Course Summary
+// Common for all RT Requests
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
 // * meta.versionId MS
 // * meta.lastUpdated MS
 * extension MS
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modality-and-technique 0..* MS and
-    RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
+* extension[modalityAndTechnique].extension contains
+    RadiotherapyEnergy named radiotherapyEnergy 0..* MS and
+    RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS
 * identifier MS
 * identifier.system MS
 * identifier.value 1..1 MS
@@ -27,10 +29,11 @@ RuleSet: RadiotherapyRequestCommon
 * requester MS //Approval user
 * requester only Reference(Practitioner or PractitionerRole or Organization)
 * reasonCode MS
+* reasonCode from $mCODECancerDisorderVS (extensible)
 * reasonReference MS
 * reasonReference only Reference(Condition)
 * specimen 0..0
-//TBD mCODE TODO requires * bodySite from RadiotherapyTreatmentLocationVS (required).
+* bodySite from RadiotherapyTreatmentLocationVS (required) //TBD For now required as in mCODE
 * bodySite MS
 * bodySite ^short = "Body site that is treated with Radiotherapy"
 * note MS
