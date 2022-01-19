@@ -64,6 +64,8 @@ pages:
     title: Change Log
   downloads.md:
     title: Download Specification
+  glossary.md:
+    title: Radioterapy Glossary
 
 menu:
   Home: index.html
