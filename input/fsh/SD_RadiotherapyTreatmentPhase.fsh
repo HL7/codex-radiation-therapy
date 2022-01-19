@@ -33,6 +33,8 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
 * performedPeriod.end MS
 * performedPeriod.end ^short = "An end date should be present if the status is 'stopped' or 'completed'"
+* reasonCode MS
+* reasonCode from $mCODECancerDisorderVS (extensible)
 * bodySite from $mCODERadiotherapyTreatmentLocationVS (required)
 * bodySite ^short = "All body structure(s) treated in this phase"
 * bodySite ^definition = "Coded body structure(s) treated in this phase of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."

@@ -46,7 +46,7 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
     fractionsPrescribed 0..1 MS
 * extension[volume]
   * value[x] only Reference(RadiotherapyVolume)
-  * ^short = "Volume to which Dose is Prescribed"
+  * ^short = "Volume targeted by the prescribed dose"
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
 * extension[fractionDosePrescribed]
   * value[x] only Quantity
@@ -75,7 +75,7 @@ Description: "Dose parameters planned for one radiotherapy volume."
     fractionDosePlanned 0..1 MS
 * extension[volume]
   * value[x] only Reference(RadiotherapyVolume)
-  * ^short = "Volume for which Dose is Planned"
+  * ^short = "Volume targeted by the planned dose"
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
 * extension[totalDosePlanned]
   * value[x] only Quantity
