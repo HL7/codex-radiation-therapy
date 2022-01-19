@@ -29,6 +29,7 @@ RuleSet: RadiotherapyRequestCommon
 * requester MS //Approval user
 * requester only Reference(Practitioner or PractitionerRole or Organization)
 * reasonCode MS
+* reasonCode from $mCODECancerDisorderVS (extensible)
 * reasonReference MS
 * reasonReference only Reference(Condition)
 * specimen 0..0
