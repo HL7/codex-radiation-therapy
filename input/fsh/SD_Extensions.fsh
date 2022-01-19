@@ -116,12 +116,3 @@ Title: "Radiotherapy Fractions Delivered"
 Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
 * value[x] only unsignedInt
 * value[x] 1..1
-
-Extension: RadioTherapyModalityTechniqueEnergyAndDeviceType
-Parent: $mCODERadiotherapyModalityAndTechnique
-Id: codexrt-radiotherapy-modality-technique-energy-and-device-type
-Title: "RadioTherapy Modality Technique Energy and DeviceType"
-Description: "RadioTherapy Modality Technique Energy and DeviceType."
-* extension contains
-    RadiotherapyEnergy named radiotherapyEnergy 0..* MS and
-    RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS
