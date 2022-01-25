@@ -30,7 +30,7 @@ Id: radiotherapy-energy-units
 Title: "Unit to characterize Energy in Radiotherapy"
 Description: "Unit to characterize the Energy spectrum used in Radiotherapy.
 For electrons, the maximum energy is given in MeV.
-For photons, the maximum acceleration voltage is given in MV or kV, although those are not a units of energy."
+For photons, the maximum acceleration voltage is given in MV or kV, although those are not units of energy."
 * ^status = #draft
 * UCUM#MeV "megaelectronvolt"
 * UCUM#MV "megavolt"
