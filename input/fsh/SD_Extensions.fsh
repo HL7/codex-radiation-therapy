@@ -100,14 +100,18 @@ Description: "Dose parameters planned for one radiotherapy volume."
   * ^short = "Radiation Dose Planned per Fraction"
   * ^definition = "The dose Planned per Fraction to this volume."
 
-Extension: RadiotherapyEnergy
-Id: codexrt-radiotherapy-energy
-Title: "Radiotherapy Energy"
-Description: "The radiation energy, preferably specified as decimal in MV."
-* . ^short = "Radiotherapy Energy"
-* value[x] only SimpleQuantity
-* valueQuantity ^short = "The radiation energy as decimal in MV."
-* valueQuantity = UCUM#MV "megavolt"
+Extension: RadiotherapyEnergyOrIsotope
+Id: codexrt-radiotherapy-energy-or-isotope
+Title: "Radiotherapy Energy or Isotope"
+Description: "The radiation energy used for radiotherapy. The energy spectrum is characterized
+by the maximum energy, the maximum accelaration voltage, or the used isotope."
+* . ^short = "Radiotherapy Energy or Isotope"
+* value[x] only SimpleQuantity or CodeableConcept
+* valueQuantity ^short = "The spectrum of radiation energy characterized by a maximum value.
+For electrons, the maximum energy is given in MeV. For photons, the maximum acceleration voltage is given in MV or KV, although this is not a unit of energy."
+* valueQuantity from RadiotherapyEnergyUnits
+* valueCodeableConcept ^short = "The isotope used for radiotherapy."
+* valueCodeableConcept from RadiotherapyIsotopes
 * value[x] 1..1
 
 Extension: RadiotherapyFractionsDelivered

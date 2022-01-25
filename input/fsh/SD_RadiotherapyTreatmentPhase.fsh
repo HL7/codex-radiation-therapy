@@ -10,7 +10,7 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
 * extension[modalityAndTechnique].extension contains
-    RadiotherapyEnergy named radiotherapyEnergy 0..* MS and
+    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
     RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
