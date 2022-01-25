@@ -108,10 +108,10 @@ by the maximum energy, the maximum accelaration voltage, or the used isotope."
 * . ^short = "Radiotherapy Energy or Isotope"
 * value[x] only SimpleQuantity or CodeableConcept
 * valueQuantity ^short = "The spectrum of radiation energy characterized by a maximum value.
-For electrons, the maximum energy is given in MeV. For photons, the maximum acceleration voltage is given in MV or KV, although this is not a unit of energy."
+For electrons, the maximum energy is given in MeV. For photons, the maximum acceleration voltage is given in MV or kV, although those are not a units of energy."
 * valueQuantity from RadiotherapyEnergyUnits
 * valueCodeableConcept ^short = "The isotope used for radiotherapy."
-* valueCodeableConcept from RadiotherapyIsotopes
+* valueCodeableConcept from RadiotherapyIsotopes (extensible)
 * value[x] 1..1
 
 Extension: RadiotherapyFractionsDelivered
