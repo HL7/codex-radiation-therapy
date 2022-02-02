@@ -8,7 +8,7 @@ RuleSet: RadiotherapyRequestCommon
 * extension contains
     $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
 * extension[modalityAndTechnique].extension contains
-    RadiotherapyEnergy named radiotherapyEnergy 0..* MS and
+    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
     RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS
 * identifier MS
 * identifier.system MS

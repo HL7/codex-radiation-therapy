@@ -4,7 +4,7 @@
 [CodexrtRadiotherapyTreatmentPhase]: StructureDefinition-codexrt-radiotherapy-treatment-phase.html
 [CodexrtRadiotherapyVolume]: StructureDefinition-codexrt-radiotherapy-volume.html
 [CodexrtRadiotherapyDosePrescribedToVolume]: StructureDefinition-codexrt-radiotherapy-dose-prescribed-to-volume.html
-[CodexrtRadiotherapyEnergy]: StructureDefinition-codexrt-radiotherapy-energy.html
+[CodexrtRadiotherapyEnergyOrIsotope]: StructureDefinition-codexrt-radiotherapy-energy-or-isotope.html
 [CodexrtRadiotherapyFractionsDelivered]: StructureDefinition-codexrt-radiotherapy-fractions-delivered.html
 [CodexrtRadiotherapyFractionsPrescribed]: StructureDefinition-codexrt-radiotherapy-fractions-prescribed.html
 [CodexrtRadiotheraphyTreatmentDeviceType]: StructureDefinition-codexrt-radiotheraphy-treatment-device-type.html

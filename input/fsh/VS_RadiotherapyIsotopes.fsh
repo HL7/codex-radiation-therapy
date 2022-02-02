@@ -5,6 +5,8 @@ Description: "Isotopes Used in Radiotherapy"
 // include all cesium isotopes
 * SCT#13237009 "Cesium-131 (substance)"
 * SCT#55117002 "Cesium-137 (substance)"
+// cobalt
+* SCT#5405008 "Cobalt-60 (substance)"
 // gold isotopes
 * SCT#24301009  "Gold-198 (substance"
 // include all iodine isotopes
