@@ -2,7 +2,7 @@ Profile: RadiotherapyPlannedCourse
 Parent: ServiceRequest
 Id: codexrt-radiotherapy-planned-course
 Title: "Radiotherapy Planned Course"
-Description: "Planned Course covers all Radiotherapy Plans to deliver a complete Course."
+Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to deliver a complete Course."
 * ^status = #draft
 * insert RadiotherapyRequestCommon
 * extension contains
