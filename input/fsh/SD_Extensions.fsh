@@ -3,6 +3,7 @@ RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
 
+<<<<<<< HEAD
 Extension: RadiotherapyTreatmentDeviceType
 Id: codexrt-radiotherapy-treatment-device-type
 Title: "Type of Treatment Device"
@@ -11,6 +12,8 @@ Device instances are not specified here. Those are represented by resources of t
 * . ^short = "Type of Treatment Device"
 * value[x] ^short = "Type of Treatment Device"
 * value[x] only CodeableConcept
+=======
+>>>>>>> 3160810 (prototype of device and applicator)
 
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
@@ -152,3 +155,60 @@ Description: "A Reference to a DICOM SOP Instance."
   * value[x] 1..1
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
+
+Extension: RadiotherapyFractionsDelivered
+Id: codexrt-radiotherapy-fractions-delivered
+Title: "Radiotherapy Fractions Delivered"
+Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
+* value[x] only unsignedInt
+* value[x] 1..1
+
+
+
+Extension: RadiotherapyTreatmentDeviceType
+Id: codexrt-radiotheraphy-treatment-device-type
+Title: "Type of Treatment Device"
+Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device.
+Device instances are not specified here. Those are represented by resources of type Device."
+* . ^short = "Type of Treatment Device"
+* value[x] ^short = "Type of Treatment Device"
+* value[x] only CodeableConcept
+
+Extension: RadiotherapyTreatmentDevice
+Id: codexrt-radiotheraphy-treatment-device
+Title: "Treatment Device Manufacturer and Model"
+Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device. The manufacturer and model should be specified.
+Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
+* . ^short = "Treatment Device"
+* value[x] ^short = "Treatment Device"
+* value[x] only string
+
+Extension: RadiotherapyTreatmentApplicatorType
+Id: codexrt-radiotheraphy-treatment-applicator-type
+Title: "Radiotherapy Treatment Applicator Type"
+Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device. The manufacturer and model should be specified."
+* . ^short = "Applicator Type"
+* value[x] ^short = "Applicator Type"
+* value[x] only CodeableConcept
+* value[x] from ApplicatorTypesVS (extensible )
+
+ValueSet: ApplicatorTypesVS
+Id: codex-radiotherapy-applicator-types-vs
+Title: "Brachytherapy Applicator Types"
+Description: "Applicator Types Used in Radiotherapy"
+* codes from system ApplicatorTypesCS
+* SCT#19923001 "Catheter, device (physical object)"
+* SCT#228771002 "Needles source (physical object)"
+* SCT#228778008 "Plaque source (physical object)"
+* SCT#228768005 "Seeds source (physical object)"
+
+CodeSystem: ApplicatorTypesCS
+Id: codex-radiotherapy-applicator-types-cs
+Title: "Brachytherapy Applicator Types"
+Description: "SBrachytherapy Applicator Types  -- need to request codes"
+* ^status = #draft
+* ^caseSensitive = true
+* #ring	"Ring" 	"new concept under 228766009 |Form of brachytherapy source (physical object)"
+* #tandem "Tandem (small metal tube)" "new code child of 228775006 |Tubes source (physical object)."
+* #ovoid 	"Ovoid (round hollow metal holders that are placed adjacent to cervix)" 	"new concept under 228766009 |Form of brachytherapy source (physical object)|"
+* #cylinder  "Vaginal Cylinder" "A vaginal cylinder is made of plastic and looks like a large tampon with a hollow center. It is placed into the vagina and may be kept in place with gauze, balloons, or a special undergarment.  )  define a new concept under 228766009 |Form of brachytherapy source (physical object)| ."
