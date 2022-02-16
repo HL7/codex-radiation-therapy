@@ -208,7 +208,7 @@ Title: "Brachytherapy Applicator Types"
 Description: "SBrachytherapy Applicator Types  -- need to request codes"
 * ^status = #draft
 * ^caseSensitive = true
-* #ring	"Ring" 	"new concept under 228766009 |Form of brachytherapy source (physical object)"
-* #tandem "Tandem (small metal tube)" "new code child of 228775006 |Tubes source (physical object)."
-* #ovoid 	"Ovoid (round hollow metal holders that are placed adjacent to cervix)" 	"new concept under 228766009 |Form of brachytherapy source (physical object)|"
-* #cylinder  "Vaginal Cylinder" "A vaginal cylinder is made of plastic and looks like a large tampon with a hollow center. It is placed into the vagina and may be kept in place with gauze, balloons, or a special undergarment.  )  define a new concept under 228766009 |Form of brachytherapy source (physical object)| ."
+* #ring	"Ring, device (physical object)" 	"new concept under 228766009 |Form of brachytherapy source (physical object)"
+* #tandem "Tandem, device (physical object)" "(small metal tube)  new code child of 228775006 |Tubes source (physical object)."
+* #ovoid 	"Ovoid, device (physical object)" 	"(round hollow metal holders that are placed adjacent to cervix) new concept under 228766009 |Form of brachytherapy source (physical object)|"
+* #cylinder  "Vaginal Cylinder, device (physical object)" "A vaginal cylinder is made of plastic and looks like a large tampon with a hollow center. It is placed into the vagina and may be kept in place with gauze, balloons, or a special undergarment.  )  define a new concept under 228766009 |Form of brachytherapy source (physical object)| ."
