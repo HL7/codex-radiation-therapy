@@ -176,26 +176,46 @@ Device instances are not specified here. Those are represented by resources of t
 
 Extension: RadiotherapyTreatmentDevice
 Id: codexrt-radiotheraphy-treatment-device
-Title: "Treatment Device Manufacturer and Model"
-Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device. The manufacturer and model should be specified.
+Title: "Treatment Device"
+Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
 Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
 * . ^short = "Treatment Device"
-* value[x] ^short = "Treatment Device"
+* value[x] 0..0
+* extension contains
+  RadiotherapyTreatmentDeviceManufacturer named manufacturer 1..1 and
+  RadiotherapyTreatmentDeviceModel named model 1..1
+
+Extension: RadiotherapyTreatmentDeviceManufacturer
+Id: codexrt-radiotheraphy-treatment-device-manufacturer
+Title: "Treatment Device Manufacturer"
+Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
+Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
+* . ^short = "Treatment Device Manufacturer"
+* value[x] ^short = "Treatment Device Manufacturer"
+* value[x] only string
+
+Extension: RadiotherapyTreatmentDeviceModel
+Id: codexrt-radiotheraphy-treatment-device-model
+Title: "Treatment Device Model"
+Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
+Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
+* . ^short = "Treatment Device Model"
+* value[x] ^short = "Treatment Device Model"
 * value[x] only string
 
 Extension: RadiotherapyTreatmentApplicatorType
 Id: codexrt-radiotheraphy-treatment-applicator-type
 Title: "Radiotherapy Treatment Applicator Type"
-Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device. The manufacturer and model should be specified."
-* . ^short = "Applicator Type"
-* value[x] ^short = "Applicator Type"
+Description: "Radiotherapy Treatment Applicator Type."
+* . ^short = "Radiotherapy Treatment Applicator Type"
+* value[x] ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] only CodeableConcept
 * value[x] from ApplicatorTypesVS (extensible )
 
 ValueSet: ApplicatorTypesVS
 Id: codex-radiotherapy-applicator-types-vs
 Title: "Brachytherapy Applicator Types"
-Description: "Applicator Types Used in Radiotherapy"
+Description: "Applicator Types Used in Brachytherapy"
 * codes from system ApplicatorTypesCS
 * SCT#19923001 "Catheter, device (physical object)"
 * SCT#228771002 "Needles source (physical object)"
@@ -205,7 +225,7 @@ Description: "Applicator Types Used in Radiotherapy"
 CodeSystem: ApplicatorTypesCS
 Id: codex-radiotherapy-applicator-types-cs
 Title: "Brachytherapy Applicator Types"
-Description: "SBrachytherapy Applicator Types  -- need to request codes"
+Description: "Brachytherapy Applicator Types  -- need to request codes"
 * ^status = #draft
 * ^caseSensitive = true
 * #ring	"Ring, device (physical object)" 	"new concept under 228766009 |Form of brachytherapy source (physical object)"
