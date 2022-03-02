@@ -120,3 +120,37 @@ Title: "Radiotherapy Fractions Delivered"
 Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
 * value[x] only unsignedInt
 * value[x] 1..1
+
+//Copied from https://hl7.org/fhir/R4/imagingstudy.html which contains DICOM references for all images in an imaging study.
+//For general DICOM refernece we may add Series and Study UID.
+//TBD if endpoint is added where the SOP Instance can be retrieved.
+Extension: DicomReference
+Id: codexrt-dicom-reference
+Title: "Reference to DICOM SOP Instance"
+Description: "A Reference to a DICOM SOP Instance."
+* . ^short = "Reference to DICOM SOP Instance"
+* extension contains
+    instanceUid 1..1 MS and
+    // seriesUid 1..1 MS and
+    // studyUid 1..1 MS and
+    sopClass 0..1 MS
+* extension[instanceUid]
+  * value[x] only id
+  * value[x] 1..1
+  * ^short = "DICOM SOP Instance UID"
+  * ^definition = "A single SOP instance."
+// * extension[seriesUid]
+//   * value[x] only id
+//   * value[x] 1..1
+//   * ^short = "DICOM Series UID"
+//   * ^definition = "The UID of the DICOM Series."
+// * extension[studyUid]
+//   * value[x] only id
+//   * value[x] 1..1
+//   * ^short = "DICOM Study UID"
+//   * ^definition = "The UID of the DICOM Study."
+* extension[sopClass]
+  * value[x] only id
+  * value[x] 1..1
+  * ^short = "DICOM SOP Class"
+  * ^definition = "The type of DICOM Service Object Pair (SOP)."

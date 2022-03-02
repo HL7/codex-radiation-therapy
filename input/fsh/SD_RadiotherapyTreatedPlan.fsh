@@ -8,7 +8,8 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * extension contains
     $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
-    $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
+    $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS and
+    DicomReference named radiotherapy-dicom-plan-reference 0..1
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
     RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS

@@ -7,7 +7,8 @@ Description: "A Radiotherapy Treatment Plan resource describes the treatment tha
 * insert RadiotherapyRequestCommon
 * extension contains
     RadiotherapyFractionsPlanned named radiotherapy-fractions-planned 1..1 MS and
-    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS
+    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS and
+    DicomReference named radiotherapy-dicom-plan-reference 0..1
 * extension[radiotherapy-dose-planned-to-volume]
   * extension[fractionsPlanned] 0..0
   * extension[fractionsPlanned] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions."
