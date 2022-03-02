@@ -13,6 +13,8 @@ Description: "A Radiotherapy Treatment Plan resource describes the treatment tha
   * extension[fractionsPlanned] 0..0
   * extension[fractionsPlanned] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions."
   * extension[fractionsPlanned] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-planned. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
+* extension[radiotherapy-dicom-plan-reference] ^short = "DICOM Treatment Plan"
+* extension[radiotherapy-dicom-plan-reference] ^definition = "Reference to a DICOM SOP instance representing a Treatment Plan such as RT Plan or RT Ion Plan."
 * code = RadiotherapyRequest#radiotherapy-treatment-plan "Radiotherapy Treatment Plan"
 * occurrenceTiming only Timing
 * occurrenceTiming MS
