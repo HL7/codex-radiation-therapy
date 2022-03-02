@@ -30,7 +30,7 @@ dependencies:
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a
-  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+  path-expansion-params: '../../exp-params'  #path is relative to [base]/fsh-generated/resources
 pages:
   index.md:
     title: Home
@@ -89,3 +89,50 @@ menu:
     Change Log: change_log.html
     Download Specification: downloads.html
     Other Versions: http://hl7.org/fhir/us/codex-radiation-therapy/history.html
+groups:
+  CourseLevelProfiles:
+    name: A. Course Level Profiles
+    description: Course Level Profiles
+    resources:
+    - StructureDefinition/codexrt-radiotherapy-course-prescription
+    - StructureDefinition/codexrt-radiotherapy-planned-course
+    - StructureDefinition/codexrt-radiotherapy-course-summary
+  PhaseLevelProfiles:
+    name: A. Phase Level Profiles
+    description: Phase Level Profiles
+    resources:
+    - StructureDefinition/codexrt-radiotherapy-phase-prescription
+    - StructureDefinition/codexrt-radiotherapy-planned-phase
+    - StructureDefinition/codexrt-radiotherapy-treatment-phase
+#  PlanLevelProfiles:
+#    name: A. Plan Level Profiles
+#    description: Phase Level Profiles
+#    resources:
+#    - StructureDefinition/codexrt-radiotherapy-plan-prescription
+#    - StructureDefinition/codexrt-radiotherapy-treatment-plan
+ #   - StructureDefinition/codexrt-radiotherapy-treated-plan
+  Extensions:
+    name: Extensions
+    description: Extensions.
+    resources:
+    - StructureDefinition/codexrt-radiotherapy-energy-or-isotope
+    - StructureDefinition/codexrt-radiotherapy-fractions-prescribed
+    - StructureDefinition/codexrt-radiotheraphy-treatment-device-type
+    - StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume
+    - StructureDefinition/codexrt-radiotherapy-fractions-delivered
+    - StructureDefinition/codexrt-radiotherapy-volume
+    - StructureDefinition/codexrt-radiotherapy-dose-prescribed-to-volume
+    - StructureDefinition/codexrt-radiotherapy-fractions-planned
+  CodeSystems:
+    name: CodeSystems
+    description: Code Systems.
+    resources:
+    - CodeSystem/radiotherapy-request
+    - CodeSystem/snomed-requested-cs
+  ValueSets:
+    name: ValueSets
+    description: ValueSets.
+    resources:
+    - ValueSet/codex-radiotherapy-isotopes
+    - ValueSet/radiotherapy-energy-units
+    - ValueSet/radiotherapy-request
