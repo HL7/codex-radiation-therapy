@@ -16,14 +16,13 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered with this plan in the top-level extension also named fractionDelivered."
-* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered with this plan in the top-level extension also named fractionDelivered."
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this plan, not including dose from any other plan."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of delivered fractions of this treatment plan."
 * basedOn MS
 * basedOn ^short = "Should Reference a Radiotherapy Treatment Plan" // http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotheraphy-treatment-plan" // only Reference(RadiotherapyTreatmentPlan)
 * partOf MS
-* partOf only Reference(RadiotherapyTreatedPhase)
+* partOf only Reference(RadiotherapyTreatedPhase) or Reference(RadiotherapyCourseSummary)
 * partOf ^definition = "The partOf element, if present, MUST reference an mCODE RadiotherapyCourseSummary-conforming Procedure resource."
 * category 1.. MS
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"

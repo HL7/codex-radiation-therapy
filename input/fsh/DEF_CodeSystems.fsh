@@ -4,6 +4,7 @@ Title: "Requested SNOMED Codes Code System"
 Description: "Codes requested from SNOMED by mCODE, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
 * #USCRS-33527  "Radiotherapy Treatment Phase (therapy/regime)"
+//* #USCRS-xxxx  "Radiotherapy Treatment Plan (therapy/regime)"
 
 ValueSet: RadiotherapyRequest
 Id: radiotherapy-request
@@ -24,7 +25,7 @@ Description: "Specifies which kind of Radiotherapy request is covered by a reque
 * #radiotherapy-planned-course	"Radiotherapy Planned Course" 	"Identifies a ServiceRequest resource that covers all Treatment Plans for a complete Course of Radiotherapy treatment."
 * #radiotherapy-planned-phase "Radiotherapy Planned Phase" "Identifies a ServiceRequest resource that covers all Treatment Plans for a single Phase of radiotherapy treatment."
 * #radiotherapy-treatment-plan	"Radiotherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one Radiotherapy Treatment Plan."
-* #radiotherapy-QA-plan	"Radiotherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one Radiotherapy QA Plan."
+//* #radiotherapy-QA-plan	"Radiotherapy QA Plan" 	"Identifies a ServiceRequest resource for one Radiotherapy QA Plan."
 
 ValueSet: RadiotherapyProcedure
 Id: radiotherapy-procedure
