@@ -18,12 +18,29 @@ Title: "Radiotherapy Request"
 Description: "Specifies which kind of Radiotherapy request is covered by a request resource."
 * ^status = #draft
 * ^caseSensitive = true
-* #radiotherapy-course-prescription	"Radiotherapy Course Prescription" 	"Identifies a ServiceRequest resource for a complete Course of Radiotherapy treatment."
-* #radiotherapy-phase-prescription "Radiotherapy Phase Prescription" "Identifies a ServiceRequest resource for a single Phase of radiotherapy treatment."
+* #radiotherapy-course-prescription	"Radiotherapy Course Prescription" 	"Identifies a ServiceRequest resource for prescribing complete Course of Radiotherapy treatment."
+* #radiotherapy-phase-prescription "Radiotherapy Phase Prescription" "Identifies a ServiceRequest resource for prescribing a Phase of radiotherapy treatment."
+* #radiotherapy-plan-prescription "Radiotherapy Plan Prescription" "Identifies a ServiceRequest resource for prescribing a treatment with single Radiotherapy Treatment Plan."
 * #radiotherapy-planned-course	"Radiotherapy Planned Course" 	"Identifies a ServiceRequest resource that covers all Treatment Plans for a complete Course of Radiotherapy treatment."
 * #radiotherapy-planned-phase "Radiotherapy Planned Phase" "Identifies a ServiceRequest resource that covers all Treatment Plans for a single Phase of radiotherapy treatment."
 * #radiotherapy-treatment-plan	"Radiotherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one Radiotherapy Treatment Plan."
 * #radiotherapy-QA-plan	"Radiotherapy Treatment Plan" 	"Identifies a ServiceRequest resource for one Radiotherapy QA Plan."
+
+ValueSet: RadiotherapyProcedure
+Id: radiotherapy-procedure
+Title: "Radiotherapy Procedure"
+Description: "Codes to specify which kind of Radiotherapy procedure is covered by a Procedure resource."
+* ^status = #draft
+* codes from system RadiotherapyProcedure
+
+CodeSystem: RadiotherapyProcedure
+Id: radiotherapy-procedure
+Title: "Radiotherapy Procedure"
+Description: "Specifies which kind of Radiotherapy procedure is covered by a Procedure resource."
+* ^status = #draft
+* ^caseSensitive = true
+* #radiotherapy-treated-plan	"Treated Radiotherapy Treatment Plan" 	"Identifies a Procedure that decribes the treamtent delivery of one Radiotherapy Treatment Plan."
+
 
 ValueSet: RadiotherapyEnergyUnits
 Id: radiotherapy-energy-units

@@ -1,4 +1,3 @@
-
 Instance: RadiotherapyTreatedPhase-05-Prostate-Phase1
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Treatment Summary for first phase"
