@@ -12,6 +12,7 @@ Description: "A Radioherapy Plan Prescription is a request for Radiotherapy trea
   * extension[fractionsPrescribed] 0..0
   * extension[fractionsPrescribed] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions."
   * extension[fractionsPrescribed] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-prescribed."
+* intent = ReqIntent#original-order "Original Order"
 * code = RadiotherapyRequest#radiotherapy-plan-prescription "Radiotherapy Plan Prescription"
 * occurrenceTiming only Timing
 * occurrenceTiming MS

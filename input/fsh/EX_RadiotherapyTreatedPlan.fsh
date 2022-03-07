@@ -19,6 +19,9 @@ Usage: #example
 * extension[$mCODERadiotherapyDoseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[totalDoseDelivered].valueQuantity.value = 360
+* extension[radiotherapy-dicom-record]
+  * extension[instanceUid].valueId = "1.2.246.352.82.6.4636367585964072832.169625210960980125580.444"
+  * extension[sopClass].valueCoding = urn:ietf:rfc:3986#"urn:oid:1.2.840.10008.5.1.4.1.1.481.4"
 * identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyPrescriptionId

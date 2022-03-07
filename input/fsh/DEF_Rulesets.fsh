@@ -17,7 +17,6 @@ RuleSet: RadiotherapyRequestCommon
 * replaces ^short = "Previous retired request that is replaced by this request" //Defined a short so the element is shown even if it is not MS
 * status MS
 * intent MS
-* intent = ReqIntent#order "order"
 * category 1..* MS
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
 * code 1..1 MS

@@ -105,7 +105,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "1.2.246.352.71.10.842421386418.21321.20150602151.03.01" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.03.01" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#41216001 "Prostatic structure (body structure)"
 * locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
@@ -126,7 +126,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "1.2.246.352.71.10.842421386418.21321.20150602151.03.02" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.03.02" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#245294005 "Pelvic lymph node group (body structure)"
 * patient = Reference(Patient-XRTS-03)
@@ -146,7 +146,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "1.2.246.352.71.10.842421386418.21321.20150602151.03.03" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.03.03" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#64739004 "Seminal vesicle"
 * patient = Reference(Patient-XRTS-03)
