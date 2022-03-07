@@ -7,7 +7,7 @@ This repository contains the **Codex Radiation Therapy Implementation Guide (IG)
 
 For more information, see:
 
-- [Published version of this IG](http://hl7.org/fhir/us/codexrt/)  --**not yet**
+- [Published version of this IG](http://hl7.org/fhir/us/codexrt/) --**not yet**
 - Continuous integration build of this repository: [main branch](https://build.fhir.org/ig/HL7/codexrt/) or [all branches](https://build.fhir.org/ig/HL7/codexrt/branches/)
 - If you are new to the FHIR community and ecosystem, [this tutorial explains FHIR, profiling, and implementation guides](https://simplifier.net/guide/profilingacademy/IntroductiontoFHIRandprofiling)
 
