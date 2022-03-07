@@ -30,7 +30,7 @@ dependencies:
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a
-  path-expansion-params: '../../exp-params'  #path is relative to [base]/fsh-generated/resources
+  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 pages:
   index.md:
     title: Home
@@ -98,19 +98,19 @@ groups:
     - StructureDefinition/codexrt-radiotherapy-planned-course
     - StructureDefinition/codexrt-radiotherapy-course-summary
   PhaseLevelProfiles:
-    name: A. Phase Level Profiles
+    name: B. Phase Level Profiles
     description: Phase Level Profiles
     resources:
     - StructureDefinition/codexrt-radiotherapy-phase-prescription
     - StructureDefinition/codexrt-radiotherapy-planned-phase
-    - StructureDefinition/codexrt-radiotherapy-treatment-phase
-#  PlanLevelProfiles:
-#    name: A. Plan Level Profiles
-#    description: Phase Level Profiles
-#    resources:
-#    - StructureDefinition/codexrt-radiotherapy-plan-prescription
-#    - StructureDefinition/codexrt-radiotherapy-treatment-plan
- #   - StructureDefinition/codexrt-radiotherapy-treated-plan
+    - StructureDefinition/codexrt-radiotherapy-treated-phase
+  PlanLevelProfiles:
+    name: C. Plan Level Profiles
+    description: Plan Level Profiles
+    resources:
+    - StructureDefinition/codexrt-radiotherapy-plan-prescription
+    - StructureDefinition/codexrt-radiotherapy-treatment-plan
+    - StructureDefinition/codexrt-radiotherapy-treated-plan
   Extensions:
     name: Extensions
     description: Extensions.
