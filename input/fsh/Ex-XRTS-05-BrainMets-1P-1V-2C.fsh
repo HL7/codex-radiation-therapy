@@ -139,7 +139,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "1.2.246.352.71.10.842421386418.21321.20150602151.05.01" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.05.01" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#12738006 "Brain structure (body structure)"
 * locationQualifier[+] = SCT#255609007 "Partial (qualifier value)"

@@ -12,6 +12,7 @@ Description: "A Radiotherapy Course Prescription is a high-level request for a c
   * extension[fractionDosePrescribed] 0..0
   * extension[fractionDosePrescribed] ^short = "Not used in this profile. See Phase Prescriptions for detailed Fractionation."
   * extension[fractionDosePrescribed] ^definition = "Fraction dose is not defined in the Course Prescription because dose may not be equal in all Fractions in which this volume receives dose."
+* intent = ReqIntent#original-order "Original Order"
 * code = RadiotherapyRequest#radiotherapy-course-prescription "Radiotherapy Course Prescription"
 * occurrencePeriod only Period
 * occurrencePeriod MS

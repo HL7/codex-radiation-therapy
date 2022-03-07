@@ -150,7 +150,7 @@ Description: "A Reference to a DICOM SOP Instance."
 //   * ^short = "DICOM Study UID"
 //   * ^definition = "The UID of the DICOM Study."
 * extension[sopClass]
-  * value[x] only id
+  * value[x] only Coding
   * value[x] 1..1
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
