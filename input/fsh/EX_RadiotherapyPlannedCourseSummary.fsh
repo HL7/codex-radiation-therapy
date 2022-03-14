@@ -17,18 +17,18 @@ Usage: #example
 // Prescription Target Site "Prostate"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-  * extension[totalDosePlanned].valueQuantity.value = 8300 //unit cGy is automatically added because fixed in the profile
-  * extension[fractionsPlanned].valuePositiveInt = 44
+  * extension[totalDose].valueQuantity.value = 8300 //unit cGy is automatically added because fixed in the profile
+  * extension[fractions].valuePositiveInt = 44
 // Prescription Target Site "Pelv Ns"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
-  * extension[totalDosePlanned].valueQuantity.value = 4500
-  * extension[fractionsPlanned].valuePositiveInt = 25
+  * extension[totalDose].valueQuantity.value = 4500
+  * extension[fractions].valuePositiveInt = 25
 // Prescription Target Site "Sem Vs"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-  * extension[totalDosePlanned].valueQuantity.value = 7920
-  * extension[fractionsPlanned].valuePositiveInt = 44
+  * extension[totalDose].valueQuantity.value = 7920
+  * extension[fractions].valuePositiveInt = 44
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyCourseId

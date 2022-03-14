@@ -117,7 +117,7 @@ groups:
     resources:
     - StructureDefinition/codexrt-radiotherapy-energy-or-isotope
     - StructureDefinition/codexrt-radiotherapy-fractions-prescribed
-    - StructureDefinition/codexrt-radiotheraphy-treatment-device-type
+    - StructureDefinition/codexrt-radiotherapy-treatment-device-type
     - StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume
     - StructureDefinition/codexrt-radiotherapy-fractions-delivered
     - StructureDefinition/codexrt-radiotherapy-volume

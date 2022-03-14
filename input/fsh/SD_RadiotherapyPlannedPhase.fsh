@@ -9,9 +9,9 @@ Description: "A Radiotherapy Planned Phase is the summary over all Radiotherapy 
     RadiotherapyFractionsPlanned named radiotherapy-fractions-planned 1..1 MS and
     RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS
 * extension[radiotherapy-dose-planned-to-volume]
-  * extension[fractionsPlanned] 0..0
-  * extension[fractionsPlanned] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
-  * extension[fractionsPlanned] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-planned. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
+  * extension[fractions] 0..0
+  * extension[fractions] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
+  * extension[fractions] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-planned. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
 * intent = ReqIntent#filler-order "Filler Order"
 * code = RadiotherapyRequest#radiotherapy-planned-phase "Radiotherapy Planned Phase"
 * occurrenceTiming only Timing

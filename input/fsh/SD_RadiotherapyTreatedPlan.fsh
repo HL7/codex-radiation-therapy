@@ -22,7 +22,7 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * extension[radiotherapy-dicom-record] ^short = "DICOM Treatment Record"
 * extension[radiotherapy-dicom-record] ^definition = "Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions."
 * basedOn MS
-* basedOn ^short = "Should Reference a Radiotherapy Treatment Plan" // http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotheraphy-treatment-plan" // only Reference(RadiotherapyTreatmentPlan)
+* basedOn ^short = "Should Reference a Radiotherapy Treatment Plan" // http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-plan" // only Reference(RadiotherapyTreatmentPlan)
 * partOf MS
 * partOf only Reference(RadiotherapyTreatedPhase or RadiotherapyCourseSummary)
 * partOf ^definition = "The partOf element, if present, MUST reference an mCODE RadiotherapyCourseSummary-conforming Procedure resource."
