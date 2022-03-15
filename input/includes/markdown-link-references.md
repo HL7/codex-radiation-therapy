@@ -1,13 +1,13 @@
 [CodexrtRadiotherapyCoursePrescription]: StructureDefinition-codexrt-radiotherapy-course-prescription.html
 [CodexrtRadiotherapyCourseSummary]: StructureDefinition-codexrt-radiotherapy-course-summary.html
-[CodexrtRadiotheraphyPhasePrescription]: StructureDefinition-codexrt-radiotheraphy-phase-prescription.html
-[CodexrtRadiotherapyTreatmentPhase]: StructureDefinition-codexrt-radiotherapy-treatment-phase.html
+[CodexrtRadiotherapyPhasePrescription]: StructureDefinition-codexrt-radiotherapy-phase-prescription.html
+[CodexrtRadiotherapyTreatedPhase]: StructureDefinition-codexrt-radiotherapy-treated-phase.html
 [CodexrtRadiotherapyVolume]: StructureDefinition-codexrt-radiotherapy-volume.html
 [CodexrtRadiotherapyDosePrescribedToVolume]: StructureDefinition-codexrt-radiotherapy-dose-prescribed-to-volume.html
 [CodexrtRadiotherapyEnergyOrIsotope]: StructureDefinition-codexrt-radiotherapy-energy-or-isotope.html
 [CodexrtRadiotherapyFractionsDelivered]: StructureDefinition-codexrt-radiotherapy-fractions-delivered.html
 [CodexrtRadiotherapyFractionsPrescribed]: StructureDefinition-codexrt-radiotherapy-fractions-prescribed.html
-[CodexrtRadiotheraphyTreatmentDeviceType]: StructureDefinition-codexrt-radiotheraphy-treatment-device-type.html
+[CodexrtRadiotherapyTreatmentDeviceType]: StructureDefinition-codexrt-radiotherapy-treatment-device-type.html
 [RadiotherapyRequest]: ValueSet-radiotherapy-request.html
 [RadiotherapyRequest]: CodeSystem-radiotherapy-request.html
 [SnomedRequestedCs]: CodeSystem-snomed-requested-cs.html
