@@ -20,18 +20,18 @@ Usage: #example
 // Prescription Target Site "Left Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
-  * extension[totalDosePrescribed].valueQuantity.value = 5000
-  * extension[fractionsPrescribed].valuePositiveInt = 25
+  * extension[totalDose].valueQuantity.value = 5000
+  * extension[fractions].valuePositiveInt = 25
 // Prescription Target Site "Left Breast Boost"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
-  * extension[totalDosePrescribed].valueQuantity.value = 6000
-  * extension[fractionsPrescribed].valuePositiveInt = 30
+  * extension[totalDose].valueQuantity.value = 6000
+  * extension[fractions].valuePositiveInt = 30
 // Prescription Target Site "Right Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
-  * extension[totalDosePrescribed].valueQuantity.value = 5000
-  * extension[fractionsPrescribed].valuePositiveInt = 25
+  * extension[totalDose].valueQuantity.value = 5000
+  * extension[fractions].valuePositiveInt = 25
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyCourseId
@@ -62,13 +62,13 @@ Usage: #example
 // Prescription Target Site "Left Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
-  * extension[fractionDosePrescribed].valueQuantity.value = 200
-  * extension[totalDosePrescribed].valueQuantity.value = 5000
+  * extension[fractionDose].valueQuantity.value = 200
+  * extension[totalDose].valueQuantity.value = 5000
 // Prescription Target Site "Left Breast Boost"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
-  * extension[fractionDosePrescribed].valueQuantity.value = 200
-  * extension[totalDosePrescribed].valueQuantity.value = 5000
+  * extension[fractionDose].valueQuantity.value = 200
+  * extension[totalDose].valueQuantity.value = 5000
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
@@ -96,8 +96,8 @@ Usage: #example
 // Prescription Target Site "Left Breast Boost"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
-  * extension[fractionDosePrescribed].valueQuantity.value = 200
-  * extension[totalDosePrescribed].valueQuantity.value = 1000
+  * extension[fractionDose].valueQuantity.value = 200
+  * extension[totalDose].valueQuantity.value = 1000
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
@@ -124,8 +124,8 @@ Usage: #example
 // Prescription Target Site "Right Breast"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
-  * extension[fractionDosePrescribed].valueQuantity.value = 200
-  * extension[totalDosePrescribed].valueQuantity.value = 5000
+  * extension[fractionDose].valueQuantity.value = 200
+  * extension[totalDose].valueQuantity.value = 5000
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId

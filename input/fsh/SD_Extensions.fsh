@@ -4,7 +4,7 @@ RuleSet: ExtensionContext(path)
 * ^context[=].expression = "{path}"
 
 Extension: RadiotherapyTreatmentDeviceType
-Id: codexrt-radiotheraphy-treatment-device-type
+Id: codexrt-radiotherapy-treatment-device-type
 Title: "Type of Treatment Device"
 Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device.
 Device instances are not specified here. Those are represented by resources of type Device."
@@ -12,8 +12,6 @@ Device instances are not specified here. Those are represented by resources of t
 * value[x] ^short = "Type of Treatment Device"
 * value[x] only CodeableConcept
 
-// mCODE has no prescription yet. But defined already symmetric with delivery in mCODE:
-// http://hl7.org/fhir/us/mcode/2021May/StructureDefinition-mcode-radiotherapy-fractions-delivered.html
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
 Title: "Number of Prescribed Fractions"
@@ -22,6 +20,7 @@ This extension SHALL only be present if the treatment is structured as countable
 * . ^short = "Number of Prescribed Fractions"
 * value[x] ^short = "Number of Prescribed Fractions"
 * value[x] only positiveInt
+* value[x] 1..1
 
 Extension: RadiotherapyFractionsPlanned
 Id: codexrt-radiotherapy-fractions-planned
@@ -31,74 +30,79 @@ This extension SHALL only be present if the treatment is structured as countable
 * . ^short = "Number of Planned Fractions"
 * value[x] ^short = "Number of Planned Fractions"
 * value[x] only positiveInt
+* value[x] 1..1
 
-//mCODE has no prescription yet, but expect that to be symmetric to
-//http://hl7.org/fhir/us/mcode/2021May/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
+Extension: RadiotherapyFractionsDelivered
+Id: codexrt-radiotherapy-fractions-delivered
+Title: "Radiotherapy Fractions Delivered"
+Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
+* . ^short = "Number of Delivered Fractions"
+* value[x] only unsignedInt //as opposed to planned or prescribed fractions, delivered fractions can be zero.
+* value[x] 1..1
+
+// Defined similar to the corresponding delivered dose in mCODE STU2.
+// http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
+RuleSet: DoseToVolumeCommon
+* extension contains
+    volume 1..1 MS and
+    fractionDose 0..1 MS and
+    totalDose 0..1 MS and
+    fractions 0..1 MS
+* extension[volume]
+  * value[x] only Reference(RadiotherapyVolume)
+  * value[x] 1..1
+* extension[fractionDose]
+  * value[x] only Quantity
+  * value[x] 0..1
+  * valueQuantity = UCUM#cGy
+* extension[totalDose]
+  * value[x] only Quantity
+  * value[x] 1..1
+  * valueQuantity = UCUM#cGy
+* extension[fractions]
+  * value[x] only positiveInt
+  * value[x] 0..1
+
+
 Extension: RadiotherapyDosePrescribedToVolume
 Id: codexrt-radiotherapy-dose-prescribed-to-volume
 Title: "Dose Prescribed to Volume"
 Description: "Dose parameters prescribed for one radiotherapy volume."
+* insert DoseToVolumeCommon
 * . ^short = "Prescribed Dose to a Dose Reference"
-* extension contains
-    volume 1..1 MS and
-    fractionDosePrescribed 0..1 MS and
-    totalDosePrescribed 0..1 MS and
-    fractionsPrescribed 0..1 MS
 * extension[volume]
-  * value[x] only Reference(RadiotherapyVolume)
-  * value[x] 1..1
   * ^short = "Volume targeted by the prescribed dose"
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
-* extension[fractionDosePrescribed]
-  * value[x] only Quantity
-  * value[x] 1..1
-  * valueQuantity = UCUM#cGy
+* extension[fractionDose]
   * ^short = "Radiation Dose Prescribed per Fraction"
   * ^definition = "The dose prescribed per Fraction to this volume."
-* extension[totalDosePrescribed]
-  * value[x] only Quantity
-  * value[x] 1..1
-  * valueQuantity = UCUM#cGy
+* extension[totalDose]
   * ^short = "Total Radiation Dose Prescribed"
   * ^definition = "The total dose prescribed to this volume within the scope of this ServiceRequest."
-* extension[fractionsPrescribed]
-  * value[x] only positiveInt
-  * value[x] 1..1
+* extension[fractions]
   * ^short = "Number of Prescribed Fractions"
   * ^definition = "The prescribed number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in Phase Prescriptions or Plans."
+
 
 Extension: RadiotherapyDosePlannedToVolume
 Id: codexrt-radiotherapy-dose-planned-to-volume
 Title: "Dose Planned to Volume"
 Description: "Dose parameters planned for one radiotherapy volume."
+* insert DoseToVolumeCommon
 * . ^short = "Planned Dose to a Dose Reference"
-* extension contains
-    volume 1..1 MS and
-    totalDosePlanned 0..1 MS and
-    fractionsPlanned 0..1 MS and
-    fractionDosePlanned 0..1 MS
 * extension[volume]
-  * value[x] only Reference(RadiotherapyVolume)
-  * value[x] 1..1
   * ^short = "Volume targeted by the planned dose"
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
-* extension[totalDosePlanned]
-  * value[x] only Quantity
-  * value[x] 1..1
-  * valueQuantity = UCUM#cGy
+* extension[totalDose]
   * ^short = "Total Planned Radiation Dose"
   * ^definition = "The total dose planned to this volume within the scope of this ServiceRequest."
-* extension[fractionsPlanned]
-  * value[x] only positiveInt
-  * value[x] 1..1
-  * ^short = "Number of Planned Fractions"
-  * ^definition = "The planned number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
-* extension[fractionDosePlanned]
-  * value[x] only Quantity
-  * value[x] 1..1
-  * valueQuantity = UCUM#cGy
+* extension[fractionDose]
   * ^short = "Radiation Dose Planned per Fraction"
   * ^definition = "The dose Planned per Fraction to this volume."
+* extension[fractions]
+  * ^short = "Number of Planned Fractions"
+  * ^definition = "The planned number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
+
 
 Extension: RadiotherapyEnergyOrIsotope
 Id: codexrt-radiotherapy-energy-or-isotope
@@ -114,12 +118,6 @@ For electrons, the maximum energy is given in MeV. For photons, the maximum acce
 * valueCodeableConcept from RadiotherapyIsotopes (extensible)
 * value[x] 1..1
 
-Extension: RadiotherapyFractionsDelivered
-Id: codexrt-radiotherapy-fractions-delivered
-Title: "Radiotherapy Fractions Delivered"
-Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
-* value[x] only unsignedInt
-* value[x] 1..1
 
 //Copied from https://hl7.org/fhir/R4/imagingstudy.html which contains DICOM references for all images in an imaging study.
 //For general DICOM refernece we may add Series and Study UID.

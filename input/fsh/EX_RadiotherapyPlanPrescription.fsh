@@ -15,18 +15,18 @@ Usage: #example
 // Prescription Target Site "Prostate"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-  * extension[fractionDosePrescribed].valueQuantity.value = 180 //unit cGy is automatically added because fixed in the profile
-  * extension[totalDosePrescribed].valueQuantity.value = 4500
+  * extension[fractionDose].valueQuantity.value = 180 //unit cGy is automatically added because fixed in the profile
+  * extension[totalDose].valueQuantity.value = 4500
 // Prescription Target Site "Pelv Ns"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
-  * extension[fractionDosePrescribed].valueQuantity.value = 180
-  * extension[totalDosePrescribed].valueQuantity.value = 4500
+  * extension[fractionDose].valueQuantity.value = 180
+  * extension[totalDose].valueQuantity.value = 4500
 // Prescription Target Site "Sem Vs"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-  * extension[fractionDosePrescribed].valueQuantity.value = 180
-  * extension[totalDosePrescribed].valueQuantity.value = 4500
+  * extension[fractionDose].valueQuantity.value = 180
+  * extension[totalDose].valueQuantity.value = 4500
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPrescriptionId
@@ -70,13 +70,13 @@ Usage: #example
 // Prescription Target Site "Prostate"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-  * extension[fractionDosePrescribed].valueQuantity.value = 200 //unit cGy is automatically added because fixed in the profile
-  * extension[totalDosePrescribed].valueQuantity.value = 3800
+  * extension[fractionDose].valueQuantity.value = 200 //unit cGy is automatically added because fixed in the profile
+  * extension[totalDose].valueQuantity.value = 3800
 // Prescription Target Site "Sem Vs"
 * extension[radiotherapy-dose-prescribed-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-  * extension[fractionDosePrescribed].valueQuantity.value = 180
-  * extension[totalDosePrescribed].valueQuantity.value = 3420
+  * extension[fractionDose].valueQuantity.value = 180
+  * extension[totalDose].valueQuantity.value = 3420
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPrescriptionId

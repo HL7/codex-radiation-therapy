@@ -19,7 +19,7 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
 * basedOn MS
-* basedOn ^short = "Should Reference a Radiotherapy Planned Phase" // http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotheraphy-phase-prescription" // only Reference(RadiotherapyPhasePrescription)
+* basedOn ^short = "Should Reference a Radiotherapy Planned Phase" // http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-phase-prescription" // only Reference(RadiotherapyPhasePrescription)
 * partOf MS
 * partOf only Reference($mCODERadiotherapyCourseSummary)
 * partOf ^definition = "The partOf element, if present, MUST reference an mCODE RadiotherapyCourseSummary-conforming Procedure resource."
