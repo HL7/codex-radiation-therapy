@@ -13,6 +13,7 @@ Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to del
   * extension[fractionDose] ^short = "Not used in this profile. See Planned Phase for detailed Fractionation."
   * extension[fractionDose] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all Fractions in which this volume receives dose."
   * extension[fractionDose] 0..0
+* basedOn ^short = "Should Reference a Radiotherapy Course Prescription"
 * code = RadiotherapyRequest#radiotherapy-planned-course "Radiotherapy Planned Course"
 * occurrencePeriod only Period
 * occurrencePeriod MS

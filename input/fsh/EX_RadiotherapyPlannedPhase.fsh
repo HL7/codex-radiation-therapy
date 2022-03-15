@@ -34,7 +34,10 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
-* basedOn = Reference(RadiotherapyPlannedCourse-04-Prostate)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-04-Prostate)
+  * display = "Prostate-2Phases"
+* basedOn[+] = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1)
+  * display = "Prostate-Phase1"
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
@@ -81,8 +84,10 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
-* basedOn = Reference(RadiotherapyPlannedCourse-04-Prostate)
-* basedOn.display =  "Prostate-2Phases"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-04-Prostate)
+  * display = "Prostate-2Phases"
+* basedOn[+] = Reference(RadiotherapyPhasePrescription-05-Prostate-Phase2)
+  * display = "Prostate-Phase2"
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"

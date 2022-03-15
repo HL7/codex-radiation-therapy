@@ -24,7 +24,7 @@ Usage: #example
   * system = VarianRadiotherapyPrescriptionId
   * value = "Prostate-Phase1"
 * basedOn = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1)
-* basedOn.display = "Prostate-Phase1"
+  * display = "Prostate-Phase1"
 * partOf = Reference(RadiotherapyCourseSummary-04-Prostate) //Can reference another summary of larger scope
 * status = #in-progress
 //* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.

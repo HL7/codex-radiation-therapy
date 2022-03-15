@@ -28,6 +28,8 @@ Usage: #example
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
 * identifier.system = VarianRadiotherapyCourseId //Use same id as for Course
 * identifier.value = "Prostate-2Phases"
+* basedOn = Reference(RadiotherapyCoursePrescription-04-Prostate)
+  * display = "Prostate-2Phases"
 * status = #in-progress
 //* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.
 * subject = Reference(Patient-6)

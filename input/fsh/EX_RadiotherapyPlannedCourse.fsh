@@ -36,7 +36,8 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456.2"
-//* replaces.reference = ... //XRTSIntent."Predecessor" In FHIR, this can reference another resource instead of only identifier.
+* basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate)
+  * display = "Prostate-2Phases"
 * status = #active
 * code = RadiotherapyRequest#radiotherapy-planned-course "Radiotherapy Planned Course"
 * subject = Reference(Patient-6)
@@ -52,5 +53,3 @@ Usage: #example
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
 * note.text = "Free text note in Radiotherapy Planned Course"
-
-// ------------------------------------------------------------------------------------
