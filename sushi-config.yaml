@@ -75,10 +75,11 @@ menu:
     Profile Conformance: conformance-profiles.html
     Terminology: terminology.html
   FHIR Artifacts:
-    Profiles: profiles.html
-    Extensions: extensions.html
-    Value Sets: valuesets.html
-    Code Systems: codesystems.html
+    Profiles: artifacts.html#a-course-level-profiles
+    Extensions: artifacts.html#extensions
+    Value Sets: artifacts.html#valuesets
+    Code Systems: artifacts.html#codesystems
+    Examples: artifacts.html#example-example-instances
     Capability Statements: capabilitystatements.html
     Complete Listing: artifacts.html
   More:
