@@ -15,18 +15,18 @@ Usage: #example
 // Target Site "Prostate"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-  * extension[fractionDosePlanned].valueQuantity.value = 180 //unit cGy is automatically added because fixed in the profile
-  * extension[totalDosePlanned].valueQuantity.value = 4500
+  * extension[fractionDose].valueQuantity.value = 180 //unit cGy is automatically added because fixed in the profile
+  * extension[totalDose].valueQuantity.value = 4500
 // Target Site "Pelv Ns"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
-  * extension[fractionDosePlanned].valueQuantity.value = 180
-  * extension[totalDosePlanned].valueQuantity.value = 4500
+  * extension[fractionDose].valueQuantity.value = 180
+  * extension[totalDose].valueQuantity.value = 4500
 // Target Site "Sem Vs"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-  * extension[fractionDosePlanned].valueQuantity.value = 180
-  * extension[totalDosePlanned].valueQuantity.value = 4500
+  * extension[fractionDose].valueQuantity.value = 180
+  * extension[totalDose].valueQuantity.value = 4500
 * extension[radiotherapy-dicom-plan]
   * extension[instanceUid].valueId = "1.2.246.352.71.5689073982433245406.1530811633039636638"
   * extension[sopClass].valueCoding = urn:ietf:rfc:3986#"urn:oid:1.2.840.10008.5.1.4.1.1.481.5"
@@ -37,8 +37,10 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
-* basedOn = Reference(RadiotherapyPlannedPhase-04-Prostate-Phase1)
-* basedOn.display =  "Prostate-Phase1"
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-04-Prostate-Phase1)
+  * display =  "Prostate-Phase1"
+* basedOn[+] = Reference(RadiotherapyPlanPrescription-04-Prostate-Phase1-Plan1)
+  * display =  "Prostate-Phase1-Plan1"
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
@@ -71,13 +73,13 @@ Usage: #example
 // Target Site "Prostate"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
-  * extension[fractionDosePlanned].valueQuantity.value = 200 //unit cGy is automatically added because fixed in the profile
-  * extension[totalDosePlanned].valueQuantity.value = 3800
+  * extension[fractionDose].valueQuantity.value = 200 //unit cGy is automatically added because fixed in the profile
+  * extension[totalDose].valueQuantity.value = 3800
 // Target Site "Sem Vs"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
-  * extension[fractionDosePlanned].valueQuantity.value = 180
-  * extension[totalDosePlanned].valueQuantity.value = 3420
+  * extension[fractionDose].valueQuantity.value = 180
+  * extension[totalDose].valueQuantity.value = 3420
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPlanId
@@ -85,8 +87,10 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
-* basedOn = Reference(RadiotherapyPlannedPhase-05-Prostate-Phase2) //Intent that this prescription bases on
-* basedOn.display =  "Prostate-Phase2"
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-05-Prostate-Phase2) //Intent that this prescription bases on
+  * display =  "Prostate-Phase2"
+* basedOn[+] = Reference(RadiotherapyPlanPrescription-05-Prostate-Phase2-Plan1)
+  * display =  "Prostate-Phase2-Plan1"
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
