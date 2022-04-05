@@ -6,5 +6,6 @@ Title: "Radiotherapy Phase Cumulative Prescription"
 Description: "A Radioherapy Phase Prescription is a request for one series of fractionated treatments using Radiotherapy. It can define treatment parameters such as modality or technique,
 and prescribe dose to multiple targets."
 * insert RadiotherapyPhaseAndPlanPrescriptionCommon
-* code = RadiotherapyRequest#radiotherapy-phase-prescription "Radiotherapy Phase Prescription"
+* code = SnomedRequestedCS#USCRS-33527 "Radiotherapy Treatment Phase"
+* intent = #original-order
 * basedOn ^short = "Should Reference the Radiotherapy Course Prescription to which this Phase belongs if that exists."

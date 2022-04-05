@@ -10,7 +10,7 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * basedOn ^short = "Should Reference a Radiotherapy Treatment Plan" // http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-plan" // only Reference(RadiotherapyTreatmentPlan)
 * partOf only Reference(RadiotherapyTreatedPhase or RadiotherapyCourseSummary)
 * partOf ^definition = "The partOf element, if present, MUST reference an mCODE RadiotherapyCourseSummary-conforming Procedure resource."
-* code = RadiotherapyProcedure#radiotherapy-treated-plan
+* code = SnomedRequestedCS#USCRS-33951	"Radiotherapy Treatment Plan"
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered with this plan in the top-level extension also named fractionDelivered."
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this plan, not including dose from any other plan."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"

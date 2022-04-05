@@ -38,7 +38,6 @@ Usage: #example
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456.2"
 //* replaces.reference = ... //XRTSIntent."Predecessor" In FHIR, this can reference another resource instead of only identifier.
 * status = #active
-* code = RadiotherapyRequest#radiotherapy-course-prescription	"Radiotherapy Course Prescription"
 * subject = Reference(Patient-6)
 * subject.display = "Pater Venkman"
 * occurrencePeriod.start = "2020-07-03T00:00:00+02:00"
