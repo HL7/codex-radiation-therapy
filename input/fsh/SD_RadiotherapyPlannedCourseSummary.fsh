@@ -15,6 +15,5 @@ Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to del
   * extension[fractionDose] 0..0
 * basedOn ^short = "Should Reference a Radiotherapy Course Prescription"
 * code = SCT#108290001 "Radiotherapy Course of Treatment"
-* intent = #filler-order
 * occurrencePeriod only Period
 * occurrencePeriod MS

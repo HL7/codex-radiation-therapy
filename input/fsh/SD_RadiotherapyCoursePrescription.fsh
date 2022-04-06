@@ -15,4 +15,3 @@ Description: "A Radiotherapy Course Prescription is a high-level request for a c
 * occurrencePeriod only Period
 * occurrencePeriod MS
 * code = SCT#108290001 "Radiotherapy Course of Treatment"
-* intent = #original-order

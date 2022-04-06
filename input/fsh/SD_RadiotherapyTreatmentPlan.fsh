@@ -11,4 +11,3 @@ Description: "A Radiotherapy Treatment Plan resource describes the treatment tha
 * extension[radiotherapy-dicom-plan] ^definition = "Reference to a DICOM SOP instance representing a Treatment Plan such as RT Plan or RT Ion Plan."
 * basedOn ^short = "Should Reference a Radiotherapy Plan Prescription and the Radiotherapy Planned Phase to which this Treatment Plan belongs."
 * code = SnomedRequestedCS#USCRS-33951	"Radiotherapy Treatment Plan"
-* intent = #filler-order
