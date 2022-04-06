@@ -8,7 +8,7 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
 * basedOn ^short = "Should Reference a Radiotherapy Planned Phase" // http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-phase-prescription" // only Reference(RadiotherapyPhasePrescription)
 * partOf only Reference(RadiotherapyCourseSummary)
 * partOf ^definition = "The partOf element, if present, MUST reference an mCODE RadiotherapyCourseSummary-conforming Procedure resource."
-* code = SnomedRequestedCS#USCRS-33527  // Radiotherapy Treatment Phase (therapy/regime)
+* code = SnomedRequestedCS#USCRS-33527 "Radiotherapy Treatment Phase (therapy/regime)"
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this phase, not including dose from any other phase. For summary over multiple phases, see Radiotherapy Course Summary."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
