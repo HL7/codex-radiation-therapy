@@ -39,7 +39,6 @@ Usage: #example
 * basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate)
   * display = "Prostate-2Phases"
 * status = #active
-* code = RadiotherapyRequest#radiotherapy-planned-course "Radiotherapy Planned Course"
 * subject = Reference(Patient-6)
 * subject.display = "Pater Venkman"
 * occurrencePeriod.start = "2020-07-03T00:00:00+02:00"
