@@ -14,6 +14,6 @@ Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to del
   * extension[fractionDose] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all Fractions in which this volume receives dose."
   * extension[fractionDose] 0..0
 * basedOn ^short = "Should Reference a Radiotherapy Course Prescription"
-* code = SCT#108290001 "Radiotherapy Course of Treatment"
+* code = SCT#1217123003 "Radiotherapy course of treatment (regime/therapy)"
 * occurrencePeriod only Period
 * occurrencePeriod MS
