@@ -25,6 +25,7 @@ Usage: #example
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-01-Prostate-1P-1V)
 * status = #completed
 * subject = Reference(Patient-XRTS-01)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
@@ -54,11 +55,73 @@ Usage: #example
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-01-01-Primary)
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-01-Prostate-1P-1V)
 * status = #completed
 * subject = Reference(Patient-XRTS-01)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-07T13:21:17+01:00"
+* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* note.text = "Free text note in Radiotherapy Phase"
+
+// --- Planned Course ---------------------------------------------------------------------------------
+
+Instance: RadiotherapyPlannedCourse-XRTS-01-Prostate-1P-1V
+InstanceOf: RadiotherapyPlannedCourse
+Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Usage: #example
+* meta.versionId = "123"
+* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
+* meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
+* extension[treatment-intent]
+  * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+    * text = "Curative"
+* extension[modalityAndTechnique][+]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 2
+* extension[radiotherapy-dose-planned-to-volume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-01-Prostate)
+    * valueReference.display = "Prostate"
+  * extension[totalDose].valueQuantity.value = 400
+  * extension[fractions].valuePositiveInt = 2
+* identifier
+  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+  * system = VarianRadiotherapyCourseId
+  * value = "C1Prostate"
+* status = #completed
+* subject = Reference(Patient-XRTS-01)
+* reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
+* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+
+// --- Planned Phases ---------------------------------------------------------------------------------
+
+Instance: RadiotherapyPlannedPhase-XRTS-01-01-Primary
+InstanceOf: RadiotherapyPlannedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Usage: #example
+* meta.versionId = "123"
+* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
+* meta.profile = Canonical(RadiotherapyPlannedPhase)
+* extension[modalityAndTechnique][+]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[radiotherapy-fractions-planned].valuePositiveInt = 2
+* extension[radiotherapy-dose-planned-to-volume]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-01-Prostate)
+    * valueReference.display = "Prostate"
+  * extension[fractionDose].valueQuantity.value = 200
+  * extension[totalDose].valueQuantity.value = 400
+* identifier
+  * use = #usual
+  * system = VarianRadiotherapyPhaseId
+  * value = "Primary"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-01-Prostate-1P-1V)
+  * display = "C1Prostate"
+* status = #completed
+* subject = Reference(Patient-XRTS-01)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
