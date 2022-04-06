@@ -191,8 +191,21 @@ Description: "Radiotherapy Treatment Applicator Type."
 * . ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] only CodeableConcept
-* value[x] from ApplicatorTypesVS (extensible )
+* value[x] from ApplicatorTypesVS (extensible)
 
+<<<<<<< HEAD
+=======
+ValueSet: RadiotherapyTreatmentDeviceTypeVS
+Id: codex-radiotherapy-treatment-device-types-vs
+Title: "Radiotherapy Treatment Device Type"
+Description: "Radiotherapy Treatment Device Type"
+* SCT#228768005 "Seeds source (physical object)"
+* SnomedRequestedCS#seedsonstrand "Seeds on Strand"
+* SnomedRequestedCS#seedsonmesh "Seeds on Mesh"
+* SnomedRequestedCS#afterloader "Brachy Afterloader"
+
+
+>>>>>>> b49b8fa (Update SD_Extensions.fsh)
 ValueSet: ApplicatorTypesVS
 Id: codex-radiotherapy-applicator-types-vs
 Title: "Brachytherapy Applicator Types"
