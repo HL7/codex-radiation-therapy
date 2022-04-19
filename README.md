@@ -1,5 +1,5 @@
 # CodeX Radiation Therapy
-The CodeX Accelerator..... (reference).
+The CodeX Accelerator.... (reference).
 
 CodeX Radiation Therapy is an implementation guide developed by the CODEX accelerator intended to assemble a core set of structure data elements for radiation therapy electronic health records.
 
