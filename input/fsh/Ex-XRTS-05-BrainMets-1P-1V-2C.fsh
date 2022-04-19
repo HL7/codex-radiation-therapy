@@ -50,7 +50,7 @@ Usage: #example
 * extension[actualNumberOfSessions].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-05-01-BrainMets)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-05-02-BrainMets)
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2000
   * extension[fractionsDelivered].valueUnsignedInt = 5
@@ -110,7 +110,7 @@ Usage: #example
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-05-01-BrainMets)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-05-02-BrainMets)
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2000
 * identifier[+]
@@ -173,7 +173,7 @@ Usage: #example
 * extension[mcode-radiotherapy-sessions].valueUnsignedInt = 5
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-05-01-BrainMets)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-05-02-BrainMets)
     * valueReference.display = "Brain Mets"
   * extension[totalDose].valueQuantity.value = 2000
   * extension[fractions].valuePositiveInt = 5
@@ -229,7 +229,7 @@ Usage: #example
 * extension[radiotherapy-fractions-planned].valuePositiveInt = 5
 * extension[radiotherapy-dose-planned-to-volume]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-05-01-BrainMets)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-05-02-BrainMets)
     * valueReference.display = "Brain Mets"
   * extension[fractionDose].valueQuantity.value = 500
   * extension[totalDose].valueQuantity.value = 2000
@@ -262,6 +262,27 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.05.01" // DICOM UID
+* morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
+* location = SCT#12738006 "Brain structure (body structure)"
+* locationQualifier[+] = SCT#255609007 "Partial (qualifier value)"
+* patient = Reference(Patient-XRTS-05)
+
+Instance: RadiotherapyVolume-XRTS-05-02-BrainMets
+InstanceOf: RadiotherapyVolume
+Description: "Target Volume. Same label as Brain Mets in first Course, but conceptually a different Volume. Dose is not added up."
+Usage: #example
+* meta.versionId = "123"
+* meta.lastUpdated = "2021-10-22T10:07:41.050+02:00"
+* meta.profile[+] = Canonical(RadiotherapyVolume)
+* meta.profile[+] = $mCODERadiotherapyVolume
+* identifier[+]
+  * use = #usual
+  * system = VarianDoseReferenceId
+  * value = "Brain Mets" // display id
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.05.02" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#12738006 "Brain structure (body structure)"
 * locationQualifier[+] = SCT#255609007 "Partial (qualifier value)"
