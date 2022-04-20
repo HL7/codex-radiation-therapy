@@ -1,6 +1,6 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-XRTS-04-01-Breast-2P-3V
+Instance: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -21,21 +21,21 @@ Usage: #example
 // Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-01-LeftBreast)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-01-LeftBreast)
     * valueReference.display = "Left Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
   * extension[fractionsDelivered].valueUnsignedInt = 3
 // Target Site "Left Breast Boost"
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 2000
   * extension[fractionsDelivered].valueUnsignedInt = 7
 // Target Site "Right Breast"
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-03-RightBreast)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-03-RightBreast)
     * valueReference.display = "Right Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
   * extension[fractionsDelivered].valueUnsignedInt = 3
@@ -47,9 +47,9 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.04.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
 * status = #completed
-* subject = Reference(Patient-XRTS-04)
+* subject = Reference(Patient-XRTS-04-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-17T13:21:17+01:00"
 * reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
@@ -58,7 +58,7 @@ Usage: #example
 
 // --- Phase Summaries ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-01-01-LeftBreastTangents
+Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTangents
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -71,12 +71,12 @@ Usage: #example
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-01-LeftBreast)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-01-LeftBreast)
     * valueReference.display = "Left Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 1200
 * identifier[+]
@@ -87,16 +87,16 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-01-01-LeftBreastTangents)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-01-Breast-2P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22A-01-01-LeftBreastTangents)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V)
 * status = #completed
-* subject = Reference(Patient-XRTS-04)
+* subject = Reference(Patient-XRTS-04-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-08T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-01-02-RightBreastTangents
+Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-02-RightBreastTangents
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -109,7 +109,7 @@ Usage: #example
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-03-RightBreast)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-03-RightBreast)
     * valueReference.display = "Right Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
 * identifier[+]
@@ -120,15 +120,15 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.02.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-01-02-RightBreastTangents)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-01-Breast-2P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22A-01-02-RightBreastTangents)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V)
 * status = #completed
-* subject = Reference(Patient-XRTS-04)
+* subject = Reference(Patient-XRTS-04-22A)
 * performedPeriod.start = "2021-09-13T13:15:17+01:00"
 * performedPeriod.end = "2021-09-15T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-01-03-LeftBreastBoost
+Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -141,7 +141,7 @@ Usage: #example
 * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 800
 * identifier[+]
@@ -152,17 +152,17 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.03.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-01-03-LeftBreastBoost)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-01-Breast-2P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22A-01-03-LeftBreastBoost)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V)
 * status = #completed
-* subject = Reference(Patient-XRTS-04)
+* subject = Reference(Patient-XRTS-04-22A)
 * performedPeriod.start = "2021-09-14T13:15:17+01:00"
 * performedPeriod.end = "2021-09-17T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V
+Instance: RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V
 InstanceOf: RadiotherapyPlannedCourse
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -182,21 +182,21 @@ Usage: #example
 // Target Site "Left Breast"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-01-LeftBreast)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-01-LeftBreast)
     * valueReference.display = "Left Breast"
   * extension[totalDose].valueQuantity.value = 900
   * extension[fractions].valuePositiveInt = 3
 // Target Site "Left Breast Boost"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
   * extension[totalDose].valueQuantity.value = 2000
   * extension[fractions].valuePositiveInt = 7
 // Target Site "Right Breast"
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-03-RightBreast)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-03-RightBreast)
     * valueReference.display = "Right Breast"
   * extension[totalDose].valueQuantity.value = 900
   * extension[fractions].valuePositiveInt = 3
@@ -209,13 +209,13 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.04.01.22.1"
 * status = #completed
-* subject = Reference(Patient-XRTS-04)
+* subject = Reference(Patient-XRTS-04-22A)
 * reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedPhase-XRTS-04-01-01-LeftBreastTangents
+Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-01-LeftBreastTangents
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -228,13 +228,13 @@ Usage: #example
 * extension[radiotherapy-fractions-planned].valuePositiveInt = 3
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-01-LeftBreast)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-01-LeftBreast)
     * valueReference.display = "Left Breast"
   * extension[fractionDose].valueQuantity.value = 300
   * extension[totalDose].valueQuantity.value = 900
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
   * extension[fractionDose].valueQuantity.value = 400
   * extension[totalDose].valueQuantity.value = 1200
@@ -246,14 +246,14 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
   * display = "C1_Both_Breast"
 * status = #completed
-* subject = Reference(Patient-XRTS-04)
+* subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyPlannedPhase-XRTS-04-01-02-RightBreastTangents
+Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-02-RightBreastTangents
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -266,7 +266,7 @@ Usage: #example
 * extension[radiotherapy-fractions-planned].valuePositiveInt = 3
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-03-RightBreast)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-03-RightBreast)
     * valueReference.display = "Right Breast"
   * extension[fractionDose].valueQuantity.value = 300
   * extension[totalDose].valueQuantity.value = 900
@@ -278,14 +278,14 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.02.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
   * display = "C1_Both_Breast"
 * status = #completed
-* subject = Reference(Patient-XRTS-04)
+* subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyPlannedPhase-XRTS-04-01-03-LeftBreastBoost
+Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -298,7 +298,7 @@ Usage: #example
 * extension[radiotherapy-fractions-planned].valuePositiveInt = 4
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-02-LeftBreastBoost)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
@@ -310,16 +310,16 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.03.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
   * display = "C1_Both_Breast"
 * status = #completed
-* subject = Reference(Patient-XRTS-04)
+* subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyVolume-XRTS-04-01-LeftBreast
+Instance: RadiotherapyVolume-XRTS-04-22A-01-LeftBreast
 InstanceOf: RadiotherapyVolume
 Description: "Target Volume."
 Usage: #example
@@ -339,9 +339,9 @@ Usage: #example
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
 * locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
-* patient = Reference(Patient-XRTS-04)
+* patient = Reference(Patient-XRTS-04-22A)
 
-Instance: RadiotherapyVolume-XRTS-04-02-LeftBreastBoost
+Instance: RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost
 InstanceOf: RadiotherapyVolume
 Description: "Target Volume."
 Usage: #example
@@ -361,9 +361,9 @@ Usage: #example
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
 * locationQualifier[+] = SCT#255609007 "Partial (qualifier value)"
-* patient = Reference(Patient-XRTS-04)
+* patient = Reference(Patient-XRTS-04-22A)
 
-Instance: RadiotherapyVolume-XRTS-04-03-RightBreast
+Instance: RadiotherapyVolume-XRTS-04-22A-03-RightBreast
 InstanceOf: RadiotherapyVolume
 Description: "Target Volume."
 Usage: #example
@@ -383,11 +383,11 @@ Usage: #example
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#24028007 "Right (qualifier value)"
 * locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
-* patient = Reference(Patient-XRTS-04)
+* patient = Reference(Patient-XRTS-04-22A)
 
 // --- Patient ---------------------------------------------------------------------------------
 
-Instance:   Patient-XRTS-04
+Instance:   Patient-XRTS-04-22A
 InstanceOf: $mCODECancerPatient
 Title: "Example XRTS Patient"
 Description: "An example patient to relate Radiotherapy resources to."

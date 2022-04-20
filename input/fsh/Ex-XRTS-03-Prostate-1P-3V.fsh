@@ -1,6 +1,6 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-XRTS-03-01-Prostate-1P-3V
+Instance: RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -17,19 +17,19 @@ Usage: #example
 * extension[actualNumberOfSessions].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 800
   * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-02-PelvNs)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 720
   * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-03-SemVs)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 800
   * extension[fractionsDelivered].valueUnsignedInt = 4
@@ -41,9 +41,9 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.03.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-03-01-Prostate-1P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-03-22A-01-Prostate-1P-3V)
 * status = #completed
-* subject = Reference(Patient-XRTS-03)
+* subject = Reference(Patient-XRTS-03-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
@@ -53,7 +53,7 @@ Usage: #example
 
 // --- Phase Summaries ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyTreatedPhase-XRTS-03-01-01-Primary
+Instance: RadiotherapyTreatedPhase-XRTS-03-22A-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -66,17 +66,17 @@ Usage: #example
 * extension[fractionsDelivered].valueUnsignedInt = 4
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 800
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-02-PelvNs)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 720
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-03-SemVs)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 800
 * identifier[+]
@@ -87,10 +87,10 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.03.01.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-03-01-01-Primary)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-03-01-Prostate-1P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-03-22A-01-01-Primary)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V)
 * status = #completed
-* subject = Reference(Patient-XRTS-03)
+* subject = Reference(Patient-XRTS-03-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
@@ -101,7 +101,7 @@ Usage: #example
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedCourse-XRTS-03-01-Prostate-1P-3V
+Instance: RadiotherapyPlannedCourse-XRTS-03-22A-01-Prostate-1P-3V
 InstanceOf: RadiotherapyPlannedCourse
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -117,19 +117,19 @@ Usage: #example
 * extension[mcode-radiotherapy-sessions].valueUnsignedInt = 4
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDose].valueQuantity.value = 800
   * extension[fractions].valuePositiveInt = 4
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-02-PelvNs)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[totalDose].valueQuantity.value = 720
   * extension[fractions].valuePositiveInt = 4
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-03-SemVs)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[totalDose].valueQuantity.value = 800
   * extension[fractions].valuePositiveInt = 4
@@ -142,7 +142,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.03.01.22.1"
 * status = #completed
-* subject = Reference(Patient-XRTS-03)
+* subject = Reference(Patient-XRTS-03-22A)
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
@@ -150,7 +150,7 @@ Usage: #example
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedPhase-XRTS-03-01-01-Primary
+Instance: RadiotherapyPlannedPhase-XRTS-03-22A-01-01-Primary
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -163,19 +163,19 @@ Usage: #example
 * extension[radiotherapy-fractions-planned].valuePositiveInt = 4
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-02-PelvNs)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 720
 * extension[radiotherapy-dose-planned-to-volume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-03-03-SemVs)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
@@ -187,10 +187,10 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.03.01.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-03-01-Prostate-1P-3V)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-03-22A-01-Prostate-1P-3V)
   * display = "C1Prostate"
 * status = #completed
-* subject = Reference(Patient-XRTS-03)
+* subject = Reference(Patient-XRTS-03-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
@@ -198,7 +198,7 @@ Usage: #example
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyVolume-XRTS-03-01-Prostate
+Instance: RadiotherapyVolume-XRTS-03-22A-01-Prostate
 InstanceOf: RadiotherapyVolume
 Description: "Target Volume."
 Usage: #example
@@ -217,9 +217,9 @@ Usage: #example
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#41216001 "Prostatic structure (body structure)"
 * locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
-* patient = Reference(Patient-XRTS-03)
+* patient = Reference(Patient-XRTS-03-22A)
 
-Instance: RadiotherapyVolume-XRTS-03-02-PelvNs
+Instance: RadiotherapyVolume-XRTS-03-22A-02-PelvNs
 InstanceOf: RadiotherapyVolume
 Description: "Target Volume."
 Usage: #example
@@ -237,9 +237,9 @@ Usage: #example
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.03.02.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#245294005 "Pelvic lymph node group (body structure)"
-* patient = Reference(Patient-XRTS-03)
+* patient = Reference(Patient-XRTS-03-22A)
 
-Instance: RadiotherapyVolume-XRTS-03-03-SemVs
+Instance: RadiotherapyVolume-XRTS-03-22A-03-SemVs
 InstanceOf: RadiotherapyVolume
 Description: "Target Volume."
 Usage: #example
@@ -257,11 +257,11 @@ Usage: #example
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.03.03.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#64739004 "Seminal vesicle"
-* patient = Reference(Patient-XRTS-03)
+* patient = Reference(Patient-XRTS-03-22A)
 
 // --- Patient ---------------------------------------------------------------------------------
 
-Instance:   Patient-XRTS-03
+Instance:   Patient-XRTS-03-22A
 InstanceOf: $mCODECancerPatient
 Title: "Example XRTS Patient"
 Description: "An example patient to relate Radiotherapy resources to."
