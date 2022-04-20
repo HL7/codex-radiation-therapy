@@ -238,7 +238,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.05.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-22A-01-BrainMets-1P-1V)
-  * display = "C1BrainMets"
+* basedOn[=].display = "C1BrainMets"
 * status = #completed
 * subject = Reference(Patient-XRTS-05-22A)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
@@ -270,7 +270,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.05.02.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-22A-02-BrainMets-1P-1V)
-  * display = "C2BrainMets"
+* basedOn[=].display = "C2BrainMets"
 * status = #completed
 * subject = Reference(Patient-XRTS-05-22A)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"

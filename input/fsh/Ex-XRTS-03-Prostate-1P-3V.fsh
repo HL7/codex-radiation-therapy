@@ -188,7 +188,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.03.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-03-22A-01-Prostate-1P-3V)
-  * display = "C1Prostate"
+* basedOn[=].display = "C1Prostate"
 * status = #completed
 * subject = Reference(Patient-XRTS-03-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"

@@ -34,8 +34,8 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
-* basedOn = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1) //Intent that this prescription bases on
-  * display =  "Prostate-Phase1"
+* basedOn[+] = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1) //Intent that this prescription bases on
+* basedOn[=].display =  "Prostate-Phase1"
 //* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
 * subject = Reference(Patient-6)

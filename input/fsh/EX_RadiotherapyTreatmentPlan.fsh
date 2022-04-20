@@ -38,9 +38,9 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-04-Prostate-Phase1)
-  * display =  "Prostate-Phase1"
+* basedOn[=].display =  "Prostate-Phase1"
 * basedOn[+] = Reference(RadiotherapyPlanPrescription-04-Prostate-Phase1-Plan1)
-  * display =  "Prostate-Phase1-Plan1"
+* basedOn[=].display =  "Prostate-Phase1-Plan1"
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
@@ -88,9 +88,9 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-05-Prostate-Phase2) //Intent that this prescription bases on
-  * display =  "Prostate-Phase2"
+* basedOn[=].display = "Prostate-Phase2"
 * basedOn[+] = Reference(RadiotherapyPlanPrescription-05-Prostate-Phase2-Plan1)
-  * display =  "Prostate-Phase2-Plan1"
+* basedOn[=].display = "Prostate-Phase2-Plan1"
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"

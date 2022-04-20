@@ -37,7 +37,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456.2"
 * basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate)
-  * display = "Prostate-2Phases"
+* basedOn[=].display = "Prostate-2Phases"
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Pater Venkman"

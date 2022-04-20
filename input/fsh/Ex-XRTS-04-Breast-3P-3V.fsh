@@ -247,7 +247,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
-  * display = "C1_Both_Breast"
+* basedOn[=].display = "C1_Both_Breast"
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
@@ -279,7 +279,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.02.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
-  * display = "C1_Both_Breast"
+* basedOn[=].display = "C1_Both_Breast"
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
@@ -311,7 +311,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.03.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
-  * display = "C1_Both_Breast"
+* basedOn[=].display = "C1_Both_Breast"
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
