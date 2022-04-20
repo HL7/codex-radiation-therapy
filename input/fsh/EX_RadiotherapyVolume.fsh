@@ -15,7 +15,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151823" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151823" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)
 
@@ -35,7 +35,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151824" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151824" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)
 
@@ -55,7 +55,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151825" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151825" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)
 
@@ -75,7 +75,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151826" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151826" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)
 
@@ -95,6 +95,6 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151827" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151827" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-6)

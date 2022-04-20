@@ -73,7 +73,7 @@ Usage: #example
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Left Breast Tangents"
-* identifier[1]
+* identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.333.101"
 * basedOn = Reference(RadiotherapyCoursePrescription-101-RTTD-BilateralBreast)
@@ -171,7 +171,7 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[totalDoseDelivered].valueQuantity.value = 5000
   * extension[fractionsDelivered].valueUnsignedInt = 25
-* identifier
+* identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "Bilateral Breast"
@@ -292,7 +292,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.101" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.101" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
@@ -315,7 +315,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.102" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.102" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
@@ -338,7 +338,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.103" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.103" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#24028007 "Right (qualifier value)"

@@ -1,6 +1,6 @@
 // --- Course Summaries ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C1BrainMets
+Instance: RadiotherapyCourseSummary-XRTS-05-01-BrainMets-1P-1V
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example."
 Usage: #example
@@ -21,11 +21,15 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2500
   * extension[fractionsDelivered].valueUnsignedInt = 5
-* identifier
+* identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "C1BrainMets"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-BrainMets-1P-1V-C1BrainMets)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.05.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-01-BrainMets-1P-1V)
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
 * performedPeriod.start = "2020-09-07T13:15:17+01:00"
@@ -33,7 +37,7 @@ Usage: #example
 * reasonCode = ICD10#C71.9 "Malignant neoplasm of brain, unspecified"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
 
-Instance: RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C2BrainMets
+Instance: RadiotherapyCourseSummary-XRTS-05-02-BrainMets-1P-1V
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example."
 Usage: #example
@@ -54,11 +58,15 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2000
   * extension[fractionsDelivered].valueUnsignedInt = 5
-* identifier
+* identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "C2BrainMets"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-BrainMets-1P-1V-C2BrainMets)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.05.02.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-02-BrainMets-1P-1V)
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
 * performedPeriod.start = "2021-09-20T13:15:17+01:00"
@@ -88,8 +96,12 @@ Usage: #example
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.05.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-05-01-01-Primary)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C1BrainMets)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-05-01-BrainMets-1P-1V)
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
 * performedPeriod.start = "2020-09-07T13:15:17+01:00"
@@ -97,7 +109,7 @@ Usage: #example
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyTreatedPhase-XRTS-05-01-02-Primary
+Instance: RadiotherapyTreatedPhase-XRTS-05-02-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -117,8 +129,12 @@ Usage: #example
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-05-01-02-Primary)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-05-BrainMets-1P-1V-C2BrainMets)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.05.02.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-05-02-01-Primary)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-05-02-BrainMets-1P-1V)
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
 * performedPeriod.start = "2021-09-20T13:15:17+01:00"
@@ -128,7 +144,7 @@ Usage: #example
 
 // --- Planned Courses ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedCourse-XRTS-05-BrainMets-1P-1V-C1BrainMets
+Instance: RadiotherapyPlannedCourse-XRTS-05-01-BrainMets-1P-1V
 InstanceOf: RadiotherapyPlannedCourse
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -148,16 +164,20 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDose].valueQuantity.value = 2500
   * extension[fractions].valuePositiveInt = 5
-* identifier
+* identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "C1BrainMets"
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.05.01.22.1"
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
 * reasonCode = ICD10#C71.9 "Malignant neoplasm of brain, unspecified"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
 
-Instance: RadiotherapyPlannedCourse-XRTS-05-BrainMets-1P-1V-C2BrainMets
+Instance: RadiotherapyPlannedCourse-XRTS-05-02-BrainMets-1P-1V
 InstanceOf: RadiotherapyPlannedCourse
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -177,10 +197,14 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDose].valueQuantity.value = 2000
   * extension[fractions].valuePositiveInt = 5
-* identifier
+* identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "C2BrainMets"
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.05.02.22.1"
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
 * reasonCode = ICD10#C71.9 "Malignant neoplasm of brain, unspecified"
@@ -205,18 +229,22 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[fractionDose].valueQuantity.value = 500
   * extension[totalDose].valueQuantity.value = 2500
-* identifier
+* identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-BrainMets-1P-1V-C1BrainMets)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.05.01.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-01-BrainMets-1P-1V)
   * display = "C1BrainMets"
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyPlannedPhase-XRTS-05-01-02-Primary
+Instance: RadiotherapyPlannedPhase-XRTS-05-02-01-Primary
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -233,11 +261,15 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[fractionDose].valueQuantity.value = 500
   * extension[totalDose].valueQuantity.value = 2000
-* identifier
+* identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-BrainMets-1P-1V-C2BrainMets)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.05.02.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-05-02-BrainMets-1P-1V)
   * display = "C2BrainMets"
 * status = #completed
 * subject = Reference(Patient-XRTS-05)
@@ -261,7 +293,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.05.01" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.05.01.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#12738006 "Brain structure (body structure)"
 * locationQualifier[+] = SCT#255609007 "Partial (qualifier value)"
@@ -282,7 +314,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.05.02" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.05.02.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#12738006 "Brain structure (body structure)"
 * locationQualifier[+] = SCT#255609007 "Partial (qualifier value)"
@@ -304,7 +336,7 @@ Usage: #example
   * use = #usual
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
   * system = "http://hospital.smarthealthit.org"
-  * value = "XRTS-05"
+  * value = "XRTS-05_22A"
 * name[+]
   * use = #usual
   * family = "Daughter"

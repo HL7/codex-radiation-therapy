@@ -1,6 +1,6 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-XRTS-04-Breast-2P-3V
+Instance: RadiotherapyCourseSummary-XRTS-04-01-Breast-2P-3V
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -39,11 +39,15 @@ Usage: #example
     * valueReference.display = "Right Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
   * extension[fractionsDelivered].valueUnsignedInt = 3
-* identifier
+* identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "C1_Both_Breast"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-Breast-2P-3V)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.04.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V)
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
@@ -54,7 +58,7 @@ Usage: #example
 
 // --- Phase Summaries ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-01-LeftBreastTangents
+Instance: RadiotherapyTreatedPhase-XRTS-04-01-01-LeftBreastTangents
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -79,8 +83,12 @@ Usage: #example
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary - Left Breast Tangents"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-01-LeftBreastTangents)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-Breast-2P-3V)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-01-01-LeftBreastTangents)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-01-Breast-2P-3V)
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
@@ -88,7 +96,7 @@ Usage: #example
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-02-RightBreastTangents
+Instance: RadiotherapyTreatedPhase-XRTS-04-01-02-RightBreastTangents
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -108,15 +116,19 @@ Usage: #example
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Right Breast Tangents"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-02-RightBreastTangents)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-Breast-2P-3V)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.02.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-01-02-RightBreastTangents)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-01-Breast-2P-3V)
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
 * performedPeriod.start = "2021-09-13T13:15:17+01:00"
 * performedPeriod.end = "2021-09-15T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-03-LeftBreastBoost
+Instance: RadiotherapyTreatedPhase-XRTS-04-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -136,8 +148,12 @@ Usage: #example
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Left Breast Boost"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-03-LeftBreastBoost)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-Breast-2P-3V)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.03.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-01-03-LeftBreastBoost)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-01-Breast-2P-3V)
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
 * performedPeriod.start = "2021-09-14T13:15:17+01:00"
@@ -146,7 +162,7 @@ Usage: #example
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedCourse-XRTS-04-Breast-2P-3V
+Instance: RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V
 InstanceOf: RadiotherapyPlannedCourse
 Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
@@ -184,10 +200,14 @@ Usage: #example
     * valueReference.display = "Right Breast"
   * extension[totalDose].valueQuantity.value = 900
   * extension[fractions].valuePositiveInt = 3
-* identifier
+* identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "C1_Both_Breast"
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.04.01.22.1"
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
 * reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
@@ -195,7 +215,7 @@ Usage: #example
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedPhase-XRTS-04-01-LeftBreastTangents
+Instance: RadiotherapyPlannedPhase-XRTS-04-01-01-LeftBreastTangents
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -218,18 +238,22 @@ Usage: #example
     * valueReference.display = "Left Breast Boost"
   * extension[fractionDose].valueQuantity.value = 400
   * extension[totalDose].valueQuantity.value = 1200
-* identifier
+* identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Primary - Left Breast Tangents"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-Breast-2P-3V)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V)
   * display = "C1_Both_Breast"
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyPlannedPhase-XRTS-04-02-RightBreastTangents
+Instance: RadiotherapyPlannedPhase-XRTS-04-01-02-RightBreastTangents
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -246,18 +270,22 @@ Usage: #example
     * valueReference.display = "Right Breast"
   * extension[fractionDose].valueQuantity.value = 300
   * extension[totalDose].valueQuantity.value = 900
-* identifier
+* identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Right Breast Tangents"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-Breast-2P-3V)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.02.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V)
   * display = "C1_Both_Breast"
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyPlannedPhase-XRTS-04-03-LeftBreastBoost
+Instance: RadiotherapyPlannedPhase-XRTS-04-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -274,11 +302,15 @@ Usage: #example
     * valueReference.display = "Left Breast Boost"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
-* identifier
+* identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Left Breast Boost"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-Breast-2P-3V)
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.03.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-01-Breast-2P-3V)
   * display = "C1_Both_Breast"
 * status = #completed
 * subject = Reference(Patient-XRTS-04)
@@ -302,7 +334,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.04.01" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.04.01.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
@@ -324,7 +356,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.04.02" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.04.02.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
@@ -346,7 +378,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.04.03" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.04.03.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#24028007 "Right (qualifier value)"
@@ -369,7 +401,7 @@ Usage: #example
   * use = #usual
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
   * system = "http://hospital.smarthealthit.org"
-  * value = "XRTS-04"
+  * value = "XRTS-04_22A"
 * name[+]
   * use = #usual
   * family = "Sister"
