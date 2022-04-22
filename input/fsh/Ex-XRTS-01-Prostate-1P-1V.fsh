@@ -183,7 +183,7 @@ Usage: #example
   * value = "XRTS-01_22A"
 * name[+]
   * use = #usual
-  * family = "Father"
+  * family = "Father-22A"
   * given = "Joe"
 * telecom
   * system = #phone

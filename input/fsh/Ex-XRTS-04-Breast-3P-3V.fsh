@@ -104,7 +104,7 @@ Usage: #example
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
-  * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
@@ -261,7 +261,7 @@ Usage: #example
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique][+]
-  * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[radiotherapy-fractions-planned].valuePositiveInt = 3
 * extension[radiotherapy-dose-planned-to-volume][+]
@@ -404,7 +404,7 @@ Usage: #example
   * value = "XRTS-04_22A"
 * name[+]
   * use = #usual
-  * family = "Sister"
+  * family = "Sister-22A"
   * given = "Jane"
 * telecom
   * system = #phone

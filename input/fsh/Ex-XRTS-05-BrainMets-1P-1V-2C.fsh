@@ -259,7 +259,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-02-BrainMets)
     * valueReference.display = "Brain Mets"
-  * extension[fractionDose].valueQuantity.value = 500
+  * extension[fractionDose].valueQuantity.value = 400
   * extension[totalDose].valueQuantity.value = 2000
 * identifier[+]
   * use = #usual
@@ -339,7 +339,7 @@ Usage: #example
   * value = "XRTS-05_22A"
 * name[+]
   * use = #usual
-  * family = "Daughter"
+  * family = "Daughter-22A"
   * given = "Joan"
 * telecom
   * system = #phone

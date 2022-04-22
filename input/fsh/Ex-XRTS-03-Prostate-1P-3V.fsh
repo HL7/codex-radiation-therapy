@@ -278,7 +278,7 @@ Usage: #example
   * value = "XRTS-03_22A"
 * name[+]
   * use = #usual
-  * family = "Brother"
+  * family = "Brother-22A"
   * given = "Jonathan"
 * telecom
   * system = #phone
