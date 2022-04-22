@@ -1,21 +1,63 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V
-InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex RTTD collection."
-Usage: #example
-* meta.versionId = "123"
-* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
+RuleSet: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
-  * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* identifier[+]
+  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+  * system = VarianRadiotherapyCourseId
+  * value = "C1_Both_Breast"
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.04.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
+* subject = Reference(Patient-XRTS-04-22A)
+* performedPeriod.start = "2021-09-06T13:15:17+01:00"
+* reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
+//* reasonReference = Reference(Condition/Diagnosis-101-Breast"
+* bodySite = SCT#76752008 "Breast structure (body structure)"
+
+Instance: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-1Fx
+InstanceOf: RadiotherapyCourseSummary
+Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Usage: #example
+* insert RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-Common
+* meta.versionId = "1"
+* meta.lastUpdated = "2021-09-06T13:21:17+01:00"
+* extension[actualNumberOfSessions].valueUnsignedInt = 1
+// Target Site "Left Breast"
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-01-LeftBreast)
+    * valueReference.display = "Left Breast"
+  * extension[totalDoseDelivered].valueQuantity.value = 300
+  * extension[fractionsDelivered].valueUnsignedInt = 1
+// Target Site "Left Breast Boost"
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
+    * valueReference.display = "Left Breast Boost"
+  * extension[totalDoseDelivered].valueQuantity.value = 400
+  * extension[fractionsDelivered].valueUnsignedInt = 1
+* status = #in-progress
+* performedPeriod.end = "2021-09-06T13:21:17+01:00"
+
+Instance: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V
+InstanceOf: RadiotherapyCourseSummary
+Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Usage: #example
+* insert RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-Common
+* meta.versionId = "8"
+* meta.lastUpdated = "2021-09-17T13:21:17+01:00"
+* extension[modalityAndTechnique][+]
+  * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 8
 // Target Site "Left Breast"
@@ -39,35 +81,60 @@ Usage: #example
     * valueReference.display = "Right Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
   * extension[fractionsDelivered].valueUnsignedInt = 3
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-  * system = VarianRadiotherapyCourseId
-  * value = "C1_Both_Breast"
-* identifier[+]
-  * use = #official
-  * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.04.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22A-01-Breast-2P-3V)
 * status = #completed
-* subject = Reference(Patient-XRTS-04-22A)
-* performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-17T13:21:17+01:00"
-* reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
-//* reasonReference = Reference(Condition/Diagnosis-101-Breast"
-* bodySite = SCT#76752008 "Breast structure (body structure)"
 
-// --- Phase Summaries ---------------------------------------------------------------------------------
+// --- Treated Phases ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTangents
-InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
-Usage: #example
-* meta.versionId = "123"
-* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
+RuleSet: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* identifier[+]
+  * use = #usual
+  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
+  * value = "Primary - Left Breast Tangents"
+* identifier[+]
+  * use = #official
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.01.22.1"
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22A-01-01-LeftBreastTang)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V)
+* subject = Reference(Patient-XRTS-04-22A)
+* performedPeriod.start = "2021-09-06T13:15:17+01:00"
+* bodySite = SCT#76752008 "Breast structure (body structure)"
+* note.text = "Free text note in Radiotherapy Phase"
+
+
+Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-1Fx
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Usage: #example
+* insert RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-Common
+* meta.versionId = "1"
+* meta.lastUpdated = "2021-09-06T13:21:17+01:00"
+* extension[fractionsDelivered].valueUnsignedInt = 1
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-01-LeftBreast)
+    * valueReference.display = "Left Breast"
+  * extension[totalDoseDelivered].valueQuantity.value = 300
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
+    * valueReference.display = "Left Breast Boost"
+  * extension[totalDoseDelivered].valueQuantity.value = 400
+* status = #in-progress
+* performedPeriod.end = "2021-09-06T13:21:17+01:00"
+
+Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Usage: #example
+* insert RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-Common
+* meta.versionId = "3"
+* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * extension[fractionsDelivered].valueUnsignedInt = 3
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -79,39 +146,15 @@ Usage: #example
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 1200
-* identifier[+]
-  * use = #usual
-  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
-  * value = "Primary - Left Breast Tangents"
-* identifier[+]
-  * use = #official
-  * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22A-01-01-LeftBreastTangents)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V)
 * status = #completed
-* subject = Reference(Patient-XRTS-04-22A)
-* performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * performedPeriod.end = "2021-09-08T13:21:17+01:00"
-* bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-02-RightBreastTangents
-InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
-Usage: #example
-* meta.versionId = "123"
-* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
+
+RuleSet: RadiotherapyTreatedPhase-XRTS-04-22A-01-02-RightBreastTang-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[fractionsDelivered].valueUnsignedInt = 3
-* extension[doseDeliveredToVolume][+]
-  * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-03-RightBreast)
-    * valueReference.display = "Right Breast"
-  * extension[totalDoseDelivered].valueQuantity.value = 900
 * identifier[+]
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
@@ -120,30 +163,33 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.02.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22A-01-02-RightBreastTangents)
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22A-01-02-RightBreastTang)
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V)
-* status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * performedPeriod.start = "2021-09-13T13:15:17+01:00"
-* performedPeriod.end = "2021-09-15T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
-Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-03-LeftBreastBoost
+Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-02-RightBreastTang
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
-* meta.versionId = "123"
-* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
+* insert RadiotherapyTreatedPhase-XRTS-04-22A-01-02-RightBreastTang-Common
+* meta.versionId = "3"
+* meta.lastUpdated = "2021-09-15T13:21:17+01:00"
+* extension[fractionsDelivered].valueUnsignedInt = 3
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-03-RightBreast)
+    * valueReference.display = "Right Breast"
+  * extension[totalDoseDelivered].valueQuantity.value = 900
+* status = #completed
+* performedPeriod.end = "2021-09-15T13:21:17+01:00"
+
+RuleSet: RadiotherapyTreatedPhase-XRTS-04-22A-01-03-LeftBreastBoost-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[fractionsDelivered].valueUnsignedInt = 4
-* extension[doseDeliveredToVolume][+]
-  * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
-    * valueReference.display = "Left Breast Boost"
-  * extension[totalDoseDelivered].valueQuantity.value = 800
 * identifier[+]
   * use = #usual
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
@@ -154,11 +200,27 @@ Usage: #example
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.03.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22A-01-03-LeftBreastBoost)
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V)
-* status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * performedPeriod.start = "2021-09-14T13:15:17+01:00"
-* performedPeriod.end = "2021-09-17T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+
+
+Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-03-LeftBreastBoost
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Usage: #example
+* insert RadiotherapyTreatedPhase-XRTS-04-22A-01-03-LeftBreastBoost-Common
+* meta.versionId = "4"
+* meta.lastUpdated = "2021-09-17T13:21:17+01:00"
+* extension[fractionsDelivered].valueUnsignedInt = 4
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
+    * valueReference.display = "Left Breast Boost"
+  * extension[totalDoseDelivered].valueQuantity.value = 800
+* status = #completed
+* performedPeriod.end = "2021-09-17T13:21:17+01:00"
+
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
@@ -215,7 +277,7 @@ Usage: #example
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-01-LeftBreastTangents
+Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-01-LeftBreastTang
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -253,7 +315,7 @@ Usage: #example
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-02-RightBreastTangents
+Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-02-RightBreastTang
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example

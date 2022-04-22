@@ -1,11 +1,6 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V
-InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex RTTD collection."
-Usage: #example
-* meta.versionId = "123"
-* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
+RuleSet: RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
 * extension[treatmentIntent]
@@ -17,13 +12,6 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[actualNumberOfSessions].valueUnsignedInt = 9
-* extension[doseDeliveredToVolume][+]
-  * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-02-22A-01-Prostate)
-    * valueReference.display = "Prostate"
-  * extension[totalDoseDelivered].valueQuantity.value = 1340
-  * extension[fractionsDelivered].valueUnsignedInt = 7
 * identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
@@ -33,31 +21,52 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.02.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-02-22A-01-Prostate-2P-1V)
-* status = #completed
 * subject = Reference(Patient-XRTS-02-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
-* performedPeriod.end = "2021-09-17T13:21:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 
-// --- Phase Summaries ---------------------------------------------------------------------------------
-
-Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary
-InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Instance: RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-1Fx
+InstanceOf: RadiotherapyCourseSummary
+Description: "Radiotherapy Course Summary example from Codex RTTD collection."
 Usage: #example
-* meta.versionId = "123"
-* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
-* meta.profile = Canonical(RadiotherapyTreatedPhase)
-* extension[modalityAndTechnique][+]
-  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[fractionsDelivered].valueUnsignedInt = 3
+* insert RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-Common
+* meta.versionId = "1"
+* meta.lastUpdated = "2021-09-06T13:21:17+01:00"
+* extension[actualNumberOfSessions].valueUnsignedInt = 1
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-22A-01-Prostate)
     * valueReference.display = "Prostate"
-  * extension[totalDoseDelivered].valueQuantity.value = 540
+  * extension[totalDoseDelivered].valueQuantity.value = 180
+  * extension[fractionsDelivered].valueUnsignedInt = 1
+* status = #in-progress
+* performedPeriod.end = "2021-09-06T13:21:17+01:00"
+
+Instance: RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V
+InstanceOf: RadiotherapyCourseSummary
+Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Usage: #example
+* insert RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-Common
+* meta.versionId = "9"
+* meta.lastUpdated = "2021-09-17T13:21:17+01:00"
+* extension[actualNumberOfSessions].valueUnsignedInt = 9
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-02-22A-01-Prostate)
+    * valueReference.display = "Prostate"
+  * extension[totalDoseDelivered].valueQuantity.value = 1340
+  * extension[fractionsDelivered].valueUnsignedInt = 7
+* status = #completed
+* performedPeriod.end = "2021-09-17T13:21:17+01:00"
+
+// --- Treated Phases ---------------------------------------------------------------------------------
+
+RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-Common
+* meta.profile = Canonical(RadiotherapyTreatedPhase)
+* extension[modalityAndTechnique][+]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
@@ -68,29 +77,48 @@ Usage: #example
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.02.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-02-22A-01-01-Primary)
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V)
-* status = #completed
 * subject = Reference(Patient-XRTS-02-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
-* performedPeriod.end = "2021-09-09T13:21:17+01:00"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-Boost
+Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
-* meta.versionId = "123"
-* meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
-* meta.profile = Canonical(RadiotherapyTreatedPhase)
-* extension[modalityAndTechnique][+]
-  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[fractionsDelivered].valueUnsignedInt = 4
+* insert RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-Common
+* meta.versionId = "1"
+* meta.lastUpdated = "2021-09-06T13:21:17+01:00"
+* extension[fractionsDelivered].valueUnsignedInt = 1
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-22A-01-Prostate)
     * valueReference.display = "Prostate"
-  * extension[totalDoseDelivered].valueQuantity.value = 800
+  * extension[totalDoseDelivered].valueQuantity.value = 180
+* status = #in-progress
+* performedPeriod.end = "2021-09-06T13:21:17+01:00"
+
+Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Usage: #example
+* insert RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-Common
+* meta.versionId = "4"
+* meta.lastUpdated = "2021-09-09T13:21:17+01:00"
+* extension[fractionsDelivered].valueUnsignedInt = 3
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-02-22A-01-Prostate)
+    * valueReference.display = "Prostate"
+  * extension[totalDoseDelivered].valueQuantity.value = 540
+* status = #completed
+* performedPeriod.end = "2021-09-09T13:21:17+01:00"
+
+RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-Boost-Common
+* meta.profile = Canonical(RadiotherapyTreatedPhase)
+* extension[modalityAndTechnique][+]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
@@ -101,13 +129,26 @@ Usage: #example
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.02.01.02.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-02-22A-01-02-Boost)
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V)
-* status = #completed
 * subject = Reference(Patient-XRTS-02-22A)
-* performedPeriod.start = "2021-09-13T13:15:17+01:00"
-* performedPeriod.end = "2021-09-17T13:21:17+01:00"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
+* performedPeriod.start = "2021-09-13T13:15:17+01:00"
 
+Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-Boost
+InstanceOf: RadiotherapyTreatedPhase
+Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Usage: #example
+* insert RadiotherapyTreatedPhase-XRTS-02-22A-01-02-Boost-Common
+* meta.versionId = "5"
+* meta.lastUpdated = "2021-09-17T13:21:17+01:00"
+* extension[fractionsDelivered].valueUnsignedInt = 4
+* extension[doseDeliveredToVolume][+]
+  * extension[volume]
+    * valueReference = Reference(RadiotherapyVolume-XRTS-02-22A-01-Prostate)
+    * valueReference.display = "Prostate"
+  * extension[totalDoseDelivered].valueQuantity.value = 800
+* status = #completed
+* performedPeriod.end = "2021-09-17T13:21:17+01:00"
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
