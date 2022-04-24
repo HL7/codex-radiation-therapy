@@ -9,9 +9,6 @@ RuleSet: RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[modalityAndTechnique][+]
-  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
@@ -50,6 +47,9 @@ Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-Common
 * meta.versionId = "9"
 * meta.lastUpdated = "2021-09-17T13:21:17+01:00"
+* extension[modalityAndTechnique][+]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 9
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
