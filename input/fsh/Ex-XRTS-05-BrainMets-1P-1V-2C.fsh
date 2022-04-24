@@ -82,7 +82,7 @@ InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-05-22A-02-BrainMets-1P-1V-Common
-* meta.versionId = "123"
+* meta.versionId = "5"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
@@ -140,7 +140,7 @@ InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-Common
-* meta.versionId = "5"
+* meta.versionId = "6"
 * meta.lastUpdated = "2020-09-14T13:21:17+01:00"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
