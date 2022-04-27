@@ -8,12 +8,10 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
 * meta.profile[+] = Canonical(RadiotherapyVolume)
 * meta.profile[+] = $mCODERadiotherapyVolume
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianDoseReferenceId
   * value = "PTV50" // display id
-* identifier[+]
-  * use = #official
+* identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151823" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
@@ -28,12 +26,10 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
 * meta.profile[+] = Canonical(RadiotherapyVolume)
 * meta.profile[+] = $mCODERadiotherapyVolume
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianDoseReferenceId
   * value = "PTV64" // display id
-* identifier[+]
-  * use = #official
+* identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151824" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
@@ -48,12 +44,10 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
 * meta.profile[+] = Canonical(RadiotherapyVolume)
 * meta.profile[+] = $mCODERadiotherapyVolume
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianDoseReferenceId
   * value = "Prostate" // display id
-* identifier[+]
-  * use = #official
+* identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151825" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
@@ -68,12 +62,10 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
 * meta.profile[+] = Canonical(RadiotherapyVolume)
 * meta.profile[+] = $mCODERadiotherapyVolume
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianDoseReferenceId
   * value = "Pelv Ns" // display id
-* identifier[+]
-  * use = #official
+* identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151826" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
@@ -88,12 +80,10 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
 * meta.profile[+] = Canonical(RadiotherapyVolume)
 * meta.profile[+] = $mCODERadiotherapyVolume
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianDoseReferenceId
   * value = "Sem Vs" // display id
-* identifier[+]
-  * use = #official
+* identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151827" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
