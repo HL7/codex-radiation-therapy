@@ -264,12 +264,10 @@ Usage: #example
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyVolume)
 * meta.profile[+] = $mCODERadiotherapyVolume
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianDoseReferenceId
   * value = "Prostate" // display id
-* identifier[+]
-  * use = #official
+* identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.02.01.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
