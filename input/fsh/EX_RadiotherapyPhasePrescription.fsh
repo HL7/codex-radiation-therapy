@@ -34,8 +34,8 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
-* basedOn = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
-  * display = "Prostate-2Phases"
+* basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
+* basedOn[=].display = "Prostate-2Phases"
 //* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
 * subject = Reference(Patient-6)
@@ -84,8 +84,8 @@ Usage: #example
 * identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
-* basedOn = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
-* basedOn.display =  "Prostate-2Phases"
+* basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
+* basedOn[=].display =  "Prostate-2Phases"
 //* replaces = Reference(RadiotherapyPhasePrescription-0) //Previous retired PhasePrescription that is replaced by this PhasePrescription
 * status = #active
 * subject = Reference(Patient-6)

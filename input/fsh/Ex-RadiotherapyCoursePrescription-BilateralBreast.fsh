@@ -48,11 +48,11 @@ Usage: #example
 
 // --- Phase Prescriptions ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents
+Instance: RadiotherapyPhasePrescription-101-RTTD-LeftBreastTang
 InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
-// * id = "RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents" //id of the FHIR Resource
+// * id = "RadiotherapyPhasePrescription-101-RTTD-LeftBreastTang" //id of the FHIR Resource
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
@@ -73,7 +73,7 @@ Usage: #example
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Left Breast Tangents"
-* identifier[1]
+* identifier[+]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.333.101"
 * basedOn = Reference(RadiotherapyCoursePrescription-101-RTTD-BilateralBreast)
@@ -112,7 +112,7 @@ Usage: #example
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
-Instance: RadiotherapyPhasePrescription-103-RTTD-RightBreastTangents
+Instance: RadiotherapyPhasePrescription-103-RTTD-RightBreastTang
 InstanceOf: RadiotherapyPhasePrescription
 Description: "Radiotherapy Phase Prescription example from Codex RTTD collection."
 Usage: #example
@@ -171,7 +171,7 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[totalDoseDelivered].valueQuantity.value = 5000
   * extension[fractionsDelivered].valueUnsignedInt = 25
-* identifier
+* identifier[+]
   * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
   * system = VarianRadiotherapyCourseId
   * value = "Bilateral Breast"
@@ -184,13 +184,13 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-101-Breast)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
-// --- Phase Summaries ---------------------------------------------------------------------------------
+// --- Treated Phases ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyTreatedPhase-101-LeftBreastTangents
+Instance: RadiotherapyTreatedPhase-101-LeftBreastTang
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
-// * id = "RadiotherapyTreatedPhase-101-LeftBreastTangents" //id of the FHIR Resource
+// * id = "RadiotherapyTreatedPhase-101-LeftBreastTang" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
@@ -210,7 +210,7 @@ Usage: #example
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Left Breast Tangents"
-* basedOn = Reference(RadiotherapyPhasePrescription-101-RTTD-LeftBreastTangents)
+* basedOn = Reference(RadiotherapyPhasePrescription-101-RTTD-LeftBreastTang)
 * partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
 * status = #completed
 * subject = Reference(Patient-101)
@@ -247,11 +247,11 @@ Usage: #example
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 
-Instance: RadiotherapyTreatedPhase-103-RightBreastTangents
+Instance: RadiotherapyTreatedPhase-103-RightBreastTang
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
-// * id = "RadiotherapyTreatedPhase-103-RightBreastTangents" //id of the FHIR Resource
+// * id = "RadiotherapyTreatedPhase-103-RightBreastTang" //id of the FHIR Resource
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
@@ -266,7 +266,7 @@ Usage: #example
   * use = #usual
   * system = VarianRadiotherapyPhaseId
   * value = "Right Breast Tangents"
-* basedOn = Reference(RadiotherapyPhasePrescription-103-RTTD-RightBreastTangents)
+* basedOn = Reference(RadiotherapyPhasePrescription-103-RTTD-RightBreastTang)
 * partOf = Reference(RadiotherapyCourseSummary-101-RTTD-BilateralBreast)
 * status = #completed
 * subject = Reference(Patient-101)
@@ -292,7 +292,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.101" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.101" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
@@ -315,7 +315,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.102" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.102" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#7771000 "Left (qualifier value)"
@@ -338,7 +338,7 @@ Usage: #example
 * identifier[+]
   * use = #official
   * system = DICOMUID
-  * value = "urn:oid:1.2.246.352.71.10.842421386418.21321.20150602151.103" // DICOM UID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.103" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#24028007 "Right (qualifier value)"
