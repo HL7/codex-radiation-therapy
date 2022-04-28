@@ -1,7 +1,16 @@
 ### Background
-Intro to use case.
+The CodeX Radiation Therapy (RT) Implementation Guide (IG) describes how to represent, model, and exchange radiation therapy information that is generated during a patient's radiation therapy planning and treatment. This FHIR IG is intended for any individual involved in a patient's journey that would directly benefit from receiving radiation therapy information. The CodeX RT IG includes several radiotherapy profiles, based on existing FHIR resources, to represent the necessary radiation therapy concepts associated with patients' RT treatment. The goal is to capture all relevant information throughout the treatment process and make this information available for data sharing and reuse.
 
-Need CODEX Boilerplate.
+The CodeX RT IG leverages FHIR and FHIR APIs to promote interoperable exchange of RT information between a radiation oncology information system (ROIS) and another information system - either an ROIS or an electronic health record (EHR) used at a health site. The CodeX RT IG has defined radiotherapy FHIR profiles for vendors to implement in their systems and share, via FHIR API, with other FHIR-enabled radiation oncology information systems or EHRs. Details about the radiotherapy FHIR profiles are available in the mCODE STU 2 and CodeX RT IGs.
+
+The CodeX RT IG requirements are, in part, taken from:
+* Integrating the Healthcare Enterprise – Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Work Group
+* IHE SNOMED CT Set (https://wiki.ihe.net/index.php/SNOMED_CT_IHE_Set)
+* Global Patient Set (the superset). The project's intention is to include values from the IHE SNOMED CT Set into the SNOMED GPS
+
+The CodeX RT IG is also receiving content input from:
+* mCODE IG (STU 2)
+* Operational Ontology for Radiation Oncology (OORO): https://aapmbdsc.azurewebsites.net/Home/About
 
 ### Overview
 
