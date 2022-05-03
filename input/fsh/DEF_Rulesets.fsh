@@ -7,7 +7,8 @@ RuleSet: RadiotherapyRequestCommon
     $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS
+    RadiotherapyTreatmentDevice named RadiotherapyTreatmentDevice 0..* MS and
+    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * identifier MS
 * identifier.system MS
 * identifier.value 1..1 MS
@@ -95,7 +96,8 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
     $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS
+    RadiotherapyTreatmentDevice named RadiotherapyTreatmentDevice 0..* MS and
+    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * basedOn MS

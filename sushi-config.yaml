@@ -122,12 +122,15 @@ groups:
     description: Extensions.
     resources:
     - StructureDefinition/codexrt-radiotherapy-energy-or-isotope
-    - StructureDefinition/codexrt-radiotherapy-fractions-prescribed
-    - StructureDefinition/codexrt-radiotherapy-treatment-device-type
-    - StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume
     - StructureDefinition/codexrt-radiotherapy-fractions-delivered
-    - StructureDefinition/codexrt-radiotherapy-dose-prescribed-to-volume
     - StructureDefinition/codexrt-radiotherapy-fractions-planned
+    - StructureDefinition/codexrt-radiotherapy-fractions-prescribed
+    - StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume
+    - StructureDefinition/codexrt-radiotherapy-dose-prescribed-to-volume
+    - StructureDefinition/codexrt-radiotheraphy-treatment-device-manufacturer
+    - StructureDefinition/codexrt-radiotheraphy-treatment-applicator-type
+    - StructureDefinition/codexrt-dicom-reference
+
   CodeSystems:
     name: CodeSystems
     description: Code Systems.

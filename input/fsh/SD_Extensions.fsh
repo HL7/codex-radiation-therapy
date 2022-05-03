@@ -3,18 +3,6 @@ RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
 
-<<<<<<< HEAD
-Extension: RadiotherapyTreatmentDeviceType
-Id: codexrt-radiotherapy-treatment-device-type
-Title: "Type of Treatment Device"
-Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device.
-Device instances are not specified here. Those are represented by resources of type Device."
-* . ^short = "Type of Treatment Device"
-* value[x] ^short = "Type of Treatment Device"
-* value[x] only CodeableConcept
-=======
->>>>>>> 3160810 (prototype of device and applicator)
-
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
 Title: "Number of Prescribed Fractions"
@@ -155,13 +143,6 @@ Description: "A Reference to a DICOM SOP Instance."
   * value[x] 1..1
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
-
-Extension: RadiotherapyFractionsDelivered
-Id: codexrt-radiotherapy-fractions-delivered
-Title: "Radiotherapy Fractions Delivered"
-Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
-* value[x] only unsignedInt
-* value[x] 1..1
 
 
 
