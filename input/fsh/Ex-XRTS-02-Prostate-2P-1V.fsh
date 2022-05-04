@@ -114,7 +114,7 @@ Usage: #example
 * status = #completed
 * performedPeriod.end = "2021-09-09T13:21:17+01:00"
 
-RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-Boost-Common
+RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
@@ -122,23 +122,23 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-Boost-Common
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
-  * value = "Boost"
+  * value = "PlanChange"
 * identifier[+]
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.02.01.02.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-02-22A-01-02-Boost)
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-02-22A-01-02-PlanChange)
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V)
 * subject = Reference(Patient-XRTS-02-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 * performedPeriod.start = "2021-09-13T13:15:17+01:00"
 
-Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-Boost
+Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
-* insert RadiotherapyTreatedPhase-XRTS-02-22A-01-02-Boost-Common
+* insert RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange-Common
 * meta.versionId = "5"
 * meta.lastUpdated = "2021-09-17T13:21:17+01:00"
 * extension[fractionsDelivered].valueUnsignedInt = 4
@@ -222,7 +222,7 @@ Usage: #example
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
 
-Instance: RadiotherapyPlannedPhase-XRTS-02-22A-01-02-Boost
+Instance: RadiotherapyPlannedPhase-XRTS-02-22A-01-02-PlanChange
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
 Usage: #example
@@ -242,7 +242,7 @@ Usage: #example
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
-  * value = "Boost"
+  * value = "PlanChange"
 * identifier[+]
   * use = #official
   * system = DICOMUID
