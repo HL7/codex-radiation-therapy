@@ -44,7 +44,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
-  * extension[totalDoseDelivered].valueQuantity.value = 400
+  * extension[totalDoseDelivered].valueQuantity.value = 300
   * extension[fractionsDelivered].valueUnsignedInt = 1
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
@@ -72,7 +72,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
-  * extension[totalDoseDelivered].valueQuantity.value = 2000
+  * extension[totalDoseDelivered].valueQuantity.value = 1700
   * extension[fractionsDelivered].valueUnsignedInt = 7
 // Target Site "Right Breast"
 * extension[doseDeliveredToVolume][+]
@@ -124,7 +124,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
-  * extension[totalDoseDelivered].valueQuantity.value = 400
+  * extension[totalDoseDelivered].valueQuantity.value = 300
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
@@ -145,7 +145,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
-  * extension[totalDoseDelivered].valueQuantity.value = 1200
+  * extension[totalDoseDelivered].valueQuantity.value = 900
 * status = #completed
 * performedPeriod.end = "2021-09-08T13:21:17+01:00"
 
@@ -253,7 +253,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
-  * extension[totalDose].valueQuantity.value = 2000
+  * extension[totalDose].valueQuantity.value = 1700
   * extension[fractions].valuePositiveInt = 7
 // Target Site "Right Breast"
 * extension[radiotherapy-dose-planned-to-volume][+]
@@ -298,8 +298,8 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
-  * extension[fractionDose].valueQuantity.value = 400
-  * extension[totalDose].valueQuantity.value = 1200
+  * extension[fractionDose].valueQuantity.value = 300
+  * extension[totalDose].valueQuantity.value = 900
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
