@@ -3,15 +3,6 @@ RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
 
-Extension: RadiotherapyTreatmentDeviceType
-Id: codexrt-radiotherapy-treatment-device-type
-Title: "Type of Treatment Device"
-Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device.
-Device instances are not specified here. Those are represented by resources of type Device."
-* . ^short = "Type of Treatment Device"
-* value[x] ^short = "Type of Treatment Device"
-* value[x] only CodeableConcept
-
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
 Title: "Number of Prescribed Fractions"
@@ -152,3 +143,83 @@ Description: "A Reference to a DICOM SOP Instance."
   * value[x] 1..1
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
+
+
+
+Extension: RadiotherapyTreatmentDeviceType
+Id: codexrt-radiotheraphy-treatment-device-type
+Title: "Type of Treatment Device"
+Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device.
+Device instances are not specified here. Those are represented by resources of type Device."
+* . ^short = "Type of Treatment Device"
+* value[x] ^short = "Type of Treatment Device"
+* value[x] only CodeableConcept
+
+Extension: RadiotherapyTreatmentDevice
+Id: codexrt-radiotheraphy-treatment-device
+Title: "Treatment Device"
+Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
+Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
+* . ^short = "Treatment Device"
+* value[x] 0..0
+* extension contains
+  RadiotherapyTreatmentDeviceManufacturer named manufacturer 1..1 and
+  RadiotherapyTreatmentDeviceModel named model 1..1
+
+Extension: RadiotherapyTreatmentDeviceManufacturer
+Id: codexrt-radiotheraphy-treatment-device-manufacturer
+Title: "Treatment Device Manufacturer"
+Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
+Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
+* . ^short = "Treatment Device Manufacturer"
+* value[x] ^short = "Treatment Device Manufacturer"
+* value[x] only string
+
+Extension: RadiotherapyTreatmentDeviceModel
+Id: codexrt-radiotheraphy-treatment-device-model
+Title: "Treatment Device Model"
+Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
+Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
+* . ^short = "Treatment Device Model"
+* value[x] ^short = "Treatment Device Model"
+* value[x] only string
+
+Extension: RadiotherapyTreatmentApplicatorType
+Id: codexrt-radiotheraphy-treatment-applicator-type
+Title: "Radiotherapy Treatment Applicator Type"
+Description: "Radiotherapy Treatment Applicator Type."
+* . ^short = "Radiotherapy Treatment Applicator Type"
+* value[x] ^short = "Radiotherapy Treatment Applicator Type"
+* value[x] only CodeableConcept
+* value[x] from ApplicatorTypesVS (extensible)
+
+ValueSet: RadiotherapyTreatmentDeviceTypeVS
+Id: codex-radiotherapy-treatment-device-types-vs
+Title: "Radiotherapy Treatment Device Type"
+Description: "Radiotherapy Treatment Device Type"
+* SCT#228768005 "Seeds source (physical object)"
+* SnomedRequestedCS#seedsonstrand "Seeds on Strand"
+* SnomedRequestedCS#seedsonmesh "Seeds on Mesh"
+* SnomedRequestedCS#afterloader "Brachy Afterloader"
+
+
+ValueSet: ApplicatorTypesVS
+Id: codex-radiotherapy-applicator-types-vs
+Title: "Brachytherapy Applicator Types"
+Description: "Applicator Types Used in Brachytherapy"
+* codes from system ApplicatorTypesCS
+* SCT#19923001 "Catheter, device (physical object)"
+* SCT#228771002 "Needles source (physical object)"
+* SCT#228778008 "Plaque source (physical object)"
+* SCT#228768005 "Seeds source (physical object)"
+
+CodeSystem: ApplicatorTypesCS
+Id: codex-radiotherapy-applicator-types-cs
+Title: "Brachytherapy Applicator Types"
+Description: "Brachytherapy Applicator Types  -- need to request codes"
+* ^status = #draft
+* ^caseSensitive = true
+* #ring	"Ring, device (physical object)" 	"new concept under 228766009 |Form of brachytherapy source (physical object)"
+* #tandem "Tandem, device (physical object)" "(small metal tube)  new code child of 228775006 |Tubes source (physical object)."
+* #ovoid 	"Ovoid, device (physical object)" 	"(round hollow metal holders that are placed adjacent to cervix) new concept under 228766009 |Form of brachytherapy source (physical object)|"
+* #cylinder  "Vaginal Cylinder, device (physical object)" "A vaginal cylinder is made of plastic and looks like a large tampon with a hollow center. It is placed into the vagina and may be kept in place with gauze, balloons, or a special undergarment.  )  define a new concept under 228766009 |Form of brachytherapy source (physical object)| ."

@@ -8,7 +8,8 @@ Whenever new contributions in the scope of the same Course are delivered, this r
 * obeys codexrt-procedure-status
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDeviceType named radiotherapyTreatmentDeviceType 0..* MS
+    RadiotherapyTreatmentDevice named RadiotherapyTreatmentDevice 0..* MS and
+    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * basedOn MS
 * basedOn ^short = "Should Reference a RadiotherapyPlannedCourse" //and/or prescription? only Reference(RadiotherapyCoursePrescription)
 
