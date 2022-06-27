@@ -25,7 +25,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example."
+Description: "Radiotherapy Course Summary example, test case XRTS-05, Course 1 after 1 Fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-Common
 * meta.versionId = "1"
@@ -42,7 +42,7 @@ Usage: #example
 
 Instance: RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example."
+Description: "Radiotherapy Course Summary example, test case XRTS-05, Course 1 completely treated."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-Common
 * meta.versionId = "6"
@@ -79,7 +79,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-05-22A-02-BrainMets-1P-1V-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-05-22A-02-BrainMets-1P-1V
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example."
+Description: "Radiotherapy Course Summary example, test case XRTS-05, Course 2 completely treated."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-05-22A-02-BrainMets-1P-1V-Common
 * meta.versionId = "5"
@@ -121,7 +121,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-Common
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-05, Course 1, Phase 1 after 1 Fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-Common
 * meta.versionId = "1"
@@ -137,7 +137,7 @@ Usage: #example
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-05, Course 1, Phase 1 completely treated."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-Common
 * meta.versionId = "6"
@@ -173,7 +173,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22A-02-01-Primary-Common
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22A-02-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-05, Course 2, Phase 1 completely treated."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-05-22A-02-01-Primary-Common
 * meta.versionId = "5"
@@ -191,7 +191,7 @@ Usage: #example
 
 Instance: RadiotherapyPlannedCourse-XRTS-05-22A-01-BrainMets-1P-1V
 InstanceOf: RadiotherapyPlannedCourse
-Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Description: "Radiotherapy Planned Course example from Codex XRTS collection, test case XRTS-05, Course 1."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -224,7 +224,7 @@ Usage: #example
 
 Instance: RadiotherapyPlannedCourse-XRTS-05-22A-02-BrainMets-1P-1V
 InstanceOf: RadiotherapyPlannedCourse
-Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Description: "Radiotherapy Planned Course example from Codex XRTS collection, test case XRTS-05, Course 2."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -259,7 +259,7 @@ Usage: #example
 
 Instance: RadiotherapyPlannedPhase-XRTS-05-22A-01-01-Primary
 InstanceOf: RadiotherapyPlannedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Planned Phase example from Codex XRTS collection, test case XRTS-05, Course 1, Phase 1."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -291,7 +291,7 @@ Usage: #example
 
 Instance: RadiotherapyPlannedPhase-XRTS-05-22A-02-01-Primary
 InstanceOf: RadiotherapyPlannedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Planned Phase example from Codex XRTS collection, test case XRTS-05, Course 2, Phase 1."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -325,7 +325,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-05-22A-01-BrainMets
 InstanceOf: RadiotherapyVolume
-Description: "Target Volume."
+Description: "Example Target Volume XRTS-05 'Brain Mets' Course 1."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -344,7 +344,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-05-22A-02-BrainMets
 InstanceOf: RadiotherapyVolume
-Description: "Target Volume. Same label as Brain Mets in first Course, but conceptually a different Volume. Dose is not added up."
+Description: "Example Target Volume XRTS-05 'Brain Mets' Course 2. Same label as Brain Mets in first Course, but conceptually a different Volume. Dose is not added up."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-22T10:07:41.050+02:00"
@@ -366,7 +366,7 @@ Usage: #example
 Instance:   Patient-XRTS-05-22A
 InstanceOf: $mCODECancerPatient
 Title: "Example XRTS Patient"
-Description: "An example patient to relate Radiotherapy resources to."
+Description: "An example patient, test case XRTS-05."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"

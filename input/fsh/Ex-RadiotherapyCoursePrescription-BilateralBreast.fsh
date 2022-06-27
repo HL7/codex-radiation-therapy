@@ -143,7 +143,7 @@ Usage: #example
 
 Instance: RadiotherapyCourseSummary-101-RTTD-BilateralBreast
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Description: "Radiotherapy Course Summary example from Codex RTTD collection, 'Bilateral Breast'."
 Usage: #example
 // * id = "RadiotherapyCourseSummary-101-BilateralBreast" //id of the FHIR Resource
 * meta.versionId = "1233456"
@@ -249,7 +249,7 @@ Usage: #example
 
 Instance: RadiotherapyTreatedPhase-103-RightBreastTang
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Treated Phase example from Codex RTTDcollection."
 Usage: #example
 // * id = "RadiotherapyTreatedPhase-103-RightBreastTang" //id of the FHIR Resource
 * meta.versionId = "1233456"
@@ -278,7 +278,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-101-LeftBreast
 InstanceOf: RadiotherapyVolume
-Description: "Target Volume."
+Description: "Example Target Volume 'Left Breast'."
 Usage: #example
 * id = "RadiotherapyVolume-101-LeftBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -299,7 +299,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-102-LeftBreastBoost
 InstanceOf: RadiotherapyVolume
-Description: "Target Volume."
+Description: "Example Target Volume 'Left Breast Boost'."
 Usage: #example
 * id = "RadiotherapyVolume-102-LeftBreastBoost" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -320,7 +320,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-103-RightBreast
 InstanceOf: RadiotherapyVolume
-Description: "Target Volume."
+Description: "Example Target Volume 'Right Breast'."
 Usage: #example
 * id = "RadiotherapyVolume-103-RightBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -344,7 +344,7 @@ Usage: #example
 Instance:   Patient-101
 InstanceOf: Patient
 Title: "Example Female Patient"
-Description: "An example patient to relate Radiotherapy resources to."
+Description: "An example female patient to relate Radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
 * identifier[+]
@@ -376,7 +376,7 @@ Usage: #example
 Instance: Diagnosis-101-Breast
 InstanceOf: Condition
 Title: "Example Diagnosis"
-Description: "An example patient to relate Radiotherapy resources to."
+Description: "An example diagnosis for a breast case for Patient-101."
 Usage: #example
 * id = "Diagnosis-101-Breast"
 * meta.security = ActReason#HTEST
