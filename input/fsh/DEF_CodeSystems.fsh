@@ -5,9 +5,9 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * ^caseSensitive = true
 * #USCRS-33527  "Radiotherapy Treatment Phase (therapy/regime)"
 * #USCRS-33951  "Radiotherapy Treatment Plan (therapy/regime)"
-* #seedsonstrand "Seeds on Strand"
-* #seedsonmesh "Seeds on Mesh"
-* #afterloader "Brachy Afterloader"
+// * #seedsonstrand "Seeds on Strand"
+// * #seedsonmesh "Seeds on Mesh"
+// * #afterloader "Brachy Afterloader"
 
 ValueSet: RadiotherapyRequest
 Id: radiotherapy-request

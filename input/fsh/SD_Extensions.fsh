@@ -144,17 +144,6 @@ Description: "A Reference to a DICOM SOP Instance."
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
 
-
-
-Extension: RadiotherapyTreatmentDeviceType
-Id: codexrt-radiotheraphy-treatment-device-type
-Title: "Type of Treatment Device"
-Description: "The type of device used for delivering the Radiotherapy. This can be a type of treatment machine or auxiliary device, for example a positioning device.
-Device instances are not specified here. Those are represented by resources of type Device."
-* . ^short = "Type of Treatment Device"
-* value[x] ^short = "Type of Treatment Device"
-* value[x] only CodeableConcept
-
 Extension: RadiotherapyTreatmentDevice
 Id: codexrt-radiotheraphy-treatment-device
 Title: "Treatment Device"
@@ -193,15 +182,14 @@ Description: "Radiotherapy Treatment Applicator Type."
 * value[x] only CodeableConcept
 * value[x] from ApplicatorTypesVS (extensible)
 
-ValueSet: RadiotherapyTreatmentDeviceTypeVS
-Id: codex-radiotherapy-treatment-device-types-vs
-Title: "Radiotherapy Treatment Device Type"
-Description: "Radiotherapy Treatment Device Type"
-* SCT#228768005 "Seeds source (physical object)"
-* SnomedRequestedCS#seedsonstrand "Seeds on Strand"
-* SnomedRequestedCS#seedsonmesh "Seeds on Mesh"
-* SnomedRequestedCS#afterloader "Brachy Afterloader"
-
+// ValueSet: RadiotherapyTreatmentDeviceTypeVS
+// Id: codex-radiotherapy-treatment-device-types-vs
+// Title: "Radiotherapy Treatment Device Type"
+// Description: "Radiotherapy Treatment Device Type"
+// * SCT#228768005 "Seeds source (physical object)"
+// * SnomedRequestedCS#seedsonstrand "Seeds on Strand"
+// * SnomedRequestedCS#seedsonmesh "Seeds on Mesh"
+// * SnomedRequestedCS#afterloader "Brachy Afterloader"
 
 ValueSet: ApplicatorTypesVS
 Id: codex-radiotherapy-applicator-types-vs
