@@ -25,7 +25,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-02 after 1 Fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-Common
 * meta.versionId = "1"
@@ -42,7 +42,7 @@ Usage: #example
 
 Instance: RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-02 completely treated."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-Common
 * meta.versionId = "9"
@@ -84,7 +84,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-Common
 
 Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-02, Phase 1 after 1 Fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-Common
 * meta.versionId = "1"
@@ -100,7 +100,7 @@ Usage: #example
 
 Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-02, Phase 1 completely treated."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-Common
 * meta.versionId = "4"
@@ -136,7 +136,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange-Common
 
 Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-02, Phase 2 completely treated."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange-Common
 * meta.versionId = "5"
@@ -154,7 +154,7 @@ Usage: #example
 
 Instance: RadiotherapyPlannedCourse-XRTS-02-22A-01-Prostate-2P-1V
 InstanceOf: RadiotherapyPlannedCourse
-Description: "Radiotherapy Course Summary example from Codex RTTD collection."
+Description: "Radiotherapy Planned Course example from Codex XRTS collection, test case XRTS-02."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -192,7 +192,7 @@ Usage: #example
 
 Instance: RadiotherapyPlannedPhase-XRTS-02-22A-01-01-Primary
 InstanceOf: RadiotherapyPlannedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Planned Phase example from Codex XRTS collection, test case XRTS-02, Phase 1."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -224,7 +224,7 @@ Usage: #example
 
 Instance: RadiotherapyPlannedPhase-XRTS-02-22A-01-02-PlanChange
 InstanceOf: RadiotherapyPlannedPhase
-Description: "Radiotherapy Treated Phase example from Codex RTTD collection."
+Description: "Radiotherapy Planned Phase example from Codex XRTS collection, test case XRTS-02, Phase 2."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -258,7 +258,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-02-22A-01-Prostate
 InstanceOf: RadiotherapyVolume
-Description: "Target Volume."
+Description: "Example Target Volume XRTS-02 'Prostate'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -280,7 +280,7 @@ Usage: #example
 Instance:   Patient-XRTS-02-22A
 InstanceOf: $mCODECancerPatient
 Title: "Example XRTS Patient"
-Description: "An example patient to relate Radiotherapy resources to."
+Description: "An example patient, test case XRTS-02."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"

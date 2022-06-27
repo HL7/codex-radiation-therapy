@@ -7,7 +7,6 @@
 [CodexrtRadiotherapyEnergyOrIsotope]: StructureDefinition-codexrt-radiotherapy-energy-or-isotope.html
 [CodexrtRadiotherapyFractionsDelivered]: StructureDefinition-codexrt-radiotherapy-fractions-delivered.html
 [CodexrtRadiotherapyFractionsPrescribed]: StructureDefinition-codexrt-radiotherapy-fractions-prescribed.html
-[CodexrtRadiotherapyTreatmentDeviceType]: StructureDefinition-codexrt-radiotherapy-treatment-device-type.html
 [RadiotherapyRequest]: ValueSet-radiotherapy-request.html
 [RadiotherapyRequest]: CodeSystem-radiotherapy-request.html
 [SnomedRequestedCs]: CodeSystem-snomed-requested-cs.html

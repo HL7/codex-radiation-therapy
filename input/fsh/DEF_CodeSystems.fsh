@@ -5,23 +5,23 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * ^caseSensitive = true
 * #USCRS-33527  "Radiotherapy Treatment Phase (therapy/regime)"
 * #USCRS-33951  "Radiotherapy Treatment Plan (therapy/regime)"
-* #seedsonstrand "Seeds on Strand"
-* #seedsonmesh "Seeds on Mesh"
-* #afterloader "Brachy Afterloader"
+// * #seedsonstrand "Seeds on Strand"
+// * #seedsonmesh "Seeds on Mesh"
+// * #afterloader "Brachy Afterloader"
 
-ValueSet: RadiotherapyRequest
-Id: radiotherapy-request
-Title: "Radiotherapy Request"
-Description: "Codes to specify which kind of Radiotherapy request is covered by a request resource."
-* ^status = #draft
-* codes from system RadiotherapyRequest
+// ValueSet: RadiotherapyRequest
+// Id: radiotherapy-request
+// Title: "Radiotherapy Request"
+// Description: "Codes to specify which kind of Radiotherapy request is covered by a request resource."
+// * ^status = #draft
+// * codes from system RadiotherapyRequest
 
-CodeSystem: RadiotherapyRequest
-Id: radiotherapy-request
-Title: "Radiotherapy Request"
-Description: "Specifies which kind of Radiotherapy request is covered by a request resource."
-* ^status = #draft
-* ^caseSensitive = true
+// CodeSystem: RadiotherapyRequest
+// Id: radiotherapy-request
+// Title: "Radiotherapy Request"
+// Description: "Specifies which kind of Radiotherapy request is covered by a request resource."
+// * ^status = #draft
+// * ^caseSensitive = true
 //* #radiotherapy-course-prescription	"Radiotherapy Course Prescription" 	"Identifies a ServiceRequest resource for prescribing complete Course of Radiotherapy treatment."
 //* #radiotherapy-phase-prescription "Radiotherapy Phase Prescription" "Identifies a ServiceRequest resource for prescribing a Phase of radiotherapy treatment."
 //* #radiotherapy-plan-prescription "Radiotherapy Plan Prescription" "Identifies a ServiceRequest resource for prescribing a treatment with single Radiotherapy Treatment Plan."
@@ -32,20 +32,20 @@ Description: "Specifies which kind of Radiotherapy request is covered by a reque
 //* #radiotherapy-treatment-phase	"Radiotherapy Treatment Phase" 	"Identifies a ServiceRequest or Procedure resource for one Radiotherapy Treatment Phase."
 //* #radiotherapy-QA-plan	"Radiotherapy QA Plan" 	"Identifies a ServiceRequest resource for one Radiotherapy QA Plan."
 
-ValueSet: RadiotherapyProcedure
-Id: radiotherapy-procedure
-Title: "Radiotherapy Procedure"
-Description: "Codes to specify which kind of Radiotherapy procedure is covered by a Procedure resource."
-* ^status = #draft
-* codes from system RadiotherapyProcedure
+// ValueSet: RadiotherapyProcedure
+// Id: radiotherapy-procedure
+// Title: "Radiotherapy Procedure"
+// Description: "Codes to specify which kind of Radiotherapy procedure is covered by a Procedure resource."
+// * ^status = #draft
+// * codes from system RadiotherapyProcedure
 
-CodeSystem: RadiotherapyProcedure
-Id: radiotherapy-procedure
-Title: "Radiotherapy Procedure"
-Description: "Specifies which kind of Radiotherapy procedure is covered by a Procedure resource."
-* ^status = #draft
-* ^caseSensitive = true
-* #radiotherapy-treated-plan	"Treated Radiotherapy Treatment Plan" 	"Identifies a Procedure that decribes the treamtent delivery of one Radiotherapy Treatment Plan."
+// CodeSystem: RadiotherapyProcedure
+// Id: radiotherapy-procedure
+// Title: "Radiotherapy Procedure"
+// Description: "Specifies which kind of Radiotherapy procedure is covered by a Procedure resource."
+// * ^status = #draft
+// * ^caseSensitive = true
+// * #radiotherapy-treated-plan	"Treated Radiotherapy Treatment Plan" 	"Identifies a Procedure that decribes the treamtent delivery of one Radiotherapy Treatment Plan."
 
 
 ValueSet: RadiotherapyEnergyUnits

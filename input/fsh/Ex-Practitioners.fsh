@@ -1,7 +1,7 @@
 Instance:   Practitioner-1005
 InstanceOf: Practitioner
 Title: "Example Practitioner"
-Description: "An example patient to relate Radiotherapy resources to."
+Description: "An example practitioner to relate Radiotherapy resources to."
 Usage: #example
 * id = "Practitioner-1005"
 * meta.security = ActReason#HTEST
