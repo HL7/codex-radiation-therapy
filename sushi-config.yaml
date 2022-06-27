@@ -76,9 +76,9 @@ menu:
     Terminology: terminology.html
   FHIR Artifacts:
     Profiles: artifacts.html#a-course-level-profiles
-    Extensions: artifacts.html#extensions
-    Value Sets: artifacts.html#valuesets
-    Code Systems: artifacts.html#codesystems
+    Extensions: artifacts.html#structures-extension-definitions
+    Value Sets: artifacts.html#terminology-value-sets
+    Code Systems: artifacts.html#terminology-code-systems
     Examples: artifacts.html#example-example-instances
     Capability Statements: capabilitystatements.html
     Complete Listing: artifacts.html
