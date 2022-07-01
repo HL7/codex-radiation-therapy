@@ -1,4 +1,15 @@
 
+### Actors and Use Cases
+
+The CodeX Radiation Therapy (RT) Implementation Guide (IG) describes how to represent, model, and exchange radiation therapy information that is generated during a patient's radiation therapy, including prescription, planning and treatment. This FHIR IG is intended for any individual or system involved in a patient's journey that would directly benefit from receiving radiation therapy information.  The intended actors include:
+* Patients
+* Radiation Oncology Providers
+* Other Medical Providers
+
+The intended use cases include:
+* Prescribing, Elaborating and Managing Radiation Therapy Treatment
+* Documenting Delivered Radiation Therapy Treatment
+
 ### Resource Profiles
 
 The following figure shows the main entities modelled in the scope of this IG for exchanging Radiotherapy Summary information between RT Systems and Hospital Information Systems.
