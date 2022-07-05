@@ -55,7 +55,8 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * insert RadiotherapyPlansCommon
 * extension contains
     RadiotherapyFractionsPlanned named radiotherapy-fractions-planned 1..1 MS and
-    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS
+    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS and
+    RadiotherapyReasonForRevision named radiotherapy-reason-for-revision 0..1 MS
 * extension[radiotherapy-dose-planned-to-volume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
@@ -73,7 +74,8 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
 * extension contains
     RadiotherapyFractionsPrescribed named radiotherapy-fractions-prescribed 1..1 MS and
-    RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS
+    RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS and
+    RadiotherapyReasonForRevision named radiotherapy-reason-for-revision 0..1 MS
 * extension[radiotherapy-dose-prescribed-to-volume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions."

@@ -211,3 +211,35 @@ Description: "Brachytherapy Applicator Types  -- need to request codes"
 * #tandem "Tandem, device (physical object)" "(small metal tube)  new code child of 228775006 |Tubes source (physical object)."
 * #ovoid 	"Ovoid, device (physical object)" 	"(round hollow metal holders that are placed adjacent to cervix) new concept under 228766009 |Form of brachytherapy source (physical object)|"
 * #cylinder  "Vaginal Cylinder, device (physical object)" "A vaginal cylinder is made of plastic and looks like a large tampon with a hollow center. It is placed into the vagina and may be kept in place with gauze, balloons, or a special undergarment.  )  define a new concept under 228766009 |Form of brachytherapy source (physical object)| ."
+
+
+
+
+Extension: RadiotherapyReasonForRevision
+Id: codexrt-radiotheraphy-reason-for-revision
+Title: "Reason for Revision"
+Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
+* . ^short = "Reason for Revision"
+* value[x] ^short = "Reason for Revision"
+* value[x] only CodeableConcept
+* value[x] from ReasonForRevisionVS (required)
+
+ValueSet: ReasonForRevisionVS
+Id: codex-radiotherapy-reason-for-revision-vs
+Title: "Reason for Revision Value Set"
+Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
+* codes from system ReasonForRevisionCS
+* SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
+* ReasonForRevisionCS#targetchanges "Changes to Target Anatomy"
+* ReasonForRevisionCS#anatomychanges "Changes to Surrounding Anatomy"
+
+
+CodeSystem: ReasonForRevisionCS
+Id: codex-radiotherapy-reason-for-revision-cs
+Title: "Reason for Revision Code System"
+Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
+* ^status = #draft
+* ^caseSensitive = true
+* #targetchanges	"Changes to Target Anatomy (finding)" 	"new concept under 373856008 |Reason for change in radiotherapy course (finding)"
+* #anatomychanges  "Changes to Surrounding Anatomy (finding)" "373856008 |Reason for change in radiotherapy course (finding)."
+* #toxicity 	"Radiotherapy course changed - acute radiotherapy toxicity (finding)" 	"Radiotherapy course changed - acute radiotherapy toxicity (finding)"
