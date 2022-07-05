@@ -241,5 +241,5 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * ^status = #draft
 * ^caseSensitive = true
 * #targetchanges	"Changes to Target Anatomy (finding)" 	"new concept under 373856008 |Reason for change in radiotherapy course (finding)"
-* #anatomychanges  "Changes to Surrounding Anatomy (finding)" "373856008 |Reason for change in radiotherapy course (finding)."
+* #anatomychanges  "Changes to Surrounding Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)."
 * #toxicity 	"Radiotherapy course changed - acute radiotherapy toxicity (finding)" 	"Radiotherapy course changed - acute radiotherapy toxicity (finding)"
