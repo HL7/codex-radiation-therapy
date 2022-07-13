@@ -4,5 +4,5 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# Radiotherapy Volumes include actual Varian Identifiers, and this is OK
+# radiotherapy volumes include varian identifiers, and this is OK
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
