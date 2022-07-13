@@ -22,10 +22,10 @@ RuleSet: RadiotherapyRequestCommon
 * doNotPerform 0..0
 * quantity[x] 0..0 // In RT dose to multiple targets has to be covered. Therefore, we have a dedicated extension radiotherapyPrescribedDose
 * subject 1..1 MS
-* subject only Reference(Patient)
+* subject only Reference(USCorePatient)
 * asNeeded[x] 0..0
 * requester MS //Approval user
-* requester only Reference(Practitioner or PractitionerRole or Organization)
+* requester only Reference(USCorePractitioner or USCorePractitionerRole or USCoreOrganization)
 * reasonCode MS
 * reasonCode from $mCODECancerDisorderVS (extensible)
 * reasonReference MS
