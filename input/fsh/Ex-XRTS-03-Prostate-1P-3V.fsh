@@ -327,7 +327,7 @@ Usage: #example
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = $mCODECancerPatient
 * meta.profile[+] = USCorePatient
-* extension[birthsex].valueCode = AdminGender#M
+* extension[us-core-birthsex].valueCode = #M
 * identifier[+]
   * use = #usual
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
