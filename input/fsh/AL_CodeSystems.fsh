@@ -9,7 +9,7 @@ Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: DICOMUID = urn:dicom:uid
 
 // USCore
-Alias: AdminGender = 2.16.840.1.113883.5.1 // http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender
+// Alias: AdminGender = //2.16.840.1.113883.5.1 // http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender
 
 //Same as in mCODE.
 Alias:   CondCat = http://terminology.hl7.org/CodeSystem/condition-category

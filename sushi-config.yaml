@@ -12,9 +12,9 @@ copyrightYear: 2021+
 releaseLabel: ci-build
 title: "CodeX™ Radiation Therapy"
 publisher:
-  name: HL7 International Clinical Interoperability Council
-  url: http://www.hl7.org/Special/committees/cic
-  email: ciclist@lists.HL7.org
+  name: HL7 Cross Group Projects Work Group
+  url: http://www.hl7.org/Special/committees/cgp
+  email: cgplist@lists.HL7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 description: CodeX™ Radiation Therapy is an initiative
   intended to assemble a core set of structured data elements for radiation therapy
