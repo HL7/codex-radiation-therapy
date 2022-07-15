@@ -195,6 +195,7 @@ ValueSet: ApplicatorTypesVS
 Id: codex-radiotherapy-applicator-types-vs
 Title: "Brachytherapy Applicator Types"
 Description: "Applicator Types Used in Brachytherapy"
+* insert SCTCopyright
 * codes from system ApplicatorTypesCS
 * SCT#19923001 "Catheter, device (physical object)"
 * SCT#228771002 "Needles source (physical object)"
@@ -228,6 +229,7 @@ ValueSet: ReasonForRevisionVS
 Id: codex-radiotherapy-reason-for-revision-vs
 Title: "Reason for Revision Value Set"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
+* insert SCTCopyright
 * codes from system ReasonForRevisionCS
 * SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
 * ReasonForRevisionCS#targetchanges "Changes to Target Anatomy"
