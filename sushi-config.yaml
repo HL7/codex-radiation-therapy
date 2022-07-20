@@ -6,22 +6,22 @@ id: hl7.fhir.us.codex-radiation-therapy
 canonical: http://hl7.org/fhir/us/codex-radiation-therapy
 name: CodeX-Radiation-Therapy
 status: draft
-version: 0.2.0
+version: 1.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
 title: "CodeX™ Radiation Therapy"
 publisher:
-  name: HL7 International Clinical Interoperability Council
-  url: http://www.hl7.org/Special/committees/cic
-  email: ciclist@lists.HL7.org
+  name: HL7 Cross Group Projects Work Group
+  url: http://www.hl7.org/Special/committees/cgp
+  email: cgplist@lists.HL7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 description: CodeX™ Radiation Therapy is an initiative
   intended to assemble a core set of structured data elements for radiation therapy
   electronic health records.
 license: CC0-1.0
 dependencies:
-  hl7.fhir.us.core: 4.0.0
+  hl7.fhir.us.core: 5.0.1
   hl7.fhir.us.mcode: 2.0.0
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

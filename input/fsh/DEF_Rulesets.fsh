@@ -22,10 +22,10 @@ RuleSet: RadiotherapyRequestCommon
 * doNotPerform 0..0
 * quantity[x] 0..0 // In RT dose to multiple targets has to be covered. Therefore, we have a dedicated extension radiotherapyPrescribedDose
 * subject 1..1 MS
-* subject only Reference(Patient)
+* subject only Reference(USCorePatient)
 * asNeeded[x] 0..0
 * requester MS //Approval user
-* requester only Reference(Practitioner or PractitionerRole or Organization)
+* requester only Reference(USCorePractitioner or USCorePractitionerRole or USCoreOrganization)
 * reasonCode MS
 * reasonCode from $mCODECancerDisorderVS (extensible)
 * reasonReference MS
@@ -55,7 +55,8 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * insert RadiotherapyPlansCommon
 * extension contains
     RadiotherapyFractionsPlanned named radiotherapy-fractions-planned 1..1 MS and
-    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS
+    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS and
+    RadiotherapyReasonForRevision named radiotherapy-reason-for-revision 0..1 MS
 * extension[radiotherapy-dose-planned-to-volume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
@@ -73,7 +74,8 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
 * extension contains
     RadiotherapyFractionsPrescribed named radiotherapy-fractions-prescribed 1..1 MS and
-    RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS
+    RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS and
+    RadiotherapyReasonForRevision named radiotherapy-reason-for-revision 0..1 MS
 * extension[radiotherapy-dose-prescribed-to-volume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions."
