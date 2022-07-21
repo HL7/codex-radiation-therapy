@@ -7,3 +7,6 @@
 # radiotherapy volumes include varian identifiers, and this is OK
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-course-prescription
+
+# The IG is based on USCore 4.0.0 (because of mCODE depdendency), which does not provide ServiceRequest profile
+US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile.
