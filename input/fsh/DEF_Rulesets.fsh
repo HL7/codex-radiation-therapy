@@ -4,6 +4,8 @@ RuleSet: CategorySlicing
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
 * category 1.. MS
+* category contains
+  required 1..1
 
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
@@ -24,8 +26,7 @@ RuleSet: RadiotherapyRequestCommon
 * status MS
 * intent MS
 * insert CategorySlicing
-//* category[required]  = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
-* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
+* category[required] = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
 * code 1..1 MS
 * doNotPerform 0..0
 * quantity[x] 0..0 // In RT dose to multiple targets has to be covered. Therefore, we have a dedicated extension radiotherapyPrescribedDose
