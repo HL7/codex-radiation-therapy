@@ -111,7 +111,7 @@ Usage: #example
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-22A-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 540
-* status = #completed
+* status = #stopped
 * performedPeriod.end = "2021-09-09T13:21:17+01:00"
 
 RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange-Common
@@ -200,13 +200,14 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 3
+* extension[radiotherapy-fractions-planned].valuePositiveInt = 7
 * extension[radiotherapy-dose-planned-to-volume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-22A-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 180
-  * extension[totalDose].valueQuantity.value = 540
+  * extension[totalDose].valueQuantity.value = 1260
+* extension[radiotherapy-reason-for-revision].valueCodeableConcept = SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId
@@ -217,7 +218,7 @@ Usage: #example
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.02.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-02-22A-01-Prostate-2P-1V)
 * basedOn[=].display = "C1Prostate"
-* status = #completed
+* status = #revoked
 * subject = Reference(Patient-XRTS-02-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
@@ -249,6 +250,7 @@ Usage: #example
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.02.01.02.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-02-22A-01-Prostate-2P-1V)
 * basedOn[=].display = "C1Prostate"
+* replaces = Reference(RadiotherapyPlannedPhase-XRTS-02-22A-01-01-Primary)
 * status = #completed
 * subject = Reference(Patient-XRTS-02-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
