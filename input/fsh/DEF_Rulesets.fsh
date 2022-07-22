@@ -1,3 +1,12 @@
+RuleSet: CategorySlicing
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Slicing requires the given value but allows additional categories"
+* category  MS
+//* category contains
+//    required 1..1 MS
+
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
 // * meta.versionId MS
@@ -16,7 +25,8 @@ RuleSet: RadiotherapyRequestCommon
 * replaces ^short = "Previous retired request that is replaced by this request" //Defined a short so the element is shown even if it is not MS
 * status MS
 * intent MS
-* category 1..* MS
+* insert CategorySlicing
+//* category[required]  = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
 * code 1..1 MS
 * doNotPerform 0..0
@@ -104,7 +114,7 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * basedOn MS
 * partOf MS
-* category 1.. MS
+* insert CategorySlicing
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * reasonCode MS
