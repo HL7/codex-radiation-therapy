@@ -3,9 +3,7 @@ RuleSet: CategorySlicing
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
-* category  MS
-//* category contains
-//    required 1..1 MS
+* category 1.. MS
 
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
