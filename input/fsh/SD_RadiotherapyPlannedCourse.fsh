@@ -1,5 +1,5 @@
 Profile: RadiotherapyPlannedCourse
-Parent: USCoreServiceRequest
+Parent: ServiceRequest
 Id: codexrt-radiotherapy-planned-course
 Title: "Radiotherapy Planned Course"
 Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to deliver a complete Course."
