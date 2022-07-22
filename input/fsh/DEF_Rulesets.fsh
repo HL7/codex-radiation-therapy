@@ -114,7 +114,6 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * basedOn MS
 * partOf MS
-* insert CategorySlicing
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * reasonCode MS
