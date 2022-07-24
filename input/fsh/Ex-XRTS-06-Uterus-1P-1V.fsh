@@ -41,7 +41,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
     * valueReference.display = "Uterus"
-  * extension[totalDoseDelivered].valueQuantity.value = 500
+  * extension[totalDoseDelivered].valueQuantity.value = 600
   * extension[fractionsDelivered].valueUnsignedInt = 1
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
@@ -98,7 +98,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
     * valueReference.display = "Uterus"
-  * extension[totalDoseDelivered].valueQuantity.value = 500
+  * extension[totalDoseDelivered].valueQuantity.value = 600
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
@@ -170,7 +170,7 @@ Usage: #example
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
     * valueReference.display = "Uterus"
-  * extension[fractionDose].valueQuantity.value = 500
+  * extension[fractionDose].valueQuantity.value = 600
   * extension[totalDose].valueQuantity.value = 3000
 * identifier[+]
   * use = #usual
