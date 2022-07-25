@@ -47,16 +47,22 @@ The following figure shows the resource profiles based on resource type ServiceR
 
 While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment was is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can is be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases.
 
-![](003.png)
+<img src="RTResourcesHighLevel.svg" alt="RT Summary Resources Model" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+### Data Elements
+
+<img src="RTResourcesOverview.svg" alt="RT Summary Resources Overview" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.is is the complete list of data elements in the RT IG FHIR Model.
-![](RTResourcesOverview.svg)
+
+<img src="RTResourcesOverview.svg" alt="RT Summary Resources Overview" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Treatment Summary Transactions
 The workflow and transactions for exchanging RT information is documented in the For other transactions, see the IHE-RO XRTS Supplement. These transactions utilize the FHIR profiles defined in the RT IG.
 
-![](ProcessFlow-EndofTreatmentSummary-Subscription.svg)
+<img src="ProcessFlow-EndofTreatmentSummary-Subscription.svg" alt="XRTS Transactions - End of Treatment Summary" width="800px" style="float:none; margin: 0px 0px 0px 0px;" />
+
 
 **Development History**
 
@@ -104,7 +110,67 @@ In addition to information obtained from subject matter experts, several existin
 
 In addition, material was drawn from the [US Core Implementation Guide](http://hl7.org/fhir/us/core/) and the [mCODE Implementation Guide](http://hl7.org/fhir/us/mcode/).
 
-**Credits**
+### Building the IG
+
+"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation. You can see [the output of building the current contents of this repository here](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/).
+
+If you would like to generate this locally, open command prompt window and navigate to the directory where this repository has been cloned. Then run this command:
+
+- Linux/macOS: `./_genonce.sh`
+- Windows: `_genonce`
+
+This script will do two things automatically for you:
+
+1. Run [SUSHI](http://build.fhir.org/ig/HL7/fhir-shorthand/sushi.html). mCODE is developed in [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FHS files into the JSON files expected by the IG Publisher.
+
+2. Run the IG Publisher.
+
+You will need an active internet connection to build the IG. It make take up to 30 minutes to build for the first time; subsequent builds should be faster (5-7 minutes) on a modern laptop.
+
+When the build finishes, you can open `output/index.html` in your browser to see the locally built IG.
+
+### Dependencies for building the IG
+
+1. You will need to [install SUSHI](https://fshschool.org/docs/sushi/installation/) before building the IG.
+2. You will also need to run `./_updatePublisher.sh` (Linux/macOS) or `_updatePublisher.bat` (Windows) to download the IG Publisher.
+
+### Running SUSHI independently of the IG Publisher
+
+If you want to run SUSHI without building the entire IG, you can run `sushi .` in a command prompt window after navigating to the directory where this repository has been cloned.
+
+You can also run the IG Publisher without running SUSHI with `./_genonce.sh -no-sushi` or `_genonce -no-sushi`.
+
+### Getting a clean build
+
+While not normally necessary, you can delete the following folders to get a clean build:
+
+- `fsh-generated/` (SUSHI output)
+- `output/` (IG Publisher output)
+- `input-cache/` (IG Publisher local cache; note that deleting this will dramatically increase the length of the next build)
+
+### Key folders & files in the IG
+
+- The FHIR Shorthand (`.fsh`) files defining the resources in this IG are found in `input/fsh/`.
+    - There is a [FSH syntax highlighting extension](https://marketplace.visualstudio.com/items?itemName=kmahalingam.vscode-language-fsh) for [VSCode](https://code.visualstudio.com). The mCODE team generally uses this set of tools for working on FSH files.
+    - The FSH files are prefixed based on what is contained inside.
+
+        | Prefix | Description          |
+        | ------ | -------------------- |
+        | `AL`   | Aliases              |
+        | `DEF`  | Other Definitions    |
+        | `EX`   | Examples             |
+        | `SD`   | StructureDefinitions |
+        | `VS`   | ValueSets            |
+
+- The main pages in the built IG are generated from [Markdown](https://daringfireball.net/projects/markdown/) found in `input/pagecontent/`. These pages must also be included in `sushi-config.yaml` to be compiled to HTML by the IG Publisher.
+- There are a number of other important configuration options in `sushi-config.yaml` including the menu contents of the built IG and the groupings on the [Artifacts Summary page](https://build.fhir.org/ig/HL7/codexrt/artifacts.html).
+- The source for the UML diagrams in the IG are found in `input/images-source/` and MUST have a `.plantuml` extension. These are automatically converted to SVG by the IG Publisher, and are inserted inline into Markdown files using `{%include some-diagram.svg%}` (which corresponds to `input/images-source/some-diagram.plantuml`).
+
+## Contributing to the IG
+
+See [`contributing.md`](contributing.md).
+
+### Credits
 
 The authors gratefully acknowledge the leadership of Chuck Mayo, PhD, University of Michigan/AAPM,** Randi Kudner, MFA, ASTRO, John Kildea, PhD, McGill University/COMP, Mary Feng, MD, University of California San Francisco/ASTRO, James Hayman, MD, University of Michigan/ASTRO, Rishabh Kapoor, PhD, Virginia Commonwealth University/AAPM, Anthony DiDonato, MS, MITRE, Michelle Casagni, MS, MITRE, Sharon Sebastian, RN-BC, MS, MITRE, Saul Kravitz, PhD, MITRE, Su Chen, MD, MITRE, Steve Bratt, PhD, MITRE, Martin von Siebenthal, PhD, Varian, John Christodouleas, MD, University of Pennsylvania/Elekta.
 
