@@ -230,11 +230,8 @@ Id: codex-radiotherapy-reason-for-revision-vs
 Title: "Reason for Revision Value Set"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * insert SCTCopyright
-* codes from system ReasonForRevisionCS
 * SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
-* ReasonForRevisionCS#targetchanges "Changes to Target Anatomy"
-* ReasonForRevisionCS#anatomychanges "Changes to Surrounding Anatomy"
-
+* codes from system ReasonForRevisionCS
 
 CodeSystem: ReasonForRevisionCS
 Id: codex-radiotherapy-reason-for-revision-cs
