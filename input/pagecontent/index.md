@@ -22,9 +22,11 @@ The intended use cases include:
 * Documenting Delivered Radiation Therapy Treatment
 
 ### Example Scenarios
-**Scenario 1**: A radiation oncologist generates a patient's RT "end-of-treatment" summary within the ROIS after treatment is complete. The patient's summary information is pushed, via a FHIR API, to a receiving FHIR repository (e.g., a cloud-based repository or another repository that can be accessed by other vendors). Next, a vendor system accesses the FHIR repository via a FHIR API call to retrieve the patient's RT "end-of-treatment" information. Once the information has been retrieved, the vendor system can store, share, reuse, and display the standardized information however necessary/most useful.
+#### **Scenario 1**:
+A radiation oncologist generates a patient's RT "end-of-treatment" summary within the ROIS after treatment is complete. The patient's summary information is pushed, via a FHIR API, to a receiving FHIR repository (e.g., a cloud-based repository or another repository that can be accessed by other vendors). Next, a vendor system accesses the FHIR repository via a FHIR API call to retrieve the patient's RT "end-of-treatment" information. Once the information has been retrieved, the vendor system can store, share, reuse, and display the standardized information however necessary/most useful.
 
-**Scenario 2**: A radiation oncologist generates a patient's weekly on-treatment visit (OTV) report within the ROIS. The patient's weekly RT in-progress information is pushed, via a FHIR API, to an EHR's FHIR-enabled internal resource repository. Next, the EHR accesses its internal FHIR repository via a FHIR API call and retrieves the patient's weekly RT in-progress information. Once the information has been retrieved, the EHR can store, share, reuse, and display the standardized information however necessary/most useful.
+#### Scenario 2:
+A radiation oncologist generates a patient's weekly on-treatment visit (OTV) report within the ROIS. The patient's weekly RT in-progress information is pushed, via a FHIR API, to an EHR's FHIR-enabled internal resource repository. Next, the EHR accesses its internal FHIR repository via a FHIR API call and retrieves the patient's weekly RT in-progress information. Once the information has been retrieved, the EHR can store, share, reuse, and display the standardized information however necessary/most useful.
 
 ### CodeX RT Resource Profiles
 The profiles defined in this IG cover different stages of the radiotherapy workflow at different levels of detail. A radiotherapy course of therapy systematically addresses a condition or set of related conditions. The course can include multiple sessions, can be divided into multiple phases, and can last for several months. The Radiotherapy Course Summary profile covers the treatment delivered in a treatment course and can be incrementally updated as the treatment progresses. When the treatment is completed, the latest version of the Radiotherapy Course Summary provides the entire course of treatment from beginning to end. The status element indicates whether the treatment is in progress or complete.
@@ -47,11 +49,6 @@ The following figure shows the resource profiles based on resource type ServiceR
 
 While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment was is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can is be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases.
 
-
-### Data Elements
-
-<img src="RTResourcesOverview.svg" alt="RT Summary Resources Overview" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
-
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.is is the complete list of data elements in the RT IG FHIR Model.
 
@@ -63,7 +60,7 @@ The workflow and transactions for exchanging RT information is documented in the
 <img src="ProcessFlow-EndofTreatmentSummary-Subscription.svg" alt="XRTS Transactions - End of Treatment Summary" width="800px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 
-**Development History**
+### Development History
 
 In late 2020, the American Society for Radiation Oncology (ASTRO) and the American Association of Physicists in Medicine (AAPM), with the assistance of the MITRE Corporation, proposed a use case under the CodeX FHIR Accelerator around standardizing RT information using the FHIR standard to semantically define patients’ radiation therapy end-of-treatment information. This group of stakeholder organizations began working on defining radiation therapy concepts, leveraging mCODE and FHIR, to model the relationship between groups of clinical concepts that comprise work products vital to patients’ radiation radiation oncology careeports.
 
@@ -88,13 +85,8 @@ Additional details regarding the CodeX RTTD project:
 - Additional content was built out – related to the patient’s in-progress and prescription RT information in the CodeX RT IG
 - The CodeX RTTD and IHE-RO XRTS teams are continuing to work in harmony to leverage each other’s areas of expertise
 
-**Understanding this Guide**
 
-The page layouts and symbols are explained [in the FHIR documentation](https://www.hl7.org/fhir/formats.html). When viewing a profile page, note that there are multiple views. The “Differential Table” view represents the difference between the current profile and its base resource or profile. When interpreting this view, bear in mind that the immediate parent may not be a base FHIR resource but could be an mCODE or US Core profile or another profile in this guide. The “Snapshot Table” represents the entire profile, with all elements.
-
-If differences between the page renderings in this IG and the associated FHIR artifacts are identified, the FHIR artifacts should be taken as the source of truth. If an artifact’s snapshot is inconsistent with its differential, the differential should be taken as the source of truth.
-
-**Sources**
+### Sources
 
 Specifications in the CodeX RT IG were informed by research and work products developed by the AAPM Big Data Subcommittee (BDSC). AAPM BDSC has been using a consensus-driven approach to define a common ontology that will improve communication of RT information. The standardized nomenclatures created by the BDSC team are represented in OORO. BDSC participants include AAPM, ASTRO, Canadian Organization of Medical Physicists (COMP), European Society for Radiotherapy and Oncology (ESTRO), NRG Oncology, Canadian Association of Radiation Oncology (CARO), and Canadian Partnership for Quality Radiotherapy (CPQR).
 
@@ -128,18 +120,18 @@ You will need an active internet connection to build the IG. It make take up to 
 
 When the build finishes, you can open `output/index.html` in your browser to see the locally built IG.
 
-### Dependencies for building the IG
+#### Dependencies for building the IG
 
 1. You will need to [install SUSHI](https://fshschool.org/docs/sushi/installation/) before building the IG.
 2. You will also need to run `./_updatePublisher.sh` (Linux/macOS) or `_updatePublisher.bat` (Windows) to download the IG Publisher.
 
-### Running SUSHI independently of the IG Publisher
+#### Running SUSHI independently of the IG Publisher
 
 If you want to run SUSHI without building the entire IG, you can run `sushi .` in a command prompt window after navigating to the directory where this repository has been cloned.
 
 You can also run the IG Publisher without running SUSHI with `./_genonce.sh -no-sushi` or `_genonce -no-sushi`.
 
-### Getting a clean build
+#### Getting a clean build
 
 While not normally necessary, you can delete the following folders to get a clean build:
 
@@ -147,7 +139,7 @@ While not normally necessary, you can delete the following folders to get a clea
 - `output/` (IG Publisher output)
 - `input-cache/` (IG Publisher local cache; note that deleting this will dramatically increase the length of the next build)
 
-### Key folders & files in the IG
+#### Key folders & files in the IG
 
 - The FHIR Shorthand (`.fsh`) files defining the resources in this IG are found in `input/fsh/`.
     - There is a [FSH syntax highlighting extension](https://marketplace.visualstudio.com/items?itemName=kmahalingam.vscode-language-fsh) for [VSCode](https://code.visualstudio.com). The mCODE team generally uses this set of tools for working on FSH files.
