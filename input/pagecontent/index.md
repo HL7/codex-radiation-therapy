@@ -1,8 +1,8 @@
 ### Background
 Radiation therapy treatment details – critical for care coordination – are not readily available in information systems beyond radiation oncology information technology (IT) modules. Furthermore, creation of radiation therapy (RT) treatment summary documents is often a manual process, creating clinician burden and potential patient safety issues. Historical RT summary documents tend to be comprised of unstructured data; therefore, providers have been unable to leverage this information to meet reporting requirements (e.g., quality reporting, registry reporting) or support comparative effectiveness research without additional manual data entry.
 
-This lack of cohesion, coordination, and structured data sharing between Radiation Oncology Information Systems (ROIS) and other health information systems is due to the lack of standardized data in the radiation oncology domain and Fast Healthcare Interoperability Resources (FHIR) standards to support data transmission. Radiation oncology is highly specialized. A clinically relevant and accurate treatment summary is needed by both the larger oncology care team to facilitate care coordination, and by patients to better understand the care they have received. There is a demonstrated need to establish data standardization for RT end-of-treatment summaries, in-progress summaries, and supporting details to supplement these summary reports.
-The CodeX Radiation Therapy Implementation Guide (IG) describes how to represent, model, and exchange RT information that is generated during a patient’s RT planning and treatment. This FHIR IG is intended for health information system implementers interested in sending or receiving RT information. The CodeX RT IG provides nine  profiles based on FHIR ServiceRequest and Procedure resources, and one based on the FHIR BodyStructure resource. These profiles support radiotherapy clinical workflow by:
+This lack of cohesion, coordination, and structured data sharing between Radiation Oncology Information Systems (ROIS) and other health information systems is due to the lack of standardized data in the radiation oncology domain and absence of Fast Healthcare Interoperability Resources (FHIR) standards to support data transmission. Radiation oncology is highly specialized. A clinically relevant and accurate treatment summary is needed by both the larger oncology care team to facilitate care coordination, and by patients to better understand the care they have received. There is a demonstrated need to establish data standardization for RT end-of-treatment summaries, in-progress summaries, and supporting clinical details to supplement these summary reports.
+The CodeX Radiation Therapy Implementation Guide (IG) describes how to represent, model, and exchange RT information that is generated during a patient’s RT planning and treatment. This FHIR IG is intended for health information system implementers interested in sending or receiving RT information. The CodeX RT IG provides nine profiles based on FHIR ServiceRequest and Procedure resources, and one based on the FHIR BodyStructure resource. These profiles support radiotherapy clinical workflow by:
 
 * Enabling RT prescriptions at the Course, Phase, and Plan levels
 * Facilitating development and management of the Planned Course, Planned Phase, and Treatment Plan
@@ -16,72 +16,70 @@ The Codex RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Sta
 ### Actors and Use Cases
 The intended actors include:
 * Patients
-* Radiation Oncology Providers
-* Other Medical Providers
+* Radiation oncology providers
+* Other medical providers
+
 The intended use cases include:
-* Prescribing, Elaborating and Managing Radiation Therapy Treatment
-* Documenting Delivered Radiation Therapy Treatment
+* Prescribing, elaborating and managing RT treatment
+* Documenting delivered RT treatment
 
 ### Example Scenarios
-#### **Scenario 1**:
+#### Scenario 1:
 A radiation oncologist generates a patient's RT "end-of-treatment" summary within the ROIS after treatment is complete. The patient's summary information is pushed, via a FHIR API, to a receiving FHIR repository (e.g., a cloud-based repository or another repository that can be accessed by other vendors). Next, a vendor system accesses the FHIR repository via a FHIR API call to retrieve the patient's RT "end-of-treatment" information. Once the information has been retrieved, the vendor system can store, share, reuse, and display the standardized information however necessary/most useful.
 
 #### Scenario 2:
 A radiation oncologist generates a patient's weekly on-treatment visit (OTV) report within the ROIS. The patient's weekly RT in-progress information is pushed, via a FHIR API, to an EHR's FHIR-enabled internal resource repository. Next, the EHR accesses its internal FHIR repository via a FHIR API call and retrieves the patient's weekly RT in-progress information. Once the information has been retrieved, the EHR can store, share, reuse, and display the standardized information however necessary/most useful.
 
 ### CodeX RT Resource Profiles
-The profiles defined in this IG cover different stages of the radiotherapy workflow at different levels of detail. A radiotherapy course of therapy systematically addresses a condition or set of related conditions. The course can include multiple sessions, can be divided into multiple phases, and can last for several months. The Radiotherapy Course Summary profile covers the treatment delivered in a treatment course and can be incrementally updated as the treatment progresses. When the treatment is completed, the latest version of the Radiotherapy Course Summary provides the entire course of treatment from beginning to end. The status element indicates whether the treatment is in progress or complete.
+The profiles defined in this IG cover different stages of the radiotherapy workflow at different levels of detail. A radiotherapy course systematically addresses a condition or set of related conditions. The course can include multiple sessions, can be divided into multiple phases, and can last for several months. The Radiotherapy Course Summary profile covers the treatment delivered in a treatment course and can be incrementally updated as the treatment progresses. When the treatment is completed, the latest version of the Radiotherapy Course Summary provides the entire course of treatment from beginning to end. The status element indicates whether the treatment is in progress or complete.
 
 In radiotherapy, a *phase* is a subset of a course. A phase is defined as a treatment consisting of one or more identical fractions. See the [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/glossary.html).
 
 The relationship between a course, phases, and treatment plans is exemplified in the following diagram.
 
-<img src="RTResourcesHighLevel.svg" alt="RT Summary Resources Model" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+<img src="BreastTreatmentSummary.png" alt="RT Summary Example" width="1000px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 In this example, the radiotherapy course encompasses three phases. The course summary captures each radiotherapy volume, the total dose for each volume, and total number of fractions delivered for each volume. The course summary also records the modalities and techniques used, without directly associating those with individual volumes. Other elements in the summary include the reason for treatment, the treatment intent, the period of treatment, and the total number of sessions.
 
 At the phase level, each phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same volume or volumes. Because of their spatial relationship or the technique used, all volumes do not necessarily receive the same total dose during a phase. Phases may occur in parallel, overlap, or in alternating temporal patterns.
 
-At the lowest level of detail, Treatment Plans define the parameters for treatment delivery. The FHIR profiles on the level of treatment plans include references to DICOM artefacts artifacts (DICOM treatment plans and DICOM treatment records) that contain treatment parameters down to the machine geometry and motion during treatment.
+At the lowest level of detail, Treatment Plans define the parameters for treatment delivery. The FHIR profiles on the level of treatment plans include references to DICOM artifacts (DICOM treatment plans and DICOM treatment records) that contain treatment parameters down to the machine geometry and motion during treatment.
 
-Multiple treatment plans may be used to implement the same phase. Plans may be adapted during a phase due to changes in tumor shape, patient anatomy, or side effects. In the extreme case of adaptive treatment, a new plan may be created each dayfor each fraction of a  to cover multiple fractions of one and the same phase.
+Multiple treatment plans may be used to implement the same phase. Plans may be adapted during a phase due to changes in tumor shape, patient anatomy, or side effects. In the extreme case of adaptive treatment with daily adaptation, a new plan may be created for each fraction of a phase.
 
 The following figure shows the resource profiles based on resource type ServiceRequest (left column) that document which treatment was prescribed on different levels (Radiotherapy Plan Prescription, Radiotherapy Phase Prescription, Radiotherapy Course Prescription). Other profiles that are also based on ServiceRequest (middle column) describe which treatment plans were prepared to fulfill the prescriptions. Treatment plans can be summarized on different levels to cover a single plan (Radiotherapy Treatment Plan), the sum of plans for a complete phase (Radiotherapy Planned Phase), or the sum of plans for the entire course of treatment (Radiotherapy Planned Course). The profiles based on Procedure (right column) are used to document the treatment that was actually performed on different levels of detail (Radiotherapy Course Summary, Radiotherapy Treated Phase, Radiotherapy Treated Plan).
 
-While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment was is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can is be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases.
+<img src="RTResourcesHighLevel.svg" alt="RT Summary Resources Model" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can is be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases.
 
 ### Data Elements
-The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.is is the complete list of data elements in the RT IG FHIR Model.
+The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
 
 <img src="RTResourcesOverview.svg" alt="RT Summary Resources Overview" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Treatment Summary Transactions
-The workflow and transactions for exchanging RT information is documented in the For other transactions, see the IHE-RO XRTS Supplement. These transactions utilize the FHIR profiles defined in the RT IG.
-
-<img src="ProcessFlow-EndofTreatmentSummary-Subscription.svg" alt="XRTS Transactions - End of Treatment Summary" width="800px" style="float:none; margin: 0px 0px 0px 0px;" />
-
+The workflow and transactions for exchanging RT information are documented in the IHE-RO XRTS Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX RT IG.
 
 ### Development History
 
-In late 2020, the American Society for Radiation Oncology (ASTRO) and the American Association of Physicists in Medicine (AAPM), with the assistance of the MITRE Corporation, proposed a use case under the CodeX FHIR Accelerator around standardizing RT information using the FHIR standard to semantically define patients’ radiation therapy end-of-treatment information. This group of stakeholder organizations began working on defining radiation therapy concepts, leveraging mCODE and FHIR, to model the relationship between groups of clinical concepts that comprise work products vital to patients’ radiation radiation oncology careeports.
+In late 2020, the American Society for Radiation Oncology (ASTRO) and the American Association of Physicists in Medicine (AAPM), with the assistance of the MITRE Corporation, proposed a use case under the CodeX FHIR Accelerator around standardizing RT information using the FHIR standard to semantically define a patient’s radiation therapy end-of-treatment information. This group of stakeholder organizations began working on defining RT concepts, leveraging mCODE and FHIR, to model the relationship between groups of clinical concepts that comprise work products vital to radiation oncology care.
 
-In January 2021, the CodeX RTTD project approached the Integrating the Healthcare Enterprise – Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Work Group about aligning the data model and FHIR structures with the technical architecture and transactions being defined in the XRTS technical specification document. The CodeX RTTD and XRTS teams aligned visions and began working together to adopt the CodeX RT implementation guide.
+In January 2021, the CodeX Radiation Therapy Treatment Data (RTTD) project approached the Integrating the Healthcare Enterprise – Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Work Group about aligning the data model and FHIR structures with the technical architecture and transactions being defined in the XRTS technical specification document. The CodeX RTTD and XRTS teams aligned visions and began working together to adopt the CodeX RT Implementation Guide.
 
-In support of this collaboration, mCODE was updated into its second version (STU 2) to include new radiotherapy profiles, [Radiotherapy Course Summary](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.
+In support of this collaboration, mCODE was updated in its second version (STU 2) to include new radiotherapy profiles, [Radiotherapy Course Summary](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.
 
 - mCODE STU 2: <https://hl7.org/fhir/us/mcode/>
 
 Radiotherapy specifications beyond what was considered “minimal” (which is a tenet of mCODE) are published in this CodeX RT IG.
 
-- CodeX RT IG: <https://build.fhir.org/ig/HL7/codex-radiation-therapy/>
-
-FinallyFurthermore, the radiotherapy profiles and data elements were tested in at IHE-RO XRTS Workshops the in December 2021 and May 2022 IHE-RO XRTS Workshops. The CodeX RTTD and IHE-RO XRTS teams are preparing towill continue to test the entire CodeX RT IG at the December 2022 future IHE-RO XRTS Workshops, as well and Connectathons.
+Furthermore, the radiotherapy profiles and data elements were tested in IHE-RO XRTS Workshops December 2021 and May 2022. The CodeX RTTD and IHE-RO XRTS teams will continue to test the CodeX RT IG at future IHE-RO XRTS Workshops and Connectathons.
 
 Additional details regarding the CodeX RTTD project:
 
 - ASTRO joined CodeX with a proposal to standardize RT treatment summaries, leveraging the work published by ASTRO and others in the “Minimum Data Elements for Radiation Oncology: An American Society for Radiation Oncology Consensus Paper” report.
 - AAPM joined in support of this effort and started contributing professional society expertise and work developed by the AAPM Big Data Subcommittee (i.e., Operational Ontology for Radiation Oncology (OORO))
-- IHE-RO XRTS Work Group aligned with the CodeX RTTD initiative and shared their RT modeling work products. Further on, Once t the IHE-RO XRTS Work Group aligned with the CodeX RTTD project, they shifted focus from modeling and structuring data elements to focused more ondeveloping the architecture and transactions as part of the XRTS Profile and technical specification.
+- IHE-RO XRTS Work Group aligned with the CodeX RTTD initiative and shared their RT modeling work products. Once the IHE-RO XRTS Work Group aligned with the CodeX RTTD project, they shifted focus from modeling and structuring data elements to developing the architecture and transactions as part of the XRTS Profile and technical specification.
 - The RTTD project contributed content to mCODE STU 2 to support generation of an end-of-treatment care summary
 - Additional content was built out – related to the patient’s in-progress and prescription RT information in the CodeX RT IG
 - The CodeX RTTD and IHE-RO XRTS teams are continuing to work in harmony to leverage each other’s areas of expertise
@@ -94,8 +92,8 @@ Specifications in the CodeX RT IG were informed by research and work products de
 In addition to information obtained from subject matter experts, several existing standards, nomenclatures, and guidelines were consulted during the development of this specification. These include:
 
 - IHE-RO XRTS Work Group
-- AAPM BDSC and Operational OntologyOORO - implementing Operational Ontology for Radiation Oncology (Task Group 263 (TG-263))
-- ASTRO and ASTRO’s "Minimum Data Elements for Radiation Oncology: An American Society for Radiation Oncology Consensus Paper" (<https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext>)
+- AAPM BDSC and OORO - implementing Operational Ontology for Radiation Oncology (Task Group 263 (TG-263))
+- ASTRO’s "Minimum Data Elements for Radiation Oncology: An American Society for Radiation Oncology Consensus Paper" (<https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext>)
 - Commission on Cancer (CoC) and CoC's “A Multidisciplinary Consensus Recommendation on a Synoptic Radiation Treatment Summary: A Commission on Cancer Workgroup Report” (<https://pubmed.ncbi.nlm.nih.gov/31988040/>)
 - IHE Systematized Nomenclature of Medicine – Clinical Terms (SNOMED CT) Set (<https://wiki.ihe.net/index.php/SNOMED_CT_IHE_Set>)
 - Global Patient Set (GPS). The project team intends to include values from the IHE SNOMED CT Set into the SNOMED GPS.
@@ -164,7 +162,7 @@ The authors gratefully acknowledge the leadership of Chuck Mayo, PhD, University
 
 The authors recognize HL7 sponsorship and input from [Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
 
-Steve Bratt leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community with a core goal of leveraging FHIR-based standards to achieve interoperability within the healthcare community to improve health for all.member-driven community accelerating implementation around mCODE standard. Capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. Max Masnick wrote the [Data Dictionary generator](https://github.com/HL7/fhir-mCODE-ig/tree/master/data-dictionary).
+Steve Bratt leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community with a core goal of leveraging FHIR-based standards to achieve interoperability within the healthcare community to improve health for all. Capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. Max Masnick wrote the [Data Dictionary generator](https://github.com/HL7/fhir-mCODE-ig/tree/master/data-dictionary).
 
 Many organizations have been involved in the modeling and defining of the radiotherapy FHIR profiles that are defined in the CodeX RT IG: 
 
@@ -172,14 +170,12 @@ Many organizations have been involved in the modeling and defining of the radiot
 - ASTRO
 - MITRE,
 - Varian, a Siemens Healthineers Company
-
-COMP
-
+- COMP
 - Telligen
 - Society for Imaging Informatics in Medicine (SIIM)
 - Wemedoo
 
-The RTTD team also receives significant input and participation from: the
+The RTTD team also receives significant input and participation from:
 
 - University of Michigan
 - Veterans Health Administration
@@ -198,7 +194,7 @@ If you have questions or comments about this guide, you can join the conversatio
 | Topic | Who | Role | Email |
 |----|---|---|------|
 | Implementation and Use Cases | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
-| Topic | Martin Von Siebenthal (Varian Medical Systems) | Role | Martin.VonSiebenthal@varian.com |
+| Topic | Martin Von Siebenthal (Varian, a Siemens Healhtineers Company) | Role | martin.vonsiebenthal@varian.com |
 | Topic | Saul A. Kravitz (MITRE) | Role | saul@mitre.org |
 {: .grid }
 
