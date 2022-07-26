@@ -51,7 +51,7 @@ The following figure shows the resource profiles based on resource type ServiceR
 
 <img src="RTResourcesHighLevel.svg" alt="RT Summary Resources Model" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
-While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can is be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases.
+While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases.
 
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
@@ -59,7 +59,7 @@ The diagram below shows the relationship between the RT profiles and data elemen
 <img src="RTResourcesOverview.svg" alt="RT Summary Resources Overview" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Treatment Summary Transactions
-The workflow and transactions for exchanging RT information are documented in the IHE-RO XRTS Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX RT IG.
+The workflow and transactions for exchanging RT information are documented in the Integrating Healthcare Enterprise - Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX RT IG.
 
 ### Development History
 
@@ -87,7 +87,7 @@ Additional details regarding the CodeX RTTD project:
 
 ### Sources
 
-Specifications in the CodeX RT IG were informed by research and work products developed by the AAPM Big Data Subcommittee (BDSC). AAPM BDSC has been using a consensus-driven approach to define a common ontology that will improve communication of RT information. The standardized nomenclatures created by the BDSC team are represented in OORO. BDSC participants include AAPM, ASTRO, Canadian Organization of Medical Physicists (COMP), European Society for Radiotherapy and Oncology (ESTRO), NRG Oncology, Canadian Association of Radiation Oncology (CARO), and Canadian Partnership for Quality Radiotherapy (CPQR).
+Specifications in the CodeX RT IG were informed by research and work products developed by the AAPM Big Data Subcommittee (BDSC). AAPM BDSC has been using a consensus-driven approach to define a common ontology that will improve communication of RT information. The standardized nomenclatures created by the BDSC team are represented in OORO. BDSC participants include AAPM, ASTRO, Canadian Organization of Medical Physicists (COMP), European Society for Radiotherapy and Oncology (ESTRO), NRG Oncology, Canadian Association of Radiation Oncology (CARO), IHE-RO, and Canadian Partnership for Quality Radiotherapy (CPQR).
 
 In addition to information obtained from subject matter experts, several existing standards, nomenclatures, and guidelines were consulted during the development of this specification. These include:
 
@@ -158,7 +158,7 @@ While not normally necessary, you can delete the following folders to get a clea
 
 ### Credits
 
-The authors gratefully acknowledge the leadership of Chuck Mayo, PhD, University of Michigan/AAPM,** Randi Kudner, MFA, ASTRO, John Kildea, PhD, McGill University/COMP, Mary Feng, MD, University of California San Francisco/ASTRO, James Hayman, MD, University of Michigan/ASTRO, Rishabh Kapoor, PhD, Virginia Commonwealth University/AAPM, Anthony DiDonato, MS, MITRE, Michelle Casagni, MS, MITRE, Sharon Sebastian, RN-BC, MS, MITRE, Saul Kravitz, PhD, MITRE, Su Chen, MD, MITRE, Steve Bratt, PhD, MITRE, Martin von Siebenthal, PhD, Varian, John Christodouleas, MD, University of Pennsylvania/Elekta.
+The authors gratefully acknowledge the leadership of Chuck Mayo, PhD, University of Michigan/AAPM, Randi Kudner, MFA, ASTRO, John Kildea, PhD, McGill University/COMP, Mary Feng, MD, University of California San Francisco/ASTRO, James Hayman, MD, University of Michigan/ASTRO, Rishabh Kapoor, PhD, Virginia Commonwealth University/AAPM, Anthony DiDonato, MS, MITRE, Michelle Casagni, MS, MITRE, Sharon Sebastian, RN-BC, MS, MITRE, Saul A. Kravitz, PhD, MITRE, Su Chen, MD, MITRE, Steve Bratt, PhD, MITRE, Martin von Siebenthal, PhD, Varian, John Christodouleas, MD, University of Pennsylvania/Elekta.
 
 The authors recognize HL7 sponsorship and input from [Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
 
@@ -168,7 +168,7 @@ Many organizations have been involved in the modeling and defining of the radiot
 
 - AAPM
 - ASTRO
-- MITRE,
+- MITRE
 - Varian, a Siemens Healthineers Company
 - COMP
 - Telligen
@@ -181,7 +181,7 @@ The RTTD team also receives significant input and participation from:
 - Veterans Health Administration
 - McGill University
 - University of Pennsylvania
-- Virginia Commonwealth University,
+- Virginia Commonwealth University
 - IHE-RO
 - RaySearch
 - Elekta
@@ -189,16 +189,16 @@ The RTTD team also receives significant input and participation from:
 
 ### Contact Information
 
-If you have questions or comments about this guide, you can join the conversation on <we need a zulip chat channel>, create an issue in the HL7 Jira (link), or reach out to any of the following individuals:
+If you have questions or comments about this guide, you can join the conversation on [the CodeX Radiation Therapy stream on zulip](https://chat.fhir.org/#narrow/stream/332717-CodeX-Radiation-Therapy), create an issue in the [HL7 Jira](http://hl7.org/fhir-issues), or reach out to any of the following individuals:
 
 | Topic | Who | Role | Email |
 |----|---|---|------|
 | Implementation and Use Cases | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
-| Topic | Martin Von Siebenthal (Varian, a Siemens Healhtineers Company) | Role | martin.vonsiebenthal@varian.com |
-| Topic | Saul A. Kravitz (MITRE) | Role | saul@mitre.org |
+| Topic | Martin Von Siebenthal (Varian, a Siemens Healhtineers Company) | Primary Author | martin.vonsiebenthal@varian.com |
+| Topic | Saul A. Kravitz (MITRE) | Author | saul@mitre.org |
 {: .grid }
 
-Codex Radiation Therapy is an open source project and welcomes all contributors. The source code for this IG is maintained in the [HL7 Github](https://github.com/HL7/codex-radiation-therapy). All of the profiling work is done using [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org).
+CodeX Radiation Therapy is an open source project and welcomes all contributors. The source code for this IG is maintained in the [HL7 Github](https://github.com/HL7/codex-radiation-therapy). All of the profiling work is done using [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org).
 
 
 {% include markdown-link-references.md %}

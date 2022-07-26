@@ -34,8 +34,6 @@ parameters:
 pages:
   index.md:
     title: Home
-  overview.md:
-    title: Overview
   conformance-general.md:
     title: Conformance Expectations
   conformance-profiles.md:
@@ -69,7 +67,6 @@ pages:
 
 menu:
   Home: index.html
-  Overview: overview.html
   Conformance:
     General Expectations: conformance-general.html
     Profile Conformance: conformance-profiles.html
