@@ -12,5 +12,3 @@ The following figure shows the main entities modelled in the scope of this IG fo
 ### Treatment Summary Transactions
 
 The workflow and transactions for exchanging RT information are documented in the IHE-RO XRTS Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX RT IG.
-
-### About This Guide
