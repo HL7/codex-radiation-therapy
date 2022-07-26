@@ -11,8 +11,4 @@ The following figure shows the main entities modelled in the scope of this IG fo
 
 ### Treatment Summary Transactions
 
-For other transactions, see the IHE-RO XRTS Supplement.
-
-<img src="ProcessFlow-EndofTreatmentSummary-Subscription.svg" alt="XRTS Transactions - End of Treatment Summary" width="800px" style="float:none; margin: 0px 0px 0px 0px;" />
-
-### About This Guide
+The workflow and transactions for exchanging RT information are documented in the IHE-RO XRTS Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX RT IG.
