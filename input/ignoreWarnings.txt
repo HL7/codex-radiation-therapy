@@ -2,7 +2,7 @@
 
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
-# See  https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # The IG is based on USCore 4.0.0 (because of mCODE depdendency), which does not provide ServiceRequest profile
 US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile.
