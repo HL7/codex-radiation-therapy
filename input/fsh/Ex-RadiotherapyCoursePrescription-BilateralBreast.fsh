@@ -343,7 +343,7 @@ Usage: #example
 
 Instance:   Patient-101
 InstanceOf: Patient
-Title: "Example Female Patient"
+Title: "Example Female Patient 101"
 Description: "An example female patient to relate Radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
