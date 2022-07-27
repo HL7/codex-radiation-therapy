@@ -204,7 +204,7 @@ Description: "Applicator Types Used in Brachytherapy"
 
 CodeSystem: ApplicatorTypesCS
 Id: codex-radiotherapy-applicator-types-cs
-Title: "Brachytherapy Applicator Types"
+Title: "Brachytherapy Applicator Types Code System"
 Description: "Brachytherapy Applicator Types  -- need to request codes"
 * ^status = #draft
 * ^caseSensitive = true

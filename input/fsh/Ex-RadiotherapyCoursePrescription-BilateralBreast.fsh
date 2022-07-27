@@ -375,7 +375,7 @@ Usage: #example
 
 Instance: Diagnosis-101-Breast
 InstanceOf: Condition
-Title: "Example Diagnosis"
+Title: "Example Diagnosis 101 Breast"
 Description: "An example diagnosis for a breast case for Patient-101."
 Usage: #example
 * id = "Diagnosis-101-Breast"

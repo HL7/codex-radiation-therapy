@@ -445,7 +445,7 @@ Usage: #example
 
 Instance:   Patient-XRTS-04-22A
 InstanceOf: $mCODECancerPatient
-Title: "Example XRTS Patient"
+Title: "Example XRTS Patient 4"
 Description: "An example patient, test case XRTS-04."
 Usage: #example
 * meta.versionId = "123"

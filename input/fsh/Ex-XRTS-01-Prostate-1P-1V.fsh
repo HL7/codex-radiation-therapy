@@ -206,7 +206,7 @@ Usage: #example
 
 Instance:   Patient-XRTS-01-22A
 InstanceOf: $mCODECancerPatient
-Title: "Example XRTS Patient"
+Title: "Example XRTS Patient 1"
 Description: "An example patient, test case XRTS-01."
 Usage: #example
 * meta.versionId = "123"

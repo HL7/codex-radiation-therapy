@@ -1,6 +1,6 @@
 Instance: Diagnosis-1-Breast
 InstanceOf: Condition
-Title: "Example Diagnosis"
+Title: "Example Diagnosis 1"
 Description: "An example diagnosis for a breast case."
 Usage: #example
 * id = "Diagnosis-1-Breast"
@@ -15,7 +15,7 @@ Usage: #example
 
 Instance: Diagnosis-2-Prostate
 InstanceOf: Condition
-Title: "Example Diagnosis"
+Title: "Example Diagnosis 2"
 Description: "An example diagnosis for a prostate case."
 Usage: #example
 * id = "Diagnosis-2-Prostate"
