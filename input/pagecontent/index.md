@@ -35,6 +35,10 @@ The profiles defined in this IG cover different stages of the radiotherapy workf
 
 In radiotherapy, a *phase* is a subset of a course. A phase is defined as a treatment consisting of one or more identical fractions. See the [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/glossary.html).
 
+At the most detailed level, *treatment plans* define how the radiotherapy treatment is delivered.
+
+Note that in radiotherapy, a *treatment plan* represents a concrete set of treatment delivery instructions prepared for a specific patient anatomy and machine ([Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/glossary.html)). It is the most specific and most detailed concept in this model. The concept of a radiotherapy *treatment plan* includes the lowest level of machine instructions to control a treatment device. However, these details are not modelled in the FHIR representation of a radiotherapy treatment plan. Instead, the respective ServiceRequest (Radiotherapy Treatment Plan) includes an extension to reference the DICOM artifacts that define the machine geometry and motion during treatment. The Procedure that records the delivered treatment (Radiotherapy Treated Plan), references DICOM treatment records that contain all machine details.
+
 The relationship between a course, phases, and treatment plans is exemplified in the following diagram.
 
 <img src="BreastTreatmentSummary.png" alt="RT Summary Example" width="900px" style="float:none; margin: 0px 0px 0px 0px;" />
@@ -43,11 +47,13 @@ In this example, the radiotherapy course encompasses three phases. The course su
 
 At the phase level, each phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same volume or volumes. Because of their spatial relationship or the technique used, all volumes do not necessarily receive the same total dose during a phase. Phases may occur in parallel, overlap, or in alternating temporal patterns.
 
-At the lowest level of detail, Treatment Plans define the parameters for treatment delivery. The FHIR profiles on the level of treatment plans include references to DICOM artifacts (DICOM treatment plans and DICOM treatment records) that contain treatment parameters down to the machine geometry and motion during treatment.
-
 Multiple treatment plans may be used to implement the same phase. Plans may be adapted during a phase due to changes in tumor shape, patient anatomy, or side effects. In the extreme case of adaptive treatment with daily adaptation, a new plan may be created for each fraction of a phase.
 
-The following figure shows the resource profiles based on resource type ServiceRequest (left column) that document which treatment was prescribed on different levels (Radiotherapy Plan Prescription, Radiotherapy Phase Prescription, Radiotherapy Course Prescription). Other profiles that are also based on ServiceRequest (middle column) describe which treatment plans were prepared to fulfill the prescriptions. Treatment plans can be summarized on different levels to cover a single plan (Radiotherapy Treatment Plan), the sum of plans for a complete phase (Radiotherapy Planned Phase), or the sum of plans for the entire course of treatment (Radiotherapy Planned Course). The profiles based on Procedure (right column) are used to document the treatment that was actually performed on different levels of detail (Radiotherapy Course Summary, Radiotherapy Treated Phase, Radiotherapy Treated Plan).
+The following figure shows the resource profiles to represent the radiotherapy requests and procedures at different levels. Note that the radiotherapy prescriptions and plans are instances of patient specific requests, not templates or protocols. They are therefore modelled as ServiceRequest. These requests may be embedded in a higher level CarePlan, which coordinates various activities of the radiotherapy workflow, but radiotherapy CarePlans are not scope of this IG.
+
+- *Radiotherapy Prescriptions* (left column) are *original orders* (ServiceRequest.intent = original-order) for radiotherapy. Prescriptions can request treatment with a single Treatment Plan (Radiotherapy Plan Prescription), or can represent a cumulative request for a Phase of treatment (Radiotherapy Phase Prescription) or for a complete Course (Radiotherapy Course Prescription).
+- *Radiotherapy Plans* (middle column) are *filler orders* (ServiceRequest.intent = filler-order) that represent how the radiotherapy system fulfills the prescribed radiotherapy treatment. A ServiceRequest can request a single plan (Radiotherapy Treatment Plan), or the sum of plans for a complete phase (Radiotherapy Planned Phase), or the sum of plans for the entire course of treatment (Radiotherapy Planned Course).
+- *Radiotherapy Procedures* (right column) document the treatment that was performed on different levels of detail (Radiotherapy Course Summary, Radiotherapy Treated Phase, Radiotherapy Treated Plan).
 
 <img src="RTResourcesHighLevel.svg" alt="RT Summary Resources Model" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
