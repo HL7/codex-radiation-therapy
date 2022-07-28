@@ -156,7 +156,6 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
-* category[+] = #does_this_pass_validation
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
@@ -181,6 +180,8 @@ Usage: #example
 * subject = Reference(Patient-XRTS-01-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
+* category[required] = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
+* category[1] = #does_this_pass_validation
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
