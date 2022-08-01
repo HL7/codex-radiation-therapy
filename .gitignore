@@ -1,0 +1,26 @@
+# Temporary folders #
+#####################
+fsh-generated
+temp
+template
+output
+
+# Include input-cache/ folder for convenience, but none of its contents
+#######################################################################
+input-cache/*
+!input-cache/.gitkeep
+
+# OS generated files #
+######################
+Thumbs.db
+.DS_Store
+.DS_Store?
+
+# backup files #
+################
+*.bak
+
+# IDE generated files #
+#######################
+.vscode
+.idea
