@@ -173,7 +173,7 @@ While not normally necessary, you can delete the following folders to get a clea
 
 ### Credits
 
-The authors gratefully acknowledge the leadership of Chuck Mayo, PhD, University of Michigan/AAPM, Randi Kudner, MFA, ASTRO, John Kildea, PhD, McGill University/COMP, Mary Feng, MD, University of California San Francisco/ASTRO, James Hayman, MD, University of Michigan/ASTRO, Rishabh Kapoor, PhD, Virginia Commonwealth University/AAPM, Anthony DiDonato, MS, MITRE, Michelle Casagni, MS, MITRE, Sharon Sebastian, RN-BC, MS, MITRE, Saul A. Kravitz, PhD, MITRE, Su Chen, MD, MITRE, Steve Bratt, PhD, MITRE, Martin von Siebenthal, PhD, Varian, John Christodouleas, MD, University of Pennsylvania/Elekta.
+The authors gratefully acknowledge the leadership of Chuck Mayo, PhD, University of Michigan/AAPM; Randi Kudner, MFA, ASTRO; John Kildea, PhD, McGill University/COMP; Mary Feng, MD, University of California San Francisco/ASTRO; James Hayman, MD, University of Michigan/ASTRO; Rishabh Kapoor, PhD, Virginia Commonwealth University/AAPM; Anthony DiDonato, MS, MITRE; Michelle Casagni, MS, MITRE; Sharon Sebastian, RN-BC, MS, MITRE; Saul A. Kravitz, PhD, MITRE; Su Chen, MD, MITRE; Steve Bratt, PhD, MITRE; Martin von Siebenthal, PhD, Varian; John Christodouleas, MD, University of Pennsylvania/Elekta.
 
 The authors recognize HL7 sponsorship and input from [Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
 
