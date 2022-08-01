@@ -11,7 +11,7 @@ The CodeX Radiation Therapy Implementation Guide (IG) describes how to represent
 Once structured data is captured during the care process, that data can be made available for data sharing and reuse.
 The CodeX RT IG leverages FHIR and FHIR Application Programming Interfaces (APIs) to promote interoperable exchange of RT information between an ROIS and other health information systems such as an electronic health record (EHR). The CodeX RT IG has defined radiotherapy FHIR profiles for vendors to implement in their systems and share, via FHIR API, with other FHIR-enabled radiation oncology information systems or EHRs.
 
-The Codex RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 2 (STU 2)](http://hl7.org/fhir/us/mcode/), leveraging mCODE's [Radiotherapy Course Summary](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-volume.html) resource profiles, and associated value sets and extensions.  The mCODE STU 2 IG also includes a [Radiotherapy Glossary](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
+The Codex RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 2 (STU 2)](http://hl7.org/fhir/us/mcode/STU2), leveraging mCODE's [Radiotherapy Course Summary](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-volume.html) resource profiles, and associated value sets and extensions.  The mCODE STU 2 IG also includes a [Radiotherapy Glossary](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
 
 ### Actors and Use Cases
 The intended actors include:
@@ -33,11 +33,11 @@ A radiation oncologist generates a patient's weekly on-treatment visit (OTV) rep
 ### CodeX RT Resource Profiles
 The profiles defined in this IG cover different stages of the radiotherapy workflow at different levels of detail. A radiotherapy course systematically addresses a condition or set of related conditions. The course can include multiple sessions, can be divided into multiple phases, and can last for several months. The Radiotherapy Course Summary profile covers the treatment delivered in a treatment course and can be incrementally updated as the treatment progresses. When the treatment is completed, the latest version of the Radiotherapy Course Summary provides the entire course of treatment from beginning to end. The status element indicates whether the treatment is in progress or complete.
 
-In radiotherapy, a *phase* is a subset of a course. A phase is defined as a treatment consisting of one or more identical fractions. See the [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/glossary.html).
+In radiotherapy, a *phase* is a subset of a course. A phase is defined as a treatment consisting of one or more identical fractions. See the [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2/glossary.html).
 
 At the most detailed level, *treatment plans* define how the radiotherapy treatment is delivered.
 
-Note that in radiotherapy, a *treatment plan* represents a concrete set of treatment delivery instructions prepared for a specific patient anatomy and machine ([Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/glossary.html)). It is the most specific and most detailed concept in this model. The concept of a radiotherapy *treatment plan* includes the lowest level of machine instructions to control a treatment device. However, these details are not modelled in the FHIR representation of a radiotherapy treatment plan. Instead, the respective ServiceRequest (Radiotherapy Treatment Plan) includes an extension to reference the DICOM artifacts that define the machine geometry and motion during treatment. The Procedure that records the delivered treatment (Radiotherapy Treated Plan), references DICOM treatment records that contain all machine details.
+Note that in radiotherapy, a *treatment plan* represents a concrete set of treatment delivery instructions prepared for a specific patient anatomy and machine ([Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2/glossary.html)). It is the most specific and most detailed concept in this model. The concept of a radiotherapy *treatment plan* includes the lowest level of machine instructions to control a treatment device. However, these details are not modelled in the FHIR representation of a radiotherapy treatment plan. Instead, the respective ServiceRequest (Radiotherapy Treatment Plan) includes an extension to reference the DICOM artifacts that define the machine geometry and motion during treatment. The Procedure that records the delivered treatment (Radiotherapy Treated Plan), references DICOM treatment records that contain all machine details.
 
 The relationship between a course, phases, and treatment plans is exemplified in the following diagram.
 
@@ -69,13 +69,13 @@ The workflow and transactions for exchanging RT information are documented in th
 
 ### Development History
 
-In late 2020, the American Society for Radiation Oncology (ASTRO) and the American Association of Physicists in Medicine (AAPM), with the assistance of the MITRE Corporation, proposed a use case under the CodeX FHIR Accelerator around standardizing RT information using the FHIR standard to semantically define a patient’s radiation therapy end-of-treatment information. This group of stakeholder organizations began working on defining RT concepts, leveraging mCODE and FHIR, to model the relationship between groups of clinical concepts that comprise work products vital to radiation oncology care.
+In late 2020, the American Society for Radiation Oncology (ASTRO) and the American Association of Physicists in Medicine (AAPM), with the assistance of The MITRE Corporation, proposed a use case under the CodeX FHIR Accelerator around standardizing RT information using the FHIR standard to semantically define a patient’s radiation therapy end-of-treatment information. This group of stakeholder organizations began working on defining RT concepts, leveraging mCODE and FHIR, to model the relationship between groups of clinical concepts that comprise work products vital to radiation oncology care.
 
 In January 2021, the CodeX Radiation Therapy Treatment Data (RTTD) project approached the Integrating the Healthcare Enterprise – Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Work Group about aligning the data model and FHIR structures with the technical architecture and transactions being defined in the XRTS technical specification document. The CodeX RTTD and XRTS teams aligned visions and began working together to adopt the CodeX RT Implementation Guide.
 
 In support of this collaboration, mCODE was updated in its second version (STU 2) to include new radiotherapy profiles, [Radiotherapy Course Summary](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.
 
-- mCODE STU 2: <https://hl7.org/fhir/us/mcode/>
+- mCODE STU 2: <https://hl7.org/fhir/us/mcode/STU2>
 
 Radiotherapy specifications beyond what was considered “minimal” (which is a tenet of mCODE) are published in this CodeX RT IG.
 
@@ -104,7 +104,7 @@ In addition to information obtained from subject matter experts, several existin
 - IHE Systematized Nomenclature of Medicine – Clinical Terms (SNOMED CT) Set (<https://wiki.ihe.net/index.php/SNOMED_CT_IHE_Set>)
 - Global Patient Set (GPS). The project team intends to include values from the IHE SNOMED CT Set into the SNOMED GPS.
 
-In addition, material was drawn from the [US Core Implementation Guide](http://hl7.org/fhir/us/core/) and the [mCODE Implementation Guide](http://hl7.org/fhir/us/mcode/).
+In addition, material was drawn from the [US Core Implementation Guide](http://hl7.org/fhir/us/core/) and the [mCODE Implementation Guide](http://hl7.org/fhir/us/mcode/STU2).
 
 ### Building the IG
 
