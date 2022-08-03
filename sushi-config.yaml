@@ -62,9 +62,6 @@ pages:
     title: Change Log
   downloads.md:
     title: Download Specification
-  glossary.md:
-    title: Radioterapy Glossary
-
 menu:
   Home: index.html
   FHIR Artifacts:
@@ -76,10 +73,7 @@ menu:
     Capability Statements: capabilitystatements.html
     Complete Listing: artifacts.html
   More:
-    Basic Examples: basic_examples.html
-    Extended Example: examples.html
-    Data Dictionary: dictionary.html
-    Radiotherapy Glossary:  glossary.html
+    Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
     Change Log: change_log.html
     Download Specification: downloads.html
     Other Versions: http://hl7.org/fhir/us/codex-radiation-therapy/history.html
