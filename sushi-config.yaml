@@ -67,10 +67,6 @@ pages:
 
 menu:
   Home: index.html
-  Conformance:
-    General Expectations: conformance-general.html
-    Profile Conformance: conformance-profiles.html
-    Terminology: terminology.html
   FHIR Artifacts:
     Profiles: artifacts.html#a-course-level-profiles
     Extensions: artifacts.html#structures-extension-definitions
