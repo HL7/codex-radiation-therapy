@@ -13,9 +13,11 @@
     },
     {
       "version": "1.0.0-ballot",
+      "date": "2022-08-12",
       "desc": "STU1 First Ballot",
-      "path": "http://build.fhir.org/ig/codex-radiation-therapy",
+      "path": "http://hl7.org/fhir/us/codex-radiation-therapy/2022Sep",
       "status": "ballot",
+      "fhirversion": "4.0.1",
       "current": true,
       "sequence": "STU 1"
     }
