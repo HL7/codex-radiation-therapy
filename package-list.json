@@ -10,6 +10,14 @@
       "path": "http://build.fhir.org/ig/codex-radiation-therapy",
       "status": "ci-build",
       "current": true
+    },
+    {
+      "version": "1.0.0-ballot",
+      "desc": "STU1 First Ballot",
+      "path": "http://build.fhir.org/ig/codex-radiation-therapy",
+      "status": "ballot",
+      "current": true,
+      "sequence": "STU 1"
     }
   ],
   "category": "Care Planning"
