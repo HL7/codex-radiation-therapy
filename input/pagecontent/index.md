@@ -107,7 +107,7 @@ In addition, material was drawn from the [US Core Implementation Guide](http://
 
 ### Building the IG
 
-"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation. You can see [the output of building the current contents of this repository here](http://build.fhir.org/ig/HL7/codex-radiation-therapy).
+"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation.
 
 If you would like to generate this locally, open command prompt window and navigate to the directory where this repository has been cloned. Then run this command:
 
