@@ -11,7 +11,7 @@ The CodeX Radiation Therapy Implementation Guide (IG) describes how to represent
 Once structured data is captured during the care process, that data can be made available for data sharing and reuse.
 The CodeX RT IG leverages FHIR and FHIR Application Programming Interfaces (APIs) to promote interoperable exchange of RT information between an ROIS and other health information systems such as an electronic health record (EHR). The CodeX RT IG has defined radiotherapy FHIR profiles for vendors to implement in their systems and share, via FHIR API, with other FHIR-enabled radiation oncology information systems or EHRs.
 
-The Codex RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 2 (STU 2)](http://hl7.org/fhir/us/mcode/), leveraging mCODE's [Radiotherapy Course Summary](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-volume.html) resource profiles, and associated value sets and extensions.  The mCODE STU 2 IG also includes a [Radiotherapy Glossary](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
+The Codex RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 2 (STU 2)](http://hl7.org/fhir/us/mcode/), leveraging mCODE's [Radiotherapy Course Summary](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-volume.html) resource profiles, and associated value sets and extensions.  The mCODE STU 2 IG also includes a [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
 
 ### Actors and Use Cases
 The intended actors include:
@@ -73,9 +73,8 @@ In late 2020, the American Society for Radiation Oncology (ASTRO) and the Americ
 
 In January 2021, the CodeX Radiation Therapy Treatment Data (RTTD) project approached the Integrating the Healthcare Enterprise – Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Work Group about aligning the data model and FHIR structures with the technical architecture and transactions being defined in the XRTS technical specification document. The CodeX RTTD and XRTS teams aligned visions and began working together to adopt the CodeX RT Implementation Guide.
 
-In support of this collaboration, mCODE was updated in its second version (STU 2) to include new radiotherapy profiles, [Radiotherapy Course Summary](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.
+In support of this collaboration, radiotherapy profiles were added to [mCODE STU2](http://hl7.org/fhir/us/mcode/STU2), [Radiotherapy Course Summary](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.
 
-- mCODE STU 2: <https://hl7.org/fhir/us/mcode/>
 
 Radiotherapy specifications beyond what was considered “minimal” (which is a tenet of mCODE) are published in this CodeX RT IG.
 
@@ -108,7 +107,7 @@ In addition, material was drawn from the [US Core Implementation Guide](http://
 
 ### Building the IG
 
-"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation. You can see [the output of building the current contents of this repository here](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/).
+"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation. You can see [the output of building the current contents of this repository here](http://build.fhir.org/ig/HL7/codex-radiation-therapy).
 
 If you would like to generate this locally, open command prompt window and navigate to the directory where this repository has been cloned. Then run this command:
 
@@ -159,16 +158,16 @@ While not normally necessary, you can delete the following folders to get a clea
         | `VS`   | ValueSets            |
 
 - The main pages in the built IG are generated from [Markdown](https://daringfireball.net/projects/markdown/) found in `input/pagecontent/`. These pages must also be included in `sushi-config.yaml` to be compiled to HTML by the IG Publisher.
-- There are a number of other important configuration options in `sushi-config.yaml` including the menu contents of the built IG and the groupings on the [Artifacts Summary page](https://build.fhir.org/ig/HL7/codexrt/artifacts.html).
+- There are a number of other important configuration options in `sushi-config.yaml` including the menu contents of the built IG and the groupings on the [Artifacts Summary page](artifacts.html).
 
 
 ### Credits
 
-The authors gratefully acknowledge the leadership of Chuck Mayo, PhD, University of Michigan/AAPM, Randi Kudner, MFA, ASTRO, John Kildea, PhD, McGill University/COMP, Mary Feng, MD, University of California San Francisco/ASTRO, James Hayman, MD, University of Michigan/ASTRO, Rishabh Kapoor, PhD, Virginia Commonwealth University/AAPM, Anthony DiDonato, MS, MITRE, Michelle Casagni, MS, MITRE, Sharon Sebastian, RN-BC, MS, MITRE, Saul A. Kravitz, PhD, MITRE, Su Chen, MD, MITRE, Steve Bratt, PhD, MITRE, Martin von Siebenthal, PhD, Varian, John Christodouleas, MD, University of Pennsylvania/Elekta.
+The authors gratefully acknowledge the contributions of Chuck Mayo, PhD, University of Michigan/AAPM, Randi Kudner, MFA, ASTRO, John Kildea, PhD, McGill University/COMP, Mary Feng, MD, University of California San Francisco/ASTRO, James Hayman, MD, University of Michigan/ASTRO, Rishabh Kapoor, PhD, Virginia Commonwealth University/AAPM, John Christodouleas, MD, University of Pennsylvania/Elekta, Michelle Casagni, MS, MITRE, Su Chen, MD, MITRE, Anthony DiDonato, MS, MITRE,  Sharon Sebastian, RN-BC, MS, MITRE.
 
 The authors recognize HL7 sponsorship and input from [Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
 
-Steve Bratt leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community with a core goal of leveraging FHIR-based standards to achieve interoperability within the healthcare community to improve health for all. Capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. Max Masnick wrote the [Data Dictionary generator](https://github.com/HL7/fhir-mCODE-ig/tree/master/data-dictionary).
+Steve Bratt leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community with a core goal of leveraging FHIR-based standards to achieve interoperability within the healthcare community to improve health for all.
 
 Many organizations have been involved in the modeling and defining of the radiotherapy FHIR profiles that are defined in the CodeX RT IG: 
 
