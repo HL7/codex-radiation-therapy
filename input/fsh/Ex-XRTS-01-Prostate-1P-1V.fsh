@@ -23,6 +23,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22A-01-Common
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 
+
 Instance: RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-01 after 1 Fraction."
@@ -39,6 +40,7 @@ Usage: #example
   * extension[fractionsDelivered].valueUnsignedInt = 1
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
+* location = Reference(TreatmentLocation-1)
 
 Instance: RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V
 InstanceOf: RadiotherapyCourseSummary
