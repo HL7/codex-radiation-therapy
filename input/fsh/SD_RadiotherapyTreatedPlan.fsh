@@ -7,9 +7,12 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * ^status = #draft
 * extension contains
     DicomReference named radiotherapyDicomRecord 0..*
-* basedOn ^short = "Should Reference a Radiotherapy Treatment Plan" // http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-plan" // only Reference(RadiotherapyTreatmentPlan)
+* basedOn MS
+* basedOn ^short = "The request for this procedure"
+* basedOn only Reference(RadiotherapyPlanPrescription or RadiotherapyTreatmentPlan)
 * partOf only Reference(RadiotherapyTreatedPhase or RadiotherapyCourseSummary)
-* partOf ^definition = "The partOf element, if present, MUST reference an mCODE RadiotherapyCourseSummary-conforming Procedure resource."
+* partOf ^definition = "The RadiotherapyCourseSummary or RadiotherapyTreatedPhase that this RadiotherapyTreatedPlan is a component of."
+* partOf MS
 * code = SnomedRequestedCS#USCRS-33951 "Radiotherapy Treatment Plan (therapy/regime)"
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered with this plan in the top-level extension also named fractionDelivered."
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this plan, not including dose from any other plan."
