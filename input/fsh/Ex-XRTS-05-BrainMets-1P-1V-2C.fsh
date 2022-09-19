@@ -37,6 +37,7 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 500
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2020-09-07T13:21:17+01:00"
 
@@ -54,6 +55,7 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2500
   * extension[fractionsDelivered].valueUnsignedInt = 5
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2020-09-14T13:21:17+01:00"
 
@@ -94,6 +96,7 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2000
   * extension[fractionsDelivered].valueUnsignedInt = 5
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-24T13:21:17+01:00"
 

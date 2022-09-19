@@ -15,16 +15,19 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
   * extension[totalDoseDelivered].valueQuantity.value = 360
   * extension[fractionsDelivered].valueUnsignedInt = 2
+  * extension[uniformFractionation].valueBoolean = true
 // Target Volume "Pelv Ns"
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
   * extension[totalDoseDelivered].valueQuantity.value = 360
   * extension[fractionsDelivered].valueUnsignedInt = 2
+  * extension[uniformFractionation].valueBoolean = false
 // Target Volume "Sem Vs"
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[totalDoseDelivered].valueQuantity.value = 360
   * extension[fractionsDelivered].valueUnsignedInt = 2
+  * extension[uniformFractionation].valueBoolean = true
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
 * identifier.system = VarianRadiotherapyCourseId //Use same id as for Course
 * identifier.value = "Prostate-2Phases"

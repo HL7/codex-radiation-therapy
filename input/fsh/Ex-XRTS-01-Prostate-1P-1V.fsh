@@ -38,6 +38,7 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 200
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 * location = Reference(TreatmentLocation-1)
@@ -56,6 +57,7 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
   * extension[fractionsDelivered].valueUnsignedInt = 2
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-07T13:21:17+01:00"
 

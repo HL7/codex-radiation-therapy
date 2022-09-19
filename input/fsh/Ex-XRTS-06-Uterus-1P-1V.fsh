@@ -43,6 +43,7 @@ Usage: #example
     * valueReference.display = "Uterus"
   * extension[totalDoseDelivered].valueQuantity.value = 600
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
@@ -60,6 +61,7 @@ Usage: #example
     * valueReference.display = "Uterus"
   * extension[totalDoseDelivered].valueQuantity.value = 3000
   * extension[fractionsDelivered].valueUnsignedInt = 5
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-20T13:21:17+01:00"
 

@@ -10,6 +10,8 @@ Whenever new contributions in the scope of the same Course are delivered, this r
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
     RadiotherapyTreatmentDevice named radiotherapyTreatmentDevice 0..* MS and
     RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
+* extension[doseDeliveredToVolume].extension contains
+    UniformFractionation named uniformFractionation 1..1 MS
 * basedOn MS
 * basedOn ^short = "Should Reference a RadiotherapyPlannedCourse" //and/or prescription? only Reference(RadiotherapyCoursePrescription)
 
