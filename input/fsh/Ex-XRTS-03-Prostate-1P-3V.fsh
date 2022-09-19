@@ -73,6 +73,7 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 800
   * extension[fractionsDelivered].valueUnsignedInt = 4
+  * extension[uniformFractionation].valueBoolean = true
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-02-PelvNs)
