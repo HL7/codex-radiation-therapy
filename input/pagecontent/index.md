@@ -64,7 +64,6 @@ The hierarchical and prescribing relationships among the profiles defined within
 
 <img src="relationshipsBetweenProfiles.png" alt="Relationship Between Profiles" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
-
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
 
