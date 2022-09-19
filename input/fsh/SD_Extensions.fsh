@@ -181,6 +181,15 @@ Description: "Radiotherapy Treatment Applicator Type."
 * value[x] only CodeableConcept
 * value[x] from ApplicatorTypesVS (extensible)
 
+Extension: UniformFractionation
+Id: codexrt-radiotheraphy-uniform-fractionation
+Title: "Uniform Fractionation"
+Description: "Uniform Fraction is true if fractionation was unform, false if fractionation was mixed."
+* . ^short = "Uniform Fractionation"
+* value[x] ^short = "Uniform Fractionation Was Used"
+* value[x] only boolean
+
+
 // ValueSet: RadiotherapyTreatmentDeviceTypeVS
 // Id: codex-radiotherapy-treatment-device-types-vs
 // Title: "Radiotherapy Treatment Device Type"
