@@ -8,4 +8,6 @@ Description: "A Radiotherapy Planned Phase is the summary over all Radiotherapy 
 * insert RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * ^status = #draft
 * code = SnomedRequestedCS#USCRS-33527 "Radiotherapy Treatment Phase (therapy/regime)"
-* basedOn ^short = "Should Reference a Radiotherapy Phase Prescription and the Radiotherapy Planned Course to which this Phase belongs."
+* basedOn MS
+* basedOn ^short = "RadiotherapyPhasePrescription that this PlannedPhase fills,  or RadiotherapyPlannedCourse that this PlannedPhase elaborates"
+* basedOn only Reference(RadiotherapyPhasePrescription or RadiotherapyPlannedCourse)
