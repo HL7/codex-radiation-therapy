@@ -7,8 +7,8 @@ Description: "Radiotherapy Course Prescription example from Codex RTTD collectio
 Usage: #example
 // * id = "RadiotherapyCoursePrescription-101-RTTD-BilateralBreast" //id of the FHIR Resource
 * meta.profile = Canonical(RadiotherapyCoursePrescription)
-* extension[treatment-intent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[treatment-intent].valueCodeableConcept.text = "Curative"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[treatmentIntent].valueCodeableConcept.text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -18,17 +18,17 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
 // Prescription Target Site "Left Breast"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
   * extension[totalDose].valueQuantity.value = 5000
   * extension[fractions].valuePositiveInt = 25
 // Prescription Target Site "Left Breast Boost"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[totalDose].valueQuantity.value = 6000
   * extension[fractions].valuePositiveInt = 30
 // Prescription Target Site "Right Breast"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[totalDose].valueQuantity.value = 5000
   * extension[fractions].valuePositiveInt = 25
@@ -58,14 +58,14 @@ Usage: #example
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
-* extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
+* extension[radiotherapyFractionsPrescribed].valuePositiveInt = 25
 // Prescription Target Site "Left Breast"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000
 // Prescription Target Site "Left Breast Boost"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000
@@ -92,9 +92,9 @@ Usage: #example
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[radiotherapy-fractions-prescribed].valuePositiveInt = 5
+* extension[radiotherapyFractionsPrescribed].valuePositiveInt = 5
 // Prescription Target Site "Left Breast Boost"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 1000
@@ -120,9 +120,9 @@ Usage: #example
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
+* extension[radiotherapyFractionsPrescribed].valuePositiveInt = 25
 // Prescription Target Site "Right Breast"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000

@@ -196,14 +196,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 5
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapySessions].valueUnsignedInt = 5
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-01-BrainMets)
     * valueReference.display = "Brain Mets"
@@ -229,14 +229,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 5
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapySessions].valueUnsignedInt = 5
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-02-BrainMets)
     * valueReference.display = "Brain Mets"
@@ -267,8 +267,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 5
-* extension[radiotherapy-dose-planned-to-volume]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
+* extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-01-BrainMets)
     * valueReference.display = "Brain Mets"
@@ -299,8 +299,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 5
-* extension[radiotherapy-dose-planned-to-volume]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
+* extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-02-BrainMets)
     * valueReference.display = "Brain Mets"

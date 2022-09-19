@@ -171,26 +171,26 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 4
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapySessions].valueUnsignedInt = 4
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDose].valueQuantity.value = 800
   * extension[fractions].valuePositiveInt = 4
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[totalDose].valueQuantity.value = 720
   * extension[fractions].valuePositiveInt = 4
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-03-SemVs)
     * valueReference.display = "SemVs"
@@ -223,20 +223,20 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 4
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 720
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-03-SemVs)
     * valueReference.display = "SemVs"

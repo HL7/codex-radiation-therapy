@@ -63,13 +63,13 @@ RuleSet: RadiotherapyPlansCommon
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * insert RadiotherapyPlansCommon
 * extension contains
-    RadiotherapyFractionsPlanned named radiotherapy-fractions-planned 1..1 MS and
-    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS and
-    RadiotherapyReasonForRevision named radiotherapy-reason-for-revision 0..1 MS
-* extension[radiotherapy-dose-planned-to-volume]
+    RadiotherapyFractionsPlanned named radiotherapyFractionsPlanned 1..1 MS and
+    RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS and
+    RadiotherapyReasonForRevision named radiotherapyReasonForRevision 0..1 MS
+* extension[radiotherapyDosePlannedToVolume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
-  * extension[fractions] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-planned. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
+  * extension[fractions] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
 * occurrenceTiming only Timing
 * occurrenceTiming MS
   * repeat
@@ -82,13 +82,13 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
 * extension contains
-    RadiotherapyFractionsPrescribed named radiotherapy-fractions-prescribed 1..1 MS and
-    RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS and
-    RadiotherapyReasonForRevision named radiotherapy-reason-for-revision 0..1 MS
-* extension[radiotherapy-dose-prescribed-to-volume]
+    RadiotherapyFractionsPrescribed named radiotherapyFractionsPrescribed 1..1 MS and
+    RadiotherapyDosePrescribedToVolume named radiotherapyDosePrescribedToVolume 0..* MS and
+    RadiotherapyReasonForRevision named radiotherapyReasonForRevision 0..1 MS
+* extension[radiotherapyDosePrescribedToVolume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions."
-  * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-prescribed."
+  * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapyFractionsPrescribed."
 * occurrenceTiming only Timing
 * occurrenceTiming MS
   * repeat
