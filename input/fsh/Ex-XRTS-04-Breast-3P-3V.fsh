@@ -39,6 +39,7 @@ Usage: #example
     * valueReference.display = "Left Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 300
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 // Target Site "Left Breast Boost"
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -46,6 +47,7 @@ Usage: #example
     * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 300
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
@@ -67,6 +69,7 @@ Usage: #example
     * valueReference.display = "Left Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
   * extension[fractionsDelivered].valueUnsignedInt = 3
+  * extension[uniformFractionation].valueBoolean = true
 // Target Site "Left Breast Boost"
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -74,6 +77,7 @@ Usage: #example
     * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 1700
   * extension[fractionsDelivered].valueUnsignedInt = 7
+  * extension[uniformFractionation].valueBoolean = true
 // Target Site "Right Breast"
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -81,6 +85,7 @@ Usage: #example
     * valueReference.display = "Right Breast"
   * extension[totalDoseDelivered].valueQuantity.value = 900
   * extension[fractionsDelivered].valueUnsignedInt = 3
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-17T13:21:17+01:00"
 

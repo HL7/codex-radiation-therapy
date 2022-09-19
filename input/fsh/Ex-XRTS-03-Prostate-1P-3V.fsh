@@ -40,18 +40,21 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 200
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 180
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 200
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
@@ -76,12 +79,14 @@ Usage: #example
     * valueReference.display = "PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 720
   * extension[fractionsDelivered].valueUnsignedInt = 4
+  * extension[uniformFractionation].valueBoolean = true
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22A-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 800
   * extension[fractionsDelivered].valueUnsignedInt = 4
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
 
