@@ -144,33 +144,16 @@ Description: "A Reference to a DICOM SOP Instance."
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
 
-Extension: RadiotherapyTreatmentDevice
-Id: codexrt-radiotheraphy-treatment-device
+Extension: RadiotherapyTreatmentDeviceExtension
+Id: codexrt-radiotheraphy-treatment-device-extension
 Title: "Treatment Device"
 Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
 Could be used for a LINAC (external beam) or an Afterloader (brachytherapy).   The device is specified
 by its manufacturer and model number."
 * . ^short = "Treatment Device"
-* value[x] 0..0
-* extension contains
-  RadiotherapyTreatmentDeviceManufacturer named manufacturer 1..1 and
-  RadiotherapyTreatmentDeviceModel named model 1..1
+* valueReference 1..1
+* value[x] only Reference(RadiotherapyTreatmentDevice)
 
-Extension: RadiotherapyTreatmentDeviceManufacturer
-Id: codexrt-radiotheraphy-treatment-device-manufacturer
-Title: "Treatment Device Manufacturer"
-Description: "The manufacturer of a device used for delivering radiotherapy."
-* . ^short = "Treatment Device Manufacturer"
-* value[x] ^short = "Treatment Device Manufacturer"
-* value[x] only string
-
-Extension: RadiotherapyTreatmentDeviceModel
-Id: codexrt-radiotheraphy-treatment-device-model
-Title: "Treatment Device Model"
-Description: "The model number of a device used for delivering radiotherapy.."
-* . ^short = "Treatment Device Model"
-* value[x] ^short = "Treatment Device Model"
-* value[x] only string
 
 Extension: RadiotherapyTreatmentApplicatorType
 Id: codexrt-radiotheraphy-treatment-applicator-type
