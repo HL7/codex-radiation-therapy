@@ -7,6 +7,9 @@ Description: "A Radioherapy Phase Prescription is a request for one series of fr
 and prescribe dose to multiple targets."
 * insert RadiotherapyPhaseAndPlanPrescriptionCommon
 * code = SnomedRequestedCS#USCRS-33527 "Radiotherapy Treatment Phase (therapy/regime)"
-* basedOn ^short = "Should Reference the Radiotherapy Course Prescription to which this Phase belongs if it exists."
-* basedOn only Reference(RadiotherapyCoursePrescription)
 * basedOn MS
+* insert BasedOnSlicing
+* basedOn contains
+    course-prescription 0..1
+* basedOn[course-prescription] ^short = "RadiotherapyCoursePrescription that this RadiotherapyPhasePrescription fulfills."
+* basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)

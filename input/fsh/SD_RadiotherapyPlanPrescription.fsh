@@ -9,3 +9,11 @@ Description: "A Radioherapy Plan Prescription is a request for Radiotherapy trea
 * basedOn ^short = "Should Reference the Radiotherapy Phase Prescription to which this Plan belongs if it exists."
 * basedOn only Reference(RadiotherapyCoursePrescription or RadiotherapyPhasePrescription)
 * basedOn MS
+* insert BasedOnSlicing
+* basedOn contains
+    course-prescription 0..1 and
+    phase-prescription 0..1
+* basedOn[course-prescription] ^short = "RadiotherapyCoursePrescription that this RadiotherapyPlanPrescription fulfills."
+* basedOn[phase-prescription] ^short = "RadiotherapyPhasePrescription that this RadiotherapyPlanPrescription fulfills (often together with other treatment phases)."
+* basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
+* basedOn[phase-prescription] only Reference(RadiotherapyPhasePrescription)

@@ -7,6 +7,12 @@ RuleSet: CategorySlicing
 * category contains
   required 1..1
 
+RuleSet: BasedOnSlicing
+* basedOn ^slicing.discriminator.type = #profile
+* basedOn ^slicing.discriminator.path = "$this.resolve()"
+* basedOn ^slicing.rules = #open
+* basedOn ^slicing.description = "Slicing based on the profile"
+
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
 // * meta.versionId MS
