@@ -3,6 +3,7 @@ Id: snomed-requested-cs
 Title: "Requested SNOMED Codes Code System"
 Description: "Codes requested from SNOMED by mCODE, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
+* ^experimental = false
 * #USCRS-33527  "Radiotherapy Treatment Phase (therapy/regime)"
 * #USCRS-33951  "Radiotherapy Treatment Plan (therapy/regime)"
 // * #seedsonstrand "Seeds on Strand"
@@ -57,6 +58,7 @@ For photons, the maximum acceleration voltage is given in MV or kV, although tho
 * ^copyright = "This value set includes content from The Unified Code for Units of Measure (UCUM), also known as the UCUM Specification which is copyright ©1999-2021, Regenstrief Institute, Inc. All rights reserved."
 //* ^copyright = "This value set includes content from The Unified Code for Units of Measure (UCUM), also known as the \“UCUM Specification,\” which is copyright ©1999-2021, Regenstrief Institute, Inc. All rights reserved."
 * ^status = #draft
+* ^experimental = false
 * UCUM#MeV "megaelectronvolt"
 * UCUM#MV "megavolt"
 * UCUM#kV "kilovolt"
