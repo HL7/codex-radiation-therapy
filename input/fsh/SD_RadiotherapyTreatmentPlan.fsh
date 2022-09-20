@@ -11,7 +11,7 @@ Description: "A Radiotherapy Treatment Plan resource describes the treatment tha
 * extension[radiotherapyDicomPlan] ^definition = "Reference to a DICOM SOP instance representing a Treatment Plan such as RT Plan or RT Ion Plan."
 * basedOn MS
 * basedOn ^slicing.discriminator.type = #profile
-* basedOn ^slicing.discriminator.path = "$this"
+* basedOn ^slicing.discriminator.path = "$this.resolve()"
 * basedOn ^slicing.rules = #open
 * basedOn ^slicing.description = "Slicing based on the profile"
 * basedOn contains

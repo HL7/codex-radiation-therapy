@@ -6,9 +6,7 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * insert RadiotherapyTreatedPhaseAndPlanCommon
 * ^status = #draft
 * extension contains
-<<<<<<< HEAD
     DicomReference named radiotherapyDicomRecord 0..*
-
 * basedOn MS
 * basedOn ^short = "The request for this procedure"
 * basedOn only Reference(RadiotherapyPlanPrescription or RadiotherapyTreatmentPlan)
