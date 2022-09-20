@@ -3,6 +3,7 @@ Id: codex-radiotherapy-isotopes
 Title: "Radiotherapy Isotopes"
 Description: "Isotopes Used in Radiotherapy"
 * insert SCTCopyright
+* ^experimental = false
 // include all cesium isotopes
 * SCT#13237009 "Cesium-131 (substance)"
 * SCT#55117002 "Cesium-137 (substance)"
