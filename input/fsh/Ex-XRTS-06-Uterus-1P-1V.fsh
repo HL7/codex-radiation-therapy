@@ -127,14 +127,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 5
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapySessions].valueUnsignedInt = 5
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
     * valueReference.display = "Uterus"
@@ -165,8 +165,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 5
-* extension[radiotherapy-dose-planned-to-volume]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
+* extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
     * valueReference.display = "Uterus"

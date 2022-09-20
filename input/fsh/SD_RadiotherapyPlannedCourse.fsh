@@ -6,10 +6,10 @@ Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to del
 * ^status = #draft
 * insert RadiotherapyPlansCommon
 * extension contains
-    $mCODEProcedureIntent named treatment-intent 0..1 MS and
-    $mCODERadiotherapySessions named radiotherapy-sessions 0..1 MS and
-    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS
-* extension[radiotherapy-dose-planned-to-volume]
+    $mCODEProcedureIntent named treatmentIntent 0..1 MS and
+    $mCODERadiotherapySessions named radiotherapySessions 0..1 MS and
+    RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS
+* extension[radiotherapyDosePlannedToVolume]
   * extension[fractionDose] ^short = "Not used in this profile. See Planned Phase for detailed Fractionation."
   * extension[fractionDose] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all Fractions in which this volume receives dose."
   * extension[fractionDose] 0..0

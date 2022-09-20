@@ -231,7 +231,7 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
@@ -240,23 +240,23 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 8
+* extension[radiotherapySessions].valueUnsignedInt = 8
 // Target Site "Left Breast"
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-01-LeftBreast)
     * valueReference.display = "Left Breast"
   * extension[totalDose].valueQuantity.value = 900
   * extension[fractions].valuePositiveInt = 3
 // Target Site "Left Breast Boost"
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
   * extension[totalDose].valueQuantity.value = 1700
   * extension[fractions].valuePositiveInt = 7
 // Target Site "Right Breast"
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-03-RightBreast)
     * valueReference.display = "Right Breast"
@@ -287,14 +287,14 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 3
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 3
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-01-LeftBreast)
     * valueReference.display = "Left Breast"
   * extension[fractionDose].valueQuantity.value = 300
   * extension[totalDose].valueQuantity.value = 900
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
@@ -325,8 +325,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 3
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 3
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-03-RightBreast)
     * valueReference.display = "Right Breast"
@@ -357,8 +357,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 4
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost)
     * valueReference.display = "Left Breast Boost"
