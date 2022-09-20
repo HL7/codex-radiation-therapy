@@ -152,7 +152,7 @@ Could be used for a LINAC (external beam) or an Afterloader (brachytherapy).   T
 by its manufacturer and model number."
 * . ^short = "Treatment Device"
 * valueReference 1..1
-* value[x] only Reference(RadiotherapyTreatmentDevice)
+* valueReference only Reference(RadiotherapyTreatmentDevice)
 
 
 Extension: RadiotherapyTreatmentApplicatorType
