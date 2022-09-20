@@ -194,7 +194,6 @@ Description: "Applicator Types Used in Brachytherapy"
 * SCT#228778008 "Plaque source (physical object)"
 * SCT#228768005 "Seeds source (physical object)"
 
-
 Extension: RadiotherapyReasonForRevision
 Id: codexrt-radiotheraphy-reason-for-revision
 Title: "Reason for Revision"
