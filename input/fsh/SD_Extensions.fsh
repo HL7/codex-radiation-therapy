@@ -178,6 +178,7 @@ Id: codex-radiotherapy-applicator-types-vs
 Title: "Brachytherapy Applicator Types"
 Description: "Applicator Types Used in Brachytherapy"
 * insert SCTCopyright
+* ^experimental = false
 * codes from system ApplicatorTypesCS
 * SCT#19923001 "Catheter, device (physical object)"
 * SCT#228771002 "Needles source (physical object)"
