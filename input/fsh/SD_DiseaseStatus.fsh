@@ -51,7 +51,7 @@ Description: "Extended example: example showing disease status (patient's condit
 * effectiveDateTime = "2018-11-01"
 * performer = Reference(Practitioner-1005)
 * focus = Reference(Diagnosis-2-Prostate)
-* valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
+* valueCodeableConcept = SCT#271299001 "Patient's condition worsened (finding)"   // progression
 * valueCodeableConcept
   * extension[progressionQualifier][0]
     * valueCodeableConcept = SCT#263820005 "Nodal (qualifier value)"
