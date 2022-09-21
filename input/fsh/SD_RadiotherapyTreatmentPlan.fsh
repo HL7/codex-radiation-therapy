@@ -18,7 +18,7 @@ Description: "A Radiotherapy Treatment Plan resource describes the treatment tha
     planned-course 0..1
 * basedOn[plan-prescription] ^short = "RadiotherapyPlanPrescription that this TreatmentPlan fulfills."
 * basedOn[planned-course] ^short = "RadiotherapyPlannedCourse that this TreatmentPlan fulfills (in most cases together with other treatment plans)."
-* basedOn[planned-phase] ^short = "RadiotherapyPlannedPlannedPhase that this TreatmentPlan fulfills (in most cases together with other treatment plans)."
+* basedOn[planned-phase] ^short = "RadiotherapyPlannedPhase that this TreatmentPlan fulfills (in most cases together with other treatment plans)."
 * basedOn[plan-prescription] only Reference(RadiotherapyPlanPrescription)
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
 * basedOn[planned-phase] only Reference(RadiotherapyPlannedPhase)
