@@ -7,7 +7,10 @@ Description: "Disease Status Reported by Radiation Oncologist"
 // can't do this, so we add extension
 //  * focus only Reference($mCODEPrimaryCancerCondition or $mCODESecondaryCancerCondition or $mCODETumor or RadiotherapyVolume)
 * extension contains
-    RadiotherapyVolumeExtension named radiotherapyVolume 0..1
+    RadiotherapyVolumeExtension named radiotherapyVolume 0..*
+* valueCodeableConcept.extension contains
+    ProgressionQualifier named progressionQualifier 0..*
+// may need invariant so that progression qualifier can only be provided if value is progressive disease
 
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
@@ -16,3 +19,47 @@ Description: "Extension providing a reference to a RadiotherapyVolume"
 * . ^short = "Radiotherapy Volume"
 * value[x] only Reference(RadiotherapyVolume)
 * value[x] 1..1
+
+Extension: ProgressionQualifier
+Id: codexrt-radiotherapy-progression-qualifier
+Title: "Disease Progression Qualifier"
+Description: "Extension providing a qualifier for a disease progression"
+* . ^short = "Progression Qualifier"
+* value[x] only CodeableConcept
+* value[x] from ProgressionQualiierVS (required)
+* value[x] 1..1
+
+ValueSet: ProgressionQualiierVS
+Id: progression-qualifier-vs
+Title: "Progression Qualifier"
+Description: "Qualifiers for Disease Progression"
+* ^experimental = false
+* SCT#80534008 "Biochemical (qualifier value)"
+* SCT#63161005 "Principal (qualifier value)"
+* SCT#255470001 "Local (qualifier value)"
+* SCT#263820005 "Nodal (qualifier value)"
+* SCT#261007001 "Distant (qualifier value)"
+
+
+Instance: cancer-disease-status-22A
+InstanceOf: RadiotherapyDiseaseStatus
+Description: "Extended example: example showing disease status (patient's condition regression)"
+* extension[evidenceType].valueCodeableConcept = SCT#363679005 "Imaging (procedure)"
+* status = #final "final"
+//* code = LNC#97509-4 "Cancer Disease Progression"
+* subject = Reference(Patient-XRTS-01-22A)
+* effectiveDateTime = "2018-11-01"
+* performer = Reference(Practitioner-1005)
+* focus = Reference(Diagnosis-2-Prostate)
+* valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
+* valueCodeableConcept
+  * extension[progressionQualifier][0]
+    * valueCodeableConcept = SCT#263820005 "Nodal (qualifier value)"
+  * extension[progressionQualifier][+]
+    * valueCodeableConcept = SCT#80534008 "Biochemical (qualifier value)"
+* extension[radiotherapyVolume][0]
+  * valueReference  = Reference(RadiotherapyVolume-03-Prostate)
+* extension[radiotherapyVolume][+]
+  * valueReference  = Reference(RadiotherapyVolume-04-PelvNs)
+* extension[radiotherapyVolume][+]
+  * valueReference  = Reference(RadiotherapyVolume-05-SemVs)
