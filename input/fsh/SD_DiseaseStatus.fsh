@@ -11,6 +11,14 @@ Description: "Disease Status Reported by Radiation Oncologist"
 * valueCodeableConcept.extension contains
     ProgressionQualifier named progressionQualifier 0..*
 // may need invariant so that progression qualifier can only be provided if value is progressive disease
+* valueCodeableConcept obeys RestrictQualifier
+
+Invariant: RestrictQualifier
+Description:  "Only allow qualifier for one value status"
+Severity: #error
+Expression: "coding.code != '271299001'
+        implies not extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-progression-qualifier').exists()"
+
 
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
