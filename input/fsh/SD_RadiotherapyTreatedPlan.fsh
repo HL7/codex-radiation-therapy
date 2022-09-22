@@ -14,7 +14,6 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * extension[fractionsDelivered] ^definition = "The number of delivered fractions of this treatment plan."
 * extension[radiotherapyDicomRecord] ^short = "DICOM Treatment Record"
 * extension[radiotherapyDicomRecord] ^definition = "Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions."
-* basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
     treatment-plan 0..1 MS and
@@ -23,7 +22,6 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * basedOn[plan-prescription] ^short = "RadiotherapyPlanPrescription that prescribed the treatment summarized in this RadiotherapyTreatedPlan."
 * basedOn[treatment-plan] only Reference(RadiotherapyTreatmentPlan)
 * basedOn[plan-prescription] only Reference(RadiotherapyPlanPrescription)
-* partOf MS
 * insert PartOfSlicing
 * partOf contains
     course-summary 0..1 MS and

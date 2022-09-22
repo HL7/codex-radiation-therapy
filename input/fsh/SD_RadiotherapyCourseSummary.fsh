@@ -12,7 +12,6 @@ Whenever new contributions in the scope of the same Course are delivered, this r
     RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * extension[doseDeliveredToVolume].extension contains
     UniformFractionation named uniformFractionation 1..1 MS
-* basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
     planned-course 0..1 MS and

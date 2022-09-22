@@ -6,7 +6,6 @@ Title: "Radiotherapy Plan Prescription"
 Description: "A Radioherapy Plan Prescription is a request for Radiotherapy treatment with a single Radiotherapy Treamtent Plan."
 * insert RadiotherapyPhaseAndPlanPrescriptionCommon
 * code = SnomedRequestedCS#USCRS-33951 "Radiotherapy Treatment Plan (therapy/regime)"
-* basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
     course-prescription 0..1 MS and

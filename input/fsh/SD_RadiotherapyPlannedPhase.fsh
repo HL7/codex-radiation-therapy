@@ -8,7 +8,6 @@ Description: "A Radiotherapy Planned Phase is the summary over all Radiotherapy 
 * insert RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * ^status = #draft
 * code = SnomedRequestedCS#USCRS-33527 "Radiotherapy Treatment Phase (therapy/regime)"
-* basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
     planned-course 0..1 MS and
