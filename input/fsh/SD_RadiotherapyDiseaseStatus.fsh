@@ -9,15 +9,15 @@ Description: "Disease Status Reported by Radiation Oncologist"
 * extension contains
     RadiotherapyVolumeExtension named radiotherapyVolume 0..*
 * valueCodeableConcept.extension contains
-    ProgressionQualifier named progressionQualifier 0..*
+    DiseaseProgressionQualifier named diseaseProgressionQualifier 0..*
 // may need invariant so that progression qualifier can only be provided if value is progressive disease
-* valueCodeableConcept obeys RestrictQualifier
+* valueCodeableConcept obeys RestrictDiseaseProgressionQualifier
 
-Invariant: RestrictQualifier
+Invariant: RestrictDiseaseProgressionQualifier
 Description:  "Only allow qualifier for one value status"
 Severity: #error
 Expression: "coding.code != '271299001'
-        implies not extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-progression-qualifier').exists()"
+        implies not extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-progression-qualifier').exists()"
 
 
 Extension: RadiotherapyVolumeExtension
@@ -28,18 +28,18 @@ Description: "Extension providing a reference to a RadiotherapyVolume"
 * value[x] only Reference(RadiotherapyVolume)
 * value[x] 1..1
 
-Extension: ProgressionQualifier
+Extension: DiseaseProgressionQualifier
 Id: codexrt-radiotherapy-progression-qualifier
 Title: "Disease Progression Qualifier"
 Description: "Extension providing a qualifier for a disease progression"
 * . ^short = "Progression Qualifier"
 * value[x] only CodeableConcept
-* value[x] from ProgressionQualiierVS (required)
+* value[x] from DiseaseProgressionQualiierVS (required)
 * value[x] 1..1
 
-ValueSet: ProgressionQualiierVS
-Id: progression-qualifier-vs
-Title: "Progression Qualifier"
+ValueSet: DiseaseProgressionQualiierVS
+Id: codexrt-disease-progression-qualifier-vs
+Title: "Disease Progression Qualifier"
 Description: "Qualifiers that describe disease progression and/or disease recurrence"
 * ^experimental = false
 * SCT#80534008 "Biochemical (qualifier value)"
@@ -61,9 +61,9 @@ Description: "Extended example: example showing disease status (patient's condit
 * focus = Reference(Diagnosis-2-Prostate)
 * valueCodeableConcept = SCT#271299001 "Patient's condition worsened (finding)"   // progression
 * valueCodeableConcept
-  * extension[progressionQualifier][0]
+  * extension[diseaseProgressionQualifier][0]
     * valueCodeableConcept = SCT#263820005 "Nodal (qualifier value)"
-  * extension[progressionQualifier][+]
+  * extension[diseaseProgressionQualifier][+]
     * valueCodeableConcept = SCT#80534008 "Biochemical (qualifier value)"
 * extension[radiotherapyVolume][0]
   * valueReference  = Reference(RadiotherapyVolume-03-Prostate)
