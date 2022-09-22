@@ -7,6 +7,18 @@ RuleSet: CategorySlicing
 * category contains
   required 1..1
 
+RuleSet: BasedOnSlicing
+* basedOn ^slicing.discriminator.type = #profile
+* basedOn ^slicing.discriminator.path = "$this.resolve()"
+* basedOn ^slicing.rules = #open
+* basedOn ^slicing.description = "Slicing based on the profile"
+
+RuleSet: PartOfSlicing
+* partOf ^slicing.discriminator.type = #profile
+* partOf ^slicing.discriminator.path = "$this.resolve()"
+* partOf ^slicing.rules = #open
+* partOf ^slicing.description = "Slicing based on the profile"
+
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
 // * meta.versionId MS
@@ -111,8 +123,6 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
     RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
-* basedOn MS
-* partOf MS
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * reasonCode MS

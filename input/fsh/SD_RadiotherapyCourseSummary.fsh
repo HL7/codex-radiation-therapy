@@ -11,7 +11,15 @@ Whenever new contributions in the scope of the same Course are delivered, this r
     RadiotherapyTreatmentDevice named radiotherapyTreatmentDevice 0..* MS and
     RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * basedOn MS
-* basedOn ^short = "Should Reference a RadiotherapyPlannedCourse" //and/or prescription? only Reference(RadiotherapyCoursePrescription)
+* insert BasedOnSlicing
+* basedOn contains
+    planned-course 0..1 and
+    course-prescription 0..1
+* basedOn[course-prescription] ^short = "RadiotherapyCoursePrescription that prescribed the treatment summarized in this RadiotherapyCourseSummary."
+* basedOn[planned-course] ^short = "RadiotherapyPlannedCourse that planned the treatment summarized in this RadiotherapyCourseSummary."
+* basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
+* basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
+
 
 // Not all values from http://hl7.org/fhir/ValueSet/event-status are expected for Radiotherapy Summaries
 // preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown
