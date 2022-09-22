@@ -58,7 +58,7 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 1340
   * extension[fractionsDelivered].valueUnsignedInt = 7
-  * extension[uniformFractionation].valueBoolean = true
+  * extension[uniformFractionation].valueBoolean = false
 * status = #completed
 * performedPeriod.end = "2021-09-17T13:21:17+01:00"
 
