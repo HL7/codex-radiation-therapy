@@ -193,6 +193,7 @@ The RTTD team also receives significant input and participation from:
 - University of Pennsylvania
 - Virginia Commonwealth University
 - IHE-RO
+- Epic
 - RaySearch
 - Elekta
 - University of California San Francisco
