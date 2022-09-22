@@ -6,6 +6,7 @@ Alias: $mCODECancerDiseaseStatus = http://hl7.org/fhir/us/mcode/StructureDefinit
 Alias: $mCODEPrimaryCancerCondition = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
 Alias: $mCODESecondaryCancerCondition = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
 Alias: $mCODETumor = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor
+
 // Extensions
 Alias: $mCODERadiotherapyModalityAndTechnique = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique
 Alias: $mCODERadiotherapyDoseDeliveredToVolume = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume

@@ -16,9 +16,8 @@ Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to del
 * code = $mCODESCT_TBD#USCRS-33529 "Radiotherapy Course of Treatment (regime/therapy)"
 * occurrencePeriod only Period
 * occurrencePeriod MS
-* basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
-    course-prescription 0..1
+    course-prescription 0..1 MS
 * basedOn[course-prescription] ^short = "RadiotherapyCoursePrescription that this RadiotherapyPlannedCourse fulfills."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
