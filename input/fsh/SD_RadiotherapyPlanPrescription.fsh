@@ -14,3 +14,4 @@ Description: "A Radioherapy Plan Prescription is a request for Radiotherapy trea
 * basedOn[phase-prescription] ^short = "RadiotherapyPhasePrescription that this RadiotherapyPlanPrescription fulfills (often together with other treatment phases)."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * basedOn[phase-prescription] only Reference(RadiotherapyPhasePrescription)
+* replaces only Reference(RadiotherapyPlanPrescription)
