@@ -10,6 +10,6 @@ and prescribe dose to multiple targets."
 * basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
-    course-prescription 0..1
+    course-prescription 0..1 MS
 * basedOn[course-prescription] ^short = "RadiotherapyCoursePrescription that this RadiotherapyPhasePrescription fulfills."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
