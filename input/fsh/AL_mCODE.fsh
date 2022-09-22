@@ -2,6 +2,7 @@
 Alias: $mCODECancerPatient = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
 Alias: $mCODERadiotherapyCourseSummary = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary
 Alias: $mCODERadiotherapyVolume = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+Alias: $mCODEPrimaryCancerCondition = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
 
 // Extensions
 Alias: $mCODERadiotherapyModalityAndTechnique = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique
