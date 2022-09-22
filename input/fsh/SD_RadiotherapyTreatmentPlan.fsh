@@ -21,3 +21,4 @@ Description: "A Radiotherapy Treatment Plan resource describes the treatment tha
 * basedOn[plan-prescription] only Reference(RadiotherapyPlanPrescription)
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
 * basedOn[planned-phase] only Reference(RadiotherapyPlannedPhase)
+* replaces only Reference(RadiotherapyTreatmentPlan)
