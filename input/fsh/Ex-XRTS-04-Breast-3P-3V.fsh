@@ -77,7 +77,7 @@ Usage: #example
     * valueReference.display = "Left Breast Boost"
   * extension[totalDoseDelivered].valueQuantity.value = 1700
   * extension[fractionsDelivered].valueUnsignedInt = 7
-  * extension[uniformFractionation].valueBoolean = true
+  * extension[uniformFractionation].valueBoolean = false
 // Target Site "Right Breast"
 * extension[doseDeliveredToVolume][+]
   * extension[volume]

@@ -167,7 +167,7 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[totalDoseDelivered].valueQuantity.value = 6000
   * extension[fractionsDelivered].valueUnsignedInt = 30
-  * extension[uniformFractionation].valueBoolean = true
+  * extension[uniformFractionation].valueBoolean = false
 // Prescription Target Site "Right Breast"
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)

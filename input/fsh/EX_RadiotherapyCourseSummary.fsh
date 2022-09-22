@@ -21,7 +21,7 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
   * extension[totalDoseDelivered].valueQuantity.value = 360
   * extension[fractionsDelivered].valueUnsignedInt = 2
-  * extension[uniformFractionation].valueBoolean = false
+  * extension[uniformFractionation].valueBoolean = true
 // Target Volume "Sem Vs"
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)

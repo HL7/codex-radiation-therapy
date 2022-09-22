@@ -184,7 +184,7 @@ Description: "Radiotherapy Treatment Applicator Type."
 Extension: UniformFractionation
 Id: codexrt-radiotheraphy-uniform-fractionation
 Title: "Uniform Fractionation"
-Description: "Uniform Fraction is true if fractionation was unform, false if fractionation was mixed."
+Description: "Uniform Fraction is true if fractionation was uniform, i.e. treated with same modality and dose per fraction, false if fractionation was mixed."
 * . ^short = "Uniform Fractionation"
 * value[x] ^short = "Uniform Fractionation Was Used"
 * value[x] only boolean
