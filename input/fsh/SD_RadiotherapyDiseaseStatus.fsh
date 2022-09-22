@@ -40,7 +40,7 @@ Description: "Extension providing a qualifier for a disease progression"
 ValueSet: ProgressionQualiierVS
 Id: progression-qualifier-vs
 Title: "Progression Qualifier"
-Description: "Qualifiers for Disease Progression"
+Description: "Qualifiers that describe disease progression and/or disease recurrence"
 * ^experimental = false
 * SCT#80534008 "Biochemical (qualifier value)"
 * SCT#63161005 "Principal (qualifier value)"
