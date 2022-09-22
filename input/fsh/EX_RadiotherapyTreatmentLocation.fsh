@@ -10,4 +10,6 @@ Usage: #example
 * type = v3-RoleCode#RADDX "Radiology diagnostics or therapeutics unit"
 * name = "Joe's Radiotherapy Clinic"
 * address
-  * state = "MN"
+  * line = "123 Main Street"
+  * city = "Peoria"
+  * state = "IL"

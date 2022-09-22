@@ -1,5 +1,5 @@
 ValueSet: RadiotherapyTreatmentLocationTypesVS
-Id: codex-radiotherapy-treatment-location-type-vs
+Id: codexrt-radiotherapy-treatment-location-type-vs
 Title: "Treatment Location Types VS"
 Description: "Treatment Location Types"
 * insert SCTCopyright
@@ -13,7 +13,7 @@ Description: "Treatment Location Types"
 
 Profile: RadiotherapyTreatmentLocation
 Parent: USCoreLocation
-Id: codex-radiotherapy-treatment-location
+Id: codexrt-radiotherapy-treatment-location
 Title: "Treatment Location"
 Description: "Treatment Location (USCoreLocation)"
 * name ^short = "Name of Treatment Location"
