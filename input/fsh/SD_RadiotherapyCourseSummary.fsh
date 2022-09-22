@@ -15,8 +15,8 @@ Whenever new contributions in the scope of the same Course are delivered, this r
 * basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
-    planned-course 0..1 and
-    course-prescription 0..1
+    planned-course 0..1 MS and
+    course-prescription 0..1 MS
 * basedOn[course-prescription] ^short = "RadiotherapyCoursePrescription that prescribed the treatment summarized in this RadiotherapyCourseSummary."
 * basedOn[planned-course] ^short = "RadiotherapyPlannedCourse that planned the treatment summarized in this RadiotherapyCourseSummary."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)

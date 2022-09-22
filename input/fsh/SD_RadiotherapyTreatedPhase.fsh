@@ -13,8 +13,8 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
 * basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
-    planned-phase 0..1 and
-    phase-prescription 0..1
+    planned-phase 0..1 MS and
+    phase-prescription 0..1 MS
 * basedOn[planned-phase] ^short = "RadiotherapyPlannedPhase that planned the treatment summarized in this RadiotherapyTreatedPhase."
 * basedOn[phase-prescription] ^short = "RadiotherapyPhasePrescription that prescribed the treatment summarized in this RadiotherapyTreatedPhase."
 * basedOn[planned-phase] only Reference(RadiotherapyPlannedPhase)
@@ -22,6 +22,6 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
 * partOf MS
 * insert PartOfSlicing
 * partOf contains
-    course-summary 0..1
+    course-summary 0..1 MS
 * partOf[course-summary] ^short = "RadiotherapyCourseSummary that summarizes the Course of which this RadiotherapyTreatedPhase is a part."
 * partOf[course-summary] only Reference(RadiotherapyCourseSummary)

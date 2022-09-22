@@ -17,8 +17,8 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * basedOn MS
 * insert BasedOnSlicing
 * basedOn contains
-    treatment-plan 0..1 and
-    plan-prescription 0..1
+    treatment-plan 0..1 MS and
+    plan-prescription 0..1 MS
 * basedOn[treatment-plan] ^short = "RadiotherapyTreatmentPlan that planed the treatment summarized in this RadiotherapyTreatedPlan."
 * basedOn[plan-prescription] ^short = "RadiotherapyPlanPrescription that prescribed the treatment summarized in this RadiotherapyTreatedPlan."
 * basedOn[treatment-plan] only Reference(RadiotherapyTreatmentPlan)
@@ -26,8 +26,8 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * partOf MS
 * insert PartOfSlicing
 * partOf contains
-    course-summary 0..1 and
-    treated-phase 0..1
+    course-summary 0..1 MS and
+    treated-phase 0..1 MS
 * partOf[course-summary] ^short = "RadiotherapyCourseSummary that summarizes the Course of which this RadiotherapyTreatedPlan is a part."
 * partOf[treated-phase] ^short = "RadiotherapyTreatedPhase that summarizes the Phase of which this RadiotherapyTreatedPlan is a part."
 * partOf[course-summary] only Reference(RadiotherapyCourseSummary)
