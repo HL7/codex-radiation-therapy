@@ -1,5 +1,12 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
+Instance: RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader
+InstanceOf: RadiotherapyTreatmentDevice
+Description: "ACMETurbo3000 Afterloader Device"
+Usage: #example
+* manufacturer = "ACME"
+* deviceName[model-name].name = "Turbo3000Afterloader"
+
 RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
@@ -11,9 +18,8 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = ApplicatorTypesCS#ring "Ring, device (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = ApplicatorTypesCS#tandem "Tandem, device (physical object)"
-  * extension[radiotherapyTreatmentDevice][+]
-    * extension[manufacturer].valueString = "ACME"
-    * extension[model].valueString = "Turbo3000Afterloader"
+  * extension[radiotherapyTreatmentDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * identifier[+]
   * use = #usual //Can use general identifiers. Here j ust using the same as the request on which the summary is basedOn
