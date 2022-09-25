@@ -6,10 +6,7 @@ Description: "A Summary of the Treatment Progress in a Radiotherapy Course.
 Whenever new contributions in the scope of the same Course are delivered, this resource is updated (no new resource created)."
 * insert RadiotherapyProcedureCommon
 * obeys codexrt-procedure-status
-* extension[modalityAndTechnique].extension contains
-    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDeviceExtension named radiotherapyTreatmentDevice 0..* MS and
-    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
+* insert ModalityAndTechniqueExtensions
 * extension[doseDeliveredToVolume].extension contains
     UniformFractionation named uniformFractionation 1..1 MS
 * insert BasedOnSlicing

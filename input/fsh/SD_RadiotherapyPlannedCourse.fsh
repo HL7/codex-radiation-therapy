@@ -5,6 +5,7 @@ Title: "Radiotherapy Planned Course"
 Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to deliver a complete Course."
 * ^status = #draft
 * insert RadiotherapyPlansCommon
+* insert ModalityAndTechniqueZeroToMany
 * extension contains
     $mCODEProcedureIntent named treatmentIntent 0..1 MS and
     $mCODERadiotherapySessions named radiotherapySessions 0..1 MS and
