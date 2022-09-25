@@ -1,7 +1,7 @@
 Profile: RadiotherapyCoursePrescription
 Parent: ServiceRequest
 Id: codexrt-radiotherapy-course-prescription
-Title: "Radiotherapy Course Cumulative Prescription"
+Title: "Radiotherapy Course Prescription"
 Description: "A Radiotherapy Course Prescription is a high-level request for a complete Course of Radiotherapy, which may be fulfilled by one or more Phases."
 * ^status = #draft
 * insert RadiotherapyPrescriptionsCommon
