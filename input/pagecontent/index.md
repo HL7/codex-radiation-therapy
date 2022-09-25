@@ -62,7 +62,7 @@ While treatment is in progress, a consumer of these resources can retrieve the c
 ### Relationships Between Profiles
 The hierarchical and prescribing relationships among the profiles defined within the IG are maintained using the Procedure.partOf, Procedure.basedOn, and ServiceRequest.basedOn references.  Procedure.basedOn represents the request for this procedure, whereas Procedure.partOf represents the larger event of which this procedure is a part.  Ideally, all of these references would be populated, and the references would point to  profiles the left or above each profile in the middle or bottom row.  Since sometimes elements in the middle or bottom row may be skipped, references are also allowed between profiles in the bottom row and rightmost column to profiles in the top row or leftmost column, respectively as show in this figure.
 
-<img src="relationshipsBetweenProfiles.png" alt="Relationship Between Profiles" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+<img src="relationshipsBetweenProfiles.svg" alt="Relationship Between Profiles" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
