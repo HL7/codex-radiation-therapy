@@ -64,6 +64,26 @@ The hierarchical and prescribing relationships among the profiles defined within
 
 <img src="relationshipsBetweenProfiles.png" alt="Relationship Between Profiles" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
+### Revisions or Adaptations
+
+During a Course of radiotherapy, prescriptions and plans may be changed, for example to cope with side-effects or to adapt to changes in targets or healthy anatomy.
+In this case, the radiotherapy system creates new prescriptions and plans and retires the previous prescriptions and plans.
+
+This section describes how revisions of phases or plans are covered in CodeX RT.
+
+In case of a revision or adaptation:
+- A new ServiceRequest resource (Planned Phase, Phase Prescription, Treatment Plan, or Plan Prescription) is created and refers that points to the retired one (element ‘replaces’).
+- The retired ServiceRequest is set to revoked.
+- The status of the respective Procedure (Treated Phase, or Treated Plan) is set to stopped. A new Procedure starts to document the delivery basedOn the new ServiceRequest.
+- If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure.
+- The Course level resources (Course Prescription, Planned Course, Course Summary) are updated in case of revisions or adaptations in the Course. No new Course instance is created when introducing new adapted or revised Phases or Plans in this Course.
+
+The following figure shows an example where where after 3 fractions, a revision is performed. For this a new Planned Phase is created. Further treatment is recorded in a new Treated Phase based on the new Radiotherapy Planned Phase. On the Course level, the Planned Course and the Course Summary provide the sum of all Phases.
+
+<img src="RTRevisionExampleTimeline.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+<img src="RTRevisionExampleRelations.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
 
