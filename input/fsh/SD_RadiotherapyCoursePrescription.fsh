@@ -5,6 +5,7 @@ Title: "Radiotherapy Course Cumulative Prescription"
 Description: "A Radiotherapy Course Prescription is a high-level request for a complete Course of Radiotherapy, which may be fulfilled by one or more Phases."
 * ^status = #draft
 * insert RadiotherapyPrescriptionsCommon
+* insert ModalityAndTechniqueZeroToMany
 * extension contains
     $mCODEProcedureIntent named treatmentIntent 0..1 MS and
     RadiotherapyDosePrescribedToVolume named radiotherapyDosePrescribedToVolume 0..* MS

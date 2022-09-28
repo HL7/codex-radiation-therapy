@@ -19,17 +19,27 @@ RuleSet: PartOfSlicing
 * partOf ^slicing.rules = #open
 * partOf ^slicing.description = "Slicing based on the profile"
 
+RuleSet: ModalityAndTechniqueExtensions
+* extension[modalityAndTechnique].extension contains
+    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
+    RadiotherapyTreatmentDeviceExtension named radiotherapyTreatmentDevice 0..* MS and
+    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
+
+RuleSet: ModalityAndTechniqueZeroToMany
+* extension contains
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
+* insert ModalityAndTechniqueExtensions
+
+RuleSet: ModalityAndTechniqueZeroToOne
+* extension contains
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS
+* insert ModalityAndTechniqueExtensions
+
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
 // * meta.versionId MS
 // * meta.lastUpdated MS
 * extension MS
-* extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
-* extension[modalityAndTechnique].extension contains
-    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDeviceExtension named radiotherapyTreatmentDevice 0..* MS and
-    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * identifier MS
 * identifier.system MS
 * identifier.value 1..1 MS
@@ -74,6 +84,7 @@ RuleSet: RadiotherapyPlansCommon
 
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * insert RadiotherapyPlansCommon
+* insert ModalityAndTechniqueZeroToOne
 * extension contains
     RadiotherapyFractionsPlanned named radiotherapyFractionsPlanned 1..1 MS and
     RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS and
@@ -93,6 +104,7 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 
 RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
+* insert ModalityAndTechniqueZeroToOne
 * extension contains
     RadiotherapyFractionsPrescribed named radiotherapyFractionsPrescribed 1..1 MS and
     RadiotherapyDosePrescribedToVolume named radiotherapyDosePrescribedToVolume 0..* MS and
@@ -113,14 +125,10 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * insert RadiotherapyProcedureCommon
 * obeys codexrt-procedure-status
+* insert ModalityAndTechniqueZeroToOne
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
-* extension[modalityAndTechnique].extension contains
-    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDeviceExtension named radiotherapyTreatmentDevice 0..* MS and
-    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
