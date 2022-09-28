@@ -214,18 +214,19 @@ Description: "Applicator Types Used in Brachytherapy"
 
 Extension: RadiotherapyReasonForRevisionOrAdaptation
 Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
-Title: "Reason for Revision"
+Title: "Reason for Revision or Adaptation"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
-* . ^short = "Reason for Revision"
-* value[x] ^short = "Reason for Revision"
+* . ^short = "Reason for Revision or Adaptation"
+* value[x] ^short = "Reason for Revision or Adaptation"
 * value[x] only CodeableConcept
 * value[x] from ReasonForRevisionOrAdaptationVS (required)
 
 ValueSet: ReasonForRevisionOrAdaptationVS
 Id: codex-radiotherapy-reason-for-revision-or-adaptation-vs
-Title: "Reason for Revision Value Set"
+Title: "Reason for Revision or Adaptation Value Set"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * insert SCTCopyright
 * ^experimental = false
 * SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
+* SCT#314846003 "Patient given choice of treatment (finding)"
 * codes from system ReasonForRevisionOrAdaptationCS
