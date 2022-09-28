@@ -65,7 +65,7 @@ For photons, the maximum acceleration voltage is given in MV or kV, although tho
 
 CodeSystem: ReasonForRevisionOrAdaptationCS
 Id: codex-radiotherapy-reason-for-revision-or-adaptation-cs
-Title: "Reason for Revision Code System"
+Title: "Reason for Revision or Adaptation Code System"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * ^status = #draft
 * ^caseSensitive = true

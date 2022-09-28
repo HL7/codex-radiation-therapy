@@ -16,3 +16,4 @@ Description: "A Radiotherapy Course Prescription is a high-level request for a c
 * occurrencePeriod only Period
 * occurrencePeriod MS
 * code = $mCODESCT_TBD#USCRS-33529 "Radiotherapy Course of Treatment (regime/therapy)"
+* replaces only Reference(RadiotherapyCoursePrescription)
