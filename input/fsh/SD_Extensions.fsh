@@ -203,6 +203,7 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * . ^short = "Reason for Revision or Adaptation"
 * value[x] ^short = "Reason for Revision or Adaptation"
 * value[x] only CodeableConcept
+* value[x] 1..1
 * value[x] from ReasonForRevisionOrAdaptationVS (required)
 
 ValueSet: ReasonForRevisionOrAdaptationVS
