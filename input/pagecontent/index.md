@@ -72,7 +72,7 @@ In this case, the radiotherapy system creates new prescriptions and plans and re
 This section describes how revisions of phases or plans are covered in CodeX RT.
 
 In case of a revision or adaptation:
-- A new ServiceRequest resource (Planned Phase, Phase Prescription, Treatment Plan, or Plan Prescription) is created and refers that points to the retired one (element ‘replaces’).
+- A new ServiceRequest resource (Planned Phase, Phase Prescription, Treatment Plan, or Plan Prescription) is created and refers to the retired one (element ‘replaces’).
 - The retired ServiceRequest is set to revoked.
 - The status of the respective Procedure (Treated Phase, or Treated Plan) is set to stopped. A new Procedure starts to document the delivery basedOn the new ServiceRequest.
 - If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure.
