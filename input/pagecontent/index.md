@@ -64,45 +64,35 @@ The hierarchical and prescribing relationships among the profiles defined within
 
 <img src="relationshipsBetweenProfiles.svg" alt="Relationship Between Profiles" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
-### Revisions or Adaptations
+### Revision or Adaptation
 
-During a Course of radiotherapy, prescriptions and plans may be changed, for example to cope with side-effects or to adapt to changes in targets or healthy anatomy.
-In this case, the radiotherapy system creates new prescriptions and plans and retires the previous prescriptions and plans.
+During a Course of radiotherapy, there may be changes in prescriptions and plans, for example to cope with side-effects or to adapt the treatment to changes in targets or healthy anatomy.
+In the radiotherapy community, there is no clear distinction between revision and adaptation. This IG therefore refers to 'revision or adaptation' for changes in prescriptions or plans.
+In case of such changes, the radiotherapy system creates new (successor) prescriptions and plans and retires the previous (predecessor) prescriptions and plans.
 
-This section describes how revisions of phases or plans are covered in CodeX RT.
+This section describes how revisions or adaptations are covered in this IG, starting with a revision or adaptation in a Planned Phase.
 
-In case of a revision or adaptation:
-- A new ServiceRequest resource (Planned Phase, Phase Prescription, Treatment Plan, or Plan Prescription) is created and refers to the retired one (element ‘replaces’).
-- The retired ServiceRequest is set to revoked.
-- The status of the respective Procedure (Treated Phase, or Treated Plan) is set to stopped. A new Procedure starts to document the delivery basedOn the new ServiceRequest.
-- If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure.
-- The Course level resources (Course Prescription, Planned Course, Course Summary) are updated in case of revisions or adaptations in the Course. No new Course instance is created when introducing new adapted or revised Phases or Plans in this Course.
+In case of a revision or adaptation of a Planned Phase:
+- The status of the predecessor ServiceRequest (Planned Phase) is set to revoked.
+- A new ServiceRequest resource (Planned Phase) is created, which replaces the predecessor. It refers to the predecessor using the element ‘replaces’.
+- The status of the Procedure (Treated Phase) that recorded the treatment of the revoked ServiceRequest is set to stopped. A new Procedure is created for recording the treatment that is based on the new ServiceRequest referencing the ServiceRequest using the element ‘basedOn’.
+- The revoked ServiceRequest is not changed to remove the untreated dose or fractions. This retains the information how many fractions and how much dose were initially planned, even if the ServiceRequest was revoked before completion. It is visible from the corresponding Procedure which part of the ServiceRequest was delivered before it was stopped.
+- If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure using the respective [extension](artifacts.html#structures-extension-definitions) defined in this IG.
+- The Course level resources (Planned Course, Course Summary) are updated to reflect the revision or adaptation in the Course. No new Planned Course or Course Summary instances are created.
+- The new ServiceRequest (Planned Phase) and Procedure (Treated Phase) only cover the remaining treatment that is still to be treated. The Course level resources (Planned Course and Course Summary) describe how the already delivered part of the first Phase and the remaining treatment with the new (successor) Phase add up.
 
-The following figure shows an example where where after 3 fractions, a revision is performed. For this a new Planned Phase is created. Further treatment is recorded in a new Treated Phase based on the new Radiotherapy Planned Phase. On the Course level, the Planned Course and the Course Summary provide the sum of all Phases.
+If a Phase Prescription is supported, then typically the Phase Prescription and Planned Phase are both changed. In this case, all explanations above apply to both ServiceRequests (Phase Prescription and Planned Phase). Both ServiceRequests are revoked and two new ServiceRequests (Phase Prescription and Planned Phase) are created for the changed remaining treatment.
 
-<img src="RTRevisionExampleTimeline.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+If the revision or adaptation is performed on plan level, then Treatment Plan and (if supported) Plan Prescription are revoked and new instances are created and related in the same way as described for phases above.
 
-<img src="RTRevisionExampleRelations.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
-
-### Revisions or Adaptations
-
-During a Course of radiotherapy, prescriptions and plans may be changed, for example to cope with side-effects or to adapt to changes in targets or healthy anatomy.
-In this case, the radiotherapy system creates new prescriptions and plans and retires the previous prescriptions and plans.
-
-This section describes how revisions of phases or plans are covered in CodeX RT.
-
-In case of a revision or adaptation:
-- A new ServiceRequest resource (Planned Phase, Phase Prescription, Treatment Plan, or Plan Prescription) is created and refers to the retired one (element ‘replaces’).
-- The retired ServiceRequest is set to revoked.
-- The status of the respective Procedure (Treated Phase, or Treated Plan) is set to stopped. A new Procedure starts to document the delivery basedOn the new ServiceRequest.
-- If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure.
-- The Course level resources (Course Prescription, Planned Course, Course Summary) are updated in case of revisions or adaptations in the Course. No new Course instance is created when introducing new adapted or revised Phases or Plans in this Course.
-
-The following figure shows an example where where after 3 fractions, a revision is performed. For this a new Planned Phase is created. Further treatment is recorded in a new Treated Phase based on the new Radiotherapy Planned Phase. On the Course level, the Planned Course and the Course Summary provide the sum of all Phases.
+The following figure shows an example, in which a revision of the Planned Phase is performed after 3 fractions delivered in 4 sessions. At this point, a new Planned Phase is created. The remaining treatment is recorded in a new Treated Phase. On the Course level, the Planned Course provides the sum or revoked and new Planned Phase (taking into account when the revoked Planned Phase was replaced). The Course Summary provides the sum of the stopped and new Treated Phase.
+This example is highly simplified for brevity and only a few data elements are shown. In particular, dose values are shown for only one target, whereas generally, plan and treatment summaries describe dose to multiple targets.
 
 <img src="RTRevisionExampleTimeline.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
-<img src="RTRevisionExampleRelations.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+The following figure shows the relations between the resources of the same example.
+
+<img src="RTRevisionExampleRelations.svg" alt="Phase Revision Example" width="1000px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
