@@ -119,8 +119,7 @@ groups:
   #   - StructureDefinition/codexrt-radiotherapy-fractions-prescribed
   #   - StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume
   #   - StructureDefinition/codexrt-radiotherapy-dose-prescribed-to-volume
-  #   - StructureDefinition/codexrt-radiotheraphy-treatment-device-manufacturer
-  #   - StructureDefinition/codexrt-radiotheraphy-treatment-applicator-type
+  #   - StructureDefinition/codexrt-radiotherapy-treatment-applicator-type
   #   - StructureDefinition/codexrt-dicom-reference
 
   # CodeSystems:

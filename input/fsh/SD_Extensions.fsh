@@ -25,7 +25,7 @@ This extension SHALL only be present if the treatment is structured as countable
 
 Extension: RadiotherapyFractionsDelivered
 Id: codexrt-radiotherapy-fractions-delivered
-Title: "Radiotherapy Fractions Delivered"
+Title: "Number of Delivered Fractions"
 Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
 * . ^short = "Number of Delivered Fractions"
 * value[x] only unsignedInt //as opposed to planned or prescribed fractions, delivered fractions can be zero.
@@ -97,7 +97,7 @@ Description: "Dose parameters planned for one radiotherapy volume."
 
 Extension: RadiotherapyEnergyOrIsotope
 Id: codexrt-radiotherapy-energy-or-isotope
-Title: "Radiotherapy Energy or Isotope"
+Title: "Energy or Isotope"
 Description: "The radiation energy used for radiotherapy. The energy spectrum is characterized
 by the maximum energy, the maximum accelaration voltage, or the used isotope."
 * . ^short = "Radiotherapy Energy or Isotope"
@@ -157,7 +157,7 @@ by at least its manufacturer and model name."
 
 Extension: RadiotherapyTreatmentApplicatorType
 Id: codexrt-radiotherapy-treatment-applicator-type
-Title: "Radiotherapy Treatment Applicator Type"
+Title: "Treatment Applicator Type"
 Description: "Radiotherapy Treatment Applicator Type."
 * . ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] ^short = "Radiotherapy Treatment Applicator Type"
