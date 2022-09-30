@@ -144,11 +144,11 @@ Description: "A Reference to a DICOM SOP Instance."
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
 
-Extension: RadiotherapyTreatmentDeviceExtension
-Id: codexrt-radiotheraphy-treatment-device-extension
+Extension: RadiotherapyTreatmentDeviceReference
+Id: codexrt-radiotherapy-treatment-device-reference
 Title: "Treatment Device"
 Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
-Could be used for a LINAC (external beam) or an Afterloader (brachytherapy).   The device is specified
+Could be used for a LINAC (external beam) or an Afterloader (brachytherapy). The device is specified
 by at least its manufacturer and model name."
 * . ^short = "Treatment Device"
 * valueReference 1..1
@@ -156,7 +156,7 @@ by at least its manufacturer and model name."
 
 
 Extension: RadiotherapyTreatmentApplicatorType
-Id: codexrt-radiotheraphy-treatment-applicator-type
+Id: codexrt-radiotherapy-treatment-applicator-type
 Title: "Radiotherapy Treatment Applicator Type"
 Description: "Radiotherapy Treatment Applicator Type."
 * . ^short = "Radiotherapy Treatment Applicator Type"
@@ -165,7 +165,7 @@ Description: "Radiotherapy Treatment Applicator Type."
 * value[x] from ApplicatorTypesVS (extensible)
 
 Extension: UniformFractionation
-Id: codexrt-radiotheraphy-uniform-fractionation
+Id: codexrt-radiotherapy-uniform-fractionation
 Title: "Uniform Fractionation"
 Description: "Uniform Fraction is true if fractionation was uniform, i.e. treated with same modality and dose per fraction, false if fractionation was mixed."
 * . ^short = "Uniform Fractionation"
@@ -196,7 +196,7 @@ Description: "Applicator Types Used in Brachytherapy"
 * SCT#228768005 "Seeds source (physical object)"
 
 Extension: RadiotherapyReasonForRevision
-Id: codexrt-radiotheraphy-reason-for-revision
+Id: codexrt-radiotherapy-reason-for-revision
 Title: "Reason for Revision"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * . ^short = "Reason for Revision"
