@@ -92,7 +92,7 @@ This example is highly simplified for brevity and only a few data elements are s
 
 The following figure shows the relations between the resources of the same example.
 
-<img src="RTRevisionExampleRelations.svg" alt="Phase Revision Example" width="1000px" style="float:none; margin: 0px 0px 0px 0px;" />
+<img src="RTRevisionExampleRelations.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
