@@ -25,7 +25,7 @@ This extension SHALL only be present if the treatment is structured as countable
 
 Extension: RadiotherapyFractionsDelivered
 Id: codexrt-radiotherapy-fractions-delivered
-Title: "Radiotherapy Fractions Delivered"
+Title: "Number of Delivered Fractions"
 Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
 * . ^short = "Number of Delivered Fractions"
 * value[x] only unsignedInt //as opposed to planned or prescribed fractions, delivered fractions can be zero.
@@ -97,7 +97,7 @@ Description: "Dose parameters planned for one radiotherapy volume."
 
 Extension: RadiotherapyEnergyOrIsotope
 Id: codexrt-radiotherapy-energy-or-isotope
-Title: "Radiotherapy Energy or Isotope"
+Title: "Energy or Isotope"
 Description: "The radiation energy used for radiotherapy. The energy spectrum is characterized
 by the maximum energy, the maximum accelaration voltage, or the used isotope."
 * . ^short = "Radiotherapy Energy or Isotope"
@@ -144,43 +144,34 @@ Description: "A Reference to a DICOM SOP Instance."
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
 
-Extension: RadiotherapyTreatmentDevice
-Id: codexrt-radiotheraphy-treatment-device
+Extension: RadiotherapyTreatmentDeviceReference
+Id: codexrt-radiotherapy-treatment-device-reference
 Title: "Treatment Device"
 Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
-Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
+Could be used for a LINAC (external beam) or an Afterloader (brachytherapy). The device is specified
+by at least its manufacturer and model name."
 * . ^short = "Treatment Device"
-* value[x] 0..0
-* extension contains
-  RadiotherapyTreatmentDeviceManufacturer named manufacturer 1..1 and
-  RadiotherapyTreatmentDeviceModel named model 1..1
+* valueReference 1..1
+* valueReference only Reference(RadiotherapyTreatmentDevice)
 
-Extension: RadiotherapyTreatmentDeviceManufacturer
-Id: codexrt-radiotheraphy-treatment-device-manufacturer
-Title: "Treatment Device Manufacturer"
-Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
-Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
-* . ^short = "Treatment Device Manufacturer"
-* value[x] ^short = "Treatment Device Manufacturer"
-* value[x] only string
-
-Extension: RadiotherapyTreatmentDeviceModel
-Id: codexrt-radiotheraphy-treatment-device-model
-Title: "Treatment Device Model"
-Description: "The device used for delivering the Radiotherapy. This can be a treatment machine or auxiliary device, for example a positioning device.
-Could be used for a LINAC (external beam) or an Afterloader (brachytherapy)."
-* . ^short = "Treatment Device Model"
-* value[x] ^short = "Treatment Device Model"
-* value[x] only string
 
 Extension: RadiotherapyTreatmentApplicatorType
-Id: codexrt-radiotheraphy-treatment-applicator-type
-Title: "Radiotherapy Treatment Applicator Type"
+Id: codexrt-radiotherapy-treatment-applicator-type
+Title: "Treatment Applicator Type"
 Description: "Radiotherapy Treatment Applicator Type."
 * . ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] only CodeableConcept
 * value[x] from ApplicatorTypesVS (extensible)
+
+Extension: UniformFractionation
+Id: codexrt-radiotherapy-uniform-fractionation
+Title: "Uniform Fractionation"
+Description: "Uniform Fraction is true if fractionation was uniform, i.e. treated with same modality and dose per fraction, false if fractionation was mixed."
+* . ^short = "Uniform Fractionation"
+* value[x] ^short = "Uniform Fractionation Was Used"
+* value[x] only boolean
+
 
 // ValueSet: RadiotherapyTreatmentDeviceTypeVS
 // Id: codex-radiotherapy-treatment-device-types-vs
@@ -196,49 +187,31 @@ Id: codex-radiotherapy-applicator-types-vs
 Title: "Brachytherapy Applicator Types"
 Description: "Applicator Types Used in Brachytherapy"
 * insert SCTCopyright
+* ^experimental = false
 * codes from system ApplicatorTypesCS
+* ^experimental = false
 * SCT#19923001 "Catheter, device (physical object)"
 * SCT#228771002 "Needles source (physical object)"
 * SCT#228778008 "Plaque source (physical object)"
 * SCT#228768005 "Seeds source (physical object)"
 
-CodeSystem: ApplicatorTypesCS
-Id: codex-radiotherapy-applicator-types-cs
-Title: "Brachytherapy Applicator Types Code System"
-Description: "Brachytherapy Applicator Types  -- need to request codes"
-* ^status = #draft
-* ^caseSensitive = true
-* #ring	"Ring, device (physical object)" 	"new concept under 228766009 |Form of brachytherapy source (physical object)"
-* #tandem "Tandem, device (physical object)" "(small metal tube)  new code child of 228775006 |Tubes source (physical object)."
-* #ovoid 	"Ovoid, device (physical object)" 	"(round hollow metal holders that are placed adjacent to cervix) new concept under 228766009 |Form of brachytherapy source (physical object)|"
-* #cylinder  "Vaginal Cylinder, device (physical object)" "A vaginal cylinder is made of plastic and looks like a large tampon with a hollow center. It is placed into the vagina and may be kept in place with gauze, balloons, or a special undergarment.  )  define a new concept under 228766009 |Form of brachytherapy source (physical object)| ."
 
-
-
-
-Extension: RadiotherapyReasonForRevision
-Id: codexrt-radiotheraphy-reason-for-revision
-Title: "Reason for Revision"
+Extension: RadiotherapyReasonForRevisionOrAdaptation
+Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
+Title: "Reason for Revision or Adaptation"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
-* . ^short = "Reason for Revision"
-* value[x] ^short = "Reason for Revision"
+* . ^short = "Reason for Revision or Adaptation"
+* value[x] ^short = "Reason for Revision or Adaptation"
 * value[x] only CodeableConcept
-* value[x] from ReasonForRevisionVS (required)
+* value[x] 1..1
+* value[x] from ReasonForRevisionOrAdaptationVS (required)
 
-ValueSet: ReasonForRevisionVS
-Id: codex-radiotherapy-reason-for-revision-vs
-Title: "Reason for Revision Value Set"
+ValueSet: ReasonForRevisionOrAdaptationVS
+Id: codex-radiotherapy-reason-for-revision-or-adaptation-vs
+Title: "Reason for Revision or Adaptation Value Set"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * insert SCTCopyright
+* ^experimental = false
 * SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
-* codes from system ReasonForRevisionCS
-
-CodeSystem: ReasonForRevisionCS
-Id: codex-radiotherapy-reason-for-revision-cs
-Title: "Reason for Revision Code System"
-Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
-* ^status = #draft
-* ^caseSensitive = true
-* #targetchanges	"Changes to Target Anatomy (finding)" 	"new concept under 373856008 |Reason for change in radiotherapy course (finding)"
-* #anatomychanges  "Changes to Surrounding Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)."
-* #toxicity 	"Radiotherapy course changed - acute radiotherapy toxicity (finding)" 	"Radiotherapy course changed - acute radiotherapy toxicity (finding)"
+* SCT#314846003 "Patient given choice of treatment (finding)"
+* codes from system ReasonForRevisionOrAdaptationCS

@@ -23,6 +23,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22A-01-Common
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 
+
 Instance: RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-01 after 1 Fraction."
@@ -37,8 +38,10 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 200
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
+* location = Reference(TreatmentLocation-1)
 
 Instance: RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V
 InstanceOf: RadiotherapyCourseSummary
@@ -54,6 +57,7 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
   * extension[fractionsDelivered].valueUnsignedInt = 2
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-07T13:21:17+01:00"
 
@@ -121,14 +125,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 2
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapySessions].valueUnsignedInt = 2
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-01-22A-01-Prostate)
     * valueReference.display = "Prostate"
@@ -159,8 +163,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 2
-* extension[radiotherapy-dose-planned-to-volume]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 2
+* extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-01-22A-01-Prostate)
     * valueReference.display = "Prostate"

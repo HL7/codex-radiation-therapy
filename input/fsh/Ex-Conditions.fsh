@@ -1,5 +1,5 @@
 Instance: Diagnosis-1-Breast
-InstanceOf: Condition
+InstanceOf: $mCODEPrimaryCancerCondition
 Title: "Example Diagnosis 1"
 Description: "An example diagnosis for a breast case."
 Usage: #example
@@ -14,7 +14,7 @@ Usage: #example
 * asserter = Reference(Practitioner/Practitioner-1005)
 
 Instance: Diagnosis-2-Prostate
-InstanceOf: Condition
+InstanceOf: $mCODEPrimaryCancerCondition
 Title: "Example Diagnosis 2"
 Description: "An example diagnosis for a prostate case."
 Usage: #example

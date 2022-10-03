@@ -5,9 +5,20 @@ Title: "Radiotherapy Treatment Plan"
 Description: "A Radiotherapy Treatment Plan resource describes the treatment that is planned to be delivered with a single Radiotherapy Treatment Plan."
 * ^status = #draft
 * insert RadiotherapyPlannedPhaseAndTreatmentPlanCommon
-* extension contains
-    DicomReference named radiotherapy-dicom-plan 0..1
-* extension[radiotherapy-dicom-plan] ^short = "DICOM Treatment Plan"
-* extension[radiotherapy-dicom-plan] ^definition = "Reference to a DICOM SOP instance representing a Treatment Plan such as RT Plan or RT Ion Plan."
-* basedOn ^short = "Should Reference a Radiotherapy Plan Prescription and the Radiotherapy Planned Phase to which this Treatment Plan belongs."
 * code = SnomedRequestedCS#USCRS-33951 "Radiotherapy Treatment Plan (therapy/regime)"
+* extension contains
+    DicomReference named radiotherapyDicomPlan 0..1
+* extension[radiotherapyDicomPlan] ^short = "DICOM Treatment Plan"
+* extension[radiotherapyDicomPlan] ^definition = "Reference to a DICOM SOP instance representing a Treatment Plan such as RT Plan or RT Ion Plan."
+* insert BasedOnSlicing
+* basedOn contains
+    plan-prescription 0..1 MS and
+    planned-phase 0..1 MS and
+    planned-course 0..1 MS
+* basedOn[plan-prescription] ^short = "RadiotherapyPlanPrescription that this TreatmentPlan fulfills."
+* basedOn[planned-course] ^short = "RadiotherapyPlannedCourse that this TreatmentPlan fulfills (in most cases together with other treatment plans)."
+* basedOn[planned-phase] ^short = "RadiotherapyPlannedPhase that this TreatmentPlan fulfills (in most cases together with other treatment plans)."
+* basedOn[plan-prescription] only Reference(RadiotherapyPlanPrescription)
+* basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
+* basedOn[planned-phase] only Reference(RadiotherapyPlannedPhase)
+* replaces only Reference(RadiotherapyTreatmentPlan)

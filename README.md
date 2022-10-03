@@ -1,5 +1,5 @@
 # CodeX Radiation Therapy
-The CodeX Accelerator.... (reference).
+[CodeX](https://confluence.hl7.org/display/COD/CodeX+Home) is a Member-driven HL7 FHIR Accelerator hosting a growing community working together to enable FHIR-based interoperability that drives substantial improvements around the most important challenges and opportunities in patient health.
 
 CodeX Radiation Therapy is an implementation guide developed by the CODEX accelerator intended to assemble a core set of structure data elements for radiation therapy electronic health records.
 
@@ -79,4 +79,4 @@ While not normally necessary, you can delete the following folders to get a clea
 
 ## Contributing to the IG
 
-See [`contributing.md`](contributing.md).
+See  [`contributing.md`](contributing.md).

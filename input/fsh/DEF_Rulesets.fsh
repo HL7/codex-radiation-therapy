@@ -7,17 +7,39 @@ RuleSet: CategorySlicing
 * category contains
   required 1..1
 
+RuleSet: BasedOnSlicing
+* basedOn ^slicing.discriminator.type = #profile
+* basedOn ^slicing.discriminator.path = "$this.resolve()"
+* basedOn ^slicing.rules = #open
+* basedOn ^slicing.description = "Slicing based on the profile"
+
+RuleSet: PartOfSlicing
+* partOf ^slicing.discriminator.type = #profile
+* partOf ^slicing.discriminator.path = "$this.resolve()"
+* partOf ^slicing.rules = #open
+* partOf ^slicing.description = "Slicing based on the profile"
+
+RuleSet: ModalityAndTechniqueExtensions
+* extension[modalityAndTechnique].extension contains
+    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
+    RadiotherapyTreatmentDeviceReference named radiotherapyTreatmentDevice 0..* MS and
+    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
+
+RuleSet: ModalityAndTechniqueZeroToMany
+* extension contains
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
+* insert ModalityAndTechniqueExtensions
+
+RuleSet: ModalityAndTechniqueZeroToOne
+* extension contains
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS
+* insert ModalityAndTechniqueExtensions
+
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
 // * meta.versionId MS
 // * meta.lastUpdated MS
 * extension MS
-* extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
-* extension[modalityAndTechnique].extension contains
-    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDevice named radiotherapyTreatmentDevice 0..* MS and
-    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * identifier MS
 * identifier.system MS
 * identifier.value 1..1 MS
@@ -62,14 +84,15 @@ RuleSet: RadiotherapyPlansCommon
 
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * insert RadiotherapyPlansCommon
+* insert ModalityAndTechniqueZeroToOne
 * extension contains
-    RadiotherapyFractionsPlanned named radiotherapy-fractions-planned 1..1 MS and
-    RadiotherapyDosePlannedToVolume named radiotherapy-dose-planned-to-volume 0..* MS and
-    RadiotherapyReasonForRevision named radiotherapy-reason-for-revision 0..1 MS
-* extension[radiotherapy-dose-planned-to-volume]
+    RadiotherapyFractionsPlanned named radiotherapyFractionsPlanned 1..1 MS and
+    RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS and
+    RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
+* extension[radiotherapyDosePlannedToVolume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
-  * extension[fractions] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-planned. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
+  * extension[fractions] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
 * occurrenceTiming only Timing
 * occurrenceTiming MS
   * repeat
@@ -81,14 +104,15 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 
 RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
+* insert ModalityAndTechniqueZeroToOne
 * extension contains
-    RadiotherapyFractionsPrescribed named radiotherapy-fractions-prescribed 1..1 MS and
-    RadiotherapyDosePrescribedToVolume named radiotherapy-dose-prescribed-to-volume 0..* MS and
-    RadiotherapyReasonForRevision named radiotherapy-reason-for-revision 0..1 MS
-* extension[radiotherapy-dose-prescribed-to-volume]
+    RadiotherapyFractionsPrescribed named radiotherapyFractionsPrescribed 1..1 MS and
+    RadiotherapyDosePrescribedToVolume named radiotherapyDosePrescribedToVolume 0..* MS and
+    RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
+* extension[radiotherapyDosePrescribedToVolume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions."
-  * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapy-fractions-prescribed."
+  * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapyFractionsPrescribed."
 * occurrenceTiming only Timing
 * occurrenceTiming MS
   * repeat
@@ -101,18 +125,12 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * insert RadiotherapyProcedureCommon
 * obeys codexrt-procedure-status
+* insert ModalityAndTechniqueZeroToOne
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
-* extension[modalityAndTechnique].extension contains
-    RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDevice named radiotherapyTreatmentDevice 0..* MS and
-    RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
-* basedOn MS
-* partOf MS
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * reasonCode MS

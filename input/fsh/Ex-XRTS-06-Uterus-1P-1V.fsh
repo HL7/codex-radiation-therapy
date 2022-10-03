@@ -1,5 +1,12 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
+Instance: RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader
+InstanceOf: RadiotherapyTreatmentDevice
+Description: "ACMETurbo3000 Afterloader Device"
+Usage: #example
+* manufacturer = "ACME"
+* deviceName[model-name].name = "Turbo3000Afterloader"
+
 RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
@@ -11,9 +18,8 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = ApplicatorTypesCS#ring "Ring, device (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = ApplicatorTypesCS#tandem "Tandem, device (physical object)"
-  * extension[radiotherapyTreatmentDevice][+]
-    * extension[manufacturer].valueString = "ACME"
-    * extension[model].valueString = "Turbo3000Afterloader"
+  * extension[radiotherapyTreatmentDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * identifier[+]
   * use = #usual //Can use general identifiers. Here j ust using the same as the request on which the summary is basedOn
@@ -43,6 +49,7 @@ Usage: #example
     * valueReference.display = "Uterus"
   * extension[totalDoseDelivered].valueQuantity.value = 600
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
@@ -60,6 +67,7 @@ Usage: #example
     * valueReference.display = "Uterus"
   * extension[totalDoseDelivered].valueQuantity.value = 3000
   * extension[fractionsDelivered].valueUnsignedInt = 5
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-20T13:21:17+01:00"
 
@@ -127,14 +135,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 5
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapySessions].valueUnsignedInt = 5
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
     * valueReference.display = "Uterus"
@@ -165,8 +173,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 5
-* extension[radiotherapy-dose-planned-to-volume]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
+* extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
     * valueReference.display = "Uterus"

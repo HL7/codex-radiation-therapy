@@ -59,6 +59,41 @@ The following figure shows the resource profiles to represent the radiotherapy r
 
 While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases.
 
+### Relationships Between Profiles
+The hierarchical and prescribing relationships among the profiles defined within the IG are maintained using the Procedure.partOf, Procedure.basedOn, and ServiceRequest.basedOn references.  Procedure.basedOn represents the request for this procedure, whereas Procedure.partOf represents the larger event of which this procedure is a part.  Ideally, all of these references would be populated, and the references would point to  profiles the left or above each profile in the middle or bottom row.  Since sometimes elements in the middle or bottom row may be skipped, references are also allowed between profiles in the bottom row and rightmost column to profiles in the top row or leftmost column, respectively as show in this figure.
+
+<img src="relationshipsBetweenProfiles.svg" alt="Relationship Between Profiles" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+### Revision or Adaptation
+
+During a Course of radiotherapy, there may be changes in prescriptions and plans, for example to cope with side-effects or to adapt the treatment to changes in targets or healthy anatomy.
+In the radiotherapy community, there is no clear distinction between revision and adaptation. This IG therefore refers to 'revision or adaptation' for changes in prescriptions or plans.
+In case of such changes, the radiotherapy system creates new (successor) prescriptions and plans and retires the previous (predecessor) prescriptions and plans.
+
+This section describes how revisions or adaptations are covered in this IG, starting with a revision or adaptation in a Planned Phase.
+
+In case of a revision or adaptation of a Planned Phase:
+- The status of the predecessor ServiceRequest (Planned Phase) is set to revoked.
+- A new ServiceRequest resource (Planned Phase) is created, which replaces the predecessor. It refers to the predecessor using the element ‘replaces’.
+- The status of the Procedure (Treated Phase) that recorded the treatment of the revoked ServiceRequest is set to stopped. A new Procedure is created for recording the treatment that is based on the new ServiceRequest referencing the ServiceRequest using the element ‘basedOn’.
+- The revoked ServiceRequest is not changed to remove the untreated dose or fractions. This retains the information how many fractions and how much dose were initially planned, even if the ServiceRequest was revoked before completion. It is visible from the corresponding Procedure which part of the ServiceRequest was delivered before it was stopped.
+- If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure using the respective [extension](artifacts.html#structures-extension-definitions) defined in this IG.
+- The Course level resources (Planned Course, Course Summary) are updated to reflect the revision or adaptation in the Course. No new Planned Course or Course Summary instances are created.
+- The new ServiceRequest (Planned Phase) and Procedure (Treated Phase) only cover the remaining treatment that is still to be treated. The Course level resources (Planned Course and Course Summary) describe how the already delivered part of the first Phase and the remaining treatment with the new (successor) Phase add up.
+
+If a Phase Prescription is supported, then typically the Phase Prescription and Planned Phase are both changed. In this case, all explanations above apply to both ServiceRequests (Phase Prescription and Planned Phase). Both ServiceRequests are revoked and two new ServiceRequests (Phase Prescription and Planned Phase) are created for the changed remaining treatment.
+
+If the revision or adaptation is performed on plan level, then Treatment Plan and (if supported) Plan Prescription are revoked and new instances are created and related in the same way as described for phases above.
+
+The following figure shows an example, in which a revision of the Planned Phase is performed after 3 fractions delivered in 4 sessions. At this point, a new Planned Phase is created. The remaining treatment is recorded in a new Treated Phase. On the Course level, the Planned Course provides the sum or revoked and new Planned Phase (taking into account when the revoked Planned Phase was replaced). The Course Summary provides the sum of the stopped and new Treated Phase.
+This example is highly simplified for brevity and only a few data elements are shown. In particular, dose values are shown for only one target, whereas generally, plan and treatment summaries describe dose to multiple targets.
+
+<img src="RTRevisionExampleTimeline.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+The following figure shows the relations between the resources of the same example.
+
+<img src="RTRevisionExampleRelations.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
 ### Data Elements
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
 
@@ -73,9 +108,10 @@ In late 2020, the American Society for Radiation Oncology (ASTRO) and the Americ
 
 In January 2021, the CodeX Radiation Therapy Treatment Data (RTTD) project approached the Integrating the Healthcare Enterprise – Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Work Group about aligning the data model and FHIR structures with the technical architecture and transactions being defined in the XRTS technical specification document. The CodeX RTTD and XRTS teams aligned visions and began working together to adopt the CodeX RT Implementation Guide.
 
-In support of this collaboration, mCODE was updated in its second version (STU 2) to include new radiotherapy profiles, [Radiotherapy Course Summary](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.
+In support of this collaboration, radiotherapy profiles were added to [mCODE STU2](http://hl7.org/fhir/us/mcode/STU2), [Radiotherapy Course Summary](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.
 
 - mCODE STU 2: <https://hl7.org/fhir/us/mcode/STU2>
+
 
 Radiotherapy specifications beyond what was considered “minimal” (which is a tenet of mCODE) are published in this CodeX RT IG.
 
@@ -108,7 +144,7 @@ In addition, material was drawn from the [US Core Implementation Guide](http://
 
 ### Building the IG
 
-"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation. You can see [the output of building the current contents of this repository here](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/).
+"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation.
 
 If you would like to generate this locally, open command prompt window and navigate to the directory where this repository has been cloned.
 
@@ -126,7 +162,7 @@ With those dependencies in place, then run this command:
 
 This script will do two things automatically for you:
 
-1. Run [SUSHI](https://fshschool.org/). mCODE is developed in [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FSH files into the JSON files expected by the IG Publisher.
+1. Run [SUSHI](https://fshschool.org/). This IG is developed developed in [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FSH files into the JSON files expected by the IG Publisher.
 
 2. Run the IG Publisher.
 
@@ -168,7 +204,7 @@ While not normally necessary, you can delete the following folders to get a clea
         | `VS`   | ValueSets            |
 
 - The main pages in the built IG are generated from [Markdown](https://daringfireball.net/projects/markdown/) found in `input/pagecontent/`. These pages must also be included in `sushi-config.yaml` to be compiled to HTML by the IG Publisher.
-- There are a number of other important configuration options in `sushi-config.yaml` including the menu contents of the built IG and the groupings on the [Artifacts Summary page](https://build.fhir.org/ig/HL7/codexrt/artifacts.html).
+- There are a number of other important configuration options in `sushi-config.yaml` including the menu contents of the built IG and the groupings on the [Artifacts Summary page](artifacts.html).
 
 
 ### Credits
@@ -177,7 +213,7 @@ The authors gratefully acknowledge the leadership of Chuck Mayo, PhD, University
 
 The authors recognize HL7 sponsorship and input from [Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
 
-Steve Bratt leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community with a core goal of leveraging FHIR-based standards to achieve interoperability within the healthcare community to improve health for all. Capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. Max Masnick wrote the [Data Dictionary generator](https://github.com/HL7/fhir-mCODE-ig/tree/master/data-dictionary).
+Steve Bratt leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community with a core goal of leveraging FHIR-based standards to achieve interoperability within the healthcare community to improve health for all.
 
 Many organizations have been involved in the modeling and defining of the radiotherapy FHIR profiles that are defined in the CodeX RT IG: 
 
@@ -198,6 +234,7 @@ The RTTD team also receives significant input and participation from:
 - University of Pennsylvania
 - Virginia Commonwealth University
 - IHE-RO
+- Epic
 - RaySearch
 - Elekta
 - University of California San Francisco

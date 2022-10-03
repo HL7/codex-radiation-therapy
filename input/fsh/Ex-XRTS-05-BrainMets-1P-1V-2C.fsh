@@ -37,6 +37,7 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 500
   * extension[fractionsDelivered].valueUnsignedInt = 1
+  * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2020-09-07T13:21:17+01:00"
 
@@ -54,6 +55,7 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2500
   * extension[fractionsDelivered].valueUnsignedInt = 5
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2020-09-14T13:21:17+01:00"
 
@@ -94,6 +96,7 @@ Usage: #example
     * valueReference.display = "Brain Mets"
   * extension[totalDoseDelivered].valueQuantity.value = 2000
   * extension[fractionsDelivered].valueUnsignedInt = 5
+  * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-24T13:21:17+01:00"
 
@@ -196,14 +199,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 5
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapySessions].valueUnsignedInt = 5
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-01-BrainMets)
     * valueReference.display = "Brain Mets"
@@ -229,14 +232,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
-* extension[treatment-intent]
+* extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
-* extension[mcode-radiotherapy-sessions].valueUnsignedInt = 5
-* extension[radiotherapy-dose-planned-to-volume][+]
+* extension[radiotherapySessions].valueUnsignedInt = 5
+* extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-02-BrainMets)
     * valueReference.display = "Brain Mets"
@@ -267,8 +270,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 5
-* extension[radiotherapy-dose-planned-to-volume]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
+* extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-01-BrainMets)
     * valueReference.display = "Brain Mets"
@@ -299,8 +302,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
-* extension[radiotherapy-fractions-planned].valuePositiveInt = 5
-* extension[radiotherapy-dose-planned-to-volume]
+* extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
+* extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22A-02-BrainMets)
     * valueReference.display = "Brain Mets"

@@ -11,19 +11,19 @@ Usage: #example
   * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18 //unit is fixed in profile
-* extension[radiotherapy-fractions-prescribed].valuePositiveInt = 25
+* extension[radiotherapyFractionsPrescribed].valuePositiveInt = 25
 // Prescription Target Site "Prostate"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
   * extension[fractionDose].valueQuantity.value = 180 //unit cGy is automatically added because fixed in the profile
   * extension[totalDose].valueQuantity.value = 4500
 // Prescription Target Site "Pelv Ns"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-04-PelvNs)
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 4500
 // Prescription Target Site "Sem Vs"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 4500
@@ -66,14 +66,14 @@ Usage: #example
   * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18 //unit is fixed in profile
-* extension[radiotherapy-fractions-prescribed].valuePositiveInt = 19
+* extension[radiotherapyFractionsPrescribed].valuePositiveInt = 19
 // Prescription Target Site "Prostate"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
   * extension[fractionDose].valueQuantity.value = 200 //unit cGy is automatically added because fixed in the profile
   * extension[totalDose].valueQuantity.value = 3800
 // Prescription Target Site "Sem Vs"
-* extension[radiotherapy-dose-prescribed-to-volume][+]
+* extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 3420
