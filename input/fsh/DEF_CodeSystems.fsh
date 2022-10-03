@@ -7,9 +7,9 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 //* Requested 10/2022
 * #USCRS-34602  "Radiotherapy Treatment Plan (therapy/regime)" "Radiotherapy Treatment Plan (therapy/regime)"
 //* These haven't been requested
-* #treatmentintentchange	"Changes to Treatment Intent (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)"
-* #targetchange  "Changes to Target Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)."
-* #organatriskchange  "Changes to Organ at Risk Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)."
+* #USCRS-34603	"Changes to Treatment Intent (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)" //#treatmentintentchange
+* #USCRS-34604  "Changes to Target Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // #targetchange
+* #USCRS-34605   "Changes to Organ at Risk Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // organatriskchange
 //* March 2023 release to US Edition
 * #1255213001 "Brachytherapy eye plaque (physical object)" "Brachytherapy eye plaque (physical object)"
 * #1255212006 "Brachytherapy surface applicator (physical object)" "Brachytherapy surface applicator (physical object)"
