@@ -41,7 +41,7 @@ Note that in radiotherapy, a *treatment plan* represents a concrete set of treat
 
 The relationship between a course, phases, and treatment plans is exemplified in the following diagram.
 
-<img src="BreastTreatmentSummary.png" alt="RT Summary Example" width="900px" style="float:none; margin: 0px 0px 0px 0px;" />
+<img src="BreastTreatmentSummary.svg" alt="RT Summary Example" width="900px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 In this example, the radiotherapy course encompasses three phases. The course summary captures each radiotherapy volume, the total dose for each volume, and total number of fractions delivered for each volume. The course summary also records the modalities and techniques used, without directly associating those with individual volumes. Other elements in the summary include the reason for treatment, the treatment intent, the period of treatment, and the total number of sessions.
 
