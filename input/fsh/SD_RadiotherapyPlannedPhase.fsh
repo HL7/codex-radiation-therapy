@@ -16,3 +16,4 @@ Description: "A Radiotherapy Planned Phase is the summary over all Radiotherapy 
 * basedOn[phase-prescription] ^short = "RadiotherapyPhasePrescription that this RadiotherapyPlannedPhase fulfills."
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
 * basedOn[phase-prescription] only Reference(RadiotherapyPhasePrescription)
+* replaces only Reference(RadiotherapyPlannedPhase)

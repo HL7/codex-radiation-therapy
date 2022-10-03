@@ -63,16 +63,16 @@ For photons, the maximum acceleration voltage is given in MV or kV, although tho
 * UCUM#MV "megavolt"
 * UCUM#kV "kilovolt"
 
-CodeSystem: ReasonForRevisionCS
-Id: codex-radiotherapy-reason-for-revision-cs
-Title: "Reason for Revision Code System"
+CodeSystem: ReasonForRevisionOrAdaptationCS
+Id: codex-radiotherapy-reason-for-revision-or-adaptation-cs
+Title: "Reason for Revision or Adaptation Code System"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * ^status = #draft
 * ^caseSensitive = true
 * ^experimental = false
-* #targetchanges	"Changes to Target Anatomy (finding)" 	"new concept under 373856008 |Reason for change in radiotherapy course (finding)"
-* #anatomychanges  "Changes to Surrounding Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)."
-* #toxicity 	"Radiotherapy course changed - acute radiotherapy toxicity (finding)" 	"Radiotherapy course changed - acute radiotherapy toxicity (finding)"
+* #treatmentintentchange	"Changes to Treatment Intent (finding)" 	"new concept under 373856008 |Reason for change in radiotherapy course (finding)"
+* #targetchange  "Changes to Target Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)."
+* #organatriskchange  "Changes to Organ at Risk Anatomy (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)."
 
 CodeSystem: ApplicatorTypesCS
 Id: codex-radiotherapy-applicator-types-cs

@@ -209,7 +209,7 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 1260
-* extension[radiotherapyReasonForRevision].valueCodeableConcept = SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
+* extension[radiotherapyReasonForRevisionOrAdaptation].valueCodeableConcept = SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
 * identifier[+]
   * use = #usual
   * system = VarianRadiotherapyPhaseId

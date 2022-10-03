@@ -195,20 +195,23 @@ Description: "Applicator Types Used in Brachytherapy"
 * SCT#228778008 "Plaque source (physical object)"
 * SCT#228768005 "Seeds source (physical object)"
 
-Extension: RadiotherapyReasonForRevision
-Id: codexrt-radiotherapy-reason-for-revision
-Title: "Reason for Revision"
-Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
-* . ^short = "Reason for Revision"
-* value[x] ^short = "Reason for Revision"
-* value[x] only CodeableConcept
-* value[x] from ReasonForRevisionVS (required)
 
-ValueSet: ReasonForRevisionVS
-Id: codex-radiotherapy-reason-for-revision-vs
-Title: "Reason for Revision Value Set"
+Extension: RadiotherapyReasonForRevisionOrAdaptation
+Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
+Title: "Reason for Revision or Adaptation"
+Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
+* . ^short = "Reason for Revision or Adaptation"
+* value[x] ^short = "Reason for Revision or Adaptation"
+* value[x] only CodeableConcept
+* value[x] 1..1
+* value[x] from ReasonForRevisionOrAdaptationVS (required)
+
+ValueSet: ReasonForRevisionOrAdaptationVS
+Id: codex-radiotherapy-reason-for-revision-or-adaptation-vs
+Title: "Reason for Revision or Adaptation Value Set"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * insert SCTCopyright
 * ^experimental = false
 * SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
-* codes from system ReasonForRevisionCS
+* SCT#314846003 "Patient given choice of treatment (finding)"
+* codes from system ReasonForRevisionOrAdaptationCS
