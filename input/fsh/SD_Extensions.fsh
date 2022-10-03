@@ -182,19 +182,6 @@ Description: "Uniform Fraction is true if fractionation was uniform, i.e. treate
 // * SnomedRequestedCS#seedsonmesh "Seeds on Mesh"
 // * SnomedRequestedCS#afterloader "Brachy Afterloader"
 
-ValueSet: ApplicatorTypesVS
-Id: codex-radiotherapy-applicator-types-vs
-Title: "Brachytherapy Applicator Types"
-Description: "Applicator Types Used in Brachytherapy"
-* insert SCTCopyright
-* ^experimental = false
-* codes from system ApplicatorTypesCS
-* ^experimental = false
-* SCT#19923001 "Catheter, device (physical object)"
-* SCT#228771002 "Needles source (physical object)"
-* SCT#228778008 "Plaque source (physical object)"
-* SCT#228768005 "Seeds source (physical object)"
-
 
 Extension: RadiotherapyReasonForRevisionOrAdaptation
 Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
@@ -205,13 +192,3 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from ReasonForRevisionOrAdaptationVS (required)
-
-ValueSet: ReasonForRevisionOrAdaptationVS
-Id: codex-radiotherapy-reason-for-revision-or-adaptation-vs
-Title: "Reason for Revision or Adaptation Value Set"
-Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
-* insert SCTCopyright
-* ^experimental = false
-* SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
-* SCT#314846003 "Patient given choice of treatment (finding)"
-* codes from system ReasonForRevisionOrAdaptationCS
