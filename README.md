@@ -15,10 +15,20 @@ For more information, see:
 
 "Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation. You can see [the output of building the current contents of this repository here](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/).
 
-If you would like to generate this locally, open command prompt window and navigate to the directory where this repository has been cloned. Then run this command:
+If you would like to generate this locally, open command prompt window and navigate to the directory where this repository has been cloned.
+
+If this is your first time building the IG, you will need to install these dependencies:
+
+1. Download the latest IG Publisher `.jar` file with this command:
+    - Linux/macOS: `./_updatePublisher.sh`
+    - Windows: `_updatePublisher`
+2. [Install SUSHI](https://fshschool.org/docs/sushi/installation/)
+
+With those dependencies in place, then run this command:
 
 - Linux/macOS: `./_genonce.sh`
 - Windows: `_genonce`
+
 
 This script will do two things automatically for you:
 
