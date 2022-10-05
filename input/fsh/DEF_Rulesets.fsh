@@ -128,13 +128,16 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * insert ModalityAndTechniqueZeroToOne
 * extension contains
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
-    $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
+    $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS and
+    RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * reasonCode MS
 * reasonCode from $mCODECancerDisorderVS (extensible)
+* reasonReference MS
+* bodySite MS
 * bodySite from $mCODERadiotherapyTreatmentLocationVS (required)
 * bodySite ^short = "All body structure(s) treated with this plan"
 * bodySite ^definition = "Coded body structure(s) treated with this radiotherapy treatment plan. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
