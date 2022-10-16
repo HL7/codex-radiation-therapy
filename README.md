@@ -5,7 +5,7 @@ CodeX Radiation Therapy is an implementation guide developed by the CODEX accele
 
 This repository contains the **Codex Radiation Therapy Implementation Guide (IG)**. An IG is "a set of rules about how FHIR resources are used (or should be used) to solve a particular problem, with associated documentation to support and clarify the usage" ([source](https://www.hl7.org/fhir/implementationguide.html)).
 
-For more information, see:
+For more information, see: 
 
 - [Published version of this IG](http://hl7.org/fhir/us/codexrt/) --**not yet**
 - Continuous integration build of this repository: [main branch](https://build.fhir.org/ig/HL7/codexrt/) or [all branches](https://build.fhir.org/ig/HL7/codexrt/branches/)
