@@ -119,7 +119,7 @@ For electrons, the maximum energy is given in MeV. For photons, the maximum acce
 Extension: DicomReference
 Id: codexrt-dicom-reference
 Title: "Reference to DICOM SOP Instance"
-Description: "A Reference to a DICOM SOP Instance."
+Description: "A reference to a DICOM SOP Instance."
 * . ^short = "Reference to DICOM SOP Instance"
 * extension contains
     instanceUid 1..1 MS and
