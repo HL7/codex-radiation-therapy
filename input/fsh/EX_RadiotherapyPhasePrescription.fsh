@@ -10,7 +10,8 @@ Usage: #example
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
-  * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18 //unit is fixed in profile
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
 * extension[radiotherapyFractionsPrescribed].valuePositiveInt = 25
 // Prescription Target Site "Prostate"
 * extension[radiotherapyDosePrescribedToVolume][+]
@@ -65,7 +66,8 @@ Usage: #example
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
-  * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18 //unit is fixed in profile
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
 * extension[radiotherapyFractionsPrescribed].valuePositiveInt = 19
 // Prescription Target Site "Prostate"
 * extension[radiotherapyDosePrescribedToVolume][+]
