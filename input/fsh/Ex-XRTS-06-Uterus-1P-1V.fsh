@@ -16,8 +16,8 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
-  * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = ApplicatorTypesCS#ring "Ring, device (physical object)"
-  * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = ApplicatorTypesCS#tandem "Tandem, device (physical object)"
+  * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
+  * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
   * extension[radiotherapyTreatmentDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
