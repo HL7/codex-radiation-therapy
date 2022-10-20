@@ -6,7 +6,7 @@ Title: "Radiotherapy Phase Prescription"
 Description: "A Radiotherapy Phase Prescription is a request for one series of fractionated treatments using Radiotherapy. It can define treatment parameters such as modality or technique,
 and prescribe dose to multiple targets."
 * insert RadiotherapyPhaseAndPlanPrescriptionCommon
-* code = SCT#1222565005 "Radiotherapy treatment phase (therapy/regime)"
+* code = SCT#1222565005 "Radiotherapy Treatment Plan (regime/therapy)"
 * insert BasedOnSlicing
 * basedOn contains
     course-prescription 0..1 MS
