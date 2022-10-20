@@ -16,7 +16,7 @@ Description: "Disease Status Reported by Radiation Oncologist"
 Invariant: RestrictDiseaseProgressionQualifier
 Description:  "Only allow qualifier for one value status"
 Severity: #error
-Expression: "coding.code != '271299001'
+Expression: "coding.where(code != '271299001)'
         implies not extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-progression-qualifier').exists()"
 
 
