@@ -5,7 +5,7 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 * ^caseSensitive = true
 * ^experimental = false
 //* Requested 10/2022
-* #USCRS-34602  "Radiotherapy Treatment Plan (therapy/regime)" "Radiotherapy Treatment Plan (therapy/regime)"
+* #USCRS-34602  "Radiotherapy treatment plan (therapy/regime)" "Radiotherapy treatment plan (therapy/regime)"
 //* These haven't been requested
 * #USCRS-34603	"Changes in treatment intent (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)" //#treatmentintentchange
 * #USCRS-34604  "Changes in target  (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // #targetchange
