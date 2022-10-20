@@ -13,6 +13,7 @@ Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-co
 Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
 Alias:   USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias:   USCoreServiceRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+Alias:   USCoreImplantableDevice = http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
 // Extensions
 Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race

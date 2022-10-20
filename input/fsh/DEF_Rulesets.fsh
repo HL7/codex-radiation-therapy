@@ -22,7 +22,7 @@ RuleSet: PartOfSlicing
 RuleSet: ModalityAndTechniqueExtensions
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
-    RadiotherapyTreatmentDeviceReference named radiotherapyTreatmentDevice 0..* MS and
+    RadiotherapyDevice named radiotherapyDevice 0..* MS and
     RadiotherapyTreatmentApplicatorType named radiotherapyTreatmentApplicatorType 0..* MS
 
 RuleSet: ModalityAndTechniqueZeroToMany
