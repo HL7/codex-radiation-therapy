@@ -1,4 +1,4 @@
-ValueSet: DiseaseProgressionQualiierVS
+ValueSet: DiseaseProgressionQualifierVS
 Id: codexrt-disease-progression-qualifier-vs
 Title: "Disease Progression Qualifier"
 Description: "Qualifiers that describe disease progression and/or disease recurrence"

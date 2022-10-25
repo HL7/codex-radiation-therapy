@@ -33,7 +33,7 @@ Title: "Disease Progression Qualifier"
 Description: "Extension providing a qualifier for a disease progression"
 * . ^short = "Progression Qualifier"
 * value[x] only CodeableConcept
-* value[x] from DiseaseProgressionQualiierVS (required)
+* value[x] from DiseaseProgressionQualifierVS (required)
 * value[x] 1..1
 
 
