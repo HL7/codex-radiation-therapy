@@ -1,6 +1,6 @@
-ValueSet: RadiotherapyIsotopes
-Id: codex-radiotherapy-isotopes
-Title: "Radiotherapy Isotopes"
+ValueSet: RadiotherapyIsotopeVS
+Id: codexrt-radiotherapy-isotope-vs
+Title: "Radiotherapy Isotope Value Set"
 Description: "Isotopes Used in Radiotherapy"
 * insert SCTCopyright
 * ^experimental = false
