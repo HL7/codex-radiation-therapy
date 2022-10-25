@@ -1,7 +1,7 @@
 
-ValueSet: BrachytherapyDeviceTypesVS
-Id: codex-radiotherapy-brachytherapy-device-types-vs
-Title: "Brachytherapy Device Types"
+ValueSet: BrachytherapyDeviceTypeVS
+Id: codexrt-brachytherapy-device-type-vs
+Title: "Brachytherapy Device Type Value Set"
 Description: "Device Types Used in Brachytherapy"
 * insert SCTCopyright
 * ^experimental = false

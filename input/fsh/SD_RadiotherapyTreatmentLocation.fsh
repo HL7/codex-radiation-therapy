@@ -1,6 +1,6 @@
-ValueSet: RadiotherapyTreatmentLocationTypesVS
+ValueSet: RadiotherapyTreatmentLocationTypeVS
 Id: codexrt-radiotherapy-treatment-location-type-vs
-Title: "Treatment Location Types VS"
+Title: "Radiotherapy Treatment Location Type Value Set"
 Description: "Treatment Location Types"
 * insert SCTCopyright
 * ^experimental = false
@@ -17,5 +17,5 @@ Id: codexrt-radiotherapy-treatment-location
 Title: "Treatment Location"
 Description: "Treatment Location (USCoreLocation)"
 * name ^short = "Name of Treatment Location"
-* type from RadiotherapyTreatmentLocationTypesVS (required)
+* type from RadiotherapyTreatmentLocationTypeVS (required)
 * type 1..1

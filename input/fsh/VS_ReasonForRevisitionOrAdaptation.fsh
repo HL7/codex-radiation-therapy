@@ -1,6 +1,6 @@
-ValueSet: ReasonForRevisionOrAdaptationVS
-Id: codex-radiotherapy-reason-for-revision-or-adaptation-vs
-Title: "Reason for Revision or Adaptation Value Set"
+ValueSet: RadiotherapyReasonForRevisionOrAdaptationVS
+Id: codexrt-radiotherapy-reason-for-revision-or-adaptation-vs
+Title: "Radiotherapy Reason for Revision or Adaptation Value Set"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * insert SCTCopyright
 * ^experimental = false

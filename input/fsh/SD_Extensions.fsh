@@ -104,12 +104,12 @@ by the maximum energy, the maximum accelaration voltage, or the used isotope."
 * value[x] only SimpleQuantity or CodeableConcept
 * valueQuantity ^short = "The spectrum of radiation energy characterized by a maximum value.
 For electrons, the maximum energy is given in MeV. For photons, the maximum acceleration voltage is given in MV or kV, although those are not units of energy."
-* valueQuantity from RadiotherapyEnergyUnits (required)
+* valueQuantity from RadiotherapyEnergyUnitVS (required)
 * valueQuantity.value 1..1
 * valueQuantity.system 1..1
 * valueQuantity.code 1..1
 * valueCodeableConcept ^short = "The isotope used for radiotherapy."
-* valueCodeableConcept from RadiotherapyIsotopes (extensible)
+* valueCodeableConcept from RadiotherapyIsotopeVS (extensible)
 * value[x] 1..1
 
 
@@ -163,7 +163,7 @@ Description: "Radiotherapy Treatment Applicator Type."
 * . ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] only CodeableConcept
-* value[x] from ApplicatorTypesVS (extensible)
+* value[x] from BrachytherapyApplicatorTypeVS (extensible)
 
 Extension: UniformFractionation
 Id: codexrt-radiotherapy-uniform-fractionation
@@ -192,4 +192,4 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] ^short = "Reason for Revision or Adaptation"
 * value[x] only CodeableConcept
 * value[x] 1..1
-* value[x] from ReasonForRevisionOrAdaptationVS (required)
+* value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (required)

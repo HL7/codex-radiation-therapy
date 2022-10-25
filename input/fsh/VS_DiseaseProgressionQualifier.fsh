@@ -1,6 +1,6 @@
 ValueSet: DiseaseProgressionQualifierVS
 Id: codexrt-disease-progression-qualifier-vs
-Title: "Disease Progression Qualifier"
+Title: "Disease Progression Qualifier Value Set"
 Description: "Qualifiers that describe disease progression and/or disease recurrence"
 * ^experimental = false
 * insert SCTCopyright

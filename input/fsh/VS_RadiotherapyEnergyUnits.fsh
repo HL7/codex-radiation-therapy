@@ -1,6 +1,6 @@
-ValueSet: RadiotherapyEnergyUnits
-Id: radiotherapy-energy-units
-Title: "Unit to characterize Energy in Radiotherapy"
+ValueSet: RadiotherapyEnergyUnitVS
+Id: codexrt-radiotherapy-energy-unit-vs
+Title: "Radiotherapy Energy Unit Value Set"
 Description: "Unit to characterize the Energy spectrum used in Radiotherapy.
 For electrons, the maximum energy is given in MeV.
 For photons, the maximum acceleration voltage is given in MV or kV, although those are not units of energy."
