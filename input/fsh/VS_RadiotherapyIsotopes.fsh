@@ -1,7 +1,7 @@
 ValueSet: RadiotherapyIsotopeVS
 Id: codexrt-radiotherapy-isotope-vs
 Title: "Radiotherapy Isotope Value Set"
-Description: "Isotopes Used in Radiotherapy"
+Description: "Isotope used in Radiotherapy"
 * insert SCTCopyright
 * ^experimental = false
 // include all cesium isotopes

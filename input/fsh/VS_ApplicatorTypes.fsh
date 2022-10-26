@@ -1,7 +1,7 @@
 ValueSet: BrachytherapyApplicatorTypeVS
 Id: codexrt-brachytherapy-applicator-type-vs
 Title: "Brachytherapy Applicator Type Value Set"
-Description: "Applicator Types Used in Brachytherapy"
+Description: "Applicator type used in Brachytherapy"
 * insert SCTCopyright
 * ^experimental = false
 * ^experimental = false
