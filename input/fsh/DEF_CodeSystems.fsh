@@ -8,8 +8,8 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 * #USCRS-34602  "Radiotherapy treatment plan (regime/therapy)" "Radiotherapy treatment plan (regime/therapy)"
 //* These haven't been requested
 * #USCRS-34603	"Changes in treatment intent (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)" //#treatmentintentchange
-* #USCRS-34604  "Changes in target  (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // #targetchange
-* #USCRS-34605   "Changes in organ at risk  (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // organatriskchange
+* #USCRS-34604  "Changes in target (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // #targetchange
+* #USCRS-34605  "Changes in organ at risk (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // organatriskchange
 //* March 2023 release to US Edition
 * #1255213001 "Brachytherapy eye plaque (physical object)" "Brachytherapy eye plaque (physical object)"
 * #1255212006 "Brachytherapy surface applicator (physical object)" "Brachytherapy surface applicator (physical object)"
@@ -21,3 +21,4 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 * #1255211004 "Brachytherapy cylinder (physical object)" "Brachytherapy cylinder (physical object)"
 * #1254768007 "Radioactive seed embedded in mesh (physical object)" "Radioactive seed embedded in mesh (physical object)"
 * #1254767002 "Stranded radioactive seed (physical object)" "Stranded radioactive seed (physical object)"
+* #1254766006 "Loose radioactive seed (physical object)"
