@@ -2,7 +2,7 @@
 ValueSet: BrachytherapyDeviceTypeVS
 Id: codexrt-brachytherapy-device-type-vs
 Title: "Brachytherapy Device Type Value Set"
-Description: "Device type used in Brachytherapy"
+Description: "The type of radioactive seed used in brachytherapy"
 * insert SCTCopyright
 * ^experimental = false
 * SnomedRequestedCS#1254768007 "Radioactive seed embedded in mesh (physical object)"
