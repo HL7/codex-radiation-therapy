@@ -99,3 +99,5 @@ INFORMATION: BodyStructure/radiotherapyVolume-01-PTV50: BodyStructure.identifier
 # SUPPRESS US CORE OBSERVATION MESSAGES. This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
 # This profile is a profile on the mCODE profile that C-GPWG approved the variance for.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+# Requested Approval    - https://jira.hl7.org/browse/FHIR-39301
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
