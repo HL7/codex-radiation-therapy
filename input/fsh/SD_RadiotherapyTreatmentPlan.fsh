@@ -21,4 +21,6 @@ Description: "A Radiotherapy Treatment Plan resource describes the treatment tha
 * basedOn[plan-prescription] only Reference(RadiotherapyPlanPrescription)
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
 * basedOn[planned-phase] only Reference(RadiotherapyPlannedPhase)
+* replaces MS
+* replaces ^short = "Previous retired plan that is replaced by this plan"
 * replaces only Reference(RadiotherapyTreatmentPlan)
