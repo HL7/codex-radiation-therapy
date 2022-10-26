@@ -1,7 +1,7 @@
-ValueSet: RadiotherapyIsotopes
-Id: codex-radiotherapy-isotopes
-Title: "Radiotherapy Isotopes"
-Description: "Isotopes Used in Radiotherapy"
+ValueSet: RadiotherapyIsotopeVS
+Id: codexrt-radiotherapy-isotope-vs
+Title: "Radiotherapy Isotope Value Set"
+Description: "Isotope used in radiotherapy"
 * insert SCTCopyright
 * ^experimental = false
 // include all cesium isotopes

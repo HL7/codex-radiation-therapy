@@ -19,7 +19,7 @@ Multiple treatment plans may be used to implement the same phase. Plans may be a
 
 The following figure shows the resource profiles to represent the radiotherapy requests and procedures at different levels. Note that the radiotherapy prescriptions and plans are instances of patient specific requests, not templates or protocols. They are therefore modelled as ServiceRequest. These requests may be embedded in a higher level CarePlan, which coordinates various activities of the radiotherapy workflow, but radiotherapy CarePlans are not scope of this IG.
 
-- *Radiotherapy Prescriptions* (left column) are *original orders* (ServiceRequest.intent = original-order) for radiotherapy. Prescriptions can request treatment with a single Treatment Plan (Radiotherapy Plan Prescription), or can represent a cumulative request for a Phase of treatment (Radiotherapy Phase Prescription) or for a complete Course (Radiotherapy Course Prescription).
+- *Radiotherapy Prescriptions* (left column) are *original orders* (ServiceRequest.intent = original-order) for radiotherapy. Prescriptions can request treatment with a single treatment plan (Radiotherapy Plan Prescription), or can represent a cumulative request for a phase of treatment (Radiotherapy Phase Prescription) or for a complete course (Radiotherapy Course Prescription).
 - *Radiotherapy Plans* (middle column) are *filler orders* (ServiceRequest.intent = filler-order) that represent how the radiotherapy system fulfills the prescribed radiotherapy treatment. A ServiceRequest can request a single plan (Radiotherapy Treatment Plan), or the sum of plans for a complete phase (Radiotherapy Planned Phase), or the sum of plans for the entire course of treatment (Radiotherapy Planned Course).
 - *Radiotherapy Procedures* (right column) document the treatment that was performed on different levels of detail (Radiotherapy Course Summary, Radiotherapy Treated Phase, Radiotherapy Treated Plan).
 
@@ -34,7 +34,7 @@ The hierarchical and prescribing relationships among the profiles defined within
 
 ### Revision or Adaptation
 
-During a Course of radiotherapy, there may be changes in prescriptions and plans, for example to cope with side-effects or to adapt the treatment to changes in targets or healthy anatomy.
+During a course of radiotherapy, there may be changes in prescriptions and plans, for example to cope with side-effects or to adapt the treatment to changes in targets or healthy anatomy.
 In the radiotherapy community, there is no clear distinction between revision and adaptation. This IG therefore refers to 'revision or adaptation' for changes in prescriptions or plans.
 In case of such changes, the radiotherapy system creates new (successor) prescriptions and plans and retires the previous (predecessor) prescriptions and plans.
 
@@ -46,14 +46,14 @@ In case of a revision or adaptation of a Planned Phase:
 - The status of the Procedure (Treated Phase) that recorded the treatment of the revoked ServiceRequest is set to stopped. A new Procedure is created for recording the treatment that is based on the new ServiceRequest referencing the ServiceRequest using the element ‘basedOn’.
 - The revoked ServiceRequest is not changed to remove the untreated dose or fractions. This retains the information how many fractions and how much dose were initially planned, even if the ServiceRequest was revoked before completion. It is visible from the corresponding Procedure which part of the ServiceRequest was delivered before it was stopped.
 - If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure using the respective [extension](artifacts.html#structures-extension-definitions) defined in this IG.
-- The Course level resources (Planned Course, Course Summary) are updated to reflect the revision or adaptation in the Course. No new Planned Course or Course Summary instances are created.
-- The new ServiceRequest (Planned Phase) and Procedure (Treated Phase) only cover the remaining treatment that is still to be treated. The Course level resources (Planned Course and Course Summary) describe how the already delivered part of the first Phase and the remaining treatment with the new (successor) Phase add up.
+- The course level resources (Planned Course, Course Summary) are updated to reflect the revision or adaptation in the course. No new Planned Course or Course Summary instances are created.
+- The new ServiceRequest (Planned Phase) and Procedure (Treated Phase) only cover the remaining treatment that is still to be treated. The course level resources (Planned Course and Course Summary) describe how the already delivered part of the first phase and the remaining treatment with the new (successor) phase add up.
 
 If a Phase Prescription is supported, then typically the Phase Prescription and Planned Phase are both changed. In this case, all explanations above apply to both ServiceRequests (Phase Prescription and Planned Phase). Both ServiceRequests are revoked and two new ServiceRequests (Phase Prescription and Planned Phase) are created for the changed remaining treatment.
 
 If the revision or adaptation is performed on plan level, then Treatment Plan and (if supported) Plan Prescription are revoked and new instances are created and related in the same way as described for phases above.
 
-The following figure shows an example, in which a revision of the Planned Phase is performed after 3 fractions delivered in 4 sessions. At this point, a new Planned Phase is created. The remaining treatment is recorded in a new Treated Phase. On the Course level, the Planned Course provides the sum or revoked and new Planned Phase (taking into account when the revoked Planned Phase was replaced). The Course Summary provides the sum of the stopped and new Treated Phase.
+The following figure shows an example, in which a revision of the Planned Phase is performed after 3 fractions delivered in 4 sessions. At this point, a new Planned Phase is created. The remaining treatment is recorded in a new Treated Phase. On the course level, the Planned Course provides the sum or revoked and new Planned Phase (taking into account when the revoked Planned Phase was replaced). The Course Summary provides the sum of the stopped and new Treated Phase.
 This example is highly simplified for brevity and only a few data elements are shown. In particular, dose values are shown for only one target, whereas generally, plan and treatment summaries describe dose to multiple targets.
 
 <img src="RTRevisionExampleTimeline.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />

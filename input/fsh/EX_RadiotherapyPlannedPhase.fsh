@@ -50,9 +50,9 @@ Usage: #example
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonReference = Reference(Diagnosis-2-Prostate)
-* bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
+* bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with radiotherapy"
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-05-Prostate-Phase2
 InstanceOf: RadiotherapyPlannedPhase

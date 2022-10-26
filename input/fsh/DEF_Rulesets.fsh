@@ -64,7 +64,7 @@ RuleSet: RadiotherapyRequestCommon
 * specimen 0..0
 * bodySite from RadiotherapyTreatmentLocationVS (required) //TBD For now required as in mCODE
 * bodySite MS
-* bodySite ^short = "Body site that is treated with Radiotherapy"
+* bodySite ^short = "Body site that is treated with radiotherapy"
 * note MS
 
 RuleSet: RadiotherapyProcedureCommon
@@ -91,8 +91,8 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
     RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
 * extension[radiotherapyDosePlannedToVolume]
   * extension[fractions] 0..0
-  * extension[fractions] ^short = "Not used in this profile. In a Phase, all volumes are involved in all Fractions."
-  * extension[fractions] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of Fractions for different volumes, multiple Phases have to be defined."
+  * extension[fractions] ^short = "Not used in this profile. In a phase, all volumes are involved in all fractions."
+  * extension[fractions] ^definition = "Not used in this profile. In a phase, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of fractions for different volumes, multiple phases have to be defined."
 * occurrenceTiming only Timing
 * occurrenceTiming MS
   * repeat
@@ -111,8 +111,8 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
     RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
 * extension[radiotherapyDosePrescribedToVolume]
   * extension[fractions] 0..0
-  * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions."
-  * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all Fractions and the number of Fractions is defined in extension radiotherapyFractionsPrescribed."
+  * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions."
+  * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPrescribed."
 * occurrenceTiming only Timing
 * occurrenceTiming MS
   * repeat

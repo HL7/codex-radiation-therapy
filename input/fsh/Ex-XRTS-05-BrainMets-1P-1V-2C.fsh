@@ -25,7 +25,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example, test case XRTS-05, Course 1 after 1 Fraction."
+Description: "Radiotherapy Course Summary example, test case XRTS-05, Course 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-Common
 * meta.versionId = "1"
@@ -120,11 +120,11 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-05-22A)
 * performedPeriod.start = "2020-09-07T13:15:17+01:00"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-05, Course 1, Phase 1 after 1 Fraction."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-05, Course 1, Phase 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-Common
 * meta.versionId = "1"
@@ -172,7 +172,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22A-02-01-Primary-Common
 * subject = Reference(Patient-XRTS-05-22A)
 * performedPeriod.start = "2021-09-20T13:15:17+01:00"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22A-02-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -290,7 +290,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-05-22A)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-05-22A-02-01-Primary
 InstanceOf: RadiotherapyPlannedPhase
@@ -322,13 +322,13 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-05-22A)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyVolume-XRTS-05-22A-01-BrainMets
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-05 'Brain Mets' Course 1."
+Description: "Example target volume XRTS-05 'Brain Mets' Course 1."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -347,7 +347,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-05-22A-02-BrainMets
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-05 'Brain Mets' Course 2. Same label as Brain Mets in first Course, but conceptually a different Volume. Dose is not added up."
+Description: "Example target volume XRTS-05 'Brain Mets' Course 2. Same label as Brain Mets in first course, but conceptually a different volume. Dose is not added up."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-22T10:07:41.050+02:00"

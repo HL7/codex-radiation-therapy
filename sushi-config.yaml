@@ -104,7 +104,7 @@ groups:
     - StructureDefinition/codexrt-radiotherapy-treated-plan
   ProfilesForAllLevels:
     name: D. Profiles Referenced from All Levels
-    description: Profiles referenced from all levels and throughout the Radiotherapy workflow.
+    description: Profiles referenced from all levels and throughout the radiotherapy workflow.
     resources:
     - StructureDefinition/codexrt-radiotherapy-volume
     - StructureDefinition/codexrt-radiotherapy-treatment-location

@@ -2,7 +2,7 @@ Profile: RadiotherapyPlannedCourse
 Parent: ServiceRequest
 Id: codexrt-radiotherapy-planned-course
 Title: "Radiotherapy Planned Course"
-Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to deliver a complete Course."
+Description: "A Radiotherapy Planned Course covers all radiotherapy plans to deliver a complete course."
 * ^status = #draft
 * insert RadiotherapyPlansCommon
 * insert ModalityAndTechniqueZeroToMany
@@ -11,15 +11,15 @@ Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to del
     $mCODERadiotherapySessions named radiotherapySessions 0..1 MS and
     RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS
 * extension[radiotherapyDosePlannedToVolume]
-  * extension[fractionDose] ^short = "Not used in this profile. See Planned Phase for detailed Fractionation."
-  * extension[fractionDose] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all Fractions in which this volume receives dose."
+  * extension[fractionDose] ^short = "Not used in this profile. See Planned Phase for detailed fractionation."
+  * extension[fractionDose] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all fractions in which this volume receives dose."
   * extension[fractionDose] 0..0
-* code = $mCODESCT_TBD#USCRS-33529 "Radiotherapy Course of Treatment (regime/therapy)"
+* code = SCT#1217123003 "Radiotherapy course of treatment (regime/therapy)"
 * occurrencePeriod only Period
 * occurrencePeriod MS
 * insert BasedOnSlicing
 * basedOn contains
     course-prescription 0..1 MS
-* basedOn[course-prescription] ^short = "RadiotherapyCoursePrescription that this RadiotherapyPlannedCourse fulfills."
+* basedOn[course-prescription] ^short = "Radiotherapy Course Prescription that this Radiotherapy Planned Course fulfills."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * replaces only Reference(RadiotherapyPlannedCourse)

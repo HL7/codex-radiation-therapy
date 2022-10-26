@@ -1,7 +1,7 @@
 
 Instance: RadiotherapyVolume-01-PTV50
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume 'PTV50'."
+Description: "Example target volume 'PTV50'."
 Usage: #example
 * id = "radiotherapyVolume-01-PTV50" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -19,7 +19,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-02-PTV64
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume 'PTV64'."
+Description: "Example target volume 'PTV64'."
 Usage: #example
 * id = "RadiotherapyVolume-02-PTV64" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -37,7 +37,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-03-Prostate
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume 'Prostate'."
+Description: "Example target volume 'Prostate'."
 Usage: #example
 * id = "RadiotherapyVolume-03-Prostate" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -55,7 +55,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-04-PelvNs
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume 'Pelvic Nodes'."
+Description: "Example target volume 'Pelvic Nodes'."
 Usage: #example
 * id = "RadiotherapyVolume-04-PelvNs" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -73,7 +73,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-05-SemVs
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume 'Seminal Vesicles'."
+Description: "Example target volume 'Seminal Vesicles'."
 Usage: #example
 * id = "RadiotherapyVolume-05-SemVs" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server

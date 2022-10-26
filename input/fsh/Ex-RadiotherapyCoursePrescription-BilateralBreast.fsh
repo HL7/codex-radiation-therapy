@@ -282,7 +282,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-101-LeftBreast
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume 'Left Breast'."
+Description: "Example target volume 'Left Breast'."
 Usage: #example
 * id = "RadiotherapyVolume-101-LeftBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -303,7 +303,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-102-LeftBreastBoost
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume 'Left Breast Boost'."
+Description: "Example target volume 'Left Breast Boost'."
 Usage: #example
 * id = "RadiotherapyVolume-102-LeftBreastBoost" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -324,7 +324,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-103-RightBreast
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume 'Right Breast'."
+Description: "Example target volume 'Right Breast'."
 Usage: #example
 * id = "RadiotherapyVolume-103-RightBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -348,7 +348,7 @@ Usage: #example
 Instance:   Patient-101
 InstanceOf: Patient
 Title: "Example Female Patient 101"
-Description: "An example female patient to relate Radiotherapy resources to."
+Description: "An example female patient to relate radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
 * identifier[+]

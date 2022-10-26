@@ -37,7 +37,7 @@ Usage: #example
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1) //Intent that this prescription bases on
 * basedOn[=].display =  "Prostate-Phase1"
-//* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
+//* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired Phase Prescription that is replaced by this Phase Prescription
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
@@ -50,9 +50,9 @@ Usage: #example
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonReference = Reference(Diagnosis-2-Prostate)
-* bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
+* bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with radiotherapy"
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Prescription"
+* note.text = "Free text note in Radiotherapy Plan Prescription"
 
 Instance: RadiotherapyPlanPrescription-05-Prostate-Phase2-Plan1
 InstanceOf: RadiotherapyPlanPrescription
@@ -88,7 +88,7 @@ Usage: #example
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn = Reference(RadiotherapyPhasePrescription-05-Prostate-Phase2) //Intent that this prescription bases on
 * basedOn.display =  "Prostate-Phase2"
-//* replaces = Reference(RadiotherapyPhasePrescription-0) //Previous retired PhasePrescription that is replaced by this PhasePrescription
+//* replaces = Reference(RadiotherapyPhasePrescription-0) //Previous retired Phase Prescription that is replaced by this Phase Prescription
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
@@ -103,4 +103,4 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy PhasePrescription"
+* note.text = "Free text note in Radiotherapy Plan Prescription"

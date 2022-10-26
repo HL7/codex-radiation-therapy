@@ -26,7 +26,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-04 after 1 Fraction."
+Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-04 after 1 fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-Common
 * meta.versionId = "1"
@@ -109,12 +109,12 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-Common
 * subject = Reference(Patient-XRTS-04-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-04, Phase 1 after 1 Fraction."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-04, Phase 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-Common
 * meta.versionId = "1"
@@ -318,7 +318,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-02-RightBreastTang
 InstanceOf: RadiotherapyPlannedPhase
@@ -350,7 +350,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyPlannedPhase
@@ -382,13 +382,13 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyVolume-XRTS-04-22A-01-LeftBreast
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-04 'Left Breast'."
+Description: "Example target volume XRTS-04 'Left Breast'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -408,7 +408,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-04 'Left Breast Boost'."
+Description: "Example target volume XRTS-04 'Left Breast Boost'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -428,7 +428,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-04-22A-03-RightBreast
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-04 'Right Breast'."
+Description: "Example target volume XRTS-04 'Right Breast'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"

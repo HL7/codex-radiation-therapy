@@ -6,8 +6,8 @@ RuleSet: ExtensionContext(path)
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
 Title: "Number of Prescribed Fractions"
-Description: "The number of prescribed Fractions in this scope.
-This extension SHALL only be present if the treatment is structured as countable Fractions, for example in a Phase Prescription."
+Description: "The number of prescribed fractions in this scope.
+This extension SHALL only be present if the treatment is structured as countable fractions, for example in a Radiotherapy Phase Prescription."
 * . ^short = "Number of Prescribed Fractions"
 * value[x] ^short = "Number of Prescribed Fractions"
 * value[x] only positiveInt
@@ -16,8 +16,8 @@ This extension SHALL only be present if the treatment is structured as countable
 Extension: RadiotherapyFractionsPlanned
 Id: codexrt-radiotherapy-fractions-planned
 Title: "Number of Planned Fractions"
-Description: "The number of planned Fractions in this scope.
-This extension SHALL only be present if the treatment is structured as countable Fractions, for example in a Planned Phase or in a Treatment Plan."
+Description: "The number of planned fractions in this scope.
+This extension SHALL only be present if the treatment is structured as countable fractions, for example in a Radiotherapy Planned Phase or in a Radiotherapy Treatment Plan."
 * . ^short = "Number of Planned Fractions"
 * value[x] ^short = "Number of Planned Fractions"
 * value[x] only positiveInt
@@ -66,13 +66,13 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
 * extension[fractionDose]
   * ^short = "Radiation Dose Prescribed per Fraction"
-  * ^definition = "The dose prescribed per Fraction to this volume."
+  * ^definition = "The dose prescribed per fraction to this volume."
 * extension[totalDose]
   * ^short = "Total Radiation Dose Prescribed"
   * ^definition = "The total dose prescribed to this volume within the scope of this ServiceRequest."
 * extension[fractions]
   * ^short = "Number of Prescribed Fractions"
-  * ^definition = "The prescribed number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in Phase Prescriptions or Plans."
+  * ^definition = "The prescribed number of fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in phases or plans."
 
 
 Extension: RadiotherapyDosePlannedToVolume
@@ -89,10 +89,10 @@ Description: "Dose parameters planned for one radiotherapy volume."
   * ^definition = "The total dose planned to this volume within the scope of this ServiceRequest."
 * extension[fractionDose]
   * ^short = "Radiation Dose Planned per Fraction"
-  * ^definition = "The dose Planned per Fraction to this volume."
+  * ^definition = "The dose planned per fraction to this volume."
 * extension[fractions]
   * ^short = "Number of Planned Fractions"
-  * ^definition = "The planned number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
+  * ^definition = "The planned number of fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in phases or plans."
 
 
 Extension: RadiotherapyEnergyOrIsotope
@@ -104,12 +104,12 @@ by the maximum energy, the maximum accelaration voltage, or the used isotope."
 * value[x] only SimpleQuantity or CodeableConcept
 * valueQuantity ^short = "The spectrum of radiation energy characterized by a maximum value.
 For electrons, the maximum energy is given in MeV. For photons, the maximum acceleration voltage is given in MV or kV, although those are not units of energy."
-* valueQuantity from RadiotherapyEnergyUnits (required)
+* valueQuantity from RadiotherapyEnergyUnitVS (required)
 * valueQuantity.value 1..1
 * valueQuantity.system 1..1
 * valueQuantity.code 1..1
 * valueCodeableConcept ^short = "The isotope used for radiotherapy."
-* valueCodeableConcept from RadiotherapyIsotopes (extensible)
+* valueCodeableConcept from RadiotherapyIsotopeVS (extensible)
 * value[x] 1..1
 
 
@@ -150,7 +150,7 @@ Description: "A reference to a DICOM SOP Instance."
 Extension: RadiotherapyDevice
 Id: codexrt-radiotherapy-device
 Title: "Radiotherapy Device"
-Description: "The device used for delivering the Radiotherapy. This can be a treatment device such as a LINAC (external beam), an Afterloader (brachytherapy), or implanted seeds (brachytherapy)."
+Description: "The device used for delivering radiotherapy. This can be a treatment device such as a LINAC (external beam), an afterloader (brachytherapy), or implanted seeds (brachytherapy)."
 * . ^short = "Radiotherapy Device"
 * valueReference 1..1
 * valueReference only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
@@ -163,12 +163,16 @@ Description: "Radiotherapy Treatment Applicator Type."
 * . ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] only CodeableConcept
-* value[x] from ApplicatorTypesVS (extensible)
+* value[x] from BrachytherapyApplicatorTypeVS (extensible)
 
 Extension: UniformFractionation
 Id: codexrt-radiotherapy-uniform-fractionation
 Title: "Uniform Fractionation"
-Description: "Uniform Fraction is true if fractionation was uniform, i.e. treated with same modality and dose per fraction, false if fractionation was mixed."
+Description: "This flag is true if fractionation was uniform (i.e., treated with same modality and dose per fraction) and false if fractionation was mixed. Treatment technique may vary in uniform fractionation.
+If the fractionation was uniform, then the correspondence between the physical and biologically effective dose can be determined on course level.
+If the fractionation was not uniform, then the correspondence between the physical and biologically effective dose has to be determined per phase.
+The flag was introduced to see in a Radiotherapy Course Summary whether the fractionation was uniform without first checking the details of each treatment phase.
+This is important in registry use cases to efficiently assess whether checking phase level information is needed."
 * . ^short = "Uniform Fractionation"
 * value[x] ^short = "Uniform Fractionation Was Used"
 * value[x] only boolean
@@ -192,4 +196,4 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] ^short = "Reason for Revision or Adaptation"
 * value[x] only CodeableConcept
 * value[x] 1..1
-* value[x] from ReasonForRevisionOrAdaptationVS (required)
+* value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (required)

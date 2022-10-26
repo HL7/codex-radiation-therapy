@@ -36,7 +36,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-06 after 1 Fraction."
+Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-06 after 1 fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.versionId = "1"
@@ -95,11 +95,11 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-06-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-06, Phase 1 after 1 Fraction."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-06, Phase 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
 * meta.versionId = "1"
@@ -204,13 +204,13 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-06-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyVolume-XRTS-06-22B-01-Uterus
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-06 'Cervix Uteri'."
+Description: "Example target volume XRTS-06 'Cervix Uteri'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"

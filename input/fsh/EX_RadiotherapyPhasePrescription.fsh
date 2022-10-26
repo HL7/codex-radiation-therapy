@@ -37,7 +37,7 @@ Usage: #example
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
 * basedOn[=].display = "Prostate-2Phases"
-//* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
+//* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired Phase Prescription that is replaced by this Phase Prescription
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
@@ -52,11 +52,11 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Prescription"
+* note.text = "Free text note in Radiotherapy Phase Prescription"
 
 Instance: RadiotherapyPhasePrescription-05-Prostate-Phase2
 InstanceOf: RadiotherapyPhasePrescription
-Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 2."
+Description: "Radiotherapy Phase Prescription to cover IHE-RO XRTS profile for a Prostate example, phase 2."
 Usage: #example
 //* id = "RadiotherapyPhasePrescription-05-Prostate-Phase2" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
@@ -88,7 +88,7 @@ Usage: #example
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate) //Intent that this prescription bases on
 * basedOn[=].display =  "Prostate-2Phases"
-//* replaces = Reference(RadiotherapyPhasePrescription-0) //Previous retired PhasePrescription that is replaced by this PhasePrescription
+//* replaces = Reference(RadiotherapyPhasePrescription-0) //Previous retired Phase Prescription that is replaced by this Phase Prescription
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
@@ -103,4 +103,4 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy PhasePrescription"
+* note.text = "Free text note in Radiotherapy Phase Prescription"

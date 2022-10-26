@@ -1,7 +1,7 @@
-ValueSet: RadiotherapyTreatmentLocationTypesVS
+ValueSet: RadiotherapyTreatmentLocationTypeVS
 Id: codexrt-radiotherapy-treatment-location-type-vs
-Title: "Treatment Location Types VS"
-Description: "Treatment Location Types"
+Title: "Radiotherapy Treatment Location Type Value Set"
+Description: "The type of location where radiotherapy treatment is provided"
 * insert SCTCopyright
 * ^experimental = false
 * v3-RoleCode#RADDX "Radiology diagnostics or therapeutics unit"
@@ -17,5 +17,5 @@ Id: codexrt-radiotherapy-treatment-location
 Title: "Treatment Location"
 Description: "Treatment Location (USCoreLocation)"
 * name ^short = "Name of Treatment Location"
-* type from RadiotherapyTreatmentLocationTypesVS (required)
+* type from RadiotherapyTreatmentLocationTypeVS (required)
 * type 1..1

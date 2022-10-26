@@ -28,7 +28,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-03 after 1 Fraction."
+Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-03 after 1 fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V-Common
 * meta.versionId = "1"
@@ -113,11 +113,11 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-03-22A-01-01-Primary-Common
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-03-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-03, Phase 1 after 1 Fraction."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-03, Phase 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-03-22A-01-01-Primary-Common
 * meta.versionId = "1"
@@ -263,13 +263,13 @@ Usage: #example
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyVolume-XRTS-03-22A-01-Prostate
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-03 'Prostate'."
+Description: "Example target volume XRTS-03 'Prostate'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -288,7 +288,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-03-22A-02-PelvNs
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-03 'Pelvic Lymph Nodes'."
+Description: "Example target volume XRTS-03 'Pelvic Lymph Nodes'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -306,7 +306,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-03-22A-03-SemVs
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-03 'Seminal Vesicles'."
+Description: "Example target volume XRTS-03 'Seminal Vesicles'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
