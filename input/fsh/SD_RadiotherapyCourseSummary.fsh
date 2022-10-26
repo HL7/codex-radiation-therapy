@@ -2,8 +2,8 @@ Profile: RadiotherapyCourseSummary
 Parent: $mCODERadiotherapyCourseSummary
 Id: codexrt-radiotherapy-course-summary
 Title: "Radiotherapy Course Summary"
-Description: "A summary of the treatment progress in a radiotherapy Course.
-Whenever new contributions in the scope of the same Course are delivered, this resource is updated (no new resource created)."
+Description: "A summary of the treatment progress in a radiotherapy course.
+Whenever new contributions in the scope of the same course are delivered, this resource is updated (no new resource created)."
 * insert RadiotherapyProcedureCommon
 * obeys codexrt-procedure-status
 * insert ModalityAndTechniqueExtensions

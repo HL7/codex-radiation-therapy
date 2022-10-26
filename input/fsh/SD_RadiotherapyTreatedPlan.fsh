@@ -26,7 +26,7 @@ Description: "A summary of radiotherapy treatment delivered with a single treatm
 * partOf contains
     course-summary 0..1 MS and
     treated-phase 0..1 MS
-* partOf[course-summary] ^short = "Radiotherapy Course Summary that summarizes the Course of which this Radiotherapy Treated Plan is a part."
-* partOf[treated-phase] ^short = "Radiotherapy Treated Phase that summarizes the Phase of which this Radiotherapy Treated Plan is a part."
+* partOf[course-summary] ^short = "Radiotherapy Course Summary that summarizes the course of which this Radiotherapy Treated Plan is a part."
+* partOf[treated-phase] ^short = "Radiotherapy Treated Phase that summarizes the phase of which this Radiotherapy Treated Plan is a part."
 * partOf[course-summary] only Reference(RadiotherapyCourseSummary)
 * partOf[treated-phase] only Reference(RadiotherapyTreatedPhase)

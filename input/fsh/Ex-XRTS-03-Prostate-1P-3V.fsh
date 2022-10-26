@@ -269,7 +269,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-03-22A-01-Prostate
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-03 'Prostate'."
+Description: "Example target volume XRTS-03 'Prostate'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -288,7 +288,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-03-22A-02-PelvNs
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-03 'Pelvic Lymph Nodes'."
+Description: "Example target volume XRTS-03 'Pelvic Lymph Nodes'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -306,7 +306,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-03-22A-03-SemVs
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-03 'Seminal Vesicles'."
+Description: "Example target volume XRTS-03 'Seminal Vesicles'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"

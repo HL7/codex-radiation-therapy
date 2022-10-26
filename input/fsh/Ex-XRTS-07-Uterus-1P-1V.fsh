@@ -167,7 +167,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-07-22B-01-Uterus
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-07 'Cervix Uteri'."
+Description: "Example target volume XRTS-07 'Cervix Uteri'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"

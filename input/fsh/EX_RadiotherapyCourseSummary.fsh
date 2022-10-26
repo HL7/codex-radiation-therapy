@@ -29,7 +29,7 @@ Usage: #example
   * extension[fractionsDelivered].valueUnsignedInt = 2
   * extension[uniformFractionation].valueBoolean = true
 * identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-* identifier.system = VarianRadiotherapyCourseId //Use same id as for Course
+* identifier.system = VarianRadiotherapyCourseId //Use same id as for course
 * identifier.value = "Prostate-2Phases"
 * basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate)
 * basedOn[=].display = "Prostate-2Phases"
@@ -41,6 +41,6 @@ Usage: #example
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
-* reasonReference = Reference(Diagnosis-2-Prostate) //In ARIA, diagnoses related to Course
+* reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"

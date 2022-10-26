@@ -388,7 +388,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-04-22A-01-LeftBreast
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-04 'Left Breast'."
+Description: "Example target volume XRTS-04 'Left Breast'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -408,7 +408,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-04 'Left Breast Boost'."
+Description: "Example target volume XRTS-04 'Left Breast Boost'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -428,7 +428,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-04-22A-03-RightBreast
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-04 'Right Breast'."
+Description: "Example target volume XRTS-04 'Right Breast'."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"

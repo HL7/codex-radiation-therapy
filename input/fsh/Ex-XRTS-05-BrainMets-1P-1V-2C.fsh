@@ -25,7 +25,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example, test case XRTS-05, Course 1 after 1 Fraction."
+Description: "Radiotherapy Course Summary example, test case XRTS-05, Course 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-Common
 * meta.versionId = "1"
@@ -328,7 +328,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-05-22A-01-BrainMets
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-05 'Brain Mets' Course 1."
+Description: "Example target volume XRTS-05 'Brain Mets' Course 1."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
@@ -347,7 +347,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-XRTS-05-22A-02-BrainMets
 InstanceOf: RadiotherapyVolume
-Description: "Example Target Volume XRTS-05 'Brain Mets' Course 2. Same label as Brain Mets in first Course, but conceptually a different Volume. Dose is not added up."
+Description: "Example target volume XRTS-05 'Brain Mets' Course 2. Same label as Brain Mets in first course, but conceptually a different volume. Dose is not added up."
 Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-22T10:07:41.050+02:00"
