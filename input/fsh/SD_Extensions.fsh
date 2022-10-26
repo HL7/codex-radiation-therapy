@@ -72,7 +72,7 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
   * ^definition = "The total dose prescribed to this volume within the scope of this ServiceRequest."
 * extension[fractions]
   * ^short = "Number of Prescribed Fractions"
-  * ^definition = "The prescribed number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in Phase Prescriptions or Plans."
+  * ^definition = "The prescribed number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in phases or plans."
 
 
 Extension: RadiotherapyDosePlannedToVolume
