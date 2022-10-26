@@ -15,5 +15,5 @@ Description: "A Radiotherapy Course Prescription is a high-level request for a c
   * extension[fractionDose] ^definition = "Fraction dose is not defined in the Course Prescription because dose may not be equal in all Fractions in which this volume receives dose."
 * occurrencePeriod only Period
 * occurrencePeriod MS
-* code = SCT#1217123003  "Radiotherapy Course of Treatment (regime/therapy)"
+* code = SCT#1217123003 "Radiotherapy course of treatment (regime/therapy)"
 * replaces only Reference(RadiotherapyCoursePrescription)
