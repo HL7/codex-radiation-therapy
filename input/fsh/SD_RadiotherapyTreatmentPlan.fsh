@@ -9,7 +9,7 @@ Description: "A Radiotherapy Treatment Plan resource describes the radiotherapy 
 * extension contains
     DicomReference named radiotherapyDicomPlan 0..1
 * extension[radiotherapyDicomPlan] ^short = "DICOM Treatment Plan"
-* extension[radiotherapyDicomPlan] ^definition = "Reference to a DICOM SOP instance representing a Treatment Plan such as RT Plan or RT Ion Plan."
+* extension[radiotherapyDicomPlan] ^definition = "Reference to a DICOM SOP instance representing a treatment plan such as RT Plan or RT Ion Plan."
 * insert BasedOnSlicing
 * basedOn contains
     plan-prescription 0..1 MS and
