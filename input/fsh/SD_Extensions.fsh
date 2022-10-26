@@ -60,7 +60,7 @@ Id: codexrt-radiotherapy-dose-prescribed-to-volume
 Title: "Dose Prescribed to Volume"
 Description: "Dose parameters prescribed for one radiotherapy volume."
 * insert DoseToVolumeCommon
-* . ^short = "Prescribed dose to a dose reference"
+* . ^short = "Prescribed Dose to a Dose Reference"
 * extension[volume]
   * ^short = "Volume targeted by the prescribed dose"
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
@@ -80,7 +80,7 @@ Id: codexrt-radiotherapy-dose-planned-to-volume
 Title: "Dose Planned to Volume"
 Description: "Dose parameters planned for one radiotherapy volume."
 * insert DoseToVolumeCommon
-* . ^short = "Planned dose to a dose reference"
+* . ^short = "Planned Dose to a Dose Reference"
 * extension[volume]
   * ^short = "Volume targeted by the planned dose"
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
