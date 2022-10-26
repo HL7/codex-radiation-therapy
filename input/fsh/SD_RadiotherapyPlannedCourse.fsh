@@ -11,8 +11,8 @@ Description: "A Radiotherapy Planned Course covers all radiotherapy plans to del
     $mCODERadiotherapySessions named radiotherapySessions 0..1 MS and
     RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS
 * extension[radiotherapyDosePlannedToVolume]
-  * extension[fractionDose] ^short = "Not used in this profile. See Planned Phase for detailed Fractionation."
-  * extension[fractionDose] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all Fractions in which this volume receives dose."
+  * extension[fractionDose] ^short = "Not used in this profile. See Planned Phase for detailed fractionation."
+  * extension[fractionDose] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all fractions in which this volume receives dose."
   * extension[fractionDose] 0..0
 * code = SCT#1217123003 "Radiotherapy course of treatment (regime/therapy)"
 * occurrencePeriod only Period

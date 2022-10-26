@@ -6,8 +6,8 @@ RuleSet: ExtensionContext(path)
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
 Title: "Number of Prescribed Fractions"
-Description: "The number of prescribed Fractions in this scope.
-This extension SHALL only be present if the treatment is structured as countable Fractions, for example in a Phase Prescription."
+Description: "The number of prescribed fractions in this scope.
+This extension SHALL only be present if the treatment is structured as countable fractions, for example in a Radiotherapy Phase Prescription."
 * . ^short = "Number of Prescribed Fractions"
 * value[x] ^short = "Number of Prescribed Fractions"
 * value[x] only positiveInt
@@ -16,8 +16,8 @@ This extension SHALL only be present if the treatment is structured as countable
 Extension: RadiotherapyFractionsPlanned
 Id: codexrt-radiotherapy-fractions-planned
 Title: "Number of Planned Fractions"
-Description: "The number of planned Fractions in this scope.
-This extension SHALL only be present if the treatment is structured as countable Fractions, for example in a Planned Phase or in a Treatment Plan."
+Description: "The number of planned fractions in this scope.
+This extension SHALL only be present if the treatment is structured as countable fractions, for example in a Radiotherapy Planned Phase or in a Radiotherapy Treatment Plan."
 * . ^short = "Number of Planned Fractions"
 * value[x] ^short = "Number of Planned Fractions"
 * value[x] only positiveInt
@@ -60,19 +60,19 @@ Id: codexrt-radiotherapy-dose-prescribed-to-volume
 Title: "Dose Prescribed to Volume"
 Description: "Dose parameters prescribed for one radiotherapy volume."
 * insert DoseToVolumeCommon
-* . ^short = "Prescribed Dose to a Dose Reference"
+* . ^short = "Prescribed dose to a dose reference"
 * extension[volume]
   * ^short = "Volume targeted by the prescribed dose"
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
 * extension[fractionDose]
   * ^short = "Radiation Dose Prescribed per Fraction"
-  * ^definition = "The dose prescribed per Fraction to this volume."
+  * ^definition = "The dose prescribed per fraction to this volume."
 * extension[totalDose]
   * ^short = "Total Radiation Dose Prescribed"
   * ^definition = "The total dose prescribed to this volume within the scope of this ServiceRequest."
 * extension[fractions]
   * ^short = "Number of Prescribed Fractions"
-  * ^definition = "The prescribed number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in phases or plans."
+  * ^definition = "The prescribed number of fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in phases or plans."
 
 
 Extension: RadiotherapyDosePlannedToVolume
@@ -80,7 +80,7 @@ Id: codexrt-radiotherapy-dose-planned-to-volume
 Title: "Dose Planned to Volume"
 Description: "Dose parameters planned for one radiotherapy volume."
 * insert DoseToVolumeCommon
-* . ^short = "Planned Dose to a Dose Reference"
+* . ^short = "Planned dose to a dose reference"
 * extension[volume]
   * ^short = "Volume targeted by the planned dose"
   * ^definition = "A BodyStructure resource representing the body structure to be treated, for example, Chest Wall Lymph Nodes."
@@ -89,10 +89,10 @@ Description: "Dose parameters planned for one radiotherapy volume."
   * ^definition = "The total dose planned to this volume within the scope of this ServiceRequest."
 * extension[fractionDose]
   * ^short = "Radiation Dose Planned per Fraction"
-  * ^definition = "The dose Planned per Fraction to this volume."
+  * ^definition = "The dose planned per fraction to this volume."
 * extension[fractions]
   * ^short = "Number of Planned Fractions"
-  * ^definition = "The planned number of Fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
+  * ^definition = "The planned number of fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
 
 
 Extension: RadiotherapyEnergyOrIsotope

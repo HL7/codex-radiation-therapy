@@ -124,7 +124,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-Common
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-05, Course 1, Phase 1 after 1 Fraction."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-05, Course 1, Phase 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-05-22A-01-01-Primary-Common
 * meta.versionId = "1"

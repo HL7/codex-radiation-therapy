@@ -26,7 +26,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22A-01-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-01 after 1 Fraction."
+Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-01 after 1 fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-01-22A-01-Common
 * meta.versionId = "1"
@@ -86,7 +86,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-Common
 
 Instance: RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-01, Phase 1 after 1 Fraction."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-01, Phase 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-Common
 * meta.versionId = "1"

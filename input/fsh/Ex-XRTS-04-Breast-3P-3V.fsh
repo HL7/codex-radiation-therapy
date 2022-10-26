@@ -26,7 +26,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-1Fx
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-04 after 1 Fraction."
+Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-04 after 1 fraction."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-Common
 * meta.versionId = "1"
@@ -114,7 +114,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-Common
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-1Fx
 InstanceOf: RadiotherapyTreatedPhase
-Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-04, Phase 1 after 1 Fraction."
+Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-04, Phase 1 after 1 fraction."
 Usage: #example
 * insert RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-Common
 * meta.versionId = "1"
