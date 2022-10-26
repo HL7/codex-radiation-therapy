@@ -28,6 +28,7 @@ Id: codexrt-radiotherapy-fractions-delivered
 Title: "Number of Delivered Fractions"
 Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
 * . ^short = "Number of Delivered Fractions"
+* value[x] ^short = "Number of Delivered Fractions"
 * value[x] only unsignedInt //as opposed to planned or prescribed fractions, delivered fractions can be zero.
 * value[x] 1..1
 
