@@ -91,8 +91,8 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
     RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
 * extension[radiotherapyDosePlannedToVolume]
   * extension[fractions] 0..0
-  * extension[fractions] ^short = "Not used in this profile. In a Phase, all volumes are involved in all fractions."
-  * extension[fractions] ^definition = "Not used in this profile. In a Phase, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of fractions for different volumes, multiple Phases have to be defined."
+  * extension[fractions] ^short = "Not used in this profile. In a phase, all volumes are involved in all fractions."
+  * extension[fractions] ^definition = "Not used in this profile. In a phase, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of fractions for different volumes, multiple phases have to be defined."
 * occurrenceTiming only Timing
 * occurrenceTiming MS
   * repeat

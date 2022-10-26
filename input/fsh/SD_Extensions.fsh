@@ -92,7 +92,7 @@ Description: "Dose parameters planned for one radiotherapy volume."
   * ^definition = "The dose planned per fraction to this volume."
 * extension[fractions]
   * ^short = "Number of Planned Fractions"
-  * ^definition = "The planned number of fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in Planned Phases or Plans."
+  * ^definition = "The planned number of fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in phases or plans."
 
 
 Extension: RadiotherapyEnergyOrIsotope

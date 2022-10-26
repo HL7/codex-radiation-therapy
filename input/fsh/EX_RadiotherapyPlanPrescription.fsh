@@ -37,7 +37,7 @@ Usage: #example
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1) //Intent that this prescription bases on
 * basedOn[=].display =  "Prostate-Phase1"
-//* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired PhasePrescription that is replaced by this PhasePrescription
+//* replaces = Reference(RadiotherapyPhasePrescription-0" //Previous retired Phase Prescription that is replaced by this Phase Prescription
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
