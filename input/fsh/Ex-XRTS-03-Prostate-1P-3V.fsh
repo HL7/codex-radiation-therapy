@@ -113,7 +113,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-03-22A-01-01-Primary-Common
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-03-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -263,7 +263,7 @@ Usage: #example
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

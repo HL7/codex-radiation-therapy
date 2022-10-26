@@ -161,7 +161,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-07-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

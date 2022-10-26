@@ -82,7 +82,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-02-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -133,7 +133,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange-Common
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V)
 * subject = Reference(Patient-XRTS-02-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 * performedPeriod.start = "2021-09-13T13:15:17+01:00"
 
 Instance: RadiotherapyTreatedPhase-XRTS-02-22A-01-02-PlanChange
@@ -223,7 +223,7 @@ Usage: #example
 * status = #revoked
 * subject = Reference(Patient-XRTS-02-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-02-22A-01-02-PlanChange
 InstanceOf: RadiotherapyPlannedPhase
@@ -256,7 +256,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-02-22A)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

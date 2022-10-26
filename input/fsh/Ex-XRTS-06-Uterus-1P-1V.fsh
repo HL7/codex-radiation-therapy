@@ -95,7 +95,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-06-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -204,7 +204,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-06-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

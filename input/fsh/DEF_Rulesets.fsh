@@ -64,7 +64,7 @@ RuleSet: RadiotherapyRequestCommon
 * specimen 0..0
 * bodySite from RadiotherapyTreatmentLocationVS (required) //TBD For now required as in mCODE
 * bodySite MS
-* bodySite ^short = "Body site that is treated with Radiotherapy"
+* bodySite ^short = "Body site that is treated with radiotherapy"
 * note MS
 
 RuleSet: RadiotherapyProcedureCommon

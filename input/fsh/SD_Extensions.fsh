@@ -150,7 +150,7 @@ Description: "A reference to a DICOM SOP Instance."
 Extension: RadiotherapyDevice
 Id: codexrt-radiotherapy-device
 Title: "Radiotherapy Device"
-Description: "The device used for delivering the Radiotherapy. This can be a treatment device such as a LINAC (external beam), an Afterloader (brachytherapy), or implanted seeds (brachytherapy)."
+Description: "The device used for delivering radiotherapy. This can be a treatment device such as a LINAC (external beam), an afterloader (brachytherapy), or implanted seeds (brachytherapy)."
 * . ^short = "Radiotherapy Device"
 * valueReference 1..1
 * valueReference only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)

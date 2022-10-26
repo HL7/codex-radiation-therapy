@@ -52,11 +52,11 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Prescription"
+* note.text = "Free text note in Radiotherapy Phase Prescription"
 
 Instance: RadiotherapyPhasePrescription-05-Prostate-Phase2
 InstanceOf: RadiotherapyPhasePrescription
-Description: "Radiotherapy PhasePrescription to cover IHE-RO XRTS profile for a Prostate example, phase 2."
+Description: "Radiotherapy Phase Prescription to cover IHE-RO XRTS profile for a Prostate example, phase 2."
 Usage: #example
 //* id = "RadiotherapyPhasePrescription-05-Prostate-Phase2" //id of the FHIR Resource
 * meta.versionId = "219952" //Version of the resource on the server
@@ -103,4 +103,4 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy PhasePrescription"
+* note.text = "Free text note in Radiotherapy Phase Prescription"

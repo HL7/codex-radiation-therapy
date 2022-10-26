@@ -2,7 +2,7 @@ Profile:  RadiotherapyTreatedPlan
 Parent:   USCoreProcedure
 Id:       codexrt-radiotherapy-treated-plan
 Title: "Radiotherapy Treated Plan"
-Description: "A summary of Radiotherapy treatment delivered with a single Radiotherapy Treatment Plan."
+Description: "A summary of radiotherapy treatment delivered with a single treatment plan."
 * insert RadiotherapyTreatedPhaseAndPlanCommon
 * ^status = #draft
 * extension contains
@@ -18,15 +18,15 @@ Description: "A summary of Radiotherapy treatment delivered with a single Radiot
 * basedOn contains
     treatment-plan 0..1 MS and
     plan-prescription 0..1 MS
-* basedOn[treatment-plan] ^short = "RadiotherapyTreatmentPlan that planned the treatment summarized in this RadiotherapyTreatedPlan."
-* basedOn[plan-prescription] ^short = "RadiotherapyPlanPrescription that prescribed the treatment summarized in this RadiotherapyTreatedPlan."
+* basedOn[treatment-plan] ^short = "Radiotherapy Treatment Plan that planned the treatment summarized in this Radiotherapy Treated Plan."
+* basedOn[plan-prescription] ^short = "Radiotherapy Plan Prescription that prescribed the treatment summarized in this Radiotherapy Treated Plan."
 * basedOn[treatment-plan] only Reference(RadiotherapyTreatmentPlan)
 * basedOn[plan-prescription] only Reference(RadiotherapyPlanPrescription)
 * insert PartOfSlicing
 * partOf contains
     course-summary 0..1 MS and
     treated-phase 0..1 MS
-* partOf[course-summary] ^short = "RadiotherapyCourseSummary that summarizes the Course of which this RadiotherapyTreatedPlan is a part."
-* partOf[treated-phase] ^short = "RadiotherapyTreatedPhase that summarizes the Phase of which this RadiotherapyTreatedPlan is a part."
+* partOf[course-summary] ^short = "Radiotherapy Course Summary that summarizes the Course of which this Radiotherapy Treated Plan is a part."
+* partOf[treated-phase] ^short = "Radiotherapy Treated Phase that summarizes the Phase of which this Radiotherapy Treated Plan is a part."
 * partOf[course-summary] only Reference(RadiotherapyCourseSummary)
 * partOf[treated-phase] only Reference(RadiotherapyTreatedPhase)

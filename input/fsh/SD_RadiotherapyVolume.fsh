@@ -2,7 +2,7 @@ Profile: RadiotherapyVolume
 Parent: $mCODERadiotherapyVolume
 Id: codexrt-radiotherapy-volume
 Title: "Radiotherapy Volume"
-Description: "A volume of the body used in Radiotherapy planning or treatment delivery. This corresponds to the Conceptual Volume in DICOM."
+Description: "A volume of the body used in radiotherapy planning or treatment delivery. This corresponds to the Conceptual Volume in DICOM."
 // * obeys mcode-description-or-id-required
 * ^status = #draft
 * identifier 2..* MS // SHOULD have both a globally unique technical identifier and a display name in mCODE, but we require both

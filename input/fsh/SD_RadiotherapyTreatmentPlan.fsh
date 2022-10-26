@@ -2,7 +2,7 @@ Profile: RadiotherapyTreatmentPlan
 Parent: ServiceRequest
 Id: codexrt-radiotherapy-treatment-plan
 Title: "Radiotherapy Treatment Plan"
-Description: "A Radiotherapy Treatment Plan resource describes the treatment that is planned to be delivered with a single Radiotherapy Treatment Plan."
+Description: "A Radiotherapy Treatment Plan resource describes the radiotherapy treatment that is planned to be delivered with a single treatment plan."
 * ^status = #draft
 * insert RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * code = SnomedRequestedCS#USCRS-34602 "Radiotherapy treatment plan (regime/therapy)"
@@ -15,9 +15,9 @@ Description: "A Radiotherapy Treatment Plan resource describes the treatment tha
     plan-prescription 0..1 MS and
     planned-phase 0..1 MS and
     planned-course 0..1 MS
-* basedOn[plan-prescription] ^short = "RadiotherapyPlanPrescription that this TreatmentPlan fulfills."
-* basedOn[planned-course] ^short = "RadiotherapyPlannedCourse that this TreatmentPlan fulfills (in most cases together with other treatment plans)."
-* basedOn[planned-phase] ^short = "RadiotherapyPlannedPhase that this TreatmentPlan fulfills (in most cases together with other treatment plans)."
+* basedOn[plan-prescription] ^short = "Radiotherapy Plan Prescription that this Treatment Plan fulfills."
+* basedOn[planned-course] ^short = "Radiotherapy Planned Course that this Treatment Plan fulfills (in most cases together with other treatment plans)."
+* basedOn[planned-phase] ^short = "Radiotherapy Planned Phase that this Treatment Plan fulfills (in most cases together with other treatment plans)."
 * basedOn[plan-prescription] only Reference(RadiotherapyPlanPrescription)
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
 * basedOn[planned-phase] only Reference(RadiotherapyPlannedPhase)

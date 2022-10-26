@@ -109,7 +109,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-Common
 * subject = Reference(Patient-XRTS-04-22A)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Treated Phase"
 
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22A-01-01-LeftBreastTang-1Fx
@@ -318,7 +318,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-02-RightBreastTang
 InstanceOf: RadiotherapyPlannedPhase
@@ -350,7 +350,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22A-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyPlannedPhase
@@ -382,7 +382,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22A)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
+* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 Instance:   Patient-5
 InstanceOf: Patient
 Title: "Example Female Patient 5"
-Description: "An example female  patient to relate Radiotherapy resources to."
+Description: "An example female  patient to relate radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
 * identifier[+]
@@ -31,7 +31,7 @@ Usage: #example
 Instance:   Patient-6
 InstanceOf: Patient
 Title: "Example Male Patient 6"
-Description: "An example male patient to relate Radiotherapy resources to."
+Description: "An example male patient to relate radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
 * identifier[+].

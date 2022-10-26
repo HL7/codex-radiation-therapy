@@ -2,7 +2,7 @@ Profile: RadiotherapyPlannedCourse
 Parent: ServiceRequest
 Id: codexrt-radiotherapy-planned-course
 Title: "Radiotherapy Planned Course"
-Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to deliver a complete Course."
+Description: "A Radiotherapy Planned Course covers all radiotherapy Plans to deliver a complete Course."
 * ^status = #draft
 * insert RadiotherapyPlansCommon
 * insert ModalityAndTechniqueZeroToMany
@@ -20,6 +20,6 @@ Description: "A Radiotherapy Planned Course covers all Radiotherapy Plans to del
 * insert BasedOnSlicing
 * basedOn contains
     course-prescription 0..1 MS
-* basedOn[course-prescription] ^short = "RadiotherapyCoursePrescription that this RadiotherapyPlannedCourse fulfills."
+* basedOn[course-prescription] ^short = "Radiotherapy Course Prescription that this Radiotherapy Planned Course fulfills."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * replaces only Reference(RadiotherapyPlannedCourse)

@@ -50,6 +50,6 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy CoursePrescription"
+* note.text = "Free text note in Radiotherapy Course Prescription"
 
 // ------------------------------------------------------------------------------------
