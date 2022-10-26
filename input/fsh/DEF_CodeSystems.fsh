@@ -21,4 +21,4 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 * #1255211004 "Brachytherapy cylinder (physical object)" "Brachytherapy cylinder (physical object)"
 * #1254768007 "Radioactive seed embedded in mesh (physical object)" "Radioactive seed embedded in mesh (physical object)"
 * #1254767002 "Stranded radioactive seed (physical object)" "Stranded radioactive seed (physical object)"
-* #1254766006 "Loose radioactive seed (physical object)"
+* #1254766006 "Loose radioactive seed (physical object)" "Loose radioactive seed (physical object)"
