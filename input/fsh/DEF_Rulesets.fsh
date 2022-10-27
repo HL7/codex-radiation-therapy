@@ -43,8 +43,6 @@ RuleSet: RadiotherapyRequestCommon
 * identifier MS
 * identifier.system MS
 * identifier.value 1..1 MS
-* replaces MS
-* replaces ^short = "Previous retired request that is replaced by this request" //Defined a short so the element is shown even if it is not MS
 * status MS
 * intent MS
 * insert CategorySlicing
@@ -77,6 +75,8 @@ RuleSet: RadiotherapyProcedureCommon
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon
 * intent = ReqIntent#original-order "Original Order"
+* replaces MS
+* replaces ^short = "Previous retired prescription that is replaced by this prescription"
 
 RuleSet: RadiotherapyPlansCommon
 * insert RadiotherapyRequestCommon
