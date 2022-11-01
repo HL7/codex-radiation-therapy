@@ -67,13 +67,11 @@ RuleSet: RadiotherapyRequestCommon
 * note MS
 * insert OpenProfileBasedSlicing(performer)
 * performer contains
-    treatmentDevice 0..* MS and
-    seedDevice 0..* MS
-* performer[treatmentDevice] only Reference(RadiotherapyTreatmentDevice)
-* performer[seedDevice] only Reference(RadiotherapySeedDevice)
+    treatmentOrSeedDevice 0..* MS
+* performer[treatmentOrSeedDevice] only  Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
 * performer MS
-* performer[treatmentDevice] ^short = "Radiotherapy Treatment Device used as part of therapy."
-* performer[seedDevice] ^short = "Seed Device used as part of therapy."
+* performer[treatmentOrSeedDevice] ^short = "Radiotherapy Treatment Device or Seed Device used as part of therapy."
+
 
 RuleSet: RadiotherapyProcedureCommon
 * performed[x] only Period

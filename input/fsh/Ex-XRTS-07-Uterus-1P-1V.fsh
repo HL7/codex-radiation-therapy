@@ -128,7 +128,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-07-22B)
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* performer[treatmentDevice] = Reference(RadiotherapySeedDevice-Mesh)
+* performer[treatmentOrSeedDevice] = Reference(RadiotherapySeedDevice-Mesh)
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -165,7 +165,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-07-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Planned Phase"
-* performer[treatmentDevice] = Reference(RadiotherapySeedDevice-Mesh)
+* performer[treatmentOrSeedDevice] = Reference(RadiotherapySeedDevice-Mesh)
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyVolume-XRTS-07-22B-01-Uterus
