@@ -5,7 +5,7 @@ Title: "Radiotherapy Treatment Plan"
 Description: "A Radiotherapy Treatment Plan resource describes the radiotherapy treatment that is planned to be delivered with a single treatment plan."
 * ^status = #draft
 * insert RadiotherapyPlannedPhaseAndTreatmentPlanCommon
-* code = SnomedRequestedCS#USCRS-34602 "Radiotherapy treatment plan (regime/therapy)"
+* code = SnomedRequestedCS#1255724003 "Radiotherapy treatment plan (regime/therapy)"
 * extension contains
     DicomReference named radiotherapyDicomPlan 0..1
 * extension[radiotherapyDicomPlan] ^short = "DICOM Treatment Plan"
