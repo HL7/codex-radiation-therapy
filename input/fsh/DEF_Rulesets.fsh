@@ -15,7 +15,7 @@ RuleSet: OpenProfileBasedSlicing(field)
 
 RuleSet: OpenProfileBasedSlicingSubfield(field, subfield)
 * {field} ^slicing.discriminator.type = #profile
-* {field} ^slicing.discriminator.path = "$this.resolve().{subfield}"
+* {field} ^slicing.discriminator.path = "$this.{subfield}.resolve()"
 * {field} ^slicing.rules = #open
 * {field} ^slicing.description = "Slicing based on the profile"
 
