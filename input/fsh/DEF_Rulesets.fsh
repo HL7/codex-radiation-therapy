@@ -65,6 +65,15 @@ RuleSet: RadiotherapyRequestCommon
 * bodySite MS
 * bodySite ^short = "Body site that is treated with radiotherapy"
 * note MS
+* insert OpenProfileBasedSlicing(performer)
+* performer contains
+    treatmentDevice 0..* MS and
+    seedDevice 0..* MS
+* performer[treatmentDevice] only Reference(RadiotherapyTreatmentDevice)
+* performer[seedDevice] only Reference(RadiotherapySeedDevice)
+* performer MS
+* performer[treatmentDevice] ^short = "Radiotherapy Treatment Device used as part of therapy."
+* performer[seedDevice] ^short = "Seed Device used as part of therapy."
 
 RuleSet: RadiotherapyProcedureCommon
 * performed[x] only Period
@@ -76,41 +85,24 @@ RuleSet: RadiotherapyProcedureCommon
 * usedReference contains
     treatmentDevice 0..* MS
 * usedReference[treatmentDevice] only Reference(RadiotherapyTreatmentDevice)
-* usedReference[treatmentDevice] ^short = "RadiotherapyTreatment Devices used as part of therapy."
+* usedReference[treatmentDevice] ^short = "Radiotherapy Treatment Device used as part of therapy."
 * usedReference MS
 * insert OpenProfileBasedSlicingSubfield(focalDevice,manipulated)
 * focalDevice contains
     seedDevice 0..* MS
 * focalDevice[seedDevice].manipulated only Reference(RadiotherapySeedDevice)
-* focalDevice[seedDevice] ^short = "Radiotherapy Seed Devices used as part of therapy."
+* focalDevice[seedDevice] ^short = "Radiotherapy Seed Device used as part of therapy."
 
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon
 * intent = ReqIntent#original-order "Original Order"
 * replaces MS
 * replaces ^short = "Previous retired prescription that is replaced by this prescription"
-* insert OpenProfileBasedSlicing(performer)
-* performer contains
-    treatmentDevice 0..* MS and
-    seedDevice 0..* MS
-* performer[treatmentDevice] only Reference(RadiotherapyTreatmentDevice)
-* performer[seedDevice] only Reference(RadiotherapySeedDevice)
-* performer MS
-* performer[treatmentDevice] ^short = "RadiotherapyTreatment Devices used as part of therapy."
-* performer[seedDevice] ^short = "Seed Devices used as part of therapy."
+
 
 RuleSet: RadiotherapyPlansCommon
 * insert RadiotherapyRequestCommon
 * intent = ReqIntent#filler-order "Filler Order"
-* insert OpenProfileBasedSlicing(performer)
-* performer contains
-    treatmentDevice 0..* MS and
-    seedDevice 0..* MS
-* performer[treatmentDevice] only Reference(RadiotherapyTreatmentDevice)
-* performer[seedDevice] only Reference(RadiotherapySeedDevice)
-* performer MS
-* performer[treatmentDevice] ^short = "RadiotherapyTreatment Devices used as part of therapy."
-* performer[seedDevice] ^short = "Seed Devices used as part of therapy."
 
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * insert RadiotherapyPlansCommon
