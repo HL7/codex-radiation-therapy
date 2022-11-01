@@ -23,3 +23,6 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
     course-summary 0..1 MS
 * partOf[course-summary] ^short = "Radiotherapy Course Summary that summarizes the course of which this Radiotherapy Treated Phase is a part."
 * partOf[course-summary] only Reference(RadiotherapyCourseSummary)
+* performer.actor only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
+* performer MS
+* performer ^short = "RadiotherapyTreatment or Seed Devices used as part of therapy."

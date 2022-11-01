@@ -13,3 +13,6 @@ It can define treatment parameters such as modality or technique, and prescribe 
 * basedOn[course-prescription] ^short = "Radiotherapy Course Prescription that this Radiotherapy Phase Prescription fulfills."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * replaces only Reference(RadiotherapyPhasePrescription)
+* performer only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
+* performer MS
+* performer ^short = "RadiotherapyTreatment or Seed Devices used as part of therapy."

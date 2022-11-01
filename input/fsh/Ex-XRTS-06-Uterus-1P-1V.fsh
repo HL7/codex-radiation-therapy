@@ -18,7 +18,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
-  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * identifier[+]
   * use = #usual //Can use general identifiers. Here j ust using the same as the request on which the summary is basedOn
@@ -33,6 +33,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
+* performer.actor = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 Instance: RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
@@ -80,7 +81,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
-  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * identifier[+]
   * use = #usual
@@ -96,6 +97,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Treated Phase"
+* performer.actor = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 Instance: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -146,7 +148,7 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
-  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * extension[radiotherapySessions].valueUnsignedInt = 5
 * extension[radiotherapyDosePlannedToVolume][+]
@@ -167,6 +169,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-06-22B)
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
+* performer = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -182,7 +185,7 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
-  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
 * extension[radiotherapyDosePlannedToVolume]
@@ -205,6 +208,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-06-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Planned Phase"
+* performer = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

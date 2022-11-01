@@ -148,13 +148,13 @@ Description: "A reference to a DICOM SOP Instance."
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
 
-Extension: RadiotherapyDevice
-Id: codexrt-radiotherapy-device
-Title: "Radiotherapy Device"
-Description: "The device used for delivering radiotherapy. This can be a treatment device such as a LINAC (external beam), an afterloader (brachytherapy), or implanted seeds (brachytherapy)."
-* . ^short = "Radiotherapy Device"
-* valueReference 1..1
-* valueReference only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
+// Extension: RadiotherapyDevice
+// Id: codexrt-radiotherapy-device
+// Title: "Radiotherapy Device"
+// Description: "The device used for delivering radiotherapy. This can be a treatment device such as a LINAC (external beam), an afterloader (brachytherapy), or implanted seeds (brachytherapy)."
+// * . ^short = "Radiotherapy Device"
+// * valueReference 1..1
+// * valueReference only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
 
 
 Extension: RadiotherapyTreatmentApplicatorType

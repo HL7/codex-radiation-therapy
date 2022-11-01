@@ -17,3 +17,6 @@ Description: "A Radiotherapy Course Prescription is a high-level request for a c
 * occurrencePeriod MS
 * code = SCT#1217123003 "Radiotherapy course of treatment (regime/therapy)"
 * replaces only Reference(RadiotherapyCoursePrescription)
+* performer only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
+* performer MS
+* performer ^short = "RadiotherapyTreatment or Seed Devices used as part of therapy."

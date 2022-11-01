@@ -15,3 +15,6 @@ Description: "A Radiotherapy Plan Prescription is a request for radiotherapy tre
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * basedOn[phase-prescription] only Reference(RadiotherapyPhasePrescription)
 * replaces only Reference(RadiotherapyPlanPrescription)
+* performer only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
+* performer MS
+* performer ^short = "RadiotherapyTreatment or Seed Devices used as part of therapy."
