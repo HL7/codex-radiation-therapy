@@ -17,7 +17,7 @@ Description: "A Radiotherapy Planned Course covers all radiotherapy plans to del
 * code = SCT#1217123003 "Radiotherapy course of treatment (regime/therapy)"
 * occurrencePeriod only Period
 * occurrencePeriod MS
-* insert BasedOnSlicing
+* insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     course-prescription 0..1 MS
 * basedOn[course-prescription] ^short = "Radiotherapy Course Prescription that this Radiotherapy Planned Course fulfills."

@@ -7,17 +7,18 @@ RuleSet: CategorySlicing
 * category contains
   required 1..1
 
-RuleSet: BasedOnSlicing
-* basedOn ^slicing.discriminator.type = #profile
-* basedOn ^slicing.discriminator.path = "$this.resolve()"
-* basedOn ^slicing.rules = #open
-* basedOn ^slicing.description = "Slicing based on the profile"
+RuleSet: OpenProfileBasedSlicing(field)
+* {field} ^slicing.discriminator.type = #profile
+* {field} ^slicing.discriminator.path = "$this.resolve()"
+* {field} ^slicing.rules = #open
+* {field} ^slicing.description = "Slicing based on the profile"
 
-RuleSet: PartOfSlicing
-* partOf ^slicing.discriminator.type = #profile
-* partOf ^slicing.discriminator.path = "$this.resolve()"
-* partOf ^slicing.rules = #open
-* partOf ^slicing.description = "Slicing based on the profile"
+RuleSet: OpenProfileBasedSlicingSubfield(field, subfield)
+* {field} ^slicing.discriminator.type = #profile
+* {field} ^slicing.discriminator.path = "$this.resolve().{subfield}"
+* {field} ^slicing.rules = #open
+* {field} ^slicing.description = "Slicing based on the profile"
+
 
 RuleSet: ModalityAndTechniqueExtensions
 * extension[modalityAndTechnique].extension contains
@@ -71,16 +72,45 @@ RuleSet: RadiotherapyProcedureCommon
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
 * performedPeriod.end MS
 * performedPeriod.end ^short = "An end date is expected if the status is 'stopped' or 'completed'"
+* insert OpenProfileBasedSlicing(usedReference)
+* usedReference contains
+    treatmentDevice 0..* MS
+* usedReference[treatmentDevice] only Reference(RadiotherapyTreatmentDevice)
+* usedReference[treatmentDevice] ^short = "RadiotherapyTreatment Devices used as part of therapy."
+* usedReference MS
+* insert OpenProfileBasedSlicingSubfield(focalDevice,manipulated)
+* focalDevice contains
+    seedDevice 0..* MS
+* focalDevice[seedDevice].manipulated only Reference(RadiotherapySeedDevice)
+* focalDevice[seedDevice] ^short = "Radiotherapy Seed Devices used as part of therapy."
 
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon
 * intent = ReqIntent#original-order "Original Order"
 * replaces MS
 * replaces ^short = "Previous retired prescription that is replaced by this prescription"
+* insert OpenProfileBasedSlicing(performer)
+* performer contains
+    treatmentDevice 0..* MS and
+    seedDevice 0..* MS
+* performer[treatmentDevice] only Reference(RadiotherapyTreatmentDevice)
+* performer[seedDevice] only Reference(RadiotherapySeedDevice)
+* performer MS
+* performer[treatmentDevice] ^short = "RadiotherapyTreatment Devices used as part of therapy."
+* performer[seedDevice] ^short = "Seed Devices used as part of therapy."
 
 RuleSet: RadiotherapyPlansCommon
 * insert RadiotherapyRequestCommon
 * intent = ReqIntent#filler-order "Filler Order"
+* insert OpenProfileBasedSlicing(performer)
+* performer contains
+    treatmentDevice 0..* MS and
+    seedDevice 0..* MS
+* performer[treatmentDevice] only Reference(RadiotherapyTreatmentDevice)
+* performer[seedDevice] only Reference(RadiotherapySeedDevice)
+* performer MS
+* performer[treatmentDevice] ^short = "RadiotherapyTreatment Devices used as part of therapy."
+* performer[seedDevice] ^short = "Seed Devices used as part of therapy."
 
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * insert RadiotherapyPlansCommon

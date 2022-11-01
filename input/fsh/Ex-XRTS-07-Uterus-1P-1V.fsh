@@ -49,7 +49,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
-* performer.actor = Reference(RadiotherapySeedDevice-Mesh)
+* focalDevice[seedDevice].manipulated = Reference(RadiotherapySeedDevice-Mesh)
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
@@ -74,7 +74,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
-* performer.actor  = Reference(RadiotherapySeedDevice-Mesh)
+* focalDevice[seedDevice].manipulated = Reference(RadiotherapySeedDevice-Mesh)
 
 Instance: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -128,7 +128,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-07-22B)
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* performer = Reference(RadiotherapySeedDevice-Mesh)
+* performer[treatmentDevice] = Reference(RadiotherapySeedDevice-Mesh)
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -165,7 +165,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-07-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Planned Phase"
-* performer = Reference(RadiotherapySeedDevice-Mesh)
+* performer[treatmentDevice] = Reference(RadiotherapySeedDevice-Mesh)
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyVolume-XRTS-07-22B-01-Uterus

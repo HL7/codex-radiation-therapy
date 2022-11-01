@@ -33,7 +33,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* performer.actor = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+* usedReference[treatmentDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 Instance: RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
@@ -97,7 +97,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Treated Phase"
-* performer.actor = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+* usedReference[treatmentDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 Instance: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -169,7 +169,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-06-22B)
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* performer = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+* performer[treatmentDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -208,7 +208,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-06-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Planned Phase"
-* performer = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+* performer[treatmentDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

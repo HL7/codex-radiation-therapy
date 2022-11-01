@@ -6,7 +6,7 @@ Title: "Radiotherapy Plan Prescription"
 Description: "A Radiotherapy Plan Prescription is a request for radiotherapy treatment with a single treatment plan."
 * insert RadiotherapyPhaseAndPlanPrescriptionCommon
 * code = SnomedRequestedCS#USCRS-34602 "Radiotherapy treatment plan (regime/therapy)"
-* insert BasedOnSlicing
+* insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     course-prescription 0..1 MS and
     phase-prescription 0..1 MS

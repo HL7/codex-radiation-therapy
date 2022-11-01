@@ -9,7 +9,7 @@ Whenever new contributions in the scope of the same course are delivered, this r
 * insert ModalityAndTechniqueExtensions
 * extension[doseDeliveredToVolume].extension contains
     UniformFractionation named uniformFractionation 1..1 MS
-* insert BasedOnSlicing
+* insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     planned-course 0..1 MS and
     course-prescription 0..1 MS
@@ -17,9 +17,8 @@ Whenever new contributions in the scope of the same course are delivered, this r
 * basedOn[planned-course] ^short = "Radiotherapy Planned Course that planned the treatment summarized in this Radiotherapy Course Summary."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
-* performer.actor only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
-* performer MS
-* performer ^short = "RadiotherapyTreatment or Seed Devices used as part of therapy."
+
+
 
 // Not all values from http://hl7.org/fhir/ValueSet/event-status are expected for radiotherapy summary procedures.
 // preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown
