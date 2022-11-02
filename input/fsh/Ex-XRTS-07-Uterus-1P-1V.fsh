@@ -16,7 +16,6 @@ RuleSet: RadiotherapyCourseSummary-XRTS-07-22B-01-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapySeedDevice-Mesh)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
 * identifier[+]
   * use = #usual //Can use general identifiers. Here j ust using the same as the request on which the summary is basedOn
@@ -58,7 +57,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapySeedDevice-Mesh)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
 * identifier[+]
   * use = #usual
@@ -107,7 +105,6 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapySeedDevice-Mesh)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
 * extension[radiotherapySessions].valueUnsignedInt = 1
 * extension[radiotherapyDosePlannedToVolume][+]
@@ -142,7 +139,6 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapySeedDevice-Mesh)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 1
 * extension[radiotherapyDosePlannedToVolume]

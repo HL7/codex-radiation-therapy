@@ -18,7 +18,6 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
-//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * identifier[+]
   * use = #usual //Can use general identifiers. Here j ust using the same as the request on which the summary is basedOn
@@ -81,7 +80,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
-//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * identifier[+]
   * use = #usual
@@ -148,7 +146,6 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
-//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * extension[radiotherapySessions].valueUnsignedInt = 5
 * extension[radiotherapyDosePlannedToVolume][+]
@@ -185,7 +182,6 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
-//  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
 * extension[radiotherapyDosePlannedToVolume]

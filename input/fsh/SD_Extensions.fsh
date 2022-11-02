@@ -148,15 +148,6 @@ Description: "A reference to a DICOM SOP Instance."
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
 
-// Extension: RadiotherapyDevice
-// Id: codexrt-radiotherapy-device
-// Title: "Radiotherapy Device"
-// Description: "The device used for delivering radiotherapy. This can be a treatment device such as a LINAC (external beam), an afterloader (brachytherapy), or implanted seeds (brachytherapy)."
-// * . ^short = "Radiotherapy Device"
-// * valueReference 1..1
-// * valueReference only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
-
-
 Extension: RadiotherapyTreatmentApplicatorType
 Id: codexrt-radiotherapy-treatment-applicator-type
 Title: "Treatment Applicator Type"
@@ -177,17 +168,6 @@ This is important in registry use cases to efficiently assess whether checking p
 * . ^short = "Uniform Fractionation"
 * value[x] ^short = "Uniform Fractionation Was Used"
 * value[x] only boolean
-
-
-// ValueSet: RadiotherapyTreatmentDeviceTypeVS
-// Id: codex-radiotherapy-treatment-device-types-vs
-// Title: "Radiotherapy Treatment Device Type"
-// Description: "Radiotherapy Treatment Device Type"
-// * SCT#228768005 "Seeds source (physical object)"
-// * SnomedRequestedCS#seedsonstrand "Seeds on Strand"
-// * SnomedRequestedCS#seedsonmesh "Seeds on Mesh"
-// * SnomedRequestedCS#afterloader "Brachy Afterloader"
-
 
 Extension: RadiotherapyReasonForRevisionOrAdaptation
 Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
