@@ -169,10 +169,10 @@ Description: "Radiotherapy Treatment Applicator Type."
 Extension: UniformFractionation
 Id: codexrt-radiotherapy-uniform-fractionation
 Title: "Uniform Fractionation"
-Description: "This flag is true if fractionation was uniform (i.e., treated with same modality and dose per fraction) and false if fractionation was mixed. Treatment technique may vary in uniform fractionation.
-If the fractionation was uniform, then the correspondence between the physical and biologically effective dose can be determined on course level.
-If the fractionation was not uniform, then the correspondence between the physical and biologically effective dose has to be determined per phase.
-The flag was introduced to see in a Radiotherapy Course Summary whether the fractionation was uniform without first checking the details of each treatment phase.
+Description: "This flag is true if the fractionation was uniform (i.e., treated with same modality and dose per fraction) and false if the fractionation was mixed. Treatment technique may vary in uniform fractionation.
+If the fractionation was uniform, then the correspondence between the physical and biologically effective dose can be determined at the course level.
+If the fractionation was not uniform, then the correspondence between the physical and biologically effective dose has to be determined per the phase level.
+The flag was introduced to support determination of whether fractionation was uniform when viewing the Radiotherapy Course Summary (without first checking the details of each treatment phase).
 This is important in registry use cases to efficiently assess whether checking phase level information is needed."
 * . ^short = "Uniform Fractionation"
 * value[x] ^short = "Uniform Fractionation Was Used"
