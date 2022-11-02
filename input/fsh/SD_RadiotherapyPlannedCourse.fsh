@@ -23,6 +23,3 @@ Description: "A Radiotherapy Planned Course covers all radiotherapy plans to del
 * basedOn[course-prescription] ^short = "Radiotherapy Course Prescription that this Radiotherapy Planned Course fulfills."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * replaces only Reference(RadiotherapyPlannedCourse)
-* performer only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
-* performer MS
-* performer ^short = "RadiotherapyTreatment or Seed Devices used as part of therapy."
