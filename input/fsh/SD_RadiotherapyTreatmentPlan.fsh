@@ -24,6 +24,3 @@ Description: "A Radiotherapy Treatment Plan resource describes the radiotherapy 
 * replaces MS
 * replaces ^short = "Previous retired plan that is replaced by this plan"
 * replaces only Reference(RadiotherapyTreatmentPlan)
-* performer only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
-* performer MS
-* performer ^short = "RadiotherapyTreatment or Seed Devices used as part of therapy."
