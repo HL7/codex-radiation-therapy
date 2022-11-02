@@ -19,6 +19,3 @@ Description: "A Radiotherapy Planned Phase is the summary over all radiotherapy 
 * replaces MS
 * replaces ^short = "Previous retired phase that is replaced by this phase"
 * replaces only Reference(RadiotherapyPlannedPhase)
-* performer only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
-* performer MS
-* performer ^short = "RadiotherapyTreatment or Seed Devices used as part of therapy."
