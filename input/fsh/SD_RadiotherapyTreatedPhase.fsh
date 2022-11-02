@@ -10,7 +10,7 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this phase, not including dose from any other phase. For summary over multiple phases, see Radiotherapy Course Summary."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
-* insert BasedOnSlicing
+* insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     planned-phase 0..1 MS and
     phase-prescription 0..1 MS
@@ -18,7 +18,7 @@ Description: "A summary of a phase of radiotherapy treatment that has been deliv
 * basedOn[phase-prescription] ^short = "Radiotherapy Phase Prescription that prescribed the treatment summarized in this Radiotherapy Treated Phase."
 * basedOn[planned-phase] only Reference(RadiotherapyPlannedPhase)
 * basedOn[phase-prescription] only Reference(RadiotherapyPhasePrescription)
-* insert PartOfSlicing
+* insert OpenProfileBasedSlicing(partOf)
 * partOf contains
     course-summary 0..1 MS
 * partOf[course-summary] ^short = "Radiotherapy Course Summary that summarizes the course of which this Radiotherapy Treated Phase is a part."

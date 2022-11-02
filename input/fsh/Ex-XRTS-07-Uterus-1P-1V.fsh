@@ -16,7 +16,6 @@ RuleSet: RadiotherapyCourseSummary-XRTS-07-22B-01-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapySeedDevice-Mesh)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
 * identifier[+]
   * use = #usual //Can use general identifiers. Here j ust using the same as the request on which the summary is basedOn
@@ -49,6 +48,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
+* focalDevice[seedDevice].manipulated = Reference(RadiotherapySeedDevice-Mesh)
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
@@ -57,7 +57,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapySeedDevice-Mesh)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
 * identifier[+]
   * use = #usual
@@ -73,6 +72,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Phase"
+* focalDevice[seedDevice].manipulated = Reference(RadiotherapySeedDevice-Mesh)
 
 Instance: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -105,7 +105,6 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapySeedDevice-Mesh)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
 * extension[radiotherapySessions].valueUnsignedInt = 1
 * extension[radiotherapyDosePlannedToVolume][+]
@@ -126,6 +125,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-07-22B)
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
+* performer[treatmentOrSeedDevice] = Reference(RadiotherapySeedDevice-Mesh)
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -139,7 +139,6 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-  * extension[radiotherapyDevice][+].valueReference = Reference(RadiotherapySeedDevice-Mesh)
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 1
 * extension[radiotherapyDosePlannedToVolume]
@@ -162,7 +161,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-07-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * note.text = "Free text note in Radiotherapy Planned Phase"
-
+* performer[treatmentOrSeedDevice] = Reference(RadiotherapySeedDevice-Mesh)
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyVolume-XRTS-07-22B-01-Uterus
