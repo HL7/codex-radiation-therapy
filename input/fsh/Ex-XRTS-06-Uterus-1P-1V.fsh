@@ -45,7 +45,7 @@ Usage: #example
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[totalDoseDelivered].valueQuantity.value = 600
   * extension[fractionsDelivered].valueUnsignedInt = 1
   * extension[uniformFractionation].valueBoolean = true
@@ -63,7 +63,7 @@ Usage: #example
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[totalDoseDelivered].valueQuantity.value = 3000
   * extension[fractionsDelivered].valueUnsignedInt = 5
   * extension[uniformFractionation].valueBoolean = true
@@ -108,7 +108,7 @@ Usage: #example
 * extension[doseDeliveredToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[totalDoseDelivered].valueQuantity.value = 600
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
@@ -124,7 +124,7 @@ Usage: #example
 * extension[doseDeliveredToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[totalDoseDelivered].valueQuantity.value = 3000
 * status = #completed
 * performedPeriod.end = "2021-09-20T13:21:17+01:00"
@@ -151,7 +151,7 @@ Usage: #example
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[totalDose].valueQuantity.value = 3000
   * extension[fractions].valuePositiveInt = 5
 * identifier[+]
@@ -187,7 +187,7 @@ Usage: #example
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[fractionDose].valueQuantity.value = 600
   * extension[totalDose].valueQuantity.value = 3000
 * identifier[+]
@@ -218,7 +218,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[displayName]
   * system = VarianDoseReferenceId
-  * value = "Cervix Uteri" // display id
+  * value = "Cervix" // display id
 * identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842419.2121.20150602151.06.01.22.1" // DICOM UID

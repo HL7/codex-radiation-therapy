@@ -33,7 +33,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-07-22B-01-Common
 
 Instance: RadiotherapyCourseSummary-XRTS-07-22B-01-Uterus-1P-1V
 InstanceOf: RadiotherapyCourseSummary
-Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-07 after 1 fraction."
+Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-07. Permanent (LDR) brachytherapy using implanted seeds."
 Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-07-22B-01-Common
 * meta.versionId = "1"
@@ -42,7 +42,7 @@ Usage: #example
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-07-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[totalDoseDelivered].valueQuantity.value = 14500
   * extension[fractionsDelivered].valueUnsignedInt = 1
   * extension[uniformFractionation].valueBoolean = true
@@ -85,7 +85,7 @@ Usage: #example
 * extension[doseDeliveredToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-07-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[totalDoseDelivered].valueQuantity.value = 14500
 * status = #completed
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
@@ -110,7 +110,7 @@ Usage: #example
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-07-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[totalDose].valueQuantity.value = 14500
   * extension[fractions].valuePositiveInt = 1
 * identifier[+]
@@ -144,7 +144,7 @@ Usage: #example
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-07-22B-01-Uterus)
-    * valueReference.display = "Uterus"
+    * valueReference.display = "Cervix"
   * extension[fractionDose].valueQuantity.value = 14500
   * extension[totalDose].valueQuantity.value = 14500
 * identifier[+]
@@ -174,7 +174,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[displayName]
   * system = VarianDoseReferenceId
-  * value = "Cervix Uteri" // display id
+  * value = "Cervix" // display id
 * identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842419.2121.20150602151.07.01.22.1" // DICOM UID
