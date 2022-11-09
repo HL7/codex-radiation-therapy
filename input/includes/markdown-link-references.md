@@ -7,8 +7,8 @@
 [CodexrtRadiotherapyEnergyOrIsotope]: StructureDefinition-codexrt-radiotherapy-energy-or-isotope.html
 [CodexrtRadiotherapyFractionsDelivered]: StructureDefinition-codexrt-radiotherapy-fractions-delivered.html
 [CodexrtRadiotherapyFractionsPrescribed]: StructureDefinition-codexrt-radiotherapy-fractions-prescribed.html
-[RadiotherapyRequest]: ValueSet-radiotherapy-request.html
-[RadiotherapyRequest]: CodeSystem-radiotherapy-request.html
+[RadiotherapyRequestVS]: ValueSet-radiotherapy-request.html
+[RadiotherapyRequestCS]: CodeSystem-radiotherapy-request.html
 [SnomedRequestedCs]: CodeSystem-snomed-requested-cs.html
 [Diagnosis1Breast]: Condition-Diagnosis-1-Breast.html
 [Diagnosis101Breast]: Condition-Diagnosis-101-Breast.html
