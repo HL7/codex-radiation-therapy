@@ -5,6 +5,7 @@ Description: "An example female  patient to relate radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
 * meta.profile[+] = $mCODECancerPatient
+* meta.profile[+] = USCorePatient
 * identifier[+]
   * use = #usual
   * type = v2-0203#MR "Medical Record Number"
@@ -36,6 +37,7 @@ Description: "An example male patient to relate radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
 * meta.profile[+] = $mCODECancerPatient
+* meta.profile[+] = USCorePatient
 * identifier[+].
   * use = #usual
   * type = v2-0203#MR "Medical Record Number"
