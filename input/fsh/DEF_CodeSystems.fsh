@@ -7,8 +7,6 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 //* These codes have  been requested and under review by SNOMED International as of 11/1/2022.
 //* Subject to SNOMED International approval, these codes *may* be included in the March 2023 release to U S Edition
 * #USCRS-34603	"Changes in treatment intent (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)" //#treatmentintentchange
-* #USCRS-34604  "Changes in target (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // #targetchange
-* #USCRS-34605  "Changes in organ at risk (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)." // organatriskchange
 //* These codes have been issued by SNOMED International
 //* They are expected to be part of the March 2023 release to US Edition, at which time they can be removed from this CodeSystem
 * #1255213001 "Brachytherapy eye plaque (physical object)" "Brachytherapy eye plaque (physical object)"
@@ -23,3 +21,5 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 * #1254767002 "Stranded radioactive seed (physical object)" "Stranded radioactive seed (physical object)"
 * #1254766006 "Loose radioactive seed (physical object)" "Loose radioactive seed (physical object)"
 * #1255724003  "Radiotherapy treatment plan (regime/therapy)" "Radiotherapy treatment plan (regime/therapy)" // USCRS-34602, not yet released for US
+* #1259231006 "Radiotherapy course changed due to changes to target (finding)" // USCRS-34604
+* #1259232004 "Radiotherapy course changed due to change to organ at risk (finding)" // USCRS-34605
