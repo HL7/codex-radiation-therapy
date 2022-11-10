@@ -8,4 +8,4 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * SCT#314846003 "Patient given choice of treatment (finding)"
 * SnomedRequestedCS#USCRS-34603	"Changes to treatment intent (finding)"
 * SnomedRequestedCS#1259231006 "Radiotherapy course changed due to changes to target (finding)"
-* SnomedRequestedCS##1259232004 "Radiotherapy course changed due to change to organ at risk (finding)"
+* SnomedRequestedCS#1259232004 "Radiotherapy course changed due to change to organ at risk (finding)"
