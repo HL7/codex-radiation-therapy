@@ -85,7 +85,7 @@ Usage: #definition
 // gender AND
 // )
 * insert SupportResource(Patient, #SHALL)
-* insert SupportProfile(mCODECancerPatient, #SHOULD)
+* insert SupportProfile($mCODECancerPatient, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -111,9 +111,9 @@ Usage: #definition
 
 // Procedure requirements
 * insert SupportResource(Procedure, #SHALL)
-* insert SupportProfile(RadiotherapyCourseSummary, #SHOULD)
-* insert SupportProfile(RadiotherapyTreatedPhase, #SHOULD)
-* insert SupportProfile(RadiotherapyTreatedPlan, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-course-summary, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treated-phase, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treated-plan, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -166,12 +166,12 @@ Usage: #definition
 
  // ServiceRequest requirements
 * insert SupportResource(ServiceRequest, #SHALL)
-* insert SupportProfile(RadiotherapyCoursePrescription, #SHOULD)
-* insert SupportProfile(RadiotherapyPhasePrescription, #SHOULD)
-* insert SupportProfile(RadiotherapyPlanPrescription, #SHOULD)
-* insert SupportProfile(RadiotherapyPlannedCourse, #SHOULD)
-* insert SupportProfile(RadiotherapyPlannedPhase, #SHOULD)
-* insert SupportProfile(RadiotherapyTreatmentPlan, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-course-precription, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-phase-precription, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-plan-precription, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-phase, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-plan, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -212,8 +212,8 @@ Usage: #definition
 
  // Device requirements
 * insert SupportResource(Device, #SHALL)
-* insert SupportProfile(RadiotherapySeedDevice, #SHOULD)
-* insert SupportProfile(RadiotherapyTreatmentDevice, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-seed-device, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -223,7 +223,7 @@ Usage: #definition
 // Identifier (Value & System) OR
 // patient
 * insert SupportResource(BodyStructure, #SHALL)
-* insert SupportProfile(RadiotherapyVolume, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-volume, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -232,14 +232,14 @@ Usage: #definition
 
 // Location
 * insert SupportResource(Location, #SHALL)
-* insert SupportProfile(TreatmentLocation, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-location, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 
 // Observation
 * insert SupportResource(Observation, #SHALL)
-* insert SupportProfile(RadiotherapyDiseaseStatus, #SHOULD)
+* insert SupportProfile(Canonical(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
