@@ -121,8 +121,8 @@ Usage: #definition
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 
-// Volume
-* insert SupportResource(Volume, #SHALL)
+// BodyStructure
+* insert SupportResource(BodyStructure, #SHALL)
 * insert SupportProfile(RadiotherapyVolume, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
