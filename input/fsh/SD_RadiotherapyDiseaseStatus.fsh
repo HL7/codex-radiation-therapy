@@ -37,13 +37,13 @@ Description: "Extension providing a qualifier for a disease progression"
 * value[x] 1..1
 
 
-Instance: cancer-disease-status-22A
+Instance: cancer-disease-status-22B
 InstanceOf: RadiotherapyDiseaseStatus
 Description: "Extended example: example showing disease status (patient's condition regression)"
 * extension[evidenceType].valueCodeableConcept = SCT#363679005 "Imaging (procedure)"
 * status = #final "final"
 //* code = LNC#97509-4 "Cancer Disease Progression"
-* subject = Reference(Patient-XRTS-01-22A)
+* subject = Reference(Patient-XRTS-01-22B)
 * effectiveDateTime = "2018-11-01"
 * performer = Reference(Practitioner-1005)
 * focus = Reference(Diagnosis-2-Prostate)
