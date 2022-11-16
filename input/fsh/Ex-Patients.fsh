@@ -1,9 +1,11 @@
 Instance:   Patient-5
-InstanceOf: Patient
+InstanceOf: $mCODECancerPatient
 Title: "Example Female Patient 5"
 Description: "An example female  patient to relate radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
+* meta.profile[+] = $mCODECancerPatient
+* meta.profile[+] = USCorePatient
 * identifier[+]
   * use = #usual
   * type = v2-0203#MR "Medical Record Number"
@@ -29,11 +31,13 @@ Usage: #example
   * country = "US"
 
 Instance:   Patient-6
-InstanceOf: Patient
+InstanceOf: $mCODECancerPatient
 Title: "Example Male Patient 6"
 Description: "An example male patient to relate radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
+* meta.profile[+] = $mCODECancerPatient
+* meta.profile[+] = USCorePatient
 * identifier[+].
   * use = #usual
   * type = v2-0203#MR "Medical Record Number"

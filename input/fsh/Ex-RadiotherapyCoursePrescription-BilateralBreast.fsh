@@ -346,11 +346,13 @@ Usage: #example
 // --- Patient ---------------------------------------------------------------------------------
 
 Instance:   Patient-101
-InstanceOf: Patient
+InstanceOf: $mCODECancerPatient
 Title: "Example Female Patient 101"
 Description: "An example female patient to relate radiotherapy resources to."
 Usage: #example
 * meta.security = ActReason#HTEST
+* meta.profile[+] = $mCODECancerPatient
+* meta.profile[+] = USCorePatient
 * identifier[+]
   * use = #usual
   * type = v2-0203#MR "Medical Record Number"
