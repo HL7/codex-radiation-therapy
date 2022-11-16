@@ -5,7 +5,7 @@ InstanceOf: RadiotherapyTreatmentDevice
 Description: "ACMETurbo3000 Afterloader Device"
 Usage: #example
 * manufacturer = "ACME"
-* deviceName[model-name].name = "Turbo3000Afterloader"
+* deviceName[manufacturer-name].name = "Turbo3000Afterloader"
 
 RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
