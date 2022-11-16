@@ -67,7 +67,8 @@ Instance: CodexRTServerCapabilityStatement
 InstanceOf: CapabilityStatement
 Title: "CodeX RT Server CapabilityStatement"
 Usage: #definition
-* name = "Example Capability Statement"
+* name = "CodeXRTServerCapabilityStatement"
+* description = "CodeXRT Server CapabilityStatement"
 * rest.mode = #server
 * status = #draft
 * date = "2020-05-07"
@@ -85,16 +86,16 @@ Usage: #definition
 // gender AND
 // )
 * insert SupportResource(Patient, #SHALL)
-* insert SupportProfile($mCODECancerPatient, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(identifier, http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-identifier, #token, #SHALL)
-* insert SupportSearchParam(family, http://hl7.org/fhir/us/core/SearchParameter/us-core-family, #token, #SHALL)
-* insert SupportSearchParam(given, http://hl7.org/fhir/us/core/SearchParameter/us-core-given, #token, #SHALL)
-* insert SupportSearchParam(birthdate, http://hl7.org/fhir/us/core/SearchParameter/us-core-birthdate, #token, #SHALL)
-* insert SupportSearchParam(gender, http://hl7.org/fhir/us/core/SearchParameter/us-core-gender, #token, #SHALL)
+* insert SupportSearchParam(family, http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-family, #token, #SHALL)
+* insert SupportSearchParam(given, http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-given, #token, #SHALL)
+* insert SupportSearchParam(birthdate, http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-birthdate, #token, #SHALL)
+* insert SupportSearchParam(gender, http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender, #token, #SHALL)
 * rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHALL
 * rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -118,10 +119,10 @@ Usage: #definition
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
-* insert SupportSearchParam(identifier, http://hl7.org/fhir/SearchParameter/Procedure-identifier, #token, #SHALL)
+* insert SupportSearchParam(identifier, http://hl7.org/fhir/SearchParameter/clinical-identifier, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Procedure-subject, #token, #SHALL)
 * insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/Procedure-category, #token, #SHALL)
-* insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/Procedure-code, #token, #SHALL)
+* insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/cliniical-code, #token, #SHALL)
 * rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHALL
 * rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -166,19 +167,19 @@ Usage: #definition
 
  // ServiceRequest requirements
 * insert SupportResource(ServiceRequest, #SHALL)
-* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-course-precription, #SHOULD)
-* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-phase-precription, #SHOULD)
-* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-plan-precription, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-course-prescription, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-phase-prescription, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-plan-prescription, #SHOULD)
 * insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course, #SHOULD)
 * insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-phase, #SHOULD)
 * insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-plan, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
-* insert SupportSearchParam(identifier, http://hl7.org/fhir/SearchParameter/ServiceRequest-identifier, #token, #SHALL)
+* insert SupportSearchParam(identifier, http://hl7.org/fhir/SearchParameter/clinical-identifier, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/ServiceRequest-subject, #token, #SHALL)
 * insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/ServiceRequest-category, #token, #SHALL)
-* insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/ServiceRequest-code, #token, #SHALL)
+* insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL)
 * rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHALL
 * rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -239,7 +240,7 @@ Usage: #definition
 
 // Observation
 * insert SupportResource(Observation, #SHALL)
-* insert SupportProfile(Canonical(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status, #SHOULD)
+* insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
