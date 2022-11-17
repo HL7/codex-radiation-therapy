@@ -31,11 +31,10 @@ Usage: #example
 * extension[radiotherapyDicomPlan]
   * extension[instanceUid].valueId = "1.2.246.352.71.5689073982433245406.1530811633039636638"
   * extension[sopClass].valueCoding = urn:ietf:rfc:3986#"urn:oid:1.2.840.10008.5.1.4.1.1.481.5"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPlanId
   * value = "Prostate-Phase1-Plan1"
-* identifier[+]
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-04-Prostate-Phase1)
@@ -82,11 +81,10 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 3420
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPlanId
   * value = "Prostate-Phase2-Plan1"
-* identifier[+]
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-05-Prostate-Phase2) //Intent that this prescription bases on

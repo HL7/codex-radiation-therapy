@@ -19,10 +19,12 @@ Usage: #example
 * extension[$mCODERadiotherapyDoseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[totalDoseDelivered].valueQuantity.value = 360
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyPrescriptionId
   * value = "Prostate-Phase1"
+* identifier[official]
+  * system = DICOMUID
+  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.555.05.1"
 * basedOn[+] = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1)
 * basedOn[=].display = "Prostate-Phase1"
 * partOf = Reference(RadiotherapyCourseSummary-04-Prostate) //Can reference another summary of larger scope

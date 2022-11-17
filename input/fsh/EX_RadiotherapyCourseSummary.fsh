@@ -28,9 +28,12 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 360
   * extension[fractionsDelivered].valueUnsignedInt = 2
   * extension[uniformFractionation].valueBoolean = true
-* identifier.use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
-* identifier.system = VarianRadiotherapyCourseId //Use same id as for course
-* identifier.value = "Prostate-2Phases"
+* identifier[displayName]
+  * system = VarianRadiotherapyCourseId //Use same id as for course
+  * value = "Prostate-2Phases"
+* identifier[official]
+  * system = DICOMUID
+  * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.555.04.1"
 * basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate)
 * basedOn[=].display = "Prostate-2Phases"
 * status = #in-progress

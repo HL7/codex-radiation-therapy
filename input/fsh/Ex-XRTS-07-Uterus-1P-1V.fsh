@@ -17,12 +17,10 @@ RuleSet: RadiotherapyCourseSummary-XRTS-07-22B-01-Common
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here j ust using the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Uterus"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.72.842419.2121.20150602151.07.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-07-22B-01-Uterus-1P-1V)
@@ -58,12 +56,10 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary-Common
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842419.2121.20150602151.07.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-07-22B-01-01-Primary)
@@ -113,12 +109,10 @@ Usage: #example
     * valueReference.display = "Uterus"
   * extension[totalDose].valueQuantity.value = 14500
   * extension[fractions].valuePositiveInt = 1
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Uterus"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.74.842419.2121.20150602151.07.01.22.1"
 * status = #completed
@@ -147,12 +141,10 @@ Usage: #example
     * valueReference.display = "Uterus"
   * extension[fractionDose].valueQuantity.value = 14500
   * extension[totalDose].valueQuantity.value = 14500
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842419.2121.20150602151.07.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-07-22B-01-Uterus-1P-1V)

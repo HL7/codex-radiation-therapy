@@ -9,12 +9,10 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22A-01-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-01-22A-01-Prostate-1P-1V)
@@ -69,12 +67,10 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.01.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-01-22A-01-01-Primary)
@@ -138,12 +134,10 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDose].valueQuantity.value = 400
   * extension[fractions].valuePositiveInt = 2
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.01.01.22.1"
 * status = #completed
@@ -170,12 +164,10 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 400
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.01.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-01-22A-01-Prostate-1P-1V)

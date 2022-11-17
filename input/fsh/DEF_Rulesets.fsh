@@ -19,6 +19,26 @@ RuleSet: OpenProfileBasedSlicingSubfield(field, subfield)
 * {field} ^slicing.rules = #open
 * {field} ^slicing.description = "Slicing based on the profile"
 
+RuleSet: Identifiers
+* identifier 2..* MS
+* identifier ^definition = "SHALL have a display name with use = usual and at least one globally unique technical identifier, for example, the Conceptual Volume UID used in DICOM."
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "use"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "At least one display name and and one DICOM style UID as technical globally unqiue key"
+* identifier contains
+    displayName 1..1 MS and
+    official 1..* MS
+* identifier[displayName]
+  ^short = "The name that is displayed to the user."
+  * use = #usual
+  * system 1..1 MS
+  * value 1..1 MS
+* identifier[official]
+  ^short = "A business identifier for the request or procedure, which is independent of its FHIR representation, such as a GUID or DICOM UID."
+  * use = #official
+  * system 1..1 MS
+  * value 1..1 MS
 
 RuleSet: ModalityAndTechniqueExtensions
 * extension[modalityAndTechnique].extension contains
@@ -40,9 +60,7 @@ RuleSet: RadiotherapyRequestCommon
 // * meta.versionId MS
 // * meta.lastUpdated MS
 * extension MS
-* identifier MS
-* identifier.system MS
-* identifier.value 1..1 MS
+* insert Identifiers
 * status MS
 * intent MS
 * insert CategorySlicing
@@ -73,6 +91,7 @@ RuleSet: RadiotherapyRequestCommon
 
 
 RuleSet: RadiotherapyProcedureCommon
+* insert Identifiers
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
