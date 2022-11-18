@@ -4,6 +4,9 @@
 # ruby transferdiv.rb <json file with narrative in text.div> <fsh file to be updated> <new fsh file>
 # ruby tools/transferdiv.rb ../CapStatement/Narrative-CapabilityStatement-CodexRTServerCapabilityStatement.json input/fsh/DEF_CapStmt.fsh DEF_CapStmt.fsh
 
+# NOTE:  This script assumes there is a single text.div in your FSH file and that it is for the Capability Statement.
+#        If you don't have a text.div, add the following within your CapSTmt:   '* text.div = ""'
+
 require "json"
 require "byebug"
 
