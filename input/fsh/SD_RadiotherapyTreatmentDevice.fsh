@@ -12,6 +12,6 @@ Description: "The device used to deliver radiotherapy. For example, a LINAC (ext
 * deviceName ^slicing.description = "Slicing based on type of the device name"
 
 * deviceName contains
-    model-name 1..1 MS
-* deviceName[model-name].type = #model-name
-* deviceName[model-name] ^short = "Model name of the treatment device."
+    manufacturer-name 1..1 MS
+* deviceName[manufacturer-name].type = #manufacturer-name
+* deviceName[manufacturer-name] ^short = "Name of the treatment device given by the manufacturer."
