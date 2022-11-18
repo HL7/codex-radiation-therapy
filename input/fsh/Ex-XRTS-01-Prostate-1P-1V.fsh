@@ -1,6 +1,6 @@
 // --- Course Summary ---------------------------------------------------------------------------------
 
-RuleSet: RadiotherapyCourseSummary-XRTS-01-22A-01-Common
+RuleSet: RadiotherapyCourseSummary-XRTS-01-22B-01-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
 * extension[treatmentIntent]
@@ -17,24 +17,24 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22A-01-Common
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.01.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-01-22A-01-Prostate-1P-1V)
-* subject = Reference(Patient-XRTS-01-22A)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-01-22B-01-Prostate-1P-1V)
+* subject = Reference(Patient-XRTS-01-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 
 
-Instance: RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V-1Fx
+Instance: RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-01 after 1 fraction."
 Usage: #example
-* insert RadiotherapyCourseSummary-XRTS-01-22A-01-Common
+* insert RadiotherapyCourseSummary-XRTS-01-22B-01-Common
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-09-06T13:21:17+01:00"
 * extension[actualNumberOfSessions].valueUnsignedInt = 1
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22A-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 200
   * extension[fractionsDelivered].valueUnsignedInt = 1
@@ -43,17 +43,17 @@ Usage: #example
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 * location = Reference(TreatmentLocation-1)
 
-Instance: RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V
+Instance: RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V
 InstanceOf: RadiotherapyCourseSummary
 Description: "Radiotherapy Course Summary example from Codex XRTS collection, test case XRTS-01 completely treated."
 Usage: #example
-* insert RadiotherapyCourseSummary-XRTS-01-22A-01-Common
+* insert RadiotherapyCourseSummary-XRTS-01-22B-01-Common
 * meta.versionId = "2"
 * meta.lastUpdated = "2021-09-07T13:21:17+01:00"
 * extension[actualNumberOfSessions].valueUnsignedInt = 2
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22A-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
   * extension[fractionsDelivered].valueUnsignedInt = 2
@@ -64,7 +64,7 @@ Usage: #example
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
-RuleSet: RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-Common
+RuleSet: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
@@ -77,40 +77,40 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-Common
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.01.01.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-01-22A-01-01-Primary)
-* partOf = Reference(RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V)
-* subject = Reference(Patient-XRTS-01-22A)
+* basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-01-22B-01-01-Primary)
+* partOf = Reference(RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V)
+* subject = Reference(Patient-XRTS-01-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Treated Phase"
 
-Instance: RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-1Fx
+Instance: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-01, Phase 1 after 1 fraction."
 Usage: #example
-* insert RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-Common
+* insert RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-Common
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-09-06T13:21:17+01:00"
 * extension[fractionsDelivered].valueUnsignedInt = 1
 * extension[doseDeliveredToVolume]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22A-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 200
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
-Instance: RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary
+Instance: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
 Description: "Radiotherapy Treated Phase example from Codex XRTS collection, test case XRTS-01, Phase 1 completely treated."
 Usage: #example
-* insert RadiotherapyTreatedPhase-XRTS-01-22A-01-01-Primary-Common
+* insert RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-Common
 * meta.versionId = "2"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * extension[fractionsDelivered].valueUnsignedInt = 2
 * extension[doseDeliveredToVolume]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22A-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 400
 * status = #completed
@@ -118,7 +118,7 @@ Usage: #example
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedCourse-XRTS-01-22A-01-Prostate-1P-1V
+Instance: RadiotherapyPlannedCourse-XRTS-01-22B-01-Prostate-1P-1V
 InstanceOf: RadiotherapyPlannedCourse
 Description: "Radiotherapy Planned Course example from Codex XRTS collection, test case XRTS-01."
 Usage: #example
@@ -134,7 +134,7 @@ Usage: #example
 * extension[radiotherapySessions].valueUnsignedInt = 2
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22A-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDose].valueQuantity.value = 400
   * extension[fractions].valuePositiveInt = 2
@@ -147,13 +147,13 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.01.01.22.1"
 * status = #completed
-* subject = Reference(Patient-XRTS-01-22A)
+* subject = Reference(Patient-XRTS-01-22B)
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyPlannedPhase-XRTS-01-22A-01-01-Primary
+Instance: RadiotherapyPlannedPhase-XRTS-01-22B-01-01-Primary
 InstanceOf: RadiotherapyPlannedPhase
 Description: "Radiotherapy Planned Phase example from Codex XRTS collection, test case XRTS-01, Phase 1."
 Usage: #example
@@ -166,7 +166,7 @@ Usage: #example
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 2
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
-    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22A-01-Prostate)
+    * valueReference = Reference(RadiotherapyVolume-XRTS-01-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 400
@@ -178,16 +178,16 @@ Usage: #example
   * use = #official
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.01.01.01.22.1"
-* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-01-22A-01-Prostate-1P-1V)
+* basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-01-22B-01-Prostate-1P-1V)
 * basedOn[=].display = "C1Prostate"
 * status = #completed
-* subject = Reference(Patient-XRTS-01-22A)
+* subject = Reference(Patient-XRTS-01-22B)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
-Instance: RadiotherapyVolume-XRTS-01-22A-01-Prostate
+Instance: RadiotherapyVolume-XRTS-01-22B-01-Prostate
 InstanceOf: RadiotherapyVolume
 Description: "Example target volume XRTS-01 'Prostate'."
 Usage: #example
@@ -204,11 +204,11 @@ Usage: #example
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * location = SCT#41216001 "Prostatic structure (body structure)"
 * locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
-* patient = Reference(Patient-XRTS-01-22A)
+* patient = Reference(Patient-XRTS-01-22B)
 
 // --- Patient ---------------------------------------------------------------------------------
 
-Instance:   Patient-XRTS-01-22A
+Instance:   Patient-XRTS-01-22B
 InstanceOf: $mCODECancerPatient
 Title: "Example XRTS Patient 1"
 Description: "An example patient, test case XRTS-01."
@@ -222,10 +222,10 @@ Usage: #example
   * use = #usual
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
   * system = "http://hospital.smarthealthit.org"
-  * value = "XRTS-01_22A"
+  * value = "XRTS-01_22B"
 * name[+]
   * use = #usual
-  * family = "Father-22A"
+  * family = "Father-22B"
   * given = "Joe"
 * telecom
   * system = #phone

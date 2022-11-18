@@ -56,90 +56,45 @@ INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-04-Prostate-Phase1-Plan1: 
 INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-05-Prostate-Phase2-Plan1: ServiceRequest.extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique
 
 # radiotherapy volumes include varian identifiers, and this is OK
-INFORMATION: BodyStructure/RadiotherapyVolume-02-PTV64: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-03-Prostate.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-03-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-04-PelvNs.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-04-PelvNs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-05-SemVs.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-05-SemVs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-101-LeftBreast.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-101-LeftBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-102-LeftBreastBoost.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-102-LeftBreastBoost: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-103-RightBreast.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-103-RightBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-01-22A-01-Prostate.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-01-22A-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-02-22A-01-Prostate.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-02-22A-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-03-22A-01-Prostate.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22A-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-03-22A-02-PelvNs.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22A-02-PelvNs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-03-22A-03-SemVs.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22A-03-SemVs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-04-22A-01-LeftBreast.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22A-01-LeftBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22A-02-LeftBreastBoost: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-04-22A-03-RightBreast.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22A-03-RightBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-05-22A-01-BrainMets.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-05-22A-01-BrainMets: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-05-22A-02-BrainMets.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-05-22A-02-BrainMets: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-06-22B-01-Uterus.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-06-22B-01-Uterus: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-RadiotherapyVolume-XRTS-07-22B-01-Uterus.json ==
-INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-07-22B-01-Uterus: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-== fsh-generated/resources/BodyStructure-radiotherapyVolume-01-PTV50.json ==
-INFORMATION: BodyStructure/radiotherapyVolume-01-PTV50: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.0.0
-
-# This  IG includes extensions to the  mCODE RadiotherapyDoseDeliveredToVolume extension
-INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[2].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-101-RTTD-BilateralBreast.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast: Procedure.extension[2].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V-1Fx.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-01-22A-01-Prostate-1P-1V-1Fx: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-1Fx.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-02-22A-01-Prostate-2P-1V-1Fx: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V: Procedure.extension[5].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V-1Fx.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V-1Fx: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V-1Fx: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22A-01-Prostate-1P-3V-1Fx: Procedure.extension[5].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V: Procedure.extension[5].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V: Procedure.extension[6].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-1Fx.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-1Fx: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22A-01-Breast-2P-3V-1Fx: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-1Fx.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22A-01-BrainMets-1P-1V-1Fx: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-05-22A-02-BrainMets-1P-1V.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22A-02-BrainMets-1P-1V: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-== fsh-generated/resources/Procedure-RadiotherapyCourseSummary-XRTS-07-22B-01-Uterus-1P-1V.json ==
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-07-22B-01-Uterus-1P-1V: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
-
+INFORMATION: BodyStructure/RadiotherapyVolume-02-PTV64: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-03-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-04-PelvNs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-05-SemVs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-101-LeftBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-102-LeftBreastBoost: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-103-RightBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-01-22B-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-02-22B-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22B-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22B-02-PelvNs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22B-03-SemVs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22B-01-LeftBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22B-02-LeftBreastBoost: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22B-03-RightBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-05-22B-01-BrainMets: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-05-22B-02-BrainMets: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-06-22B-01-Uterus: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-07-22B-01-Uterus: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-02-PTV64: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-03-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-04-PelvNs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-05-SemVs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-101-LeftBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-102-LeftBreastBoost: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-103-RightBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-01-22B-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-02-22B-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22B-01-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22B-02-PelvNs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-03-22B-03-SemVs: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22B-01-LeftBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22B-02-LeftBreastBoost: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-04-22B-03-RightBreast: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-05-22B-01-BrainMets: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-05-22B-02-BrainMets: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-06-22B-01-Uterus: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/radiotherapyVolume-01-PTV50: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+INFORMATION: BodyStructure/radiotherapyVolume-01-PTV50: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
 
 # SUPPRESS US CORE MESSAGES.
 # Variance requested:   https://jira.hl7.org/browse/FHIR-39341 .
