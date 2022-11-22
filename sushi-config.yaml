@@ -73,7 +73,7 @@ menu:
     Value Sets: artifacts.html#terminology-value-sets
     Code Systems: artifacts.html#terminology-code-systems
     Examples: artifacts.html#example-example-instances
-    Capability Statements: capabilitystatements.html
+    Capability Statements: artifacts.html#behavior-capability-statements
     Complete Listing: artifacts.html
   More:
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
