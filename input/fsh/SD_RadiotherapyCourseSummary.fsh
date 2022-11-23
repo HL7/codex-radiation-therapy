@@ -17,6 +17,7 @@ Whenever new contributions in the scope of the same course are delivered, this r
 * basedOn[planned-course] ^short = "Radiotherapy Planned Course that planned the treatment summarized in this Radiotherapy Course Summary."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
+// * code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
 
 
 

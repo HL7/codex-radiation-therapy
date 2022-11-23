@@ -42,16 +42,6 @@ pages:
     title: Profile Conformance
   terminology.md:
     title: Terminology
-  profiles.md:
-    title: Profiles
-  extensions.md:
-    title: Extensions
-  valuesets.md:
-    title: Value Sets
-  codesystems.md:
-    title: Code Systems
-  capabilitystatements.md:
-    title: Capability Statements
   artifacts.html:
     title: Artifacts Summary
   basic_examples.md:
