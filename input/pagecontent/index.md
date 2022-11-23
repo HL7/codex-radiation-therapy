@@ -170,7 +170,7 @@ The RTTD team also receives significant input and participation from:
 - Elekta
 - University of California San Francisco
 
-The capability statements were rendered using a [script](https://github.com/cspears-mitre/CapStatement) originally developed by Eric Haas that has been extended and maintained by Corey Spears. The generated html is integrated into the FSH source using another [script](tools/transferdiv.rb).
+The capability statements were rendered using a [script](https://github.com/cspears-mitre/CapStatement) originally developed by Eric Haas that has been extended and maintained by Corey Spears. The generated html is integrated into the FSH source using the [transferdiv.rb](transferdiv.rb) script.
 
 ### Contact Information
 
