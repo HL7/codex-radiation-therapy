@@ -14,7 +14,6 @@ file = File.read(ARGV[0])
 data_hash = JSON.parse(file)
 
 newtext = data_hash["text"]["div"]
-byebug
 output = File.open(ARGV[2], 'w')
 
 File.foreach(ARGV[1]).with_index do |line, line_num|
