@@ -26,4 +26,4 @@ These are the changes that have been made since the ballot version.
 * New SNOMEDCT codes requested by the authors have replaced local codes as they have been issued.
 
 ### Capability Statement Changes
-* Added a server [capabilty statement](CapabilityStatement-CodexRTServerCapabilityStatement.html) based on XRTS requirements
+* Added a server [capabilty statement](CapabilityStatement-CodexRTServerCapabilityStatement.html) based on XRTS requirements.  Included credits for rendering.
