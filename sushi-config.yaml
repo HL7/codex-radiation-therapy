@@ -42,16 +42,6 @@ pages:
     title: Profile Conformance
   terminology.md:
     title: Terminology
-  profiles.md:
-    title: Profiles
-  extensions.md:
-    title: Extensions
-  valuesets.md:
-    title: Value Sets
-  codesystems.md:
-    title: Code Systems
-  capabilitystatements.md:
-    title: Capability Statements
   artifacts.html:
     title: Artifacts Summary
   basic_examples.md:
@@ -73,7 +63,7 @@ menu:
     Value Sets: artifacts.html#terminology-value-sets
     Code Systems: artifacts.html#terminology-code-systems
     Examples: artifacts.html#example-example-instances
-    Capability Statements: capabilitystatements.html
+    Capability Statements: artifacts.html#behavior-capability-statements
     Complete Listing: artifacts.html
   More:
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
