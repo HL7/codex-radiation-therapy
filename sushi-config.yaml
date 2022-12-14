@@ -67,6 +67,7 @@ menu:
     Complete Listing: artifacts.html
   More:
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
+    Data Dictionary: dictionary.html
     Change Log: change_log.html
     Download Specification: downloads.html
     Other Versions: http://hl7.org/fhir/us/codex-radiation-therapy/history.html
