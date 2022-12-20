@@ -6,7 +6,7 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 
 * **Profiles not shown in the DD:** Only profiles defined within the CodexRT IG are included in the Data Dictionary. Other profiles that would typically be used within the Radiotherapy use case, such as those defined in mCODE and USCore are not included.  The [mCODE data dictionary](http://hl7.org/fhir/us/mcode/dictionary.html) may also be of interest to CodexRT users.
 
-* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements that implementers may be expected to provide meaningful support for; see [Profile-Level Conformance Expectations](conformance-profiles.html#profile-level-conformance-expectations) for more information. Some of the MS elements are inherited from US Core.
+* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements, some inherited from US Core that implementers may be expected to support.
 
 Download link:
 
