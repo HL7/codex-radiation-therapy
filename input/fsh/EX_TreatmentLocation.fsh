@@ -1,7 +1,7 @@
 
 
 Instance: TreatmentLocation-1
-InstanceOf: RadiotherapyTreatmentLocation
+InstanceOf: USCoreLocation
 Title: "Treatment Location 1"
 Description: "An example treatment location."
 Usage: #example

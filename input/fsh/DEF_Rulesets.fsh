@@ -88,7 +88,8 @@ RuleSet: RadiotherapyRequestCommon
 * performer[treatmentOrSeedDevice] only  Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
 * performer MS
 * performer[treatmentOrSeedDevice] ^short = "Radiotherapy Treatment Device or Seed Device used as part of therapy."
-
+* locationReference only Reference(USCoreLocation)
+* locationReference MS
 
 RuleSet: RadiotherapyProcedureCommon
 * insert Identifiers
@@ -108,6 +109,8 @@ RuleSet: RadiotherapyProcedureCommon
     seedDevice 0..* MS
 * focalDevice[seedDevice].manipulated only Reference(RadiotherapySeedDevice)
 * focalDevice[seedDevice] ^short = "Radiotherapy Seed Device used as part of therapy."
+* location only Reference(USCoreLocation)
+* location MS
 
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon

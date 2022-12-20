@@ -97,7 +97,6 @@ groups:
     description: Profiles referenced from all levels and throughout the radiotherapy workflow.
     resources:
     - StructureDefinition/codexrt-radiotherapy-volume
-    - StructureDefinition/codexrt-radiotherapy-treatment-location
     - StructureDefinition/codexrt-radiotherapy-treatment-device
     - StructureDefinition/codexrt-radiotherapy-seed-device
 

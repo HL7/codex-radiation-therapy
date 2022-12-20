@@ -50,5 +50,5 @@ Usage: #example
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
 * note.text = "Free text note in Radiotherapy Course Prescription"
-
+* locationReference = Reference(TreatmentLocation-1)
 // ------------------------------------------------------------------------------------
