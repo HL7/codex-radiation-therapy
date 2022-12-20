@@ -170,6 +170,8 @@ The RTTD team also receives significant input and participation from:
 - Elekta
 - University of California San Francisco
 
+The capability statements were rendered using a [script](https://github.com/cspears-mitre/CapStatement) originally developed by Eric Haas that has been extended and maintained by Corey Spears. The generated html is integrated into the FSH source using the [transferdiv.rb](transferdiv.rb) script.
+
 ### Contact Information
 
 If you have questions or comments about this guide, you can join the conversation on [the CodeX Radiation Therapy stream on zulip](https://chat.fhir.org/#narrow/stream/332717-CodeX-Radiation-Therapy), create an issue in the [HL7 Jira](http://hl7.org/fhir-issues), or reach out to any of the following individuals:

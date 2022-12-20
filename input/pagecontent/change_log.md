@@ -2,7 +2,6 @@
 These are the changes that have been made since the ballot version.
 
 #### Narrative Changes
-
 * Added description of [relationship between the profiles](overview.html#relationships-between-profiles)
 * Added description of [revision or adaptation of prescriptions and plans](overview.html#revision-or-adaptation)
 * Updated the [data elements diagram](overview.html#data-elements) to reflect changes in the profiles
@@ -25,3 +24,6 @@ These are the changes that have been made since the ballot version.
 #### Codesystem Changes
 * Three codesystems that included codes requested from SNOMEDCT have been merged into one [codesystem](CodeSystem-snomed-requested-cs.html).
 * New SNOMEDCT codes requested by the authors have replaced local codes as they have been issued.
+
+### Capability Statement Changes
+* Added a server [capabilty statement](CapabilityStatement-CodexRTServerCapabilityStatement.html) based on XRTS requirements.  Included credits for rendering.

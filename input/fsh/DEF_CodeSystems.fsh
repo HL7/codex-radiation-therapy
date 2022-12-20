@@ -4,9 +4,6 @@ Title: "Requested SNOMED Codes Code System"
 Description: "Codes requested from SNOMED by CodexRT, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
 * ^experimental = false
-//* These codes have  been requested and under review by SNOMED International as of 11/1/2022.
-//* Subject to SNOMED International approval, these codes *may* be included in the March 2023 release to U S Edition
-* #USCRS-34603	"Changes in treatment intent (finding)" "new concept under 373856008 |Reason for change in radiotherapy course (finding)" //#treatmentintentchange
 //* These codes have been issued by SNOMED International
 //* They are expected to be part of the March 2023 release to US Edition, at which time they can be removed from this CodeSystem
 * #1255213001 "Brachytherapy eye plaque (physical object)" "Brachytherapy eye plaque (physical object)"
@@ -20,6 +17,7 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 * #1254768007 "Radioactive seed embedded in mesh (physical object)" "Radioactive seed embedded in mesh (physical object)"
 * #1254767002 "Stranded radioactive seed (physical object)" "Stranded radioactive seed (physical object)"
 * #1254766006 "Loose radioactive seed (physical object)" "Loose radioactive seed (physical object)"
-* #1255724003  "Radiotherapy treatment plan (regime/therapy)" "Radiotherapy treatment plan (regime/therapy)" // USCRS-34602, not yet released for US
-* #1259231006 "Radiotherapy course changed due to changes to target (finding)" // USCRS-34604
-* #1259232004 "Radiotherapy course changed due to change to organ at risk (finding)" // USCRS-34605
+* #1255724003 "Radiotherapy treatment plan (regime/therapy)" "Radiotherapy treatment plan (regime/therapy)" // USCRS-34602, not yet released for US
+* #1259981006 "Radiotherapy course change due to change to treatment intent (finding)" "Radiotherapy course change due to change to treatment intent (finding)" //#USCRS-34603
+* #1259231006 "Radiotherapy course change due to changes to target (finding)" "Radiotherapy course change due to changes to target (finding)" // USCRS-34604
+* #1259232004 "Radiotherapy course change due to change to organ at risk (finding)" "Radiotherapy course change due to change to organ at risk (finding)." // USCRS-34605
