@@ -44,10 +44,6 @@ pages:
     title: Terminology
   artifacts.html:
     title: Artifacts Summary
-  basic_examples.md:
-    title: Basic Examples
-  examples.md:
-    title: Extended Example
   dictionary.md:
     title: Data Dictionary
   change_log.md:
