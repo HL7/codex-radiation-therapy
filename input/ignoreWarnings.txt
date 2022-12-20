@@ -55,6 +55,22 @@ INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-05-Prostate-Phase2: Service
 INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-04-Prostate-Phase1-Plan1: ServiceRequest.extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique
 INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-05-Prostate-Phase2-Plan1: ServiceRequest.extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique
 
+#CapStmt includes additional slices
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[0].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[6].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[8].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[9].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[2].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[2].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[2].extension[6].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[2].extension[8].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[2].extension[9].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+
+
 # radiotherapy volumes include varian identifiers, and this is OK
 INFORMATION: BodyStructure/RadiotherapyVolume-02-PTV64: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
 INFORMATION: BodyStructure/RadiotherapyVolume-03-Prostate: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
@@ -97,6 +113,7 @@ INFORMATION: BodyStructure/radiotherapyVolume-01-PTV50: BodyStructure.identifier
 INFORMATION: BodyStructure/radiotherapyVolume-01-PTV50: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
 
 # SUPPRESS US CORE MESSAGES.
+# No variance needed for ServiceRequests, since this is not available in USCore 4.0.1
 # Variance Approved by Cross-Group Projects WG on 11/10/2022: Eric Haas / Brett Marquard: 17-0-1  -  https://jira.hl7.org/browse/FHIR-39341 .
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 # Variance Approved by Cross-Group Projects WG on 10/27/2022: Brett Marquard/Eric Haas: 21-0-1    - https://jira.hl7.org/browse/FHIR-39301
