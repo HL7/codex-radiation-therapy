@@ -28,11 +28,10 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 4500
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPrescriptionId
   * value = "Prostate-Phase1-Plan1"
-* identifier[+]
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn[+] = Reference(RadiotherapyPhasePrescription-04-Prostate-Phase1) //Intent that this prescription bases on
@@ -79,11 +78,10 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 3420
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPrescriptionId
   * value = "Prostate-Phase2-Plan1"
-* identifier[+]
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456"
 * basedOn = Reference(RadiotherapyPhasePrescription-05-Prostate-Phase2) //Intent that this prescription bases on

@@ -9,12 +9,10 @@ RuleSet: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1_Both_Breast"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.04.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22B-01-Breast-2P-3V)
@@ -96,12 +94,10 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary - Left Breast Tangents"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22B-01-01-LeftBreastTang)
@@ -160,12 +156,10 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-02-RightBreastTang-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Right Breast Tangents"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.02.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22B-01-02-RightBreastTang)
@@ -195,12 +189,10 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-03-LeftBreastBoost-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Left Breast Boost"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.04.01.03.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-04-22B-01-03-LeftBreastBoost)
@@ -267,12 +259,10 @@ Usage: #example
     * valueReference.display = "Right Breast"
   * extension[totalDose].valueQuantity.value = 900
   * extension[fractions].valuePositiveInt = 3
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1_Both_Breast"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.04.01.22.1"
 * status = #completed
@@ -305,12 +295,10 @@ Usage: #example
     * valueReference.display = "Left Breast Boost"
   * extension[fractionDose].valueQuantity.value = 300
   * extension[totalDose].valueQuantity.value = 900
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary - Left Breast Tangents"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22B-01-Breast-2P-3V)
@@ -337,12 +325,10 @@ Usage: #example
     * valueReference.display = "Right Breast"
   * extension[fractionDose].valueQuantity.value = 300
   * extension[totalDose].valueQuantity.value = 900
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Right Breast Tangents"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.02.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22B-01-Breast-2P-3V)
@@ -369,12 +355,10 @@ Usage: #example
     * valueReference.display = "Left Breast Boost"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Left Breast Boost"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.04.01.03.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22B-01-Breast-2P-3V)
@@ -459,7 +443,6 @@ Usage: #example
 * meta.profile[+] = USCorePatient
 * extension[us-core-birthsex].valueCode = 	http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#F
 * identifier[+]
-  * use = #usual
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
   * system = "http://hospital.smarthealthit.org"
   * value = "XRTS-04_22B"

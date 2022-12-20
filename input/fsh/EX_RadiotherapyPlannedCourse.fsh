@@ -29,11 +29,10 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-05-SemVs)
   * extension[totalDose].valueQuantity.value = 7920
   * extension[fractions].valuePositiveInt = 44
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "Prostate-2Phases"
-* identifier[+]
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.3503430456.2"
 * basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate)

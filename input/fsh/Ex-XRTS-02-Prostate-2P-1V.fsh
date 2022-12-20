@@ -9,12 +9,10 @@ RuleSet: RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.72.842418.2121.20150602151.02.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-02-22B-01-Prostate-2P-1V)
@@ -69,12 +67,10 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-01-Primary-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.02.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-02-22B-01-01-Primary)
@@ -121,12 +117,10 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-02-PlanChange-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "PlanChange"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.73.842418.2121.20150602151.02.01.02.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-02-22B-01-02-PlanChange)
@@ -177,12 +171,10 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[totalDose].valueQuantity.value = 1340
   * extension[fractions].valuePositiveInt = 7
-* identifier[+]
-  * use = #usual //Can use general identifiers. Here just using7the same as the request on which the summary is basedOn
+* identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.02.01.22.1"
 * status = #completed
@@ -210,12 +202,10 @@ Usage: #example
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 1260
 * extension[radiotherapyReasonForRevisionOrAdaptation].valueCodeableConcept = SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.02.01.01.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-02-22B-01-Prostate-2P-1V)
@@ -242,12 +232,10 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
-* identifier[+]
-  * use = #usual
+* identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "PlanChange"
-* identifier[+]
-  * use = #official
+* identifier[official]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.75.842418.2121.20150602151.02.01.02.22.1"
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-02-22B-01-Prostate-2P-1V)
