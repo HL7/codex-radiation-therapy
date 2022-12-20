@@ -52,7 +52,7 @@ Usage: #example
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
 * bodySite.text = "Prostate"
 * note.text = "Free text note in Radiotherapy Phase Prescription"
-* locationReference = Reference(Treatment-Location-1)
+* locationReference = Reference(TreatmentLocation-1)
 
 Instance: RadiotherapyPhasePrescription-05-Prostate-Phase2
 InstanceOf: RadiotherapyPhasePrescription
