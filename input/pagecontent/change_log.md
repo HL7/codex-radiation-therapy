@@ -27,3 +27,6 @@ These are the changes that have been made since the ballot version.
 
 ### Capability Statement Changes
 * Added a server [capabilty statement](CapabilityStatement-CodexRTServerCapabilityStatement.html) based on XRTS requirements.  Included credits for rendering.
+
+### Added Data Dictionary
+* Add a [data dictionary](dictionary.html) with the same format as the mCODE data dictionary.

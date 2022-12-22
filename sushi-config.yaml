@@ -44,10 +44,6 @@ pages:
     title: Terminology
   artifacts.html:
     title: Artifacts Summary
-  basic_examples.md:
-    title: Basic Examples
-  examples.md:
-    title: Extended Example
   dictionary.md:
     title: Data Dictionary
   change_log.md:
@@ -67,6 +63,7 @@ menu:
     Complete Listing: artifacts.html
   More:
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
+    Data Dictionary: dictionary.html
     Change Log: change_log.html
     Download Specification: downloads.html
     Other Versions: http://hl7.org/fhir/us/codex-radiation-therapy/history.html
