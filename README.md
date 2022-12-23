@@ -79,4 +79,4 @@ While not normally necessary, you can delete the following folders to get a clea
 
 ## Contributing to the IG
 
-See  [`contributing.md`](contributing.md).
+See [`contributing.md`](contributing.md).
