@@ -40,6 +40,14 @@ RuleSet: Identifiers
   * system 1..1 MS
   * value 1..1 MS
 
+RuleSet: BodySiteQualifierAndLaterality
+* bodySite.extension contains
+     BodyLocationQualifier named locationQualifier 0..*   and
+     LateralityQualifier named lateralityQualifier 0..1
+* bodySite.extension[locationQualifier] ^short = "General location qualifier (excluding laterality) for this bodySite"
+* bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
+* bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier (excluding laterality) for this bodySite"
+* bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier (excluding laterality) for this bodySite"
 RuleSet: ModalityAndTechniqueExtensions
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
@@ -81,6 +89,7 @@ RuleSet: RadiotherapyRequestCommon
 * bodySite from RadiotherapyTreatmentLocationVS (required) //TBD For now required as in mCODE
 * bodySite MS
 * bodySite ^short = "Body site that is treated with radiotherapy"
+* insert BodySiteQualifierAndLaterality
 * note MS
 * insert OpenProfileBasedSlicing(performer)
 * performer contains
@@ -111,6 +120,7 @@ RuleSet: RadiotherapyProcedureCommon
 * focalDevice[seedDevice] ^short = "Radiotherapy Seed Device used as part of therapy."
 * location only Reference(USCoreLocation)
 * location MS
+* insert BodySiteQualifierAndLaterality
 
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon
