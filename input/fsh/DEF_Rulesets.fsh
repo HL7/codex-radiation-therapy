@@ -103,9 +103,9 @@ RuleSet: RadiotherapyRequestCommon
 RuleSet: RadiotherapyProcedureCommon
 * insert Identifiers
 * performed[x] only Period
-* performedPeriod.start
+* performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
-* performedPeriod.end
+* performedPeriod.end MS
 * performedPeriod.end ^short = "An end date is expected if the status is 'stopped' or 'completed'"
 * insert OpenProfileBasedSlicing(usedReference)
 * usedReference contains
@@ -144,14 +144,6 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a phase, all volumes are involved in all fractions."
   * extension[fractions] ^definition = "Not used in this profile. In a phase, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of fractions for different volumes, multiple phases have to be defined."
-* occurrenceTiming only Timing
-* occurrenceTiming MS
-  * repeat
-    * boundsPeriod 0..1
-    * boundsPeriod only Period
-    * frequency 0..1
-    * period 0..1
-    * periodUnit 0..1
 
 RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
@@ -164,14 +156,6 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions."
   * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPrescribed."
-* occurrenceTiming only Timing
-* occurrenceTiming MS
-  * repeat
-    * boundsPeriod 0..1
-    * boundsPeriod only Period
-    * frequency 0..1
-    * period 0..1
-    * periodUnit 0..1
 
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * insert RadiotherapyProcedureCommon
