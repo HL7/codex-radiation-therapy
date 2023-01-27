@@ -46,8 +46,8 @@ RuleSet: BodySiteQualifierAndLaterality
      LateralityQualifier named lateralityQualifier 0..1
 * bodySite.extension[locationQualifier] ^short = "General location qualifier (excluding laterality) for this bodySite"
 * bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
-* bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier (excluding laterality) for this bodySite"
-* bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier (excluding laterality) for this bodySite"
+* bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier for this bodySite"
+* bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier for this bodySite"
 RuleSet: ModalityAndTechniqueExtensions
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
@@ -103,9 +103,9 @@ RuleSet: RadiotherapyRequestCommon
 RuleSet: RadiotherapyProcedureCommon
 * insert Identifiers
 * performed[x] only Period
-* performedPeriod.start MS
+* performedPeriod.start
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
-* performedPeriod.end MS
+* performedPeriod.end
 * performedPeriod.end ^short = "An end date is expected if the status is 'stopped' or 'completed'"
 * insert OpenProfileBasedSlicing(usedReference)
 * usedReference contains
