@@ -21,7 +21,6 @@ RuleSet: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-Common
 * reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 //* reasonReference = Reference(Condition/Diagnosis-101-Breast"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 
 Instance: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-1Fx
 InstanceOf: RadiotherapyCourseSummary
@@ -49,6 +48,8 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+
 
 Instance: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V
 InstanceOf: RadiotherapyCourseSummary
@@ -87,6 +88,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-17T13:21:17+01:00"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
