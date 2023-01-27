@@ -44,8 +44,6 @@ Usage: #example
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
-* occurrenceTiming.repeat.boundsPeriod.start = "2020-07-03T00:00:00+02:00" //Expected start date
-* occurrenceTiming.code.text = "5 Times a week"
 * authoredOn =  "2020-07-02T00:00:00+02:00" // "Date and time the Intent was signed"
 * requester = Reference(Practitioner-1005)
 * requester.display = "aria\\user1"
@@ -95,8 +93,6 @@ Usage: #example
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
-* occurrenceTiming.repeat.boundsPeriod.start = "2020-07-03T00:00:00+02:00" //Expected start date
-* occurrenceTiming.code.text = "5 Times a week"
 * authoredOn =  "2020-07-02T00:00:00+02:00" // "Date and time the Intent was signed"
 * requester = Reference(Practitioner-1005)
 * requester.display = "aria\\user1"

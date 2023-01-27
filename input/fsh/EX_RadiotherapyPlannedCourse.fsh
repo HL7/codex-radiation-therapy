@@ -40,8 +40,6 @@ Usage: #example
 * status = #active
 * subject = Reference(Patient-6)
 * subject.display = "Pater Venkman"
-* occurrencePeriod.start = "2020-07-03T00:00:00+02:00"
-* occurrencePeriod.end = "2020-07-27T00:00:00+02:00"
 * authoredOn =  "2020-07-02T00:00:00+02:00" // "Date and time the Prescription was signed"
 * requester = Reference(Practitioner-1005)
 * requester.display = "aria\\user1"
