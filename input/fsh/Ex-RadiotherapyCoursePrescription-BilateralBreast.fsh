@@ -43,6 +43,7 @@ Usage: #example
 * reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * reasonReference = Reference(Diagnosis-101-Breast)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
 * note.text = "Free text note in Radiotherapy Course Prescription"
 
 // --- Phase Prescriptions ---------------------------------------------------------------------------------
@@ -78,6 +79,7 @@ Usage: #example
 * status = #active
 * subject = Reference(Patient-101)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
@@ -106,6 +108,7 @@ Usage: #example
 * status = #active
 * subject = Reference(Patient-101)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 
@@ -133,6 +136,7 @@ Usage: #example
 * status = #active
 * subject = Reference(Patient-101)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#24028007 "Right (qualifier value)"
 * note.text = "Free text note in Radiotherapy Phase Prescription"
 
 // --- Course Summary ---------------------------------------------------------------------------------
@@ -184,6 +188,7 @@ Usage: #example
 * reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * reasonReference = Reference(Diagnosis-101-Breast)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
@@ -220,6 +225,7 @@ Usage: #example
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * note.text = "Free text note in Radiotherapy Phase"
 
 Instance: RadiotherapyTreatedPhase-102-LeftBreastBoost
@@ -251,6 +257,7 @@ Usage: #example
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 
 Instance: RadiotherapyTreatedPhase-103-RightBreastTang
 InstanceOf: RadiotherapyTreatedPhase
@@ -280,6 +287,7 @@ Usage: #example
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#24028007 "Right (qualifier value)"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

@@ -40,6 +40,14 @@ RuleSet: Identifiers
   * system 1..1 MS
   * value 1..1 MS
 
+RuleSet: BodySiteQualifierAndLaterality
+* bodySite.extension contains
+     BodyLocationQualifier named locationQualifier 0..*   and
+     LateralityQualifier named lateralityQualifier 0..1
+* bodySite.extension[locationQualifier] ^short = "General location qualifier (excluding laterality) for this bodySite"
+* bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
+* bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier for this bodySite"
+* bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier for this bodySite"
 RuleSet: ModalityAndTechniqueExtensions
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
@@ -81,6 +89,7 @@ RuleSet: RadiotherapyRequestCommon
 * bodySite from RadiotherapyTreatmentLocationVS (required) //TBD For now required as in mCODE
 * bodySite MS
 * bodySite ^short = "Body site that is treated with radiotherapy"
+* insert BodySiteQualifierAndLaterality
 * note MS
 * insert OpenProfileBasedSlicing(performer)
 * performer contains
@@ -111,6 +120,7 @@ RuleSet: RadiotherapyProcedureCommon
 * focalDevice[seedDevice] ^short = "Radiotherapy Seed Device used as part of therapy."
 * location only Reference(USCoreLocation)
 * location MS
+* insert BodySiteQualifierAndLaterality
 
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon
@@ -134,14 +144,6 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a phase, all volumes are involved in all fractions."
   * extension[fractions] ^definition = "Not used in this profile. In a phase, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of fractions for different volumes, multiple phases have to be defined."
-* occurrenceTiming only Timing
-* occurrenceTiming MS
-  * repeat
-    * boundsPeriod 0..1
-    * boundsPeriod only Period
-    * frequency 0..1
-    * period 0..1
-    * periodUnit 0..1
 
 RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
@@ -154,14 +156,6 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions."
   * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPrescribed."
-* occurrenceTiming only Timing
-* occurrenceTiming MS
-  * repeat
-    * boundsPeriod 0..1
-    * boundsPeriod only Period
-    * frequency 0..1
-    * period 0..1
-    * periodUnit 0..1
 
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * insert RadiotherapyProcedureCommon
