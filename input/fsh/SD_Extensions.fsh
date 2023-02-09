@@ -169,6 +169,26 @@ This is important in registry use cases to efficiently assess whether checking p
 * value[x] ^short = "Uniform Fractionation Was Used"
 * value[x] only boolean
 
+Extension: PrimaryPlanDose
+Id: codexrt-radiotherapy-primary-plan-dose
+Title: "Primary Plan Dose"
+Description: "This flag is true if the dose is the primary plan dose in a radiotherapy treatment plan.
+For a single treatment plan, the primary plan dose serves as the main dose value for tracking delivered dose vs. planned dose.
+In summaries over multiple treatment plans, the flag indicates that the dose is a primary plan dose in any of the summarized plans."
+* . ^short = "Primary Plan Dose"
+* value[x] ^short = "Primary Plan Dose"
+* value[x] only boolean
+
+Extension: PointDose
+Id: codexrt-radiotherapy-point-dose
+Title: "Point Dose"
+Description: "This flag is true if the dose is determined at a single point.
+Point doses are often used to check dose at a specific point in a calculated 3D dose distribution.
+Since point doses mostly have a technical role, high-level summaries may decide to exclude them from displays."
+* . ^short = "Point Dose"
+* value[x] ^short = "Point Dose"
+* value[x] only boolean
+
 Extension: RadiotherapyReasonForRevisionOrAdaptation
 Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
 Title: "Reason for Revision or Adaptation"
