@@ -178,3 +178,23 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (required)
+
+Extension: RadiotherapyRespiratoryMotionManagement
+Id: codexrt-radiotherapy-respiratory-motion-management
+Title: "Respiratory Motion Management"
+Description: "Method applied to manage respiratory motion."
+* . ^short = "Respiratory Motion Management"
+* value[x] ^short = "Respiratory Motion Management"
+* value[x] only CodeableConcept
+* value[x] 1..1
+* value[x] from RadiotherapyRespiratoryMotionManagementVS (required)
+
+Extension: RadiotherapyFreeBreathingMotionManagementTechnique
+Id: codexrt-radiotherapy-free-breathing-motion-mgmt-technique
+Title: "Free-Breathing Motion Management Technique"
+Description: "Technique to manage respiratory motion with free-breathing."
+* . ^short = "Free-Breathing Motion Management Technique"
+* value[x] ^short = "Free-Breathing Motion Management Technique"
+* value[x] only CodeableConcept
+* value[x] 1..1
+* value[x] from RadiotherapyFreeBreathingMotionManagementTechniqueVS (required)

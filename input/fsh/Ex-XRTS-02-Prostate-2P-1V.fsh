@@ -9,6 +9,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#none
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
@@ -49,6 +50,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#none
 * extension[actualNumberOfSessions].valueUnsignedInt = 9
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -67,6 +69,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-01-Primary-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#none
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
@@ -117,6 +120,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-02-PlanChange-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#none
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "PlanChange"
@@ -164,7 +168,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-//* extension[radiotherapySessions].valueUnsignedInt = 7
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#none
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-22B-01-Prostate)
@@ -194,6 +198,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#none
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 7
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
@@ -225,6 +230,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#none
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
