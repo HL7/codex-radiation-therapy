@@ -50,7 +50,6 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#none
 * extension[actualNumberOfSessions].valueUnsignedInt = 9
 * extension[doseDeliveredToVolume][+]
   * extension[volume]

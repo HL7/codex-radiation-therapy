@@ -63,8 +63,6 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
 * extension[actualNumberOfSessions].valueUnsignedInt = 8
 // Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
