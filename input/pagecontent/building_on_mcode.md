@@ -35,5 +35,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The infor
     * extensions to capture the delivered fractions and total delivered dose
 * [mCODE NumberOfSessions]
   * This is incorporated as is into the [CodexRT Planned Phase] profile
+* [mCODE ProcedureIntent]
+  * This is incorporated as is into the [CodexRT Course Prescription] profile
 
 {% include markdown-link-references.md %}
