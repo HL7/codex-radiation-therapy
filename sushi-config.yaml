@@ -36,6 +36,8 @@ pages:
     title: Home
   overview.md:
     title: Overview
+  building_on_mcode.md:
+    title: Building on mCODE
   conformance-general.md:
     title: Conformance Expectations
   conformance-profiles.md:
