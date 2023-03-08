@@ -102,6 +102,9 @@ RuleSet: RadiotherapyRequestCommon
 
 RuleSet: RadiotherapyProcedureCommon
 * insert Identifiers
+* extension[doseDeliveredToVolume].extension contains
+    PointDose named pointDose 0..1 MS and
+    PrimaryPlanDose named primaryPlanDose 0..1 MS
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
@@ -128,18 +131,20 @@ RuleSet: RadiotherapyPrescriptionsCommon
 * replaces MS
 * replaces ^short = "Previous retired prescription that is replaced by this prescription"
 
-
 RuleSet: RadiotherapyPlansCommon
 * insert RadiotherapyRequestCommon
+* extension[radiotherapyDosePlannedToVolume].extension contains
+    PointDose named pointDose 0..1 MS and
+    PrimaryPlanDose named primaryPlanDose 0..1 MS
 * intent = ReqIntent#filler-order "Filler Order"
 
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
-* insert RadiotherapyPlansCommon
 * insert ModalityAndTechniqueZeroToOne
 * extension contains
     RadiotherapyFractionsPlanned named radiotherapyFractionsPlanned 1..1 MS and
     RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS and
     RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
+* insert RadiotherapyPlansCommon
 * extension[radiotherapyDosePlannedToVolume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a phase, all volumes are involved in all fractions."
@@ -158,13 +163,13 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
   * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPrescribed."
 
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
-* insert RadiotherapyProcedureCommon
 * obeys codexrt-procedure-status
 * insert ModalityAndTechniqueZeroToOne
 * extension contains
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS and
     RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
+* insert RadiotherapyProcedureCommon
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"

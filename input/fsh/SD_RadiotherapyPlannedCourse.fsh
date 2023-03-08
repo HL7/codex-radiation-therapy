@@ -4,11 +4,11 @@ Id: codexrt-radiotherapy-planned-course
 Title: "Radiotherapy Planned Course"
 Description: "A Radiotherapy Planned Course covers all radiotherapy plans to deliver a complete course."
 * ^status = #draft
-* insert RadiotherapyPlansCommon
 * insert ModalityAndTechniqueZeroToMany
 * extension contains
     $mCODEProcedureIntent named treatmentIntent 0..1 MS and
     RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS
+* insert RadiotherapyPlansCommon
 * extension[radiotherapyDosePlannedToVolume]
   * extension[fractionDose] ^short = "Not used in this profile. See Planned Phase for detailed fractionation."
   * extension[fractionDose] ^definition = "Fraction dose is not defined in the Planned Course because dose may not be equal in all fractions in which this volume receives dose."
