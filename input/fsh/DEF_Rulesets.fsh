@@ -68,6 +68,8 @@ RuleSet: RadiotherapyRequestCommon
 // * meta.versionId MS
 // * meta.lastUpdated MS
 * extension MS
+* extension contains
+    CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
 * insert Identifiers
 * status MS
 * intent MS
@@ -102,6 +104,8 @@ RuleSet: RadiotherapyRequestCommon
 
 RuleSet: RadiotherapyProcedureCommon
 * insert Identifiers
+* extension contains
+    CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and
     PrimaryPlanDose named primaryPlanDose 0..1 MS

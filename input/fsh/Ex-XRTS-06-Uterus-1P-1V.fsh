@@ -39,6 +39,7 @@ Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-09-06T13:21:17+01:00"
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[actualNumberOfSessions].valueUnsignedInt = 1
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -57,6 +58,7 @@ Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.versionId = "2"
 * meta.lastUpdated = "2021-09-20T13:21:17+01:00"
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[actualNumberOfSessions].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -79,6 +81,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SnomedRequestedCS#1254776009 "Brachytherapy tandem (physical object)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
@@ -101,6 +104,7 @@ Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-09-06T13:21:17+01:00"
 * extension[fractionsDelivered].valueUnsignedInt = 1
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[doseDeliveredToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
@@ -117,6 +121,7 @@ Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2021-09-20T10:07:41.050+02:00"
 * extension[fractionsDelivered].valueUnsignedInt = 5
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[doseDeliveredToVolume]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
@@ -134,6 +139,7 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
@@ -171,6 +177,7 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"

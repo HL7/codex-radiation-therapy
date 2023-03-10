@@ -204,3 +204,12 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (required)
+
+Extension: CourseInvolvesReirradiation
+Id: codexrt-radiotherapy-course-involves-reirradiation
+Title: "Course Involves Reirradiation"
+Description: "This flag is true if the course involves reirradiation."
+* . ^short = "Course Involves Reirradiation"
+* . 0..1
+* value[x] ^short = "Course Involves Reirradiation"
+* value[x] only boolean
