@@ -9,8 +9,8 @@ RuleSet: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1_Both_Breast"
@@ -99,8 +99,8 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary - Left Breast Tangents"
@@ -164,8 +164,8 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-02-RightBreastTang-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Right Breast Tangents"
@@ -200,8 +200,8 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-03-LeftBreastBoost-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Left Breast Boost"
@@ -250,8 +250,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 // Target Site "Left Breast"
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -297,8 +297,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 3
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -336,8 +336,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 3
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -369,8 +369,8 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = RadiotherapyRespiratoryMotionManagementCS#free-breathing
-* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = RadiotherapyFreeBreathingMotionManagementTechniqueCS#gating
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
