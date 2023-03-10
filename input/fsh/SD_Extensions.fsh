@@ -213,3 +213,13 @@ Description: "This flag is true if the course involves reirradiation."
 * . 0..1
 * value[x] ^short = "Course Involves Reirradiation"
 * value[x] only boolean
+
+Extension: ImageGuidedModalityAndEnergy
+Id: codexrt-radiotherapy-image-guided-modality-and-energy
+Description: "The Modality and Energy used for Image Guided Radiotherapy (IGRT)"
+* . ^short = "Image Guided Therapy Modality and Energy"
+* extension contains
+    modality 1..1 MS and
+    energy 0..1 MS
+* extension[modality].value[x] from ImageGuidedModalityVS (required)
+* extension[energy].value[x] from RadiotherapyEnergyUnitVS (required)
