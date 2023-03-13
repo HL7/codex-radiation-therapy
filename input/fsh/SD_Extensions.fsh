@@ -208,18 +208,40 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 Extension: CourseInvolvesReirradiation
 Id: codexrt-radiotherapy-course-involves-reirradiation
 Title: "Course Involves Reirradiation"
-Description: "This flag is true if the course involves reirradiation."
+Description: "This flag is true if the radiotherapy course of treatment involves reirradiation of targets or organs at risk that were already irradiated in previous courses."
 * . ^short = "Course Involves Reirradiation"
 * . 0..1
 * value[x] ^short = "Course Involves Reirradiation"
 * value[x] only boolean
 
-Extension: ImageGuidedModalityAndEnergy
-Id: codexrt-radiotherapy-image-guided-modality-and-energy
-Description: "The Modality and Energy used for Image Guided Radiotherapy (IGRT)"
-* . ^short = "Image Guided Therapy Modality and Energy"
+Extension: ImageGuidanceModality
+Id: codexrt-radiotherapy-image-guidance-modality
+Description: "The modality and associated energy used for Image Guided Radiotherapy (IGRT)"
+Title: "Image Guidance Modality"
+* . ^short = "Image Guidance Modality"
+* obeys ImageGuidanceEnergyAllowed
 * extension contains
     modality 1..1 MS and
     energy 0..1 MS
-* extension[modality].value[x] from ImageGuidedModalityVS (required)
-* extension[energy].value[x] from RadiotherapyEnergyUnitVS (required)
+* extension[modality].value[x] from ImageGuidanceModalityVS (required)
+* extension[energy].value[x] from ImageGuidanceEnergyUnitVS (required)
+
+Invariant: ImageGuidanceEnergyAllowed
+Description: "Energy is only allowed only for X-Ray, Flurograph, or CT Modalities"
+Severity: #error
+//* SCT#168537006 "Plain radiography (procedure)"  // XRay
+//* SCT#44491008 "Fluoroscopy (procedure)"         // Flurograph
+//* SCT#77477000 "Computed tomography (procedure)" // CT
+//* SCT#717193008 "Cone beam computed tomography (procedure)" // Cone beam CT
+Expression: "extension.where(url = 'energy').exists() implies \n
+               (extension.where(url = 'modality').exists() and \n
+                ( extension.where(url = 'modality').value.exists(\n
+                  (coding.system = 'http://snomed.info/sct') and \n
+                  ( coding.code = '168537006' or \n
+                    coding.code = '44491008' or \n
+                    coding.code = '77477000' or \n
+                    coding.code = '717193008' \n
+                  )\n
+                )\n
+               )"
+XPath: "true()"
