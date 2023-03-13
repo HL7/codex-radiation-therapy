@@ -16,7 +16,7 @@ These are the changes that have been made since the ballot version.
 * An extension with a codeable concept for [reason for revision and adaptiation](ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html) was added to all Plan and Phase profiles. ([FHIR-38231](https://jira.hl7.org/browse/FHIR-38231))
 * An extension with a [Reference to DICOM SOP Instance](StructureDefinition-codexrt-dicom-reference.html) was added to RadiotherapyTreatmentPlan and RadiotherapyTreatedPlan profiles.
 * An extension with a boolean for [course involves reirradiation](StructureDefinition-codexrt-radiotherapy-course-involves-reirradiation.html) was added to the 3 course-level profiles.
-* An extension supporting Image Guided Radiotherapy (IGRT) was added everywhere Therapeutic Modality and Technique was present.
+* An extension supporting [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-radiotherapy-image-guidance-modality.html) was added everywhere Therapeutic Modality and Technique was present.  This is supported by a valueset of IGRT [modalities](ValueSet-codexrt-image-guidance-modality-vs) and [energies](ValueSet-codexrt-image-guidance-energy-unit-vs.html).
 
 
 #### Valueset Changes
