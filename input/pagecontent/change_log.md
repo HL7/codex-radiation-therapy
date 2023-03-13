@@ -21,7 +21,6 @@ These are the changes that have been made since the ballot version.
 * New SNOMEDCT codes requested by the authors have replaced local codes as they have been issued.
 
 #### Codesystem Changes
-* Three codesystems that included codes requested from SNOMEDCT have been merged into one [codesystem](CodeSystem-snomed-requested-cs.html).
 * New SNOMEDCT codes requested by the authors have replaced local codes as they have been issued.
 
 ### Capability Statement Changes
