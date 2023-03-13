@@ -7,6 +7,8 @@ Whenever new contributions in the scope of the same course are delivered, this r
 * insert RadiotherapyProcedureCommon
 * obeys codexrt-procedure-status
 * insert ModalityAndTechniqueExtensions
+* extension contains
+    CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
 * extension[doseDeliveredToVolume].extension contains
     UniformFractionation named uniformFractionation 1..1 MS
 * insert OpenProfileBasedSlicing(basedOn)

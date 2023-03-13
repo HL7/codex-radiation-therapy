@@ -15,6 +15,9 @@ These are the changes that have been made since the ballot version.
 * The mCODE [DoseDeliveredToVolume](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html) extension has been extended with a boolean uniformFractionation flag when incorporated into the [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html) profile. ([FHIR-37976](https://jira.hl7.org/browse/FHIR-37976))
 * An extension with a codeable concept for [reason for revision and adaptiation](ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html) was added to all Plan and Phase profiles. ([FHIR-38231](https://jira.hl7.org/browse/FHIR-38231))
 * An extension with a [Reference to DICOM SOP Instance](StructureDefinition-codexrt-dicom-reference.html) was added to RadiotherapyTreatmentPlan and RadiotherapyTreatedPlan profiles.
+* An extension with a boolean for [course involves reirradiation](StructureDefinition-codexrt-radiotherapy-course-involves-reirradiation.html) was added to the 3 course-level profiles.
+* An extension supporting Image Guided Radiotherapy (IGRT) was added everywhere Therapeutic Modality and Technique was present.
+
 
 #### Valueset Changes
 * The [Brachytherapy Applicator Types](ValueSet-codexrt-brachytherapy-applicator-type-vs.html) valueset has been reworked using new codes requested from SNOMEDCT.
