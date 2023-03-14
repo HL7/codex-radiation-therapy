@@ -7,7 +7,8 @@ Description: "A Radiotherapy Planned Course covers all radiotherapy plans to del
 * insert ModalityAndTechniqueZeroToMany
 * extension contains
     $mCODEProcedureIntent named treatmentIntent 0..1 MS and
-    RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS
+    RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS and
+    CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
 * insert RadiotherapyPlansCommon
 * extension[radiotherapyDosePlannedToVolume]
   * extension[fractionDose] ^short = "Not used in this profile. See Planned Phase for detailed fractionation."

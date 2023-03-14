@@ -48,6 +48,7 @@ RuleSet: BodySiteQualifierAndLaterality
 * bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
 * bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier for this bodySite"
 * bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier for this bodySite"
+
 RuleSet: ModalityAndTechniqueExtensions
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
@@ -55,13 +56,16 @@ RuleSet: ModalityAndTechniqueExtensions
 
 RuleSet: ModalityAndTechniqueZeroToMany
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS and
+    ImageGuidanceModality named imageGuidanceModality 0..* MS
 * insert ModalityAndTechniqueExtensions
 
 RuleSet: ModalityAndTechniqueZeroToOne
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
+    ImageGuidanceModality named imageGuidanceModality 0..* MS
 * insert ModalityAndTechniqueExtensions
+
 
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
