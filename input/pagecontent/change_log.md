@@ -6,6 +6,9 @@ These are the changes that have been made since the ballot version.
 * Added description of [revision or adaptation of prescriptions and plans](overview.html#revision-or-adaptation)
 * Updated the [data elements diagram](overview.html#data-elements) to reflect changes in the profiles
 
+#### Profile Additions
+* Added [Radiotherapy Adverse Event](StructureDefinition-codexrt-radiotherapy-adverse-event.html) profile based on Vulcan and CTCAE, along with associated valuesets
+
 #### Profile Changes
 * The [relationship between the profiles](overview.html#relationships-between-profiles) have been implemented with open, profile-based slicing of the basedOn and replaces fields of the profiles. ([FHIR-38231](https://jira.hl7.org/browse/FHIR-38231))
 * Treatment devices are represented as proper references to [RadiotherapyTreatmentDevice], rather than using an extension. ([FHIR-38220](https://jira.hl7.org/browse/FHIR-38220) and [FHIR-38114](https://jira.hl7.org/browse/FHIR-38114))
