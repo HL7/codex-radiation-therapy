@@ -1,6 +1,6 @@
 ValueSet: ImageGuidanceModalityVS
 Id: codexrt-image-guidance-modality-vs
-Title: "Image Guidance Modality Modality Value Set"
+Title: "Image Guidance Modality Value Set"
 Description: "Modalities used for Image Guided Radiotherapy (IGRT)"
 * ^experimental = false
 * insert SCTCopyright
