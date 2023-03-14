@@ -210,3 +210,12 @@ Usage: #example
   * state = "OK"
   * postalCode = "74047"
   * country = "US"
+
+Instance: RadiotherapyAdverseEvent-XRTS-07-22B
+InstanceOf: RadiotherapyAdverseEvent
+Title: "Example Adverse Event from Radiotherapy"
+Description: "Adverse Event, Nausea following course of treatment."
+* subject = Reference(Patient-XRTS-07-22B)
+* suspectEntity.instance = Reference(RadiotherapyCourseSummary-XRTS-07-22B-01-Uterus-1P-1V)
+* event = NCIT#C146764  "Nausea"
+* extension[severity-or-grade].valueCodeableConcept = AdverseEventSeverityOrGradeCS#1 "Mild Adverse Event"

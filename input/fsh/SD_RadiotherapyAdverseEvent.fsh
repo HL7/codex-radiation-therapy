@@ -6,7 +6,7 @@ Description: "A Radiotherapy Adverse Event is an adverse event resulting from ra
 Future versions of this IG should reference adverse event profiles from Vulcan, once they are published.  The current profile is inspired by the work of Vulcan and Common Terminology Criteria (CTC) Adverse Event (CTCAE."
 * ^status = #draft
 * ^experimental = true
-* subject and date and outcome and recorder and encounter and study MS
+* subject and date and outcome and recorder and encounter and actuality MS
 * actuality = #actual
 * subject only Reference(USCorePatient)
 // ------Event-----
@@ -21,7 +21,7 @@ Future versions of this IG should reference adverse event profiles from Vulcan, 
 * event.text ^definition = "The original, verbatim word or phrase as entered by the clinician describing the advese event. The verbatim text may be different than the CTCAE Term given in event.coding.display, since the latter is derived, coded version of the verbatim text. If the AE was selected from a pick list, the event.text must be text displayed in the user interface that was selected by the clinician."
 // ------Grade-----
 * extension contains
-    AdverseEventSeverityOrGrade named severity-or-grade 1..1 MS
+    AdverseEventSeverityOrGrade named severity-or-grade 0..1 MS
 * suspectEntity.instance only Reference( RadiotherapyTreatedPhase or RadiotherapyCourseSummary or RadiotherapyTreatedPlan)
 * suspectEntity MS
 
