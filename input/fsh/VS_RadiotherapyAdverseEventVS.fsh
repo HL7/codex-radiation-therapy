@@ -1,6 +1,6 @@
-CodeSystem: CTCAEGradeCS
-Id: ctcae-grade-code-system
-Title: "CTCAE Grade Code System"
+CodeSystem: AdverseEventSeverityOrGradeCS
+Id: codexrt-radiotheraphy-adverse-event-severity-or-gradeCS
+Title: "Severity or Grade CodeSystem based on CTCAE"
 Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
 * #0 "Absent Adverse Event" "The absence of adverse events or within normal limits or values."
 * #1 "Mild Adverse Event"  "An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations."
@@ -9,66 +9,15 @@ Description: "Common terminology criteria (CTC) grades associated with the sever
 * #4 "Life Threatening or Disabling Adverse Event"  "Any adverse event that places the patient, in the view of the initial reporter, at immediate risk of death from the adverse event as it occurred, i.e., it does not include an adverse experience that, had it occurred in a more severe form, might have caused death."
 * #5 "Death Related to Adverse Event"  "The termination of life associated with an adverse event."
 
-
-ValueSet: CTCAEGradeVS
-Id: ctcae-grade-value-set
-Title: "CTCAE Grade Value Set"
+ValueSet: AdverseEventSeverityOrGradeVS
+Id: codexrt-radiotheraphy-adverse-event-severity-or-gradeVS
+Title: "Adverse Event Severity or Grade Value Set"
 Description: "CTCAE Grades 0 through 5. The grade of the adverse event, determined by CTCAE criteria, where 0 represents confirmation that the given adverse event did NOT occur, and 5 represents death. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered a particular AE."
-* include codes from system CTCAEGradeCS
+* include codes from system AdverseEventSeverityOrGradeCS
 
-ValueSet: AdverseEventSeriousnessVS
-Id: adverse-event-seriousness-value-set
-Title: "Adverse Event Seriousness Value Set"
-Description: "An adverse event is classified as serious or non-serious. It is considered serious if it results in any of the following outcomes: (1) Death, (2) Life-threatening experience, 3) Inpatient hospitalization or prolongation of existing hospitalization (for > 24 hours), (4) Persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, (5) Congenital anomaly/birth defect, or (6) Important Medical Event (IME) that may jeopardize the patient or subject and may require medical or surgical intervention to prevent one of the outcomes listed in this definition (reference: https://crawb.crab.org/txwb/CRA_MANUAL/Vol1/chapter%2013_Serious%20Adverse%20Events.pdf)."
-//* include codes from system AESeriousness
-* NCIT#C41335 "Serious Adverse Event"
-* NCIT#C41336 "Non-serious Adverse Event"
-
-ValueSet: AdverseEventSeriousnessOutcomeVS
-Id: adverse-event-seriousness-outcome-value-set
-Title: "Adverse Event Seriousness Outcome Value Set"
-Description: "The outcome of a serious adverse event"
-* NCIT#C84266 "Life Threatening Adverse Event"
-* NCIT#C48275 "Death Related to Adverse Event"
-* NCIT#C113380 "Disabling Adverse Event"
-* NCIT#C83052 "Adverse Event associated with Hospitalization"
-* NCIT#C2849 "Congenital Abnormality"
-* NCIT#C52668 "Intervention Required"
-
-
-ValueSet: AdverseEventRelatednessVS
-Id: adverse-event-relatedness-value-set
-Title: "Adverse Event Relatedness Value Set"
-Description: "Codes qualifying the adverse event's relationship to the medical intervention, according to WHO causality assessment criteria: it is applicable to a clinical event, including laboratory test abnormality, occurs in a plausible time relationship to medical intervention, and cannot be explained by concurrent disease or other interventions."
-* NCIT#C53256 "Adverse Event Unrelated to Intervention"
-* NCIT#C53257 "Adverse Event Unlikely Related to Intervention"
-* NCIT#C53258 "Adverse Event Possibly Related to Intervention"
-* NCIT#C53259 "Adverse Event Probably Related to Intervention"
-* NCIT#C53260 "Adverse Event Definitely Related to Intervention"
-* NCIT#C68618 "Adverse Event Conditionally Related to Intervention"
-
-ValueSet: AdverseEventExpectationVS
-Id: adverse-event-expectation-value-set
-Title: "Adverse Event Expectation Value Set"
-Description: "An expected adverse event is one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document. An unexpected adverse event is one that has not been previously observed, whether or not the event was anticipated because of the pharmacologic properties of the study agent or the nature of the medical procedure. This includes events that are more serious than expected or occur more frequently than expected, particularly, any adverse experience, the nature, severity or frequency of which is not consistent with the product label, or with the current investigator brochure for investigational agent; or with the risk information described in the investigational plan or protocol or consent form (NCI Thesaurus)."
-* NCIT#C41333 "Expected Adverse Event"
-* NCIT#C41334 "Unexpected Adverse Event"
-
-// valueset in R5 AE, added approver (authenticator)
-ValueSet: AdverseEventParticipantFunctionVS
-Id: adverse-event-participant-function-value-set
-Title: "Adverse Event Participant Function"
-Description: "This value set includes codes that describe the type of involvement of the actor in the adverse event"
-//* include codes from system ParticipationType
-* ParticipationType#INF "Informant"
-* ParticipationType#PART "Participation"
-* ParticipationType#WIT "Witness"
-* ParticipationType#AUT "Author (originator)"
-* ParticipationType#AUTHEN "Authenticator"
-
-ValueSet: CTCAETermVS
-Id: ctcae-term-value-set
-Title: "CTCAE Terms Value Set"
+ValueSet: AdverseEventTermVS
+Id: codexrt-radiotherapy-adverse-event-termVS
+Title: "Adverse Event Terms Value Set"
 Description: "The NCI Common Terminology Criteria for Adverse Events (CTCAE) is utilized for Adverse Event (AE) reporting. The codes are drawn from the NCI Thesaurus. Each CTCAE term is a MedDRA LLT (Lowest Level Term) with corresponding codes that can be used in place of the NCI code. The value set is CTCAE 5.0 and corresponds to MedDRA version 20.1. See https://evs.nci.nih.gov/ftp1/CTCAE/CTCAE_5.0/NCIt_CTCAE_5.0.xlsx.
 
 **Use of 'Other, specify'**: In the event a suitable CTCAE term cannot be found, the appropriate verbatim term SHALL be captured via the 'Other, specify' mechanism. In this case, the verbatim term is populated into the event.text field, the NCIT code for the body system into the event.coding.code field, and the display string corresponding to the code into the event.coding.display field. For example, if reporting the unusual adverse event 'Vulcan-green blood' it will be reported as: event.text of 'Vulcan-green blood', event.coding.display of 'Blood and lymphatic system disorders - Other, specify', and event.coding.code of NCIT code C143323."
@@ -911,49 +860,3 @@ Description: "The NCI Common Terminology Criteria for Adverse Events (CTCAE) is 
 * NCIT#C143873  "Thromboembolic event"
 * NCIT#C143930  "Vascular disorders - Other, specify"
 * NCIT#C54741  "Vasculitis"
-
-
-/* Hold for now
-ValueSet: CTCAEGradeVS
-Id: ctcae-grade-value-set
-Title: "CTCAE Grade Value Set"
-Description: "Common terminology criteria grades associated with the severity of an adverse event. The additional term, 'Absent Adverse Event' (aka grade 0) is used to indicate the patient has been assessed, and the given adverse event has not occurred. Grade 0 events may not be valid in certain reporting contexts."
-* NCIT#C75533 "Absent Adverse Event"
-* NCIT#C41338 "Mild Adverse Event"  ""
-* NCIT#C41339 "Moderate Adverse Event"
-* NCIT#C41340  "Severe Adverse Event"
-* NCIT#C41337 "Life Threatening or Disabling Adverse Event"
-* NCIT#C48275  "Death Related to Adverse Event"
-CodeSystem: AdverseEventRelatednessTextCS
-Id: adverse-event-relatedness-text-code-system
-Title: "Adverse Event Relatedness Text Code System"
-Description: "Short texts qualifying the adverse event's relationship to the medical intervention."
-* #unrelated "Unrelated"  "Adverse Event Unrelated to Intervention"
-* #unlikely "Unlikely"  "Adverse Event Unlikely Related to Intervention"
-* #possible "Possible"  "Adverse Event Possibly Related to Intervention"
-* #probable "Probable"   "Adverse Event Probably Related to Intervention"
-* #definite "Definite"  "Adverse Event Definitely Related to Intervention"
-* #conditional "Conditional"  "Adverse Event Conditionally Related to Intervention"
-* #related  "Related"  "Adverse Event Related to Intervention, with any unspecified degree of likelihood"
-ValueSet: AdverseEventRelatednessTextVS
-Id:  adverse-event-relatedness-text-value-set
-Title: "Adverse Event Relatedness Text Value Set"
-Description: "Degrees of relatedness expressed as text strings."
-* include codes from system AdverseEventRelatednessTextCS
-* SCT#428263003 "NOT suspected (qualifier value)"     // should be "UNRELATED"
-* SCT#452161000124108 "Improbable (qualifier value)"  // unlikely in EPIC
-* SCT#371930009 "Possible (qualifier value)"          // possible in EPIC
-* SCT#452201000124102 "Probable (qualifier value)"    // probable in EPIC
-* SCT#255545003 "Definite (qualifier value)"
-* SCT#452161000124108 "Improbable (qualifier value)" // unlikely in EPIC
-* SCT#452171000124101 "Slightly probable (qualifier value)"  // possible in EPIC
-* SCT#452181000124103 "Moderately probable (qualifier value)" // probable in EPIC
-* SCT#452191000124100 "Highly probable (qualifier value)"  // definite in EPIC
-* SCT#255545003 "Definite (qualifier value)"
-* include codes from SCT where concept is-a #446401000124104 "National Cancer Institute common terminology criteria for adverse event grade finding (finding)"
-* SCT#446411000124101 "Common terminology criteria for adverse events grade 1 (finding)"
-* SCT#446421000124109 "Common terminology criteria for adverse events grade 2 (finding)"
-* SCT#446431000124107 "Common terminology criteria for adverse events grade 3 (finding)"
-* SCT#446441000124102 "Common terminology criteria for adverse events grade 4(finding)"
-* SCT#446451000124100 "Common terminology criteria for adverse events grade 5 (finding)"
-*/
