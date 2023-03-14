@@ -10,6 +10,7 @@ Usage: #example
 RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
@@ -39,7 +40,6 @@ Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-09-06T13:21:17+01:00"
-* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[actualNumberOfSessions].valueUnsignedInt = 1
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -58,7 +58,6 @@ Usage: #example
 * insert RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.versionId = "2"
 * meta.lastUpdated = "2021-09-20T13:21:17+01:00"
-* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[actualNumberOfSessions].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
