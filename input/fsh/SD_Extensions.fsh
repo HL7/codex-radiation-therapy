@@ -227,7 +227,7 @@ Title: "Image Guidance Modality"
 * extension[energy].value[x] from ImageGuidanceEnergyUnitVS (required)
 
 Invariant: ImageGuidanceEnergyAllowed
-Description: "Energy is only allowed only for X-Ray, Flurograph, or CT Modalities"
+Description: "Energy is only allowed for X-Ray, Fluorograph, or CT Modalities."
 Severity: #error
 //* SCT#168537006 "Plain radiography (procedure)"  // XRay
 //* SCT#44491008 "Fluoroscopy (procedure)"         // Flurograph
