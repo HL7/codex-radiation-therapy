@@ -10,6 +10,13 @@ RuleSet: RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-Common
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#MV "megavolt"
+
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
@@ -40,6 +47,8 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 200
   * extension[fractionsDelivered].valueUnsignedInt = 1
   * extension[uniformFractionation].valueBoolean = true
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = true
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-02-PelvNs)
@@ -47,6 +56,8 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 180
   * extension[fractionsDelivered].valueUnsignedInt = 1
   * extension[uniformFractionation].valueBoolean = true
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-03-SemVs)
@@ -54,6 +65,8 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 200
   * extension[fractionsDelivered].valueUnsignedInt = 1
   * extension[uniformFractionation].valueBoolean = true
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
@@ -73,6 +86,8 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 800
   * extension[fractionsDelivered].valueUnsignedInt = 4
   * extension[uniformFractionation].valueBoolean = true
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = true
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-02-PelvNs)
@@ -80,6 +95,8 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 720
   * extension[fractionsDelivered].valueUnsignedInt = 4
   * extension[uniformFractionation].valueBoolean = true
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-03-SemVs)
@@ -87,6 +104,8 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 800
   * extension[fractionsDelivered].valueUnsignedInt = 4
   * extension[uniformFractionation].valueBoolean = true
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * status = #completed
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
 
@@ -98,6 +117,13 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-03-22B-01-01-Primary-Common
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#MV "megavolt"
+
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
@@ -126,16 +152,22 @@ Usage: #example
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 200
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = true
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 180
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 200
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 
@@ -152,16 +184,22 @@ Usage: #example
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDoseDelivered].valueQuantity.value = 800
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = true
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[totalDoseDelivered].valueQuantity.value = 720
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[totalDoseDelivered].valueQuantity.value = 800
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * status = #completed
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
 
@@ -181,25 +219,40 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
+//* extension[radiotherapySessions].valueUnsignedInt = 4
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#MV "megavolt"
+
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-01-Prostate)
     * valueReference.display = "Prostate"
   * extension[totalDose].valueQuantity.value = 800
   * extension[fractions].valuePositiveInt = 4
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = true
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[totalDose].valueQuantity.value = 720
   * extension[fractions].valuePositiveInt = 4
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[totalDose].valueQuantity.value = 800
   * extension[fractions].valuePositiveInt = 4
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
@@ -225,7 +278,13 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#MV "megavolt"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -233,18 +292,24 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = true
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-02-PelvNs)
     * valueReference.display = "PelvNs"
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 720
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-03-SemVs)
     * valueReference.display = "SemVs"
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 800
+  * extension[pointDose].valueBoolean = false
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"

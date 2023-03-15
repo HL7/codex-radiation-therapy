@@ -8,7 +8,8 @@ Description: "A Radiotherapy Course Prescription is a high-level request for a c
 * insert ModalityAndTechniqueZeroToMany
 * extension contains
     $mCODEProcedureIntent named treatmentIntent 0..1 MS and
-    RadiotherapyDosePrescribedToVolume named radiotherapyDosePrescribedToVolume 0..* MS
+    RadiotherapyDosePrescribedToVolume named radiotherapyDosePrescribedToVolume 0..* MS and
+    CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
 * extension[radiotherapyDosePrescribedToVolume]
   * extension[fractionDose] 0..0
   * extension[fractionDose] ^short = "Not used in this profile. See Radiotherapy Phase Prescriptions for detailed fractionation."

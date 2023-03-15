@@ -11,10 +11,14 @@ Usage: #example
 // * extension[concurrentTherapy].valueCodeableConcept.text = "Chemotherapy"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[treatmentIntent].valueCodeableConcept.text = "Curative"
-* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
-// Prescription Target Site "Prostate"
+* extension[modalityAndTechnique]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
+* extension[ImageGuidanceModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
   * extension[totalDose].valueQuantity.value = 8300 //unit cGy is automatically added because fixed in the profile

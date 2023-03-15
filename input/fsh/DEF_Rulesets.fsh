@@ -56,12 +56,14 @@ RuleSet: ModalityAndTechniqueExtensions
 
 RuleSet: ModalityAndTechniqueZeroToMany
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS and
+    ImageGuidanceModality named imageGuidanceModality 0..* MS
 * insert ModalityAndTechniqueExtensions
 
 RuleSet: ModalityAndTechniqueZeroToOne
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
+    ImageGuidanceModality named imageGuidanceModality 0..* MS
 * insert ModalityAndTechniqueExtensions
 
 RuleSet: MotionManagement
@@ -85,6 +87,7 @@ Invariant:  codexrt-free-breathing-technique
 Description: "The extension for the technique of free-breathing motion management is only allowed if motion management is free-breathing."
 Severity: #error
 Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-free-breathing-motion-mgmt-technique') implies extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and valueCodeableConcept.exists(coding.exists(code = 'USCRS-99901' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs')))"
+
 
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
@@ -127,6 +130,9 @@ RuleSet: RadiotherapyRequestCommon
 RuleSet: RadiotherapyProcedureCommon
 * insert MotionManagement
 * insert Identifiers
+* extension[doseDeliveredToVolume].extension contains
+    PointDose named pointDose 0..1 MS and
+    PrimaryPlanDose named primaryPlanDose 0..1 MS
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
@@ -153,18 +159,20 @@ RuleSet: RadiotherapyPrescriptionsCommon
 * replaces MS
 * replaces ^short = "Previous retired prescription that is replaced by this prescription"
 
-
 RuleSet: RadiotherapyPlansCommon
 * insert RadiotherapyRequestCommon
+* extension[radiotherapyDosePlannedToVolume].extension contains
+    PointDose named pointDose 0..1 MS and
+    PrimaryPlanDose named primaryPlanDose 0..1 MS
 * intent = ReqIntent#filler-order "Filler Order"
 
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
-* insert RadiotherapyPlansCommon
 * insert ModalityAndTechniqueZeroToOne
 * extension contains
     RadiotherapyFractionsPlanned named radiotherapyFractionsPlanned 1..1 MS and
     RadiotherapyDosePlannedToVolume named radiotherapyDosePlannedToVolume 0..* MS and
     RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
+* insert RadiotherapyPlansCommon
 * extension[radiotherapyDosePlannedToVolume]
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a phase, all volumes are involved in all fractions."
@@ -183,13 +191,13 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
   * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPrescribed."
 
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
-* insert RadiotherapyProcedureCommon
 * obeys codexrt-procedure-status
 * insert ModalityAndTechniqueZeroToOne
 * extension contains
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS and
     RadiotherapyReasonForRevisionOrAdaptation named radiotherapyReasonForRevisionOrAdaptation 0..* MS
+* insert RadiotherapyProcedureCommon
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
