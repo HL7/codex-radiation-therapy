@@ -9,6 +9,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22B-01-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
@@ -67,6 +68,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
@@ -127,7 +129,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-//* extension[radiotherapySessions].valueUnsignedInt = 2
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-01-22B-01-Prostate)
@@ -157,6 +159,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 2
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
