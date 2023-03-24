@@ -22,7 +22,7 @@ description: CodeX™ Radiation Therapy is an initiative
 license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 4.0.0
-  hl7.fhir.us.mcode: 2.0.0
+  hl7.fhir.us.mcode: 2.1.0
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
@@ -36,8 +36,12 @@ pages:
     title: Home
   overview.md:
     title: Overview
-  building_on_mcode.md:
-    title: Building on mCODE
+  history.md:
+    title: Development history
+  building_the_ig.md:
+    title: Building the Implementation Guide
+  credits.md:
+    title: Credits
   conformance-general.md:
     title: Conformance Expectations
   conformance-profiles.md:
@@ -54,7 +58,12 @@ pages:
     title: Download Specification
 menu:
   Home: index.html
-  Overview: overview.html
+  Table of Contents:  toc.html
+  Background:
+    Overview: overview.html
+    History: history.html
+    Building the Implementation Guide: building_the_ig.html
+    Credits: credits.html
   FHIR Artifacts:
     Profiles: artifacts.html#a-course-level-profiles
     Extensions: artifacts.html#structures-extension-definitions
@@ -63,12 +72,14 @@ menu:
     Examples: artifacts.html#example-example-instances
     Capability Statements: artifacts.html#behavior-capability-statements
     Complete Listing: artifacts.html
+  Conformance:
+    General Conformance:  conformance-general.html
+    Profile Conformance:  conformance-profile.html
   More:
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
     Data Dictionary: dictionary.html
     Change Log: change_log.html
     Download Specification: downloads.html
-    Other Versions: http://hl7.org/fhir/us/codex-radiation-therapy/history.html
 groups:
   CourseLevelProfiles:
     name: A. Course Level Profiles
