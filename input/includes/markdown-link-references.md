@@ -78,3 +78,4 @@
 [mCODE NumberOfSessions]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-number-of-sessions.html
 [mCODE ProcedureIntent]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-procedure-intent.html
 [mCODE Radiotherapy Course Summary]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-course-summary.html
+[mCode Cancer-related Surgical Procedure]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-related-surgical-procedure.html
