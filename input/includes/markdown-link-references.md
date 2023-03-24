@@ -67,3 +67,14 @@
 [RadiotherapyVolumeXRTS0403RightBreast]: BodyStructure-RadiotherapyVolume-XRTS-04-22B-03-RightBreast.html
 [RadiotherapyVolumeXRTS0501BrainMets]: BodyStructure-RadiotherapyVolume-XRTS-05-22B-01-BrainMets.html
 [RadiotherapyVolume01PTV50]: BodyStructure-radiotherapyVolume-01-PTV50.html
+
+[mCODE Radiotherapy Treatment Location ValueSet]: https://hl7.org/fhir/us/mcode/ValueSet-mcode-radiotherapy-treatment-location-vs.html
+[mCODE Cancer Disorder ValueSet]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disorder-vs.html
+[mCODE Radiotherapy Course Summary]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disorder-vs.html
+[mCODE CancerDiseaseStatus]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-disease-status.html
+[mCODE RadiotherapyVolume]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-volume.html
+[mCODE modalityAndTechnique]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-modality-and-technique.html
+[mCODE DoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-dose-delivered-to-volume.html
+[mCODE NumberOfSessions]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-number-of-sessions.html
+[mCODE ProcedureIntent]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-procedure-intent.html
+[mCODE Radiotherapy Course Summary]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-course-summary.html

@@ -1,7 +1,8 @@
-CodexRT extends the capabilities of [mCODE](http://hl7.org/fhir/us/mcode).  In particular it incorporates and extends profiles, extensions, and valueSets defined in mCODE.
-Here we provide a descriptive summary of the reuse of mCODE resources. The information in the CodexRT profiles is the definitive source of information.
+CodexRT extends the capabilities of [mCODE](http://hl7.org/fhir/us/mcode) by incorporating and extending profiles, extensions, and valueSets defined in mCODE.
+Here we provide a descriptive summary of the reuse of mCODE resources. The CodexRT profiles are the definitive source of this dependence.
 
-* [mCODE Radiotherapy Course Summary][mCODERadiotherapyCourseSummary]
+### Profiles and Extensions
+* [mCODE Radiotherapy Course Summary]
   * This profile is the base for CodeXRT Profile [CodexRT Radiotherapy Course Summary][codexRTRadiotherapyCourseSummary]
   * CodexRT extends the base profile by adding:
     * Adding identifiers for official and display names
@@ -12,7 +13,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The infor
       * a TreatmentApplicatorType extension
     * Slicing the usedReference field to provide a reference to a [CodexrtRadiotherapyTreatmentDevice]
     * Slicing the focalDevice field to provide a reference to a [CodexrtRadiotherapySeedDevice]
-    * Extending the bodySite field with qualifiers for location and laterality, as was done in [mCode Cancer-related Surgical Procedure][http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-related-surgical-procedure.html]
+    * Extending the bodySite field with qualifiers for location and laterality, as was done in [mCode Cancer-related Surgical Procedure]
     * Slicing basedOn to link the summary to an associated plan and/or prescription
 * [mCODE CancerDiseaseStatus]
   * This  profile is the base for the [CodexRT Radiotherapy Disease Status][CodexRTRadiotherapyDiseaseStatus] profile
@@ -37,5 +38,11 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The infor
   * This is incorporated as is into the [CodexRT Planned Phase] profile
 * [mCODE ProcedureIntent]
   * This is incorporated as is into the [CodexRT Course Prescription] profile
+
+### Value Sets
+* [mCODE Radiotherapy Treatment Location ValueSet]:
+  * This valueset, based on the the work of TG263 is the basis for specifying treatment locations using SNOMEDCT codes and qualifiers
+* [mCODE Cancer Disorder ValueSet]
+  * This valueset is used to specify the reasonCode for radiotherapy in the 9 CodexRT profiles based on ServiceRequests and Procedures
 
 {% include markdown-link-references.md %}

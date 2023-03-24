@@ -38,6 +38,8 @@ pages:
     title: Overview
   history.md:
     title: Development history
+  building_on_mcode:
+    title: Building on mCODE
   building_the_ig.md:
     title: Building the Implementation Guide
   credits.md:
@@ -62,6 +64,7 @@ menu:
   Background:
     Overview: overview.html
     History: history.html
+    Building on mCODE: building_on_mcode.html
     Building the Implementation Guide: building_the_ig.html
     Credits: credits.html
   FHIR Artifacts:
