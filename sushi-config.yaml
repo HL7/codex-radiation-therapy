@@ -38,7 +38,7 @@ pages:
     title: Overview
   history.md:
     title: Development history
-  building_on_mcode:
+  building_on_mcode.md:
     title: Building on mCODE
   building_the_ig.md:
     title: Building the Implementation Guide
@@ -48,8 +48,6 @@ pages:
     title: Conformance Expectations
   conformance-profiles.md:
     title: Profile Conformance
-  terminology.md:
-    title: Terminology
   artifacts.html:
     title: Artifacts Summary
   dictionary.md:
@@ -58,6 +56,8 @@ pages:
     title: Change Log
   downloads.md:
     title: Download Specification
+  ImplementationGuide-hl7.fhir.us.codex-radiation-therapy.md:
+    title: CodeX Radiation Therapy ImplementationGuide Resource
 menu:
   Home: index.html
   Table of Contents:  toc.html

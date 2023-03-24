@@ -66,3 +66,5 @@ The following figure shows the relations between the resources of the same examp
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
 
 <img src="RTResourcesOverview.svg" alt="RT Summary Resources Overview" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+{% include markdown-link-references.md %}
