@@ -1,6 +1,6 @@
 ### Usage
 
-This profile is used to capture a course of radiotherapy delivered to a patient. A course of therapy systematically addresses a condition or set of related conditions. The course can include multiple sessions, can be divided into multiple phases, and can last for several months. A course of treatment has a distinct beginning and end. While the Radiotherapy Course Summary can be incrementally updated as the treatment progresses, the primary purpose is to summarize the entire course of treatment from beginning to end. The status element indicates whether the treatment is in progress or complete.
+This profile is used to capture a course of radiotherapy delivered to a patient. A course of therapy systematically addresses a condition or set of related conditions. The course can include multiple sessions, can be divided into multiple phases, and can last for several months. A course of treatment has a distinct beginning and end. While the Radiotherapy Course Summary can be incrementally updated as the treatment progresses, the primary purpose is to summarize the entire course of treatment from beginning to end. The status element indicates whether the treatment is in progress or complete. The relationships between the various radiotherapy profiles are shown [here](overview.html#relationships-between-profiles).
 
 ### Conformance
 
