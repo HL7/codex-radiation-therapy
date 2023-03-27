@@ -77,7 +77,7 @@ menu:
     Complete Listing: artifacts.html
   Conformance:
     General Conformance:  conformance-general.html
-    Profile Conformance:  conformance-profile.html
+    Profile Conformance:  conformance-profiles.html
   More:
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
     Data Dictionary: dictionary.html
