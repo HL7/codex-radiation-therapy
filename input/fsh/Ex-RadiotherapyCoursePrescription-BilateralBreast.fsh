@@ -11,11 +11,11 @@ Usage: #example
 * extension[treatmentIntent].valueCodeableConcept.text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[mcode-radiotherapy-technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[mcode-radiotherapy-technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
 // Prescription Target Site "Left Breast"
 * extension[radiotherapyDosePrescribedToVolume][+]
@@ -56,7 +56,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
 * extension[radiotherapyFractionsPrescribed].valuePositiveInt = 25
 // Prescription Target Site "Left Breast"
@@ -91,7 +91,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[radiotherapyFractionsPrescribed].valuePositiveInt = 5
 // Prescription Target Site "Left Breast Boost"
 * extension[radiotherapyDosePrescribedToVolume][+]
@@ -119,7 +119,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[radiotherapyFractionsPrescribed].valuePositiveInt = 25
 // Prescription Target Site "Right Breast"
 * extension[radiotherapyDosePrescribedToVolume][+]
@@ -154,7 +154,7 @@ Usage: #example
 * extension[treatmentIntent].valueCodeableConcept.text = "Curative"
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
 // Prescription Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
@@ -202,7 +202,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 // Prescription Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
@@ -238,7 +238,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 // Prescription Target Site "Left Breast Boost"
 * extension[doseDeliveredToVolume][+]
@@ -269,7 +269,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 // Prescription Target Site "Right Breast"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
