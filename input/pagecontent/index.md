@@ -11,7 +11,7 @@ The CodeX Radiation Therapy (CodeX RT) Implementation Guide (IG) describes how t
 Once structured data is captured during the care process, that data can be made available for data sharing and reuse.
 The CodeX RT IG leverages FHIR and FHIR Application Programming Interfaces (APIs) to promote interoperable exchange of RT information between an ROIS and other health information systems such as an electronic health record (EHR). The CodeX RT IG has defined radiotherapy FHIR profiles for vendors to implement in their systems and share, via FHIR API, with other FHIR-enabled radiation oncology information systems or EHRs.
 
-The Codex RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 2 (STU 2)](http://hl7.org/fhir/us/mcode/STU2).  For a full description of how this IG leverages mCODE profiles and value sets is provided in the [Building on mCODE](building_in_mcode.html) section.  The mCODE STU 2 IG also includes a [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
+The Codex RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 2 (STU 2)](https://hl7.org/fhir/us/mcode/STU2).  For a full description of how this IG leverages mCODE profiles and value sets is provided in the [Building on mCODE](building_on_mcode.html) section.  The mCODE STU 2 IG also includes a [Radiotherapy Glossary](https://hl7.org/fhir/us/mcode/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
 
 ### Actors and Use Cases
 The intended actors include:

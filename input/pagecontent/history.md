@@ -3,7 +3,7 @@ In late 2020, the American Society for Radiation Oncology (ASTRO) and the Americ
 
 In January 2021, the CodeX Radiation Therapy Treatment Data (RTTD) project approached the Integrating the Healthcare Enterprise – Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Work Group about aligning the data model and FHIR structures with the technical architecture and transactions being defined in the XRTS technical specification document. The CodeX RTTD and XRTS teams aligned visions and began working together to adopt the CodeX RT Implementation Guide.
 
-In support of this collaboration, radiotherapy profiles were added to [mCODE STU2](http://hl7.org/fhir/us/mcode/STU2), [Radiotherapy Course Summary](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](http://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.  See
+In support of this collaboration, radiotherapy profiles were added to [mCODE STU2](https://hl7.org/fhir/us/mcode/STU2), [Radiotherapy Course Summary](https://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](https://hl7.org/fhir/us/mcode/STU2/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.  See
 
 Radiotherapy specifications beyond what was considered “minimal” (which is a tenet of mCODE) are published in this CodeX RT IG.
 
