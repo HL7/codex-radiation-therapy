@@ -12,7 +12,7 @@ Usage: #example
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[treatmentIntent].valueCodeableConcept.text = "Curative"
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 // * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
 // Prescription Target Site "Prostate"
 * extension[radiotherapyDosePrescribedToVolume][+]
