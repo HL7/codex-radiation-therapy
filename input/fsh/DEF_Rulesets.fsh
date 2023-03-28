@@ -57,13 +57,13 @@ RuleSet: ModalityAndTechniqueExtensions
 RuleSet: ModalityAndTechniqueZeroToMany
 * extension contains
     $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS and
-    ImageGuidanceModality named imageGuidanceModality 0..* MS
+    ImageGuidedRadiotherapyModality named imageGuidedRadiotherapyModality 0..* MS
 * insert ModalityAndTechniqueExtensions
 
 RuleSet: ModalityAndTechniqueZeroToOne
 * extension contains
     $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
-    ImageGuidanceModality named imageGuidanceModality 0..* MS
+    ImageGuidedRadiotherapyModality named imageGuidedRadiotherapyModality 0..* MS
 * insert ModalityAndTechniqueExtensions
 
 RuleSet: MotionManagement

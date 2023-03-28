@@ -235,19 +235,19 @@ Description: "This flag is true if the radiotherapy course of treatment involves
 * value[x] ^short = "Course Involves Reirradiation"
 * value[x] only boolean
 
-Extension: ImageGuidanceModality
-Id: codexrt-radiotherapy-image-guidance-modality
-Description: "The modality and associated energy used for Image Guided Radiotherapy (IGRT)"
-Title: "Image Guidance Modality"
-* . ^short = "Image Guidance Modality"
-* obeys ImageGuidanceEnergyAllowed
+Extension: ImageGuidedRadiotherapyModality
+Id: codexrt-image-guided-radiotherapy-modality
+Description: "The modality and associated energy used for imaging in Image Guided Radiotherapy (IGRT)"
+Title: "Image Guided Radiotherapy Modality"
+* . ^short = "Image Guided Radiotherapy Modality"
+* obeys IGRTEnergyAllowed
 * extension contains
     modality 1..1 MS and
     energy 0..1 MS
-* extension[modality].value[x] from ImageGuidanceModalityVS (required)
-* extension[energy].value[x] from ImageGuidanceEnergyUnitVS (required)
+* extension[modality].value[x] from ImageGuidedRadiotherapyModalityVS (required)
+* extension[energy].value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
 
-Invariant: ImageGuidanceEnergyAllowed
+Invariant: IGRTEnergyAllowed
 Description: "Energy is only allowed for X-Ray, Fluorograph, or CT Modalities."
 Severity: #error
 //* SCT#168537006 "Plain radiography (procedure)"  // XRay
