@@ -15,17 +15,17 @@ This STU1 IG currently only provides a CapabilityStatement for a CodexRT Data Se
 mCODE participants MUST meet the following requirements for conformance:
 
 1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
-1. [Populate and meaningfully process CodeXRT resources](#populate-and-meaningfully-process-mcode-resources)
+1. [Populate and meaningfully process CodeXRT resources](#populate-and-meaningfully-process-codexrt-resources)
 1. [Support Querying CodexRT-Conforming Resources](#support-querying-codexrt-conforming-resources)
 1. [Support US Core conformance requirements](#support-us-core-conformance-requirements)
 
 #### Follow Conformance Requirements for Supported Profiles
 
-The information produced and consumed by CodexRT participants is defined by a set of profiles. Both Senders and Receivers must conform to the expectations set by these profiles. See the [Profile Conformance](conformance-profiles.html) page for details.
+The information produced and consumed by CodexRT participants is defined by a set of profiles. Both Senders and Receivers must conform to the expectations set by these profiles.
 
 #### Populate and Meaningfully Process CodexRT Resources
 
-CodexRT Senders MUST be able to populate data elements Must-Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process elements with MS obligations for each profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
+CodexRT Senders MUST be able to populate data elements Must-Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process elements with MS obligations for each profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings.
 
 #### Support Querying CodexRT-Conforming Resources
 
