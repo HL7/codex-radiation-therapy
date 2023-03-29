@@ -34,8 +34,6 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
   * CodeX RT extends this extension with:
     * boolean extensions indicating that the dose is a Point or Primary Plan dose, and indicating whether fractionan was uniform
     * extensions to capture the delivered fractions and total delivered dose
-* [mCODE NumberOfSessions]
-  * This is incorporated as is into the [CodeX RT Planned Phase] profile
 * [mCODE ProcedureIntent]
   * This is incorporated as is into the [CodexrtRadiotherapyCoursePrescription] profile
 

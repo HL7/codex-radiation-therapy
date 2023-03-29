@@ -77,7 +77,6 @@
 [mCODE RadiotherapyVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-volume.html
 [mCODE modalityAndTechnique]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mmcode-radiotherapy-modality-and-technique.html
 [mCODE DoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
-[mCODE NumberOfSessions]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-sessions.html
 [mCODE ProcedureIntent]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-procedure-intent.html
 [mCODE Radiotherapy Course Summary]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html
 [mCode Cancer-related Surgical Procedure]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-related-surgical-procedure.html
