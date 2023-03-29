@@ -8,7 +8,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V-Common
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
@@ -70,7 +70,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-01-Primary-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
@@ -166,7 +166,7 @@ Usage: #example
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
@@ -204,7 +204,7 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 7
 * extension[radiotherapyDosePlannedToVolume]

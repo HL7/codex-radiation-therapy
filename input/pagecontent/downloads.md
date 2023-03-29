@@ -1,25 +1,28 @@
-### Download
+### Full Implementation Guide
 
-You can also download:
+The entire implementation guide (including the HTML files, definitions, validation information, etc.) may be downloaded [here](full-ig.zip).
 
-* [this entire guide](full-ig.zip)
-* the definition resources in [json](definitions.json.zip), [xml](definitions.xml.zip), [ttl](definitions.ttl.zip), or [csv](csvs.zip) format, or
-* the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
+### Package File
 
-The source code for this Implementation Guide can be found on IHE GitHub [https://github.com/HL7/codex-radiation-therapy](https://github.com/HL7/codex-radiation-therapy).
+The following package file includes an NPM package file used by many of the FHIR tools. It contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of this version of the Implementation Guides. This file should be the first choice whenever generating any implementation artifacts since it contains all of the rules about what makes the profiles valid. Implementers will still need to be familiar with the content of the specification and profiles that apply in order to make a conformant implementation. See the overview on [validating FHIR profiles and resources](http://hl7.org/fhir/R4/validation.html):
 
-#### Cross Version Analysis
+* [Package](package.tgz)
 
-{% include cross-version-analysis.xhtml %}
+### Format Specific Definition Files
 
-#### Dependency Table
+* [XML](definitions.xml.zip)
+* [JSON](definitions.json.zip)
+* [TTL](definitions.ttl.zip)
 
-{% include dependency-table.xhtml %}
+### Examples: all the examples that are used in this Implementation Guide available for download:
 
-#### Globals Table
+* [XML](examples.xml.zip)
+* [JSON](examples.json.zip)
+* [TTl](examples.ttl.zip)
 
-{% include globals-table.xhtml %}
+### Implementation Guide Details
 
-#### IP Statements
+Technical details about the [ImplementationGuide]({{site.data.fhir.path}}implementationguide.html) resource that define this specification, including dependencies and implementation guide publishing parameter settings.
+- [CodeX Radiation Therapy ImplementationGuide Resource](ImplementationGuide-hl7.fhir.us.codex-radiation-therapy.html)
 
-{% include ip-statements.xhtml %}
+{% include markdown-link-references.md %}

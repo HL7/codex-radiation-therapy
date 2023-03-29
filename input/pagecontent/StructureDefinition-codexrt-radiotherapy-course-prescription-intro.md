@@ -1,15 +1,11 @@
-This profile is used to capture a prescription for a course of radiotherapy delivered to a patient. A course of therapy systematically addresses a condition or set of related conditions. The course can include multiple sessions, can be divided into multiple phases, and can last for several months. A course of treatment has a distinct beginning and end.
-
-This profile is based on the [FHIR Service Request resource][ServiceRequest] profile.  The CodexRT profile has added considerable content to the Service Request, and that is the focus of the documentation here.
-
-CodexRT extends the base resource by adding:
-  * Adding identifiers for official and display names
-  * Adding extensions for [mCodeTreatmentIntent] and [dose prescribed to volume]
-  * Extending the [mCODE modalityAndTechnique] extension with:
-    * an EnergyOrIsotope extension
-    * a TreatmentApplicatorType extension
-  * Extending the bodySite field with qualifiers for location and laterality, as was done in [mCode Cancer-related Surgical Procedure][http://hl7.org/fhir/us/mcode/
+### Usage
+This profile is used to represent a prescription for a complete course of radiotherapy. An overview of radiotherapy courses, phases, and treatment plans is shown [here](overview.html#codex-rt-resource-profiles). 
+In FHIR, the prescription for a course of radiotherapy is represented as an original order, whereas the elaborated phases and treatment plans are represented as filler orders. 
+The relationships between the various radiotherapy profiles are shown [here](overview.html#relationships-between-profiles).
 
 ### Conformance
+ServiceRequest resource instances whose code is SNOMEDCT `1217123003` (Radiotherapy course of treatment (regime/therapy)) and whose intent 
+is http://hl7.org/fhir/request-intent#original-order "Original Order" MUST conform to this profile. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly.
 
-ServiceRequest resources whose code is `codexrt-radiotherapy-course-prescription` (code system `http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs`) MUST conform to this profile. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
+{% include markdown-link-references.md %}
+

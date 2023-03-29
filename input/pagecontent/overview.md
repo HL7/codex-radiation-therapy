@@ -1,11 +1,11 @@
 ### CodeX RT Resource Profiles
 The profiles defined in this IG cover different stages of the radiotherapy workflow at different levels of detail. A radiotherapy course systematically addresses a condition or set of related conditions. The course can include multiple sessions, can be divided into multiple phases, and can last for several months. The Radiotherapy Course Summary profile covers the treatment delivered in a treatment course and can be incrementally updated as the treatment progresses. When the treatment is completed, the latest version of the Radiotherapy Course Summary provides the entire course of treatment from beginning to end. The status element indicates whether the treatment is in progress or complete.
 
-In radiotherapy, a *phase* is a subset of a course. A phase is defined as a treatment consisting of one or more identical fractions. See the [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2/glossary.html).
+In radiotherapy, a *phase* is a subset of a course. A phase is defined as a treatment consisting of one or more identical fractions. See the [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2.1/glossary.html).
 
 At the most detailed level, *treatment plans* define how the radiotherapy treatment is delivered.
 
-Note that in radiotherapy, a *treatment plan* represents a concrete set of treatment delivery instructions prepared for a specific patient anatomy and machine ([Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2/glossary.html)). It is the most specific and most detailed concept in this model. The concept of a radiotherapy *treatment plan* includes the lowest level of machine instructions to control a treatment device. However, these details are not modelled in the FHIR representation of a radiotherapy treatment plan. Instead, the respective ServiceRequest (Radiotherapy Treatment Plan) includes an extension to reference the DICOM artifacts that define the machine geometry and motion during treatment. The Procedure that records the delivered treatment (Radiotherapy Treated Plan), references DICOM treatment records that contain all machine details.
+Note that in radiotherapy, a *treatment plan* represents a concrete set of treatment delivery instructions prepared for a specific patient anatomy and machine ([Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2.1/glossary.html)). It is the most specific and most detailed concept in this model. The concept of a radiotherapy *treatment plan* includes the lowest level of machine instructions to control a treatment device. However, these details are not modelled in the FHIR representation of a radiotherapy treatment plan. Instead, the respective ServiceRequest (Radiotherapy Treatment Plan) includes an extension to reference the DICOM artifacts that define the machine geometry and motion during treatment. The Procedure that records the delivered treatment (Radiotherapy Treated Plan), references DICOM treatment records that contain all machine details.
 
 The relationship between a course, phases, and treatment plans is exemplified in the following diagram.
 
@@ -66,3 +66,5 @@ The following figure shows the relations between the resources of the same examp
 The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
 
 <img src="RTResourcesOverview.svg" alt="RT Summary Resources Overview" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+{% include markdown-link-references.md %}

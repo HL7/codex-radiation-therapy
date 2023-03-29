@@ -7,8 +7,8 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique]
-  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
   * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
 * extension[imageGuidedRadiotherapyModality][+]
@@ -62,8 +62,8 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = Canonical(RadiotherapyPhasePrescription)
 * extension[modalityAndTechnique]
-  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
   * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
 * extension[imageGuidedRadiotherapyModality][+]

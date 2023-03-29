@@ -10,6 +10,8 @@ version: 1.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
+packageId: hl7.fhir.codex-radiation-therapy
+url: http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.codex-radiation-therapy
 title: "CodeX™ Radiation Therapy"
 publisher:
   name: HL7 Cross Group Projects Work Group
@@ -44,8 +46,10 @@ pages:
     title: Building the Implementation Guide
   credits.md:
     title: Credits
-  conformance.md:
+  conformance-general.md:
     title: Conformance Expectations
+  conformance-profiles.md:
+    title: Profile Conformance
   artifacts.html:
     title: Artifacts Summary
   dictionary.md:
@@ -74,7 +78,8 @@ menu:
     Capability Statements: artifacts.html#behavior-capability-statements
     Complete Listing: artifacts.html
   Conformance:
-    Conformance:  conformance.html
+    General Conformance:  conformance-general.html
+    Profile Conformance:  conformance-profile.html
   More:
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
     Data Dictionary: dictionary.html
