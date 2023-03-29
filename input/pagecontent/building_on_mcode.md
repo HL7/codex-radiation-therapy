@@ -18,7 +18,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
 * [mCODE CancerDiseaseStatus]
   * This  profile is the base for the [CodeX RT Radiotherapy Disease Status][CodexRTRadiotherapyDiseaseStatus] profile
   * CodeX RT extends the base profile by adding:
-    * adding a top-level extension to reference a [RadiotherapyVolume]
+    * adding a top-level extension to reference a [CodeX RT Radiotherapy Volume][CodeXRTRadiotherapyVolume]
     * extending the valueCodeableConcept field with a [disease progression qualifier] extension
 * [mCODE RadiotherapyVolume]
   * This profile is the base for the [CodeX RT Radiotherapy Volume][CodexRTRadiotherapyVolume]
@@ -37,7 +37,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
 * [mCODE NumberOfSessions]
   * This is incorporated as is into the [CodeX RT Planned Phase] profile
 * [mCODE ProcedureIntent]
-  * This is incorporated as is into the [CodeX RT Course Prescription] profile
+  * This is incorporated as is into the [CodexrtRadiotherapyCoursePrescription] profile
 
 ### Value Sets
 * [mCODE Radiotherapy Treatment Location ValueSet]:
