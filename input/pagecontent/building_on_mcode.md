@@ -1,4 +1,4 @@
-CodexRT extends the capabilities of [mCODE](http://hl7.org/fhir/us/mcode) by incorporating and extending profiles, extensions, and valueSets defined in mCODE.
+CodexRT extends the capabilities of [mCODE](https://hl7.org/fhir/us/mcode/STU2.1) by incorporating and extending profiles, extensions, and valueSets defined in mCODE.
 Here we provide a descriptive summary of the reuse of mCODE resources. The CodexRT profiles are the definitive source of this dependence.
 
 ### Profiles and Extensions

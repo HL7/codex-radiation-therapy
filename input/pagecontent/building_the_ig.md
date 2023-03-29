@@ -16,7 +16,7 @@ With those dependencies in place, then run this command:
 
 This script will do two things automatically for you:
 
-1. Run [SUSHI](https://fshschool.org/). This IG is developed developed in [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FSH files into the JSON files expected by the IG Publisher.
+1. Run [SUSHI](https://fshschool.org/). This IG is developed developed in [FHIR Shorthand (FSH)](https://hl7.org/fhir/uv/shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FSH files into the JSON files expected by the IG Publisher.
 
 2. Run the IG Publisher.
 

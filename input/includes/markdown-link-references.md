@@ -68,14 +68,14 @@
 [RadiotherapyVolumeXRTS0501BrainMets]: BodyStructure-RadiotherapyVolume-XRTS-05-22B-01-BrainMets.html
 [RadiotherapyVolume01PTV50]: BodyStructure-radiotherapyVolume-01-PTV50.html
 
-[mCODE Radiotherapy Treatment Location ValueSet]: https://hl7.org/fhir/us/mcode/ValueSet-mcode-radiotherapy-treatment-location-vs.html
+[mCODE Radiotherapy Treatment Location ValueSet]: https://hl7.org/fhir/us/mcode/STU2.1/ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [mCODE Cancer Disorder ValueSet]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disorder-vs.html
 [mCODE Radiotherapy Course Summary]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disorder-vs.html
-[mCODE CancerDiseaseStatus]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-disease-status.html
-[mCODE RadiotherapyVolume]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-volume.html
-[mCODE modalityAndTechnique]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-modality-and-technique.html
-[mCODE DoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-dose-delivered-to-volume.html
-[mCODE NumberOfSessions]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-number-of-sessions.html
-[mCODE ProcedureIntent]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-procedure-intent.html
-[mCODE Radiotherapy Course Summary]: https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-course-summary.html
+[mCODE CancerDiseaseStatus]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-disease-status.html
+[mCODE RadiotherapyVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-volume.html
+[mCODE modalityAndTechnique]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-modality-and-technique.html
+[mCODE DoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-dose-delivered-to-volume.html
+[mCODE NumberOfSessions]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-number-of-sessions.html
+[mCODE ProcedureIntent]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-procedure-intent.html
+[mCODE Radiotherapy Course Summary]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html
 [mCode Cancer-related Surgical Procedure]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-related-surgical-procedure.html

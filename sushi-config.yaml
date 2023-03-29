@@ -44,10 +44,8 @@ pages:
     title: Building the Implementation Guide
   credits.md:
     title: Credits
-  conformance-general.md:
+  conformance.md:
     title: Conformance Expectations
-  conformance-profiles.md:
-    title: Profile Conformance
   artifacts.html:
     title: Artifacts Summary
   dictionary.md:
@@ -76,8 +74,7 @@ menu:
     Capability Statements: artifacts.html#behavior-capability-statements
     Complete Listing: artifacts.html
   Conformance:
-    General Conformance:  conformance-general.html
-    Profile Conformance:  conformance-profiles.html
+    Conformance:  conformance.html
   More:
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
     Data Dictionary: dictionary.html
