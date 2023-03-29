@@ -16,7 +16,7 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
   * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
-* extension[ImageGuidanceModality][+]
+* extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
 * extension[radiotherapyDosePrescribedToVolume][+]

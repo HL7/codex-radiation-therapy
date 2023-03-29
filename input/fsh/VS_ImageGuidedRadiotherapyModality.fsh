@@ -1,7 +1,7 @@
-ValueSet: ImageGuidanceModalityVS
-Id: codexrt-image-guidance-modality-vs
-Title: "Image Guidance Modality Value Set"
-Description: "Modalities used for Image Guided Radiotherapy (IGRT)"
+ValueSet: ImageGuidedRadiotherapyModalityVS
+Id: codexrt-image-guided-radiotherapy-modality-vs
+Title: "Image Guided Radiotherapy Modality Value Set"
+Description: "Modality used for imaging in Image Guided Radiotherapy (IGRT)"
 * ^experimental = false
 * insert SCTCopyright
 // Radiograph, Flourograph, CT, Conebeam CT, MRI, Ultrasound, Optical Monitoring System
