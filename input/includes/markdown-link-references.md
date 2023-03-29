@@ -10,8 +10,6 @@
 [CodexrtRadiotherapyTreatmentDevice]: StructureDefinition-codexrt-radiotherapy-treatment-device.html
 [CodexrtRadiotherapySeedDevice]: StructureDefinition-codexrt-radiotherapy-seed-device.html
 [CodexRTRadiotherapyDiseaseStatus]: StructureDefinition-codexrt-radiotherapy-disease-status.html
-[mCODERadiotherapyCourseSummary]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-course-summary.html
-[mCODEModalityAndTechnique]: http://hl7.org/fhir/us/mcode/StructureDefinition-modality-and-technique.html
 [RadiotherapyRequestVS]: ValueSet-radiotherapy-request.html
 [RadiotherapyRequestCS]: CodeSystem-radiotherapy-request.html
 [SnomedRequestedCs]: CodeSystem-snomed-requested-cs.html
@@ -77,9 +75,9 @@
 [mCODE Cancer Disorder ValueSet]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disorder-vs.html
 [mCODE CancerDiseaseStatus]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-disease-status.html
 [mCODE RadiotherapyVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-volume.html
-[mCODE modalityAndTechnique]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-modality-and-technique.html
-[mCODE DoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-dose-delivered-to-volume.html
-[mCODE NumberOfSessions]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-number-of-sessions.html
+[mCODE modalityAndTechnique]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mmcode-radiotherapy-modality-and-technique.html
+[mCODE DoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
+[mCODE NumberOfSessions]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-sessions.html
 [mCODE ProcedureIntent]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-procedure-intent.html
 [mCODE Radiotherapy Course Summary]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html
-[mCode Cancer-related Surgical Procedure]: http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-related-surgical-procedure.html
+[mCode Cancer-related Surgical Procedure]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-related-surgical-procedure.html
