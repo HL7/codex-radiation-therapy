@@ -35,7 +35,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
     * boolean extensions indicating that the dose is a Point or Primary Plan dose, and indicating whether fractionan was uniform
     * extensions to capture the delivered fractions and total delivered dose
 * [mCODE ProcedureIntent]
-  * This is incorporated as is into the [CodexrtRadiotherapyCoursePrescription] profile
+  * This is incorporated as is into the [CodexrtRadiotherapyCoursePrescription] and [CodexrtRadiotherapyPlannedCourse] profiles
 
 ### Value Sets
 * [mCODE Radiotherapy Treatment Location ValueSet]:

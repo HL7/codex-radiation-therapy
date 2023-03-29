@@ -1,4 +1,5 @@
 [CodexrtRadiotherapyCoursePrescription]: StructureDefinition-codexrt-radiotherapy-course-prescription.html
+[CodexrtRadiotherapyPlannedCourse]: StructureDefinition-codexrt-radiotherapy-planned-course.html
 [CodexrtRadiotherapyCourseSummary]: StructureDefinition-codexrt-radiotherapy-course-summary.html
 [CodexrtRadiotherapyPhasePrescription]: StructureDefinition-codexrt-radiotherapy-phase-prescription.html
 [CodexrtRadiotherapyTreatedPhase]: StructureDefinition-codexrt-radiotherapy-treated-phase.html
