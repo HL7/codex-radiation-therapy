@@ -12,7 +12,7 @@ This STU1 IG currently only provides a CapabilityStatement for a CodeX RT Data S
 
 ### "MUST" Requirements for Conformance
 
-mCODE participants MUST meet the following requirements for conformance:
+CodeX RT participants MUST meet the following requirements for conformance:
 
 1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
 1. [Populate and meaningfully process CodeX RT resources](#populate-and-meaningfully-process-codexrt-resources)
@@ -34,7 +34,7 @@ The query support required of conforming implementations is specified in the cap
 
 #### Support US Core Conformance Requirements
 
-Additional [conformance requirements from US Core](https://hl7.org/fhir/us/core/general-requirements.html) apply to RESTful interactions, searches, and resource formats in mCODE. mCODE "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) CodeX RT profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.
+Additional [conformance requirements from US Core](https://hl7.org/fhir/us/core/general-requirements.html) apply to RESTful interactions, searches, and resource formats in CodeX RT. CodeX RT derives from mCODE, which  "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) CodeX RT profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.
 
 International users of CodeX RT may find US Core an impediment to implementation. Application of CodeX RT to other countries is open to further discussion.
 
@@ -42,7 +42,7 @@ International users of CodeX RT may find US Core an impediment to implementation
 
 Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources claim to conform to. Servers SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
 
-Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not an additional requirements imposed by mCODE. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
+Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not additional requirements imposed by CodeX RT or mCODE. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 
 ### Element-level conformance requirements
 CodeX RT implementers should conform to the [mCODE element-level conformance requirements](https://hl7.org/fhir/us/mcode/STU2.1/conformance-profiles.html#element-level-conformance-expectations).
