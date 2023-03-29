@@ -8,7 +8,7 @@ Usage: #example
 * meta.profile[0] = Canonical(RadiotherapyTreatedPlan)
 * extension[modalityAndTechnique]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
   * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
 * extension[imageGuidedRadiotherapyModality][+]
