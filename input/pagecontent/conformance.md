@@ -3,12 +3,14 @@ This section outlines requirements and recommendations for CodeX RT participants
 
 ### CodeX RT Participant Roles
 
-Two roles for **CodeX RT Participants** are defined:
+Two roles for **CodeX RT Participants** are defined along the IHE-RO XRTS Actors:
 
-* **CodeX RT Data Sender** - a participant in exchange of CodeX RT data who provides CodeX RT data in response to a data query or autonomously pushes CodeX RT data to an CodeX RT receiver. The Data Sender does not have to be the originator of the data it possesses. The Data Sender role is similar to a [US Core Responder](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data sent is not assumed to be a response to a query.
-* **CodeX RT Data Receiver** - a participant in exchange of CodeX RT data who accepts CodeX RT data from an CodeX RT Data Sender. The Data Receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The Receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data does not have to be explicitly requested.
+* **Treamtent Summary Provider** - a participant in exchange of CodeX RT data who provides CodeX RT data in response to a data query or autonomously pushes CodeX RT data to an CodeX RT receiver. The Data Sender does not have to be the originator of the data it possesses. The Data Sender role is similar to a [US Core Responder](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data sent is not assumed to be a response to a query.
+* **Treatment Observer** - a participant in exchange of CodeX RT data who accepts CodeX RT data from an CodeX RT Data Sender. The Data Receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The Receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data does not have to be explicitly requested.
 
-This STU1 IG currently only provides a CapabilityStatement for a CodeX RT Data Sender.   As additional experience interacting with CodeX RT data accrues the required capabilities for a client will be captured in future updates to this IG.
+* **RO Resource Repository** - a participant in exchange of CodeX RT data who accepts CodeX RT data from an CodeX RT Data Sender. The Data Receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The Receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data does not have to be explicitly requested.
+
+This STU1 IG currently only provides a CapabilityStatement for a RO Resource Repository. As additional experience interacting with CodeX RT data accrues the required capabilities for a client will be captured in future updates to this IG.
 
 ### "MUST" Requirements for Conformance
 
