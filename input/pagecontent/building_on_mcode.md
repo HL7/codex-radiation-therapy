@@ -21,9 +21,9 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
     * adding a top-level extension to reference a [RadiotherapyVolume]
     * extending the valueCodeableConcept field with a [disease progression qualifier] extension
 * [mCODE RadiotherapyVolume]
- * This profile is the base for the [CodeX RT Radiotherapy Volume][CodexRTRadiotherapyVolume]
- * CodeX RT extends the base profile by adding:
-   * a DICOM identifer
+  * This profile is the base for the [CodeX RT Radiotherapy Volume][CodexRTRadiotherapyVolume]
+  * CodeX RT extends the base profile by adding:
+    * a DICOM identifer
 * [mCODE modalityAndTechnique]
   * This extension is used in all 9 CodeX RT profiles based on original or filler order ServiceRequests and Procedure
   * CodeX RT extends this extension with:
