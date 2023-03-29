@@ -75,7 +75,6 @@
 
 [mCODE Radiotherapy Treatment Location ValueSet]: https://hl7.org/fhir/us/mcode/STU2.1/ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [mCODE Cancer Disorder ValueSet]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disorder-vs.html
-[mCODE Radiotherapy Course Summary]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disorder-vs.html
 [mCODE CancerDiseaseStatus]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-disease-status.html
 [mCODE RadiotherapyVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-volume.html
 [mCODE modalityAndTechnique]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-modality-and-technique.html
