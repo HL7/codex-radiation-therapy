@@ -204,3 +204,67 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (required)
+
+
+Extension: RadiotherapyRespiratoryMotionManagement
+Id: codexrt-radiotherapy-respiratory-motion-management
+Title: "Respiratory Motion Management"
+Description: "Method applied to manage respiratory motion."
+* . ^short = "Respiratory Motion Management"
+* value[x] ^short = "Respiratory Motion Management"
+* value[x] only CodeableConcept
+* value[x] 1..1
+* value[x] from RadiotherapyRespiratoryMotionManagementVS (required)
+
+Extension: RadiotherapyFreeBreathingMotionManagementTechnique
+Id: codexrt-radiotherapy-free-breathing-motion-mgmt-technique
+Title: "Free-Breathing Motion Management Technique"
+Description: "Technique to manage respiratory motion with free-breathing."
+* . ^short = "Free-Breathing Motion Management Technique"
+* value[x] ^short = "Free-Breathing Motion Management Technique"
+* value[x] only CodeableConcept
+* value[x] 1..1
+* value[x] from RadiotherapyFreeBreathingMotionManagementTechniqueVS (required)
+
+Extension: CourseInvolvesReirradiation
+Id: codexrt-radiotherapy-course-involves-reirradiation
+Title: "Course Involves Reirradiation"
+Description: "This flag is true if the radiotherapy course of treatment involves reirradiation of targets or organs at risk that were already irradiated in previous courses."
+* . ^short = "Course Involves Reirradiation"
+* . 0..1
+* value[x] ^short = "Course Involves Reirradiation"
+* value[x] only boolean
+
+Extension: ImageGuidedRadiotherapyModality
+Id: codexrt-image-guided-radiotherapy-modality
+Description: "The modality and associated energy used for imaging in Image Guided Radiotherapy (IGRT)"
+Title: "Image Guided Radiotherapy Modality"
+* . ^short = "Image Guided Radiotherapy Modality"
+* obeys IGRTEnergyAllowed
+* extension contains
+    modality 1..1 MS and
+    energy 0..1 MS
+* extension[modality].value[x] from ImageGuidedRadiotherapyModalityVS (required)
+* extension[energy].value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
+
+Invariant: IGRTEnergyAllowed
+Description: "Energy is only allowed for X-Ray, Fluorograph, or CT Modalities."
+Severity: #error
+//* SCT#168537006 "Plain radiography (procedure)"  // XRay
+//* SCT#44491008 "Fluoroscopy (procedure)"         // Flurograph
+//* SCT#77477000 "Computed tomography (procedure)" // CT
+//* SCT#717193008 "Cone beam computed tomography (procedure)" // Cone beam CT
+Expression: "extension.where(url = 'energy').exists() implies \n
+               (extension.where(url = 'modality').exists() and \n
+                (extension.where(url = 'modality').value.exists(\n
+                    (coding.system = 'http://snomed.info/sct') and \n
+                      (coding.code = '168537006' or \n
+                      coding.code = '44491008' or \n
+                      coding.code = '77477000' or \n
+                      coding.code = '717193008' \n
+                    )\n
+                  )\n
+                )\n
+              )"
+XPath: "true()"
+

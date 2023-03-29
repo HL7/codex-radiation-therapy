@@ -102,7 +102,6 @@ Usage: #example
   * extension[modality][+].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#68630002 "Iodine-125 (substance)"
-//* extension[radiotherapySessions].valueUnsignedInt = 1
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-07-22B-01-Uterus)
@@ -210,3 +209,12 @@ Usage: #example
   * state = "OK"
   * postalCode = "74047"
   * country = "US"
+
+Instance: RadiotherapyAdverseEvent-XRTS-07-22B
+InstanceOf: RadiotherapyAdverseEvent
+Title: "Example Adverse Event from Radiotherapy"
+Description: "Adverse Event, Nausea following course of treatment."
+* subject = Reference(Patient-XRTS-07-22B)
+* suspectEntity.instance = Reference(RadiotherapyCourseSummary-XRTS-07-22B-01-Uterus-1P-1V)
+* event = NCIT#C146764  "Nausea"
+* extension[severity-or-grade].valueCodeableConcept = AdverseEventSeverityOrGradeCS#1 "Mild Adverse Event"

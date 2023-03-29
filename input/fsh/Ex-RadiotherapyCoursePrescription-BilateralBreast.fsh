@@ -12,11 +12,9 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[mcode-radiotherapy-technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-
 // Prescription Target Site "Left Breast"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)

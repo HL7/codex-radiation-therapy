@@ -3,12 +3,14 @@
 RuleSet: RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1BrainMets"
@@ -60,6 +62,7 @@ Usage: #example
 RuleSet: RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
+* extension[courseInvolvesReirradiation].valueBoolean = true
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
@@ -85,6 +88,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -103,6 +107,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-01-01-Primary-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
@@ -153,6 +158,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-02-01-Primary-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
@@ -191,13 +197,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-//* extension[radiotherapySessions].valueUnsignedInt = 5
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22B-01-BrainMets)
@@ -222,13 +229,14 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
+* extension[courseInvolvesReirradiation].valueBoolean = true
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
-//* extension[radiotherapySessions].valueUnsignedInt = 5
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-05-22B-02-BrainMets)
@@ -258,6 +266,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
@@ -288,6 +297,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 5
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]

@@ -6,6 +6,14 @@ Usage: #example
 * meta.versionId = "1233456"
 * meta.lastUpdated = "2020-10-28T13:22:17+01:00"
 * meta.profile[0] = Canonical(RadiotherapyTreatedPhase)
+* extension[modalityAndTechnique]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
+* extension[imageGuidedRadiotherapyModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
 * extension[fractionsDelivered].valueUnsignedInt = 2
 // Prescription Target Site "Prostate"
 * extension[$mCODERadiotherapyDoseDeliveredToVolume][+]

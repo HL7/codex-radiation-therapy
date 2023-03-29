@@ -48,6 +48,7 @@ RuleSet: BodySiteQualifierAndLaterality
 * bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
 * bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier for this bodySite"
 * bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier for this bodySite"
+
 RuleSet: ModalityAndTechniqueExtensions
 * extension[modalityAndTechnique].extension contains
     RadiotherapyEnergyOrIsotope named radiotherapyEnergyOrIsotope 0..* MS and
@@ -55,19 +56,45 @@ RuleSet: ModalityAndTechniqueExtensions
 
 RuleSet: ModalityAndTechniqueZeroToMany
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS and
+    ImageGuidedRadiotherapyModality named imageGuidedRadiotherapyModality 0..* MS
 * insert ModalityAndTechniqueExtensions
 
 RuleSet: ModalityAndTechniqueZeroToOne
 * extension contains
-    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS
+    $mCODERadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
+    ImageGuidedRadiotherapyModality named imageGuidedRadiotherapyModality 0..* MS
 * insert ModalityAndTechniqueExtensions
+
+RuleSet: MotionManagement
+* extension contains
+    RadiotherapyRespiratoryMotionManagement named respiratoryMotionManagement 0..* MS and
+    RadiotherapyFreeBreathingMotionManagementTechnique named freeBreathingMotionManagementTechnique 0..* MS
+* extension[respiratoryMotionManagement] ^short = "Respiratory Motion Management"
+* extension[respiratoryMotionManagement] ^definition = "Method applied to manage respiratory motion."
+* extension[freeBreathingMotionManagementTechnique] ^short = "Free-Breathing Motion Management Technique"
+* extension[freeBreathingMotionManagementTechnique] ^definition = "Technique to manage respiratory motion with free-breathing. Only allowed if respiratory motion management is free-breathing."
+* obeys codexrt-motion-management-none
+* obeys codexrt-free-breathing-technique
+
+Invariant:  codexrt-motion-management-none
+Description: "If the respiratory motion management is 'none', then no other respiratory motion management extensions are allowed.
+They would also be 'none' or contradict the 'none'."
+Severity: #error
+Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and valueCodeableConcept.exists(coding.exists(code = 'USCRS-99901' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs'))) implies extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management').count() = 1"
+
+Invariant:  codexrt-free-breathing-technique
+Description: "The extension for the technique of free-breathing motion management is only allowed if motion management is free-breathing."
+Severity: #error
+Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-free-breathing-motion-mgmt-technique') implies extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and valueCodeableConcept.exists(coding.exists(code = 'USCRS-99901' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs')))"
+
 
 RuleSet: RadiotherapyRequestCommon
 // * meta MS
 // * meta.versionId MS
 // * meta.lastUpdated MS
 * extension MS
+* insert MotionManagement
 * insert Identifiers
 * status MS
 * intent MS
@@ -101,6 +128,7 @@ RuleSet: RadiotherapyRequestCommon
 * locationReference MS
 
 RuleSet: RadiotherapyProcedureCommon
+* insert MotionManagement
 * insert Identifiers
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and

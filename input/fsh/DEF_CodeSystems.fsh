@@ -21,3 +21,10 @@ Description: "Codes requested from SNOMED by CodexRT, to be issued at a later da
 * #1259981006 "Radiotherapy course change due to change to treatment intent (finding)" "Radiotherapy course change due to change to treatment intent (finding)" //#USCRS-34603
 * #1259231006 "Radiotherapy course change due to changes to target (finding)" "Radiotherapy course change due to changes to target (finding)" // USCRS-34604
 * #1259232004 "Radiotherapy course change due to change to organ at risk (finding)" "Radiotherapy course change due to change to organ at risk (finding)." // USCRS-34605
+* #USCRS-99901 "Radiotherapy with free-breathing (procedure)" "Radiotherapy with free-breathing (procedure)"
+* #USCRS-99902 "Radiotherapy with breath-hold (procedure)" "Radiotherapy with breath-hold (procedure)"
+* #USCRS-99903 "Radiotherapy without respiratory motion management (procedure)" "Radiotherapy without respiratory motion management (procedure)"
+* #USCRS-99904 "Radiotherapy with respiratory gating (procedure)" "Radiotherapy with respiratory gating (procedure)"
+* #USCRS-99905 "Radiotherapy with respiratory tracking (procedure)" "Radiotherapy with respiratory tracking (procedure)"
+* #USCRS-99906 "Radiotherapy with ITV to account for respiratory motion (procedure)" "Radiotherapy with ITV to account for respiratory motion (procedure)"
+* #USCRS-99907 "Radiotherapy with compression to reduce respiratory motion (procedure)" "Radiotherapy with compression to reduce respiratory motion (procedure)"
