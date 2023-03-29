@@ -2,6 +2,8 @@ CodeSystem: AdverseEventSeverityOrGradeCS
 Id: codexrt-radiotheraphy-adverse-event-severity-or-gradeCS
 Title: "Severity or Grade CodeSystem based on CTCAE"
 Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
+* ^caseSensitive = true
+* ^experimental = false
 * #0 "Absent Adverse Event" "The absence of adverse events or within normal limits or values."
 * #1 "Mild Adverse Event"  "An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations."
 * #2 "Moderate Adverse Event"  "An experience that is alleviated with simple therapeutic treatments. The event impacts usual daily activities. Includes laboratory test alterations indicating injury, but without long-term risk."
@@ -13,6 +15,7 @@ ValueSet: AdverseEventSeverityOrGradeVS
 Id: codexrt-radiotheraphy-adverse-event-severity-or-gradeVS
 Title: "Adverse Event Severity or Grade Value Set"
 Description: "CTCAE Grades 0 through 5. The grade of the adverse event, determined by CTCAE criteria, where 0 represents confirmation that the given adverse event did NOT occur, and 5 represents death. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered a particular AE."
+* ^experimental = false
 * include codes from system AdverseEventSeverityOrGradeCS
 
 ValueSet: AdverseEventTermVS
@@ -22,6 +25,7 @@ Description: "The NCI Common Terminology Criteria for Adverse Events (CTCAE) is 
 
 **Use of 'Other, specify'**: In the event a suitable CTCAE term cannot be found, the appropriate verbatim term SHALL be captured via the 'Other, specify' mechanism. In this case, the verbatim term is populated into the event.text field, the NCIT code for the body system into the event.coding.code field, and the display string corresponding to the code into the event.coding.display field. For example, if reporting the unusual adverse event 'Vulcan-green blood' it will be reported as: event.text of 'Vulcan-green blood', event.coding.display of 'Blood and lymphatic system disorders - Other, specify', and event.coding.code of NCIT code C143323."
 
+* ^experimental = false
 * codes from system MEDDRA
 * NCIT#C143283  "Anemia"
 * NCIT#C143323  "Blood and lymphatic system disorders - Other, specify"
