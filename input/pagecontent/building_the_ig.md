@@ -46,7 +46,7 @@ While not normally necessary, you can delete the following folders to get a clea
 #### Key folders & files in the IG
 
 - The FHIR Shorthand (`.fsh`) files defining the resources in this IG are found in `input/fsh/`.
-    - There is a [FSH syntax highlighting extension](https://marketplace.visualstudio.com/items?itemName=kmahalingam.vscode-language-fsh) for [VSCode](https://code.visualstudio.com). The CodexRT team generally uses this set of tools for working on FSH files.
+    - There is a [FSH syntax highlighting extension](https://marketplace.visualstudio.com/items?itemName=kmahalingam.vscode-language-fsh) for [VSCode](https://code.visualstudio.com). The CodeX RT team generally uses this set of tools for working on FSH files.
     - The FSH files are prefixed based on what is contained inside.
 
         | Prefix | Description          |

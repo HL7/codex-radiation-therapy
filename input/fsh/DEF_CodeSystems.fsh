@@ -1,7 +1,7 @@
 CodeSystem: SnomedRequestedCS
 Id: snomed-requested-cs
 Title: "Requested SNOMED Codes Code System"
-Description: "Codes requested from SNOMED by CodexRT, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
+Description: "Codes requested from SNOMED by CodeX RT, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
 * ^experimental = false
 //* These codes have been issued by SNOMED International
