@@ -5,7 +5,7 @@ Id: codexrt-radiotherapy-plan-prescription
 Title: "Radiotherapy Plan Prescription"
 Description: "A Radiotherapy Plan Prescription is a request for radiotherapy treatment with a single treatment plan."
 * insert RadiotherapyPhaseAndPlanPrescriptionCommon
-* code = SnomedRequestedCS#1255724003 "Radiotherapy treatment plan (regime/therapy)"
+* code = SCT#1255724003 "Radiotherapy treatment plan (regime/therapy)"
 * insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     course-prescription 0..1 MS and

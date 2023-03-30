@@ -4,7 +4,7 @@ Instance: RadiotherapySeedDevice-Mesh
 InstanceOf: RadiotherapySeedDevice
 Description: "Mesh of brachytherapy seeds."
 Usage: #example
-* type =  SnomedRequestedCS#1254768007 "Radioactive seed embedded in mesh (physical object)"
+* type =  SCT#1254768007 "Radioactive seed embedded in mesh (physical object)"
 * patient = Reference(Patient-XRTS-07-22B)
 
 RuleSet: RadiotherapyCourseSummary-XRTS-07-22B-01-Common
