@@ -3,7 +3,7 @@ This section outlines requirements and recommendations for CodeX RT participants
 
 ### CodeX RT Participant Roles
 
-Two roles for **CodeX RT Participants** are defined along the IHE-RO XRTS Actors:
+Three roles for **CodeX RT Participants** are defined along the actors defined in IHE-RO [XRTS](https://www.ihe-ro.org/doku.php?id=doc%3Aprofiles%3Axrts):
 
 * **Treamtent Summary Provider** - a participant in exchange of CodeX RT data who provides CodeX RT data in response to a data query or autonomously pushes CodeX RT data to an CodeX RT receiver. The Data Sender does not have to be the originator of the data it possesses. The Data Sender role is similar to a [US Core Responder](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data sent is not assumed to be a response to a query.
 * **Treatment Observer** - a participant in exchange of CodeX RT data who accepts CodeX RT data from an CodeX RT Data Sender. The Data Receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The Receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data does not have to be explicitly requested.
