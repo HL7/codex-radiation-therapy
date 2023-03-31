@@ -20,8 +20,10 @@ The intended actors include:
 * Other medical providers
 
 The intended use cases include:
-* Prescribing, elaborating and managing RT treatment
+* Prescribing, elaborating, and managing RT treatment
 * Documenting delivered RT treatment
+
+One usage of CodeX RT is the implementation of the integration profiles defined by the ([IHE-RO](https://www.ihe-ro.org/)) Exchange of Radiotherapy Summaries ([XRTS](https://www.ihe-ro.org/doku.php?id=doc:profiles:xrts)) Supplement. The XRTS specification defines use cases, actors, roles, and transactions for a narrower scope of those specific integration use cases.
 
 ### Example Scenarios
 #### Scenario 1:
@@ -31,7 +33,7 @@ A radiation oncologist generates a patient's RT "end-of-treatment" summary withi
 A radiation oncologist generates a patient's weekly on-treatment visit (OTV) report within the ROIS. The patient's weekly RT in-progress information is pushed, via a FHIR API, to an EHR's FHIR-enabled internal resource repository. Next, the EHR accesses its internal FHIR repository via a FHIR API call and retrieves the patient's weekly RT in-progress information. Once the information has been retrieved, the EHR can store, share, reuse, and display the standardized information however necessary/most useful.
 
 ### Treatment Summary Transactions
-The workflow and transactions for exchanging RT information are documented in the Integrating Healthcare Enterprise - Radiation Oncology (IHE-RO) Exchange of Radiotherapy Summaries (XRTS) Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX RT IG.
+The workflow and transactions for exchanging RT information are documented in the Integrating Healthcare Enterprise - Radiation Oncology ([IHE-RO](https://www.ihe-ro.org/)) Exchange of Radiotherapy Summaries ([XRTS](https://www.ihe-ro.org/doku.php?id=doc:profiles:xrts)) Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX RT IG.
 
 ### Sources
 
@@ -39,7 +41,7 @@ Specifications in the CodeX RT IG were informed by research and work products de
 
 In addition to information obtained from subject matter experts, several existing standards, nomenclatures, and guidelines were consulted during the development of this specification. These include:
 
-- IHE-RO XRTS Work Group
+- IHE-RO ([XRTS](https://www.ihe-ro.org/doku.php?id=doc%3Aprofiles%3Axrts)) Work Group
 - AAPM BDSC and OORO - implementing Operational Ontology for Radiation Oncology (Task Group 263 (TG-263))
 - ASTRO’s "Minimum Data Elements for Radiation Oncology: An American Society for Radiation Oncology Consensus Paper" (<https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext>)
 - Commission on Cancer (CoC) and CoC's “A Multidisciplinary Consensus Recommendation on a Synoptic Radiation Treatment Summary: A Commission on Cancer Workgroup Report” (<https://pubmed.ncbi.nlm.nih.gov/31988040/>)

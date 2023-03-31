@@ -7,7 +7,7 @@ These are the changes that have been made since the ballot version.
 * Updated the [data elements diagram](overview.html#data-elements) to reflect changes in the profiles
 
 #### Profile Additions
-* Added [Radiotherapy Adverse Event](StructureDefinition-codexrt-radiotherapy-adverse-event.html) profile based on Vulcan and CTCAE, along with associated valuesets ([FHIR-40654](https://jira.hl7.org/browse/FHIR-40654))
+* Added [Radiotherapy Adverse Event](StructureDefinition-codexrt-radiotherapy-adverse-event.html) profile based on Vulcan and CTCAE, along with associated ValueSets ([FHIR-40654](https://jira.hl7.org/browse/FHIR-40654))
 
 #### Profile Changes
 * The [relationship between the profiles](overview.html#relationships-between-profiles) have been implemented with open, profile-based slicing of the basedOn and replaces fields of the profiles. ([FHIR-38231](https://jira.hl7.org/browse/FHIR-38231))
@@ -24,12 +24,12 @@ a boolean uniformFractionation flag when incorporated into the [RadiotherapyCour
 * An extension with a codeable concept for [reason for revision and adaptiation](ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html) was added to all Plan and Phase profiles. ([FHIR-38231](https://jira.hl7.org/browse/FHIR-38231))
 * An extension with a [Reference to DICOM SOP Instance](StructureDefinition-codexrt-dicom-reference.html) was added to RadiotherapyTreatmentPlan and RadiotherapyTreatedPlan profiles.
 * An extension with a boolean for [course involves reirradiation](StructureDefinition-codexrt-radiotherapy-course-involves-reirradiation.html) was added to the 3 course-level profiles.
-* An extension supporting [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-image-guided-radiotherapy-modality.html) was added everywhere Therapeutic Modality and Technique was present. This is supported by a valueset of IGRT [modalities](ValueSet-codexrt-image-guided-radiotherapy-modality-vs.html) and [energies](ValueSet-codexrt-image-guided-radiotherapy-energy-unit-vs.html).
+* An extension supporting [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-image-guided-radiotherapy-modality.html) was added everywhere Therapeutic Modality and Technique was present. This is supported by a ValueSet of IGRT [modalities](ValueSet-codexrt-image-guided-radiotherapy-modality-vs.html) and [energies](ValueSet-codexrt-image-guided-radiotherapy-energy-unit-vs.html).
 * Extensions [Respiratory Motion Management](StructureDefinition-codexrt-radiotherapy-respiratory-motion-management.html) and [Free-Breathing Motion Management Technique](StructureDefinition-codexrt-radiotherapy-free-breathing-motion-mgmt-technique.html) were added everywhere Therapeutic Modality and Technique was present. Those are supported by the ValueSets [Motion Management](ValueSet-codexrt-radiotherapy-respiratory-motion-management-vs.html) and [Free Breathing Motion Management Technique](ValueSet-codexrt-radiotherapy-free-breathing-motion-mgmt-technique-vs.html).
 * The followUp element in the [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html) was made Must Support to indicate the required follow up.
 
 #### Valueset Changes
-* The [Brachytherapy Applicator Types](ValueSet-codexrt-brachytherapy-applicator-type-vs.html) valueset has been reworked using new codes requested from SNOMEDCT.
+* The [Brachytherapy Applicator Types](ValueSet-codexrt-brachytherapy-applicator-type-vs.html) ValueSet has been reworked using new codes requested from SNOMEDCT.
 * New SNOMEDCT codes requested by the authors have replaced local codes as they have been issued.
 
 #### Codesystem Changes

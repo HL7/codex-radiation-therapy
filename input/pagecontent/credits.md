@@ -2,7 +2,7 @@ The authors gratefully acknowledge the leadership and contributions of Chuck May
 
 The authors recognize HL7 sponsorship and input from [Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
 
-THe development of this IG was sponsored by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community with a core goal of leveraging FHIR-based standards to achieve interoperability within the healthcare community to improve health for all.
+The development of this IG was sponsored by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community with a core goal of leveraging FHIR-based standards to achieve interoperability within the healthcare community to improve health for all.
 
 Many organizations have been involved in the modeling and defining of the radiotherapy FHIR profiles that are defined in the CodeX RT IG: 
 
