@@ -23,6 +23,8 @@ The intended use cases include:
 * Prescribing, elaborating, and managing RT treatment
 * Documenting delivered RT treatment
 
+One usage of CodeX RT is the implementation of the integration profiles defined by the ([IHE-RO](https://www.ihe-ro.org/)) Exchange of Radiotherapy Summaries ([XRTS](https://www.ihe-ro.org/doku.php?id=doc:profiles:xrts)) Supplement. The XRTS specification defines use cases, actors, roles, and transactions for a narrower scope of those specific integration use cases.
+
 ### Example Scenarios
 #### Scenario 1:
 A radiation oncologist generates a patient's RT "end-of-treatment" summary within the ROIS after treatment is complete. The patient's summary information is pushed, via a FHIR API, to a receiving FHIR repository (e.g., a cloud-based repository or another repository that can be accessed by other vendors). Next, a vendor system accesses the FHIR repository via a FHIR API call to retrieve the patient's RT "end-of-treatment" information. Once the information has been retrieved, the vendor system can store, share, reuse, and display the standardized information however necessary/most useful.
