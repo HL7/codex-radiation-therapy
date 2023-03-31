@@ -17,10 +17,10 @@ This STU1 IG currently only provides a CapabilityStatement for a RO Resource Rep
 
 CodeX RT participants MUST meet the following requirements for conformance:
 
-1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
-1. [Populate and meaningfully process CodeX RT resources](#populate-and-meaningfully-process-codexrt-resources)
-1. [Support querying CodeX RT-Conforming Resources](#support-querying-codexrt-conforming-resources)
-1. [Support US Core conformance requirements](#support-us-core-conformance-requirements)
+1. [Follow conformance requirements for supported profiles](conformance.html#follow-conformance-requirements-for-supported-profiles)
+1. [Populate and meaningfully process CodeX RT resources](conformance.html#populate-and-meaningfully-process-codex-rt-resources)
+1. [Support querying CodeX RT-Conforming Resources](conformance.html#support-querying-codexrt-conforming-resources)
+1. [Support US Core conformance requirements](conformance.html#support-us-core-conformance-requirements)
 
 #### Follow Conformance Requirements for Supported Profiles
 
