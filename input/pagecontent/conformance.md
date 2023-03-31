@@ -28,7 +28,12 @@ The information produced and consumed by CodeX RT participants is defined by a s
 
 #### Populate and Meaningfully Process CodeX RT Resources
 
-Treatment Summary Providers and RO Resource Repositories MUST be able to populate data elements with Must-Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Treatment Observers MUST be able to meaningfully process elements with MS obligations for each profile they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings.
+Treatment Summary Providers and RO Resource Repositories MUST be able to populate data elements with Must-Support (MS) obligations (marked with the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag), for all profiles they support (as declared in their CapabilityStatement). Treatment Observers MUST be able to meaningfully process elements with MS obligations for each profile they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings:
+
+* ** Sender: ** Must-Support elements SHALL be populated by the Sender of CodeX RT resources unless
+  * the element’s minimum cardinality is zero and the sender lacks the data necessary to populate the element. In this case, the element SHOULD be entirely omitted. If there is a specific reason the data is missing, a data absent reason (described in the US Core rules on missing data) MAY be substituted.
+  * or the element is contained in a top-level element that is not supported or in a profile that is entirely not supported. In this case the must support flags of contained elements do not impose and requirements.
+* ** Receiver: ** Must-Support elements SHALL be meaningfully processed by receivers of CodeX RT resources. Depending on the context, “meaningful processing” means fulfilling the specified use case by displaying the data element for human use, reacting to it, or storing it for other purposes.
 
 #### Support Querying CodeX RT-Conforming Resources
 
