@@ -187,7 +187,7 @@ INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-07-22B-01-01-Primary: 
 INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-04-Prostate-Phase1-Plan1: ServiceRequest.extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
 INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-05-Prostate-Phase2-Plan1: ServiceRequest.extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
 
-# SUPPRESS US CORE  MESSAGES.
+# SUPPRESS US CORE MESSAGES.
 # No variance needed for ServiceRequests, since this is not available in USCore 4.0.1
 # Variance Approved by Cross-Group Projects WG on 11/10/2022: Eric Haas / Brett Marquard: 17-0-1  -  https://jira.hl7.org/browse/FHIR-39341 .
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
