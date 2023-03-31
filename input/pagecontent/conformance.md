@@ -1,5 +1,5 @@
 
-This section outlines requirements and recommendations for CodeX RT participants. The conformance verbs - SHALL or MUST, SHOULD, and MAY - are defined in [FHIR Conformance Rules](https://hl7.org/fhir/R4/conformance-rules.html).
+This section outlines requirements and recommendations for CodeX RT participants. The conformance verbs - SHALL, SHOULD, and MAY - are defined in [FHIR Conformance Rules](https://hl7.org/fhir/R4/conformance-rules.html).  The conformance verb MUST is a synonym for SHALL.
 
 ### CodeX RT Participant Roles
 
@@ -9,7 +9,7 @@ Three roles for **CodeX RT Participants** are defined along the actors defined i
 
 * **Treatment Observer** - A system that retrieves the latest radiotherapy treatment summary information as CodeX RT compliant resources from an RO Resource Repository.
 
-* **RO Resource Repository** - The Radiation Oncology Resource Repository is a system and can receive CodeX RT compliant resources and make them available as defined in the [CodeX RT Server CapabilityStatement](CapabilityStatement-CodexRTServerCapabilityStatement.html). A FHIR Server that fulfills this role may not be limited to Radiation Oncology. It may be a generic FHIR server that fulfills other roles at the same time.
+* **Radiation Oncology (RO) Resource Repository** - The RO Resource Repository is a system and can receive CodeX RT compliant resources and make them available as defined in the [CodeX RT Server CapabilityStatement](CapabilityStatement-CodexRTServerCapabilityStatement.html). A FHIR Server that fulfills this role may not be limited to Radiation Oncology. It may be a generic FHIR server that fulfills other roles at the same time.
 
 This STU1 IG currently only provides a CapabilityStatement for a RO Resource Repository. As additional experience interacting with CodeX RT data accrues the required capabilities for Treatment Summary Provider and Treatment Observer will be captured in future updates to this IG. See the IHE-RO [XRTS](https://www.ihe-ro.org/doku.php?id=doc%3Aprofiles%3Axrts) Supplement for a specification which transactions are required by the Treatment Summary Provider and the Treatment Observer.
 
@@ -28,7 +28,7 @@ The information produced and consumed by CodeX RT participants is defined by a s
 
 #### Populate and Meaningfully Process CodeX RT Resources
 
-Treatment Summary Providers and RO Resource Repositories MUST be able to populate data elements with Must-Support (MS) obligations (marked with the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag), for all profiles they support (as declared in their CapabilityStatement). Treatment Observers MUST be able to meaningfully process elements with MS obligations for each profile they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings:
+Treatment Summary Providers and RO Resource Repositories MUST be able to populate data elements with Must-Support (MS) obligations (marked with the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag), for all profiles they support (as declared in their CapabilityStatement). Treatment Observers MUST be able to meaningfully process elements with MS obligations for each profile they support (as declared in their CapabilityStatement). "Able to Populate" and Meaningfully Process" are defined according to [mCODE's definition](http://hl7.org/fhir/us/mcode/STU2.1/conformance-profiles.html#element-level-conformance-expectations).
 
 * **Sender:** Must-Support elements SHALL be populated by the Sender of CodeX RT resources unless
   * the element’s minimum cardinality is zero and the sender lacks the data necessary to populate the element. In this case, the element SHOULD be entirely omitted. If there is a specific reason the data is missing, a data absent reason (described in the US Core rules on missing data) MAY be substituted.
