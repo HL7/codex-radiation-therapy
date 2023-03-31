@@ -4,9 +4,9 @@ The Data Dictionary (DD) presents the CodeX RT IG's content in a format that may
 
 The DD intentionally omits certain elements in FHIR that are not expected to be implemented. Please be aware of the following:
 
-* **Profiles not shown in the DD:** Only profiles defined within the CodeX RT IG are included in the Data Dictionary. Other profiles that would typically be used within the Radiotherapy use case, such as those defined in mCODE and USCore are not included.  The [mCODE data dictionary](https://hl7.org/fhir/us/mcode/STU2.1/dictionary.html) may also be of interest to CodeX RT users.
+* **Profiles not shown in the DD:** Only profiles defined within the CodeX RT IG are included in the Data Dictionary. Other profiles that would typically be used within the Radiotherapy use case, such as those defined in mCODE and USCore are not included.  The [mCODE Data Dictionary](https://hl7.org/fhir/us/mcode/STU2.1/dictionary.html) may also be of interest to CodeX RT users.
 
-* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements, some inherited from US Core that implementers may be expected to support.
+* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in the Data Dictionary. These are elements, some inherited from US Core that implementers may be expected to support.
 
 Download link:
 

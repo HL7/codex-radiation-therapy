@@ -7,7 +7,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
   * CodeX RT extends the base profile by adding:
     * Adding identifiers for official and display names
     * Extending the [mCODE DoseDeliveredToVolume] extension with:
-      * booleans indicating that the dose is a Point or Primary Plan dose, and indicating whether fractionan was uniform
+      * booleans indicating that the dose is a Point or Primary Plan dose, and indicating whether the fractionation was uniform
     * Extending the [mCODE modalityAndTechnique] extension with:
       * an EnergyOrIsotope extension
       * a TreatmentApplicatorType extension
@@ -16,14 +16,14 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
     * Extending the bodySite field with qualifiers for location and laterality, as was done in [mCode Cancer-related Surgical Procedure]
     * Slicing basedOn to link the summary to an associated plan and/or prescription
 * [mCODE CancerDiseaseStatus]
-  * This  profile is the base for the [CodeX RT Radiotherapy Disease Status][CodexRTRadiotherapyDiseaseStatus] profile
+  * This profile is the base for the [CodeX RT Radiotherapy Disease Status][CodexRTRadiotherapyDiseaseStatus] profile
   * CodeX RT extends the base profile by adding:
-    * adding a top-level extension to reference a [CodeX RT Radiotherapy Volume][CodeXRTRadiotherapyVolume]
-    * extending the valueCodeableConcept field with a [disease progression qualifier] extension
+    * Adding a top-level extension to reference a [CodeX RT Radiotherapy Volume][CodeXRTRadiotherapyVolume]
+    * Extending the valueCodeableConcept field with a [disease progression qualifier] extension
 * [mCODE RadiotherapyVolume]
   * This profile is the base for the [CodeX RT Radiotherapy Volume][CodexRTRadiotherapyVolume]
-  * CodeX RT extends the base profile by adding:
-    * a DICOM identifer
+  * CodeX RT extends the base profile by:
+    * Adding a DICOM identifier
 * [mCODE modalityAndTechnique]
   * This extension is used in all 9 CodeX RT profiles based on original or filler order ServiceRequests and Procedure
   * CodeX RT extends this extension with:
@@ -32,15 +32,15 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
 * [mCODE DoseDeliveredToVolume]
   * This extension is used in the 3 CodeX RT profiles based on Procedure
   * CodeX RT extends this extension with:
-    * boolean extensions indicating that the dose is a Point or Primary Plan dose, and indicating whether fractionan was uniform
+    * boolean extensions indicating that the dose is a Point or Primary Plan dose, and indicating whether the fractionation was uniform
     * extensions to capture the delivered fractions and total delivered dose
 * [mCODE ProcedureIntent]
   * This is incorporated as is into the [CodexrtRadiotherapyCoursePrescription] and [CodexrtRadiotherapyPlannedCourse] profiles
 
 ### Value Sets
 * [mCODE Radiotherapy Treatment Location ValueSet]:
-  * This valueset, based on the the work of TG263 is the basis for specifying treatment locations using SNOMEDCT codes and qualifiers
+  * This ValueSet, based on the work of TG263 is the basis for specifying treatment locations using SNOMEDCT codes and qualifiers
 * [mCODE Cancer Disorder ValueSet]
-  * This valueset is used to specify the reasonCode for radiotherapy in the 9 CodeX RT profiles based on ServiceRequests and Procedures
+  * This ValueSet is used to specify the reasonCode for radiotherapy in the 9 CodeX RT profiles based on ServiceRequests and Procedures
 
 {% include markdown-link-references.md %}

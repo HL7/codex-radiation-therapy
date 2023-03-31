@@ -20,7 +20,7 @@ The intended actors include:
 * Other medical providers
 
 The intended use cases include:
-* Prescribing, elaborating and managing RT treatment
+* Prescribing, elaborating, and managing RT treatment
 * Documenting delivered RT treatment
 
 ### Example Scenarios
