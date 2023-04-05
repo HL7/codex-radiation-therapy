@@ -117,7 +117,6 @@ RuleSet: RadiotherapyRequestCommon
 * bodySite MS
 * bodySite ^short = "Body site that is treated with radiotherapy"
 * insert BodySiteQualifierAndLaterality
-* note MS
 * insert OpenProfileBasedSlicing(performer)
 * performer contains
     treatmentOrSeedDevice 0..* MS

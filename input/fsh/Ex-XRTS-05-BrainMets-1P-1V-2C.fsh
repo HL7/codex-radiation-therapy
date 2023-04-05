@@ -119,7 +119,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-05-22B)
 * performedPeriod.start = "2020-09-07T13:15:17+01:00"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -170,7 +169,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-02-01-Primary-Common
 * subject = Reference(Patient-XRTS-05-22B)
 * performedPeriod.start = "2021-09-20T13:15:17+01:00"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22B-02-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -285,7 +283,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-05-22B)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
+
 
 Instance: RadiotherapyPlannedPhase-XRTS-05-22B-02-01-Primary
 InstanceOf: RadiotherapyPlannedPhase
@@ -316,7 +314,6 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-05-22B)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

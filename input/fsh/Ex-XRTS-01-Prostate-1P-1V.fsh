@@ -80,7 +80,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-01-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -178,7 +177,6 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-01-22B)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
