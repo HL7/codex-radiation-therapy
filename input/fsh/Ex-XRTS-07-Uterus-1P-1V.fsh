@@ -67,7 +67,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-07-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Phase"
 * focalDevice[seedDevice].manipulated = Reference(RadiotherapySeedDevice-Mesh)
 
 Instance: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary
@@ -151,7 +150,6 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-07-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 * performer[treatmentOrSeedDevice] = Reference(RadiotherapySeedDevice-Mesh)
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

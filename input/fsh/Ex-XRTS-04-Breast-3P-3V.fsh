@@ -113,7 +113,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* note.text = "Free text note in Radiotherapy Treated Phase"
 
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-1Fx
@@ -324,7 +323,6 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22B-01-02-RightBreastTang
 InstanceOf: RadiotherapyPlannedPhase
@@ -357,7 +355,6 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#24028007 "Right (qualifier value)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22B-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyPlannedPhase
@@ -390,7 +387,6 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
