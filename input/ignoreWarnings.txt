@@ -257,6 +257,8 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation
 # Variance Approved by Cross-Group Projects WG on 10/27/2022: Brett Marquard/Eric Haas: 21-0-1    - https://jira.hl7.org/browse/FHIR-39301
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
 
-# Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl Messages
+# Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl and http://terminology.hl7.org/CodeSystem/MDRAE Messages
 WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event: [Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated]
 INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
+WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1]: Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified, so Concepts and Filters can't be checked (Details: Local Error: Resolved system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl (v3.0.0), but the definition is not complete. Server Error: The code system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is not known (encountered paired with code = 'C143283'); The code provided (http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C143283) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4))
+WARNING: ValueSet.where(id = 'codexrt-radiotherapy-adverse-event-termVS'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/MDRAE
