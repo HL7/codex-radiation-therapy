@@ -10,7 +10,7 @@ Usage: #example
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
-  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "MV"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
@@ -66,10 +66,10 @@ Usage: #example
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
-  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "MV"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 19
 // Target Site "Prostate"
 * extension[radiotherapyDosePlannedToVolume][+]

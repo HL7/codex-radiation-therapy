@@ -267,4 +267,3 @@ Expression: "extension.where(url = 'energy').exists() implies \n
                 )\n
               )"
 XPath: "true()"
-

@@ -15,7 +15,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-Common
   * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#MV "megavolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
@@ -122,7 +122,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-03-22B-01-01-Primary-Common
   * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#MV "megavolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
@@ -224,10 +224,10 @@ Usage: #example
 //* extension[radiotherapySessions].valueUnsignedInt = 4
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#MV "megavolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -281,10 +281,10 @@ Usage: #example
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#MV "megavolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
