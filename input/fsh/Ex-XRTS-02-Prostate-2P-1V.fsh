@@ -12,7 +12,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V-Common
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"

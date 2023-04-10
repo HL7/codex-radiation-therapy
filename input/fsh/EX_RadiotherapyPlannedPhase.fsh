@@ -13,7 +13,7 @@ Usage: #example
   * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "MV"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 25
 // Target Site "Prostate"
 * extension[radiotherapyDosePlannedToVolume][+]

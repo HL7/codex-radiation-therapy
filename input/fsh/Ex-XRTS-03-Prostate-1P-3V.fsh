@@ -12,7 +12,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-Common
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
@@ -119,7 +119,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-03-22B-01-01-Primary-Common
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
-  * extension[energy][+].valueCodeableConcept = UCUM#kV "kilovolt"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
