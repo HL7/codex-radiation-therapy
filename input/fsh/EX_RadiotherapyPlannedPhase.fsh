@@ -51,7 +51,6 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with radiotherapy"
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 * locationReference = Reference(TreatmentLocation-1)
 
 Instance: RadiotherapyPlannedPhase-05-Prostate-Phase2
@@ -102,5 +101,4 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 * locationReference = Reference(TreatmentLocation-1)
