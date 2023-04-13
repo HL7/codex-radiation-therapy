@@ -56,7 +56,7 @@ INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-04-Prostate-Phase1-Plan1: 
 INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-05-Prostate-Phase2-Plan1: ServiceRequest.extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique
 
 
-#CapStmt includes additional slices
+#CapStmt includes  additional slices
 INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[0].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
 INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
 INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
