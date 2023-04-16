@@ -7,7 +7,7 @@ Description: "A summary of radiotherapy treatment delivered with a single treatm
 * ^status = #draft
 * extension contains
     DicomReference named radiotherapyDicomRecord 0..*
-* code = SnomedRequestedCS#1255724003 "Radiotherapy treatment plan (regime/therapy)"
+* code = SCT#1255724003 "Radiotherapy treatment plan (regime/therapy)"
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered with this plan in the top-level extension also named fractionDelivered."
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this plan, not including dose from any other plan."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"

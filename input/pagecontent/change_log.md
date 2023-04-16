@@ -32,7 +32,6 @@ a boolean uniformFractionation flag when incorporated into the [RadiotherapyCour
 * New SNOMEDCT codes requested by the authors have replaced local codes as they have been issued.
 
 #### Codesystem Changes
-* Three codesystems that included codes requested from SNOMEDCT have been merged into one [codesystem](CodeSystem-snomed-requested-cs.html).
 * New SNOMEDCT codes requested by the authors have replaced local codes as they have been issued.
 
 ### Capability Statement Changes
