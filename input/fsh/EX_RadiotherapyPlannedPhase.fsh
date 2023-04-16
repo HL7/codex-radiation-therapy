@@ -7,11 +7,13 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique]
-  * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
-  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "MV"
+* extension[imageGuidedRadiotherapyModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 25
 // Target Site "Prostate"
 * extension[radiotherapyDosePlannedToVolume][+]
@@ -49,7 +51,6 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with radiotherapy"
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 * locationReference = Reference(TreatmentLocation-1)
 
 Instance: RadiotherapyPlannedPhase-05-Prostate-Phase2
@@ -61,11 +62,13 @@ Usage: #example
 * meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. See separate extentsion for modification date of clinical contents.
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique]
-  * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][0].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  //* extension[technique][=].valueCodeableConcept[=].coding[+] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc" //violates mCODE invariant
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
   * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
-  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "megavolt"
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "MV"
+* extension[imageGuidedRadiotherapyModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 19
 // Target Site "Prostate"
 * extension[radiotherapyDosePlannedToVolume][+]
@@ -98,5 +101,4 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 * locationReference = Reference(TreatmentLocation-1)

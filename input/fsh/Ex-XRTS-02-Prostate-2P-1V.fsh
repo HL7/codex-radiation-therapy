@@ -8,7 +8,11 @@ RuleSet: RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V-Common
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
+* extension[imageGuidedRadiotherapyModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
@@ -66,7 +70,8 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-01-Primary-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
@@ -78,7 +83,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-02-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Treated Phase"
 
 Instance: RadiotherapyTreatedPhase-XRTS-02-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -117,6 +121,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-02-PlanChange-Common
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "PlanChange"
@@ -127,7 +132,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-02-PlanChange-Common
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V)
 * subject = Reference(Patient-XRTS-02-22B)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Treated Phase"
 * performedPeriod.start = "2021-09-13T13:15:17+01:00"
 
 Instance: RadiotherapyTreatedPhase-XRTS-02-22B-01-02-PlanChange
@@ -160,11 +164,16 @@ Usage: #example
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
+* extension[imageGuidedRadiotherapyModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 //* extension[radiotherapySessions].valueUnsignedInt = 7
+
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-02-22B-01-Prostate)
@@ -193,7 +202,8 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 7
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
@@ -213,7 +223,6 @@ Usage: #example
 * status = #revoked
 * subject = Reference(Patient-XRTS-02-22B)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-02-22B-01-02-PlanChange
 InstanceOf: RadiotherapyPlannedPhase
@@ -225,6 +234,7 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99903 "Radiotherapy without respiratory motion management (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
 * extension[radiotherapyDosePlannedToVolume]
   * extension[volume]
@@ -244,7 +254,6 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-02-22B)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

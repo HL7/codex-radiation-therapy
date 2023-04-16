@@ -8,7 +8,9 @@ RuleSet: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-Common
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1_Both_Breast"
@@ -60,7 +62,7 @@ Usage: #example
 * meta.lastUpdated = "2021-09-17T13:21:17+01:00"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[actualNumberOfSessions].valueUnsignedInt = 8
 // Target Site "Left Breast"
 * extension[doseDeliveredToVolume][+]
@@ -96,7 +98,9 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary - Left Breast Tangents"
@@ -109,7 +113,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* note.text = "Free text note in Radiotherapy Treated Phase"
 
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-1Fx
@@ -159,7 +162,9 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-02-RightBreastTang-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Right Breast Tangents"
@@ -193,7 +198,9 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-03-LeftBreastBoost-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
   * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
   * value = "Left Breast Boost"
@@ -238,11 +245,12 @@ Usage: #example
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-//* extension[radiotherapySessions].valueUnsignedInt = 8
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 // Target Site "Left Breast"
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -287,7 +295,9 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 3
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -313,7 +323,6 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22B-01-02-RightBreastTang
 InstanceOf: RadiotherapyPlannedPhase
@@ -324,7 +333,9 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 3
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -344,7 +355,6 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#24028007 "Right (qualifier value)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22B-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyPlannedPhase
@@ -355,7 +365,9 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
-  * extension[technique][+].valueCodeableConcept = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99901 "Radiotherapy with free-breathing (procedure)"
+* extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SnomedRequestedCS#USCRS-99904 "Radiotherapy with respiratory gating (procedure)"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
@@ -375,7 +387,6 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

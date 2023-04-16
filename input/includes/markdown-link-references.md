@@ -1,4 +1,5 @@
 [CodexrtRadiotherapyCoursePrescription]: StructureDefinition-codexrt-radiotherapy-course-prescription.html
+[CodexrtRadiotherapyPlannedCourse]: StructureDefinition-codexrt-radiotherapy-planned-course.html
 [CodexrtRadiotherapyCourseSummary]: StructureDefinition-codexrt-radiotherapy-course-summary.html
 [CodexrtRadiotherapyPhasePrescription]: StructureDefinition-codexrt-radiotherapy-phase-prescription.html
 [CodexrtRadiotherapyTreatedPhase]: StructureDefinition-codexrt-radiotherapy-treated-phase.html
@@ -7,6 +8,9 @@
 [CodexrtRadiotherapyEnergyOrIsotope]: StructureDefinition-codexrt-radiotherapy-energy-or-isotope.html
 [CodexrtRadiotherapyFractionsDelivered]: StructureDefinition-codexrt-radiotherapy-fractions-delivered.html
 [CodexrtRadiotherapyFractionsPrescribed]: StructureDefinition-codexrt-radiotherapy-fractions-prescribed.html
+[CodexrtRadiotherapyTreatmentDevice]: StructureDefinition-codexrt-radiotherapy-treatment-device.html
+[CodexrtRadiotherapySeedDevice]: StructureDefinition-codexrt-radiotherapy-seed-device.html
+[CodexRTRadiotherapyDiseaseStatus]: StructureDefinition-codexrt-radiotherapy-disease-status.html
 [RadiotherapyRequestVS]: ValueSet-radiotherapy-request.html
 [RadiotherapyRequestCS]: CodeSystem-radiotherapy-request.html
 [SnomedRequestedCs]: CodeSystem-snomed-requested-cs.html
@@ -67,3 +71,13 @@
 [RadiotherapyVolumeXRTS0403RightBreast]: BodyStructure-RadiotherapyVolume-XRTS-04-22B-03-RightBreast.html
 [RadiotherapyVolumeXRTS0501BrainMets]: BodyStructure-RadiotherapyVolume-XRTS-05-22B-01-BrainMets.html
 [RadiotherapyVolume01PTV50]: BodyStructure-radiotherapyVolume-01-PTV50.html
+
+[mCODE Radiotherapy Treatment Location ValueSet]: https://hl7.org/fhir/us/mcode/STU2.1/ValueSet-mcode-radiotherapy-treatment-location-vs.html
+[mCODE Cancer Disorder ValueSet]: http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disorder-vs.html
+[mCODE CancerDiseaseStatus]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-disease-status.html
+[mCODE RadiotherapyVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-volume.html
+[mCODE modalityAndTechnique]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mmcode-radiotherapy-modality-and-technique.html
+[mCODE DoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
+[mCODE ProcedureIntent]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-procedure-intent.html
+[mCODE Radiotherapy Course Summary]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html
+[mCode Cancer-related Surgical Procedure]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-related-surgical-procedure.html

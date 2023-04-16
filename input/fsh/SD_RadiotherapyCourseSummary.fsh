@@ -7,6 +7,9 @@ Whenever new contributions in the scope of the same course are delivered, this r
 * insert RadiotherapyProcedureCommon
 * obeys codexrt-procedure-status
 * insert ModalityAndTechniqueExtensions
+* extension contains
+    ImageGuidedRadiotherapyModality named imageGuidedRadiotherapyModality 0..* MS and
+    CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
 * extension[doseDeliveredToVolume].extension contains
     UniformFractionation named uniformFractionation 1..1 MS
 * insert OpenProfileBasedSlicing(basedOn)
@@ -17,7 +20,6 @@ Whenever new contributions in the scope of the same course are delivered, this r
 * basedOn[planned-course] ^short = "Radiotherapy Planned Course that planned the treatment summarized in this Radiotherapy Course Summary."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
-* followUp MS
 
 // Not all values from http://hl7.org/fhir/ValueSet/event-status are expected for radiotherapy summary procedures.
 // preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown

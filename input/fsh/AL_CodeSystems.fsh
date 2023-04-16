@@ -26,3 +26,7 @@ Alias: VarianRadiotherapyCourseId = http://varian.com/fhir/identifier/radiothera
 Alias: VarianRadiotherapyPhaseId = http://varian.com/fhir/identifier/radiotherapyPhaseId
 Alias: VarianRadiotherapyPlanId = http://varian.com/fhir/identifier/radiotherapyPlanId
 Alias: VarianRadiotherapyPrescriptionId = http://varian.com/fhir/identifier/radiotherapyPrescriptionId
+
+//CTCAE CodeSystems
+Alias:   NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+Alias:   MEDDRA = http://terminology.hl7.org/CodeSystem/MDRAE

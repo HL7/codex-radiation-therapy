@@ -5,7 +5,7 @@ CodeX Radiation Therapy is an implementation guide developed by the CODEX accele
 
 This repository contains the **Codex Radiation Therapy Implementation Guide (IG)**. An IG is "a set of rules about how FHIR resources are used (or should be used) to solve a particular problem, with associated documentation to support and clarify the usage" ([source](https://www.hl7.org/fhir/implementationguide.html)).
 
-For more information, see: 
+For more information, see:
 
 - [Published version of this IG](http://hl7.org/fhir/us/codexrt/) --**not yet**
 - Continuous integration build of this repository: [main branch](https://build.fhir.org/ig/HL7/codexrt/) or [all branches](https://build.fhir.org/ig/HL7/codexrt/branches/)
@@ -13,7 +13,7 @@ For more information, see:
 
 ## Building the IG
 
-"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation. You can see [the output of building the current contents of this repository here](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/).
+"Building" the IG means generating a web-based, human-readable representation of the structured information and accompanying documentation defined within this repository. This is done via the [FHIR Implementation Guide Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) ("IG Publisher"), a Java program provided by the FHIR team for building IGs into a standardized presentation. You can see [the output of building the current contents of this repository here](https://build.fhir.org/ig/HL7/codex-radiation-therapy/).
 
 If you would like to generate this locally, open command prompt window and navigate to the directory where this repository has been cloned.
 
@@ -32,7 +32,7 @@ With those dependencies in place, then run this command:
 
 This script will do two things automatically for you:
 
-1. Run [SUSHI](http://build.fhir.org/ig/HL7/fhir-shorthand/sushi.html). mCODE is developed in [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FHS files into the JSON files expected by the IG Publisher.
+1. Run [SUSHI](http://build.fhir.org/ig/HL7/fhir-shorthand/sushi.html). CodeX RT is developed in [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FHS files into the JSON files expected by the IG Publisher.
 
 2. Run the IG Publisher.
 
@@ -62,7 +62,7 @@ While not normally necessary, you can delete the following folders to get a clea
 ## Key folders & files in the IG
 
 - The FHIR Shorthand (`.fsh`) files defining the resources in this IG are found in `input/fsh/`.
-    - There is a [FSH syntax highlighting extension](https://marketplace.visualstudio.com/items?itemName=kmahalingam.vscode-language-fsh) for [VSCode](https://code.visualstudio.com). The mCODE team generally uses this set of tools for working on FSH files.
+    - There is a [FSH syntax highlighting extension](https://marketplace.visualstudio.com/items?itemName=kmahalingam.vscode-language-fsh) for [VSCode](https://code.visualstudio.com). The CodeX RT team generally uses this set of tools for working on FSH files.
     - The FSH files are prefixed based on what is contained inside.
 
         | Prefix | Description          |

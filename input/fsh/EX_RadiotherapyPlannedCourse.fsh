@@ -9,11 +9,14 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPlannedCourse)
 // * extension[concurrentTherapy].valueCodeableConcept = SCT#367336001 "Chemotherapy"
 // * extension[concurrentTherapy].valueCodeableConcept.text = "Chemotherapy"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[treatmentIntent].valueCodeableConcept.text = "Curative"
-* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[0] = $mCODESCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-// * extension[http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique][0].valueCodeableConcept.coding[1] = http://varian.com/fhir/CodeSystem/aria-radiotherapyPrescriptionTechnique#ARC "Arc"
+* extension[modalityAndTechnique]
+  * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+  * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity.value = 18
+  * extension[radiotherapyEnergyOrIsotope].valueQuantity = UCUM#MV "MV"
+* extension[imageGuidedRadiotherapyModality][+]
+  * extension[modality][+].valueCodeableConcept = SCT#717193008 "Cone beam computed tomography (procedure)"
+  * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 // Prescription Target Site "Prostate"
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-03-Prostate)
@@ -48,5 +51,4 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-2-Prostate)
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
-* note.text = "Free text note in Radiotherapy Planned Course"
 * locationReference = Reference(TreatmentLocation-1)

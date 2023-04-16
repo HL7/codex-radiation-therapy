@@ -10,6 +10,7 @@ Usage: #example
 RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
 * meta.profile[+] = $mCODERadiotherapyCourseSummary
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
@@ -90,7 +91,6 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-06-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Treated Phase"
 * usedReference[treatmentDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 Instance: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-1Fx
@@ -134,6 +134,7 @@ Usage: #example
 * meta.versionId = "123"
 * meta.lastUpdated = "2021-10-16T10:07:41.050+02:00"
 * meta.profile[+] = Canonical(RadiotherapyPlannedCourse)
+* extension[courseInvolvesReirradiation].valueBoolean = false
 * extension[treatmentIntent]
   * valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
     * text = "Curative"
@@ -143,7 +144,6 @@ Usage: #example
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254776009 "Brachytherapy tandem (physical object)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
-//* extension[radiotherapySessions].valueUnsignedInt = 5
 * extension[radiotherapyDosePlannedToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-06-22B-01-Uterus)
@@ -195,7 +195,6 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-06-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* note.text = "Free text note in Radiotherapy Planned Phase"
 * performer[treatmentOrSeedDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
