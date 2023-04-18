@@ -15,24 +15,27 @@ Usage: #example
 * extension[modalityAndTechnique][+]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-// Prescription Target Site "Left Breast"
+// Prescription Target Site "C1_Breast_L"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
   * extension[totalDose].valueQuantity.value = 5000
   * extension[fractions].valuePositiveInt = 25
-// Prescription Target Site "Left Breast Boost"
+  * extension[primaryPlanDose].valueBoolean = false
+// Prescription Target Site "C1_Scar_Boost"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[totalDose].valueQuantity.value = 6000
   * extension[fractions].valuePositiveInt = 30
-// Prescription Target Site "Right Breast"
+  * extension[primaryPlanDose].valueBoolean = false
+// Prescription Target Site "C1_Breast_R"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[totalDose].valueQuantity.value = 5000
   * extension[fractions].valuePositiveInt = 25
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
-  * value = "Bilateral Breast"
+  * value = "C1_Breast"
 * identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.111.101"
@@ -57,19 +60,21 @@ Usage: #example
   * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
 * extension[radiotherapyFractionsPrescribed].valuePositiveInt = 25
-// Prescription Target Site "Left Breast"
+// Prescription Target Site "C1_Breast_L"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000
-// Prescription Target Site "Left Breast Boost"
+  * extension[primaryPlanDose].valueBoolean = false
+// Prescription Target Site "C1_Scar_Boost"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
-  * value = "Left Breast Tangents"
+  * value = "C1_Breast_L"
 * identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.333.101"
@@ -96,9 +101,10 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 1000
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
-  * value = "Left Breast Boost"
+  * value = "C1_Scar_Boost"
 * identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.333.102"
@@ -124,9 +130,10 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
-  * value = "Right Breast Tangents"
+  * value = "C1_Breast_R"
 * identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.333.103"
@@ -153,28 +160,51 @@ Usage: #example
 * extension[modalityAndTechnique][0]
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-
-// Prescription Target Site "Left Breast"
+// Primary Treatment Plan Reference Point for 1.1Breast_L
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-111-1-1)
+  * extension[totalDoseDelivered].valueQuantity.value = 5000
+  * extension[fractionsDelivered].valueUnsignedInt = 25
+  * extension[uniformFractionation].valueBoolean = true
+  * extension[primaryPlanDose].valueBoolean = true
+// Primary Treatment Plan Reference Point for 1.2Scar_Boost
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-112-1-2)
+  * extension[totalDoseDelivered].valueQuantity.value = 1000
+  * extension[fractionsDelivered].valueUnsignedInt = 5
+  * extension[uniformFractionation].valueBoolean = true
+  * extension[primaryPlanDose].valueBoolean = true
+// Primary Treatment Plan Reference Point for 1.1Breast_R.
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-113-1-3)
+  * extension[totalDoseDelivered].valueQuantity.value = 5000
+  * extension[fractionsDelivered].valueUnsignedInt = 25
+  * extension[uniformFractionation].valueBoolean = true
+  * extension[primaryPlanDose].valueBoolean = true
+// Prescription Tracking Reference Point C1_Breast_L
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
   * extension[totalDoseDelivered].valueQuantity.value = 5000
   * extension[fractionsDelivered].valueUnsignedInt = 25
   * extension[uniformFractionation].valueBoolean = true
-// Prescription Target Site "Left Breast Boost"
+  * extension[primaryPlanDose].valueBoolean = false
+// Prescription Tracking Reference Point C1_Scar_Boost
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[totalDoseDelivered].valueQuantity.value = 6000
   * extension[fractionsDelivered].valueUnsignedInt = 30
   * extension[uniformFractionation].valueBoolean = false
-// Prescription Target Site "Right Breast"
+  * extension[primaryPlanDose].valueBoolean = false
+// Prescription Tracking Reference Point C1_Breast_R
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[totalDoseDelivered].valueQuantity.value = 5000
   * extension[fractionsDelivered].valueUnsignedInt = 25
   * extension[uniformFractionation].valueBoolean = true
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
-  * value = "Bilateral Breast"
+  * value = "C1_Breast"
 * identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.555.101"
@@ -202,17 +232,24 @@ Usage: #example
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
-// Prescription Target Site "Left Breast"
+// Primary Treatment Plan Reference Point for 1.1Breast_L
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-111-1-1)
+  * extension[totalDoseDelivered].valueQuantity.value = 5000
+  * extension[primaryPlanDose].valueBoolean = true
+// Prescription Tracking Reference Point C1_Breast_L
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
   * extension[totalDoseDelivered].valueQuantity.value = 5000
-// Prescription Target Site "Left Breast Boost"
+  * extension[primaryPlanDose].valueBoolean = false
+// Prescription Tracking Reference Point C1_Scar_Boost
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[totalDoseDelivered].valueQuantity.value = 5000
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
-  * value = "Left Breast Tangents"
+  * value = "C1_Breast_L"
 * identifier[official]
   * system = DICOMUID
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.556.101"
@@ -238,10 +275,16 @@ Usage: #example
   * extension[modality].valueCodeableConcept = SCT#45643008 "External beam radiation therapy using electrons (procedure)"
   * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
-// Prescription Target Site "Left Breast Boost"
+// Primary Treatment Plan Reference Point for 1.2Scar_Boost
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-112-1-2)
+  * extension[totalDoseDelivered].valueQuantity.value = 1000
+  * extension[primaryPlanDose].valueBoolean = true
+// Prescription Tracking Reference Point C1_ScarBoost
 * extension[doseDeliveredToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[totalDoseDelivered].valueQuantity.value = 1000
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Left Breast Boost"
@@ -269,9 +312,16 @@ Usage: #example
   * extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
-// Prescription Target Site "Right Breast"
-* extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
-* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity.value = 5000
+// Primary Treatment Plan Reference Point for 1.1Breast_R.
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-113-1-3)
+  * extension[totalDoseDelivered].valueQuantity.value = 5000
+  * extension[primaryPlanDose].valueBoolean = true
+// Prescription Tracking Reference Point C1_Breast_R
+* extension[doseDeliveredToVolume][+]
+  * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
+  * extension[totalDoseDelivered].valueQuantity.value = 5000
+  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Right Breast Tangents"
@@ -291,7 +341,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-101-LeftBreast
 InstanceOf: RadiotherapyVolume
-Description: "Example target volume 'Left Breast'."
+Description: "Prescription Tracking Reference Point C1_Breast_L."
 Usage: #example
 * id = "RadiotherapyVolume-101-LeftBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -300,7 +350,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[displayName]
   * system = VarianDoseReferenceId
-  * value = "Left Breast" // display id
+  * value = "C1_Breast_L" // display id
 * identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.101" // DICOM UID
@@ -312,7 +362,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-102-LeftBreastBoost
 InstanceOf: RadiotherapyVolume
-Description: "Example target volume 'Left Breast Boost'."
+Description: "Prescription Tracking Reference Point C1_Scar_Boost."
 Usage: #example
 * id = "RadiotherapyVolume-102-LeftBreastBoost" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -321,7 +371,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[displayName]
   * system = VarianDoseReferenceId
-  * value = "Left Breast Boost" // display id
+  * value = "C1_Scar_Boost" // display id
 * identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.102" // DICOM UID
@@ -333,7 +383,7 @@ Usage: #example
 
 Instance: RadiotherapyVolume-103-RightBreast
 InstanceOf: RadiotherapyVolume
-Description: "Example target volume 'Right Breast'."
+Description: "Prescription Tracking Reference Point C1_Breast_R."
 Usage: #example
 * id = "RadiotherapyVolume-103-RightBreast" //id of the FHIR Resource
 * meta.versionId = "123" //Version of the resource on the server
@@ -342,7 +392,7 @@ Usage: #example
 * meta.profile[+] = $mCODERadiotherapyVolume
 * identifier[displayName]
   * system = VarianDoseReferenceId
-  * value = "Right Breast" // display id
+  * value = "C1_Breast_R" // display id
 * identifier[dicomUid]
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.103" // DICOM UID
@@ -350,6 +400,60 @@ Usage: #example
 * location = SCT#76752008 "Breast structure (body structure)"
 * locationQualifier[+] = SCT#24028007 "Right (qualifier value)"
 * locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
+* patient = Reference(Patient-101)
+
+Instance: RadiotherapyVolume-111-1-1
+InstanceOf: RadiotherapyVolume
+Description: "Primary Treatment Plan Reference Point for C1_Breast_L."
+Usage: #example
+* id = "RadiotherapyVolume-111-1-1" //id of the FHIR Resource
+* meta.versionId = "123" //Version of the resource on the server
+* meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
+* meta.profile[+] = Canonical(RadiotherapyVolume)
+* meta.profile[+] = $mCODERadiotherapyVolume
+* identifier[displayName]
+  * system = VarianDoseReferenceId
+  * value = "1.3" // display id
+* identifier[dicomUid]
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.111" // DICOM UID
+* morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
+* patient = Reference(Patient-101)
+
+Instance: RadiotherapyVolume-112-1-2
+InstanceOf: RadiotherapyVolume
+Description: "Primary Treatment Plan Reference Point for C1_ScarBoost."
+Usage: #example
+* id = "RadiotherapyVolume-112-1-2" //id of the FHIR Resource
+* meta.versionId = "123" //Version of the resource on the server
+* meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
+* meta.profile[+] = Canonical(RadiotherapyVolume)
+* meta.profile[+] = $mCODERadiotherapyVolume
+* identifier[displayName]
+  * system = VarianDoseReferenceId
+  * value = "1.2" // display id
+* identifier[dicomUid]
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.112" // DICOM UID
+* morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
+* patient = Reference(Patient-101)
+
+Instance: RadiotherapyVolume-113-1-3
+InstanceOf: RadiotherapyVolume
+Description: "Primary Treatment Plan Reference Point for C1_Breast_R."
+Usage: #example
+* id = "RadiotherapyVolume-113-1-3" //id of the FHIR Resource
+* meta.versionId = "123" //Version of the resource on the server
+* meta.lastUpdated = "2020-07-03T10:07:41.050+02:00" //Update of the resource on the server. Not necessarily when the clinical contents was modified
+* meta.profile[+] = Canonical(RadiotherapyVolume)
+* meta.profile[+] = $mCODERadiotherapyVolume
+* identifier[displayName]
+  * system = VarianDoseReferenceId
+  * value = "1.3"
+* identifier[dicomUid]
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.113" // DICOM UID
+* morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
 * patient = Reference(Patient-101)
 
 // --- Patient ---------------------------------------------------------------------------------
