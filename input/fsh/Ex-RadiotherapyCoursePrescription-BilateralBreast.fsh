@@ -20,19 +20,16 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
   * extension[totalDose].valueQuantity.value = 5000
   * extension[fractions].valuePositiveInt = 25
-  * extension[primaryPlanDose].valueBoolean = false
 // Prescription Target Site "C1_Scar_Boost"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[totalDose].valueQuantity.value = 6000
   * extension[fractions].valuePositiveInt = 30
-  * extension[primaryPlanDose].valueBoolean = false
 // Prescription Target Site "C1_Breast_R"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[totalDose].valueQuantity.value = 5000
   * extension[fractions].valuePositiveInt = 25
-  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1_Breast"
@@ -65,13 +62,11 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-101-LeftBreast)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000
-  * extension[primaryPlanDose].valueBoolean = false
 // Prescription Target Site "C1_Scar_Boost"
 * extension[radiotherapyDosePrescribedToVolume][+]
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000
-  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "C1_Breast_L"
@@ -101,7 +96,6 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-102-LeftBreastBoost)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 1000
-  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "C1_Scar_Boost"
@@ -130,7 +124,6 @@ Usage: #example
   * extension[volume].valueReference = Reference(RadiotherapyVolume-103-RightBreast)
   * extension[fractionDose].valueQuantity.value = 200
   * extension[totalDose].valueQuantity.value = 5000
-  * extension[primaryPlanDose].valueBoolean = false
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "C1_Breast_R"
