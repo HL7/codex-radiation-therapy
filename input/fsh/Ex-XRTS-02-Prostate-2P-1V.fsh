@@ -211,7 +211,7 @@ Usage: #example
     * valueReference.display = "Prostate"
   * extension[fractionDose].valueQuantity.value = 180
   * extension[totalDose].valueQuantity.value = 1260
-* extension[radiotherapyReasonForRevisionOrAdaptation].valueCodeableConcept = SCT#373858009 "Radiotherapy course changed - acute radiotherapy toxicity (finding)"
+* extension[radiotherapyReasonForRevisionOrAdaptation].valueCodeableConcept = SCT#373858009 "Radiotherapy course change due to acute radiotherapy toxicity (finding)"
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"
