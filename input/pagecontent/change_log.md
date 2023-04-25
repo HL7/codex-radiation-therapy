@@ -1,5 +1,5 @@
-### CodeX Radiation Therapy STU 1 Publication Version (soon)
-These are the changes that have been made since the ballot version.
+### CodeX Radiation Therapy STU 1 Publication Version
+These are the changes that were made during ballot reconciliation.
 
 #### Narrative Changes
 * Added description of [relationship between the profiles](overview.html#relationships-between-profiles)
