@@ -5,10 +5,10 @@ Description: "Codes requested from SNOMED by CodeX RT, to be issued at a later d
 Terms beginning with 'USCRS-' (for United States Content Request Service) represent requests in April 2023 with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
 * ^experimental = false
-* #USCRS-2023-4_1 "Radiotherapy with free-breathing (procedure)" "Radiotherapy with free-breathing (procedure)"
-* #USCRS-2023-4_2 "Radiotherapy with breath-hold (procedure)" "Radiotherapy with breath-hold (procedure)"
-* #USCRS-2023-4_3 "Radiotherapy without respiratory motion management (procedure)" "Radiotherapy without respiratory motion management (procedure)"
-* #USCRS-2023-4_4 "Radiotherapy with respiratory gating (procedure)" "Radiotherapy with respiratory gating (procedure)"
-* #USCRS-2023-4_5 "Radiotherapy with respiratory tracking (procedure)" "Radiotherapy with respiratory tracking (procedure)"
-* #USCRS-2023-4_6 "Radiotherapy with ITV to account for respiratory motion (procedure)" "Radiotherapy with ITV to account for respiratory motion (procedure)"
-* #USCRS-2023-4_7 "Radiotherapy with compression to reduce respiratory motion (procedure)" "Radiotherapy with compression to reduce respiratory motion (procedure)"
+* #USCRS-34883 "Radiotherapy with free breathing (regime/therapy)" "Radiotherapy with free breathing (regime/therapy)"
+* #USCRS-34884 "Radiotherapy with breath hold (regime/therapy)" "Radiotherapy with breath hold (regime/therapy)"
+* #USCRS-34886 "Radiotherapy without respiratory motion management (regime/therapy)" "Radiotherapy without respiratory motion management (regime/therapy)"
+* #USCRS-34881 "Radiotherapy with respiratory gating (regime/therapy)" "Radiotherapy with respiratory gating (regime/therapy)"
+* #USCRS-34878 "Radiotherapy with real-time tumor tracking (regime/therapy)" "Radiotherapy with real-time tumor tracking (regime/therapy)"
+* #USCRS-34880 "Radiotherapy with (ITV) Internal Target Volume creation" "Radiotherapy with (ITV) Internal Target Volume creation"
+* #USCRS-34882 "Radiotherapy with abdominal compression (regime/therapy)" "Radiotherapy with abdominal compression (regime/therapy)"

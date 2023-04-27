@@ -81,12 +81,12 @@ Invariant:  codexrt-motion-management-none
 Description: "If the respiratory motion management is 'none', then no other respiratory motion management extensions are allowed.
 They would also be 'none' or contradict the 'none'."
 Severity: #error
-Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and valueCodeableConcept.exists(coding.exists(code = 'USCRS-2023-4_1' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs'))) implies extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management').count() = 1"
+Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and valueCodeableConcept.exists(coding.exists(code = 'USCRS-34883' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs'))) implies extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management').count() = 1"
 
 Invariant:  codexrt-free-breathing-technique
 Description: "The extension for the technique of free-breathing motion management is only allowed if motion management is free-breathing."
 Severity: #error
-Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-free-breathing-motion-mgmt-technique') implies extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and valueCodeableConcept.exists(coding.exists(code = 'USCRS-2023-4_1' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs')))"
+Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-free-breathing-motion-mgmt-technique') implies extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and valueCodeableConcept.exists(coding.exists(code = 'USCRS-34883' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs')))"
 
 
 RuleSet: RadiotherapyRequestCommon
