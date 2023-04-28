@@ -1114,3 +1114,6 @@ WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0]
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[834]: The code C143873 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[835]: The code C143930 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[836]: The code C54741 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+
+# Adverse Event valueset cannot be verified...that is OK
+WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-adverse-event-termVS because the value set or a code system it depends on is not known to the validator]
