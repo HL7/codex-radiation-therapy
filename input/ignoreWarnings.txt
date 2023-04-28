@@ -14,7 +14,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-plan').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
 
 
-#CapStmt includes additional slices
+#CapStmt includes additional  slices
 INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[0].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
 INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
 INFORMATION: CapabilityStatement/CodexRTServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
