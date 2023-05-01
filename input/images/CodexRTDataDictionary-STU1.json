@@ -12334,29 +12334,29 @@
       "Value set name": "Radiotherapy Free-Breathing Motion Management Technique Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-free-breathing-motion-mgmt-technique-vs",
       "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-2023-4_4",
-      "Code description": "Radiotherapy with respiratory gating (procedure)"
+      "Code": "USCRS-34878",
+      "Code description": "Radiotherapy with real-time tumor tracking (regime/therapy)"
     },
     {
       "Value set name": "Radiotherapy Free-Breathing Motion Management Technique Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-free-breathing-motion-mgmt-technique-vs",
       "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-2023-4_5",
-      "Code description": "Radiotherapy with respiratory tracking (procedure)"
+      "Code": "USCRS-34880",
+      "Code description": "Radiotherapy with (ITV) Internal Target Volume creation"
     },
     {
       "Value set name": "Radiotherapy Free-Breathing Motion Management Technique Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-free-breathing-motion-mgmt-technique-vs",
       "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-2023-4_6",
-      "Code description": "Radiotherapy with ITV to account for respiratory motion (procedure)"
+      "Code": "USCRS-34881",
+      "Code description": "Radiotherapy with respiratory gating (regime/therapy)"
     },
     {
       "Value set name": "Radiotherapy Free-Breathing Motion Management Technique Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-free-breathing-motion-mgmt-technique-vs",
       "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-2023-4_7",
-      "Code description": "Radiotherapy with compression to reduce respiratory motion (procedure)"
+      "Code": "USCRS-34882",
+      "Code description": "Radiotherapy with abdominal compression (regime/therapy)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
@@ -12509,22 +12509,22 @@
       "Value set name": "Radiotherapy Respiratory Motion Management Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-respiratory-motion-management-vs",
       "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-2023-4_1",
-      "Code description": "Radiotherapy with free-breathing (procedure)"
+      "Code": "USCRS-34883",
+      "Code description": "Radiotherapy with free breathing (regime/therapy)"
     },
     {
       "Value set name": "Radiotherapy Respiratory Motion Management Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-respiratory-motion-management-vs",
       "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-2023-4_2",
-      "Code description": "Radiotherapy with breath-hold (procedure)"
+      "Code": "USCRS-34884",
+      "Code description": "Radiotherapy with breath hold (regime/therapy)"
     },
     {
       "Value set name": "Radiotherapy Respiratory Motion Management Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-respiratory-motion-management-vs",
       "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-2023-4_3",
-      "Code description": "Radiotherapy without respiratory motion management (procedure)"
+      "Code": "USCRS-34886",
+      "Code description": "Radiotherapy without respiratory motion management (regime/therapy)"
     }
   ],
   "extensions": [
