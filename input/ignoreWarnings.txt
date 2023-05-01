@@ -1118,7 +1118,7 @@ WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0]
 # Adverse Event valueset cannot be verified...that is OK
 WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-adverse-event-termVS because the value set or a code system it depends on is not known to the validator]
 
-# These extensions were intended to be broadly used.  Their current content of usage is understood, but we do not want to constrain them in any way that would preclude wide-spread usage. 
+# These extensions were intended to be broadly used.   Their current content of usage is understood, but we do not want to constrain them in any way that would preclude wide-spread usage. 
 WARNING: StructureDefinition/codexrt-dicom-reference: StructureDefinition.context[0]: Review the extension type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 WARNING: StructureDefinition/codexrt-image-guided-radiotherapy-modality: StructureDefinition.context[0]: Review the extension type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 WARNING: StructureDefinition/codexrt-radiotheraphy-reason-for-revision-or-adaptation: StructureDefinition.context[0]: Review the extension type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
