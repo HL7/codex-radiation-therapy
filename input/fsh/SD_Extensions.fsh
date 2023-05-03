@@ -3,6 +3,15 @@ RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
 
+RuleSet: UsualContexts
+* insert ExtensionContext(Procedure)
+* insert ExtensionContext(Procedure.Extension)
+* insert ExtensionContext(ServiceRequest)
+* insert ExtensionContext(ServiceRequest.Extension)
+* insert ExtensionContext(Volume)
+* insert ExtensionContext(Volume.Extension)
+* insert ExtensionContext(Extension)
+
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
 Title: "Number of Prescribed Fractions"
@@ -13,6 +22,7 @@ This extension SHALL only be present if the treatment is structured as countable
 * value[x] ^short = "Number of Prescribed Fractions"
 * value[x] only positiveInt
 * value[x] 1..1
+* insert UsualContexts
 
 Extension: RadiotherapyFractionsPlanned
 Id: codexrt-radiotherapy-fractions-planned
@@ -24,6 +34,7 @@ This extension SHALL only be present if the treatment is structured as countable
 * value[x] ^short = "Number of Planned Fractions"
 * value[x] only positiveInt
 * value[x] 1..1
+* insert UsualContexts
 
 Extension: RadiotherapyFractionsDelivered
 Id: codexrt-radiotherapy-fractions-delivered
@@ -34,6 +45,7 @@ Description: "The total number of fractions (treatment divisions) actually deliv
 * value[x] ^short = "Number of Delivered Fractions"
 * value[x] only unsignedInt //as opposed to planned or prescribed fractions, delivered fractions can be zero.
 * value[x] 1..1
+* insert UsualContexts
 
 // Defined similar to the corresponding delivered dose in mCODE STU2.
 // http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
@@ -59,6 +71,7 @@ RuleSet: DoseToVolumeCommon
   * value[x] 0..1
 
 
+
 Extension: RadiotherapyDosePrescribedToVolume
 Id: codexrt-radiotherapy-dose-prescribed-to-volume
 Title: "Dose Prescribed to Volume"
@@ -77,6 +90,7 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
 * extension[fractions]
   * ^short = "Number of Prescribed Fractions"
   * ^definition = "The prescribed number of fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in phases or plans."
+* insert UsualContexts
 
 
 Extension: RadiotherapyDosePlannedToVolume
@@ -97,7 +111,7 @@ Description: "Dose parameters planned for one radiotherapy volume."
 * extension[fractions]
   * ^short = "Number of Planned Fractions"
   * ^definition = "The planned number of fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in phases or plans."
-
+* insert UsualContexts
 
 Extension: RadiotherapyEnergyOrIsotope
 Id: codexrt-radiotherapy-energy-or-isotope
@@ -115,7 +129,7 @@ For electrons, the maximum energy is given in MeV. For photons, the maximum acce
 * valueCodeableConcept ^short = "The isotope used for radiotherapy."
 * valueCodeableConcept from RadiotherapyIsotopeVS (extensible)
 * value[x] 1..1
-
+* insert UsualContexts
 
 //Copied from https://hl7.org/fhir/R4/imagingstudy.html which contains DICOM references for all images in an imaging study.
 //For general DICOM refernece we may add Series and Study UID.
@@ -150,6 +164,7 @@ Description: "A reference to a DICOM SOP Instance."
   * value[x] 1..1
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
+* insert UsualContexts
 
 Extension: RadiotherapyTreatmentApplicatorType
 Id: codexrt-radiotherapy-treatment-applicator-type
@@ -159,6 +174,7 @@ Description: "Radiotherapy Treatment Applicator Type."
 * value[x] ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] only CodeableConcept
 * value[x] from BrachytherapyApplicatorTypeVS (extensible)
+* insert UsualContexts
 
 Extension: UniformFractionation
 Id: codexrt-radiotherapy-uniform-fractionation
@@ -172,6 +188,8 @@ This is important in registry use cases to efficiently assess whether checking p
 * . 0..1
 * value[x] ^short = "Uniform Fractionation Was Used"
 * value[x] only boolean
+* insert UsualContexts
+
 
 Extension: PrimaryPlanDose
 Id: codexrt-radiotherapy-primary-plan-dose
@@ -183,6 +201,7 @@ In summaries over multiple treatment plans, the flag indicates that the dose is 
 * . 0..1
 * value[x] ^short = "Primary Plan Dose"
 * value[x] only boolean
+* insert UsualContexts
 
 Extension: PointDose
 Id: codexrt-radiotherapy-point-dose
@@ -194,6 +213,7 @@ Since point doses mostly have a technical role, high-level summaries may decide 
 * . 0..1
 * value[x] ^short = "Point Dose"
 * value[x] only boolean
+* insert UsualContexts
 
 Extension: RadiotherapyReasonForRevisionOrAdaptation
 Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
@@ -204,7 +224,7 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (required)
-
+* insert UsualContexts
 
 Extension: RadiotherapyRespiratoryMotionManagement
 Id: codexrt-radiotherapy-respiratory-motion-management
@@ -215,6 +235,7 @@ Description: "Method applied to manage respiratory motion."
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyRespiratoryMotionManagementVS (required)
+* insert UsualContexts
 
 Extension: RadiotherapyFreeBreathingMotionManagementTechnique
 Id: codexrt-radiotherapy-free-breathing-motion-mgmt-technique
@@ -225,6 +246,7 @@ Description: "Technique to manage respiratory motion with free-breathing."
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyFreeBreathingMotionManagementTechniqueVS (required)
+* insert UsualContexts
 
 Extension: CourseInvolvesReirradiation
 Id: codexrt-radiotherapy-course-involves-reirradiation
@@ -234,6 +256,8 @@ Description: "This flag is true if the radiotherapy course of treatment involves
 * . 0..1
 * value[x] ^short = "Course Involves Reirradiation"
 * value[x] only boolean
+* insert UsualContexts
+
 
 Extension: ImageGuidedRadiotherapyModality
 Id: codexrt-image-guided-radiotherapy-modality
@@ -246,6 +270,7 @@ Title: "Image Guided Radiotherapy Modality"
     energy 0..1 MS
 * extension[modality].value[x] from ImageGuidedRadiotherapyModalityVS (required)
 * extension[energy].value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
+* insert UsualContexts
 
 Invariant: IGRTEnergyAllowed
 Description: "Energy is only allowed for X-Ray, Fluorograph, or CT Modalities."
