@@ -11,6 +11,9 @@ RuleSet: UsualContexts
 * insert ExtensionContext(Volume)
 * insert ExtensionContext(Volume.Extension)
 * insert ExtensionContext(Extension)
+* insert ExtensionContext(Observation)
+* insert ExtensionContext(Observation.Extension)
+* insert ExtensionContext(Observation.value.ofType(CodeableConcept))
 
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
