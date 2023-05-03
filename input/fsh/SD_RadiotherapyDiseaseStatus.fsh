@@ -26,6 +26,7 @@ Description: "Extension providing a reference to a RadiotherapyVolume"
 * . ^short = "Radiotherapy Volume"
 * value[x] only Reference(RadiotherapyVolume)
 * value[x] 1..1
+* insert UsualContexts
 
 Extension: DiseaseProgressionQualifier
 Id: codexrt-radiotherapy-progression-qualifier
@@ -35,3 +36,4 @@ Description: "Extension providing a qualifier for a disease progression"
 * value[x] only CodeableConcept
 * value[x] from DiseaseProgressionQualifierVS (required)
 * value[x] 1..1
+* insert UsualContexts
