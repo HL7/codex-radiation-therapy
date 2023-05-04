@@ -14,6 +14,13 @@ Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/
 Alias:   USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias:   USCoreServiceRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
 Alias:   USCoreImplantableDevice = http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+
 // Extensions
 Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+
+// This makes it easy to change the IG to build on USCoreServiceRequest when the time is right.
+Alias: $ServiceRequest = ServiceRequest 
+//Alias: $ServiceRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+
+

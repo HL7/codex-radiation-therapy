@@ -1,7 +1,7 @@
 
 
 Profile: RadiotherapyPlannedPhase
-Parent: ServiceRequest
+Parent: $ServiceRequest
 Id: codexrt-radiotherapy-planned-phase
 Title: "Radiotherapy Planned Phase"
 Description: "A Radiotherapy Planned Phase is the summary over all radiotherapy plans to deliver a single phase of radiotherapy treatment."

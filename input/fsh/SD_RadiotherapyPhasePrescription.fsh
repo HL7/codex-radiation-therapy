@@ -1,6 +1,6 @@
 
 Profile: RadiotherapyPhasePrescription
-Parent: ServiceRequest
+Parent: $ServiceRequest
 Id: codexrt-radiotherapy-phase-prescription
 Title: "Radiotherapy Phase Prescription"
 Description: "A Radiotherapy Phase Prescription is a request for one series of fractionated treatments using radiotherapy.

@@ -1,5 +1,5 @@
 Profile: RadiotherapyTreatmentPlan
-Parent: ServiceRequest
+Parent: $ServiceRequest
 Id: codexrt-radiotherapy-treatment-plan
 Title: "Radiotherapy Treatment Plan"
 Description: "A Radiotherapy Treatment Plan resource describes the radiotherapy treatment that is planned to be delivered with a single treatment plan."

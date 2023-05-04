@@ -1,6 +1,6 @@
 
 Profile: RadiotherapyPlanPrescription
-Parent: ServiceRequest
+Parent: $ServiceRequest
 Id: codexrt-radiotherapy-plan-prescription
 Title: "Radiotherapy Plan Prescription"
 Description: "A Radiotherapy Plan Prescription is a request for radiotherapy treatment with a single treatment plan."
