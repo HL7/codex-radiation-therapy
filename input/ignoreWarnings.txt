@@ -44,6 +44,7 @@ INFORMATION: BodyStructure/RadiotherapyVolume-XRTS-07-22B-01-Uterus: BodyStructu
 INFORMATION: BodyStructure/radiotherapyVolume-01-PTV50: BodyStructure.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume|2.1.0
 
 # Planned Course and Phase extend CodexRT Dose Plan To Volume extension
+INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-03-22B-01-01-Primary: ServiceRequest.extension[7].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|1.0.0
 INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-03-22B-01-01-Primary: ServiceRequest.extension[5].extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|1.0.0-ballot
 INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-03-22B-01-01-Primary: ServiceRequest.extension[5].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|1.0.0-ballot
 INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-03-22B-01-01-Primary: ServiceRequest.extension[6].extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|1.0.0-ballot
@@ -56,6 +57,8 @@ INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-03-22B-01-Prostate-1P
 INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-03-22B-01-Prostate-1P-3V: ServiceRequest.extension[6].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|1.0.0
 INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-03-22B-01-Prostate-1P-3V: ServiceRequest.extension[7].extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|1.0.0
 INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-03-22B-01-Prostate-1P-3V: ServiceRequest.extension[7].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|1.0.0
+
+
 # CodexRT extends some mCODE Extensions
 INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast: Procedure.extension[2].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
@@ -115,6 +118,8 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-1Fx
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-1Fx: Procedure.extension[6].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V: Procedure.extension[5].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V: Procedure.extension[5].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
+INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V-1Fx: Procedure.extension[5].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
+INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V: Procedure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V: Procedure.extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V: Procedure.extension[2].extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V: Procedure.extension[2].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
@@ -164,7 +169,7 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V:
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V-1Fx: Procedure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V-1Fx: Procedure.extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V: Procedure.extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V-1Fx: Procedure.extension[5].extension[1]: This element does not match any known slice defined INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V: Procedure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
+INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V: Procedure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V: Procedure.extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V: Procedure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx: Procedure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
@@ -189,10 +194,9 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation
 
 
 
-# Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl and http://terminology.hl7.org/CodeSystem/MDRAE Messages
-WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event: [Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated]
-INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
-WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1]: Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified%
+# Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl and http://terminology.hl7.org/CodeSystem/MDRAE MessagesWARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event: [Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated]
+#INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
+#WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1]: Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified%
 WARNING: ValueSet.where(id = 'codexrt-radiotherapy-adverse-event-termVS'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/MDRAE
 
 # Bogus errors regarding http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
@@ -1034,3 +1038,5 @@ WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0]
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[834]: The code C143873 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[835]: The code C143930 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[836]: The code C54741 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+
+
