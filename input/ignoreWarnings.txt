@@ -195,7 +195,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation
 
 # Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl and http://terminology.hl7.org/CodeSystem/MDRAE Messages -- some of these are listed as (0 uses), but if deleted here, they will come back to life
 INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
-#WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1]: Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified%
 WARNING: ValueSet.where(id = 'codexrt-radiotherapy-adverse-event-termVS'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/MDRAE
 
 # Bogus errors regarding http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
