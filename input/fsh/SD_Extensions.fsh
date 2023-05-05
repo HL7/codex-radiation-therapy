@@ -1,18 +1,26 @@
 //From mCODE:
+
 RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
 
+RuleSet: ExtensionContextResource(path)
+* insert ExtensionContext({path})
+* insert ExtensionContext({path}.Extension)
+
 RuleSet: UsualContexts
-* insert ExtensionContext(Procedure)
-* insert ExtensionContext(Procedure.Extension)
-* insert ExtensionContext(ServiceRequest)
-* insert ExtensionContext(ServiceRequest.Extension)
-* insert ExtensionContext(Volume)
-* insert ExtensionContext(Volume.Extension)
-* insert ExtensionContext(Extension)
-* insert ExtensionContext(Observation)
-* insert ExtensionContext(Observation.Extension)
+* insert ExtensionContextResource(ImagingStudy)
+* insert ExtensionContextResource(DiagnosticReport)
+* insert ExtensionContextResource(DetectedIssue)
+* insert ExtensionContextResource(ObservationDefinition)
+* insert ExtensionContextResource(Procedure)
+* insert ExtensionContextResource(ServiceRequest)
+* insert ExtensionContextResource(BodyStructure)
+* insert ExtensionContextResource(Extension)
+* insert ExtensionContextResource(Observation)
+* insert ExtensionContextResource(ActivityDefinition)
+* insert ExtensionContextResource(CarePlan)
+* insert ExtensionContextResource(CareDefinition)
 * insert ExtensionContext(Observation.value.ofType(CodeableConcept))
 
 Extension: RadiotherapyFractionsPrescribed
