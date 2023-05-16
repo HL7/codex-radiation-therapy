@@ -19,21 +19,3 @@ Severity: #error
 Expression: "coding.exists(code = '271299001').not()
         implies extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-progression-qualifier').not()"
 
-Extension: RadiotherapyVolumeExtension
-Id: codexrt-radiotherapy-volume-extension
-Title: "Radiotherapy Volume Extension"
-Description: "Extension providing a reference to a RadiotherapyVolume"
-* . ^short = "Radiotherapy Volume"
-* value[x] only Reference(RadiotherapyVolume)
-* value[x] 1..1
-* insert UsualContexts
-
-Extension: DiseaseProgressionQualifier
-Id: codexrt-radiotherapy-progression-qualifier
-Title: "Disease Progression Qualifier"
-Description: "Extension providing a qualifier for a disease progression"
-* . ^short = "Progression Qualifier"
-* value[x] only CodeableConcept
-* value[x] from DiseaseProgressionQualifierVS (required)
-* value[x] 1..1
-* insert UsualContexts

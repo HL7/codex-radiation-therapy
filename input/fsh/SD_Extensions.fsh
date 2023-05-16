@@ -6,22 +6,24 @@ RuleSet: ExtensionContext(path)
 
 RuleSet: ExtensionContextResource(path)
 * insert ExtensionContext({path})
-* insert ExtensionContext({path}.Extension)
+//* insert ExtensionContext({path}.Extension)
 
 RuleSet: UsualContexts
-* insert ExtensionContextResource(ImagingStudy)
-* insert ExtensionContextResource(DiagnosticReport)
-* insert ExtensionContextResource(DetectedIssue)
 * insert ExtensionContextResource(ObservationDefinition)
 * insert ExtensionContextResource(Procedure)
 * insert ExtensionContextResource(ServiceRequest)
-* insert ExtensionContextResource(BodyStructure)
 * insert ExtensionContextResource(Extension)
 * insert ExtensionContextResource(Observation)
 * insert ExtensionContextResource(ActivityDefinition)
 * insert ExtensionContextResource(CarePlan)
 * insert ExtensionContextResource(CareDefinition)
-* insert ExtensionContext(Observation.value.ofType(CodeableConcept))
+// * insert ExtensionContext(Observation.value.ofType(CodeableConcept))
+
+RuleSet: ExpandedContexts
+* insert UsualContexts
+* insert ExtensionContextResource(ImagingStudy)
+* insert ExtensionContextResource(DiagnosticReport)
+* insert ExtensionContextResource(DetectedIssue)
 
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
@@ -175,7 +177,7 @@ Description: "A reference to a DICOM SOP Instance."
   * value[x] 1..1
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
-* insert UsualContexts
+* insert ExpandedContexts
 
 Extension: RadiotherapyTreatmentApplicatorType
 Id: codexrt-radiotherapy-treatment-applicator-type
@@ -282,6 +284,26 @@ Title: "Image Guided Radiotherapy Modality"
 * extension[modality].value[x] from ImageGuidedRadiotherapyModalityVS (required)
 * extension[energy].value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
 * insert UsualContexts
+
+Extension: RadiotherapyVolumeExtension
+Id: codexrt-radiotherapy-volume-extension
+Title: "Radiotherapy Volume Extension"
+Description: "Extension providing a reference to a RadiotherapyVolume"
+* . ^short = "Radiotherapy Volume"
+* value[x] only Reference(RadiotherapyVolume)
+* value[x] 1..1
+* insert ExpandedContexts
+
+Extension: DiseaseProgressionQualifier
+Id: codexrt-radiotherapy-progression-qualifier
+Title: "Disease Progression Qualifier"
+Description: "Extension providing a qualifier for a disease progression"
+* . ^short = "Progression Qualifier"
+* value[x] only CodeableConcept
+* value[x] from DiseaseProgressionQualifierVS (required)
+* value[x] 1..1
+* insert ExtensionContext(Observation)
+
 
 Invariant: IGRTEnergyAllowed
 Description: "Energy is only allowed for X-Ray, Fluorograph, or CT Modalities."

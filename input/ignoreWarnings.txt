@@ -175,23 +175,18 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx
 INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 
 # SUPPRESS US CORE MESSAGES.
-# No variance needed for ServiceRequests, since this is not available in USCore 4.0.1
 # Variance Approved by Cross-Group Projects WG on 11/10/2022: Eric Haas / Brett Marquard: 17-0-1  -  https://jira.hl7.org/browse/FHIR-39341 .
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 # Variance Approved by Cross-Group Projects WG on 10/27/2022: Brett Marquard/Eric Haas: 21-0-1    - https://jira.hl7.org/browse/FHIR-39301
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
 # The IG is based on USCore 4.0.0 (because of mCODE depdendency), which does not provide ServiceRequest profile
-# Variance requsted from Cross-Group Projects WG    -- https://jira.hl7.org/browse/FHIR-XXXXX
+# Variance Approved by Cross-Group Projects WG   5/11/23: Brett Marquard/Isaac Letter: 9-0-0  -- https://jira.hl7.org/browse/FFHIR-41188  
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-course-prescription').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-phase-prescription').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-plan-prescription').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-phase').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-plan').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
-
-
-
-
 
 # Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl and http://terminology.hl7.org/CodeSystem/MDRAE Messages -- some of these are listed as (0 uses), but if deleted here, they will come back to life
 INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
