@@ -1033,3 +1033,5 @@ WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0]
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[836]: The code C54741 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 
 
+# Suppress bogus TX server info relating to http://terminology.hl7.org/5.0.0/CodeSystem-MDRAE.html
+INFORMATION: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[0]: UNKNOWN_CODESYSTEM; The provided code http://hl7.org/fhir/ValueSet/@all is not in the value set '' (from Tx-Server)
