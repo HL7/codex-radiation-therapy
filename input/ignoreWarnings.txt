@@ -58,7 +58,7 @@ INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-03-22B-01-Prostate-1P
 INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-03-22B-01-Prostate-1P-3V: ServiceRequest.extension[7].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|1.0.0
 
 
-# CodexRT extends some mCODE Extensions
+# CodexRT extends some mCODE Extensions, and that is OK, but it generates Info messages
 INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[4].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast: Procedure.extension[2].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast: Procedure.extension[3].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume|2.1.0
@@ -1031,7 +1031,6 @@ WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0]
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[834]: The code C143873 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[835]: The code C143930 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[836]: The code C54741 is not valid in the system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-
 
 # Suppress bogus TX server info relating to http://terminology.hl7.org/5.0.0/CodeSystem-MDRAE.html
 INFORMATION: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1].concept[0]: UNKNOWN_CODESYSTEM; The provided code http://hl7.org/fhir/ValueSet/@all is not in the value set '' (from Tx-Server)
