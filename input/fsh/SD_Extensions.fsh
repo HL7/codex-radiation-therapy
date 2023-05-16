@@ -17,13 +17,15 @@ RuleSet: UsualContexts
 * insert ExtensionContextResource(ActivityDefinition)
 * insert ExtensionContextResource(CarePlan)
 * insert ExtensionContextResource(CareDefinition)
-// * insert ExtensionContext(Observation.value.ofType(CodeableConcept))
+
+
 
 RuleSet: ExpandedContexts
 * insert UsualContexts
 * insert ExtensionContextResource(ImagingStudy)
 * insert ExtensionContextResource(DiagnosticReport)
 * insert ExtensionContextResource(DetectedIssue)
+
 
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
@@ -307,6 +309,8 @@ Description: "Extension providing a qualifier for a disease progression"
 * value[x] from DiseaseProgressionQualifierVS (required)
 * value[x] 1..1
 * insert ExtensionContext(Observation)
+* insert ExtensionContext(CodeableConcept)
+* insert ExtensionContextResource(Extension)
 
 
 Invariant: IGRTEnergyAllowed
