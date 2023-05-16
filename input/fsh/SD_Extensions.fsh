@@ -281,8 +281,12 @@ Title: "Image Guided Radiotherapy Modality"
 * extension contains
     modality 1..1 MS and
     energy 0..1 MS
-* extension[modality].value[x] from ImageGuidedRadiotherapyModalityVS (required)
-* extension[energy].value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
+* extension[modality]
+  * value[x] only CodeableConcept
+  * value[x] from ImageGuidedRadiotherapyModalityVS (required)
+* extension[energy]
+  * value[x] only CodeableConcept
+  * value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
 * insert UsualContexts
 
 Extension: RadiotherapyVolumeExtension
