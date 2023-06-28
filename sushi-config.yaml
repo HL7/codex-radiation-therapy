@@ -102,8 +102,14 @@ groups:
     - StructureDefinition/codexrt-radiotherapy-plan-prescription
     - StructureDefinition/codexrt-radiotherapy-treatment-plan
     - StructureDefinition/codexrt-radiotherapy-treated-plan
+  FractionLevelProfiles:
+    name: D. Fraction Level Profiles
+    description: Fraction Level Profiles
+    resources:
+    - StructureDefinition/codexrt-radiotherapy-treated-fraction
+    - StructureDefinition/codexrt-radiotherapy-session
   ProfilesForAllLevels:
-    name: D. Profiles Referenced from All Levels
+    name: E. Profiles Referenced from All Levels
     description: Profiles referenced from all levels and throughout the radiotherapy workflow.
     resources:
     - StructureDefinition/codexrt-radiotherapy-volume
