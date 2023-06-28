@@ -62,6 +62,39 @@ Description: "The total number of fractions (treatment divisions) actually deliv
 * value[x] 1..1
 * insert UsualContexts
 
+Extension: RadiotherapyFractionNumberInPlan
+Id: codexrt-radiotherapy-fraction-number-in-plan
+Title: "Fraction Number in Plan"
+Description: "The number of the fraction in a radiotherapy treatment plan."
+* . ^short = "Fraction Number in Plan"
+* . 0..1
+* value[x] ^short = "Fraction Number in Plan"
+* value[x] only positiveInt
+* value[x] 1..1
+* insert UsualContexts
+
+Extension: RadiotherapyFractionNumberInPhase
+Id: codexrt-radiotherapy-fraction-number-in-phase
+Title: "Fraction Number in Phase"
+Description: "The number of the fraction in a radiotherapy treatment phase."
+* . ^short = "Fraction Number in Phase"
+* . 0..1
+* value[x] ^short = "Fraction Number in Phase"
+* value[x] only positiveInt
+* value[x] 1..1
+* insert UsualContexts
+
+Extension: RadiotherapySessionNumber
+Id: codexrt-radiotherapy-session-number
+Title: "Session Number"
+Description: "The number of the session a radiotherapy treatment course."
+* . ^short = "Session Number"
+* . 0..1
+* value[x] ^short = "Session Number"
+* value[x] only positiveInt
+* value[x] 1..1
+* insert UsualContexts
+
 // Defined similar to the corresponding delivered dose in mCODE STU2.
 // http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
 RuleSet: DoseToVolumeCommon
@@ -84,7 +117,6 @@ RuleSet: DoseToVolumeCommon
 * extension[fractions]
   * value[x] only positiveInt
   * value[x] 0..1
-
 
 
 Extension: RadiotherapyDosePrescribedToVolume
