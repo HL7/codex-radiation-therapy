@@ -3,7 +3,11 @@ Parent:   USCoreProcedure
 Id:       codexrt-radiotherapy-treated-fraction
 Title: "Radiotherapy Treated Fraction"
 Description: "The treatment of a single fraction of a radiotherapy treatment plan."
-* insert RadiotherapyTreatedPhaseAndPlanCommon
+* obeys codexrt-procedure-status
+* insert ModalityAndTechniqueZeroToOne
+* extension contains
+    $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
+* insert RadiotherapyProcedureCommon
 * ^status = #draft
 * extension contains
     RadiotherapyFractionNumberInPlan named radiotherapyFractionNumberInPlan 1..1 MS and
@@ -19,6 +23,8 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
 * extension[radiotherapyDicomRecord] ^short = "DICOM Treatment Record"
 * extension[radiotherapyDicomRecord] ^definition = "Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions."
 * insert OpenProfileBasedSlicing(basedOn)
+* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
+* subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * basedOn contains
     treatment-plan 0..1 MS and
     planned-phase 0..1 MS
