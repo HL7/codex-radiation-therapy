@@ -174,7 +174,7 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V: Pr
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx: Procedure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0
 
-# SUPPRESS US CORE MESSAGES .
+# SUPPRESS US CORE MESSAGES
 # Variance Approved by Cross-Group Projects WG on 11/10/2022: Eric Haas / Brett Marquard: 17-0-1  -  https://jira.hl7.org/browse/FHIR-39341 .
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 # Variance Approved by Cross-Group Projects WG on 10/27/2022: Brett Marquard/Eric Haas: 21-0-1    - https://jira.hl7.org/browse/FHIR-39301
