@@ -192,3 +192,6 @@ WARNING: ValueSet.where(id = 'codexrt-radiotherapy-adverse-event-termVS'): Error
 
 # Suppress warning relating to EVS/Thesaurus.owl....even if it says 0 uses 
 WARNING: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose[0].include[1]: Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified, so Concepts and Filters can't be checked (Details: The CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl is unknown (from Tx-Server))
+
+# All of these are isotope terms, and they are as expected
+INFORMATION: ValueSet/codexrt-radiotherapy-isotope-vs: ValueSet.compose[0].include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended
