@@ -9,7 +9,7 @@ status: draft
 version: 1.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: ci-build
+releaseLabel: STU 1
 title: "CodeX Radiation Therapy"
 publisher:
   name: HL7 Cross Group Projects Work Group
