@@ -322,14 +322,10 @@ Severity: #error
 //* SCT#717193008 "Cone beam computed tomography (procedure)" // Cone beam CT
 Expression: "extension.where(url = 'energy').exists() implies \n
                (extension.where(url = 'modality').exists() and \n
-                (extension.where(url = 'modality').value.exists(\n
-                    (coding.system = 'http://snomed.info/sct') and \n
-                      (coding.code = '168537006' or \n
-                      coding.code = '44491008' or \n
-                      coding.code = '77477000' or \n
-                      coding.code = '717193008' \n
-                    )\n
-                  )\n
-                )\n
-              )"
+                extension.where(url = 'modality').value.exists() and \n
+                extension.where(url = 'modality').value.coding.all(\n
+                    (system = 'http://snomed.info/sct') and \n
+                    (code = '168537006' or code  = '44491008' or code  = '77477000' or code  = '717193008') \n
+                 )\n
+               )"
 XPath: "true()"
