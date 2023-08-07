@@ -79,7 +79,7 @@ RuleSet: MotionManagement
 
 Invariant:  codexrt-motion-management-none
 Description: "If the respiratory motion management is 'none', then no other respiratory motion management extensions are allowed.
-They would also be 'none' or contradict the 'none'.  
+They would also be 'none' or contradict the 'none'.
 SNOMEDCT code 721031000124102 is \"Radiotherapy without respiratory motion management (regime/therapy)\""
 Severity: #error
 Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and value.exists(coding.exists(code = '721031000124102' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs'))) implies extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management').count() = 1"
@@ -120,8 +120,11 @@ RuleSet: RadiotherapyRequestCommon
 * insert BodySiteQualifierAndLaterality
 * insert OpenProfileBasedSlicing(performer)
 * performer contains
-    treatmentOrSeedDevice 0..* MS
-* performer[treatmentOrSeedDevice] only  Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
+    treatmentOrSeedDevice 0..* MS and
+    organization 0..* MS
+* performer[treatmentOrSeedDevice] only Reference(RadiotherapyTreatmentDevice or RadiotherapySeedDevice)
+* performer[organization] only Reference(USCoreOrganization)
+* performer[organization] ^short = "Organization responsible for the treatment."
 * performer MS
 * performer[treatmentOrSeedDevice] ^short = "Radiotherapy Treatment Device or Seed Device used as part of therapy."
 * locationReference only Reference(USCoreLocation)
@@ -138,6 +141,12 @@ RuleSet: RadiotherapyProcedureCommon
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
 * performedPeriod.end MS
 * performedPeriod.end ^short = "An end date is expected if the status is 'stopped' or 'completed'"
+* performer MS
+* insert OpenProfileBasedSlicingSubfield(performer, actor)
+* performer contains
+    organization 0..* MS
+* performer[organization] ^short = "Organization responsible for the treatment."
+* performer[organization].actor only Reference(USCoreOrganization)
 * insert OpenProfileBasedSlicing(usedReference)
 * usedReference contains
     treatmentDevice 0..* MS
