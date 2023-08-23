@@ -97,6 +97,9 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
+  * extension[biologicallyEffectiveDose].valueQuantity
+    * unit = "BEK(a/b=2.5)"
+    * value = 52.0 
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-03-SemVs)
