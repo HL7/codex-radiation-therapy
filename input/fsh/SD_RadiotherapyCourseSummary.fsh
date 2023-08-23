@@ -1,6 +1,6 @@
 Invariant:   TG263BED
 Description: "Unit must match TG263 BED Regexp"
-Expression:  "$this.toString().matches('^(BED|EQD2Gy|CGE|TD50)([(](([a-z][^=]*)=(.*))([,]([a-z][^=]*)([=])(.*))*[)])?')"
+Expression:  "$this.toString().matches('^(NTCP|BED|EQD2Gy|CGE|TD50)([(](([a-z][^=]*)=(.*))([,]([a-z][^=]*)([=])(.*))*[)])?')"
 Severity:    #warning
 
 Extension: BiologicallyEffectiveDose
