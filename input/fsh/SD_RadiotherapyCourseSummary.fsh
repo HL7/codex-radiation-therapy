@@ -1,3 +1,21 @@
+Invariant:   TG263BED
+Description: "Unit must match TG263 BED Regexp"
+Expression:  "$this.toString().matches('^(BED|EQD2Gy|CGE|TD50)([(](([a-z][^=]*)=(.*))([,]([a-z][^=]*)([=])(.*))*[)])?')"
+Severity:    #warning
+
+Extension: BiologicallyEffectiveDose
+Id: codexrt-radiotherapy-biologically-effective-dose
+Title: "Biologically Effective Dose Extension"
+Description: "Extension providing biologically effective dose"
+* . ^short = "Radiotherapy Biologically Effective Dose"
+* insert ExpandedContexts
+* value[x] only Quantity
+* valueQuantity.unit 1..1
+* valueQuantity.unit obeys TG263BED
+* valueQuantity.value 1..1
+* value[x] 1..1
+
+
 Profile: RadiotherapyCourseSummary
 Parent: $mCODERadiotherapyCourseSummary
 Id: codexrt-radiotherapy-course-summary
@@ -11,7 +29,8 @@ Whenever new contributions in the scope of the same course are delivered, this r
     ImageGuidedRadiotherapyModality named imageGuidedRadiotherapyModality 0..* MS and
     CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
 * extension[doseDeliveredToVolume].extension contains
-    UniformFractionation named uniformFractionation 1..1 MS
+    UniformFractionation named uniformFractionation 1..1 MS and
+    BiologicallyEffectiveDose named biologicallyEffectiveDose 0..1 MS 
 * insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     planned-course 0..1 MS and
