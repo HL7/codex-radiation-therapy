@@ -1,3 +1,9 @@
+### CodeX Radiation Therapy Continue Integration Build
+These changes were added to the CI build, and have not been formally published.
+
+#### Biologically Effective Dose 
+* Added a [BiologicallyEffectiveDose] extension to the [RadiotherapyDosePrescribedToVolume] extension that is included in all of the procedure profiles ([RadiotherapyCourseSUmmary], [RadiotherapyTreatedPhase], [RadiotherapyTreatedPlan]) that includes the Biologically Effective dose in TG263-defined units.
+
 ### CodeX Radiation Therapy STU 1 Publication Version
 These are the changes that were made during ballot reconciliation.
 

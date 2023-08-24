@@ -333,3 +333,29 @@ Expression: "extension.where(url = 'energy').exists() implies \n
                 )\n
               )"
 XPath: "true()"
+
+Invariant:   TG263BED
+Description: "Unit must match TG263 BED Regexp"
+Expression:  "$this.toString().matches('(CGE$)|(BED|EQD2Gy)([(]a\\/b=[0-9]*.?[0-9]*[)])?$')"
+Severity:    #warning
+
+Extension: BiologicallyEffectiveDose
+Id: codexrt-radiotherapy-biologically-effective-dose
+Title: "Biologically Effective Dose Extension"
+Description: "Extension providing biologically effective dose.  The following forms are supported:
+       CGE 
+       BED
+       BED(a/b=<decimal>)
+       EQD2Gy
+       EQD2Gy(a/b=<decimal>)
+"
+* . ^short = "Radiotherapy Biologically Effective Dose"
+* insert ExpandedContexts
+* value[x] only Quantity
+//* valueQuantity.unit 1..1
+* valueQuantity.code 1..1 
+* valueQuantity.code obeys TG263BED
+// valueQuantity.unit is the display value
+* valueQuantity.value 1..1
+* value[x] 1..1
+

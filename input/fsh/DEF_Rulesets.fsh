@@ -132,7 +132,8 @@ RuleSet: RadiotherapyProcedureCommon
 * insert Identifiers
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and
-    PrimaryPlanDose named primaryPlanDose 0..1 MS
+    PrimaryPlanDose named primaryPlanDose 0..1 MS and 
+    BiologicallyEffectiveDose named biologicallyEffectiveDose 0..1 MS 
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."

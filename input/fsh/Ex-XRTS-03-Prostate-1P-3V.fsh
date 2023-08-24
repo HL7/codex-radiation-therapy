@@ -98,7 +98,8 @@ Usage: #example
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
   * extension[biologicallyEffectiveDose].valueQuantity
-    * unit = "BEK(a/b=2.5)"
+    * code = #BEK(a/b=2.5)
+    * unit = "Biologically Effective Does alpha/beta = 2.5"
     * value = 52.0 
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
@@ -110,7 +111,8 @@ Usage: #example
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
   * extension[biologicallyEffectiveDose].valueQuantity
-    * unit = "BED(a/b=2.5)"
+    * code = #BED(a/b=2.5)
+    * unit = "Biologically Effective Does alpha/beta = 2.5"
     * value = 52.0 
 * status = #completed
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
