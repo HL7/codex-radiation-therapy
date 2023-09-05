@@ -343,19 +343,22 @@ Extension: BiologicallyEffectiveDose
 Id: codexrt-radiotherapy-biologically-effective-dose
 Title: "Biologically Effective Dose Extension"
 Description: "Extension providing biologically effective dose.  The following forms are supported:
-       CGE 
-       BED
-       BED(a/b=<decimal>)
-       EQD2Gy
-       EQD2Gy(a/b=<decimal>)
+       CGE  - Cobalt Gray Equivalent 
+       BED  - Biological Effective Dose
+       BED(a/b=<decimal>) - BED with alpha/beta
+       EQD2Gy -  Equivalent Dose in 2 Gy per Fraction 
+       EQD2Gy(a/b=<decimal>) - EQD2Gy with alpha/beta
+
+The units are assumed to by Gy.
 "
 * . ^short = "Radiotherapy Biologically Effective Dose"
 * insert ExpandedContexts
 * value[x] only Quantity
 //* valueQuantity.unit 1..1
-* valueQuantity.code 1..1 
-* valueQuantity.code obeys TG263BED
+* valueQuantity.unit 1..1 
+* valueQuantity.unit obeys TG263BED
 // valueQuantity.unit is the display value
+// Code and System are optional.  Assumed to by Gy
 * valueQuantity.value 1..1
 * value[x] 1..1
 
