@@ -134,6 +134,7 @@ RuleSet: RadiotherapyProcedureCommon
     PointDose named pointDose 0..1 MS and
     PrimaryPlanDose named primaryPlanDose 0..1 MS and 
     BiologicallyEffectiveDose named biologicallyEffectiveDose 0..1 MS 
+* extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^short = "Total Physical Radiation Dose Delivered"
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
@@ -178,6 +179,10 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a phase, all volumes are involved in all fractions."
   * extension[fractions] ^definition = "Not used in this profile. In a phase, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of fractions for different volumes, multiple phases have to be defined."
+  * extension contains
+    BiologicallyEffectiveDose named biologicallyEffectiveDose 0..1 MS 
+  * extension[totalDose] ^short = "Total Physical Radiation Dose Planned"
+
 
 RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
@@ -190,6 +195,9 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions."
   * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPrescribed."
+  * extension[totalDose] ^short = "Total Physical Radiation Dose Prescribed"
+  * extension contains
+    BiologicallyEffectiveDose named biologicallyEffectiveDose 0..1 MS 
 
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * obeys codexrt-procedure-status
