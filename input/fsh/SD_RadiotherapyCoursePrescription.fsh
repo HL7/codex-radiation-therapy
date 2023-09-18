@@ -10,7 +10,10 @@ Description: "A Radiotherapy Course Prescription is a high-level request for a c
     $mCODEProcedureIntent named treatmentIntent 0..1 MS and
     RadiotherapyDosePrescribedToVolume named radiotherapyDosePrescribedToVolume 0..* MS and
     CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
+
 * extension[radiotherapyDosePrescribedToVolume]
+  * extension contains
+    BiologicallyEffectiveDose named biologicallyEffectiveDose 0..1 MS 
   * extension[fractionDose] 0..0
   * extension[fractionDose] ^short = "Not used in this profile. See Radiotherapy Phase Prescriptions for detailed fractionation."
   * extension[fractionDose] ^definition = "Fraction dose is not defined in the Radiotherapy Course Prescription because dose may not be equal in all fractions in which this volume receives dose."
