@@ -293,7 +293,7 @@ Title: "Image Guided Radiotherapy Modality"
 
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
-Title: "Radiotherapy Volume Extension"
+Title: "Radiotherapy Volume"
 Description: "Extension providing a reference to a RadiotherapyVolume"
 * . ^short = "Radiotherapy Volume"
 * value[x] only Reference(RadiotherapyVolume)
