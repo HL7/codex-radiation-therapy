@@ -97,7 +97,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
-  * extension[biologicallyEffectiveDose].valueQuantity
+  * extension[radiobiologicMetric].valueQuantity
     * code = #BEK(a/b=2.5)
     * unit = "Biologically Effective Does alpha/beta = 2.5"
     * value = 52.0 
@@ -110,7 +110,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
-  * extension[biologicallyEffectiveDose].valueQuantity
+  * extension[radiobiologicMetric].valueQuantity
     * code = #BED(a/b=2.5)
     * unit = "Biologically Effective Does alpha/beta = 2.5"
     * value = 52.0 

@@ -13,7 +13,7 @@ Description: "A Radiotherapy Course Prescription is a high-level request for a c
 
 * extension[radiotherapyDosePrescribedToVolume]
   * extension contains
-    BiologicallyEffectiveDose named biologicallyEffectiveDose 0..1 MS 
+    RadiobiologicMetric named radiobiologicMetric 0..1 MS 
   * extension[fractionDose] 0..0
   * extension[fractionDose] ^short = "Not used in this profile. See Radiotherapy Phase Prescriptions for detailed fractionation."
   * extension[fractionDose] ^definition = "Fraction dose is not defined in the Radiotherapy Course Prescription because dose may not be equal in all fractions in which this volume receives dose."

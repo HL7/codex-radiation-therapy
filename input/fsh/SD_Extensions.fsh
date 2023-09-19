@@ -334,29 +334,21 @@ Expression: "extension.where(url = 'energy').exists() implies \n
               )"
 XPath: "true()"
 
-Invariant:   TG263BED
-Description: "Unit must match TG263 BED Regexp"
+Invariant:   TG263RadiobiologicMetric
+Description: "Unit SHOULD match TG263 Radiobiologic Metric Regexp"
 Expression:  "$this.toString().matches('(CGE$)|(BED|EQD2Gy)([(]a\\/b=[0-9]*.?[0-9]*[)])?$')"
 Severity:    #warning
 
-Extension: BiologicallyEffectiveDose
-Id: codexrt-radiotherapy-biologically-effective-dose
-Title: "Biologically Effective Dose Extension"
-Description: "Extension providing biologically effective dose.  The following forms are supported:
-       CGE  - Cobalt Gray Equivalent 
-       BED  - Biological Effective Dose
-       BED(a/b=<decimal>) - BED with alpha/beta
-       EQD2Gy -  Equivalent Dose in 2 Gy per Fraction 
-       EQD2Gy(a/b=<decimal>) - EQD2Gy with alpha/beta
-
-The units are assumed to by Gy.
-"
+Extension: RadiobiologicMetric
+Id: codexrt-radiobiologic-metric
+Title: "Radiobiologic Metric Extension"
+Description: "Extension providing radiobiologic dose metric"
 * . ^short = "Radiotherapy Biologically Effective Dose"
 * insert ExpandedContexts
 * value[x] only Quantity
 //* valueQuantity.unit 1..1
 * valueQuantity.unit 1..1 
-* valueQuantity.unit obeys TG263BED
+* valueQuantity.unit obeys TG263RadiobiologicMetric
 // valueQuantity.unit is the display value
 // Code and System are optional.  Assumed to by Gy
 * valueQuantity.value 1..1

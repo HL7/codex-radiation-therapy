@@ -13,7 +13,7 @@ Whenever new contributions in the scope of the same course are delivered, this r
 * extension[doseDeliveredToVolume].extension contains
     UniformFractionation named uniformFractionation 1..1 MS 
     // and
-    //BiologicallyEffectiveDose named biologicallyEffectiveDose 0..1 MS 
+    //RadiobiologicMetric named radiobiologicMetric 0..1 MS 
 * insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     planned-course 0..1 MS and
