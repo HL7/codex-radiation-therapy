@@ -1,3 +1,8 @@
+ {:.stu-note}
+<div class="stu-note" markdown="1">
+This version STU1.1.0-cibuild of the CodeX Radiation Therapy FHIR Implementation Guide contains unballoted changes to the published STU1 version.  A detailed list of these changes are available on  the  [Change Log](change_log.html) page.
+</div><!-- stu-note -->
+
 ### Background
 Radiation therapy treatment details – critical for care coordination – are not readily available in information systems beyond radiation oncology information technology (IT) modules. Furthermore, creation of radiation therapy (RT) treatment summary documents is often a manual process, creating clinician burden and potential patient safety issues. Historical RT summary documents tend to be comprised of unstructured data; therefore, providers have been unable to leverage this information to meet reporting requirements (e.g., quality reporting, registry reporting) or support comparative effectiveness research without additional manual data entry.
 

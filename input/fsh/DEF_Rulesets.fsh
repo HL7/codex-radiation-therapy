@@ -79,7 +79,7 @@ RuleSet: MotionManagement
 
 Invariant:  codexrt-motion-management-none
 Description: "If the respiratory motion management is 'none', then no other respiratory motion management extensions are allowed.
-They would also be 'none' or contradict the 'none'.  
+They would also be 'none' or contradict the 'none'.
 SNOMEDCT code 721031000124102 is \"Radiotherapy without respiratory motion management (regime/therapy)\""
 Severity: #error
 Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and value.exists(coding.exists(code = '721031000124102' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs'))) implies extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management').count() = 1"
@@ -133,6 +133,7 @@ RuleSet: RadiotherapyProcedureCommon
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and
     PrimaryPlanDose named primaryPlanDose 0..1 MS
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
@@ -200,7 +201,6 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * insert RadiotherapyProcedureCommon
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
-* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * reasonCode MS
 * reasonCode from $mCODECancerDisorderVS (extensible)
