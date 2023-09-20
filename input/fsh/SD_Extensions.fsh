@@ -341,7 +341,7 @@ Severity:    #warning
 
 Extension: RadiobiologicMetric
 Id: codexrt-radiobiologic-metric
-Title: "Radiobiologic Metric Extension"
+Title: "Radiobiologic Metric"
 Description: "Extension providing radiobiologic dose metric"
 * . ^short = "Radiotherapy Biologically Effective Dose"
 * insert ExpandedContexts
