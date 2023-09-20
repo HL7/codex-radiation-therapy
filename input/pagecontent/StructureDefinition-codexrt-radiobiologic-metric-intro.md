@@ -3,9 +3,9 @@ This extension is used to capture the radiobiologic metric of effective dose, as
 in Radiation Oncology](https://www.aapm.org/pubs/reports/RPT_263.pdf). The following metric are supported:
 * CGE  - Cobalt Gray Equivalent 
 * BED  - Biological Effective Dose
-* BED(a/b=<decimal>) - BED with alpha/beta
+* BED(a/b=\<decimal\>) - BED with alpha/beta
 * EQD2Gy -  Equivalent Dose in 2 Gy per Fraction 
-* EQD2Gy(a/b=<decimal>) - EQD2Gy with alpha/beta
+* EQD2Gy(a/b=\<decimal\>) - EQD2Gy with alpha/beta
 
 The units are assumed to be Gy.
 
