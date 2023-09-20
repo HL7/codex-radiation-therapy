@@ -1,4 +1,4 @@
-[RadiotherapyDoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-dose-delivered-to-volume.html
+
 [CodexrtRadiotherapyCoursePrescription]: StructureDefinition-codexrt-radiotherapy-course-prescription.html
 [CodexrtRadiotherapyPlannedCourse]: StructureDefinition-codexrt-radiotherapy-planned-course.html
 [CodexrtRadiotherapyCourseSummary]: StructureDefinition-codexrt-radiotherapy-course-summary.html
@@ -82,3 +82,4 @@
 [mCODE ProcedureIntent]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-procedure-intent.html
 [mCODE Radiotherapy Course Summary]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html
 [mCode Cancer-related Surgical Procedure]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-related-surgical-procedure.html
+[mCode RadiotherapyDoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-dose-delivered-to-volume.html
