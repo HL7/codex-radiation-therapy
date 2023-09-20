@@ -9,6 +9,7 @@
 Instance: Patient-id
 InstanceOf: SearchParameter
 Title: "Search by _id in Patients with multipleOr"
+Usage: #definition 
 * url = "http://hl7.org/fhir/us/codex-radiation-therapy/SearchParameter/Patient-id"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * name = "PatientIdSearchParameter"
@@ -26,6 +27,7 @@ Title: "Search by _id in Patients with multipleOr"
 Instance: Condition-code
 InstanceOf: SearchParameter
 Title: "Search by code:in in Conditions"
+Usage: #definition 
 * url = "http://hl7.org/fhir/us/codex-radiation-therapy/SearchParameter/Condition-code"
 * name = "ConditionCodeSearchParameter"
 * status = #draft
