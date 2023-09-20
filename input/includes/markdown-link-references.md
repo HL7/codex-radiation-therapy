@@ -1,3 +1,4 @@
+[RadiotherapyDoseDeliveredToVolume]: https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-dose-delivered-to-volume.html
 [CodexrtRadiotherapyCoursePrescription]: StructureDefinition-codexrt-radiotherapy-course-prescription.html
 [CodexrtRadiotherapyPlannedCourse]: StructureDefinition-codexrt-radiotherapy-planned-course.html
 [CodexrtRadiotherapyCourseSummary]: StructureDefinition-codexrt-radiotherapy-course-summary.html
