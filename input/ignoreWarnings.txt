@@ -144,6 +144,7 @@ INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-04-Prostate: ServiceReques
 INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-06-22B-01-Uterus-1P-1V: ServiceRequest.extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
 INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-06-22B-01-Uterus-1P-1V: ServiceRequest.extension[2].extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
 INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-06-22B-01-Uterus-1P-1V: ServiceRequest.extension[2].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
+INFORMATION: Procedure/RadiotherapyTreatedFraction-05-Prostate-Phase1-Plan1-Fx2: Procedure.extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|2.1.0
 
 #  CodexRT extends mCODE Radiotherapy Course Summary....that is OK
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-1Fx: Procedure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|2.1.0

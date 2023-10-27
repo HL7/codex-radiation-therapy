@@ -207,8 +207,8 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * reasonReference MS
 * bodySite MS
 * bodySite from $mCODERadiotherapyTreatmentLocationVS (required)
-* bodySite ^short = "All body structure(s) treated with this plan"
-* bodySite ^definition = "Coded body structure(s) treated with this radiotherapy treatment plan. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
+* bodySite ^short = "All body structure(s) treated with this procedure."
+* bodySite ^definition = "Coded body structure(s) treated with this radiotherapy treatment procedure. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 
 RuleSet: SCTCopyright
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
