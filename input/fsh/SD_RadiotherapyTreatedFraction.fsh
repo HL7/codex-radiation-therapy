@@ -15,6 +15,7 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
     DicomReference named radiotherapyDicomRecord 0..*
 * code = SnomedRequestedCS#USCRS-99999901 "Radiotherapy treatment fraction (regime/therapy)"
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the delivered fraction number in the top-level extension radiotherapyFractionNumberInPlan."
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within this fraction, not including dose from any other fraction."
 * extension[radiotherapyFractionNumberInPlan] ^short = "Fraction Number in Plan"
 * extension[radiotherapyFractionNumberInPlan] ^definition = "The fraction number that was treated in the plan."
@@ -23,7 +24,6 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
 * extension[radiotherapyDicomRecord] ^short = "DICOM Treatment Record"
 * extension[radiotherapyDicomRecord] ^definition = "Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions."
 * insert OpenProfileBasedSlicing(basedOn)
-* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * basedOn contains
     treatment-plan 0..1 MS and
@@ -41,5 +41,4 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
 * partOf[treated-plan] only Reference(RadiotherapyTreatedPlan)
 * partOf[treated-phase] only Reference(RadiotherapyTreatedPhase)
 * encounter MS
-* encounter only Reference(RadiotherapySession)
-
+* encounter only Reference(RadiotherapyTreatmentSession)

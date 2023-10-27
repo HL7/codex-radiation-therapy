@@ -1,9 +1,10 @@
-Instance: RadiotherapySession-2
-InstanceOf: RadiotherapySession
-Title: "Radiotherapy Session 2"
+Instance: RadiotherapyTreatmentSession-2
+InstanceOf: RadiotherapyTreatmentSession
+Title: "Radiotherapy Treatment Session 2"
 Description: "An example radiotherapy treatment session."
 Usage: #example
 * meta.security = v3-ActReason#HTEST
+* extension[radiotherapySessionNumber].valuePositiveInt = 2
 * status = #finished
 * class =  v3-ActCode#AMB "ambulatory"
 // type is mandatory in US Core. Extensible binding to http://hl7.org/fhir/us/core/STU4/ValueSet-us-core-encounter-type.html

@@ -1,8 +1,8 @@
-Profile:  RadiotherapySession
+Profile:  RadiotherapyTreatmentSession
 Parent:   USCoreEncounter
-Id:       codexrt-radiotherapy-session
-Title: "Radiotherapy Session"
-Description: "A radiotherapy session with the patient."
+Id:       codexrt-radiotherapy-treatment-session
+Title: "Radiotherapy Treatment Session"
+Description: "A radiotherapy treatment session with the patient."
 * ^status = #draft
 * extension contains
   RadiotherapySessionNumber named radiotherapySessionNumber 0..1 MS

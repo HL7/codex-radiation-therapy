@@ -94,6 +94,7 @@ Description: "The number of the session a radiotherapy treatment course."
 * value[x] only positiveInt
 * value[x] 1..1
 * insert UsualContexts
+* insert ExtensionContextResource(Encounter)
 
 // Defined similar to the corresponding delivered dose in mCODE STU2.
 // http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume

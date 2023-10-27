@@ -3,9 +3,9 @@ The profiles defined in this IG cover different stages of the radiotherapy workf
 
 In radiotherapy, a *phase* is a subset of a course. A phase is defined as a treatment consisting of one or more identical fractions. See the [Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2.1/glossary.html).
 
-At the most detailed level, *treatment plans* define how the radiotherapy treatment is delivered.
+On a more detailed level, *treatment plans* define how the radiotherapy treatment is delivered.
 
-Note that in radiotherapy, a *treatment plan* represents a concrete set of treatment delivery instructions prepared for a specific patient anatomy and machine ([Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2.1/glossary.html)). It is the most specific and most detailed concept in this model. The concept of a radiotherapy *treatment plan* includes the lowest level of machine instructions to control a treatment device. However, these details are not modelled in the FHIR representation of a radiotherapy treatment plan. Instead, the respective ServiceRequest (Radiotherapy Treatment Plan) includes an extension to reference the DICOM artifacts that define the machine geometry and motion during treatment. The Procedure that records the delivered treatment (Radiotherapy Treated Plan), references DICOM treatment records that contain all machine details.
+Note that in radiotherapy, a *treatment plan* represents a concrete set of treatment delivery instructions prepared for a specific patient anatomy and machine ([Radiotherapy Glossary](http://hl7.org/fhir/us/mcode/STU2.1/glossary.html)). The concept of a radiotherapy *treatment plan* includes the lowest level of machine instructions to control a treatment device. However, these details are not modelled in the FHIR representation of a radiotherapy treatment plan. Instead, the respective ServiceRequest (Radiotherapy Treatment Plan) includes an extension to reference the DICOM artifacts that define the machine geometry and motion during treatment. The Procedure that records the delivered treatment (Radiotherapy Treated Plan), references DICOM treatment records that contain all machine details.
 
 The relationship between a course, phases, and treatment plans is exemplified in the following diagram.
 
@@ -21,16 +21,33 @@ The following figure shows the resource profiles to represent the radiotherapy r
 
 - *Radiotherapy Prescriptions* (left column) are *original orders* (ServiceRequest.intent = original-order) for radiotherapy. Prescriptions can request treatment with a single treatment plan (Radiotherapy Plan Prescription), or can represent a cumulative request for a phase of treatment (Radiotherapy Phase Prescription) or for a complete course (Radiotherapy Course Prescription).
 - *Radiotherapy Plans* (middle column) are *filler orders* (ServiceRequest.intent = filler-order) that represent how the radiotherapy system fulfills the prescribed radiotherapy treatment. A ServiceRequest can request a single plan (Radiotherapy Treatment Plan), or the sum of plans for a complete phase (Radiotherapy Planned Phase), or the sum of plans for the entire course of treatment (Radiotherapy Planned Course).
-- *Radiotherapy Procedures* (right column) document the treatment that was performed on different levels of detail (Radiotherapy Course Summary, Radiotherapy Treated Phase, Radiotherapy Treated Plan).
+- *Radiotherapy Procedures* (right column) document the treatment that was performed on different levels of detail (Radiotherapy Course Summary, Radiotherapy Treated Phase, Radiotherapy Treated Plan, Radiotherapy Treated Fraction).
 
 <img src="RTResourcesHighLevel.svg" alt="RT Summary Resources Model" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
-While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases.
+While treatment is in progress, a consumer of these resources can retrieve the current version of the in-progress Radiotherapy Course Summary to get the current state of treatment delivery. If interested in how the treatment is structured, the observer can also retrieve the lower-level Procedures. A treatment observer can additionally retrieve the ServiceRequests referenced from these Procedures to find what was planned and prescribed. A typical overview of how far the treatment has progressed can be created by comparing the delivered dose and number of fractions in the Treated Phases to the respective planned dose and number of fractions in the Planned Phases. To show a timeline when each fraction of a treatement was delivered, a consumer can query the Treated Fractions and Treatment Session resources.
 
 ### Relationships Between Profiles
 The hierarchical and prescribing relationships among the profiles defined within the IG are maintained using the Procedure.partOf, Procedure.basedOn, and ServiceRequest.basedOn references.  Procedure.basedOn represents the request for this procedure, whereas Procedure.partOf represents the larger event of which this procedure is a part.  Ideally, all of these references would be populated, and the references would point to profiles to the left or above each profile in the middle or bottom row.  Since sometimes elements in the middle or bottom row may be skipped, references are also allowed between profiles in the bottom row and rightmost column to profiles in the top row or leftmost column, respectively as show in this figure.
 
 <img src="relationshipsBetweenProfiles.svg" alt="Relationship Between Profiles" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+### Session and Fraction Numbering
+The following figure shows an example treatment consisting of three phases. This level of detail down to individual fractions is required to create timelines and show which treatments took place on which date. The Procedures and Encounters that represent Treated Fractions and Treatment Sessions only need to be retrieved by applications that require this level of detail.
+
+<img src="SessionAndFractionNumbering.svg" alt="Session and Fraction Numbering" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+- The Phase *Left Breast Tangents* required 25 fractions. It was treated with three different plans because two plan revisions took place after the 10th and after the 15th fraction.
+- The Phase *Left Breast Boost* required 5 fractions, all treated with the same plan. It was started after the phase *Left Breast Tangents* had been completed.
+- The Phase *Right Breast Tangents* required 25 fractions, all treated with the same plan. It was started 5 sessions after the phase *Left Breast Tangents*.
+
+There are three ways to number what was treated.
+- The *Session Number* captures which Treatment Session of a course took place.
+- The *Fraction Number in Phase* captures which fraction of the respective phase was treated.
+- The *Fraction Number in Plan* captures which fraction of the respective plan was treated.
+
+The highlighted example shows that in the 20th Treatment Session, the 20th fraction of the phase *Left Breast Tangents* was treated, which was the 5th fraction of the latest plan revision. In the same session, also the 15th fraction of the phase *Right Breast Tangents* was treated, using the same plan as for all other fractions of this phase, and therefore being the 15th fraction treated with this same plan.
+
 
 ### Revision or Adaptation
 

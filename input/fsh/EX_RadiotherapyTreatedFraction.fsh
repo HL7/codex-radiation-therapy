@@ -46,7 +46,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
-* encounter = Reference(RadiotherapySession-2)
+* encounter = Reference(RadiotherapyTreatmentSession-2)
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS

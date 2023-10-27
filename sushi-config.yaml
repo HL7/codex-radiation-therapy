@@ -107,7 +107,7 @@ groups:
     description: Fraction Level Profiles
     resources:
     - StructureDefinition/codexrt-radiotherapy-treated-fraction
-    - StructureDefinition/codexrt-radiotherapy-session
+    - StructureDefinition/codexrt-radiotherapy-treatment-session
   ProfilesForAllLevels:
     name: E. Profiles Referenced from All Levels
     description: Profiles referenced from all levels and throughout the radiotherapy workflow.
