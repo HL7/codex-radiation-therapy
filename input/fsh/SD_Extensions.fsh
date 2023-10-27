@@ -336,13 +336,22 @@ XPath: "true()"
 
 Invariant:   TG263RadiobiologicMetric
 Description: "Unit SHOULD match TG263 Radiobiologic Metric Regexp"
-Expression:  "$this.toString().matches('(CGE$)|(BED|EQD2Gy)([(]a\\/b=[0-9]*.?[0-9]*[)])?$')"
+Expression:  "$this.toString().matches('(CGE$)|(BED|RBE|EQD2Gy)([(]a\\/b=[0-9]*.?[0-9]*[)])?$')"
 Severity:    #warning
+// the Regexp needs to be beefed up to support RBE properly
+
 
 Extension: RadiobiologicMetric
 Id: codexrt-radiobiologic-metric
 Title: "Radiobiologic Metric"
-Description: "Extension providing radiobiologic dose metric"
+Description: "Extension providing radiobiologic dose metric using a regular expression
+ BED
+ CGE
+ RBE
+ RBE(filter = <decimal>)
+ EQD2Gy
+ EQD2GY(a/b = <decimal>)
+"
 * . ^short = "Radiotherapy Biologically Effective Dose"
 * insert ExpandedContexts
 * value[x] only Quantity
@@ -350,7 +359,7 @@ Description: "Extension providing radiobiologic dose metric"
 * valueQuantity.unit 1..1 
 * valueQuantity.unit obeys TG263RadiobiologicMetric
 // valueQuantity.unit is the display value
-// Code and System are optional.  Assumed to by Gy
+// Code and System are optional.  Assumed to be Gy for the above forms
 * valueQuantity.value 1..1
 * value[x] 1..1
 
