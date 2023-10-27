@@ -145,3 +145,6 @@ groups:
   #   - ValueSet/codex-radiotherapy-isotopes
   #   - ValueSet/radiotherapy-energy-units
   #   - ValueSet/radiotherapy-request
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: cgp
