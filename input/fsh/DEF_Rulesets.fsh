@@ -133,7 +133,7 @@ RuleSet: RadiotherapyProcedureCommon
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and
     PrimaryPlanDose named primaryPlanDose 0..1 MS and 
-    RadiobiologicMetric named radiobiologicMetric 0..1 MS 
+    RadiobiologicMetric named radiobiologicMetric 0..1 MS
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^short = "Total Physical Radiation Dose Delivered"
 * performed[x] only Period
 * performedPeriod.start MS
