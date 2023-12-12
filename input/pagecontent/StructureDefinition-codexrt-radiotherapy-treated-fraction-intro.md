@@ -4,6 +4,6 @@ An overview of radiotherapy courses, phases, and treatment plans is shown [here]
 
 ### Conformance
 
-Procedure resources whose code is http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs#USCRS-99999901 (Radiotherapy treatment fraction (regime/therapy)) MUST conform to this profile. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
+Procedure resources whose code is http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs#1297069006 "Fractionated dose radiotherapy (procedure)" MUST conform to this profile. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
 
 {% include markdown-link-references.md %}
