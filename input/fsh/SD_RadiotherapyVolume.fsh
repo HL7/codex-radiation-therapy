@@ -13,10 +13,9 @@ Description: "A volume of the body used in radiotherapy planning or treatment de
 * identifier ^slicing.description = "At least one display name and and one DICOM style UID as technical globally unqiue key"
 
 * identifier contains
- //   displayName 1..1 MS and
     dicomUid 1..1 MS
 
-//* identifier[displayName]
+* identifier[displayName] 1..1 //slice defined in mCODE but here we require minimum cardinality 1
 //  * use = #usual
 //  * value 1..1 MS
 * identifier[dicomUid]
