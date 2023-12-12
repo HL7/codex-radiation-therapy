@@ -43,19 +43,18 @@ The workflow and transactions for exchanging RT information are documented in th
 
 ### Sources
 
-Specifications in the CodeX™ RT IG were informed by research and work products developed by the AAPM Big Data Subcommittee (BDSC). AAPM BDSC has been using a consensus-driven approach to define a common ontology that will improve communication of RT information. The standardized nomenclatures created by the BDSC team are represented in OORO. BDSC participants include AAPM, ASTRO, Canadian Organization of Medical Physicists (COMP), European Society for Radiotherapy and Oncology (ESTRO), NRG Oncology, Canadian Association of Radiation Oncology (CARO), IHE-RO, and Canadian Partnership for Quality Radiotherapy (CPQR).
+Specifications in the CodeX™ RT IG were informed by research and work products developed by the AAPM Big Data Subcommittee (BDSC). AAPM BDSC has been using a consensus-driven approach to define a common ontology that will improve communication of RT information. The standardized nomenclatures created by the BDSC team are represented in the Operational Ontology for Oncology (O3). BDSC participants include AAPM, ASTRO, Canadian Organization of Medical Physicists (COMP), European Society for Radiotherapy and Oncology (ESTRO), NRG Oncology, Canadian Association of Radiation Oncology (CARO), IHE-RO, and Canadian Partnership for Quality Radiotherapy (CPQR).
 
 In addition to information obtained from subject matter experts, several existing standards, nomenclatures, and guidelines were consulted during the development of this specification. These include:
 
 - IHE-RO ([XRTS](https://www.ihe-ro.org/doku.php?id=doc%3Aprofiles%3Axrts)) Work Group
-- AAPM BDSC and OORO - implementing Operational Ontology for Radiation Oncology (Task Group 263 (TG-263))
-- ASTRO’s "Minimum Data Elements for Radiation Oncology: An American Society for Radiation Oncology Consensus Paper" (<https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext>)
+- AAPM BDSC’s "Operational Ontology for Oncology (O3): A Professional Society-Based, Multistakeholder, Consensus-Driven Informatics Standard Supporting Clinical and Research Use of Real-World Data From Patients Treated for Cancer" (<https://www.redjournal.org/article/S0360-3016(23)00525-4/fulltext>).
+- ASTRO’s "Minimum Data Elements for Radiation Oncology: An American Society for Radiation Oncology Consensus Paper" (<https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext>).
 - Commission on Cancer (CoC) and CoC's “A Multidisciplinary Consensus Recommendation on a Synoptic Radiation Treatment Summary: A Commission on Cancer Workgroup Report” (<https://pubmed.ncbi.nlm.nih.gov/31988040/>)
 - IHE Systematized Nomenclature of Medicine – Clinical Terms (SNOMED CT) Set (<https://wiki.ihe.net/index.php/SNOMED_CT_IHE_Set>)
 - Global Patient Set (GPS). The project team intends to include values from the IHE SNOMED CT Set into the SNOMED GPS.
 
 In addition, material was drawn from the [US Core Implementation Guide](https://hl7.org/fhir/us/core/) and the [mCODE Implementation Guide](https://hl7.org/fhir/us/mcode/STU2.1).
-
 
 
 {% include markdown-link-references.md %}
