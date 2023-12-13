@@ -384,7 +384,7 @@ Usage: #example
 // --- Diagnosis ---------------------------------------------------------------------------------
 
 Instance: Diagnosis-101-Breast
-InstanceOf: USCoreCondition
+InstanceOf: Condition
 Title: "Example Diagnosis 101 Breast"
 Description: "An example diagnosis for a breast case for Patient-101."
 Usage: #example
