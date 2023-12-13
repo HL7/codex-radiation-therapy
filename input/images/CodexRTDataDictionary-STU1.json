@@ -94,7 +94,7 @@
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotheraphy-adverse-event-severity-or-gradeVS",
+      "Value Set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-adverse-event-severity-or-gradeVS",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "AdverseEvent.extension:severity-or-grade",
       "Source Profile URI": "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-adverse-event",
@@ -6177,7 +6177,7 @@
     },
     {
       "title": "Adverse Event Severity or Grade Value Set",
-      "url": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotheraphy-adverse-event-severity-or-gradeVS",
+      "url": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-adverse-event-severity-or-gradeVS",
       "description": "CTCAE Grades 0 through 5. The grade of the adverse event, determined by CTCAE criteria, where 0 represents confirmation that the given adverse event did NOT occur, and 5 represents death. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered a particular AE."
     },
     {
@@ -12484,12 +12484,12 @@
     },
     {
       "title": "Radiotherapy Adverse Event Grade",
-      "url": "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotheraphy-adverse-event-severity-or-grade",
+      "url": "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-adverse-event-severity-or-grade",
       "description": "The grade associated with the severity of an adverse event, using CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
     },
     {
       "title": "Reason for Revision or Adaptation",
-      "url": "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotheraphy-reason-for-revision-or-adaptation",
+      "url": "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-reason-for-revision-or-adaptation",
       "description": "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
     },
     {
@@ -12571,7 +12571,7 @@
   "codeSystems": [
     {
       "title": "Severity or Grade CodeSystem based on CTCAE",
-      "url": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/codexrt-radiotheraphy-adverse-event-severity-or-gradeCS",
+      "url": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/codexrt-radiotherapy-adverse-event-severity-or-gradeCS",
       "description": "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
     },
     {

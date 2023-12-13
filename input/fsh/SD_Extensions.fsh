@@ -231,7 +231,7 @@ Since point doses mostly have a technical role, high-level summaries may decide 
 * insert UsualContexts
 
 Extension: RadiotherapyReasonForRevisionOrAdaptation
-Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
+Id: codexrt-radiotherapy-reason-for-revision-or-adaptation
 Title: "Reason for Revision or Adaptation"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * . ^short = "Reason for Revision or Adaptation"
