@@ -324,6 +324,28 @@ Title: "Image Guided Radiotherapy Modality"
   * value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
 * insert UsualContexts
 
+
+Extension: IntrafractionVerification
+Id: codexrt-intrafraction-verification
+Description: "Verification of the patient or target position during a treatment fraction."
+Title: "Intrafraction Verification"
+* . ^short = "Intrafraction Verification"
+* extension contains
+    category 1..1 MS and
+    modality 0..1 MS
+* extension[category]
+  * ^short = "Intrafraction Verification Category"
+  * ^definition = "The category of patient position verification during a treatment fraction."
+  * value[x] only CodeableConcept
+  * value[x] from IntrafractionVerificationCategoryVS (extensible)
+* extension[modality]
+  * ^short = "Intrafraction Verification Modality"
+  * ^definition = "The Modality used for verification of the patient positiong during a treatment fraction."
+  * value[x] only CodeableConcept
+  * value[x] from IntrafractionVerificationModalityVS (extensible)
+* insert UsualContexts //Those can be reduced. E.g. I don't expect Obervation(Definition) or Extension as contents. Maybe remove more.
+
+
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
 Title: "Radiotherapy Volume Extension"

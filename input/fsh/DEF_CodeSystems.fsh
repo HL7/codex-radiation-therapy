@@ -14,3 +14,15 @@ Terms beginning with 'USCRS-' (for United States Content Request Service) repres
 * #721081000124101  "Radiotherapy with abdominal compression (regime/therapy)" "Radiotherapy with abdominal compression (regime/therapy)" //USCRS-34882
 // * #721041000124107 "Radiotherapy with respiratory motion management (regime/therapy)" "Radiotherapy with respiratory motion management (regime/therapy )" // USCRS-34885.  Parent code, not directly used by IG.
 * #USCRS-99999901 "Radiotherapy treatment fraction (regime/therapy)" "Radiotherapy treatment fraction (regime/therapy)"
+
+* #USCRS-99999801 "Points or fiducials based intrafraction verification (procedure)" "Points or fiducials based intrafraction verification (procedure)"
+* #USCRS-99999802 "Projection based intrafraction verification (procedure)" "Projection based intrafraction verification (procedure)"
+* #USCRS-99999803 "Surface based intrafraction verification (procedure)" "Surface based intrafraction verification (procedure)"
+* #USCRS-99999804 "Volumetric anatomy based intrafraction verification (procedure)" "Volumetric anatomy based intrafraction verification (procedure)"
+* #USCRS-99999805 "Volumetric biological measures based intrafraction verification (procedure)" "Volumetric biological measures based intrafraction verification (procedure)"
+
+* #USCRS-99999811 "Radiofrequency based position verification (procedure)" "Radiofrequency based position verification (procedure)"
+* #168537006-orthogonal "Orthogonal fields radiography (procedure)" "Orthogonal fields radiography (procedure)"
+* #168537006-single "Single field radiography (procedure)" "Single field radiography (procedure)"
+* #USCRS-99999812 "Optical position verification (procedure)" "Optical position verification (procedure)"
+* #USCRS-99999813 "Thermal imaging (procedure)" "Thermal imaging (procedure)"
