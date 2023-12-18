@@ -348,7 +348,7 @@ Description: "Extension providing radiobiologic dose metric using a regular expr
  BED
  CGE
  RBE
- RBE(filter = <decimal>)
+ RBE(factor = <decimal>)
  EQD2Gy
  EQD2GY(a/b = <decimal>)
 "
