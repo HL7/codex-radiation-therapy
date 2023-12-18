@@ -133,7 +133,7 @@ RuleSet: RadiotherapyProcedureCommon
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and
     PrimaryPlanDose named primaryPlanDose 0..1 MS and 
-    RadiobiologicMetric named radiobiologicMetric 0..1 MS
+    RadiobiologicMetric named radiobiologicMetric 0..* MS
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^short = "Total Physical Radiation Dose Delivered"
 * performed[x] only Period
 * performedPeriod.start MS
@@ -166,7 +166,7 @@ RuleSet: RadiotherapyPlansCommon
 * extension[radiotherapyDosePlannedToVolume].extension contains
     PointDose named pointDose 0..1 MS and
     PrimaryPlanDose named primaryPlanDose 0..1 MS and 
-    RadiobiologicMetric named radiobiologicMetric 0..1 MS 
+    RadiobiologicMetric named radiobiologicMetric 0..* MS 
 * intent = ReqIntent#filler-order "Filler Order"
 
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
@@ -196,7 +196,7 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
   * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPrescribed."
   * extension[totalDose] ^short = "Total Physical Radiation Dose Prescribed"
   * extension contains
-    RadiobiologicMetric named radiobiologicMetric 0..1 MS 
+    RadiobiologicMetric named radiobiologicMetric 0..* MS 
 
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * obeys codexrt-procedure-status

@@ -39,7 +39,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
 
 ### Value Sets
 * [mCODE Radiotherapy Treatment Location ValueSet]:
-  * This ValueSet, based on the work of TG263 is the basis for specifying treatment locations using SNOMEDCT codes and qualifiers
+  * This ValueSet, based on the work of TG-263 is the basis for specifying treatment locations using SNOMEDCT codes and qualifiers
 * [mCODE Cancer Disorder ValueSet]
   * This ValueSet is used to specify the reasonCode for radiotherapy in the 9 CodeX RT profiles based on ServiceRequests and Procedures
 

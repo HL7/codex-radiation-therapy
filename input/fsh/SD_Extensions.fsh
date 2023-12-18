@@ -335,7 +335,7 @@ Expression: "extension.where(url = 'energy').exists() implies \n
 XPath: "true()"
 
 Invariant:   TG263RadiobiologicMetric
-Description: "Unit SHOULD match TG263 Radiobiologic Metric Regexp"
+Description: "Unit SHOULD match TG-263 Radiobiologic Metric Regexp"
 Expression:  "$this.toString().matches('(CGE$)|(BED|RBE|EQD2Gy)([(]a\\/b=[0-9]*.?[0-9]*[)])?$')"
 Severity:    #warning
 // the Regexp needs to be beefed up to support RBE properly
@@ -344,14 +344,14 @@ Severity:    #warning
 Extension: RadiobiologicMetric
 Id: codexrt-radiobiologic-metric
 Title: "Radiobiologic Metric"
-Description: "Extension providing radiobiologic dose metric using a regular expression
- BED
- CGE
- RBE
- RBE(filter = <decimal>)
- EQD2Gy
- EQD2GY(a/b = <decimal>)
-"
+Description: """Extension providing radiobiologic dose metric using a regular expression:
+ BED,
+ CGE,
+ RBE,
+ RBE(factor = \<decimal\>),
+ EQD2Gy,
+ EQD2GY(a/b = \<decimal\>).
+"""
 * . ^short = "Radiotherapy Biologically Effective Dose"
 * insert ExpandedContexts
 * value[x] only Quantity
