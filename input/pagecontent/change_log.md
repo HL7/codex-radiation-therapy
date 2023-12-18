@@ -2,7 +2,8 @@
 These changes were added to the CI build, and have not been formally published.
 
 #### Biologically Effective Dose 
-* Added a [RadiobiologicMetric] extension that includes the Biologically Effective dose in TG263-defined units to the extensions added to all ServiceRequest and Procedure profiles -- [RadiotherapyDosePrescribedToVolume], [RadiotherapyDosePlannedToVolume]], and  [mCode RadiotherapyDoseDeliveredToVolume]. 
+* Added a [RadiobiologicMetric](StructureDefinition-codexrt-radiobiologic-metric.html) extension to capture a radiobiologic metric of effective dose, as defined by the TG-263. The extension has been added to all ServiceRequest and Procedure profiles, i.e. [RadiotherapyCoursePrescription](StructureDefinition-codexrt-radiotherapy-course-prescription.html), [RadiotherapyPhasePrescription](StructureDefinition-codexrt-radiotherapy-phase-prescription.html), [RadiotherapyPlanPrescription](StructureDefinition-codexrt-radiotherapy-plan-prescription.html), [RadiotherapyPlannedCourse](StructureDefinition-codexrt-radiotherapy-planned-course.html), [RadiotherapyPlannedPhase](StructureDefinition-codexrt-radiotherapy-planned-phase.html), [RadiotherapyTreatmentPlan](StructureDefinition-codexrt-radiotherapy-treatment-plan.html), [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html), [RadiotherapyTreatedPhase](StructureDefinition-codexrt-radiotherapy-treated-phase.html), and [RadiotherapyTreatedPlan](StructureDefinition-codexrt-radiotherapy-treated-plan.html).
+
 
 ### CodeX Radiation Therapy STU 1 Publication Version
 These are the changes that were made during ballot reconciliation.
