@@ -1,3 +1,8 @@
+### CodeX Radiation Therapy STU 1.0.1 Publication Version
+The changes in this errata to version 1.0.0 of CodeX Radiation Therapy have been reviewed by the public through the HL7 errata process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
+#### Correct Errata in Version 1.0.1
+* Typos in resource ids ([FHIR-43372](https://jira.hl7.org/browse/FHIR-43372)) - Ids corrected in the followint resources:[AdverseEventSeverityOrGradeCS], [AdverseEventSeverityOrGradeVS], [AdverseEventSeverityOrGrade], [RadiotherapyReasonForRevisionOrAdaptation].
+
 ### CodeX Radiation Therapy STU 1 Publication Version
 These are the changes that were made during ballot reconciliation.
 
