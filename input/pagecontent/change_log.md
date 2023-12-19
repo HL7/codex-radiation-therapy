@@ -10,6 +10,7 @@ These are the unballoted changes that were made after STU 1 publication.
 
 #### Profile Changes
 * Added required code for Procedure.category in [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html). The category was inherited from mCODE [RadiotherapyCourseSummary](https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html) up to mCODE 2.1.0, but removed in mCODE 3.0.0. Now CodeX RT defines the category for Radiotherapy Course Summary instead of inheriting from mCODE ([FHIR-41764](https://jira.hl7.org/browse/FHIR-41764)).
+* In the [RadiotherapyVolume](StructureDefinition-codexrt-radiotherapy-volume.html), changed the cardinality of the identifier slice for display name from the 0..1 of mCODE to 1..1. In CodeX RT, the display name is mandatory. The identifier cardinality was already 2..* to reflect the two mandatory slices ([FHIR-41885](https://jira.hl7.org/browse/FHIR-41885)).
 
 ### CodeX Radiation Therapy STU1 Publication Version
 These are the changes that were made during ballot reconciliation.
