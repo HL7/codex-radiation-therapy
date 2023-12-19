@@ -13,4 +13,4 @@ Terms beginning with 'USCRS-' (for United States Content Request Service) repres
 * #USCRS-34880 "Radiotherapy with (ITV) Internal Target Volume creation" "Radiotherapy with (ITV) Internal Target Volume creation"
 * #721081000124101  "Radiotherapy with abdominal compression (regime/therapy)" "Radiotherapy with abdominal compression (regime/therapy)" //USCRS-34882
 // * #721041000124107 "Radiotherapy with respiratory motion management (regime/therapy)" "Radiotherapy with respiratory motion management (regime/therapy )" // USCRS-34885.  Parent code, not directly used by IG.
-// * #1297069006 "Fractionated dose radiotherapy (procedure)" "Fractionated dose radiotherapy (procedure)" //synonym = “Radiotherapy treatment fraction (procedure)”
+* #1297069006 "Fractionated dose radiotherapy (procedure)" "Fractionated dose radiotherapy (procedure)" //synonym = “Radiotherapy treatment fraction (procedure)”
