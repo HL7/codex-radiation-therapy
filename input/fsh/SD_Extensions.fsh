@@ -338,8 +338,6 @@ Invariant:   TG263RadiobiologicMetric
 Description: "Unit SHOULD match TG-263 Radiobiologic Metric Regexp"
 Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')"
 Severity:    #warning
-// the Regexp needs to be beefed up to support RBE properly
-// Currently allows something like RBE(<anystring> = <number>)
 
 
 Extension: RadiobiologicMetric
