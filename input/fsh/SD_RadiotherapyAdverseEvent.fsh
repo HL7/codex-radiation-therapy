@@ -33,7 +33,7 @@ RuleSet: AdverseEventExtensionPreamble
 
 
 Extension: AdverseEventSeverityOrGrade
-Id: codexrt-radiotheraphy-adverse-event-severity-or-grade
+Id: codexrt-radiotherapy-adverse-event-severity-or-grade
 Title: "Radiotherapy Adverse Event Grade"
 Description: "The grade associated with the severity of an adverse event, using CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
 * insert AdverseEventExtensionPreamble
