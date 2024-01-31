@@ -14,3 +14,9 @@ Terms beginning with 'USCRS-' (for United States Content Request Service) repres
 * #721081000124101  "Radiotherapy with abdominal compression (regime/therapy)" "Radiotherapy with abdominal compression (regime/therapy)" //USCRS-34882
 // * #721041000124107 "Radiotherapy with respiratory motion management (regime/therapy)" "Radiotherapy with respiratory motion management (regime/therapy )" // USCRS-34885.  Parent code, not directly used by IG.
 * #USCRS-99999901 "Radiotherapy treatment fraction (regime/therapy)" "Radiotherapy treatment fraction (regime/therapy)"
+
+* #USCRS-99999811 "Radiologic guidance using a radiofrequency fiducial marker (procedure)" "Radiologic guidance using a radiofrequency fiducial marker (procedure)"
+* #USCRS-99999812 "Radiologic guidance using a radiopaque fiducial marker (procedure)" "Radiologic guidance using a radiopaque fiducial marker (procedure)"
+* #USCRS-99999813 "Radiography from single direction (procedure)" "Radiography from single direction (procedure)"
+* #USCRS-99999814 "Radiography combining multiple directions. (procedure)" "Radiography combining multiple directions (procedure)"
+* #USCRS-99999815 "Video surface imaging (procedure)" "Video surface imaging (procedure)"

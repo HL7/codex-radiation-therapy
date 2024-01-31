@@ -96,6 +96,8 @@ RuleSet: RadiotherapyRequestCommon
 // * meta.versionId MS
 // * meta.lastUpdated MS
 * extension MS
+* extension contains
+    IntrafractionVerification named intrafractionVerification 0..* MS
 * insert MotionManagement
 * insert Identifiers
 * status MS
@@ -130,6 +132,8 @@ RuleSet: RadiotherapyRequestCommon
 RuleSet: RadiotherapyProcedureCommon
 * insert MotionManagement
 * insert Identifiers
+* extension contains
+    IntrafractionVerification named intrafractionVerification 0..* MS
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and
     PrimaryPlanDose named primaryPlanDose 0..1 MS
