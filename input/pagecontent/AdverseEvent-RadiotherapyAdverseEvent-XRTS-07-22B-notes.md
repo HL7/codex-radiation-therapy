@@ -5,7 +5,7 @@ Title: "Example Adverse Event from Radiotherapy"
 Description: "Adverse Event, Nausea following course of treatment."
 Usage: #example
 * extension
-  * url = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotheraphy-adverse-event-severity-or-grade"
+  * url = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-adverse-event-severity-or-grade"
   * valueCodeableConcept = AdverseEventSeverityOrGradeCS#1 "Mild Adverse Event"
 * actuality = #actual
 * event = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C146764 "Nausea"

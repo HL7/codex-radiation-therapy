@@ -1,5 +1,5 @@
 CodeSystem: AdverseEventSeverityOrGradeCS
-Id: codexrt-radiotheraphy-adverse-event-severity-or-gradeCS
+Id: codexrt-radiotherapy-adverse-event-severity-or-gradeCS
 Title: "Severity or Grade CodeSystem based on CTCAE"
 Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
 * ^caseSensitive = true
@@ -12,7 +12,7 @@ Description: "Common terminology criteria (CTC) grades associated with the sever
 * #5 "Death Related to Adverse Event"  "The termination of life associated with an adverse event."
 
 ValueSet: AdverseEventSeverityOrGradeVS
-Id: codexrt-radiotheraphy-adverse-event-severity-or-gradeVS
+Id: codexrt-radiotherapy-adverse-event-severity-or-gradeVS
 Title: "Adverse Event Severity or Grade Value Set"
 Description: "CTCAE Grades 0 through 5. The grade of the adverse event, determined by CTCAE criteria, where 0 represents confirmation that the given adverse event did NOT occur, and 5 represents death. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered a particular AE."
 * ^experimental = false

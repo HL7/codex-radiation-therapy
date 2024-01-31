@@ -33,7 +33,7 @@ Usage: #example
     * valueQuantity = 1260 'cGy'
   * url = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume"
 * extension[+]
-  * url = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotheraphy-reason-for-revision-or-adaptation"
+  * url = "http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-reason-for-revision-or-adaptation"
   * valueCodeableConcept = http://snomed.info/sct#373858009 "Radiotherapy course change due to acute radiotherapy toxicity (finding)"
 * identifier[0]
   * use = #usual
