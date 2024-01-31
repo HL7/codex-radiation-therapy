@@ -4,6 +4,8 @@ These are the unballoted changes that were made after STU 1 publication.
 #### Profile Additions
 * Added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles to model treatment sessions.  ([FHIR-42773](https://jira.hl7.org/browse/FHIR-42773))
 
+* Added extension [Intrafraction Verification](StructureDefinition-codexrt-intrafraction-verification.html) to all radiotherapy Procedures and ServiceRequests. This extension is used to annotate the procedure that is used to verify the position of the patient during treatment fractions.
+
 #### Narrative Changes
 * Extended the [overview](overview.html) with exaplanations of the added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles, including the newly added section [Session and Fraction Numbering](overview.html#session-and-fraction-numbering).
 * Changed references from outdated "Operational Ontology for Radiation Oncology (OORO)" to "Operational Ontology for Oncology (O3)" ([FHIR-41682](https://jira.hl7.org/browse/FHIR-41682)).
