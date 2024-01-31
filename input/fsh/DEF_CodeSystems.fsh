@@ -18,5 +18,5 @@ Terms beginning with 'USCRS-' (for United States Content Request Service) repres
 * #USCRS-99999811 "Radiologic guidance using a radiofrequency fiducial marker (procedure)" "Radiologic guidance using a radiofrequency fiducial marker (procedure)"
 * #USCRS-99999812 "Radiologic guidance using a radiopaque fiducial marker (procedure)" "Radiologic guidance using a radiopaque fiducial marker (procedure)"
 * #USCRS-99999813 "Radiography from single direction (procedure)" "Radiography from single direction (procedure)"
-* #USCRS-99999814 "Radiography combining multiple directions. (procedure)" "Radiography combining multiple directions (procedure)"
+* #USCRS-99999814 "Radiography combining multiple directions (procedure)" "Radiography combining multiple directions (procedure)"
 * #USCRS-99999815 "Video surface imaging (procedure)" "Video surface imaging (procedure)"

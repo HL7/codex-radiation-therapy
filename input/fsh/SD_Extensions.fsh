@@ -334,7 +334,6 @@ Title: "Intrafraction Verification"
 * value[x] 1..1
 * insert UsualContexts //Those can be reduced. E.g. I don't expect Obervation(Definition) or Extension as contexts. Maybe remove more.
 
-
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
 Title: "Radiotherapy Volume Extension"
