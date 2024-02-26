@@ -8,23 +8,46 @@ RuleSet: ExtensionContextResource(path)
 * insert ExtensionContext({path})
 //* insert ExtensionContext({path}.Extension)
 
-RuleSet: UsualContexts
-* insert ExtensionContextResource(ObservationDefinition)
+
+
+
+RuleSet: Contexts1
+// radiotherapy-course-involves-reirradiation.html
+// radiotherapy-dose-planned-to-volume.html
+// radiotherapy-dose-prescribed-to-volume.html
+// radiotherapy-fraction-number-in-phase.html
+// radiotherapy-fraction-number-in-plan.html
+// radiotherapy-reason-for-revision-or-adaptation.html
+// radiotherapy-free-breathing-motion-mgmt-technique.html
+// radiotherapy-respiratory-motion-management.html
+// image-guided-radiotherapy-modality.html
+// intrafraction-verification.html
 * insert ExtensionContextResource(Procedure)
 * insert ExtensionContextResource(ServiceRequest)
-* insert ExtensionContextResource(Extension)
-* insert ExtensionContextResource(Observation)
 * insert ExtensionContextResource(ActivityDefinition)
-* insert ExtensionContextResource(CarePlan)
-* insert ExtensionContextResource(CareDefinition)
 
+RuleSet: Contexts2
+// radiotherapy-energy-or-isotope.html
+// radiotherapy-treatment-applicator-type.html
+* insert Contexts1
+* insert ExtensionContextResource(Device)
+* insert ExtensionContextResource(Extension ) // Just the mCODE Course Summary
 
+RuleSet: Contexts3
+// radiotherapy-point-dose.html
+// radiotherapy-primary-plan-dose.html
+// radiotherapy-uniform-fractionation.html
+* insert ExtensionContextResource(Extension) // should include the following extensions
+   // radiotherapy-dose-planned-to-volume
+   // radiotherapy-dose-delivered-to-volume
+   // radiotherapy-dose-prescribed-to-volume
 
-RuleSet: ExpandedContexts
-* insert UsualContexts
-* insert ExtensionContextResource(ImagingStudy)
-* insert ExtensionContextResource(DiagnosticReport)
-* insert ExtensionContextResource(DetectedIssue)
+RuleSet: Contexts4 
+// radiotherapy-fractions-planned.html
+// radiotherapy-fractions-prescribed.html
+* insert ExtensionContextResource(ServiceRequest)
+* insert ExtensionContextResource(ActivityDefinition)
+
 
 
 Extension: RadiotherapyFractionsPrescribed
@@ -37,7 +60,7 @@ This extension SHALL only be present if the treatment is structured as countable
 * value[x] ^short = "Number of Prescribed Fractions"
 * value[x] only positiveInt
 * value[x] 1..1
-* insert UsualContexts
+* insert Contexts4 
 
 Extension: RadiotherapyFractionsPlanned
 Id: codexrt-radiotherapy-fractions-planned
@@ -49,7 +72,7 @@ This extension SHALL only be present if the treatment is structured as countable
 * value[x] ^short = "Number of Planned Fractions"
 * value[x] only positiveInt
 * value[x] 1..1
-* insert UsualContexts
+* insert Contexts4 
 
 Extension: RadiotherapyFractionsDelivered
 Id: codexrt-radiotherapy-fractions-delivered
@@ -60,7 +83,7 @@ Description: "The total number of fractions (treatment divisions) actually deliv
 * value[x] ^short = "Number of Delivered Fractions"
 * value[x] only unsignedInt //as opposed to planned or prescribed fractions, delivered fractions can be zero.
 * value[x] 1..1
-* insert UsualContexts
+* insert ExtensionContextResource(Procedure)
 
 Extension: RadiotherapyFractionNumberInPlan
 Id: codexrt-radiotherapy-fraction-number-in-plan
@@ -71,7 +94,7 @@ Description: "The number of the fraction in a radiotherapy treatment plan."
 * value[x] ^short = "Fraction Number in Plan"
 * value[x] only positiveInt
 * value[x] 1..1
-* insert UsualContexts
+* insert Contexts1 
 
 Extension: RadiotherapyFractionNumberInPhase
 Id: codexrt-radiotherapy-fraction-number-in-phase
@@ -82,7 +105,7 @@ Description: "The number of the fraction in a radiotherapy treatment phase."
 * value[x] ^short = "Fraction Number in Phase"
 * value[x] only positiveInt
 * value[x] 1..1
-* insert UsualContexts
+* insert Contexts1 
 
 Extension: RadiotherapySessionNumber
 Id: codexrt-radiotherapy-session-number
@@ -93,8 +116,9 @@ Description: "The number of the session a radiotherapy treatment course."
 * value[x] ^short = "Session Number"
 * value[x] only positiveInt
 * value[x] 1..1
-* insert UsualContexts
+* insert ExtensionContextResource(Procedure)
 * insert ExtensionContextResource(Encounter)
+* insert ExtensionContextResource(ServiceRequest)
 
 // Defined similar to the corresponding delivered dose in mCODE STU2.
 // http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
@@ -138,7 +162,7 @@ Description: "Dose parameters prescribed for one radiotherapy volume."
 * extension[fractions]
   * ^short = "Number of Prescribed Fractions"
   * ^definition = "The prescribed number of fractions to deliver the dose. See also extension RadiotherapyFractionsPrescribed which is used instead if fractions are not per volume, e.g. in phases or plans."
-* insert UsualContexts
+* insert Contexts1
 
 
 Extension: RadiotherapyDosePlannedToVolume
@@ -159,7 +183,7 @@ Description: "Dose parameters planned for one radiotherapy volume."
 * extension[fractions]
   * ^short = "Number of Planned Fractions"
   * ^definition = "The planned number of fractions to deliver the dose. See also extension RadiotherapyFractionsPlanned which is used instead if fractions are the same for all volumes, i.e. in phases or plans."
-* insert UsualContexts
+* insert Contexts1 
 
 Extension: RadiotherapyEnergyOrIsotope
 Id: codexrt-radiotherapy-energy-or-isotope
@@ -177,7 +201,7 @@ For electrons, the maximum energy is given in MeV. For photons, the maximum acce
 * valueCodeableConcept ^short = "The isotope used for radiotherapy."
 * valueCodeableConcept from RadiotherapyIsotopeVS (extensible)
 * value[x] 1..1
-* insert UsualContexts
+* insert Contexts2 
 
 //Copied from https://hl7.org/fhir/R4/imagingstudy.html which contains DICOM references for all images in an imaging study.
 //For general DICOM refernece we may add Series and Study UID.
@@ -212,7 +236,11 @@ Description: "A reference to a DICOM SOP Instance."
   * value[x] 1..1
   * ^short = "DICOM SOP Class"
   * ^definition = "The type of DICOM Service Object Pair (SOP)."
-* insert ExpandedContexts
+* insert ExtensionContext(Procedure)
+* insert ExtensionContext(ServiceRequest)
+* insert ExtensionContext(Observation)
+* insert ExtensionContext(DiagnosticReport)
+* insert ExtensionContext(DetectedIssue)
 
 Extension: RadiotherapyTreatmentApplicatorType
 Id: codexrt-radiotherapy-treatment-applicator-type
@@ -222,7 +250,7 @@ Description: "Radiotherapy Treatment Applicator Type."
 * value[x] ^short = "Radiotherapy Treatment Applicator Type"
 * value[x] only CodeableConcept
 * value[x] from BrachytherapyApplicatorTypeVS (extensible)
-* insert UsualContexts
+* insert Contexts2 
 
 Extension: UniformFractionation
 Id: codexrt-radiotherapy-uniform-fractionation
@@ -236,7 +264,7 @@ This is important in registry use cases to efficiently assess whether checking p
 * . 0..1
 * value[x] ^short = "Uniform Fractionation Was Used"
 * value[x] only boolean
-* insert UsualContexts
+* insert Contexts1
 
 
 Extension: PrimaryPlanDose
@@ -249,7 +277,7 @@ In summaries over multiple treatment plans, the flag indicates that the dose is 
 * . 0..1
 * value[x] ^short = "Primary Plan Dose"
 * value[x] only boolean
-* insert UsualContexts
+* insert ExtensionContext(Extension)
 
 Extension: PointDose
 Id: codexrt-radiotherapy-point-dose
@@ -261,7 +289,7 @@ Since point doses mostly have a technical role, high-level summaries may decide 
 * . 0..1
 * value[x] ^short = "Point Dose"
 * value[x] only boolean
-* insert UsualContexts
+* insert ExtensionContext(Extension)
 
 Extension: RadiotherapyReasonForRevisionOrAdaptation
 Id: codexrt-radiotherapy-reason-for-revision-or-adaptation
@@ -272,7 +300,7 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (required)
-* insert UsualContexts
+* insert Contexts1 
 
 Extension: RadiotherapyRespiratoryMotionManagement
 Id: codexrt-radiotherapy-respiratory-motion-management
@@ -283,7 +311,7 @@ Description: "Method applied to manage respiratory motion."
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyRespiratoryMotionManagementVS (required)
-* insert UsualContexts
+* insert Contexts1 
 
 Extension: RadiotherapyFreeBreathingMotionManagementTechnique
 Id: codexrt-radiotherapy-free-breathing-motion-mgmt-technique
@@ -294,7 +322,7 @@ Description: "Technique to manage respiratory motion with free-breathing."
 * value[x] only CodeableConcept
 * value[x] 1..1
 * value[x] from RadiotherapyFreeBreathingMotionManagementTechniqueVS (required)
-* insert UsualContexts
+* insert Contexts1 
 
 Extension: CourseInvolvesReirradiation
 Id: codexrt-radiotherapy-course-involves-reirradiation
@@ -304,7 +332,7 @@ Description: "This flag is true if the radiotherapy course of treatment involves
 * . 0..1
 * value[x] ^short = "Course Involves Reirradiation"
 * value[x] only boolean
-* insert UsualContexts
+* insert Contexts1
 
 
 Extension: ImageGuidedRadiotherapyModality
@@ -322,7 +350,7 @@ Title: "Image Guided Radiotherapy Modality"
 * extension[energy]
   * value[x] only CodeableConcept
   * value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
-* insert UsualContexts
+* insert Contexts1 
 
 Extension: IntrafractionVerification
 Id: codexrt-intrafraction-verification
@@ -332,7 +360,7 @@ Title: "Intrafraction Verification"
 * value[x] only CodeableConcept
 * value[x] from IntrafractionVerificationProcedureVS (extensible)
 * value[x] 1..1
-* insert UsualContexts //Those can be reduced. E.g. I don't expect Obervation(Definition) or Extension as contexts. Maybe remove more.
+* insert Contexts1 
 
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
@@ -341,7 +369,14 @@ Description: "Extension providing a reference to a RadiotherapyVolume"
 * . ^short = "Radiotherapy Volume"
 * value[x] only Reference(RadiotherapyVolume)
 * value[x] 1..1
-* insert ExpandedContexts
+* insert ExtensionContextResource(Procedure)
+* insert ExtensionContextResource(Observation)
+* insert ExtensionContextResource(ServiceRequest)
+* insert ExtensionContextResource(ActivityDefinition)
+* insert ExtensionContextResource(ObservationDefinition)
+* insert ExtensionContextResource(ImagingStudy)
+* insert ExtensionContextResource(DiagnosticReport)
+* insert ExtensionContextResource(DetectedIssue)
 
 Extension: DiseaseProgressionQualifier
 Id: codexrt-radiotherapy-progression-qualifier
@@ -353,7 +388,6 @@ Description: "Extension providing a qualifier for a disease progression"
 * value[x] 1..1
 * insert ExtensionContext(Observation)
 * insert ExtensionContext(CodeableConcept)
-* insert ExtensionContextResource(Extension)
 
 
 Invariant: IGRTEnergyAllowed
