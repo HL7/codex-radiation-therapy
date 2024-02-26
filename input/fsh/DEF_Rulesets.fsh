@@ -136,14 +136,10 @@ RuleSet: RadiotherapyProcedureCommon
     IntrafractionVerification named intrafractionVerification 0..* MS
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and
-<<<<<<< HEAD
     PrimaryPlanDose named primaryPlanDose 0..1 MS and 
     RadiobiologicMetric named radiobiologicMetric 0..* MS
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^short = "Total Physical Radiation Dose Delivered"
-=======
-    PrimaryPlanDose named primaryPlanDose 0..1 MS
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
->>>>>>> master
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
@@ -162,7 +158,7 @@ RuleSet: RadiotherapyProcedureCommon
 * focalDevice[seedDevice] ^short = "Radiotherapy Seed Device used as part of therapy."
 * location only Reference(USCoreLocation)
 * location MS
-* insert BodySiteQualifierAndLaterality
+
 
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon
