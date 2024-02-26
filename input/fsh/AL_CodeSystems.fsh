@@ -8,6 +8,8 @@ Alias: ActReason =  http://terminology.hl7.org/CodeSystem/v3-ActReason
 Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: DICOMUID = urn:dicom:uid
 Alias: v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
+
 // USCore
 // Alias: AdminGender = //2.16.840.1.113883.5.1 // http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender
 
@@ -25,6 +27,7 @@ Alias: VarianDoseReferenceId = http://varian.com/fhir/identifier/radiotherapyDos
 Alias: VarianRadiotherapyCourseId = http://varian.com/fhir/identifier/radiotherapyCourseId
 Alias: VarianRadiotherapyPhaseId = http://varian.com/fhir/identifier/radiotherapyPhaseId
 Alias: VarianRadiotherapyPlanId = http://varian.com/fhir/identifier/radiotherapyPlanId
+Alias: VarianRadiotherapyFractionId = http://varian.com/fhir/identifier/radiotherapyFractionId
 Alias: VarianRadiotherapyPrescriptionId = http://varian.com/fhir/identifier/radiotherapyPrescriptionId
 
 //CTCAE CodeSystems

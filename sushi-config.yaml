@@ -6,14 +6,14 @@ id: hl7.fhir.us.codex-radiation-therapy
 canonical: http://hl7.org/fhir/us/codex-radiation-therapy
 name: CodeX-Radiation-Therapy
 status: draft
-version: 1.0.0
+version: 1.1.0-cibuild
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 1
+releaseLabel: STU 1.1
 title: "CodeX Radiation Therapy"
 publisher:
-  name: HL7 Cross Group Projects Work Group
-  url: https://www.hl7.org/Special/committees/cgp
+  name: HL7 International / Cross-Group Projects
+  url: http://www.hl7.org/Special/committees/cgp
   email: cgplist@lists.HL7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 description: CodeX™ Radiation Therapy is an initiative
@@ -23,6 +23,7 @@ license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 4.0.0
   hl7.fhir.us.mcode: 2.1.0
+  hl7.fhir.uv.extensions: current
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
@@ -102,8 +103,14 @@ groups:
     - StructureDefinition/codexrt-radiotherapy-plan-prescription
     - StructureDefinition/codexrt-radiotherapy-treatment-plan
     - StructureDefinition/codexrt-radiotherapy-treated-plan
+  FractionLevelProfiles:
+    name: D. Fraction Level Profiles
+    description: Fraction Level Profiles
+    resources:
+    - StructureDefinition/codexrt-radiotherapy-treated-fraction
+    - StructureDefinition/codexrt-radiotherapy-treatment-session
   ProfilesForAllLevels:
-    name: D. Profiles Referenced from All Levels
+    name: E. Profiles Referenced from All Levels
     description: Profiles referenced from all levels and throughout the radiotherapy workflow.
     resources:
     - StructureDefinition/codexrt-radiotherapy-volume
@@ -139,3 +146,6 @@ groups:
   #   - ValueSet/codex-radiotherapy-isotopes
   #   - ValueSet/radiotherapy-energy-units
   #   - ValueSet/radiotherapy-request
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: cgp

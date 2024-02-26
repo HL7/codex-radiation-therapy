@@ -62,6 +62,40 @@ Description: "The total number of fractions (treatment divisions) actually deliv
 * value[x] 1..1
 * insert UsualContexts
 
+Extension: RadiotherapyFractionNumberInPlan
+Id: codexrt-radiotherapy-fraction-number-in-plan
+Title: "Fraction Number in Plan"
+Description: "The number of the fraction in a radiotherapy treatment plan."
+* . ^short = "Fraction Number in Plan"
+* . 0..1
+* value[x] ^short = "Fraction Number in Plan"
+* value[x] only positiveInt
+* value[x] 1..1
+* insert UsualContexts
+
+Extension: RadiotherapyFractionNumberInPhase
+Id: codexrt-radiotherapy-fraction-number-in-phase
+Title: "Fraction Number in Phase"
+Description: "The number of the fraction in a radiotherapy treatment phase."
+* . ^short = "Fraction Number in Phase"
+* . 0..1
+* value[x] ^short = "Fraction Number in Phase"
+* value[x] only positiveInt
+* value[x] 1..1
+* insert UsualContexts
+
+Extension: RadiotherapySessionNumber
+Id: codexrt-radiotherapy-session-number
+Title: "Session Number"
+Description: "The number of the session a radiotherapy treatment course."
+* . ^short = "Session Number"
+* . 0..1
+* value[x] ^short = "Session Number"
+* value[x] only positiveInt
+* value[x] 1..1
+* insert UsualContexts
+* insert ExtensionContextResource(Encounter)
+
 // Defined similar to the corresponding delivered dose in mCODE STU2.
 // http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume
 RuleSet: DoseToVolumeCommon
@@ -84,7 +118,6 @@ RuleSet: DoseToVolumeCommon
 * extension[fractions]
   * value[x] only positiveInt
   * value[x] 0..1
-
 
 
 Extension: RadiotherapyDosePrescribedToVolume
@@ -231,7 +264,7 @@ Since point doses mostly have a technical role, high-level summaries may decide 
 * insert UsualContexts
 
 Extension: RadiotherapyReasonForRevisionOrAdaptation
-Id: codexrt-radiotheraphy-reason-for-revision-or-adaptation
+Id: codexrt-radiotherapy-reason-for-revision-or-adaptation
 Title: "Reason for Revision or Adaptation"
 Description: "The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted."
 * . ^short = "Reason for Revision or Adaptation"
@@ -291,6 +324,16 @@ Title: "Image Guided Radiotherapy Modality"
   * value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
 * insert UsualContexts
 
+Extension: IntrafractionVerification
+Id: codexrt-intrafraction-verification
+Description: "Verification of the patient or target position during a treatment fraction."
+Title: "Intrafraction Verification"
+* . ^short = "Intrafraction Verification"
+* value[x] only CodeableConcept
+* value[x] from IntrafractionVerificationProcedureVS (extensible)
+* value[x] 1..1
+* insert UsualContexts //Those can be reduced. E.g. I don't expect Obervation(Definition) or Extension as contexts. Maybe remove more.
+
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
 Title: "Radiotherapy Volume"
@@ -322,16 +365,12 @@ Severity: #error
 //* SCT#717193008 "Cone beam computed tomography (procedure)" // Cone beam CT
 Expression: "extension.where(url = 'energy').exists() implies \n
                (extension.where(url = 'modality').exists() and \n
-                (extension.where(url = 'modality').value.exists(\n
-                    (coding.system = 'http://snomed.info/sct') and \n
-                      (coding.code = '168537006' or \n
-                      coding.code = '44491008' or \n
-                      coding.code = '77477000' or \n
-                      coding.code = '717193008' \n
-                    )\n
-                  )\n
-                )\n
-              )"
+                extension.where(url = 'modality').value.exists() and \n
+                extension.where(url = 'modality').value.coding.all(\n
+                    (system = 'http://snomed.info/sct') and \n
+                    (code = '168537006' or code  = '44491008' or code  = '77477000' or code  = '717193008') \n
+                 )\n
+               )"
 XPath: "true()"
 
 Invariant:   TG263RadiobiologicMetric

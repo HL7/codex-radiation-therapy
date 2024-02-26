@@ -12,7 +12,7 @@ Furthermore, the radiotherapy profiles and data elements were tested in IHE-RO X
 Additional details regarding the CodeX™ RTTD project:
 
 - ASTRO joined CodeX™ with a proposal to standardize RT treatment summaries, leveraging the work published by ASTRO and others in the “Minimum Data Elements for Radiation Oncology: An American Society for Radiation Oncology Consensus Paper” report.
-- AAPM joined in support of this effort and started contributing professional society expertise and work developed by the AAPM Big Data Subcommittee (i.e., Operational Ontology for Radiation Oncology (OORO))
+- AAPM joined in support of this effort and started contributing professional society expertise and work developed by the AAPM Big Data Subcommittee (i.e., Operational Ontology for Oncology (O3))
 - IHE-RO XRTS Work Group aligned with the CodeX™ RTTD initiative and shared their RT modeling work products. Once the IHE-RO XRTS Work Group aligned with the CodeX™ RTTD project, they shifted focus from modeling and structuring data elements to developing the architecture and transactions as part of the XRTS Profile and technical specification.
 - The RTTD project contributed content to mCODE STU 2 to support generation of an end-of-treatment care summary
 - Additional content was built out – related to the patient’s in-progress and prescription RT information in the CodeX™ RT IG
