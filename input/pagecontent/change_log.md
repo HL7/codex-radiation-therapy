@@ -1,6 +1,9 @@
 ### CodeX Radiation Therapy STU 1.1 Work in Progress
 These are the unballoted changes that were made after STU 1 publication.
 
+#### Dependency Changes
+* Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
+* Changed USCore dependency to [5.0.1]({{site.data.fhir.ver.hl7fhiruscore}}/index.html)
 #### Profile Additions
 * Added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles to model treatment sessions.  ([FHIR-42773](https://jira.hl7.org/browse/FHIR-42773))
 
