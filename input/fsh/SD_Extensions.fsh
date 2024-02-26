@@ -265,6 +265,8 @@ This is important in registry use cases to efficiently assess whether checking p
 * value[x] ^short = "Uniform Fractionation Was Used"
 * value[x] only boolean
 * insert Contexts1
+* insert ExtensionContext(Extension)
+* insert ExtensionContext(Procedure.extension)
 
 
 Extension: PrimaryPlanDose
