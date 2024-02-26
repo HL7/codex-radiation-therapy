@@ -23,7 +23,7 @@ license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 5.0.1
   hl7.fhir.us.mcode: 3.0.0
-  hl7.fhir.uv.extensions: current
+  hl7.fhir.uv.extensions: 1.0.0
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
