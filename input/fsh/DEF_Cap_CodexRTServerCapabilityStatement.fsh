@@ -1,6 +1,7 @@
 
 
 Alias: $exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+Alias: $spexp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
 
 RuleSet: SupportResource (resource, expectation)
 * rest.resource[+].type = #{resource}
@@ -32,58 +33,58 @@ RuleSet: SearchParameterCombinations
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Procedure-subject, #reference, #SHOULD)
 * insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/Procedure-category, #token, #SHOULD)
 * insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHOULD)
-* rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "identifier"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "code"
-* rest.resource[=].extension[=].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
-* rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "subject"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "code"
-* rest.resource[=].extension[=].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
-* rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "identifier"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "category"
-* rest.resource[=].extension[=].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
-* rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "identifier"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "category"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "code"
-* rest.resource[=].extension[=].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
-* rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "subject"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "category"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "code"
-* rest.resource[=].extension[=].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
-* rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "subject"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "category"
-* rest.resource[=].extension[=].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+// * rest.resource[=].extension[+].extension[0].url = "$exp"
+// * rest.resource[=].extension[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "identifier"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "code"
+// * rest.resource[=].extension[=].url = "$spexp"
+// * rest.resource[=].extension[+].extension[0].url = "$exp"
+// * rest.resource[=].extension[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "subject"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "code"
+// * rest.resource[=].extension[=].url = "$spexp"
+// * rest.resource[=].extension[+].url = "$exp"
+// * rest.resource[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[+].extension[0].url = "$exp"
+// * rest.resource[=].extension[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "identifier"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "category"
+// * rest.resource[=].extension[=].url = "$spexp"
+// * rest.resource[=].extension[+].url = "$exp"
+// * rest.resource[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[+].extension[0].url = "$exp"
+// * rest.resource[=].extension[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "identifier"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "category"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "code"
+// * rest.resource[=].extension[=].url = "$spexp"
+// * rest.resource[=].extension[+].url = "$exp"
+// * rest.resource[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[+].extension[0].url = "$exp"
+// * rest.resource[=].extension[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "subject"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "category"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "code"
+// * rest.resource[=].extension[=].url = "$spexp"
+// * rest.resource[=].extension[+].extension[0].url = "$exp"
+// * rest.resource[=].extension[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "subject"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "category"
+// * rest.resource[=].extension[=].url = "$spexp"
 
 
 Instance: CodexRTServerCapabilityStatement
@@ -120,19 +121,19 @@ Usage: #definition
 * insert SupportSearchParam(given, http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-given, #string, #SHOULD)
 * insert SupportSearchParam(birthdate, http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-birthdate, #date, #SHOULD)
 * insert SupportSearchParam(gender, http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender, #token, #SHOULD)
-* rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension[=].extension[=].valueCode = #SHALL
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "family"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "given"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "birthdate"
-* rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "gender"
-* rest.resource[=].extension[=].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+// * rest.resource[=].extension[+].url = "$exp"
+// * rest.resource[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[+].extension[0].url = "$exp"
+// * rest.resource[=].extension[=].extension[=].valueCode = #SHALL
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "family"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "given"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "birthdate"
+// * rest.resource[=].extension[=].extension[+].url = "required"
+// * rest.resource[=].extension[=].extension[=].valueString = "gender"
+// * rest.resource[=].extension[=].url = "$spexp"
 
 // Procedure requirements
 * insert SupportResource(Procedure, #SHALL)
