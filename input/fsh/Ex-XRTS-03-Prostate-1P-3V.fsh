@@ -97,6 +97,11 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
+  * extension[radiobiologicMetric].valueQuantity
+    * unit = #BED(a/b=2.5)
+    * code = #Gy
+    * system = UCUM
+    * value = 52.0 
 * extension[doseDeliveredToVolume][+]
   * extension[volume]
     * valueReference = Reference(RadiotherapyVolume-XRTS-03-22B-03-SemVs)
@@ -106,6 +111,11 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
+  * extension[radiobiologicMetric].valueQuantity
+    * unit = #BED(a/b=2.5)
+    * code = #Gy
+    * system = UCUM
+    * value = 52.0 
 * status = #completed
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
 

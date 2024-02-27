@@ -336,7 +336,7 @@ Title: "Intrafraction Verification"
 
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
-Title: "Radiotherapy Volume Extension"
+Title: "Radiotherapy Volume"
 Description: "Extension providing a reference to a RadiotherapyVolume"
 * . ^short = "Radiotherapy Volume"
 * value[x] only Reference(RadiotherapyVolume)
@@ -372,3 +372,32 @@ Expression: "extension.where(url = 'energy').exists() implies \n
                  )\n
                )"
 XPath: "true()"
+
+Invariant:   TG263RadiobiologicMetric
+Description: "Unit SHOULD match TG-263 Radiobiologic Metric Regexp"
+Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')"
+Severity:    #warning
+
+
+Extension: RadiobiologicMetric
+Id: codexrt-radiobiologic-metric
+Title: "Radiobiologic Metric"
+Description: """Extension providing radiobiologic dose metric using a regular expression:
+ BED,
+ CGE,
+ RBE,
+ RBE(factor = \<decimal\>),
+ EQD2Gy,
+ EQD2GY(a/b = \<decimal\>).
+"""
+* . ^short = "Radiotherapy Biologically Effective Dose"
+* insert ExpandedContexts
+* value[x] only Quantity
+//* valueQuantity.unit 1..1
+* valueQuantity.unit 1..1 
+* valueQuantity.unit obeys TG263RadiobiologicMetric
+// valueQuantity.unit is the display value
+// Code and System are optional.  Assumed to be Gy for the above forms
+* valueQuantity.value 1..1
+* value[x] 1..1
+

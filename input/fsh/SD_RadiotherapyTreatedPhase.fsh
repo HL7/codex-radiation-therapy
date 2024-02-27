@@ -4,6 +4,7 @@ Id:       codexrt-radiotherapy-treated-phase
 Title: "Radiotherapy Treated Phase"
 Description: "A summary of a phase of radiotherapy treatment that has been delivered. A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase."
 * insert RadiotherapyTreatedPhaseAndPlanCommon
+* insert BodySiteQualifierAndLaterality
 * ^status = #draft
 * code = SCT#1222565005 "Radiotherapy treatment phase (regime/therapy)"
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."

@@ -11,7 +11,7 @@ Whenever new contributions in the scope of the same course are delivered, this r
     ImageGuidedRadiotherapyModality named imageGuidedRadiotherapyModality 0..* MS and
     CourseInvolvesReirradiation named courseInvolvesReirradiation 0..1 MS
 * extension[doseDeliveredToVolume].extension contains
-    UniformFractionation named uniformFractionation 1..1 MS
+    UniformFractionation named uniformFractionation 1..1 MS 
 * insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     planned-course 0..1 MS and
