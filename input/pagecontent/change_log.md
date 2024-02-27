@@ -13,9 +13,9 @@ Updated the mCODE dependency to STU3.
 These are the unballoted changes that were made after STU 1 publication.
 
 #### Profile Additions
-* Added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles to model treatment sessions.  ([FHIR-42773](https://jira.hl7.org/browse/FHIR-42773))
+* Added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles to model treatment sessions ([FHIR-42773](https://jira.hl7.org/browse/FHIR-42773)).
 
-* Added extension [Intrafraction Verification](StructureDefinition-codexrt-intrafraction-verification.html) to all radiotherapy Procedures and ServiceRequests. This extension is used to annotate the procedure that is used to verify the position of the patient during treatment fractions.
+* Added extension [Intrafraction Verification](StructureDefinition-codexrt-intrafraction-verification.html) to all radiotherapy Procedures and ServiceRequests. This extension is used to annotate the procedure that is used to verify the position of the patient during treatment fractions ([FHIR-44628](https://jira.hl7.org/browse/FHIR-44628)).
 
 #### Narrative Changes
 * Extended the [overview](overview.html) with exaplanations of the added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles, including the newly added section [Session and Fraction Numbering](overview.html#session-and-fraction-numbering).
