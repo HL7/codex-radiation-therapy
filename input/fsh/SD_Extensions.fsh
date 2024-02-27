@@ -48,7 +48,12 @@ RuleSet: Contexts4
 * insert ExtensionContextResource(ServiceRequest)
 * insert ExtensionContextResource(ActivityDefinition)
 
-
+RuleSet: Contexts5
+* insert ExtensionContextResource(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume)
+* insert ExtensionContextResource(http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume)
+* insert ExtensionContextResource(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-prescribed-to-volume)
+* insert ExtensionContextResource(Procedure.extension)
+* insert ExtensionContextResource(ServiceRequest.extension)
 
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
@@ -264,9 +269,7 @@ This is important in registry use cases to efficiently assess whether checking p
 * . 0..1
 * value[x] ^short = "Uniform Fractionation Was Used"
 * value[x] only boolean
-* insert Contexts1
-* insert ExtensionContext(Extension)
-* insert ExtensionContext(Procedure.extension)
+* insert Contexts5
 
 
 Extension: PrimaryPlanDose
@@ -279,7 +282,7 @@ In summaries over multiple treatment plans, the flag indicates that the dose is 
 * . 0..1
 * value[x] ^short = "Primary Plan Dose"
 * value[x] only boolean
-* insert ExtensionContext(Extension)
+* insert Contexts5
 
 Extension: PointDose
 Id: codexrt-radiotherapy-point-dose
@@ -291,7 +294,7 @@ Since point doses mostly have a technical role, high-level summaries may decide 
 * . 0..1
 * value[x] ^short = "Point Dose"
 * value[x] only boolean
-* insert ExtensionContext(Extension)
+* insert Contexts5
 
 Extension: RadiotherapyReasonForRevisionOrAdaptation
 Id: codexrt-radiotherapy-reason-for-revision-or-adaptation
@@ -380,10 +383,10 @@ Description: "Extension providing a reference to a RadiotherapyVolume"
 * insert ExtensionContextResource(DiagnosticReport)
 * insert ExtensionContextResource(DetectedIssue)
 
-Extension: DiseaseProgressionQualifier
-Id: codexrt-radiotherapy-progression-qualifier
-Title: "Disease Progression Qualifier"
-Description: "Extension providing a qualifier for a disease progression"
+Extension: RadiotherapyDiseaseProgressionQualifier
+Id: codexrt-radiotherapy-disease-progression-qualifier
+Title: "Radiotherapy Disease Progression Qualifier"
+Description: "Radiotherapy Disease Progression Qualifier"
 * . ^short = "Progression Qualifier"
 * value[x] only CodeableConcept
 * value[x] from DiseaseProgressionQualifierVS (required)

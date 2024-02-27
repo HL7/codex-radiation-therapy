@@ -156,7 +156,6 @@ RuleSet: RadiotherapyProcedureCommon
 * focalDevice[seedDevice] ^short = "Radiotherapy Seed Device used as part of therapy."
 * location only Reference(USCoreLocation)
 * location MS
-* insert BodySiteQualifierAndLaterality
 
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon
