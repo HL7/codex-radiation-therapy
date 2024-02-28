@@ -22,6 +22,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22B-01-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* category = SCT#1287742003 "Radiotherapy (procedure)"
 
 
 Instance: RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V-1Fx
@@ -42,6 +43,7 @@ Usage: #example
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 * location = Reference(TreatmentLocation-1)
+* category = SCT#1287742003 "Radiotherapy (procedure)"
 
 Instance: RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V
 InstanceOf: RadiotherapyCourseSummary
@@ -60,6 +62,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-07T13:21:17+01:00"
+* category = SCT#1287742003 "Radiotherapy (procedure)"
 
 
 // --- Treated Phases ---------------------------------------------------------------------------------
@@ -82,6 +85,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-01-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* category = SCT#1287742003 "Radiotherapy (procedure)"
 
 Instance: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -98,6 +102,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 200
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
+* category = SCT#1287742003 "Radiotherapy (procedure)"
 
 Instance: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -114,6 +119,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 400
 * status = #completed
 * performedPeriod.end = "2021-09-07T13:21:17+01:00"
+* category = SCT#1287742003 "Radiotherapy (procedure)"
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
@@ -147,7 +153,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-01-22B)
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-
+* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
 // --- Planned Phases ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyPlannedPhase-XRTS-01-22B-01-01-Primary
@@ -179,7 +185,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-01-22B)
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-
+* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyVolume-XRTS-01-22B-01-Prostate

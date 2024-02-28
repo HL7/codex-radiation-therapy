@@ -52,6 +52,7 @@ Usage: #example
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with radiotherapy"
 * bodySite.text = "Prostate"
 * locationReference = Reference(TreatmentLocation-1)
+* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
 
 Instance: RadiotherapyPlannedPhase-05-Prostate-Phase2
 InstanceOf: RadiotherapyPlannedPhase
@@ -102,3 +103,4 @@ Usage: #example
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
 * locationReference = Reference(TreatmentLocation-1)
+* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
