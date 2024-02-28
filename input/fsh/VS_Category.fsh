@@ -4,8 +4,8 @@ Title: "Radiotherapy Category Code Value Set"
 Description: "Category value set required to support backward compatibility with an associated Max ValueSet"
 * ^experimental = false
 * insert SCTCopyright
-* SCT#1287742003 "Radiotherapy (procedure)"
-* insert $CodexRTCategoryDefinition
+* $CodexRTCategoryCS#1287742003 "Radiotherapy (procedure)"
+
 
 ValueSet: RadiotherapyCategoryMaxVS
 Id: codexrt-radiotherapy-category-max-vs
