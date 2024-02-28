@@ -28,7 +28,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-07-22B-01-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-07-22B-01-Uterus-1P-1V
 InstanceOf: RadiotherapyCourseSummary
@@ -48,7 +48,7 @@ Usage: #example
 * status = #completed
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 * focalDevice[seedDevice].manipulated = Reference(RadiotherapySeedDevice-Mesh)
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
@@ -70,7 +70,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * focalDevice[seedDevice].manipulated = Reference(RadiotherapySeedDevice-Mesh)
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-07-22B-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -87,7 +87,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 14500
 * status = #completed
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
-
+* insert $CodexRTCategoryCode
 // --- Planned Course ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyPlannedCourse-XRTS-07-22B-01-Uterus-1P-1V
@@ -121,7 +121,7 @@ Usage: #example
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * performer[treatmentOrSeedDevice] = Reference(RadiotherapySeedDevice-Mesh)
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -155,7 +155,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-07-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * performer[treatmentOrSeedDevice] = Reference(RadiotherapySeedDevice-Mesh)
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

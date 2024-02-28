@@ -22,7 +22,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V-Common
 * performedPeriod.start = "2020-09-07T13:15:17+01:00"
 * reasonCode = ICD10#C71.9 "Malignant neoplasm of brain, unspecified"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
@@ -41,7 +41,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2020-09-07T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V
 InstanceOf: RadiotherapyCourseSummary
@@ -60,7 +60,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2020-09-14T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 RuleSet: RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V-Common
 * meta.profile[+] = Canonical(RadiotherapyCourseSummary)
@@ -80,7 +80,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V-Common
 * performedPeriod.start = "2021-09-20T13:15:17+01:00"
 * reasonCode = ICD10#C71.9 "Malignant neoplasm of brain, unspecified"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V
 InstanceOf: RadiotherapyCourseSummary
@@ -103,7 +103,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-24T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
@@ -124,7 +124,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-01-01-Primary-Common
 * subject = Reference(Patient-XRTS-05-22B)
 * performedPeriod.start = "2020-09-07T13:15:17+01:00"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -141,7 +141,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 500
 * status = #in-progress
 * performedPeriod.end = "2020-09-07T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22B-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -158,7 +158,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 2500
 * status = #completed
 * performedPeriod.end = "2020-09-14T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-02-01-Primary-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
@@ -177,7 +177,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-02-01-Primary-Common
 * subject = Reference(Patient-XRTS-05-22B)
 * performedPeriod.start = "2021-09-20T13:15:17+01:00"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-05-22B-02-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -194,7 +194,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 2000
 * status = #completed
 * performedPeriod.end = "2021-09-24T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 // --- Planned Courses ---------------------------------------------------------------------------------
 
@@ -229,7 +229,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-05-22B)
 * reasonCode = ICD10#C71.9 "Malignant neoplasm of brain, unspecified"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 Instance: RadiotherapyPlannedCourse-XRTS-05-22B-02-BrainMets-1P-1V
 InstanceOf: RadiotherapyPlannedCourse
@@ -262,7 +262,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-05-22B)
 * reasonCode = ICD10#C71.9 "Malignant neoplasm of brain, unspecified"
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -295,7 +295,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-05-22B)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 
 Instance: RadiotherapyPlannedPhase-XRTS-05-22B-02-01-Primary
@@ -327,7 +327,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-05-22B)
 * bodySite[+] = SCT#12738006 "Brain structure (body structure)"
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

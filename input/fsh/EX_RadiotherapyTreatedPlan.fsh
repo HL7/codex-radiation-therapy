@@ -51,4 +51,4 @@ Usage: #example
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
 * location = Reference(TreatmentLocation-1)
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode

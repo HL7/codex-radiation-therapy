@@ -21,4 +21,4 @@ Terms beginning with 'USCRS-' (for United States Content Request Service) repres
 * #USCRS-99999814 "Radiography combining multiple directions (procedure)" "Radiography combining multiple directions (procedure)"
 * #USCRS-99999815 "Video surface imaging (procedure)" "Video surface imaging (procedure)"
 * #1297069006 "Fractionated dose radiotherapy (procedure)" "Fractionated dose radiotherapy (procedure)" //synonym = “Radiotherapy treatment fraction (procedure)”
-
+* #1287742003 "Radiotherapy (procedure)" // January SNOMED Release

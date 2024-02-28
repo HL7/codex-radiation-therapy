@@ -23,7 +23,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-Common
 * reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 //* reasonReference = Reference(Condition/Diagnosis-101-Breast"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 
 Instance: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-1Fx
@@ -53,7 +53,7 @@ Usage: #example
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 
 Instance: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V
@@ -94,7 +94,7 @@ Usage: #example
 * status = #completed
 * performedPeriod.end = "2021-09-17T13:21:17+01:00"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
@@ -117,7 +117,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-1Fx
@@ -140,7 +140,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 300
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang
 InstanceOf: RadiotherapyTreatedPhase
@@ -162,7 +162,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 900
 * status = #completed
 * performedPeriod.end = "2021-09-08T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 
 RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-02-RightBreastTang-Common
@@ -184,7 +184,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-02-RightBreastTang-Common
 * performedPeriod.start = "2021-09-13T13:15:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#24028007 "Right (qualifier value)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22B-01-02-RightBreastTang
 InstanceOf: RadiotherapyTreatedPhase
@@ -201,7 +201,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 900
 * status = #completed
 * performedPeriod.end = "2021-09-15T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-03-LeftBreastBoost-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
@@ -222,7 +222,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-03-LeftBreastBoost-Common
 * performedPeriod.start = "2021-09-14T13:15:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-04-22B-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyTreatedPhase
@@ -239,7 +239,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 800
 * status = #completed
 * performedPeriod.end = "2021-09-17T13:21:17+01:00"
-* category = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCode
 
 
 // --- Planned Course ---------------------------------------------------------------------------------
@@ -294,7 +294,7 @@ Usage: #example
 * reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 // --- Planned Phases ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22B-01-01-LeftBreastTang
@@ -334,7 +334,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22B-01-02-RightBreastTang
 InstanceOf: RadiotherapyPlannedPhase
@@ -367,7 +367,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#24028007 "Right (qualifier value)"
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 Instance: RadiotherapyPlannedPhase-XRTS-04-22B-01-03-LeftBreastBoost
 InstanceOf: RadiotherapyPlannedPhase
@@ -400,7 +400,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-04-22B)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* category[required] = SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryCodeRequired
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

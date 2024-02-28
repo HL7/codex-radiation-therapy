@@ -5,6 +5,7 @@ Description: "Category value set required to support backward compatibility with
 * ^experimental = false
 * insert SCTCopyright
 * SCT#1287742003 "Radiotherapy (procedure)"
+* insert $CodexRTCategoryDefinition
 
 ValueSet: RadiotherapyCategoryMaxVS
 Id: codexrt-radiotherapy-category-max-vs
