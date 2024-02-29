@@ -324,16 +324,6 @@ Title: "Image Guided Radiotherapy Modality"
   * value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)
 * insert UsualContexts
 
-Extension: IntrafractionVerification
-Id: codexrt-intrafraction-verification
-Description: "Verification of the patient or target position during a treatment fraction."
-Title: "Intrafraction Verification"
-* . ^short = "Intrafraction Verification"
-* value[x] only CodeableConcept
-* value[x] from IntrafractionVerificationProcedureVS (extensible)
-* value[x] 1..1
-* insert UsualContexts //Those can be reduced. E.g. I don't expect Obervation(Definition) or Extension as contexts. Maybe remove more.
-
 Extension: RadiotherapyVolumeExtension
 Id: codexrt-radiotherapy-volume-extension
 Title: "Radiotherapy Volume"

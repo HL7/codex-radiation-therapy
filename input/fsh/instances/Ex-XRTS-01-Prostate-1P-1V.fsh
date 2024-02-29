@@ -10,7 +10,10 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22B-01-Common
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#721031000124102 "Radiotherapy without respiratory motion management (regime/therapy)"
-* extension[intrafractionVerification][+].valueCodeableConcept = SCT#77477000 "Computed tomography (procedure)"
+//* extension[intrafractionVerification][+].extension[procedure].valueCodeableConcept = SCT#77477000 "Computed tomography (procedure)"
+* extension[intrafractionVerification][+]  // Martin -- does this make sense here or do we need a separate example
+  * extension[procedure].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[qualifier].valueCodeableConcept = SCT#255204007 "Multiple (qualifier value)"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
@@ -70,7 +73,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-01-22B-01-01-Primary-Common
   * extension[modality][+].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SnomedRequestedCS#721031000124102 "Radiotherapy without respiratory motion management (regime/therapy)"
-* extension[intrafractionVerification][+].valueCodeableConcept = SCT#77477000 "Computed tomography (procedure)"
+* extension[intrafractionVerification][+].extension[procedure].valueCodeableConcept = SCT#77477000 "Computed tomography (procedure)"
 * identifier[displayName]
   * system = VarianRadiotherapyPhaseId
   * value = "Primary"

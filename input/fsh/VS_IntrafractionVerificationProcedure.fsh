@@ -4,12 +4,22 @@ Title: "Intrafraction Verification Procedure Value Set"
 Description: "The procedure used for verification of the patient position during a treatment fraction."
 * ^experimental = false
 * insert SCTCopyright
-
 * SCT#16310003 "Ultrasonography (procedure)"
 * SCT#77477000 "Computed tomography (procedure)"
+* SCT#717193008 "Cone beam computed tomography (procedure)"
 * SCT#113091000 "Magnetic resonance imaging (procedure)"
-* SnomedRequestedCS#USCRS-99999811 "Radiologic guidance using a radiofrequency fiducial marker (procedure)"
-* SnomedRequestedCS#USCRS-99999812 "Radiologic guidance using a radiopaque fiducial marker (procedure)"
-* SnomedRequestedCS#USCRS-99999813 "Radiography from single direction (procedure)"
-* SnomedRequestedCS#USCRS-99999814 "Radiography combining multiple directions (procedure)"
-* SnomedRequestedCS#USCRS-99999815 "Video surface imaging (procedure)"
+* SCT#168537006 "Plain radiography (procedure)" // plus qualifiers
+// Qualifier -- Singular   * SnomedRequestedCS#USCRS-99999813 "Radiography from single direction (procedure)"
+// Qualifier -- Multiple   * SnomedRequestedCS#USCRS-99999814 "Radiography combining multiple directions (procedure)"
+* SnomedRequestedCS#USCRS-35604 "Imaging guidance using fiducial markers (procedure)"
+* SnomedRequestedCS#USCRS-35606 "Radiotherapy using electromagnetic transponder guidance (procedure)"
+* SnomedRequestedCS#1297350006 "Surface guided radiation therapy (procedure)"
+
+ValueSet: IntrafractionVerificationQualifierVS
+Id: codexrt-intrafraction-verification-qualifier-vs
+Title: "Intrafraction Verification Procedure Qualifier Value Set"
+Description: "Qualifiers for  procedures used for verification of the patient position during a treatment fraction."
+* ^experimental = false
+* insert SCTCopyright
+* SCT#50607009 "Singular (qualifier value)" //from single direction
+* SCT#255204007 "Multiple (qualifier value)" // from muliple directions

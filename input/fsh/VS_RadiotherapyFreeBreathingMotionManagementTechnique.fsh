@@ -6,5 +6,5 @@ Description: "Technique to manage respiratory motion with free-breathing."
 * ^experimental = false
 * SnomedRequestedCS#721061000124106 "Radiotherapy with respiratory gating (regime/therapy)"
 * SCT##1286801002 "Real time tumor tracking external beam radiotherapy (procedure)"
-* SnomedRequestedCS#USCRS-34880 "Radiotherapy with (ITV) Internal Target Volume creation"
+* SnomedRequestedCS#1286802009 "External beam radiotherapy using internal target volume approach (procedure)"
 * SnomedRequestedCS#721081000124101 "Radiotherapy with abdominal compression (regime/therapy)"
