@@ -31,3 +31,4 @@ Description: "A summary of radiotherapy treatment delivered with a single treatm
 * partOf[treated-phase] ^short = "Radiotherapy Treated Phase that summarizes the phase of which this Radiotherapy Treated Plan is a part."
 * partOf[course-summary] only Reference(RadiotherapyCourseSummary)
 * partOf[treated-phase] only Reference(RadiotherapyTreatedPhase)
+* insert BodySiteQualifierAndLaterality

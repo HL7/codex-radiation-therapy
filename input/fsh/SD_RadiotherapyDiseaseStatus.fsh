@@ -9,7 +9,7 @@ Description: "Disease Status Reported by Radiation Oncologist"
 * extension contains
     RadiotherapyVolumeExtension named radiotherapyVolume 0..*
 * valueCodeableConcept.extension contains
-    DiseaseProgressionQualifier named diseaseProgressionQualifier 0..*
+    RadiotherapyDiseaseProgressionQualifier named diseaseProgressionQualifier 0..*
 // may need invariant so that progression qualifier can only be provided if value is progressive disease
 * valueCodeableConcept obeys RestrictDiseaseProgressionQualifier
 
