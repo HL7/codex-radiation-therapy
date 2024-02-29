@@ -136,7 +136,9 @@ RuleSet: RadiotherapyProcedureCommon
     IntrafractionVerification named intrafractionVerification 0..* MS
 * extension[doseDeliveredToVolume].extension contains
     PointDose named pointDose 0..1 MS and
-    PrimaryPlanDose named primaryPlanDose 0..1 MS
+    PrimaryPlanDose named primaryPlanDose 0..1 MS and 
+    RadiobiologicMetric named radiobiologicMetric 0..* MS
+* extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^short = "Total Physical Radiation Dose Delivered"
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
 * performed[x] only Period
 * performedPeriod.start MS
@@ -167,7 +169,8 @@ RuleSet: RadiotherapyPlansCommon
 * insert RadiotherapyRequestCommon
 * extension[radiotherapyDosePlannedToVolume].extension contains
     PointDose named pointDose 0..1 MS and
-    PrimaryPlanDose named primaryPlanDose 0..1 MS
+    PrimaryPlanDose named primaryPlanDose 0..1 MS and 
+    RadiobiologicMetric named radiobiologicMetric 0..* MS 
 * intent = ReqIntent#filler-order "Filler Order"
 
 RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
@@ -181,6 +184,8 @@ RuleSet: RadiotherapyPlannedPhaseAndTreatmentPlanCommon
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a phase, all volumes are involved in all fractions."
   * extension[fractions] ^definition = "Not used in this profile. In a phase, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPlanned. To achieve different numbers of fractions for different volumes, multiple phases have to be defined."
+  * extension[totalDose] ^short = "Total Physical Radiation Dose Planned"
+
 
 RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
 * insert RadiotherapyPrescriptionsCommon
@@ -193,6 +198,9 @@ RuleSet: RadiotherapyPhaseAndPlanPrescriptionCommon
   * extension[fractions] 0..0
   * extension[fractions] ^short = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions."
   * extension[fractions] ^definition = "Not used in this profile. In a Treatment Plan, all volumes are involved in all fractions and the number of fractions is defined in extension radiotherapyFractionsPrescribed."
+  * extension[totalDose] ^short = "Total Physical Radiation Dose Prescribed"
+  * extension contains
+    RadiobiologicMetric named radiobiologicMetric 0..* MS 
 
 RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * obeys codexrt-procedure-status

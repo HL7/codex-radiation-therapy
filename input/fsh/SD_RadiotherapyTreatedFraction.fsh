@@ -8,6 +8,7 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
 * extension contains
     $mCODERadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
 * insert RadiotherapyProcedureCommon
+* insert BodySiteQualifierAndLaterality
 * ^status = #draft
 * extension contains
     RadiotherapyFractionNumberInPlan named radiotherapyFractionNumberInPlan 0..1 MS and

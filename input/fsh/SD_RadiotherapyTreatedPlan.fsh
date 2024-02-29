@@ -4,6 +4,7 @@ Id:       codexrt-radiotherapy-treated-plan
 Title: "Radiotherapy Treated Plan"
 Description: "A summary of radiotherapy treatment delivered with a single treatment plan."
 * insert RadiotherapyTreatedPhaseAndPlanCommon
+* insert BodySiteQualifierAndLaterality
 * ^status = #draft
 * extension contains
     DicomReference named radiotherapyDicomRecord 0..*
