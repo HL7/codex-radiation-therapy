@@ -31,16 +31,7 @@ RuleSet: Contexts2
 // radiotherapy-treatment-applicator-type.html
 * insert Contexts1
 * insert ExtensionContextResource(Device)
-* insert ExtensionContextResource(Extension ) // Just the mCODE Course Summary
-
-RuleSet: Contexts3
-// radiotherapy-point-dose.html
-// radiotherapy-primary-plan-dose.html
-// radiotherapy-uniform-fractionation.html
-* insert ExtensionContextResource(Extension) // should include the following extensions
-   // radiotherapy-dose-planned-to-volume
-   // radiotherapy-dose-delivered-to-volume
-   // radiotherapy-dose-prescribed-to-volume
+* insert ExtensionContextResource(http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique)
 
 RuleSet: Contexts4 
 // radiotherapy-fractions-planned.html
@@ -49,11 +40,13 @@ RuleSet: Contexts4
 * insert ExtensionContextResource(ActivityDefinition)
 
 RuleSet: Contexts5
+// radiotherapy-point-dose.html
+// radiotherapy-primary-plan-dose.html
+// radiotherapy-uniform-fractionation.html
 * insert ExtensionContextResource(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume)
 * insert ExtensionContextResource(http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume)
 * insert ExtensionContextResource(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-prescribed-to-volume)
-* insert ExtensionContextResource(Procedure.extension)
-* insert ExtensionContextResource(ServiceRequest.extension)
+
 
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
