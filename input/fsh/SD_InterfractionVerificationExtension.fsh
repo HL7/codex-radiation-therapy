@@ -14,7 +14,7 @@ Title: "Intrafraction Verification"
 // Add invariant that "the qualifier is only present when the procedure is xray"
 // Need a table with the documentation of the combinations, and clarifying that xray without a qualifer = xray + singular.
 * . ^short = "Intrafraction Verification"
-* insert UsualContexts //Those can be reduced. E.g. I don't expect Obervation(Definition) or Extension as contexts. Maybe remove more.
+* insert UsualContexts // ==> after merge make this Contexts1
 * obeys IntrafractionVerificationQualifierAllowed
 * value[x] 0..0
 * extension contains
