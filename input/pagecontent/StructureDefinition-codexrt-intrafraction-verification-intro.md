@@ -8,8 +8,8 @@ This extension is used to capture the type of intrafraction verificiation used d
 | Ultrasound                 | SCT#16310003 Ultrasonography (procedure) |     None           |
 | CT                 | SCT#77477000 Computed tomography (procedure) |     None           |
 | MRI                | SCT#113091000 Magnetic resonance imaging (procedure) |     None           |
-| Fidicial Markers   | SnomedRequestedCS#USCRS-35604 Imaging guidance using fiducial markers (procedure) |     None           |
-| Electromagnetic Transpoder  | SnomedRequestedCS#USCRS-35606 Radiotherapy using electromagnetic transponder guidance (procedure) |     None           |
+| Fiducial Markers   | SnomedRequestedCS#USCRS-35604 Imaging guidance using fiducial markers (procedure) |     None           |
+| Electromagnetic Transponder  | SnomedRequestedCS#USCRS-35606 Radiotherapy using electromagnetic transponder guidance (procedure) |     None           |
 | Surface Guided                 | SnomedRequestedCS#1297350006 "Surface guided radiation therapy (procedure)"|     None           |
 {: .grid }
 
