@@ -43,4 +43,3 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
 * partOf[treated-phase] only Reference(RadiotherapyTreatedPhase)
 * encounter MS
 * encounter only Reference(RadiotherapyTreatmentSession)
-* insert BodySiteQualifierAndLaterality
