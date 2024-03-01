@@ -22,7 +22,8 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22B-01-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
-* insert $CodexRTCategoryCode
+// * insert $CodexRTCategoryCode
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" // This is the old, inactive code, but still should work
 
 
 Instance: RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V-1Fx
