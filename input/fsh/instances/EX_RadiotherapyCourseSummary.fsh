@@ -45,7 +45,7 @@ Usage: #example
 * basedOn[+] = Reference(RadiotherapyCoursePrescription-04-Prostate)
 * basedOn[=].display = "Prostate-2Phases"
 * status = #in-progress
-//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" // This is the historical, inactive code, that should still be valid.
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
