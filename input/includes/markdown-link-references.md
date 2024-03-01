@@ -73,13 +73,13 @@
 [RadiotherapyVolumeXRTS0501BrainMets]: BodyStructure-RadiotherapyVolume-XRTS-05-22B-01-BrainMets.html
 [RadiotherapyVolume01PTV50]: BodyStructure-radiotherapyVolume-01-PTV50.html
 
-[mCODE Radiotherapy Treatment Location ValueSet]: {{site.data.fhir.ver.mcodeFHIR}}/ValueSet-mcode-radiotherapy-treatment-location-vs.html
-[mCODE Cancer Disorder ValueSet]: {{site.data.fhir.ver.mcodeFHIR}}/ValueSet-mcode-cancer-disorder-vs.html
-[mCODE CancerDiseaseStatus]: {{site.data.fhir.ver.mcodeFHIR}}/StructureDefinition-mcode-cancer-disease-status.html
-[mCODE RadiotherapyVolume]: {{site.data.fhir.ver.mcodeFHIR}}/StructureDefinition-mcode-radiotherapy-volume.html
-[mCODE modalityAndTechnique]: {{site.data.fhir.ver.mcodeFHIR}}/StructureDefinition-mmcode-radiotherapy-modality-and-technique.html
-[mCODE DoseDeliveredToVolume]: {{site.data.fhir.ver.mcodeFHIR}}/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
-[mCODE ProcedureIntent]: {{site.data.fhir.ver.mcodeFHIR}}/StructureDefinition-mcode-procedure-intent.html
-[mCODE Radiotherapy Course Summary]: {{site.data.fhir.ver.mcodeFHIR}}/StructureDefinition-mcode-radiotherapy-course-summary.html
-[mCode Cancer-related Surgical Procedure]: {{site.data.fhir.ver.mcodeFHIR}}/StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[mCode RadiotherapyDoseDeliveredToVolume]: {{site.data.fhir.ver.mcodeFHIR}}/StructureDefinition-mcode-dose-delivered-to-volume.html
+[mCODE Radiotherapy Treatment Location ValueSet]: {{site.data.fhir.ver.fhirmcode}}/ValueSet-mcode-radiotherapy-treatment-location-vs.html
+[mCODE Cancer Disorder ValueSet]: {{site.data.fhir.ver.fhirmcode}}/ValueSet-mcode-cancer-disorder-vs.html
+[mCODE CancerDiseaseStatus]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-cancer-disease-status.html
+[mCODE RadiotherapyVolume]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-volume.html
+[mCODE modalityAndTechnique]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mmcode-radiotherapy-modality-and-technique.html
+[mCODE DoseDeliveredToVolume]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
+[mCODE ProcedureIntent]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-procedure-intent.html
+[mCODE Radiotherapy Course Summary]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-course-summary.html
+[mCode Cancer-related Surgical Procedure]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-cancer-related-surgical-procedure.html
+[mCode RadiotherapyDoseDeliveredToVolume]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-dose-delivered-to-volume.html

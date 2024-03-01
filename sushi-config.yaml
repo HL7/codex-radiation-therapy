@@ -27,7 +27,7 @@ dependencies:
     id: hl7fhiruscore
   hl7.fhir.us.mcode: 
     version: 3.0.0
-    id: fhirmcode 
+    id: fhirmcode
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
