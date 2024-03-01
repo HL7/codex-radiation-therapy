@@ -49,7 +49,6 @@ RuleSet: Contexts5
 * insert ExtensionContextExtension(http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume)
 * insert ExtensionContextExtension(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-prescribed-to-volume)
 
-
 Extension: RadiotherapyFractionsPrescribed
 Id: codexrt-radiotherapy-fractions-prescribed
 Title: "Number of Prescribed Fractions"
@@ -425,7 +424,8 @@ Description: """Extension providing radiobiologic dose metric using a regular ex
  EQD2GY(a/b = \<decimal\>).
 """
 * . ^short = "Radiotherapy Biologically Effective Dose"
-* insert ExpandedContexts
+* insert Contexts1
+* insert Contexts5
 * value[x] only Quantity
 //* valueQuantity.unit 1..1
 * valueQuantity.unit 1..1 
