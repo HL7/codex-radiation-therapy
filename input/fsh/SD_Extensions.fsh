@@ -399,7 +399,7 @@ XPath: "true()"
 Invariant:   TG263RadiobiologicMetric
 Description: "Unit SHOULD match TG-263 Radiobiologic Metric Regexp"
 // Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')"
-Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE\\\\(factor\\\\s*=\\\\s*(\\\\d?(\\\\.\\\\d+)?)\\\\)|EQD2Gy|EQD2GY\\\\(a\\\\/b\\\\s*=\\\\s*(\\\\d?(\\\\.\\\\d+)?)\\\\))$')"
+Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE\\\\(factor\\\\s*=\\\\s*(\\\\d?(\\\\.\\\\d+)?)\\\\)|EQD2Gy|EQD2Gy\\\\(a\\\\/b\\\\s*=\\\\s*(\\\\d?(\\\\.\\\\d+)?)\\\\))$')"
 //                       toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')
 //                       toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')
 // Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE(factor\s*=\s*(\d?(\.\d+)?))|EQD2Gy|EQD2GY(a\/b\s*=\s*(\d?(\.\d+)?)))$')"
@@ -415,7 +415,7 @@ Description: """Extension providing radiobiologic dose metric using a regular ex
  RBE,
  RBE(factor = \<decimal\>),
  EQD2Gy,
- EQD2GY(a/b = \<decimal\>).
+ EQD2Gy(a/b = \<decimal\>).
 """
 * . ^short = "Radiotherapy Biologically Effective Dose"
 * insert Contexts1

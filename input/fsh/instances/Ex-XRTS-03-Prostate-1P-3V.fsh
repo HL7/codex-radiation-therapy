@@ -97,7 +97,7 @@ Usage: #example
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
   * extension[radiobiologicMetric].valueQuantity
-    * unit = #BED(a/b=2.5)
+    * unit = #EQD2Gy(a/b=2.5)
     * code = #Gy
     * system = UCUM
     * value = 52.0 
@@ -111,7 +111,7 @@ Usage: #example
   * extension[pointDose].valueBoolean = false
   * extension[primaryPlanDose].valueBoolean = false
   * extension[radiobiologicMetric].valueQuantity
-    * unit = #BED(a/b=2.5)
+    * unit = #EQD2Gy(a/b=2.5)
     * code = #Gy
     * system = UCUM
     * value = 52.0 
