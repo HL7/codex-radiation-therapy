@@ -169,7 +169,6 @@ RuleSet: RadiotherapyProcedureCommon
 * location only Reference(USCoreLocation)
 * location MS
 
-
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon
 * intent = ReqIntent#original-order "Original Order"

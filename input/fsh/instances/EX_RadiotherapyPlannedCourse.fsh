@@ -1,4 +1,3 @@
-
 Instance: RadiotherapyPlannedCourse-04-Prostate
 InstanceOf: RadiotherapyPlannedCourse
 Description: "Radiotherapy Planned Course example."
@@ -52,4 +51,4 @@ Usage: #example
 * bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
 * locationReference = Reference(TreatmentLocation-1)
-* insert $CodexRTCategoryCodeRequired
+* category[required] = SCT#108290001 "Radiation oncology AND/OR radiotherapy" // This is the historical, inactive code, that should still be valid.

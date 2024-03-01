@@ -10,15 +10,11 @@ Terms beginning with 'USCRS-' (for United States Content Request Service) repres
 * #721031000124102  "Radiotherapy without respiratory motion management (regime/therapy)" "Radiotherapy without respiratory motion management (regime/therapy)" //USCRS-34886
 * #721061000124106  "Radiotherapy with respiratory gating (regime/therapy)" "Radiotherapy with respiratory gating (regime/therapy)" //USCRS-34881
 * #1286801002 "Real time tumor tracking external beam radiotherapy (procedure)" //USCRS-34878
-* #USCRS-34880 "Radiotherapy with (ITV) Internal Target Volume creation" "Radiotherapy with (ITV) Internal Target Volume creation"
+* #1286802009 "External beam radiotherapy using internal target volume approach (procedure)" // #USCRS-34880
 * #721081000124101  "Radiotherapy with abdominal compression (regime/therapy)" "Radiotherapy with abdominal compression (regime/therapy)" //USCRS-34882
-// * #721041000124107 "Radiotherapy with respiratory motion management (regime/therapy)" "Radiotherapy with respiratory motion management (regime/therapy )" // USCRS-34885.  Parent code, not directly used by IG.
+* #721041000124107 "Radiotherapy with respiratory motion management (regime/therapy)" "Radiotherapy with respiratory motion management (regime/therapy )" // USCRS-34885.  Parent code, not directly used by IG.
 * #1297350006 "Surface guided radiation therapy (procedure)"
-* #USCRS-99999901 "Radiotherapy treatment fraction (regime/therapy)" "Radiotherapy treatment fraction (regime/therapy)"
-* #USCRS-99999811 "Radiologic guidance using a radiofrequency fiducial marker (procedure)" "Radiologic guidance using a radiofrequency fiducial marker (procedure)"
-* #USCRS-99999812 "Radiologic guidance using a radiopaque fiducial marker (procedure)" "Radiologic guidance using a radiopaque fiducial marker (procedure)"
-* #USCRS-99999813 "Radiography from single direction (procedure)" "Radiography from single direction (procedure)"
-* #USCRS-99999814 "Radiography combining multiple directions (procedure)" "Radiography combining multiple directions (procedure)"
-* #USCRS-99999815 "Video surface imaging (procedure)" "Video surface imaging (procedure)"
-* #1297069006 "Fractionated dose radiotherapy (procedure)" "Fractionated dose radiotherapy (procedure)" //synonym = “Radiotherapy treatment fraction (procedure)”
-* #1287742003 "Radiotherapy (procedure)" // January SNOMED Release
+* #1297069006 "Fractionated dose radiotherapy (procedure)" // #USCRS-99999901 "Radiotherapy treatment fraction (regime/therapy)" 
+* #USCRS-35604 "Imaging guidance using fiducial markers (procedure)"
+* #USCRS-35606 "Radiotherapy using electromagnetic transponder guidance (procedure)"
+* #1287742003 "Radiotherapy (procedure)" // temporary until IGP SNOMEDCT version updated 

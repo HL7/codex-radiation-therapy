@@ -9,7 +9,7 @@ Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: DICOMUID = urn:dicom:uid
 Alias: v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-
+Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 // USCore
 // Alias: AdminGender = //2.16.840.1.113883.5.1 // http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender
 
