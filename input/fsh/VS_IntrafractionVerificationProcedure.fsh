@@ -6,7 +6,6 @@ Description: "The procedure used for verification of the patient position during
 * insert SCTCopyright
 * SCT#16310003 "Ultrasonography (procedure)"
 * SCT#77477000 "Computed tomography (procedure)"
-* SCT#717193008 "Cone beam computed tomography (procedure)"
 * SCT#113091000 "Magnetic resonance imaging (procedure)"
 * SCT#168537006 "Plain radiography (procedure)" // plus qualifiers
 // Qualifier -- Singular   * SnomedRequestedCS#USCRS-99999813 "Radiography from single direction (procedure)"
