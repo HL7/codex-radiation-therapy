@@ -16,7 +16,9 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+  // * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)" -- bug in mCODE Invariant
+  * extension[technique][+].valueCodeableConcept = $v3-NullFlavor#UNC "un-encoded"
+    * text = "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254776009 "Brachytherapy tandem (physical object)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
@@ -76,7 +78,9 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
 * meta.profile = Canonical(RadiotherapyTreatedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+//  * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)" -- mCODE STU3 Bug
+  * extension[technique][+].valueCodeableConcept = $v3-NullFlavor#UNC "un-encoded"
+    * text = "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254776009 "Brachytherapy tandem (physical object)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
@@ -140,7 +144,9 @@ Usage: #example
     * text = "Curative"
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+//  * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+  * extension[technique][+].valueCodeableConcept = $v3-NullFlavor#UNC "un-encoded"
+    * text = "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254776009 "Brachytherapy tandem (physical object)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"
@@ -173,7 +179,9 @@ Usage: #example
 * meta.profile = Canonical(RadiotherapyPlannedPhase)
 * extension[modalityAndTechnique][+]
   * extension[modality][+].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
-  * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+//  * extension[technique][+].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)" -- mCODE STU3 Bug
+  * extension[technique][+].valueCodeableConcept = $v3-NullFlavor#UNC "un-encoded"
+    * text = "Intracavitary brachytherapy (procedure)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254778005 "Brachytherapy ring (physical object)"
   * extension[radiotherapyTreatmentApplicatorType][+].valueCodeableConcept = SCT#1254776009 "Brachytherapy tandem (physical object)"
   * extension[radiotherapyEnergyOrIsotope][+].valueCodeableConcept = SCT#48341001 "Iridium-192 (substance)"

@@ -1,30 +1,26 @@
-### CodeX Radiation Therapy Continue Integration Build
-These changes were added to the CI build, and have not been formally published.
-
-#### Updated mCODE Dependency
-Updated the mCODE dependency to STU3. 
-
-#### Biologically Effective Dose 
-* Added a [RadiobiologicMetric](StructureDefinition-codexrt-radiobiologic-metric.html) extension to capture a radiobiologic metric of effective dose, as defined by the TG-263. The extension has been added to all ServiceRequest and Procedure profiles, i.e. [RadiotherapyCoursePrescription](StructureDefinition-codexrt-radiotherapy-course-prescription.html), [RadiotherapyPhasePrescription](StructureDefinition-codexrt-radiotherapy-phase-prescription.html), [RadiotherapyPlanPrescription](StructureDefinition-codexrt-radiotherapy-plan-prescription.html), [RadiotherapyPlannedCourse](StructureDefinition-codexrt-radiotherapy-planned-course.html), [RadiotherapyPlannedPhase](StructureDefinition-codexrt-radiotherapy-planned-phase.html), [RadiotherapyTreatmentPlan](StructureDefinition-codexrt-radiotherapy-treatment-plan.html), [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html), [RadiotherapyTreatedPhase](StructureDefinition-codexrt-radiotherapy-treated-phase.html), and [RadiotherapyTreatedPlan](StructureDefinition-codexrt-radiotherapy-treated-plan.html).
-
-
-### CodeX Radiation Therapy STU 1 Publication Version
-### CodeX Radiation Therapy STU 1.1 Work in Progress
+### CodeX Radiation Therapy STU2 Work in Progress
 These are the unballoted changes that were made after STU 1 publication.
 
-#### Profile Additions
-* Added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles to model treatment sessions ([FHIR-42773](https://jira.hl7.org/browse/FHIR-42773)).
-
-* Added extension [Intrafraction Verification](StructureDefinition-codexrt-intrafraction-verification.html) to all radiotherapy Procedures and ServiceRequests. This extension is used to annotate the procedure that is used to verify the position of the patient during treatment fractions ([FHIR-44628](https://jira.hl7.org/browse/FHIR-44628)).
-
-#### Narrative Changes
-* Extended the [overview](overview.html) with exaplanations of the added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles, including the newly added section [Session and Fraction Numbering](overview.html#session-and-fraction-numbering).
-* Changed references from outdated "Operational Ontology for Radiation Oncology (OORO)" to "Operational Ontology for Oncology (O3)" ([FHIR-41682](https://jira.hl7.org/browse/FHIR-41682)).
-
-#### Profile Changes
-* Added required code for Procedure.category in [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html). The category was inherited from mCODE [RadiotherapyCourseSummary](https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html) up to mCODE 2.1.0, but removed in mCODE 3.0.0. Now CodeX RT defines the category for Radiotherapy Course Summary instead of inheriting from mCODE ([FHIR-41764](https://jira.hl7.org/browse/FHIR-41764)).
-* Fixed typo (radiotheraphy) in extension url for [Reason for Revision or Adaptation](StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html) ([FHIR-42893](https://jira.hl7.org/browse/FHIR-42893)). Fixed the same typo in [Radiotherapy Adverse Event Grade](StructureDefinition-codexrt-radiotherapy-adverse-event-severity-or-grade.html), [Severity or Grade CodeSystem based on CTCAE](CodeSystem-codexrt-radiotherapy-adverse-event-severity-or-gradeCS.html), and [Adverse Event Severity or Grade Value Set](ValueSet-codexrt-radiotherapy-adverse-event-severity-or-gradeVS.html).
-* In the [RadiotherapyVolume](StructureDefinition-codexrt-radiotherapy-volume.html), changed the cardinality of the identifier slice for display name from the 0..1 of mCODE to 1..1. In CodeX RT, the display name is mandatory. The identifier cardinality was already 2..* to reflect the two mandatory slices ([FHIR-41885](https://jira.hl7.org/browse/FHIR-41885)).
+* Dependency Changes
+  * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
+  * Changed USCore dependency to [5.0.1]({{site.data.fhir.ver.hl7fhiruscore}}/index.html)
+* USCore Changes
+  * ServiceRequest profiles are now based on USCoreServiceRequest.
+* Extension Contexts
+  * All extension contexts have been tightened.
+* Rename of Disease Progression Qualifier Extension
+  * [DiseaseProgressionQualifier](https://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition-codexrt-radiotherapy-progression-qualifier.html) extension has been renamed [RadiotherapyDiseaseProgressionQualifier].
+* Additions
+  * Added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles to model treatment sessions.  ([FHIR-42773](https://jira.hl7.org/browse/FHIR-42773))
+  * Added extension [Intrafraction Verification](StructureDefinition-codexrt-intrafraction-verification.html) to all radiotherapy Procedures and ServiceRequests. This extension is used to annotate the procedure that is used to verify the position of the patient during treatment fractions.
+  * Added a [RadiobiologicMetric](StructureDefinition-codexrt-radiobiologic-metric.html) extension to capture a radiobiologic metric of effective dose, as defined by the TG-263. The extension has been added to all ServiceRequest and Procedure profiles, i.e. [RadiotherapyCoursePrescription](StructureDefinition-codexrt-radiotherapy-course-prescription.html), [RadiotherapyPhasePrescription](StructureDefinition-codexrt-radiotherapy-phase-prescription.html), [RadiotherapyPlanPrescription](StructureDefinition-codexrt-radiotherapy-plan-prescription.html), [RadiotherapyPlannedCourse](StructureDefinition-codexrt-radiotherapy-planned-course.html), [RadiotherapyPlannedPhase](StructureDefinition-codexrt-radiotherapy-planned-phase.html), [RadiotherapyTreatmentPlan](StructureDefinition-codexrt-radiotherapy-treatment-plan.html), [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html), [RadiotherapyTreatedPhase](StructureDefinition-codexrt-radiotherapy-treated-phase.html), and [RadiotherapyTreatedPlan](StructureDefinition-codexrt-radiotherapy-treated-plan.html).
+* Narrative Changes
+  * Extended the [overview](overview.html) with exaplanations of the added [Radiotherapy Treated Fraction](StructureDefinition-codexrt-radiotherapy-treated-fraction.html) and [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) profiles, including the newly added section [Session and Fraction Numbering](overview.html#session-and-fraction-numbering).
+  * Changed references from outdated "Operational Ontology for Radiation Oncology (OORO)" to "Operational Ontology for Oncology (O3)" ([FHIR-41682](https://jira.hl7.org/browse/FHIR-41682)).
+* Profile Changes
+  * Added required code for Procedure.category in [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html). The category was inherited from mCODE [RadiotherapyCourseSummary](https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html) up to mCODE 2.1.0, but removed in mCODE 3.0.0. Now CodeX RT defines the category for Radiotherapy Course Summary instead of inheriting from mCODE ([FHIR-41764](https://jira.hl7.org/browse/FHIR-41764)).
+  * Fixed typo (radiotheraphy) in extension url for [Reason for Revision or Adaptation](StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html) ([FHIR-42893](https://jira.hl7.org/browse/FHIR-42893)). Fixed the same typo in [Radiotherapy Adverse Event Grade](StructureDefinition-codexrt-radiotherapy-adverse-event-severity-or-grade.html), [Severity or Grade CodeSystem based on CTCAE](CodeSystem-codexrt-radiotherapy-adverse-event-severity-or-gradeCS.html), and [Adverse Event Severity or Grade Value Set](ValueSet-codexrt-radiotherapy-adverse-event-severity-or-gradeVS.html).
+  * In the [RadiotherapyVolume](StructureDefinition-codexrt-radiotherapy-volume.html), changed the cardinality of the identifier slice for display name from the 0..1 of mCODE to 1..1. In CodeX RT, the display name is mandatory. The identifier cardinality was already 2..* to reflect the two mandatory slices ([FHIR-41885](https://jira.hl7.org/browse/FHIR-41885)).
 
 ### CodeX Radiation Therapy STU1 Publication Version
 These are the changes that were made during ballot reconciliation.

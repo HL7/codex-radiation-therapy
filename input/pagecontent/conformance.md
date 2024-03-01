@@ -28,7 +28,7 @@ The information produced and consumed by CodeX RT participants is defined by a s
 
 #### Populate and Meaningfully Process CodeX RT Resources
 
-Treatment Summary Providers and RO Resource Repositories MUST be able to populate data elements with Must-Support (MS) obligations (marked with the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag), for all profiles they support (as declared in their CapabilityStatement). Treatment Observers MUST be able to meaningfully process elements with MS obligations for each profile they support (as declared in their CapabilityStatement). "Able to Populate" and Meaningfully Process" are defined according to [mCODE's definition](http://hl7.org/fhir/us/mcode/STU2.1/conformance-profiles.html#element-level-conformance-expectations).
+Treatment Summary Providers and RO Resource Repositories MUST be able to populate data elements with Must-Support (MS) obligations (marked with the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag), for all profiles they support (as declared in their CapabilityStatement). Treatment Observers MUST be able to meaningfully process elements with MS obligations for each profile they support (as declared in their CapabilityStatement). "Able to Populate" and Meaningfully Process" are defined according to [mCODE's definition]({{site.data.fhir.ver.fhirmcode}}/conformance-profiles.html#element-level-conformance-expectations).
 
 * **Sender:** Must-Support elements SHALL be populated by the Sender of CodeX RT resources unless
   * the element’s minimum cardinality is zero and the sender lacks the data necessary to populate the element. In this case, the element SHOULD be entirely omitted. If there is a specific reason the data is missing, a data absent reason (described in the US Core rules on missing data) MAY be substituted.
@@ -51,6 +51,6 @@ International users of CodeX RT may find US Core an impediment to implementation
 Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources claim to conform to. Servers SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
 
 ### Element-level conformance requirements
-CodeX RT implementers should conform to the [mCODE element-level conformance requirements](https://hl7.org/fhir/us/mcode/STU2.1/conformance-profiles.html#element-level-conformance-expectations).
+CodeX RT implementers should conform to the [mCODE element-level conformance requirements]({{site.data.fhir.ver.fhirmcode}}/conformance-profiles.html#element-level-conformance-expectations).
 
 {% include markdown-link-references.md %}
