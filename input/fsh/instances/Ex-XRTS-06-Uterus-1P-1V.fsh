@@ -34,6 +34,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-06-22B-01-Common
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * usedReference[treatmentDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx
 InstanceOf: RadiotherapyCourseSummary
@@ -52,6 +53,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V
 InstanceOf: RadiotherapyCourseSummary
@@ -70,6 +72,7 @@ Usage: #example
   * extension[uniformFractionation].valueBoolean = true
 * status = #completed
 * performedPeriod.end = "2021-09-20T13:21:17+01:00"
+* insert $CodexRTCategoryCode
 
 
 // --- Treated Phases ---------------------------------------------------------------------------------
@@ -96,6 +99,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-Common
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * usedReference[treatmentDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -112,6 +116,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 600
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-06-22B-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -128,6 +133,7 @@ Usage: #example
   * extension[totalDoseDelivered].valueQuantity.value = 3000
 * status = #completed
 * performedPeriod.end = "2021-09-20T13:21:17+01:00"
+* insert $CodexRTCategoryCode
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
@@ -167,6 +173,7 @@ Usage: #example
 * reasonCode = ICD10#C53.9 "Malignant neoplasm of cervix uteri, unspecified"
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * performer[treatmentOrSeedDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+* insert $CodexRTCategoryCodeRequired
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -204,6 +211,7 @@ Usage: #example
 * subject = Reference(Patient-XRTS-06-22B)
 * bodySite[+] = SCT#71252005 "Cervix uteri structure (body structure)"
 * performer[treatmentOrSeedDevice] = Reference(RadiotherapyTreatmentDevice-ACMETurbo3000Afterloader)
+* insert $CodexRTCategoryCodeRequired
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 
@@ -225,6 +233,7 @@ Usage: #example
 * location = SCT#71252005 "Cervix uteri structure (body structure)"
 * locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
 * patient = Reference(Patient-XRTS-06-22B)
+
 
 // --- Patient ---------------------------------------------------------------------------------
 

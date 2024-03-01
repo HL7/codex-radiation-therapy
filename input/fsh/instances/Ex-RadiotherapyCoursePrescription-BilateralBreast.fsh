@@ -42,7 +42,7 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-101-Breast)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
-
+* insert $CodexRTCategoryCodeRequired
 // --- Phase Prescriptions ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyPhasePrescription-101-RTTD-LeftBreastTang
@@ -77,7 +77,7 @@ Usage: #example
 * subject = Reference(Patient-101)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-
+* insert $CodexRTCategoryCodeRequired
 
 Instance: RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost
 InstanceOf: RadiotherapyPhasePrescription
@@ -105,7 +105,7 @@ Usage: #example
 * subject = Reference(Patient-101)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-
+* insert $CodexRTCategoryCodeRequired
 
 Instance: RadiotherapyPhasePrescription-103-RTTD-RightBreastTang
 InstanceOf: RadiotherapyPhasePrescription
@@ -132,7 +132,7 @@ Usage: #example
 * subject = Reference(Patient-101)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#24028007 "Right (qualifier value)"
-
+* insert $CodexRTCategoryCodeRequired
 // --- Course Summary ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyCourseSummary-101-RTTD-BilateralBreast
@@ -183,7 +183,7 @@ Usage: #example
 * reasonReference = Reference(Diagnosis-101-Breast)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
-
+* insert $CodexRTCategoryCode
 // --- Treated Phases ---------------------------------------------------------------------------------
 
 Instance: RadiotherapyTreatedPhase-101-LeftBreastTang
@@ -220,6 +220,7 @@ Usage: #example
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-102-LeftBreastBoost
 InstanceOf: RadiotherapyTreatedPhase
@@ -251,6 +252,7 @@ Usage: #example
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-103-RightBreastTang
 InstanceOf: RadiotherapyTreatedPhase
@@ -281,6 +283,7 @@ Usage: #example
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#24028007 "Right (qualifier value)"
+* insert $CodexRTCategoryCode
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

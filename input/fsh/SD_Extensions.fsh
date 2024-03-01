@@ -398,7 +398,11 @@ XPath: "true()"
 
 Invariant:   TG263RadiobiologicMetric
 Description: "Unit SHOULD match TG-263 Radiobiologic Metric Regexp"
-Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')"
+// Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')"
+Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE\\\\(factor\\\\s*=\\\\s*(\\\\d?(\\\\.\\\\d+)?)\\\\)|EQD2Gy|EQD2GY\\\\(a\\\\/b\\\\s*=\\\\s*(\\\\d?(\\\\.\\\\d+)?)\\\\))$')"
+//                       toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')
+//                       toString().matches('^(BED|CGE|RBE|RBE\\(factor\\s*=\\s*(\\d?(\\.\\d+)?)\\)|EQD2Gy|EQD2GY\\(a\\/b\\s*=\\s*(\\d?(\\.\\d+)?)\\))$')
+// Expression:  "$this.toString().matches('^(BED|CGE|RBE|RBE(factor\s*=\s*(\d?(\.\d+)?))|EQD2Gy|EQD2GY(a\/b\s*=\s*(\d?(\.\d+)?)))$')"
 Severity:    #warning
 
 

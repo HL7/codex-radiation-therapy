@@ -1,4 +1,3 @@
-
 Instance: RadiotherapyPlannedCourse-04-Prostate
 InstanceOf: RadiotherapyPlannedCourse
 Description: "Radiotherapy Planned Course example."

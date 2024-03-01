@@ -16,7 +16,6 @@ RuleSet: RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-Common
 * extension[imageGuidedRadiotherapyModality][+]
   * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
-
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
   * value = "C1Prostate"
@@ -30,7 +29,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-Common
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
-
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-1Fx
 InstanceOf: RadiotherapyCourseSummary
@@ -69,7 +68,7 @@ Usage: #example
   * extension[primaryPlanDose].valueBoolean = false
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
-
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V
 InstanceOf: RadiotherapyCourseSummary
@@ -118,6 +117,7 @@ Usage: #example
     * value = 52.0 
 * status = #completed
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
+* insert $CodexRTCategoryCode
 
 // --- Treated Phases ---------------------------------------------------------------------------------
 
@@ -147,6 +147,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-03-22B-01-01-Primary-Common
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-03-22B-01-01-Primary-1Fx
 InstanceOf: RadiotherapyTreatedPhase
@@ -179,6 +180,7 @@ Usage: #example
   * extension[primaryPlanDose].valueBoolean = false
 * status = #in-progress
 * performedPeriod.end = "2021-09-06T13:21:17+01:00"
+* insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-03-22B-01-01-Primary
 InstanceOf: RadiotherapyTreatedPhase
@@ -211,7 +213,7 @@ Usage: #example
   * extension[primaryPlanDose].valueBoolean = false
 * status = #completed
 * performedPeriod.end = "2021-09-10T13:21:17+01:00"
-
+* insert $CodexRTCategoryCode
 
 // --- Planned Course ---------------------------------------------------------------------------------
 
@@ -274,6 +276,7 @@ Usage: #example
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
+* insert $CodexRTCategoryCodeRequired
 
 // --- Planned Phases ---------------------------------------------------------------------------------
 
@@ -332,6 +335,7 @@ Usage: #example
 * bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
 * bodySite[+] = SCT#245294005 "Pelvic lymph node group (body structure)"
 * bodySite[+] = SCT#64739004 "Seminal vesicle"
+* insert $CodexRTCategoryCodeRequired
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
 

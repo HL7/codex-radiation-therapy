@@ -103,7 +103,13 @@ RuleSet: RadiotherapyRequestCommon
 * status MS
 * intent MS
 * insert CategorySlicing
-* category[required] = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
+//* category[required] = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
+// * value[x] only CodeableConcept
+//   * ^short = "The preferred value set contains the list of reportable presentations (orientations within the mother's womb) that a fetus may be in prior to delivery."
+//   * ^definition = "The presentation (orientation within the mother's womb) that a fetus may be in prior to delivery/birth."
+//   * ^binding.description = "Fetal Presentations (NCHS)"
+* category[required] from RadiotherapyCategoryVS (required)
+* category[required] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(RadiotherapyCategoryMaxVS)
 * code 1..1 MS
 * doNotPerform 0..0
 * quantity[x] 0..0 // In RT dose to multiple targets has to be covered. Therefore, we have a dedicated extension radiotherapyPrescribedDose
@@ -139,7 +145,11 @@ RuleSet: RadiotherapyProcedureCommon
     PrimaryPlanDose named primaryPlanDose 0..1 MS and 
     RadiobiologicMetric named radiobiologicMetric 0..* MS
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^short = "Total Physical Radiation Dose Delivered"
-* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
+//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
+* category 1..1
+* category from RadiotherapyCategoryVS (preferred)
+* category ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(RadiotherapyCategoryMaxVS)
+
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
@@ -223,3 +233,14 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 
 RuleSet: SCTCopyright
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+
+
+RuleSet: $CodexRTCategoryCode
+//* category = SCT#1287742003 "Radiotherapy (procedure)"
+* category = $CodexRTCategoryCS#1287742003 "Radiotherapy (procedure)"
+
+RuleSet: $CodexRTCategoryCodeRequired
+* category[required] = $CodexRTCategoryCS#1287742003 "Radiotherapy (procedure)"
+
+RuleSet: $CodexRTCategoryDefinition
+* $CodexRTCategoryCS#1287742003 "Radiotherapy (procedure)"
