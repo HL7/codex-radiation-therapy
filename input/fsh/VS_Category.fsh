@@ -14,4 +14,4 @@ Description: "Category value set required to support backward compatibility by i
 * ^experimental = false
 * insert SCTCopyright
 * include codes from valueset RadiotherapyCategoryVS
-* SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)" // this code is inactive
+* SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)" // this code is inactive  

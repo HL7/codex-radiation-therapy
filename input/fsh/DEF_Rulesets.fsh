@@ -108,8 +108,9 @@ RuleSet: RadiotherapyRequestCommon
 //   * ^short = "The preferred value set contains the list of reportable presentations (orientations within the mother's womb) that a fetus may be in prior to delivery."
 //   * ^definition = "The presentation (orientation within the mother's womb) that a fetus may be in prior to delivery/birth."
 //   * ^binding.description = "Fetal Presentations (NCHS)"
-* category[required] from RadiotherapyCategoryVS (required)
+* category[required] from RadiotherapyCategoryVS (extensible)
 * category[required] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(RadiotherapyCategoryMaxVS)
+//* category[required] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet].valueCanonical = Canonical(RadiotherapyCategoryVS)
 * code 1..1 MS
 * doNotPerform 0..0
 * quantity[x] 0..0 // In RT dose to multiple targets has to be covered. Therefore, we have a dedicated extension radiotherapyPrescribedDose
