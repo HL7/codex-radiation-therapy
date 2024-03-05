@@ -131,10 +131,9 @@ RuleSet: RadiotherapyProcedureCommon
     PrimaryPlanDose named primaryPlanDose 0..1 MS and 
     RadiobiologicMetric named radiobiologicMetric 0..* MS
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^short = "Total Physical Radiation Dose Delivered"
-//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
 * category 1..1
 * category from RadiotherapyCategoryVS (required)
-//* obeys CategoryPreferred // give warning if old code is used
+* obeys CategoryPreferred // give warning if old code is used
 * performed[x] only Period
 * performedPeriod.start MS
 * performedPeriod.start ^short = "The date and time when the first therapeutic radiation was delivered."
