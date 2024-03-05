@@ -77,7 +77,7 @@
 [mCODE Cancer Disorder ValueSet]: {{site.data.fhir.ver.fhirmcode}}/ValueSet-mcode-cancer-disorder-vs.html
 [mCODE CancerDiseaseStatus]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-cancer-disease-status.html
 [mCODE RadiotherapyVolume]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-volume.html
-[mCODE modalityAndTechnique]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mmcode-radiotherapy-modality-and-technique.html
+[mCODE modalityAndTechnique]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-modality-and-technique.html
 [mCODE DoseDeliveredToVolume]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
 [mCODE ProcedureIntent]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-procedure-intent.html
 [mCODE Radiotherapy Course Summary]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-course-summary.html
