@@ -7,13 +7,11 @@ RuleSet: CategorySlicing
 * category contains
   radiotherapy 1..1 
 * category[radiotherapy] from RadiotherapyCategoryVS (required)
-//= $CodexRTCategoryCS#1287742003 "Radiotherapy (procedure)"           // this code is preferred/active
-//* category[backwardCompatibility] = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)" // this code is inactive retained for backward compatiblity  
-//* obeys CategoryRequired
-//* obeys CategoryPreferred
+* obeys CategoryRequired
+* obeys CategoryPreferred
 
 Invariant: CategoryRequired 
-Description: "The preferred or backward compatibility category value must be present"
+Description: "The preferred (108290001) or backward compatibility (1287742003) category code must be present"
 Severity: #error 
 Expression: "category.exists() and\n
              category.coding.all(\n
@@ -21,7 +19,7 @@ Expression: "category.exists() and\n
              )"
 
 Invariant: CategoryPreferred
-Description: "Warning for the use of the backward compatibility category value"
+Description: "This code 108290001 is inactive and should be used only for backward compatibility."
 Severity: #warning  
 Expression: "category.exists() and \n
              category.coding.all(\n
