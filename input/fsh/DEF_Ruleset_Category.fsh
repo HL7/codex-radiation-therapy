@@ -15,5 +15,5 @@ Description: "This code 108290001 is inactive and should be used only for backwa
 Severity: #warning  
 Expression: "category.exists() and \n
              category.coding.exists(\n
-                    code = '108290001' \n
-             ).not()"
+                    code = '1287742003' \n
+             )"

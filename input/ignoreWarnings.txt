@@ -160,9 +160,9 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extensio
 
 # SUPPRESS US CORE MESSAGES
 # Variance Approved by Cross-Group Projects WG on 11/10/2022: Eric Haas / Brett Marquard: 17-0-1  -  https://jira.hl7.org/browse/FHIR-39341 .
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 # Variance Approved by Cross-Group Projects WG on 10/27/2022: Brett Marquard/Eric Haas: 21-0-1    - https://jira.hl7.org/browse/FHIR-39301
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
 # Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl and http://terminology.hl7.org/CodeSystem/MDRAE Messages -- some of these are listed as (0 uses), but if deleted here, they will come back to life
 INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
@@ -1621,3 +1621,9 @@ INFORMATION: StructureDefinition/codexrt-radiotherapy-treated-fraction: Structur
 INFORMATION: StructureDefinition/codexrt-radiotherapy-treated-fraction: StructureDefinition.differential.element[33].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
 INFORMATION: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose.include[1].concept[0]: Unknown Code 'C143283' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 INFORMATION: ValueSet/codexrt-radiotherapy-isotope-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Cesium-131 (substance), Cesium-137 (substance), Cobalt-60 (substance), Iodine-125 (substance), Iodine-131 (substance)] and examples for no FSN: [Gold-198 (substance, Strontium-90 (substance])
+
+# This code is correct -- NCI Thesaurus Code:  C14676  Preferred Name:  Nausea, CTCAE 5.0  - Definition:  A disorder characterized by a queasy sensation and/or the urge to vomit.
+WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0].code: Unknown Code 'C146764' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+# This example is intended to trigger this warning.
+WARNING: ServiceRequest/RadiotherapyPlannedCourse-04-Prostate: ServiceRequest: Constraint failed: CategoryPreferred: 'This code 108290001 is inactive and should be used only for backward compatibility.' (defined in http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course)
+
