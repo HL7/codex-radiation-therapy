@@ -6,22 +6,14 @@ RuleSet: CategorySlicing
 * category 1.. MS
 * category contains
   radiotherapy 1..1 
+// "The preferred (108290001) or backward compatibility (1287742003) category code must be present"
 * category[radiotherapy] from RadiotherapyCategoryVS (required)
-* obeys CategoryRequired
 * obeys CategoryPreferred
-
-Invariant: CategoryRequired 
-Description: "The preferred (108290001) or backward compatibility (1287742003) category code must be present"
-Severity: #error 
-Expression: "category.exists() and\n
-             category.coding.all(\n
-                    code = '108290001' or code = '1287742003'\n
-             )"
 
 Invariant: CategoryPreferred
 Description: "This code 108290001 is inactive and should be used only for backward compatibility."
 Severity: #warning  
 Expression: "category.exists() and \n
-             category.coding.all(\n
+             category.coding.exists(\n
                     code = '108290001' \n
-             )"
+             ).not()"
