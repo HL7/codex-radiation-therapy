@@ -3,34 +3,43 @@
 ### Performing Organization
 
 ### Representing Radiotherapy Treatment
+
 <body>
 <table border="1">
 <style>
-.rotate {
-  transform: rotate(90deg);
-  width: 20px;
-}
+    th.rotate {
+        height: 140px; /* Adjust height as needed */
+        white-space: nowrap;
+    }
+    th.rotate > div {
+        transform: translate(10px, -60px) rotate(90deg); /* Adjust rotation angle and position */
+        width: 10px; /* Adjust width as needed */
+    }
+    th.rotate > div > span {
+        border-bottom: 1px solid #ccc;
+        padding: 3px 1px; /* Adjust padding as needed */
+    }
 </style>
-  <tr>
-    <th rowspan="2" width="3%">Field/Extensible</th>
-    <th rowspan="2" width="5%">Data Element</th>
-    <th rowspan="2" width="5%">Component</th>
+  <tr >
+    <th rowspan="2" width="0.5%">Field/Extensible</th>
+    <th rowspan="2" width="3%">Data Element</th>
+    <th rowspan="2" width="3%">Component</th>
     <th rowspan="2" width="10%">Notes</th>
-    <th colspan="3" width="5%" style="text-align: center">Prescriptions</th>
-    <th colspan="3" width="5%" style="text-align: center">Plans</th>
-    <th colspan="4" width="7.5%" style="text-align: center">Performed Treatment</th>
+    <th colspan="3" width="1%" style="text-align: center">Prescriptions</th>
+    <th colspan="3" width="3%" style="text-align: center">Plans</th>
+    <th colspan="4" width="4%" style="text-align: center">Performed Treatment</th>
   </tr>
-  <tr>
-    <th class="rotate" width="3%">Course Prescription</th>
-    <th class="rotate" width="3%">Plan Prescription</th>
-    <th class="rotate">Phase Prescription</th>
-    <th class="rotate">Planned Course</th>
-    <th class="rotate">Planned Phase</th>
-    <th class="rotate">Treatment Plan</th>
-    <th class="rotate">Course Summary</th>
-    <th class="rotate">Treated Phase</th>
-    <th class="rotate">Treated Plan</th>
-    <th class="rotate">Treated Fraction</th>
+  <tr style="height: 150px">
+    <th class="rotate"><div><span>Course Prescription</span></div></th>
+    <th class="rotate"><div><span>Plan Prescription</span></div></th>
+    <th class="rotate"><div><span>Phase Prescription</span></div></th>
+    <th class="rotate"><div><span>Planned Course</span></div></th>
+    <th class="rotate"><div><span>Planned Phase</span></div></th>
+    <th class="rotate"><div><span>Treatment Plan</span></div></th>
+    <th class="rotate"><div><span>Course Summary</span></div></th>
+    <th class="rotate"><div><span>Treated Phase</span></div></th>
+    <th class="rotate"><div><span>Treated Plan</span></div></th>
+    <th class="rotate"><div><span>Treated Fraction</span></div></th>
   </tr>
   <tr>
     <td style="text-align: center">E</td>
