@@ -12,7 +12,7 @@
         white-space: nowrap;
     }
     th.rotate > div {
-        transform: translate(10px, -60px) rotate(90deg); /* Adjust rotation angle and position */
+      transform: translate(200px, -60px) rotate(90deg); /* Adjust rotation angle and position */
         width: 10px; /* Adjust width as needed */
     }
     th.rotate > div > span {
