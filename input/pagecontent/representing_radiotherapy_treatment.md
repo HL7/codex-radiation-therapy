@@ -285,7 +285,7 @@
   </tr>
 <tr>
     <td>Radiobiologic Metric</td>
-    <td>Radiobiologic dose metric using a regular expression: BED, CGE, RBE, RBE(factor = <decimal>), EQD2Gy, EQD2Gy(a/b = <decimal>), as defined by TG263.</td>
+    <td>Radiobiologic dose metric using a regular expression: BED, CGE, RBE, RBE(factor = &lt;decimal&gt;), EQD2Gy, EQD2Gy(a/b = &lt;decimal&gt;), as defined by TG263.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
