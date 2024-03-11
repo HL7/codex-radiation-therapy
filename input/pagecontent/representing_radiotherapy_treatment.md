@@ -12,7 +12,7 @@
         white-space: nowrap;
     }
     th.rotate > div {
-      transform: translate(100px, -60px) rotate(90deg); /* Adjust rotation angle and position */
+      transform: translate(130px, -60px) rotate(90deg); /* Adjust rotation angle and position */
         width: 10px; /* Adjust width as needed */
     }
     th.rotate > div > span {
@@ -21,7 +21,7 @@
     }
 </style>
   <tr >
-    <th rowspan="2" width="0.5%">Field/Extensible</th>
+    <th rowspan="2" width="0.5%">Field/Extension</th>
     <th rowspan="2" width="3%">Data Element</th>
     <th rowspan="2" width="3%">Component</th>
     <th rowspan="2" width="10%">Notes</th>
@@ -62,10 +62,10 @@
     <td>Reason for Termination</td>
     <td>Status Reason</td>
     <td>A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study. This extension is deprecated since it is redundant with the statusReason field.</td>
-    <td style="text-align: center">x</td>
     <td></td>
     <td></td>
-    <td style="text-align: center">x</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td style="text-align: center">x</td>
@@ -135,7 +135,7 @@
   </tr>
   <tr>
     <td>Treatment Appplicator Type</td>
-    <td>*****MISSING*******.</td>
+    <td>Type of Radiotherapy Treatment Applicator used in Brachytherapy.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -147,11 +147,63 @@
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
   </tr>
+
+
   <tr>
+    <td style="text-align: center">E</td>
+    <td>Fraction Number in Phase</td>
+    <td>Fraction Number in Phase</td>
+    <td>The fraction number that was treated in the phase.</td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center">x</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">E</td>
+    <td>Fraction Number in Plan</td>
+    <td>Fraction Number in Plan</td>
+    <td>The fraction number that was treated in the plan.</td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center">x</td>
+  </tr>
+    <tr>
+    <td style="text-align: center">E</td>
+    <td>Actual Number of Sessions</td>
+    <td>
+    <a href="https://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-sessions.html">Actual Number of Sessions</a>
+    </td>
+    <td>The number of sessions in a course of radiotherapy.</td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center">x</td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+    <td style="text-align: center"> </td>
+  </tr>
+    <tr>
     <td style="text-align: center">E</td>
     <td>Number of Fractions (Prescribed, Planned, or Delivered)</td>
     <td>Number of Fractions</td>
-    <td>*****MISSING*******.</td>
+    <td>The number of prescribed, planned, or delivered treatment fractions for all volumes in this resources.</td>
     <td style="text-align: center"> </td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -164,56 +216,8 @@
     <td style="text-align: center"> </td>
   </tr>
   <tr>
-    <td style="text-align: center">E</td>
-    <td>Fraction Number in Phase</td>
-    <td>Fraction Number in Phase</td>
-    <td>*****MISSING*******.</td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center">x</td>
-  </tr>
-  <tr>
-    <td style="text-align: center">E</td>
-    <td>Fraction Number in Plan</td>
-    <td>Fraction Number in Plan</td>
-    <td>*****MISSING*******</td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center">x</td>
-  </tr>
-  <tr>
-    <td style="text-align: center">E</td>
-    <td>Number of Sessions</td>
-    <td>Number of Sessions</td>
-    <td>*****MISSING*******</td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center"> </td>
-  </tr>
-<tr>
-    <td rowspan="6" style="text-align: center">E</td>
-    <td rowspan="6">Prescribed, Planned, Delivered Dose</a></td>
+    <td rowspan="7" style="text-align: center">E</td>
+    <td rowspan="7">Prescribed, Planned, Delivered Dose</td>
     <td>Volume</td>
     <td>Reference to a RadiotherapyVolume as defined in mCODE.</td>
     <td style="text-align: center">x</td>
@@ -227,9 +231,9 @@
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
   </tr>
-<tr>
-    <td>Dose</td>
-    <td>Dose in CGy</td>
+  <tr>
+    <td>Total Dose</td>
+    <td>Total physical radiation dose in cGy.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -241,15 +245,29 @@
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
   </tr>
-<tr>
+  <tr>
+    <td>Dose per Fraction</td>
+    <td>Physical radiations dose per fraction in cGy.</td>
+    <td></td>
+    <td style="text-align: center">x</td>
+    <td style="text-align: center">x</td>
+    <td></td>
+    <td style="text-align: center">x</td>
+    <td style="text-align: center">x</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Fractions</td>
-    <td>Fractions Planned or Delivered</td>
+    <td>Number of Fractions (Prescribed, Planned, or Delivered) for this volume.</td>
     <td style="text-align: center">x</td>
+    <td></td>
+    <td></td>
     <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
+    <td></td>
+    <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center"> </td>
     <td style="text-align: center"> </td>
@@ -258,9 +276,9 @@
 <tr>
     <td>Point Dose</td>
     <td>This flag is true if the dose is determined at a single point. Point doses are often used to check dose at a specific point in a calculated 3D dose distribution. Since point doses mostly have a technical role, high-level summaries may decide to exclude them from displays.</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -272,9 +290,9 @@
 <tr>
     <td>Primary Plan Dose</td>
     <td>This flag is true if the dose is the primary plan dose in a radiotherapy treatment plan. For a single treatment plan, the primary plan dose serves as the main dose value for tracking delivered dose vs. planned dose. In summaries over multiple treatment plans, the flag indicates that the dose is a primary plan dose in any of the summarized plans.</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -299,24 +317,8 @@
   </tr>
   <tr>
     <td style="text-align: center">E</td>
-    <td>Image Guided Modality</td>
-    <td>Imaged Guided Modality</td>
-    <td>The modality and associated energy used for imaging in Image Guided Radiotherapy (IGRT).</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-  </tr>
-  <tr>
-    <td style="text-align: center">E</td>
-    <td>Image Guided Modality</td>
-    <td>Imaged Guided Modality</td>
+    <td>Image Guided Radiotherapy Modality</td>
+    <td>Image Guided Radiotherapy Modality</td>
     <td>The modality and associated energy used for imaging in Image Guided Radiotherapy (IGRT).</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -334,16 +336,16 @@
     <td>Reason for Revision or Adaptation</td>
     <td></td>
     <td>The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted.</td>
+    <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
+    <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
+    <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
-    <td style="text-align: center"> </td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
+    <td></td>
   </tr>
   <tr>
     <td style="text-align: center">E</td>
@@ -398,14 +400,14 @@
     <td>DICOM Record</td>
     <td></td>
     <td>Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
+    <td></td>
+    <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
   </tr> 
