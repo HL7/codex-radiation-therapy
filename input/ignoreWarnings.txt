@@ -1680,3 +1680,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation
 
 # This is a valid code
 WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0].code: Unknown Code 'C146764' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+
+# This warning is intentional.   There is an invariant when an inactive (but valid in the VS) code is used 
+WARNING: ServiceRequest/RadiotherapyPlannedCourse-04-Prostate: ServiceRequest: Constraint failed: CategoryPreferred: 'This code 108290001 is inactive and should be used only for backward compatibility.' (defined in http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course)
