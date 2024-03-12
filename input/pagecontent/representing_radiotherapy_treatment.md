@@ -15,6 +15,20 @@
         border-bottom: 1px solid #ccc;
         padding: 3px 1px; /* Adjust padding as needed */
     }
+
+.stamp {
+    position: relative;
+    display: inline-block;
+    padding: 3px 6px;
+    color: white;
+    background-color: red;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px dashed white;
+    transform: rotate(-15deg);
+}
+
 </style>
   <tr >
     <th rowspan="2" width="0.5%">Field/Extensible</th>
@@ -35,7 +49,7 @@
     <th class="rotate"><div><span>Course Summary</span></div></th>
     <th class="rotate"><div><span>Treated Phase</span></div></th>
     <th class="rotate"><div><span>Treated Plan</span></div></th>
-    <th class="rotate"><div><span>Treated Fraction</span></div></th>
+    <th class="rotate"><div><span>Treated Fraction <div class="stamp">New</div></span></div></th>
   </tr>
   <tr>
     <td style="text-align: center">E</td>
@@ -280,7 +294,7 @@
     <td style="text-align: center">x</td>
   </tr>
 <tr>
-    <td>Radiobiologic Metric</td>
+    <td>Radiobiologic Metric <div class="stamp">New</div></td>
     <td>Radiobiologic dose metric using a regular expression: BED, CGE, RBE, RBE(factor = &lt;decimal&gt;), EQD2Gy, EQD2Gy(a/b = &lt;decimal&gt;), as defined by TG263.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
