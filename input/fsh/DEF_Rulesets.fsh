@@ -121,6 +121,8 @@ RuleSet: RadiotherapyRequestCommon
 * performer[treatmentOrSeedDevice] ^short = "Radiotherapy Treatment Device or Seed Device used as part of therapy."
 * locationReference only Reference(USCoreLocation)
 * locationReference MS
+* locationReference ^short = "Location where the radiotherapy treatment was performed."
+
 
 RuleSet: RadiotherapyProcedureCommon
 * insert MotionManagement
