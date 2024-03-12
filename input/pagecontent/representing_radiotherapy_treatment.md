@@ -31,8 +31,8 @@
   </tr>
   <tr style="height: 150px">
     <th class="rotate"><div><span>Course Prescription</span></div></th>
-    <th class="rotate"><div><span>Plan Prescription</span></div></th>
     <th class="rotate"><div><span>Phase Prescription</span></div></th>
+    <th class="rotate"><div><span>Plan Prescription</span></div></th>
     <th class="rotate"><div><span>Planned Course</span></div></th>
     <th class="rotate"><div><span>Planned Phase</span></div></th>
     <th class="rotate"><div><span>Treatment Plan</span></div></th>
