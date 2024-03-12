@@ -26,7 +26,6 @@
     font-weight: bold;
     text-transform: uppercase;
     border: 2px dashed white;
-    transform: rotate(-15deg);
 }
 
 </style>
