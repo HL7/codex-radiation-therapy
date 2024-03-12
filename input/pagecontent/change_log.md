@@ -24,8 +24,8 @@ These changes were added to the CI build, and have not been ballotted or publish
 * Changed Binding Strengths 
   * As discussed and changed in mCODE 3.0.0, some binding strengths were relaxed because required bindings were a barrier to broader implementation (CodeX RT finding [FHIR-42775](https://jira.hl7.org/browse/FHIR-42775), corresponding mCODE change [FHIR-41503](https://jira.hl7.org/browse/FHIR-41503)). The binding strength was changed from required to extensible on the following elements.
     * bodySite in all Procedure and ServiceRequest (as in the [mCODE STU3 RadiotherapyCourseSummary](https://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-course-summary.html)).
-    * [Reason for Revision and Adaptiation](ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html)
-    * [Free Breathing Motion Management Technique](ValueSet-codexrt-radiotherapy-free-breathing-motion-mgmt-technique-vs.html)
+    * [Reason for Revision or Adaptation](StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html)
+    * [Free-Breathing Motion Management Technique](StructureDefinition-codexrt-radiotherapy-free-breathing-motion-mgmt-technique.html)
     * [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-image-guided-radiotherapy-modality.html)
 
 ### CodeX Radiation Therapy STU1 Publication Version
@@ -51,7 +51,7 @@ a boolean uniformFractionation flag when incorporated into the [RadiotherapyCour
   * [Primary Plan Dose](StructureDefinition-codexrt-radiotherapy-primary-plan-dose.html) flag, which indicates whether the dose is the primary plan dose in a radiotherapy treatment plan.
   * [Point Dose](StructureDefinition-codexrt-radiotherapy-point-dose.html) flag, which indicates whether the dose is determined at at a single point.
 
-* An extension with a codeable concept for [reason for revision and adaptiation](ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html) was added to all Plan and Phase profiles. ([FHIR-38231](https://jira.hl7.org/browse/FHIR-38231))
+* An extension with a codeable concept for [reason for revision and adaptation](ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html) was added to all Plan and Phase profiles. ([FHIR-38231](https://jira.hl7.org/browse/FHIR-38231))
 * An extension with a [Reference to DICOM SOP Instance](StructureDefinition-codexrt-dicom-reference.html) was added to RadiotherapyTreatmentPlan and RadiotherapyTreatedPlan profiles.
 * An extension with a boolean for [course involves reirradiation](StructureDefinition-codexrt-radiotherapy-course-involves-reirradiation.html) was added to the 3 course-level profiles.
 * An extension supporting [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-image-guided-radiotherapy-modality.html) was added everywhere Therapeutic Modality and Technique was present. This is supported by a ValueSet of IGRT [modalities](ValueSet-codexrt-image-guided-radiotherapy-modality-vs.html) and [energies](ValueSet-codexrt-image-guided-radiotherapy-energy-unit-vs.html).
