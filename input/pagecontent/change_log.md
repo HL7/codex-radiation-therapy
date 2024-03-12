@@ -1,6 +1,6 @@
 ### CodeX Radiation Therapy Continue Integration Build for STU2
 These changes were added to the CI build, and have not been ballotted or published.
-
+* Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts [AdverseEventSeverityOrGradeVS]
 * Dependency Changes
   * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
   * Changed USCore dependency to [5.0.1]({{site.data.fhir.ver.hl7fhiruscore}}/index.html)
