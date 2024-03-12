@@ -48,7 +48,7 @@
     <th class="rotate"><div><span>Course Summary</span></div></th>
     <th class="rotate"><div><span>Treated Phase</span></div></th>
     <th class="rotate"><div><span>Treated Plan</span></div></th>
-    <th class="rotate"><div><span>Treated Fraction <div class="stamp">New</div></span></div></th>
+    <th class="rotate"><div><span>Treated Fraction <span style="color: red;"> *New* </span></div></th>
   </tr>
   <tr>
     <td style="text-align: center">E</td>
@@ -311,7 +311,7 @@
     <td style="text-align: center">x</td>
   </tr>
 <tr>
-    <td>Radiobiologic Metric <div class="stamp">New</div></td>
+    <td>Radiobiologic Metric <span style="color: red;"> *New* </span></td>
     <td>Radiobiologic dose metric using a regular expression: BED, CGE, RBE, RBE(factor = &lt;decimal&gt;), EQD2Gy, EQD2Gy(a/b = &lt;decimal&gt;), as defined by TG263.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
