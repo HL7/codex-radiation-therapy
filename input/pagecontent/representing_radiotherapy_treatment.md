@@ -1,7 +1,3 @@
-### Location
-
-### Performing Organization
-
 ### Representing Radiotherapy Treatment
 
 <body>
