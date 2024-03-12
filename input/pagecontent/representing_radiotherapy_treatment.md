@@ -48,7 +48,7 @@
     <th class="rotate"><div><span>Course Summary</span></div></th>
     <th class="rotate"><div><span>Treated Phase</span></div></th>
     <th class="rotate"><div><span>Treated Plan</span></div></th>
-    <th class="rotate"><div><span>Treated Fraction <span style="color: red;"> *New* </span></div></th>
+    <th class="rotate"><div><span>Treated Fraction <span style="color: red;"> *New* </span> </div></th>
   </tr>
   <tr>
     <td style="text-align: center">E</td>
