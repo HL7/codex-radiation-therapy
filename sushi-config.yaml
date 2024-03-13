@@ -72,11 +72,11 @@ menu:
     Building the Implementation Guide: building_the_ig.html
     Credits: credits.html
   FHIR Artifacts:
-    Profiles: artifacts.html#a-course-level-profiles
+    Profiles: artifacts.html#course-level-profiles
     Extensions: artifacts.html#extensions
     Value Sets: artifacts.html#terminology-value-sets
     Examples: artifacts.html#example-example-instances
-    Capability Statements: artifacts.html#behavior-capability-statements
+    Capability Statements: artifacts.html#capability-statements
     Complete Listing: artifacts.html
   Conformance:
     Conformance:  conformance.html

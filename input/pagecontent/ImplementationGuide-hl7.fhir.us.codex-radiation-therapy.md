@@ -6,10 +6,10 @@
 |*Copyright/Legal*: Used by permission of HL7 International, all rights reserved Creative Commons License|
 {:.grid}
 
-{{ site.data.ig.description }}
+CodeX™ Radiation Therapy is an initiative intended to assemble a core set of structured data elements for radiation therapy electronic health records.
 
-- [XML](ImplementationGuide-{{site.data.ig.id}}.xml)
-- [JSON](ImplementationGuide-{{site.data.ig.id}}.json)
+- [XML](ImplementationGuide-hl7.fhir.us.codex-radiation-therapy.xml)
+- [JSON](ImplementationGuide-hl7.fhir.us.codex-radiation-therapy.json)
 
 ### Cross Version Analysis
 

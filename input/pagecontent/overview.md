@@ -62,7 +62,7 @@ In case of a revision or adaptation of a Planned Phase:
 - A new ServiceRequest resource (Planned Phase) is created, which replaces the predecessor. It refers to the predecessor using the element ‘replaces’.
 - The status of the Procedure (Treated Phase) that recorded the treatment of the revoked ServiceRequest is set to stopped. A new Procedure is created for recording the treatment that is based on the new ServiceRequest referencing the ServiceRequest using the element ‘basedOn’.
 - The revoked ServiceRequest is not changed to remove the untreated dose or fractions. This retains the information how many fractions and how much dose were initially planned, even if the ServiceRequest was revoked before completion. It is visible from the corresponding Procedure which part of the ServiceRequest was delivered before it was stopped.
-- If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure using the respective [extension](artifacts.html#structures-extension-definitions) defined in this IG.
+- If a reason for revision or adaptation is known, it is recorded in the revoked ServiceRequest and stopped Procedure using the respective [extension](artifacts.html#extensions) defined in this IG.
 - The course level resources (Planned Course, Course Summary) are updated to reflect the revision or adaptation in the course. No new Planned Course or Course Summary instances are created.
 - The new ServiceRequest (Planned Phase) and Procedure (Treated Phase) only cover the remaining treatment that is still to be treated. The course level resources (Planned Course and Course Summary) describe how the already delivered part of the first phase and the remaining treatment with the new (successor) phase add up.
 
