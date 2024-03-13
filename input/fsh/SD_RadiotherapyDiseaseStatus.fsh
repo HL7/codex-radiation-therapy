@@ -14,7 +14,7 @@ Description: "Disease Status Reported by Radiation Oncologist"
 * valueCodeableConcept obeys RestrictDiseaseProgressionQualifier
 
 Invariant: RestrictDiseaseProgressionQualifier
-Description:  "Only allow qualifier for one value status"
+Description:  "Disease Progressing Qualifier is only allowed if patient's condition has worsened"
 Severity: #error
 Expression: "coding.exists(code = '271299001').not()
         implies extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-progression-qualifier').not()"
