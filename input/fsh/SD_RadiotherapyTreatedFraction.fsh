@@ -43,3 +43,6 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
 * partOf[treated-phase] only Reference(RadiotherapyTreatedPhase)
 * encounter MS
 * encounter only Reference(RadiotherapyTreatmentSession)
+* bodySite from $mCODERadiotherapyTreatmentLocationVS (extensible)
+* bodySite ^short = "All body structure(s) treated with this procedure."
+* bodySite ^definition = "Coded body structure(s) treated with this radiotherapy treatment procedure. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
