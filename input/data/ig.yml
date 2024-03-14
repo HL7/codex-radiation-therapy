@@ -1,152 +1,19 @@
-# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
-# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+resourceType: ImplementationGuide
 id: hl7.fhir.us.codex-radiation-therapy
 canonical: http://hl7.org/fhir/us/codex-radiation-therapy
 name: CodeX-Radiation-Therapy
 status: draft
-version: 1.0.0-ballot
+version: 2.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
 packageId: hl7.fhir.codex-radiation-therapy
-url: http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.codex-radiation-therapy
+url: http://hl7.org/fhir/us/codex-radiation-therapy
 title: "CodeX™ Radiation Therapy"
 publisher:
   name: HL7 Cross Group Projects Work Group
   url: https://www.hl7.org/Special/committees/cgp
   email: cgplist@lists.HL7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-description: CodeX™ Radiation Therapy is an initiative
-  intended to assemble a core set of structured data elements for radiation therapy
-  electronic health records.
-license: CC0-1.0
-dependencies:
-  hl7.fhir.us.core: 4.0.0
-  hl7.fhir.us.mcode: 2.1.0
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+description: CodeX™ Radiation Therapy is an initiative intended to assemble a core set of structured data elements for radiation therapy electronic health records.
 
-parameters:
-  show-inherited-invariants: false
-  version-comparison: n/a
-  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
-pages:
-  index.md:
-    title: Home
-  overview.md:
-    title: Overview
-  history.md:
-    title: Development history
-  building_on_mcode.md:
-    title: Building on mCODE
-  building_the_ig.md:
-    title: Building the Implementation Guide
-  credits.md:
-    title: Credits
-  conformance-general.md:
-    title: Conformance Expectations
-  conformance-profiles.md:
-    title: Profile Conformance
-  artifacts.html:
-    title: Artifacts Summary
-  dictionary.md:
-    title: Data Dictionary
-  change_log.md:
-    title: Change Log
-  downloads.md:
-    title: Download Specification
-  ImplementationGuide-hl7.fhir.us.codex-radiation-therapy.md:
-    title: CodeX Radiation Therapy ImplementationGuide Resource
-menu:
-  Home: index.html
-  Table of Contents:  toc.html
-  Background:
-    Overview: overview.html
-    History: history.html
-    Building on mCODE: building_on_mcode.html
-    Building the Implementation Guide: building_the_ig.html
-    Credits: credits.html
-  FHIR Artifacts:
-    Profiles: artifacts.html#a-course-level-profiles
-    Extensions: artifacts.html#structures-extension-definitions
-    Value Sets: artifacts.html#terminology-value-sets
-    Code Systems: artifacts.html#terminology-code-systems
-    Examples: artifacts.html#example-example-instances
-    Capability Statements: artifacts.html#behavior-capability-statements
-    Complete Listing: artifacts.html
-  Conformance:
-    General Conformance:  conformance-general.html
-    Profile Conformance:  conformance-profile.html
-  More:
-    Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
-    Data Dictionary: dictionary.html
-    Change Log: change_log.html
-    Download Specification: downloads.html
-groups:
-  CourseLevelProfiles:
-    name: A. Course Level Profiles
-    description: Course Level Profiles
-    resources:
-    - StructureDefinition/codexrt-radiotherapy-course-prescription
-    - StructureDefinition/codexrt-radiotherapy-planned-course
-    - StructureDefinition/codexrt-radiotherapy-course-summary
-  PhaseLevelProfiles:
-    name: B. Phase Level Profiles
-    description: Phase Level Profiles
-    resources:
-    - StructureDefinition/codexrt-radiotherapy-phase-prescription
-    - StructureDefinition/codexrt-radiotherapy-planned-phase
-    - StructureDefinition/codexrt-radiotherapy-treated-phase
-  PlanLevelProfiles:
-    name: C. Plan Level Profiles
-    description: Plan Level Profiles
-    resources:
-    - StructureDefinition/codexrt-radiotherapy-plan-prescription
-    - StructureDefinition/codexrt-radiotherapy-treatment-plan
-    - StructureDefinition/codexrt-radiotherapy-treated-plan
-  FractionLevelProfiles:
-    name: D. Fraction Level Profiles
-    description: Fraction Level Profiles
-    resources:
-    - StructureDefinition/codexrt-radiotherapy-treated-fraction
-    - StructureDefinition/codexrt-radiotherapy-treatment-session
-  ProfilesForAllLevels:
-    name: E. Profiles Referenced from All Levels
-    description: Profiles referenced from all levels and throughout the radiotherapy workflow.
-    resources:
-    - StructureDefinition/codexrt-radiotherapy-volume
-    - StructureDefinition/codexrt-radiotherapy-treatment-device
-    - StructureDefinition/codexrt-radiotherapy-seed-device
-
-  # Leaving the following groups autogenerated. If specific grouping is needed,
-  # then uncomment here and make sure all Extensions, CodeSystems, ValueSets are listed here.
-  # Extensions:
-  #   name: Extensions
-  #   description: Extensions.
-  #   resources:
-  #   - StructureDefinition/codexrt-radiotherapy-energy-or-isotope
-  #   - StructureDefinition/codexrt-radiotherapy-fractions-delivered
-  #   - StructureDefinition/codexrt-radiotherapy-fractions-planned
-  #   - StructureDefinition/codexrt-radiotherapy-fractions-prescribed
-  #   - StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume
-  #   - StructureDefinition/codexrt-radiotherapy-dose-prescribed-to-volume
-  #   - StructureDefinition/codexrt-radiotherapy-treatment-applicator-type
-  #   - StructureDefinition/codexrt-dicom-reference
-
-  # CodeSystems:
-  #   name: CodeSystems
-  #   description: Code Systems.
-  #   resources:
-  #   - CodeSystem/radiotherapy-request
-  #   - CodeSystem/snomed-requested-cs
-
-  # ValueSets:
-  #   name: ValueSets
-  #   description: ValueSets.
-  #   resources:
-  #   - ValueSet/codex-radiotherapy-isotopes
-  #   - ValueSet/radiotherapy-energy-units
-  #   - ValueSet/radiotherapy-request

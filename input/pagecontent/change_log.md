@@ -1,6 +1,6 @@
 ### CodeX Radiation Therapy Continue Integration Build for STU2
 These changes were added to the CI build, and have not been ballotted or published.
-
+* Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts [AdverseEventSeverityOrGradeVS]
 * Dependency Changes
   * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
   * Changed USCore dependency to [5.0.1]({{site.data.fhir.ver.hl7fhiruscore}}/index.html)
@@ -27,6 +27,9 @@ These changes were added to the CI build, and have not been ballotted or publish
     * [Reason for Revision or Adaptation](StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html)
     * [Free-Breathing Motion Management Technique](StructureDefinition-codexrt-radiotherapy-free-breathing-motion-mgmt-technique.html)
     * [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-image-guided-radiotherapy-modality.html)
+* ValueSet Changes
+  * Redefine [AdverseEventSeverityOrGradeVS] using NCI Thesaurus terms for the CTCAE grades of adverse effects instead of an unnecessary local code system.  This eliminates a local code system [Severity or Grade CodeSystem based on CTCAE ](https://hl7.org/fhir/us/codex-radiation-therapy/STU1/CodeSystem-codexrt-radiotheraphy-adverse-event-severity-or-gradeCS.html).
+
 
 ### CodeX Radiation Therapy STU1 Publication Version
 These are the changes that were made during ballot reconciliation.
