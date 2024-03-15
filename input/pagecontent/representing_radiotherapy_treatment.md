@@ -1,4 +1,4 @@
-### Representing Radiotherapy Treatment
+The following table documents how the 4 Procedure and 6 Service Request profiles defined in this IG capture the key aspects of radiation therapy using fields and extensions.  Many of the extensions are incorporated across all 10 profiles, whereas some are selectively incorporated. Links to relevant definitions are provided.  Profiles or Extensions that are new in STU2 are marked as <span style="color: red;"> *New* </span>.  This table is for the convenience of the reader and should not be used to assess conformance with the IG.
 
 <body>
 <table border="1">
@@ -30,15 +30,19 @@
 
 </style>
   <tr >
-    <th rowspan="2" width="0.5%">Field/Extension</th>
-    <th rowspan="2" width="3%">Data Element</th>
-    <th rowspan="2" width="3%">Component</th>
-    <th rowspan="2" width="10%">Notes</th>
+    <th rowspan="1" width="0.1%">Field or Extension</th>
+    <th rowspan="1" width="3%" style="text-align: center">Data Element</th>
+    <th rowspan="1" width="3%" style="text-align: center">Component</th>
+    <th rowspan="1" width="10%" style="text-align: center">Notes</th>
     <th colspan="3" width="1%" style="text-align: center">Prescriptions</th>
     <th colspan="3" width="3%" style="text-align: center">Plans</th>
     <th colspan="4" width="4%" style="text-align: center">Performed Treatment</th>
   </tr>
-  <tr style="height: 150px">
+  <tr style="height: 200px">
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
     <th class="rotate"><div><span>Course Prescription</span></div></th>
     <th class="rotate"><div><span>Phase Prescription</span></div></th>
     <th class="rotate"><div><span>Plan Prescription</span></div></th>
@@ -48,13 +52,19 @@
     <th class="rotate"><div><span>Course Summary</span></div></th>
     <th class="rotate"><div><span>Treated Phase</span></div></th>
     <th class="rotate"><div><span>Treated Plan</span></div></th>
-    <th class="rotate"><div><span>Treated Fraction <span style="color: red;"> *New* </span> </div></th>
+    <th class="rotate">
+      <div>
+        <span>Treated Fraction 
+          <span style="color: red;"> *New* </span> 
+        </span>
+      </div>
+    </th>
   </tr>
   <tr>
     <td style="text-align: center">E</td>
     <td>Treatment Intent</td>
     <td>Treatment Intent</td>
-    <td>The purpose of a treatment, medication, or procedure.</td>
+    <td>The purpose of a treatment, medication, or procedure, <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-procedure-intent-vs.html">as defined in mCODE</a>.</td>
     <td style="text-align: center">x</td>
     <td></td>
     <td></td>
@@ -70,7 +80,8 @@
     <td style="text-align: center">F</td>
     <td>Reason for Termination</td>
     <td>Status Reason</td>
-    <td>A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study. This extension is deprecated since it is redundant with the statusReason field.</td>
+    <td>A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study 
+    as <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-treatment-termination-reason-vs.html">defined in mCODE</a>.</td>
     <td></td>
     <td></td>
     <td></td>
@@ -86,7 +97,7 @@
     <td style="text-align: center">F</td>
     <td>Treatment Site</td>
     <td>Body Site</td>
-    <td>Described using TG263 terms mapped to SNOMEDCT codes and qualifiers.</td>
+    <td>Described using TG263 terms mapped to SNOMEDCT codes and qualifiers as <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-radiotherapy-treatment-location-vs.html">defined in mCODE</a>.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -130,7 +141,7 @@
   </tr>
   <tr>
     <td>Energy or Isotope</td>
-    <td>The radiation energy used for radiotherapy. The energy spectrum is characterized by the maximum energy, the maximum accelaration voltage, or the used isotope.</td>
+    <td>The <a href="ValueSet-codexrt-radiotherapy-energy-unit-vs.html">radiation energy</a> used for radiotherapy. The energy spectrum is characterized by the maximum energy, the maximum accelaration voltage, or the used isotope.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -144,7 +155,7 @@
   </tr>
   <tr>
     <td>Treatment Appplicator Type</td>
-    <td>Type of Radiotherapy Treatment Applicator used in Brachytherapy.</td>
+    <td><a href="ValueSet-codexrt-brachytherapy-applicator-type-vs.html">Type</a> of Radiotherapy Treatment Applicator used in Brachytherapy.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -160,7 +171,7 @@
 
   <tr>
     <td style="text-align: center">E</td>
-    <td>Fraction Number in Phase</td>
+    <td>Fraction Number in Phase <span>Treated Fraction <span style="color: red;"> *New* </span> </span></td>
     <td>Fraction Number in Phase</td>
     <td>The fraction number that was treated in the phase.</td>
     <td style="text-align: center"> </td>
@@ -176,7 +187,7 @@
   </tr>
   <tr>
     <td style="text-align: center">E</td>
-    <td>Fraction Number in Plan</td>
+    <td>Fraction Number in Plan <span style="color: red;"> *New* </span></td>
     <td>Fraction Number in Plan</td>
     <td>The fraction number that was treated in the plan.</td>
     <td style="text-align: center"> </td>
@@ -228,7 +239,7 @@
     <td rowspan="7" style="text-align: center">E</td>
     <td rowspan="7">Prescribed, Planned, Delivered Dose</td>
     <td>Volume</td>
-    <td>Reference to a RadiotherapyVolume as defined in mCODE.</td>
+    <td>Reference to a <a href="http://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-volume.html"> RadiotherapyVolume</a> as defined in mCODE.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -283,7 +294,7 @@
     <td style="text-align: center"> </td>
   </tr>
 <tr>
-    <td>Point Dose</td>
+    <td>Point Dose <span style="color: red;"> *New* </span> </td>
     <td>This flag is true if the dose is determined at a single point. Point doses are often used to check dose at a specific point in a calculated 3D dose distribution. Since point doses mostly have a technical role, high-level summaries may decide to exclude them from displays.</td>
     <td></td>
     <td></td>
@@ -297,7 +308,7 @@
     <td style="text-align: center">x</td>
   </tr>
 <tr>
-    <td>Primary Plan Dose</td>
+    <td>Primary Plan Dose <span style="color: red;"> *New* </span></td>
     <td>This flag is true if the dose is the primary plan dose in a radiotherapy treatment plan. For a single treatment plan, the primary plan dose serves as the main dose value for tracking delivered dose vs. planned dose. In summaries over multiple treatment plans, the flag indicates that the dose is a primary plan dose in any of the summarized plans.</td>
     <td></td>
     <td></td>
@@ -312,7 +323,7 @@
   </tr>
 <tr>
     <td>Radiobiologic Metric <span style="color: red;"> *New* </span></td>
-    <td>Radiobiologic dose metric using a regular expression: BED, CGE, RBE, RBE(factor = &lt;decimal&gt;), EQD2Gy, EQD2Gy(a/b = &lt;decimal&gt;), as defined by TG263.</td>
+    <td><a href="StructureDefinition-codexrt-radiobiologic-metric.html">Radiobiologic</a> dose metric using a regular expression: BED, CGE, RBE, RBE(factor = &lt;decimal&gt;), EQD2Gy, EQD2Gy(a/b = &lt;decimal&gt;), as defined by TG263.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -326,9 +337,9 @@
   </tr>
   <tr>
     <td style="text-align: center">E</td>
+    <td>Image Guided Radiotherapy Modality <span style="color: red;"> *New* </span></td>
     <td>Image Guided Radiotherapy Modality</td>
-    <td>Image Guided Radiotherapy Modality</td>
-    <td>The modality and associated energy used for imaging in Image Guided Radiotherapy (IGRT).</td>
+    <td>The <a href="ValueSet-codexrt-image-guided-radiotherapy-modality-vs.html">modality</a> and associated <a href="ValueSet-codexrt-image-guided-radiotherapy-energy-unit-vs.html">energy</a> used for imaging in Image Guided Radiotherapy (IGRT).</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -344,7 +355,7 @@
     <td style="text-align: center">E</td>
     <td>Reason for Revision or Adaptation</td>
     <td></td>
-    <td>The reason a planned or prescribed radiotherapy treatment was revised, superceded, or adapted.</td>
+    <td>The <a href="ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html">reason</a> a planned or prescribed radiotherapy treatment was revised, superceded, or adapted.</td>
     <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -358,9 +369,9 @@
   </tr>
   <tr>
     <td style="text-align: center">E</td>
-    <td>Respiratory Motion Management</td>
+    <td>Respiratory Motion Management <span style="color: red;"> *New* </span></td>
     <td></td>
-    <td>Method applied to manage respiratory motion.</td>
+    <td><a href="ValueSet-codexrt-radiotherapy-respiratory-motion-management-vs.html">Method</a> applied to manage respiratory motion.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -374,9 +385,9 @@
   </tr>
   <tr>
     <td style="text-align: center">E</td>
-    <td>Free Breathing Motion Management Technique</td>
+    <td>Free Breathing Motion Management Technique <span style="color: red;"> *New* </span></td>
     <td></td>
-    <td>Technique to manage respiratory motion with free-breathing. Only allowed if respiratory motion management is free-breathing.</td>
+    <td><a href="ValueSet-codexrt-radiotherapy-free-breathing-motion-mgmt-technique-vs.html">Technique</a> to manage respiratory motion with free-breathing. Only allowed if respiratory motion management is free-breathing.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -390,9 +401,9 @@
   </tr>
   <tr>
     <td style="text-align: center">E</td>
-    <td>Intrafraction Verification</td>
+    <td>Intrafraction Verification <span style="color: red;"> *New* </span></td>
     <td></td>
-    <td>Verification of the patient or target position during a treatment fraction.</td>
+    <td>Verification of the patient or target position during a treatment fraction. Specified with a <a href="ValueSet-codexrt-intrafraction-verification-procedure-vs.html">procedure</a> and an optional <a href="ValueSet-codexrt-intrafraction-verification-qualifier-vs.html">qualifier</a>.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -406,7 +417,7 @@
   </tr>
   <tr>
     <td style="text-align: center">E</td>
-    <td>DICOM Record</td>
+    <td>DICOM Record <span style="color: red;"> *New* </span></td>
     <td></td>
     <td>Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions.</td>
     <td></td>

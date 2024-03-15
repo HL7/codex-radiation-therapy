@@ -1,11 +1,11 @@
 {
     "package-id" : "hl7.fhir.us.codex-radiation-therapy",
-    "version" : "1.0.0",
-    "path" : "http://hl7.org/fhir/us/codex-radiation-therapy/STU1",
+    "version" : "2.0.0",
+    "path" : "http://hl7.org/fhir/us/codex-radiation-therapy/2024May",
     "milestone": true,
     "mode": "milestone",
     "status" : "trial-use",
-    "sequence" : "STU 1",
-    "desc" : "Initial publication of Codex Radiation Therapy STU1",
+    "sequence" : "STU 2",
+    "desc" : "Ballot of Codex Radiation Therapy STU2",
     "changes" : "change_log.html"
   }
