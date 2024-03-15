@@ -109,7 +109,7 @@ RuleSet: RadiotherapyRequestCommon
 * reasonReference MS
 * reasonReference only Reference(Condition)
 * specimen 0..0
-* bodySite from RadiotherapyTreatmentLocationVS (required) //TBD For now required as in mCODE
+* bodySite from RadiotherapyTreatmentLocationVS (extensible)
 * bodySite MS
 * bodySite ^short = "Body site that is treated with radiotherapy"
 * insert BodySiteQualifierAndLaterality
@@ -222,7 +222,7 @@ RuleSet: RadiotherapyTreatedPhaseAndPlanCommon
 * reasonCode from $mCODECancerDisorderVS (extensible)
 * reasonReference MS
 * bodySite MS
-* bodySite from $mCODERadiotherapyTreatmentLocationVS (required)
+* bodySite from $mCODERadiotherapyTreatmentLocationVS (extensible)
 * bodySite ^short = "All body structure(s) treated with this procedure."
 * bodySite ^definition = "Coded body structure(s) treated with this radiotherapy treatment procedure. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 

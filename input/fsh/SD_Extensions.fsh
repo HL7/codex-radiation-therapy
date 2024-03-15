@@ -298,7 +298,7 @@ Description: "The reason a planned or prescribed radiotherapy treatment was revi
 * value[x] ^short = "Reason for Revision or Adaptation"
 * value[x] only CodeableConcept
 * value[x] 1..1
-* value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (required)
+* value[x] from RadiotherapyReasonForRevisionOrAdaptationVS (extensible)
 * insert Contexts1 
 
 Extension: RadiotherapyRespiratoryMotionManagement
@@ -320,7 +320,7 @@ Description: "Technique to manage respiratory motion with free-breathing."
 * value[x] ^short = "Free-Breathing Motion Management Technique"
 * value[x] only CodeableConcept
 * value[x] 1..1
-* value[x] from RadiotherapyFreeBreathingMotionManagementTechniqueVS (required)
+* value[x] from RadiotherapyFreeBreathingMotionManagementTechniqueVS (extensible)
 * insert Contexts1 
 
 Extension: CourseInvolvesReirradiation
@@ -345,7 +345,7 @@ Title: "Image Guided Radiotherapy Modality"
     energy 0..1 MS
 * extension[modality]
   * value[x] only CodeableConcept
-  * value[x] from ImageGuidedRadiotherapyModalityVS (required)
+  * value[x] from ImageGuidedRadiotherapyModalityVS (extensible)
 * extension[energy]
   * value[x] only CodeableConcept
   * value[x] from ImageGuidedRadiotherapyEnergyUnitVS (required)

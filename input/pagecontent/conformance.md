@@ -37,7 +37,7 @@ Treatment Summary Providers and RO Resource Repositories MUST be able to populat
 
 #### Support Querying CodeX RT-Conforming Resources
 
-The query support required of conforming implementations is specified in the [CapabilityStatement](artifacts.html#behavior-capability-statements).
+The query support required of conforming implementations is specified in the [CapabilityStatement](artifacts.html#capability-statements).
 
 
 #### Support US Core Conformance Requirements
