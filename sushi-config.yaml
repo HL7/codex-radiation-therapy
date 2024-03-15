@@ -62,6 +62,8 @@ pages:
     title: Download Specification
   ImplementationGuide-hl7.fhir.us.codex-radiation-therapy.md:
     title: CodeX Radiation Therapy ImplementationGuide Resource
+  representing_radiotherapy_treatment.md:
+    title: Representing Radiotherapy Treatment 
 menu:
   Home: index.html
   Table of Contents:  toc.html
@@ -81,6 +83,7 @@ menu:
   Conformance:
     Conformance:  conformance.html
   More:
+    Representing Radiotherapy Treatment: representing_radiotherapy_treatment.html
     Radiotherapy Glossary:  http://hl7.org/fhir/us/mcode/glossary.html
     Data Dictionary: dictionary.html
     Change Log: change_log.html

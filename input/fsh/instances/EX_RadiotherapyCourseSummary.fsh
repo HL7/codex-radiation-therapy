@@ -57,4 +57,5 @@ Usage: #example
 * bodySite.text = "Prostate"
 * location = Reference(TreatmentLocation-1)
 * insert $CodexRTCategoryCode
+* performer.actor = Reference(Practitioner-1005)
 

@@ -103,6 +103,7 @@ RuleSet: RadiotherapyRequestCommon
 * subject only Reference(USCorePatient)
 * asNeeded[x] 0..0
 * requester only Reference(USCorePractitioner or USCorePractitionerRole or USCoreOrganization)
+* requester MS 
 * reasonCode MS
 * reasonCode from $mCODECancerDisorderVS (extensible)
 * reasonReference MS
@@ -120,6 +121,7 @@ RuleSet: RadiotherapyRequestCommon
 * performer[treatmentOrSeedDevice] ^short = "Radiotherapy Treatment Device or Seed Device used as part of therapy."
 * locationReference only Reference(USCoreLocation)
 * locationReference MS
+* locationReference ^short = "Location where the radiotherapy treatment is requested."
 
 RuleSet: RadiotherapyProcedureCommon
 * insert MotionManagement
@@ -150,8 +152,17 @@ RuleSet: RadiotherapyProcedureCommon
     seedDevice 0..* MS
 * focalDevice[seedDevice].manipulated only Reference(RadiotherapySeedDevice)
 * focalDevice[seedDevice] ^short = "Radiotherapy Seed Device used as part of therapy."
+* location ^short = "Location where the radiotherapy treatment was performed."
 * location only Reference(USCoreLocation)
-* location MS
+* location MS 
+* insert OpenProfileBasedSlicingSubfield(performer, actor)
+* performer contains
+    organization 0..* MS
+* performer[organization].actor only  Reference(USCoreOrganization)
+* performer MS
+* performer[organization].actor ^short = "Organization that provided the radiotherapy treatment."
+
+
 
 RuleSet: RadiotherapyPrescriptionsCommon
 * insert RadiotherapyRequestCommon

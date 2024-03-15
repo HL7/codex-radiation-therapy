@@ -80,7 +80,7 @@ The following figure shows the relations between the resources of the same examp
 <img src="RTRevisionExampleRelations.svg" alt="Phase Revision Example" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Data Elements
-The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.
+The diagram below shows the relationship between the RT profiles and data elements. It also highlights which are extensions developed as part of the RT FHIR data model.  For an alternate view of how the profiles and extensions defined in this IG are used to represent radiation therapy treatment data, see the [representing radiation therapy](representing_radiotherapy_treatment.html) page.
 
 <img src="RTResourcesOverview.svg" alt="RT Summary Resources Overview" width="1100px" style="float:none; margin: 0px 0px 0px 0px;" />
 

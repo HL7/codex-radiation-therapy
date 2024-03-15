@@ -1625,4 +1625,5 @@ WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.c
 WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.extension[0].value.ofType(CodeableConcept).coding[0].code: Unknown Code 'C41339' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
 # This is intended.   The  IG includes an invariant to generate a warning on use of this inactive code.
+
 WARNING: ServiceRequest/RadiotherapyPlannedCourse-04-Prostate: ServiceRequest: Constraint failed: CategoryPreferred: 'This code 108290001 is inactive and should be used only for backward compatibility.' (defined in http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course)
