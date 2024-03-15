@@ -101,7 +101,7 @@ informationTabContent:
 
 
 codeSystems:
-  'http://snomed.info/sct': SNOMED CT
+  #'http://snomed.info/sct': SNOMED CT
   'http://hl7.org/fhir/sid/icd-10-cm': ICD-10 CM
   'http://loinc.org': LOINC
   'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl': NCIT
