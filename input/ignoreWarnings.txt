@@ -159,8 +159,8 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx
 INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|3.0.0
 
 # Variances approved by CGP WG 3/14/24 https://jira.hl7.org/browse/FHIR-44941
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
 # Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl and http://terminology.hl7.org/CodeSystem/MDRAE Messages -- some of these are listed as (0 uses), but if deleted here, they will come back to life
 INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
@@ -1622,6 +1622,7 @@ INFORMATION: ValueSet/codexrt-radiotherapy-isotope-vs: ValueSet.compose.include[
 
 # NCI Thesaurus issues will be resolved by THO https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Trouble.20with.20NCI.20Thesaurus.20Terms.20in.20Value.20Sets
 WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0].code: Unknown Code 'C146764' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.extension[0].value.ofType(CodeableConcept).coding[0].code: Unknown Code 'C41339' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
 # This is intended.   The  IG includes an invariant to generate a warning on use of this inactive code.
 WARNING: ServiceRequest/RadiotherapyPlannedCourse-04-Prostate: ServiceRequest: Constraint failed: CategoryPreferred: 'This code 108290001 is inactive and should be used only for backward compatibility.' (defined in http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course)
