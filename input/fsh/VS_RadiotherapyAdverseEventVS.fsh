@@ -1,22 +1,29 @@
-CodeSystem: AdverseEventSeverityOrGradeCS
-Id: codexrt-radiotherapy-adverse-event-severity-or-gradeCS
-Title: "Severity or Grade CodeSystem based on CTCAE"
-Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
-* ^caseSensitive = true
-* ^experimental = false
-* #0 "Absent Adverse Event" "The absence of adverse events or within normal limits or values."
-* #1 "Mild Adverse Event"  "An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations."
-* #2 "Moderate Adverse Event"  "An experience that is alleviated with simple therapeutic treatments. The event impacts usual daily activities. Includes laboratory test alterations indicating injury, but without long-term risk."
-* #3 "Severe Adverse Event"  "An adverse event experience that requires intensive therapeutic intervention and interrupts usual daily activities."
-* #4 "Life Threatening or Disabling Adverse Event"  "Any adverse event that places the patient, in the view of the initial reporter, at immediate risk of death from the adverse event as it occurred, i.e., it does not include an adverse experience that, had it occurred in a more severe form, might have caused death."
-* #5 "Death Related to Adverse Event"  "The termination of life associated with an adverse event."
+// CodeSystem: AdverseEventSeverityOrGradeCS
+// Id: codexrt-radiotherapy-adverse-event-severity-or-gradeCS
+// Title: "Severity or Grade CodeSystem based on CTCAE"
+// Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
+// * ^caseSensitive = true
+// * ^experimental = false
+// * ^status = #retired
+// * #0 "Absent Adverse Event" "The absence of adverse events or within normal limits or values."
+// * #1 "Mild Adverse Event"  "An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations."
+// * #2 "Moderate Adverse Event"  "An experience that is alleviated with simple therapeutic treatments. The event impacts usual daily activities. Includes laboratory test alterations indicating injury, but without long-term risk."
+// * #3 "Severe Adverse Event"  "An adverse event experience that requires intensive therapeutic intervention and interrupts usual daily activities."
+// * #4 "Life Threatening or Disabling Adverse Event"  "Any adverse event that places the patient, in the view of the initial reporter, at immediate risk of death from the adverse event as it occurred, i.e., it does not include an adverse experience that, had it occurred in a more severe form, might have caused death."
+// * #5 "Death Related to Adverse Event"  "The termination of life associated with an adverse event."
 
 ValueSet: AdverseEventSeverityOrGradeVS
 Id: codexrt-radiotherapy-adverse-event-severity-or-gradeVS
 Title: "Adverse Event Severity or Grade Value Set"
 Description: "CTCAE Grades 0 through 5. The grade of the adverse event, determined by CTCAE criteria, where 0 represents confirmation that the given adverse event did NOT occur, and 5 represents death. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered a particular AE."
 * ^experimental = false
-* include codes from system AdverseEventSeverityOrGradeCS
+//  * include codes from system AdverseEventSeverityOrGradeCS
+* NCIT#C75533 "Absent Adverse Event" 
+* NCIT#C41338 "Mild Adverse Event" 
+* NCIT#C41339 "Moderate Adverse Event" 
+* NCIT#C41340 "Severe Adverse Event" 
+* NCIT#C41337 "Life Threatening or Disabling Adverse Event" 
+* NCIT#C48275 "Death Related to Adverse Event" 
 
 ValueSet: AdverseEventTermVS
 Id: codexrt-radiotherapy-adverse-event-termVS

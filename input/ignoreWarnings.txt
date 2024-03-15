@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 
-# Add warning and/or  information messages here after you've confirmed that they aren't really a problem
+# Add warning and/or  information messages here after you've confirmed that they are not really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
@@ -158,11 +158,9 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V: Pr
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx: Procedure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|3.0.0
 INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|3.0.0
 
-# SUPPRESS US CORE MESSAGES
-# Variance Approved by Cross-Group Projects WG on 11/10/2022: Eric Haas / Brett Marquard: 17-0-1  -  https://jira.hl7.org/browse/FHIR-39341 .
-#WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-# Variance Approved by Cross-Group Projects WG on 10/27/2022: Brett Marquard/Eric Haas: 21-0-1    - https://jira.hl7.org/browse/FHIR-39301
-#WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
+# Variances approved by CGP WG 3/14/24 https://jira.hl7.org/browse/FHIR-44941
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
 # Suppress CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl and http://terminology.hl7.org/CodeSystem/MDRAE Messages -- some of these are listed as (0 uses), but if deleted here, they will come back to life
 INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
@@ -1622,64 +1620,10 @@ INFORMATION: StructureDefinition/codexrt-radiotherapy-treated-fraction: Structur
 INFORMATION: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose.include[1].concept[0]: Unknown Code 'C143283' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 INFORMATION: ValueSet/codexrt-radiotherapy-isotope-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Cesium-131 (substance), Cesium-137 (substance), Cobalt-60 (substance), Iodine-125 (substance), Iodine-131 (substance)] and examples for no FSN: [Gold-198 (substance, Strontium-90 (substance])
 
-# Reference to Draft Codesystem -- not sure how to surpress
-INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-101-RTTD-BilateralBreast: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V-1Fx: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V-1Fx: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-1Fx: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-1Fx: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-01-BrainMets-1P-1V-1Fx: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-05-22B-02-BrainMets-1P-1V: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-06-22B-01-Uterus-1P-1V-1Fx: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-07-22B-01-Uterus-1P-1V: Procedure.category: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyCoursePrescription-04-Prostate: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyCoursePrescription-101-RTTD-BilateralBreast: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPhasePrescription-04-Prostate-Phase1: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPhasePrescription-05-Prostate-Phase2: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPhasePrescription-101-RTTD-LeftBreastTang: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPhasePrescription-102-RTTD-LeftBreastBoost: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPhasePrescription-103-RTTD-RightBreastTang: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlanPrescription-04-Prostate-Phase1-Plan1: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlanPrescription-05-Prostate-Phase2-Plan1: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-01-22B-01-Prostate-1P-1V: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-02-22B-01-Prostate-2P-1V: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-03-22B-01-Prostate-1P-3V: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-04-22B-01-Breast-2P-3V: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-05-22B-01-BrainMets-1P-1V: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-05-22B-02-BrainMets-1P-1V: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-06-22B-01-Uterus-1P-1V: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedCourse-XRTS-07-22B-01-Uterus-1P-1V: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-04-Prostate-Phase1: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-05-Prostate-Phase2: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-01-22B-01-01-Primary: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-02-22B-01-01-Primary: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-02-22B-01-02-PlanChange: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-03-22B-01-01-Primary: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-04-22B-01-01-LeftBreastTang: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-04-22B-01-02-RightBreastTang: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-04-22B-01-03-LeftBreastBoost: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-05-22B-01-01-Primary: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-05-22B-02-01-Primary: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-06-22B-01-01-Primary: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-07-22B-01-01-Primary: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-04-Prostate-Phase1-Plan1: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: ServiceRequest/RadiotherapyTreatmentPlan-05-Prostate-Phase2-Plan1: ServiceRequest.category[0]: Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: StructureDefinition/codexrt-radiotherapy-treated-fraction: StructureDefinition.snapshot.element[86].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-INFORMATION: StructureDefinition/codexrt-radiotherapy-treated-fraction: StructureDefinition.differential.element[34].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs|1.1.0-cibuild
-
-# Variance requested 3/11/24  https://jira.hl7.org/browse/FHIR-44941
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
-
-# This is a valid code
+# NCI Thesaurus issues will be resolved by THO https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Trouble.20with.20NCI.20Thesaurus.20Terms.20in.20Value.20Sets
 WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0].code: Unknown Code 'C146764' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.extension[0].value.ofType(CodeableConcept).coding[0].code: Unknown Code 'C41339' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-# This warning is intentional.   There is an invariant when an inactive (but valid in the VS) code is used 
+# This is intended.   The  IG includes an invariant to generate a warning on use of this inactive code.
+
 WARNING: ServiceRequest/RadiotherapyPlannedCourse-04-Prostate: ServiceRequest: Constraint failed: CategoryPreferred: 'This code 108290001 is inactive and should be used only for backward compatibility.' (defined in http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course)
