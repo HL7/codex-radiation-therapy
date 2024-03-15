@@ -8048,126 +8048,126 @@
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1254776009",
       "Code description": "Brachytherapy tandem (physical object)"
     },
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1254777000",
       "Code description": "Brachytherapy ovoid (physical object)"
     },
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1254778005",
       "Code description": "Brachytherapy ring (physical object)"
     },
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1254779002",
       "Code description": "Brachytherapy catheter (physical object)"
     },
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1254780004",
       "Code description": "Brachytherapy balloon (physical object)"
     },
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1255211004",
       "Code description": "Brachytherapy cylinder (physical object)"
     },
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1255212006",
       "Code description": "Brachytherapy surface applicator (physical object)"
     },
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1255213001",
       "Code description": "Brachytherapy eye plaque (physical object)"
     },
     {
       "Value set name": "Brachytherapy Applicator Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-applicator-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "467968000",
       "Code description": "Brachytherapy needle (physical object)"
     },
     {
       "Value set name": "Brachytherapy Device Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-device-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1254766006",
       "Code description": "Loose radioactive seed (physical object)"
     },
     {
       "Value set name": "Brachytherapy Device Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-device-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1254767002",
       "Code description": "Stranded radioactive seed (physical object)"
     },
     {
       "Value set name": "Brachytherapy Device Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-device-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1254768007",
       "Code description": "Radioactive seed embedded in mesh (physical object)"
     },
     {
       "Value set name": "Brachytherapy Device Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-brachytherapy-device-type-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "767049008",
       "Code description": "Radioactive seed, device (physical object)"
     },
     {
       "Value set name": "Disease Progression Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-disease-progression-qualifier-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "255470001",
       "Code description": "Local (qualifier value)"
     },
     {
       "Value set name": "Disease Progression Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-disease-progression-qualifier-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "261007001",
       "Code description": "Distant (qualifier value)"
     },
     {
       "Value set name": "Disease Progression Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-disease-progression-qualifier-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "263820005",
       "Code description": "Nodal (qualifier value)"
     },
     {
       "Value set name": "Disease Progression Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-disease-progression-qualifier-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "63161005",
       "Code description": "Principal (qualifier value)"
     },
     {
       "Value set name": "Disease Progression Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-disease-progression-qualifier-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "80534008",
       "Code description": "Biochemical (qualifier value)"
     },
@@ -8188,70 +8188,42 @@
     {
       "Value set name": "Image Guided Radiotherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-image-guided-radiotherapy-modality-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "113091000",
       "Code description": "Magnetic resonance imaging (procedure)"
     },
     {
       "Value set name": "Image Guided Radiotherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-image-guided-radiotherapy-modality-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "16310003",
       "Code description": "Ultrasonography (procedure)"
     },
     {
       "Value set name": "Image Guided Radiotherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-image-guided-radiotherapy-modality-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "168537006",
       "Code description": "Plain radiography (procedure)"
     },
     {
       "Value set name": "Image Guided Radiotherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-image-guided-radiotherapy-modality-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "44491008",
       "Code description": "Fluoroscopy (procedure)"
     },
     {
       "Value set name": "Image Guided Radiotherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-image-guided-radiotherapy-modality-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "717193008",
       "Code description": "Cone beam computed tomography (procedure)"
     },
     {
       "Value set name": "Image Guided Radiotherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-image-guided-radiotherapy-modality-vs",
-      "Code system": "SNOMED CT",
-      "Code": "77477000",
-      "Code description": "Computed tomography (procedure)"
-    },
-    {
-      "Value set name": "Intrafraction Verification Procedure Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-procedure-vs",
-      "Code system": "SNOMED CT",
-      "Code": "113091000",
-      "Code description": "Magnetic resonance imaging (procedure)"
-    },
-    {
-      "Value set name": "Intrafraction Verification Procedure Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-procedure-vs",
-      "Code system": "SNOMED CT",
-      "Code": "16310003",
-      "Code description": "Ultrasonography (procedure)"
-    },
-    {
-      "Value set name": "Intrafraction Verification Procedure Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-procedure-vs",
-      "Code system": "SNOMED CT",
-      "Code": "168537006",
-      "Code description": "Plain radiography (procedure)"
-    },
-    {
-      "Value set name": "Intrafraction Verification Procedure Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-procedure-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "77477000",
       "Code description": "Computed tomography (procedure)"
     },
@@ -8277,16 +8249,44 @@
       "Code description": "Radiotherapy using electromagnetic transponder guidance (procedure)"
     },
     {
+      "Value set name": "Intrafraction Verification Procedure Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-procedure-vs",
+      "Code system": "http://snomed.info/sct",
+      "Code": "113091000",
+      "Code description": "Magnetic resonance imaging (procedure)"
+    },
+    {
+      "Value set name": "Intrafraction Verification Procedure Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-procedure-vs",
+      "Code system": "http://snomed.info/sct",
+      "Code": "16310003",
+      "Code description": "Ultrasonography (procedure)"
+    },
+    {
+      "Value set name": "Intrafraction Verification Procedure Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-procedure-vs",
+      "Code system": "http://snomed.info/sct",
+      "Code": "168537006",
+      "Code description": "Plain radiography (procedure)"
+    },
+    {
+      "Value set name": "Intrafraction Verification Procedure Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-procedure-vs",
+      "Code system": "http://snomed.info/sct",
+      "Code": "77477000",
+      "Code description": "Computed tomography (procedure)"
+    },
+    {
       "Value set name": "Intrafraction Verification Procedure Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-qualifier-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "255204007",
       "Code description": "Multiple (qualifier value)"
     },
     {
       "Value set name": "Intrafraction Verification Procedure Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-intrafraction-verification-qualifier-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "50607009",
       "Code description": "Singular (qualifier value)"
     },
@@ -14194,16 +14194,16 @@
     {
       "Value set name": "Radiotherapy Category Code Max Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-category-vs",
-      "Code system": "SNOMED CT",
-      "Code": "108290001",
-      "Code description": "Radiation oncology AND/OR radiotherapy (procedure)"
+      "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
+      "Code": "1287742003",
+      "Code description": "Radiotherapy (procedure)"
     },
     {
       "Value set name": "Radiotherapy Category Code Max Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-category-vs",
-      "Code system": "http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs",
-      "Code": "1287742003",
-      "Code description": "Radiotherapy (procedure)"
+      "Code system": "http://snomed.info/sct",
+      "Code": "108290001",
+      "Code description": "Radiation oncology AND/OR radiotherapy (procedure)"
     },
     {
       "Value set name": "Radiotherapy Energy Unit Value Set",
@@ -14257,147 +14257,147 @@
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "13237009",
       "Code description": "Cesium-131 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1368003",
       "Code description": "Iodine-131 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "14071002",
       "Code description": "Strontium-90 (substance"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "14691008",
       "Code description": "Yttrium-90 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "24301009",
       "Code description": "Gold-198 (substance"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "24853006",
       "Code description": "Radium-223 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "32505007",
       "Code description": "Phosphorus-32 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "423578007",
       "Code description": "Rhenium-188 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "447553000",
       "Code description": "Lutetium-177 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "48341001",
       "Code description": "Iridium-192 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "5405008",
       "Code description": "Cobalt-60 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "55117002",
       "Code description": "Cesium-137 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "68630002",
       "Code description": "Iodine-125 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "80751004",
       "Code description": "Xenon-133 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "8227001",
       "Code description": "Ruthenium-106 (substance)"
     },
     {
       "Value set name": "Radiotherapy Isotope Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-isotope-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "9351000",
       "Code description": "Palladium-103 (substance)"
     },
     {
       "Value set name": "Radiotherapy Reason for Revision or Adaptation Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-reason-for-revision-or-adaptation-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1259231006",
       "Code description": "Radiotherapy course changed due to changes to target (finding)"
     },
     {
       "Value set name": "Radiotherapy Reason for Revision or Adaptation Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-reason-for-revision-or-adaptation-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1259232004",
       "Code description": "Radiotherapy course changed due to change to organ at risk (finding)"
     },
     {
       "Value set name": "Radiotherapy Reason for Revision or Adaptation Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-reason-for-revision-or-adaptation-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "1259981006",
       "Code description": "Radiotherapy course change due to change to treatment intent (finding)"
     },
     {
       "Value set name": "Radiotherapy Reason for Revision or Adaptation Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-reason-for-revision-or-adaptation-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "314846003",
       "Code description": "Patient given choice of treatment (finding)"
     },
     {
       "Value set name": "Radiotherapy Reason for Revision or Adaptation Value Set",
       "Value set URI": "http://hl7.org/fhir/us/codex-radiation-therapy/ValueSet/codexrt-radiotherapy-reason-for-revision-or-adaptation-vs",
-      "Code system": "SNOMED CT",
+      "Code system": "http://snomed.info/sct",
       "Code": "373858009",
       "Code description": "Radiotherapy course change due to acute radiotherapy toxicity (finding)"
     },
