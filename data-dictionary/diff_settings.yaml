@@ -1,6 +1,6 @@
 leftName: CodexRT STU1
 rightName: CodexRT STU2
-filename: mCodexRTDataDictionary-STU2-vs-STU1
+filename: CodexRTDataDictionary-STU2-vs-STU1
 
 valueSets:
   renamed:
@@ -18,6 +18,9 @@ suppressRows:
   #- FHIR Element (R4): Condition.extension:relatedPrimaryCancerCondition.url
   #  Source Profile URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
   #  Element StructureDefinition URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+  # The ig summary tool mischaracterized the change to binding of Service.request category. So, let's mask this one.
+  - FHIR Element (R4): ServiceRequest.category
+ 
 
 remapValues:
   #  Cancer Stage Group > Cancer Stage
