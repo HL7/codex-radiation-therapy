@@ -1,0 +1,36 @@
+leftName: CodexRT STU1
+rightName: CodexRT STU2
+filename: mCodexRTDataDictionary-STU2-vs-STU1
+
+valueSets:
+  renamed:
+# The following two lines cause the ig-summary to crash (don't know why)
+#    - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs
+#      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-human-specimen-type-vs
+
+
+ignoreColumnsWhenComparing:
+  - Group
+
+# If there are rows that should never be displayed in the diff, specify them here:
+suppressRows:
+  # These rows are related to a change in extensions. See issue #9.
+  #- FHIR Element (R4): Condition.extension:relatedPrimaryCancerCondition.url
+  #  Source Profile URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+  #  Element StructureDefinition URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+
+remapValues:
+  #  Cancer Stage Group > Cancer Stage
+  #- column: Source Profile URI
+  #  old: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+  #  new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage
+  
+
+
+  # Align old and new names and eliminate spurious difference
+  #- column: Code system
+  #  old: Unified Code for Units of Measure
+  #  new: UCUM
+  #- column: Code system
+  #  old: http://snomed.info/sct
+  #  new: SNOMED CT

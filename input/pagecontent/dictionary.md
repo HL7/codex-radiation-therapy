@@ -10,4 +10,6 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 
 Download link:
 
+* [CodeX™ RT Data Dictionary - STU 2 (Excel download)](CodexRTDataDictionary-STU2.xlsx)
 * [CodeX™ RT Data Dictionary - STU 1 (Excel download)](CodexRTDataDictionary-STU1.xlsx)
+* [CodeX™ RT Data Dictionary - STU 2 vs STU 1 Difference (Excel download)](CodexRTDataDictionary-STU2-vs-STU1.xlsx) 
