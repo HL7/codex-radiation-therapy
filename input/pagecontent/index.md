@@ -1,5 +1,5 @@
  {:.stu-note}
-<div class="stu-note" markdown="1">
+<div class="note-to-balloters" markdown="1">
 This version STU1.2.0-ballot of the CodeX Radiation Therapy FHIR Implementation Guide contains unballoted changes to the published STU1 version.  A detailed list of these changes are available on  the  [Change Log](change_log.html) page.
 
 The page [representing radiotherapy treatment](representing_radiotherapy_treatment.html) highlight the new elements in the STU2 IG relative to the STU1 IG.
