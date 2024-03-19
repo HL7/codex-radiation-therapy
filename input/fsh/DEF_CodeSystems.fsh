@@ -5,6 +5,7 @@ Description: "Codes requested from SNOMED by CodeX RT, to be issued at a later d
 Terms beginning with 'USCRS-' (for United States Content Request Service) represent requests in April 2023 with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
 * ^experimental = false
+* ^status = #active
 * #721071000124104 "Radiotherapy with free breathing (regime/therapy)" "Radiotherapy with free breathing (regime/therapy)" //USCRS-34883
 * #721051000124109	"Radiotherapy with breath hold (regime/therapy)" "Radiotherapy with breath hold (regime/therapy)" // USCRS-34884
 * #721031000124102  "Radiotherapy without respiratory motion management (regime/therapy)" "Radiotherapy without respiratory motion management (regime/therapy)" //USCRS-34886
