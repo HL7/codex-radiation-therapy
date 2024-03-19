@@ -1,6 +1,10 @@
  {:.stu-note}
 <div class="stu-note" markdown="1">
-This version STU1.1.0-cibuild of the CodeX Radiation Therapy FHIR Implementation Guide contains unballoted changes to the published STU1 version.  A detailed list of these changes are available on  the  [Change Log](change_log.html) page.
+This version STU1.2.0-ballot of the CodeX Radiation Therapy FHIR Implementation Guide contains unballoted changes to the published STU1 version.  A detailed list of these changes are available on  the  [Change Log](change_log.html) page.
+
+The page [representing radiotherapy treatment](representing_radiotherapy_treatment.html) highlight the new elements in the STU2 IG relative to the STU1 IG.
+
+The [differential data dictionary](CodexRTDataDictionary-STU2-vs-STU1.xlsx) spreadsheet also highlights these changes at a more granular level.
 </div><!-- stu-note -->
 
 ### Background
