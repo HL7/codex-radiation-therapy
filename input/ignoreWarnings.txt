@@ -182,6 +182,12 @@ INFORMATION: StructureDefinition/codexrt-radiotherapy-course-summary: Procedure.
 
 # Work in progress by THO 
 INFORMATION: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose.include[1].concept[0]: Unknown Code 'C143283' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.extension[0].value.ofType(CodeableConcept).coding[0].code: Unknown Code 'C41339' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0].code: Unknown Code 'C146764' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
 # And what can I do about this?  These are SNOMEDCT codes....sigh 
 INFORMATION: ValueSet/codexrt-radiotherapy-isotope-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Cesium-131 (substance), Cesium-137 (substance), Cobalt-60 (substance), Iodine-125 (substance), Iodine-131 (substance)] and examples for no FSN: [Gold-198 (substance, Strontium-90 (substance])
+
+# Temporary Codesystem for codes requested from SNOMEDCT.  No point in going through THO Process
+INFORMATION: CodeSystem/snomed-requested-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
