@@ -35,9 +35,8 @@ dependencies:
 
 parameters:
   show-inherited-invariants: false
-  version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
-  version-comparison-master: true 
+  version-comparison: last
   auto-oid-root: 2.16.840.1.113883.4.642.40.14
 pages:
   index.md:
