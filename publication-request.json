@@ -1,6 +1,6 @@
 {
     "package-id" : "hl7.fhir.us.codex-radiation-therapy",
-    "version" : "2.0.0",
+    "version" : "2.0.0-ballot",
     "path" : "http://hl7.org/fhir/us/codex-radiation-therapy/2024May",
     "milestone": false,
     "mode": "working",
