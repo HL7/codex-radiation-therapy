@@ -191,3 +191,6 @@ INFORMATION: ValueSet/codexrt-radiotherapy-isotope-vs: ValueSet.compose.include[
 # Temporary Codesystem for codes requested from SNOMEDCT.  No point in going through THO Process
 INFORMATION: CodeSystem/snomed-requested-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
+# This instance tests an invariant CategoryPreferred that checks for an old code that is allowed for backwards compatibility only, and generates a warning 
+WARNING: ServiceRequest/RadiotherapyPlannedCourse-04-Prostate: ServiceRequest: Constraint failed: CategoryPreferred: 'This code 108290001 is inactive and should be used only for backward compatibility.' (defined in http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course)
+
