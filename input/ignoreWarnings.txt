@@ -173,7 +173,7 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V-1
 INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V-1Fx: Procedure.extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary|3.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Procedure/RadiotherapyTreatedFraction-05-Prostate-Phase1-Plan1-Fx2: Procedure.extension[0].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|3.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# Draft Codesystems are OK -- wish I could surpress
+# HL7 Draft Codesystems are beyond our control
 INFORMATION: Condition/Diagnosis-1-Breast: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
 INFORMATION: Condition/Diagnosis-2-Prostate: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
 
