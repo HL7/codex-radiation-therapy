@@ -42,7 +42,9 @@ The query support required of conforming implementations is specified in the [Ca
 
 #### Support US Core Conformance Requirements
 
-Additional [conformance requirements from US Core](https://hl7.org/fhir/us/core/general-requirements.html) apply to RESTful interactions, searches, and resource formats in CodeX RT. CodeX RT derives from mCODE, which  "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) CodeX RT profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.
+Additional [conformance requirements from US Core](https://hl7.org/fhir/us/core/general-requirements.html) apply to RESTful interactions, searches, and resource formats in CodeX RT. CodeX RT derives from mCODE, which  "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) CodeX RT profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.  
+
+This FHIR implementation guide will use the US Core profiles. If this FHIR implementation guide is unable to use a US Core profile, we will follow the Cross Group Projects WG's variance request process, and provide the US Realm Steering Committee an approved rationale for deviation in the implementation guide where applicable.
 
 International users of CodeX RT may find US Core an impediment to implementation. Application of CodeX RT to other countries is open to further discussion.
 
