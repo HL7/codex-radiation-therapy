@@ -144,7 +144,7 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-04-Prostate: Procedure.extensio
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-device').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
-# Suppress warnings relating to HL7 MDRAE
+# Suppress warnings relating to HL7 MDRAE.  HL7 does not have access to the content of the codesystem.
 WARNING: ValueSet.where(id = 'codexrt-radiotherapy-adverse-event-termVS'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/MDRAE
 
 # All slices are expected 
@@ -179,7 +179,7 @@ INFORMATION: Condition/Diagnosis-2-Prostate: Condition.category[0]: Reference to
 # Retired extension -- yes included in the base mCODE profile for backward compatibility 
 INFORMATION: StructureDefinition/codexrt-radiotherapy-course-summary: Procedure.extension: The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|3.0.0 is retired
 
-# And what can I do about this?  These are SNOMEDCT codes....sigh 
+# This is an issue with SNOMEDCT that is beyond the power of the IG to address
 INFORMATION: ValueSet/codexrt-radiotherapy-isotope-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Cesium-131 (substance), Cesium-137 (substance), Cobalt-60 (substance), Iodine-125 (substance), Iodine-131 (substance)] and examples for no FSN: [Gold-198 (substance, Strontium-90 (substance])
 
 # Temporary Codesystem for codes requested from SNOMEDCT.  No point in going through THO Process

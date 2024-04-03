@@ -21,7 +21,7 @@ description: CodeX™ Radiation Therapy is an initiative
   electronic health records.
 license: CC0-1.0
 dependencies:
-  hl7.fhir.uv.extensions: current
+  hl7.fhir.uv.extensions: 5.1.0-cibuild
   hl7.fhir.us.core: 
     version: 5.0.1
     id: hl7fhiruscore
