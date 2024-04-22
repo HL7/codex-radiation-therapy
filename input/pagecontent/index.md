@@ -1,7 +1,7 @@
 <div class="note-to-balloters" markdown="1">
 This ballot version STU2 of the CodeX Radiation Therapy FHIR Implementation Guide contains unballoted changes to the published STU1 version.  A detailed list of these changes are available on  the  [Change Log](change_log.html) page.
 
-The page [representing radiotherapy treatment](representing_radiotherapy_treatment.html) highlight the new elements in the STU2 IG relative to the STU1 IG.
+The page [representing radiotherapy treatment](representing_radiotherapy_treatment.html) highlights the new elements in the STU2 IG relative to the STU1 IG.
 
 The [differential data dictionary](CodexRTDataDictionary-STU2-vs-STU1.xlsx) spreadsheet also highlights these changes at a more granular level.
 </div><!-- stu-note -->
@@ -20,7 +20,7 @@ The CodeX™ Radiation Therapy (CodeX™ RT) Implementation Guide (IG) describes
 Once structured data is captured during the care process, that data can be made available for data sharing and reuse.
 The CodeX™ RT IG leverages FHIR and FHIR Application Programming Interfaces (APIs) to promote interoperable exchange of RT information between an ROIS and other health information systems such as an electronic health record (EHR). The CodeX™ RT IG has defined radiotherapy FHIR profiles for vendors to implement in their systems and share, via FHIR API, with other FHIR-enabled radiation oncology information systems or EHRs.
 
-The CodeX™ RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 2 (STU 2)](https://hl7.org/fhir/us/mcode/STU2.1). A full description of how this IG leverages mCODE profiles and value sets is provided in the [Building on mCODE](building_on_mcode.html) section.  The mCODE STU 2 IG also includes a [Radiotherapy Glossary](https://hl7.org/fhir/us/mcode/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
+The CodeX™ RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 3 (STU 3)](https://hl7.org/fhir/us/mcode/STU3). A full description of how this IG leverages mCODE profiles and value sets is provided in the [Building on mCODE](building_on_mcode.html) section.  The mCODE STU 3 IG also includes a [Radiotherapy Glossary](https://hl7.org/fhir/us/mcode/STU3/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
 
 ### Actors and Use Cases
 The intended actors include:
@@ -57,7 +57,7 @@ In addition to information obtained from subject matter experts, several existin
 - IHE Systematized Nomenclature of Medicine – Clinical Terms (SNOMED CT) Set (<https://wiki.ihe.net/index.php/SNOMED_CT_IHE_Set>)
 - Global Patient Set (GPS). The project team intends to include values from the IHE SNOMED CT Set into the SNOMED GPS.
 
-In addition, material was drawn from the [US Core Implementation Guide](https://hl7.org/fhir/us/core/) and the [mCODE Implementation Guide](https://hl7.org/fhir/us/mcode/STU2.1).
+In addition, material was drawn from the [US Core Implementation Guide](https://hl7.org/fhir/us/core/) and the [mCODE Implementation Guide](https://hl7.org/fhir/us/mcode/STU3).
 
 
 {% include markdown-link-references.md %}
