@@ -11,8 +11,8 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
     * Extending the [mCODE modalityAndTechnique] extension with:
       * an EnergyOrIsotope extension
       * a TreatmentApplicatorType extension
-    * Slicing the usedReference field to provide a reference to a [CodexrtRadiotherapyTreatmentDevice]
-    * Slicing the focalDevice field to provide a reference to a [CodexrtRadiotherapySeedDevice]
+    * Slicing the usedReference field to provide a reference to a [CodeX RT Radiotherapy Treatment Device][CodexrtRadiotherapyTreatmentDevice]
+    * Slicing the focalDevice field to provide a reference to a [CodeX RT Radiotherapy Seed Device][CodexrtRadiotherapySeedDevice]
     * Extending the bodySite field with qualifiers for location and laterality, as was done in [mCode Cancer-related Surgical Procedure]
     * Slicing basedOn to link the summary to an associated plan and/or prescription
 * [mCODE CancerDiseaseStatus]
@@ -25,12 +25,12 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
   * CodeX RT extends the base profile by:
     * Adding a DICOM identifier
 * [mCODE modalityAndTechnique]
-  * This extension is used in all 9 CodeX RT profiles based on original or filler order ServiceRequests and Procedure
+  * This extension is used in all 10 CodeX RT profiles based on original or filler order ServiceRequests and Procedure
   * CodeX RT extends this extension with:
     * an EnergyOrIsotope extension
     * a TreatmentApplicatorType extension
 * [mCODE DoseDeliveredToVolume]
-  * This extension is used in the 3 CodeX RT profiles based on Procedure
+  * This extension is used in the 4 CodeX RT profiles based on Procedure
   * CodeX RT extends this extension with:
     * boolean extensions indicating that the dose is a Point or Primary Plan dose, and indicating whether the fractionation was uniform
     * extensions to capture the delivered fractions and total delivered dose
