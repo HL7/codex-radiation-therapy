@@ -1,6 +1,7 @@
 
 [CodeX RT Radiotherapy Course Prescription]: StructureDefinition-codexrt-radiotherapy-course-prescription.html
 [CodeX RT Radiotherapy Planned Course]: StructureDefinition-codexrt-radiotherapy-planned-course.html
+[CodeX RT Radiotherapy Dose Planned To Volume]: StructureDefinition-codexrt-radiotherapy-dose-planned-to-volume.html
 [CodexrtRadiotherapyCourseSummary]: StructureDefinition-codexrt-radiotherapy-course-summary.html
 [CodexrtRadiotherapyPhasePrescription]: StructureDefinition-codexrt-radiotherapy-phase-prescription.html
 [CodexrtRadiotherapyTreatedPhase]: StructureDefinition-codexrt-radiotherapy-treated-phase.html
