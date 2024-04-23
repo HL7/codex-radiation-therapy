@@ -65,10 +65,10 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td><a href="http://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-procedure-intent.html">Treatment Intent</a></td>   
     <td>Treatment Intent</td>
     <td>The purpose of a treatment, medication, or procedure, <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-procedure-intent-vs.html">as defined in mCODE</a>.</td>
+    <td style="text-align: center">x</td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td style="text-align: center">x</td>
     <td></td>
     <td></td>
     <td style="text-align: center">x</td>
@@ -97,10 +97,10 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td><a href="StructureDefinition-codexrt-radiotherapy-uniform-fractionation.html">Uniform Fractionation</a></td>
     <td>Uniform Fractionation</td>
     <td>This flag is true if the fractionation was uniform (i.e., treated with same modality and dose per fraction) and false if the fractionation was mixed.</td>
-    <td style="text-align: center">x</td>
     <td></td>
     <td></td>
-    <td style="text-align: center">x</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td style="text-align: center">x</td>
