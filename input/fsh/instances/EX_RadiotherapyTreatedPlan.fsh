@@ -1,6 +1,6 @@
 Instance: RadiotherapyTreatedPlan-05-Prostate-Phase1-Plan1
 InstanceOf: RadiotherapyTreatedPlan
-Description: "Treatment Summary for treamtment plan in the first phase"
+Description: "Treatment Summary for treatment plan in the first phase"
 Usage: #example
 //* id = "RadiotherapyTreatedPlan-05-Prostate-Phase1-Plan1" //id of the FHIR Resource
 * meta.versionId = "1233456"

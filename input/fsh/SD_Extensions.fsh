@@ -109,7 +109,7 @@ Description: "The number of the fraction in a radiotherapy treatment phase."
 Extension: RadiotherapySessionNumber
 Id: codexrt-radiotherapy-session-number
 Title: "Session Number"
-Description: "The number of the session a radiotherapy treatment course."
+Description: "The number of the session in a radiotherapy treatment course."
 * . ^short = "Session Number"
 * . 0..1
 * value[x] ^short = "Session Number"
