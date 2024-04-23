@@ -126,6 +126,22 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td></td>
   </tr>
   <tr>
+    <td style="text-align: center">E</td>
+    <td><a href="StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html">Reason for Revision or Adaptation</a></td>
+    <td></td>
+    <td>The <a href="ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html">reason</a> a planned or prescribed radiotherapy treatment was revised, superceded, or adapted.</td>
+    <td></td>
+    <td style="text-align: center">x</td>
+    <td style="text-align: center">x</td>
+    <td></td>
+    <td style="text-align: center">x</td>
+    <td style="text-align: center">x</td>
+    <td></td>
+    <td style="text-align: center">x</td>
+    <td style="text-align: center">x</td>
+    <td></td>
+  </tr>
+  <tr>
     <td style="text-align: center">F</td>
     <td>Treatment Site</td>
     <td>Body Site</td>
@@ -382,22 +398,6 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
-  </tr>
-  <tr>
-    <td style="text-align: center">E</td>
-    <td><a href="StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html">Reason for Revision or Adaptation</a></td>
-    <td></td>
-    <td>The <a href="ValueSet-codexrt-radiotherapy-reason-for-revision-or-adaptation-vs.html">reason</a> a planned or prescribed radiotherapy treatment was revised, superceded, or adapted.</td>
-    <td></td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td></td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td></td>
-    <td style="text-align: center">x</td>
-    <td style="text-align: center">x</td>
-    <td></td>
   </tr>
   <tr>
     <td style="text-align: center">E</td>
