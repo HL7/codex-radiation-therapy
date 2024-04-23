@@ -40,7 +40,6 @@ Usage: #example
 * basedOn[=].display = "Prostate-Phase1-Plan1"
 * partOf = Reference(RadiotherapyTreatedPhase-05-Prostate-Phase1) //Can reference another summary of larger scope
 * status = #in-progress
-//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
