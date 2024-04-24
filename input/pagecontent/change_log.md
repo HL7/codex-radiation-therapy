@@ -1,5 +1,5 @@
-### CodeX Radiation Therapy Continue Integration Build for STU2
-These changes were added to the CI build, and have not been balloted or published.
+### CodeX Radiation Therapy STU2 Ballot
+These changes were ballotted in May 2024.
 * Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead. Impacts [Adverse Event Severity or Grade Value Set](ValueSet-codexrt-radiotherapy-adverse-event-severity-or-gradeVS.html).
 * Dependency Changes
   * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
@@ -23,7 +23,7 @@ These changes were added to the CI build, and have not been balloted or publishe
   * In the [Radiotherapy Volume](StructureDefinition-codexrt-radiotherapy-volume.html), changed the cardinality of the identifier slice for display name from the 0..1 of mCODE to 1..1. In CodeX RT, the display name is mandatory. The identifier cardinality was already 2..* to reflect the two mandatory slices ([FHIR-41885](https://jira.hl7.org/browse/FHIR-41885)).
 * Changed Binding Strengths 
   * As discussed and changed in mCODE 3.0.0, some binding strengths were relaxed because required bindings were a barrier to broader implementation (CodeX RT finding [FHIR-42775](https://jira.hl7.org/browse/FHIR-42775), corresponding mCODE change [FHIR-41503](https://jira.hl7.org/browse/FHIR-41503)). The binding strength was changed from required to extensible on the following elements.
-    * bodySite in all Procedure and ServiceRequest (as in the [mCODE STU3 Radiotherapy Course Summary](https://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-course-summary.html)).
+    * bodySite in all Procedure and ServiceRequest (as in the [mCODE STU3 Radiotherapy Course Summary]({{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-course-summary.html)).
     * [Reason for Revision or Adaptation](StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html)
     * [Free-Breathing Motion Management Technique](StructureDefinition-codexrt-radiotherapy-free-breathing-motion-mgmt-technique.html)
     * [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-image-guided-radiotherapy-modality.html)
@@ -47,7 +47,7 @@ These are the changes that were made during ballot reconciliation.
 * Treatment devices are represented as proper references to [Radiotherapy Treatment Device](StructureDefinition-codexrt-radiotherapy-treatment-device.html), rather than using an extension. ([FHIR-38220](https://jira.hl7.org/browse/FHIR-38220) and [FHIR-38114](https://jira.hl7.org/browse/FHIR-38114))
 * Radioactive Seeds are represented with new references to [Radiotherapy Seed Device](StructureDefinition-codexrt-radiotherapy-seed-device.html)
 * Device references have been moved out of extensions into the built-in fields with the ServiceRequest and Procedure resources ([FHIR-38220](https://jira.hl7.org/browse/FHIR-38220) and [FHIR-38114](https://jira.hl7.org/browse/FHIR-38114))
-* A new [RadiotherapyDiseaseStatus](StructureDefinition-codexrt-radiotherapy-disease-status.html) profile was added based on mCODE's [CancerDiseaseStatus](https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-cancer-disease-status.html) profile with an additional [qualifier](StructureDefinition-codexrt-radiotherapy-disease-progression-qualifier.html) for disease progression.([FHIR-37922](https://jira.hl7.org/browse/FHIR-37922))
+* A new [RadiotherapyDiseaseStatus](StructureDefinition-codexrt-radiotherapy-disease-status.html) profile was added based on mCODE's [CancerDiseaseStatus]({{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-cancer-disease-status.html) profile with an additional [qualifier](StructureDefinition-codexrt-radiotherapy-disease-progression-qualifier.html) for disease progression.([FHIR-37922](https://jira.hl7.org/browse/FHIR-37922))
 * The [mCODE Radiotherapy Dose Delivered To Volume] extension has been extended with
 a boolean uniformFractionation flag when incorporated into the [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html) profile. ([FHIR-37976](https://jira.hl7.org/browse/FHIR-37976))
 * The extensions [CodeX RT Radiotherapy Dose Planned To Volume] and [mCODE Radiotherapy Dose Delivered To Volume] were extended in all profiles in which they were used, i.e. [RadiotherapyPlannedCourse](StructureDefinition-codexrt-radiotherapy-planned-course.html), [RadiotherapyPlannedPhase](StructureDefinition-codexrt-radiotherapy-planned-phase.html), [RadiotherapyTreatmentPlan](StructureDefinition-codexrt-radiotherapy-treatment-plan.html), [RadiotherapyCourseSummary](StructureDefinition-codexrt-radiotherapy-course-summary.html), [RadiotherapyTreatedPhase](StructureDefinition-codexrt-radiotherapy-treated-phase.html), and [RadiotherapyTreatedPlan](StructureDefinition-codexrt-radiotherapy-treated-plan.html), with the following boolean flags.

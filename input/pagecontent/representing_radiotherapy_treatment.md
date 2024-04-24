@@ -62,9 +62,9 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
   </tr>
   <tr>
     <td style="text-align: center">E</td>
-    <td><a href="http://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-procedure-intent.html">Treatment Intent</a></td>   
+    <td><a href="{{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-procedure-intent.html">Treatment Intent</a></td>   
     <td>Treatment Intent</td>
-    <td>The purpose of a treatment, medication, or procedure, <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-procedure-intent-vs.html">as defined in mCODE</a>.</td>
+    <td>The purpose of a treatment, medication, or procedure, <a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet-mcode-procedure-intent-vs.html">as defined in mCODE</a>.</td>
     <td style="text-align: center">x</td>
     <td></td>
     <td></td>
@@ -113,7 +113,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td>Reason for Termination</td>
     <td>Status Reason</td>
     <td>A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study 
-    as <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-treatment-termination-reason-vs.html">defined in mCODE</a>.</td>
+    as <a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet-mcode-treatment-termination-reason-vs.html">defined in mCODE</a>.</td>
     <td></td>
     <td></td>
     <td></td>
@@ -145,7 +145,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td style="text-align: center">F</td>
     <td>Treatment Site</td>
     <td>Body Site</td>
-    <td>Described using TG-263 terms mapped to SNOMEDCT codes and qualifiers as <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-radiotherapy-treatment-location-vs.html">defined in mCODE</a>.</td>
+    <td>Described using TG-263 terms mapped to SNOMEDCT codes and qualifiers as <a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet-mcode-radiotherapy-treatment-location-vs.html">defined in mCODE</a>.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -159,9 +159,9 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
   </tr>
   <tr>
     <td rowspan="4" style="text-align: center">E</td>
-    <td rowspan="4">Treatment <a href="https://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-modality-and-technique.html">Modality and Technique</a></td>
+    <td rowspan="4">Treatment <a href="{{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-modality-and-technique.html">Modality and Technique</a></td>
     <td>Modality</td>
-    <td><a href="http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs">As defined in mCODE</a></td> 
+    <td><a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet/mcode-radiotherapy-modality-vs.html">As defined in mCODE</a></td> 
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -175,7 +175,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
   </tr>
   <tr>
     <td>Technique</td>
-    <td><a href="http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-technique-vs">As defined in mCODE</a></td> 
+    <td><a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet/mcode-radiotherapy-technique-vs.html">As defined in mCODE</a></td> 
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -249,7 +249,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
   </tr>
     <tr>
     <td style="text-align: center">E</td>
-    <td><a href="https://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-sessions.html">Actual Number of Sessions</a></td>
+    <td><a href="{{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-sessions.html">Actual Number of Sessions</a></td>
     <td>Actual Number of Sessions</td>
     <td>The number of sessions in a course of radiotherapy.</td>
     <td style="text-align: center"> </td>
@@ -285,9 +285,9 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td rowspan="7" style="text-align: center">E</td>
     <td rowspan="7"><a href="StructureDefinition-codexrt-radiotherapy-dose-prescribed-to-volume.html">Prescribed</a>, 
 <a href="StructureDefinition-codexrt-radiotherapy-dose-planned-to-volume.html">Planned</a>, or
-<a href="http://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html">Delivered</a> Dose</td>
+<a href="{{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html">Delivered</a> Dose</td>
     <td>Volume</td>
-    <td>Reference to a <a href="http://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-volume.html"> RadiotherapyVolume</a> as defined in mCODE.</td>
+    <td>Reference to a <a href="{{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-volume.html"> RadiotherapyVolume</a> as defined in mCODE.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>

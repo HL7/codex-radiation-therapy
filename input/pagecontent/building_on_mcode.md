@@ -3,8 +3,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
 
 ### Profiles and Extensions
 * [mCODE Radiotherapy Course Summary]
-  * This profile is the base for CodeX RT Profile [CodeX RT Radiotherapy Course Summary][codexRTRadiotherapyCourseSummary]
-  * CodeX RT extends the base profile by adding:
+  * CodeX RT adds a [CodeX RT Radiotherapy Course Summary][codexRTRadiotherapyCourseSummary] profile that extends the base profile by adding:
     * Adding identifiers for official and display names
     * Extending the [mCODE Radiotherapy Dose Delivered To Volume] extension with:
       * booleans indicating that the dose is a Point or Primary Plan dose, and indicating whether the fractionation was uniform
@@ -19,7 +18,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
   * This profile is the base for the [CodeX RT Radiotherapy Disease Status][CodexRTRadiotherapyDiseaseStatus] profile
   * CodeX RT extends the base profile by adding:
     * Adding a top-level extension to reference a [CodeX RT Radiotherapy Volume][CodeXRTRadiotherapyVolume]
-    * Extending the valueCodeableConcept field with a [disease progression qualifier] extension
+    * Extending the valueCodeableConcept field with a [CodeX RT Radiotherapy Disease Progression Qualifier][RadiotherapyDiseaseProgressionQualifier] extension
 * [mCODE Radiotherapy Volume]
   * This profile is the base for the [CodeX RT Radiotherapy Volume][CodexRTRadiotherapyVolume]
   * CodeX RT extends the base profile by:
