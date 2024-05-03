@@ -161,7 +161,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td rowspan="4" style="text-align: center">E</td>
     <td rowspan="4">Treatment <a href="{{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-modality-and-technique.html">Modality and Technique</a></td>
     <td>Modality</td>
-    <td><a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet/mcode-radiotherapy-modality-vs.html">As defined in mCODE</a></td> 
+    <td><a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet-mcode-radiotherapy-modality-vs.html">As defined in mCODE</a></td> 
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -175,7 +175,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
   </tr>
   <tr>
     <td>Technique</td>
-    <td><a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet/mcode-radiotherapy-technique-vs.html">As defined in mCODE</a></td> 
+    <td><a href="{{site.data.fhir.ver.fhirmcode}}/ValueSet-mcode-radiotherapy-technique-vs.html">As defined in mCODE</a></td> 
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>

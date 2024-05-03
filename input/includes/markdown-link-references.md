@@ -13,6 +13,7 @@
 [CodexrtRadiotherapyTreatmentDevice]: StructureDefinition-codexrt-radiotherapy-treatment-device.html
 [CodexrtRadiotherapySeedDevice]: StructureDefinition-codexrt-radiotherapy-seed-device.html
 [CodexRTRadiotherapyDiseaseStatus]: StructureDefinition-codexrt-radiotherapy-disease-status.html
+[CodexRTRadiotherapyDiseaseProgressionQualifier]: StructureDefinition-codexrt-radiotherapy-disease-progression-qualifier.html
 [RadiotherapyRequestVS]: ValueSet-radiotherapy-request.html
 [RadiotherapyRequestCS]: CodeSystem-radiotherapy-request.html
 [SnomedRequestedCs]: CodeSystem-snomed-requested-cs.html

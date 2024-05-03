@@ -18,7 +18,7 @@ Here we provide a descriptive summary of the reuse of mCODE resources. The CodeX
   * This profile is the base for the [CodeX RT Radiotherapy Disease Status][CodexRTRadiotherapyDiseaseStatus] profile
   * CodeX RT extends the base profile by adding:
     * Adding a top-level extension to reference a [CodeX RT Radiotherapy Volume][CodeXRTRadiotherapyVolume]
-    * Extending the valueCodeableConcept field with a [CodeX RT Radiotherapy Disease Progression Qualifier][RadiotherapyDiseaseProgressionQualifier] extension
+    * Extending the valueCodeableConcept field with a [CodeX RT Radiotherapy Disease Progression Qualifier][CodexRTRadiotherapyDiseaseProgressionQualifier] extension
 * [mCODE Radiotherapy Volume]
   * This profile is the base for the [CodeX RT Radiotherapy Volume][CodexRTRadiotherapyVolume]
   * CodeX RT extends the base profile by:
