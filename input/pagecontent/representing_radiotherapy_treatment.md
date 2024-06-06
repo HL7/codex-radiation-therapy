@@ -64,7 +64,7 @@ The following table documents how the 4 Procedure and 6 Service Request profiles
     <td style="text-align: center">E</td>
     <td>Treatment Intent</td>
     <td>Treatment Intent</td>
-    <td>The purpose of a treatment, medication, or procedure, <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-procedure-intent-vs.html">as defined in mCODE</a>.</td>
+    <td>The purpose of a treatment, medication, or procedure, <a href="https://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-procedure-intent-vs.html">as defined in mCODE</a>.</td>
     <td style="text-align: center">x</td>
     <td></td>
     <td></td>
@@ -81,7 +81,7 @@ The following table documents how the 4 Procedure and 6 Service Request profiles
     <td>Reason for Termination</td>
     <td>Status Reason</td>
     <td>A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study 
-    as <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-treatment-termination-reason-vs.html">defined in mCODE</a>.</td>
+    as <a href="https://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-treatment-termination-reason-vs.html">defined in mCODE</a>.</td>
     <td></td>
     <td></td>
     <td></td>
@@ -97,7 +97,7 @@ The following table documents how the 4 Procedure and 6 Service Request profiles
     <td style="text-align: center">F</td>
     <td>Treatment Site</td>
     <td>Body Site</td>
-    <td>Described using TG263 terms mapped to SNOMEDCT codes and qualifiers as <a href="http://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-radiotherapy-treatment-location-vs.html">defined in mCODE</a>.</td>
+    <td>Described using TG263 terms mapped to SNOMEDCT codes and qualifiers as <a href="https://hl7.org/fhir/us/mcode/STU3/ValueSet-mcode-radiotherapy-treatment-location-vs.html">defined in mCODE</a>.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -239,7 +239,7 @@ The following table documents how the 4 Procedure and 6 Service Request profiles
     <td rowspan="7" style="text-align: center">E</td>
     <td rowspan="7">Prescribed, Planned, Delivered Dose</td>
     <td>Volume</td>
-    <td>Reference to a <a href="http://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-volume.html"> RadiotherapyVolume</a> as defined in mCODE.</td>
+    <td>Reference to a <a href="https://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-volume.html"> RadiotherapyVolume</a> as defined in mCODE.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
