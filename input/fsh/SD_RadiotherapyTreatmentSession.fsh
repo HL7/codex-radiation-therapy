@@ -8,7 +8,7 @@ Description: "A radiotherapy treatment session with the patient."
   RadiotherapySessionNumber named radiotherapySessionNumber 0..1 MS
 * extension[radiotherapySessionNumber] ^short = "Session Number"
 * extension[radiotherapySessionNumber] ^definition = "The number of this session in a radiotherapy treatment course."
-* serviceType = SCT#108290001 "Radiation oncology AND/OR radiotherapy"
+* serviceType = SCT#1287742003 "Radiotherapy (procedure)" // FHIR-45489
 * insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     treatment-plan 0..* MS and
