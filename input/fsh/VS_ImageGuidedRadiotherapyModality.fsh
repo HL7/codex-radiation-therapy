@@ -12,3 +12,4 @@ Description: "Modality used for imaging in Image Guided Radiotherapy (IGRT)"
 // These may not be qualified by energy
 * SCT#113091000 "Magnetic resonance imaging (procedure)" // MRI
 * SCT#16310003 "Ultrasonography (procedure)"    // Ultrasound
+* SCT##1297350006 "Surface guided radiation therapy (procedure)" // SGRT -- FHIR45499
