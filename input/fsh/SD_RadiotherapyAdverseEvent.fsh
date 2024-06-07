@@ -22,7 +22,7 @@ Future versions of this IG should reference adverse event profiles from Vulcan, 
 // ------Grade-----
 * extension contains
     AdverseEventSeverityOrGrade named severity-or-grade 0..1 MS
-* suspectEntity.instance only Reference( RadiotherapyTreatedPhase or RadiotherapyCourseSummary or RadiotherapyTreatedPlan)
+* suspectEntity.instance only Reference( RadiotherapyTreatedPhase or RadiotherapyCourseSummary or RadiotherapyTreatedPlan or Device)
 * suspectEntity MS
 
 RuleSet: AdverseEventExtensionPreamble
