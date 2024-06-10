@@ -1,5 +1,5 @@
 ### CodeX Radiation Therapy May 2024 STU2 Ballot Reconciliation
-* [FHIR-45492](https://jira.hl7.org/browse/FHIR-45492):  Added MS to [Radiotherapy Course Summary].statusReason field 
+* [FHIR-45492](https://jira.hl7.org/browse/FHIR-45492):  Added MS to [Radiotherapy Course Summary](StructureDefinition-codexrt-radiotherapy-course-summary.html).statusReason field 
 
 ### CodeX Radiation Therapy May 2024 STU2 Ballot
 These changes were ballotted in May 2024:
