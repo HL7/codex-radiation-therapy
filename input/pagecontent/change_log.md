@@ -1,6 +1,7 @@
 ### CodeX Radiation Therapy May 2024 STU2 Ballot Reconciliation
+* [FHIR-45489](https://jira.hl7.org/browse/FHIR-45489):  Use active SNOMED CT code for event type
 * [FHIR-45492](https://jira.hl7.org/browse/FHIR-45492):  Added MS to [Radiotherapy Course Summary](StructureDefinition-codexrt-radiotherapy-course-summary.html).statusReason field 
-
+* 
 ### CodeX Radiation Therapy May 2024 STU2 Ballot
 These changes were ballotted in May 2024:
 * Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts [AdverseEventSeverityOrGradeVS]
