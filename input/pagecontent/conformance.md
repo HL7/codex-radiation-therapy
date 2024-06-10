@@ -3,7 +3,7 @@ This section outlines requirements and recommendations for CodeX RT participants
 
 ### CodeX RT Participant Roles
 
-Three roles for **CodeX RT Participants** are defined along the actors defined in IHE-RO [XRTS](https://www.ihe-ro.org/doku.php?id=doc%3Aprofiles%3Axrts):
+Three roles for **CodeX RT Participants** are defined along the actors defined in IHE-RO [XRTS](https://wiki.ihe.net/index.php/Exchange_of_Radiotherapy_Summaries):
 
 * **Treatment Summary Provider** - A system that provides the summary of ongoing or completed radiotherapy treatments by storing CodeX RT compliant resources to an RO Resource Repository.
 
@@ -11,7 +11,7 @@ Three roles for **CodeX RT Participants** are defined along the actors defined i
 
 * **Radiation Oncology (RO) Resource Repository** - The RO Resource Repository is a system and can receive CodeX RT compliant resources and make them available as defined in the [CodeX RT Server CapabilityStatement](CapabilityStatement-CodexRTServerCapabilityStatement.html). A FHIR Server that fulfills this role may not be limited to Radiation Oncology. It may be a generic FHIR server that fulfills other roles at the same time.
 
-This STU1 IG currently only provides a CapabilityStatement for a RO Resource Repository. As additional experience interacting with CodeX RT data accrues the required capabilities for Treatment Summary Provider and Treatment Observer will be captured in future updates to this IG. See the IHE-RO [XRTS](https://www.ihe-ro.org/doku.php?id=doc%3Aprofiles%3Axrts) Supplement for a specification which transactions are required by the Treatment Summary Provider and the Treatment Observer.
+This STU1 IG currently only provides a CapabilityStatement for a RO Resource Repository. As additional experience interacting with CodeX RT data accrues the required capabilities for Treatment Summary Provider and Treatment Observer will be captured in future updates to this IG. See the IHE-RO [XRTS](https://wiki.ihe.net/index.php/Exchange_of_Radiotherapy_Summaries) Supplement for a specification which transactions are required by the Treatment Summary Provider and the Treatment Observer.
 
 ### "MUST" Requirements for Conformance
 
