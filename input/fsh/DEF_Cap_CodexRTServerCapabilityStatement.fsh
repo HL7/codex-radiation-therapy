@@ -175,7 +175,7 @@ Usage: #definition
 * insert SupportProfile(http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-treatment-session, #SHOULD)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
-* insert SupportSearchParam(patient, http://hl7.org/fhir/SearchParameter/Encounter-patient, #reference, #SHALL)
+* insert SupportSearchParam(patient, http://hl7.org/fhir/SearchParameter/Encounter-clinical-patient, #reference, #SHALL)
 * insert SupportSearchParam(based-on, http://hl7.org/fhir/SearchParameter/Encounter-based-on, #reference, #SHOULD)
 
  // Device requirements
