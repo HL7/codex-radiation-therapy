@@ -16,11 +16,11 @@ With those dependencies in place, then run this command:
 
 This script will do two things automatically for you:
 
-1. Run [SUSHI](https://fshschool.org/). This IG is developed developed in [FHIR Shorthand (FSH)](https://hl7.org/fhir/uv/shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FSH files into the JSON files expected by the IG Publisher.
+1. Run [SUSHI](https://fshschool.org/). This IG is developed in [FHIR Shorthand (FSH)](https://hl7.org/fhir/uv/shorthand/), a domain-specific language (DSL) for defining the content of FHIR IGs. SUSHI complies FSH files into the JSON files expected by the IG Publisher.
 
 2. Run the IG Publisher.
 
-You will need an active internet connection to build the IG. It make take up to 30 minutes to build for the first time; subsequent builds should be faster (5-7 minutes) on a modern laptop.
+You will need an active internet connection to build the IG. It may take up to 30 minutes to build for the first time; subsequent builds should be faster (5-7 minutes) on a modern laptop.
 
 When the build finishes, you can open `output/index.html` in your browser to see the locally built IG.
 
@@ -61,4 +61,4 @@ While not normally necessary, you can delete the following folders to get a clea
 - There are a number of other important configuration options in `sushi-config.yaml` including the menu contents of the built IG and the groupings on the [Artifacts Summary page](artifacts.html).
 
 #### Capability Statement Rendering
-The capability statements were rendered using a [script](https://github.com/cspears/CapStatement) originally developed by Eric Haas that has been extended and maintained by Corey Spears. The generated html is integrated into the FSH source using the [transferdiv.rb](transferdiv.rb) script.
+The capability statements were rendered using a [script](https://github.com/caspears/CapStatement) originally developed by Eric Haas that has been extended and maintained by Corey Spears. The generated html is integrated into the FSH source using the [transferdiv.rb](transferdiv.rb) script.

@@ -1,6 +1,6 @@
 Instance: RadiotherapyTreatedPlan-05-Prostate-Phase1-Plan1
 InstanceOf: RadiotherapyTreatedPlan
-Description: "Treatment Summary for treamtment plan in the first phase"
+Description: "Treatment Summary for treatment plan in the first phase"
 Usage: #example
 //* id = "RadiotherapyTreatedPlan-05-Prostate-Phase1-Plan1" //id of the FHIR Resource
 * meta.versionId = "1233456"
@@ -40,7 +40,6 @@ Usage: #example
 * basedOn[=].display = "Prostate-Phase1-Plan1"
 * partOf = Reference(RadiotherapyTreatedPhase-05-Prostate-Phase1) //Can reference another summary of larger scope
 * status = #in-progress
-//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy" //Filled automatically without listing in instance because fixed value in profile.
 * subject = Reference(Patient-6)
 * subject.display = "Peter Venkman"
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
