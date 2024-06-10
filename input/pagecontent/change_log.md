@@ -1,5 +1,9 @@
-### CodeX Radiation Therapy STU2 Ballot
-These changes were ballotted in May 2024.
+### CodeX Radiation Therapy May 2024 STU2 Ballot Reconciliation
+* [FHIR-45489](https://jira.hl7.org/browse/FHIR-45489):  Use active SNOMED CT code for event type
+* [FHIR-45492](https://jira.hl7.org/browse/FHIR-45492):  Added MS to [Radiotherapy Course Summary](StructureDefinition-codexrt-radiotherapy-course-summary.html).statusReason field 
+
+### CodeX Radiation Therapy May 2024 STU2 Ballot
+These changes were ballotted in May 2024:
 * Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead. Impacts [Adverse Event Severity or Grade Value Set](ValueSet-codexrt-radiotherapy-adverse-event-severity-or-gradeVS.html).
 * Dependency Changes
   * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
@@ -29,7 +33,6 @@ These changes were ballotted in May 2024.
     * [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-image-guided-radiotherapy-modality.html)
 * ValueSet Changes
   * Redefine [Adverse Event Severity or Grade Value Set](ValueSet-codexrt-radiotherapy-adverse-event-severity-or-gradeVS.html) using NCI Thesaurus terms for the CTCAE grades of adverse effects instead of an unnecessary local code system.  This eliminates a local code system [Severity or Grade CodeSystem based on CTCAE ](https://hl7.org/fhir/us/codex-radiation-therapy/STU1/CodeSystem-codexrt-radiotheraphy-adverse-event-severity-or-gradeCS.html).
-
 
 ### CodeX Radiation Therapy STU1 Publication Version
 These are the changes that were made during ballot reconciliation.
@@ -71,6 +74,8 @@ a boolean uniformFractionation flag when incorporated into the [RadiotherapyCour
 * Added a server [Capability Statement](CapabilityStatement-CodexRTServerCapabilityStatement.html) based on XRTS requirements.  Included credits for rendering.
 
 ### Added Data Dictionary
+
 * Added a [data dictionary](dictionary.html) with the same format as the mCODE data dictionary.
 
 {% include markdown-link-references.md %}
+
