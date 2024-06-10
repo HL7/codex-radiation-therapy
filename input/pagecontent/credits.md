@@ -39,7 +39,7 @@ If you have questions or comments about this guide, you can join the conversatio
 | Topic | Who | Role | Email |
 |----|---|---|------|
 | Implementation and Use Cases | Su Chen | Program Manager & Clinical Director, CodeX™ | suchen@mitre.org |
-| Topic | Martin Von Siebenthal (Varian, a Siemens Healhtineers Company) | Primary Author | martin.vonsiebenthal@varian.com |
+| Topic | Martin von Siebenthal (Varian, a Siemens Healthineers Company) | Primary Author | martin.vonsiebenthal@varian.com |
 {: .grid }
 
 CodeX™ Radiation Therapy is an open source project and welcomes all contributors.

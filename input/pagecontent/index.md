@@ -1,7 +1,7 @@
 <div class="note-to-balloters" markdown="1">
 This ballot version STU2 of the CodeX Radiation Therapy FHIR Implementation Guide contains unballoted changes to the published STU1 version.  A detailed list of these changes are available on  the  [Change Log](change_log.html) page.
 
-The page [representing radiotherapy treatment](representing_radiotherapy_treatment.html) highlight the new elements in the STU2 IG relative to the STU1 IG.
+The page [representing radiotherapy treatment](representing_radiotherapy_treatment.html) highlights the new elements in the STU2 IG relative to the STU1 IG.
 
 The [differential data dictionary](CodexRTDataDictionary-STU2-vs-STU1.xlsx) spreadsheet also highlights these changes at a more granular level.
 </div><!-- stu-note -->
@@ -20,7 +20,7 @@ The CodeX™ Radiation Therapy (CodeX™ RT) Implementation Guide (IG) describes
 Once structured data is captured during the care process, that data can be made available for data sharing and reuse.
 The CodeX™ RT IG leverages FHIR and FHIR Application Programming Interfaces (APIs) to promote interoperable exchange of RT information between an ROIS and other health information systems such as an electronic health record (EHR). The CodeX™ RT IG has defined radiotherapy FHIR profiles for vendors to implement in their systems and share, via FHIR API, with other FHIR-enabled radiation oncology information systems or EHRs.
 
-The CodeX™ RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 2 (STU 2)](https://hl7.org/fhir/us/mcode/STU2.1).  For a full description of how this IG leverages mCODE profiles and value sets is provided in the [Building on mCODE](building_on_mcode.html) section.  The mCODE STU 2 IG also includes a [Radiotherapy Glossary](https://hl7.org/fhir/us/mcode/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
+The CodeX™ RT IG builds on the [minimal Common Oncology Data Elements (mCODE) Standard for Trial Use 3 (STU 3)](https://hl7.org/fhir/us/mcode/STU3). A full description of how this IG leverages mCODE profiles and value sets is provided in the [Building on mCODE](building_on_mcode.html) section.  The mCODE STU 3 IG also includes a [Radiotherapy Glossary](https://hl7.org/fhir/us/mcode/STU3/glossary.html) that contains all key terms, their definitions, and related examples. The remaining radiotherapy concepts are defined in this IG.
 
 ### Actors and Use Cases
 The intended actors include:
@@ -32,7 +32,7 @@ The intended use cases include:
 * Prescribing, elaborating, and managing RT treatment
 * Documenting delivered RT treatment
 
-One usage of CodeX™ RT is the implementation of the integration profiles defined by the ([IHE-RO](https://www.ihe-ro.org/)) Exchange of Radiotherapy Summaries ([XRTS](https://www.ihe-ro.org/doku.php?id=doc:profiles:xrts)) Supplement. The XRTS specification defines use cases, actors, roles, and transactions for a narrower scope of those specific integration use cases.
+One usage of CodeX™ RT is the implementation of the integration profiles defined by the ([IHE-RO](https://wiki.ihe.net/index.php/Radiation_Oncology)) Exchange of Radiotherapy Summaries ([XRTS](https://wiki.ihe.net/index.php/Exchange_of_Radiotherapy_Summaries)) Supplement. The XRTS specification defines use cases, actors, roles, and transactions for a narrower scope of those specific integration use cases.
 
 ### Example Scenarios
 #### Scenario 1:
@@ -42,7 +42,7 @@ A radiation oncologist generates a patient's RT "end-of-treatment" summary withi
 A radiation oncologist generates a patient's weekly on-treatment visit (OTV) report within the ROIS. The patient's weekly RT in-progress information is pushed, via a FHIR API, to an EHR's FHIR-enabled internal resource repository. Next, the EHR accesses its internal FHIR repository via a FHIR API call and retrieves the patient's weekly RT in-progress information. Once the information has been retrieved, the EHR can store, share, reuse, and display the standardized information however necessary/most useful.
 
 ### Treatment Summary Transactions
-The workflow and transactions for exchanging RT information are documented in the Integrating Healthcare Enterprise - Radiation Oncology ([IHE-RO](https://www.ihe-ro.org/)) Exchange of Radiotherapy Summaries ([XRTS](https://www.ihe-ro.org/doku.php?id=doc:profiles:xrts)) Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX™ RT IG.
+The workflow and transactions for exchanging RT information are documented in the Integrating Healthcare Enterprise - Radiation Oncology ([IHE-RO](https://wiki.ihe.net/index.php/Radiation_Oncology)) Exchange of Radiotherapy Summaries ([XRTS](https://wiki.ihe.net/index.php/Exchange_of_Radiotherapy_Summaries)) Supplement. These XRTS transactions utilize the FHIR profiles defined in the CodeX™ RT IG.
 
 ### Sources
 
@@ -50,14 +50,14 @@ Specifications in the CodeX™ RT IG were informed by research and work products
 
 In addition to information obtained from subject matter experts, several existing standards, nomenclatures, and guidelines were consulted during the development of this specification. These include:
 
-- IHE-RO ([XRTS](https://www.ihe-ro.org/doku.php?id=doc%3Aprofiles%3Axrts)) Work Group
+- IHE-RO ([XRTS](https://wiki.ihe.net/index.php/Exchange_of_Radiotherapy_Summaries)) Work Group
 - AAPM BDSC’s "Operational Ontology for Oncology (O3): A Professional Society-Based, Multistakeholder, Consensus-Driven Informatics Standard Supporting Clinical and Research Use of Real-World Data From Patients Treated for Cancer" (<https://www.redjournal.org/article/S0360-3016(23)00525-4/fulltext>).
 - ASTRO’s "Minimum Data Elements for Radiation Oncology: An American Society for Radiation Oncology Consensus Paper" (<https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext>).
 - Commission on Cancer (CoC) and CoC's “A Multidisciplinary Consensus Recommendation on a Synoptic Radiation Treatment Summary: A Commission on Cancer Workgroup Report” (<https://pubmed.ncbi.nlm.nih.gov/31988040/>)
 - IHE Systematized Nomenclature of Medicine – Clinical Terms (SNOMED CT) Set (<https://wiki.ihe.net/index.php/SNOMED_CT_IHE_Set>)
 - Global Patient Set (GPS). The project team intends to include values from the IHE SNOMED CT Set into the SNOMED GPS.
 
-In addition, material was drawn from the [US Core Implementation Guide](https://hl7.org/fhir/us/core/) and the [mCODE Implementation Guide](https://hl7.org/fhir/us/mcode/STU2.1).
+In addition, material was drawn from the [US Core Implementation Guide](https://hl7.org/fhir/us/core/) and the [mCODE Implementation Guide](https://hl7.org/fhir/us/mcode/STU3).
 
 
 {% include markdown-link-references.md %}

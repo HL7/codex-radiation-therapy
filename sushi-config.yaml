@@ -47,7 +47,7 @@ pages:
   overview.md:
     title: Overview
   history.md:
-    title: Development history
+    title: Development History
   building_on_mcode.md:
     title: Building on mCODE
   building_the_ig.md:
