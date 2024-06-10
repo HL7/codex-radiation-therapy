@@ -1,8 +1,10 @@
 ### CodeX Radiation Therapy May 2024 STU2 Ballot Reconciliation
 * [FHIR-45491](https://jira.hl7.org/browse/FHIR-45491):  Added new profiles to Capability Statement
+* [FHIR-45489](https://jira.hl7.org/browse/FHIR-45489):  Use active SNOMED CT code for event type
 
 ### CodeX Radiation Therapy May 2024 STU2 Ballot
 These changes were ballotted in May 2024:
+
 * Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts [AdverseEventSeverityOrGradeVS]
 * Dependency Changes
   * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
