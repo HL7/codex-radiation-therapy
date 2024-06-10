@@ -20,6 +20,7 @@ Whenever new contributions in the scope of the same course are delivered, this r
 * basedOn[planned-course] ^short = "Radiotherapy Planned Course that planned the treatment summarized in this Radiotherapy Course Summary."
 * basedOn[course-prescription] only Reference(RadiotherapyCoursePrescription)
 * basedOn[planned-course] only Reference(RadiotherapyPlannedCourse)
+* statusReason MS // FHIR-45492 from Martin.   mCode RadiotherapyCourseSummary no longer makes this MS
 
 // Not all values from http://hl7.org/fhir/ValueSet/event-status are expected for radiotherapy summary procedures.
 // preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown
