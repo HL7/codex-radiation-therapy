@@ -1,4 +1,5 @@
 ### CodeX Radiation Therapy May 2024 STU2 Ballot Reconciliation
+* Changed dependence on mCODE to STU4 (currently the [CI build](https://build.fhir.org/ig/HL7/fhir-mCODE-ig)
 * [FHIR-45576](https://jira.hl7.org/browse/FHIR-45576):  Adopt Vulcan Severity and Grade Extensions
 * [FHIR-45491](https://jira.hl7.org/browse/FHIR-45491):  Added new profiles to Capability Statement
 * [FHIR-45499](https://jira.hl7.org/browse/FHIR-45499):  Added Surface Guided Code to IGRT Modality ValueSet
