@@ -451,7 +451,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td style="text-align: center">E</td>
     <td><a href="StructureDefinition-codexrt-dicom-reference.html">DICOM Treatment Plan</a></td>
     <td></td>
-    <td>Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions.</td>
+    <td>Reference to a DICOM SOP instance representing a treatment plan such as an RT Plan or an RT Ion Plan.</td>
     <td></td>
     <td></td>
     <td></td>
@@ -467,7 +467,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td style="text-align: center">E</td>
     <td><a href="StructureDefinition-codexrt-dicom-reference.html">DICOM Treatment Record</a></td>
     <td></td>
-    <td>Reference to a DICOM SOP instance representing a treatment plan such as an RT Plan or an RT Ion Plan.</td>
+    <td>Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions.</td>
     <td></td>
     <td></td>
     <td></td>
