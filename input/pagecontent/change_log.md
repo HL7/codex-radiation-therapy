@@ -1,11 +1,17 @@
 ### CodeX Radiation Therapy May 2024 STU2 Ballot Reconciliation
+
 * [FHIR-45531](https://jira.hl7.org/browse/FHIR-45531):  Added reference to Device to AdverseEvent.contributor
+* Changed dependence on mCODE to STU4 (currently the [CI build](https://build.fhir.org/ig/HL7/fhir-mCODE-ig)
+* [FHIR-45576](https://jira.hl7.org/browse/FHIR-45576):  Adopt Vulcan Severity and Grade Extensions
+* [FHIR-45491](https://jira.hl7.org/browse/FHIR-45491):  Added new profiles to Capability Statement
+* [FHIR-45499](https://jira.hl7.org/browse/FHIR-45499):  Added Surface Guided Code to IGRT Modality ValueSet
 * [FHIR-45489](https://jira.hl7.org/browse/FHIR-45489):  Use active SNOMED CT code for event type
 * [FHIR-45492](https://jira.hl7.org/browse/FHIR-45492):  Added MS to [Radiotherapy Course Summary](StructureDefinition-codexrt-radiotherapy-course-summary.html).statusReason field 
 
 ### CodeX Radiation Therapy May 2024 STU2 Ballot
 These changes were ballotted in May 2024:
 
+* Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts AdverseEventSeverityOrGradeVS
 * Dependency Changes
   * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
   * Changed USCore dependency to [5.0.1]({{site.data.fhir.ver.hl7fhiruscore}}/index.html)
@@ -24,7 +30,7 @@ These changes were ballotted in May 2024:
   * Changed references from outdated "Operational Ontology for Radiation Oncology (OORO)" to "Operational Ontology for Oncology (O3)" ([FHIR-41682](https://jira.hl7.org/browse/FHIR-41682)).
 * Profile Changes
   * Procedure.category and ServiceRequest.category: [mCODE STU2.1 RadiotherapyCourseSummary](https://hl7.org/fhir/us/mcode/STU2.1/StructureDefinition-mcode-radiotherapy-course-summary.html) had a required Procedure.category value for RadiotherapyCourseSummary that used a SNOMEDCT code ([108290001 Radiation oncology AND/OR radiotherapy (procedure)](https://dailybuild.ihtsdotools.org/?perspective=full&conceptId1=108290001&edition=MAIN&release=&languages=en)) that has become inactive.  mCODE STU3 dropped the Procedure.category binding completely.   CodeXRT STU1 required all ServiceRequest.category to include the same SNOMEDCT code.   In CodeXRT STU2, a requirement for a category code has been added to all of the Procedure and ServiceRequest profiles with a required binding to a valueset that includes the old code as well as a new SNOMEDCT code ([1287742003 "Radiotherapy (procedure)"](https://dailybuild.ihtsdotools.org/?perspective=full&conceptId1=1287742003&edition=MAIN&release=&languages=en)).   An invariant warns if the old code is used.
-  * Fixed typo (radiotheraphy) in extension url for [Reason for Revision or Adaptation](StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html) ([FHIR-42893](https://jira.hl7.org/browse/FHIR-42893)). Fixed the same typo in [Radiotherapy Adverse Event Grade](StructureDefinition-codexrt-radiotherapy-adverse-event-severity-or-grade.html), and [Adverse Event Severity or Grade Value Set](ValueSet-codexrt-radiotherapy-adverse-event-severity-or-gradeVS.html) ([FHIR-43372](https://jira.hl7.org/browse/FHIR-43372)).
+  * Fixed typo (radiotheraphy) in extension url for [Reason for Revision or Adaptation](StructureDefinition-codexrt-radiotherapy-reason-for-revision-or-adaptation.html) ([FHIR-42893](https://jira.hl7.org/browse/FHIR-42893)). Fixed the same typo in Radiotherapy Adverse Event Grade, and Adverse Event Severity or Grade Value Set ([FHIR-43372](https://jira.hl7.org/browse/FHIR-43372)).
   * In the [Radiotherapy Volume](StructureDefinition-codexrt-radiotherapy-volume.html), changed the cardinality of the identifier slice for display name from the 0..1 of mCODE to 1..1. In CodeX RT, the display name is mandatory. The identifier cardinality was already 2..* to reflect the two mandatory slices ([FHIR-41885](https://jira.hl7.org/browse/FHIR-41885)).
 * Changed Binding Strengths 
   * As discussed and changed in mCODE 3.0.0, some binding strengths were relaxed because required bindings were a barrier to broader implementation (CodeX RT finding [FHIR-42775](https://jira.hl7.org/browse/FHIR-42775), corresponding mCODE change [FHIR-41503](https://jira.hl7.org/browse/FHIR-41503)). The binding strength was changed from required to extensible on the following elements.
@@ -33,7 +39,7 @@ These changes were ballotted in May 2024:
     * [Free-Breathing Motion Management Technique](StructureDefinition-codexrt-radiotherapy-free-breathing-motion-mgmt-technique.html)
     * [Image Guided Radiotherapy (IGRT)](StructureDefinition-codexrt-image-guided-radiotherapy-modality.html)
 * ValueSet Changes
-  * Redefine [Adverse Event Severity or Grade Value Set](ValueSet-codexrt-radiotherapy-adverse-event-severity-or-gradeVS.html) using NCI Thesaurus terms for the CTCAE grades of adverse effects instead of an unnecessary local code system.  This eliminates a local code system [Severity or Grade CodeSystem based on CTCAE ](https://hl7.org/fhir/us/codex-radiation-therapy/STU1/CodeSystem-codexrt-radiotheraphy-adverse-event-severity-or-gradeCS.html).
+  * Redefine Adverse Event Severity or Grade Value Set using NCI Thesaurus terms for the CTCAE grades of adverse effects instead of an unnecessary local code system.  This eliminates a local code system [Severity or Grade CodeSystem based on CTCAE ](https://hl7.org/fhir/us/codex-radiation-therapy/STU1/CodeSystem-codexrt-radiotheraphy-adverse-event-severity-or-gradeCS.html).
 
 ### CodeX Radiation Therapy STU1 Publication Version
 These are the changes that were made during ballot reconciliation.
@@ -79,4 +85,5 @@ a boolean uniformFractionation flag when incorporated into the [RadiotherapyCour
 * Added a [data dictionary](dictionary.html) with the same format as the mCODE data dictionary.
 
 {% include markdown-link-references.md %}
+
 

@@ -26,8 +26,11 @@ dependencies:
     version: 5.0.1
     id: hl7fhiruscore
   hl7.fhir.us.mcode: 
-    version: 3.0.0
+    version: current
     id: fhirmcode
+  hl7.fhir.uv.ae-research-ig:
+    version: 1.0.1
+    id: vulcan
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
@@ -158,7 +161,7 @@ groups:
     - RadiotherapyDiseaseProgressionQualifier
     - RadiobiologicMetric
     - IntrafractionVerification
-    - AdverseEventSeverityOrGrade
+  #  - AdverseEventSeverityOrGrade
 
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg

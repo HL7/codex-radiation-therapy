@@ -10,8 +10,8 @@ Description: "The procedure used for verification of the patient position during
 * SCT#168537006 "Plain radiography (procedure)" // plus qualifiers
 // Qualifier -- Singular   * SnomedRequestedCS#USCRS-99999813 "Radiography from single direction (procedure)"
 // Qualifier -- Multiple   * SnomedRequestedCS#USCRS-99999814 "Radiography combining multiple directions (procedure)"
-* SnomedRequestedCS#USCRS-35604 "Imaging guidance using fiducial markers (procedure)"
-* SnomedRequestedCS#USCRS-35606 "Radiotherapy using electromagnetic transponder guidance (procedure)"
+* SnomedRequestedCS#1335864002 "Imaging guided radiotherapy using fiducial marker target localization (procedure)"  // * #USCRS-35604 "Imaging guidance using fiducial markers (procedure)"
+* SnomedRequestedCS#1332089004 "External beam radiation therapy using electromagnetic transponder real time tumor tracking (procedure)" // * #USCRS-35606 "Radiotherapy using electromagnetic transponder guidance (procedure)"
 * SnomedRequestedCS#1297350006 "Surface guided radiation therapy (procedure)"
 
 ValueSet: IntrafractionVerificationQualifierVS

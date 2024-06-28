@@ -34,3 +34,6 @@ Alias: VarianRadiotherapyPrescriptionId = http://varian.com/fhir/identifier/radi
 //CTCAE CodeSystems
 Alias:   NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias:   MEDDRA = http://terminology.hl7.org/CodeSystem/MDRAE
+
+// Vulcan Severity Codesystem
+Alias: AESEVERITY = http://terminology.hl7.org/CodeSystem/adverse-event-severity

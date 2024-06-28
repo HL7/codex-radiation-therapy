@@ -173,8 +173,9 @@ INFORMATION: Procedure/RadiotherapyCourseSummary-XRTS-01-22B-01-Prostate-1P-1V-1
 INFORMATION: Procedure/RadiotherapyTreatedFraction-05-Prostate-Phase1-Plan1-Fx2: Procedure.extension[0].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique|3.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # HL7 Draft Codesystems are beyond our control
-INFORMATION: Condition/Diagnosis-1-Breast: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
-INFORMATION: Condition/Diagnosis-2-Prostate: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/adverse-event-severity|1.0.0
+INFORMATION: Condition/Diagnosis-1-Breast: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
+INFORMATION: Condition/Diagnosis-2-Prostate: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
 
 # Retired extension -- yes included in the base mCODE profile for backward compatibility 
 INFORMATION: StructureDefinition/codexrt-radiotherapy-course-summary: Procedure.extension: The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|3.0.0 is retired
@@ -188,3 +189,9 @@ INFORMATION: CodeSystem/snomed-requested-cs: CodeSystem: Most code systems defin
 # This instance tests an invariant CategoryPreferred that checks for an old code that is allowed for backwards compatibility only, and generates a warning 
 WARNING: ServiceRequest/RadiotherapyPlannedCourse-04-Prostate: ServiceRequest: Constraint failed: CategoryPreferred: 'This code 108290001 is inactive and should be used only for backward compatibility.' (defined in http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course)
 
+# Issues with 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl'
+WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.extension[0].value.ofType(CodeableConcept).coding[0].code: Unknown Code 'C41339' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.event.coding[0].code: Unknown Code 'C146764' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+INFORMATION: ValueSet/codexrt-radiotherapy-adverse-event-termVS: ValueSet.compose.include[1].concept[0]: Unknown Code 'C143283' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+
+WARNING: ValueSet/codexrt-image-guided-radiotherapy-modality-vs: ValueSet.compose.include[0].concept[6]: The code '1297350006' is not valid in the system http://snomed.info/sct (Unknown code '1297350006' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/731000124108/version/20230901')
