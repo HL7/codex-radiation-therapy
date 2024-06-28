@@ -16,6 +16,6 @@ Terms beginning with 'USCRS-' (for United States Content Request Service) repres
 * #721041000124107 "Radiotherapy with respiratory motion management (regime/therapy)" "Radiotherapy with respiratory motion management (regime/therapy )" // USCRS-34885.  Parent code, not directly used by IG.
 * #1297350006 "Surface guided radiation therapy (procedure)"
 * #1297069006 "Fractionated dose radiotherapy (procedure)" // #USCRS-99999901 "Radiotherapy treatment fraction (regime/therapy)" 
-* #USCRS-35604 "Imaging guidance using fiducial markers (procedure)"
-* #USCRS-35606 "Radiotherapy using electromagnetic transponder guidance (procedure)"
+* #1335864002 "Imaging guided radiotherapy using fiducial marker target localization (procedure)"  // * #USCRS-35604 "Imaging guidance using fiducial markers (procedure)"
+* #1332089004 "External beam radiation therapy using electromagnetic transponder real time tumor tracking (procedure)" // * #USCRS-35606 "Radiotherapy using electromagnetic transponder guidance (procedure)"
 * #1287742003 "Radiotherapy (procedure)" // temporary until IGP SNOMEDCT version updated 
