@@ -1,13 +1,13 @@
 ### CodeX Radiation Therapy May 2024 STU2 Ballot Reconciliation
 * IG Dependencies
-  * Changed dependence on mCODE to STU4 (currently the [CI build](https://build.fhir.org/ig/HL7/fhir-mCODE-ig)
+  * Changed dependence on mCODE to STU4 (currently the [CI build](https://build.fhir.org/ig/HL7/fhir-mCODE-ig))
   * Added dependence on [Adverse Event Clinical Research IG STU1.0.1](https://hl7.org/fhir/uv/ae-research-ig/)
 * [FHIR-45576](https://jira.hl7.org/browse/FHIR-45576):  Adopt Vulcan Severity and Grade Extensions
 * [FHIR-45491](https://jira.hl7.org/browse/FHIR-45491):  Added new profiles to Capability Statement
 * [FHIR-45499](https://jira.hl7.org/browse/FHIR-45499):  Added Surface Guided Code to IGRT Modality ValueSet
 * [FHIR-45489](https://jira.hl7.org/browse/FHIR-45489):  Use active SNOMED CT code for event type
 * [FHIR-45492](https://jira.hl7.org/browse/FHIR-45492):  Added MS to [Radiotherapy Course Summary](StructureDefinition-codexrt-radiotherapy-course-summary.html).statusReason field 
-* [FHIR-46243](https://jira.hl7.org/browse/FHIR-46243): Added a DICOM Treatment Session UID (300A,0700) identifier to  [RadiotherapyTreatmentSession] 
+* [FHIR-46243](https://jira.hl7.org/browse/FHIR-46243):  Added a DICOM Treatment Session UID (300A,0700) identifier to [Radiotherapy Treatment Session](StructureDefinition-codexrt-radiotherapy-treatment-session.html) 
 
 ### CodeX Radiation Therapy May 2024 STU2 Ballot
 These changes were ballotted in May 2024:
