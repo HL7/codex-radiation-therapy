@@ -19,3 +19,6 @@ Usage: #example
 * period.end = "2020-10-28T13:25:17+01:00"
 * location.location = Reference(TreatmentLocation-1)
 //* serviceProvider = Reference(RadiotherapyDepartment-1)
+* identifier[dicomTreatmentSessionUid]
+  * system = DICOMUID
+  * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151846" // DICOM UID
