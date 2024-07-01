@@ -2,6 +2,7 @@
 * IG Dependencies
   * Changed dependence on mCODE to STU4 (currently the [CI build](https://build.fhir.org/ig/HL7/fhir-mCODE-ig))
   * Added dependence on [Adverse Event Clinical Research IG STU1.0.1](https://hl7.org/fhir/uv/ae-research-ig/)
+* [FHIR-45531](https://jira.hl7.org/browse/FHIR-45531):  Added reference to Device to AdverseEvent.contributor
 * [FHIR-45576](https://jira.hl7.org/browse/FHIR-45576):  Adopt Vulcan Severity and Grade Extensions
 * [FHIR-45491](https://jira.hl7.org/browse/FHIR-45491):  Added new profiles to Capability Statement
 * [FHIR-45499](https://jira.hl7.org/browse/FHIR-45499):  Added Surface Guided Code to IGRT Modality ValueSet
@@ -11,7 +12,8 @@
 
 ### CodeX Radiation Therapy May 2024 STU2 Ballot
 These changes were ballotted in May 2024:
-* Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts AdverseEventSeverityOrGradeVS
+
+* Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts [AdverseEventSeverityOrGradeVS](https://hl7.org/fhir/us/codex-radiation-therapy/ValueSet-codexrt-radiotheraphy-adverse-event-severity-or-gradeVS.html).
 * Dependency Changes
   * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
   * Changed USCore dependency to [5.0.1]({{site.data.fhir.ver.hl7fhiruscore}}/index.html)

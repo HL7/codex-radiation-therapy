@@ -188,7 +188,7 @@ Extension: RadiotherapyEnergyOrIsotope
 Id: codexrt-radiotherapy-energy-or-isotope
 Title: "Energy or Isotope"
 Description: "The radiation energy used for radiotherapy. The energy spectrum is characterized
-by the maximum energy, the maximum accelaration voltage, or the used isotope."
+by the maximum energy, the maximum acceleration voltage, or the used isotope."
 * . ^short = "Radiotherapy Energy or Isotope"
 * value[x] only SimpleQuantity or CodeableConcept
 * valueQuantity ^short = "The spectrum of radiation energy characterized by a maximum value.

@@ -23,7 +23,7 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
 * extension[radiotherapyFractionNumberInPhase] ^short = "Fraction Number in Phase"
 * extension[radiotherapyFractionNumberInPhase] ^definition = "The fraction number that was treated in the phase."
 * extension[radiotherapyDicomRecord] ^short = "DICOM Treatment Record"
-* extension[radiotherapyDicomRecord] ^definition = "Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions."
+* extension[radiotherapyDicomRecord] ^definition = "Reference to a DICOM SOP instance representing a treatment record such as an RT Beams Treatment Record or an RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment session."
 * insert OpenProfileBasedSlicing(basedOn)
 * subject only Reference($mCODECancerPatient)   // must reference mCODE Cancer Patient
 * basedOn contains

@@ -14,7 +14,7 @@ Description: "A summary of radiotherapy treatment delivered with a single treatm
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of delivered fractions of this treatment plan."
 * extension[radiotherapyDicomRecord] ^short = "DICOM Treatment Record"
-* extension[radiotherapyDicomRecord] ^definition = "Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions."
+* extension[radiotherapyDicomRecord] ^definition = "Reference to a DICOM SOP instance representing a treatment record such as an RT Beams Treatment Record or an RT Ion Beams Treatment Record. One or more treatment records are expected for each treated plan."
 * insert OpenProfileBasedSlicing(basedOn)
 * basedOn contains
     treatment-plan 0..1 MS and
