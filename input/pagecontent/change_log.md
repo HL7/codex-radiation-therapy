@@ -11,7 +11,7 @@
 ### CodeX Radiation Therapy May 2024 STU2 Ballot
 These changes were ballotted in May 2024:
 
-* Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts AdverseEventSeverityOrGradeVS
+* Eliminated local code system for Adverse Event Stages or Grades, and used NCI Thesaurus terms instead.   Impacts [AdverseEventSeverityOrGradeVS](https://hl7.org/fhir/us/codex-radiation-therapy/ValueSet-codexrt-radiotheraphy-adverse-event-severity-or-gradeVS.html).
 * Dependency Changes
   * Changed mCODE dependency to [STU3]({{site.data.fhir.ver.fhirmcode}}/index.html)
   * Changed USCore dependency to [5.0.1]({{site.data.fhir.ver.hl7fhiruscore}}/index.html)
