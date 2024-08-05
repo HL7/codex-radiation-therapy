@@ -4,6 +4,7 @@ Id:       codexrt-radiotherapy-treatment-session
 Title: "Radiotherapy Treatment Session"
 Description: "A radiotherapy treatment session with the patient."
 * ^status = #draft
+
 * extension contains
   RadiotherapySessionNumber named radiotherapySessionNumber 0..1 MS
 * extension[radiotherapySessionNumber] ^short = "Session Number"
@@ -23,3 +24,13 @@ Description: "A radiotherapy treatment session with the patient."
 //* serviceProvider MS // Add with department modelling (Organization)
 * serviceType = SnomedRequestedCS#1287742003 "Radiotherapy (procedure)" // FHIR-45489
 * serviceType 1..1 
+* identifier  MS // Sushi will set the required minimum slices automatically based on slice cardinalities.  No value in hardwiring it here.
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier contains
+  dicomTreatmentSessionUid 0..1 MS
+* identifier[dicomTreatmentSessionUid]
+  * system = DICOMUID
+  * value 1..1 MS
+  * ^short = "DICOM Treatment Session UID (300A,0700)"
