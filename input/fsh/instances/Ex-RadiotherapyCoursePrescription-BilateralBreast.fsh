@@ -38,7 +38,7 @@ Usage: #example
   * value = "urn:oid:2.16.124.113543.1154777499.30246.19789.111.101"
 * status = #active
 * subject = Reference(Patient-101)
-* reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
+* reasonCode = SCT#372064008 "Malignant neoplasm of female breast (disorder)"
 * reasonReference = Reference(Diagnosis-101-Breast)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
@@ -179,7 +179,7 @@ Usage: #example
 * subject = Reference(Patient-101)
 * performedPeriod.start = "2020-10-27T13:15:17+01:00"
 * performedPeriod.end = "2020-10-28T13:21:17+01:00"
-* reasonCode = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
+* reasonCode = SCT#372064008 "Malignant neoplasm of female breast (disorder)"
 * reasonReference = Reference(Diagnosis-101-Breast)
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
@@ -396,7 +396,7 @@ Usage: #example
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
-* code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
+* code = SCT#372064008 "Malignant neoplasm of female breast (disorder)"
 * subject = Reference(Patient-101)
 * onsetDateTime = "2018-03-16"
 * asserter = Reference(Practitioner-1005)
