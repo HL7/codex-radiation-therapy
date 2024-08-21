@@ -189,7 +189,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
   </tr>
   <tr>
     <td><a href="StructureDefinition-codexrt-radiotherapy-energy-or-isotope.html">Energy or Isotope</a></td>
-    <td>The <a href="ValueSet-codexrt-radiotherapy-energy-unit-vs.html">radiation energy</a> used for radiotherapy. The energy spectrum is characterized by the maximum energy, the maximum accelaration voltage, or the used isotope.</td>
+    <td>The <a href="ValueSet-codexrt-radiotherapy-energy-unit-vs.html">radiation energy</a> used for radiotherapy. The energy spectrum is characterized by the maximum energy, the maximum acceleration voltage, or the used isotope.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -202,7 +202,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td style="text-align: center">x</td>
   </tr>
   <tr>
-    <td><a href="StructureDefinition-codexrt-radiotherapy-treatment-applicator-type.html">Treatment Appplicator Type</a></td>
+    <td><a href="StructureDefinition-codexrt-radiotherapy-treatment-applicator-type.html">Treatment Applicator Type</a></td>
     <td><a href="ValueSet-codexrt-brachytherapy-applicator-type-vs.html">Type</a> of Radiotherapy Treatment Applicator used in Brachytherapy.</td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -269,7 +269,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
 <a href="StructureDefinition-codexrt-radiotherapy-fractions-planned.html">Planned</a>, or
 <a href="StructureDefinition-codexrt-radiotherapy-fractions-delivered.html">Delivered</a>)</td>
     <td>Number of Fractions</td>
-    <td>The number of prescribed, planned, or delivered treatment fractions for all volumes in this resources.</td>
+    <td>The number of prescribed, planned, or delivered treatment fractions for all volumes in this resource.</td>
     <td style="text-align: center"> </td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -315,7 +315,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
   </tr>
   <tr>
     <td>Dose per Fraction</td>
-    <td>Physical radiations dose per fraction in cGy.</td>
+    <td>Physical radiation dose per fraction in cGy.</td>
     <td></td>
     <td style="text-align: center">x</td>
     <td style="text-align: center">x</td>
@@ -467,7 +467,7 @@ The following table documents how the 4 Procedure and 6 ServiceRequest profiles 
     <td style="text-align: center">E</td>
     <td><a href="StructureDefinition-codexrt-dicom-reference.html">DICOM Treatment Record</a></td>
     <td></td>
-    <td>Reference to a DICOM SOP instances representing a treatment records such as RT Beams Treatment Record or RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment sessions.</td>
+    <td>Reference to a DICOM SOP instance representing a treatment record such as an RT Beams Treatment Record or an RT Ion Beams Treatment Record. One or more treatment records are expected from each treatment session.</td>
     <td></td>
     <td></td>
     <td></td>
