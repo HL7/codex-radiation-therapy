@@ -13,7 +13,6 @@ Terms beginning with 'USCRS-' (for United States Content Request Service) repres
 * #1286801002 "Real time tumor tracking external beam radiotherapy (procedure)" //USCRS-34878
 * #1286802009 "External beam radiotherapy using internal target volume approach (procedure)" // #USCRS-34880
 * #721081000124101  "Radiotherapy with abdominal compression (regime/therapy)" "Radiotherapy with abdominal compression (regime/therapy)" //USCRS-34882
-* #721041000124107 "Radiotherapy with respiratory motion management (regime/therapy)" "Radiotherapy with respiratory motion management (regime/therapy )" // USCRS-34885.  Parent code, not directly used by IG.
 * #1297350006 "Surface guided radiation therapy (procedure)"
 * #1297069006 "Fractionated dose radiotherapy (procedure)" // #USCRS-99999901 "Radiotherapy treatment fraction (regime/therapy)" 
 * #1335864002 "Imaging guided radiotherapy using fiducial marker target localization (procedure)"  // * #USCRS-35604 "Imaging guidance using fiducial markers (procedure)"
