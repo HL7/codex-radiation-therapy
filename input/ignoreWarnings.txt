@@ -181,9 +181,6 @@ INFORMATION: Condition/Diagnosis-2-Prostate: Condition.category[0]: Reference to
 # Retired extension -- yes included in the base mCODE profile for backward compatibility 
 INFORMATION: StructureDefinition/codexrt-radiotherapy-course-summary: Procedure.extension: The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|4.0.0-ballot is retired
 
-# This is an issue with SNOMEDCT that is beyond the power of the IG to address
-INFORMATION: ValueSet/codexrt-radiotherapy-isotope-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Cesium-131 (substance), Cesium-137 (substance), Cobalt-60 (substance), Iodine-125 (substance), Iodine-131 (substance)] and examples for no FSN: [Gold-198 (substance, Strontium-90 (substance])
-
 # Temporary Codesystem for codes requested from SNOMEDCT.  No point in going through THO Process
 INFORMATION: CodeSystem/snomed-requested-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 

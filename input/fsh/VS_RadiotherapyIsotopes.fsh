@@ -10,7 +10,7 @@ Description: "Isotope used in radiotherapy"
 // cobalt
 * SCT#5405008 "Cobalt-60 (substance)"
 // gold isotopes
-* SCT#24301009  "Gold-198 (substance"
+* SCT#24301009  "Gold-198 (substance)"
 // include all iodine isotopes
 * SCT#68630002 "Iodine-125 (substance)"
 * SCT#1368003 "Iodine-131 (substance)"
@@ -29,7 +29,7 @@ Description: "Isotope used in radiotherapy"
 // include all ruthenium isotopes
 * SCT#8227001 "Ruthenium-106 (substance)"
 // strontium
-* SCT#14071002   "Strontium-90 (substance"
+* SCT#14071002   "Strontium-90 (substance)"
 // xenon
 * SCT#80751004  "Xenon-133 (substance)"
 // yttrium
