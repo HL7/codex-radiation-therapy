@@ -84,3 +84,6 @@
 [mCODE Procedure Intent]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-procedure-intent.html
 [mCODE Radiotherapy Course Summary]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-radiotherapy-course-summary.html
 [mCODE Cancer-Related Surgical Procedure]: {{site.data.fhir.ver.fhirmcode}}/StructureDefinition-mcode-cancer-related-surgical-procedure.html
+[mCODE]: {{site.data.fhir.ver.fhirmcode}}
+[mCODE Glossary]: {{site.data.fhir.ver.fhirmcode}}/
+[USCore]: {{site.data.fhir.ver.hl7fhiruscore}}

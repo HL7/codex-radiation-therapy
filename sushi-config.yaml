@@ -6,8 +6,8 @@ id: hl7.fhir.us.codex-radiation-therapy
 canonical: http://hl7.org/fhir/us/codex-radiation-therapy
 name: CodeX-Radiation-Therapy
 status: active
-version: 2.0.0-ballot
-releaseLabel: Ballot 
+version: 2.0.0
+releaseLabel: trial-use  # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 title: "CodeX Radiation Therapy"
