@@ -3,7 +3,7 @@ In late 2020, the American Society for Radiation Oncology (ASTRO) and the Americ
 
 In January 2021, the CodeX™ Radiation Therapy Treatment Data (RTTD) project approached the Integrating the Healthcare Enterprise – Radiation Oncology ([IHE-RO](https://wiki.ihe.net/index.php/Radiation_Oncology)) Exchange of Radiotherapy Summaries ([XRTS](https://wiki.ihe.net/index.php/Exchange_of_Radiotherapy_Summaries)) Work Group about aligning the data model and FHIR structures with the technical architecture and transactions being defined in the XRTS technical specification document. The CodeX™ RTTD and XRTS teams aligned visions and began working together to adopt the CodeX™ RT Implementation Guide.
 
-In support of this collaboration, radiotherapy profiles were added to [mCODE], [Radiotherapy Course Summary][[mCODE Radiotherapy Course Summary] and [Radiotherapy Volume][mCODE Radiotherapy Volume], as well as other value sets and extensions required to represent a radiotherapy treatment summary.
+In support of this collaboration, radiotherapy profiles were added to [mCODE], [Radiotherapy Course Summary][mCODE Radiotherapy Course Summary] and [Radiotherapy Volume][mCODE Radiotherapy Volume], as well as other value sets and extensions required to represent a radiotherapy treatment summary.
 
 Radiotherapy specifications beyond what was considered “minimal” (which is a tenet of mCODE) are published in this CodeX™ RT IG.
 
