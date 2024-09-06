@@ -3,11 +3,14 @@ In late 2020, the American Society for Radiation Oncology (ASTRO) and the Americ
 
 In January 2021, the CodeX™ Radiation Therapy Treatment Data (RTTD) project approached the Integrating the Healthcare Enterprise – Radiation Oncology ([IHE-RO](https://wiki.ihe.net/index.php/Radiation_Oncology)) Exchange of Radiotherapy Summaries ([XRTS](https://wiki.ihe.net/index.php/Exchange_of_Radiotherapy_Summaries)) Work Group about aligning the data model and FHIR structures with the technical architecture and transactions being defined in the XRTS technical specification document. The CodeX™ RTTD and XRTS teams aligned visions and began working together to adopt the CodeX™ RT Implementation Guide.
 
-In support of this collaboration, radiotherapy profiles were added to [mCODE STU3](https://hl7.org/fhir/us/mcode/STU3), [Radiotherapy Course Summary](https://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-course-summary.html) and [Radiotherapy Volume](https://hl7.org/fhir/us/mcode/STU3/StructureDefinition-mcode-radiotherapy-volume.html), as well as other value sets and extensions required to represent a radiotherapy treatment summary.
+In support of this collaboration, radiotherapy profiles were added to [mCODE], [Radiotherapy Course Summary][mCODE Radiotherapy Course Summary] and [Radiotherapy Volume][mCODE Radiotherapy Volume], as well as other value sets and extensions required to represent a radiotherapy treatment summary.
 
 Radiotherapy specifications beyond what was considered “minimal” (which is a tenet of mCODE) are published in this CodeX™ RT IG.
 
 Furthermore, the radiotherapy profiles and data elements were tested in IHE-RO XRTS Workshops December 2021, May 2022, and December 2022/January 2023. The CodeX™ RTTD and IHE-RO XRTS teams will continue to test the CodeX™ RT IG at future IHE-RO XRTS Workshops and Connectathons.
+
+The STU2 version of this IG extended the representation of elements supporting radiotherapy treatment.  These changes are highlighted in the  [representing radiotherapy treatment](representing_radiotherapy_treatment.html) page and, at a more granulary level, in the [differential data dictionary](CodexRTDataDictionary-STU2-vs-STU1.xlsx) spreadsheet.
+
 
 Additional details regarding the CodeX™ RTTD project:
 

@@ -60,5 +60,3 @@ While not normally necessary, you can delete the following folders to get a clea
 - The main pages in the built IG are generated from [Markdown](https://daringfireball.net/projects/markdown/) found in `input/pagecontent/`. These pages must also be included in `sushi-config.yaml` to be compiled to HTML by the IG Publisher.
 - There are a number of other important configuration options in `sushi-config.yaml` including the menu contents of the built IG and the groupings on the [Artifacts Summary page](artifacts.html).
 
-#### Capability Statement Rendering
-The capability statements were rendered using a [script](https://github.com/caspears/CapStatement) originally developed by Eric Haas that has been extended and maintained by Corey Spears. The generated html is integrated into the FSH source using the [transferdiv.rb](transferdiv.rb) script.
