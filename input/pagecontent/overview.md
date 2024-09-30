@@ -7,6 +7,8 @@ On a more detailed level, *treatment plans* define how the radiotherapy treatmen
 
 Note that in radiotherapy, a *treatment plan* represents a concrete set of treatment delivery instructions prepared for a specific patient anatomy and machine ([Radiotherapy Glossary]({{site.data.fhir.ver.fhirmcode}}/glossary.html)). The concept of a radiotherapy *treatment plan* includes the lowest level of machine instructions to control a treatment device. However, these details are not modelled in the FHIR representation of a radiotherapy treatment plan. Instead, the respective ServiceRequest (Radiotherapy Treatment Plan) includes an extension to reference the DICOM artifacts that define the machine geometry and motion during treatment. The Procedure that records the delivered treatment (Radiotherapy Treated Plan), references DICOM treatment records that contain all machine details.
 
+In this IG, Course and Phase definitions follow the recommendations of the American Association of Physicists in Medicine (AAPM) Operational Ontology for Oncology ([O3](https://pubmed.ncbi.nlm.nih.gov/37244628/)).
+
 The relationship between a course, phases, and treatment plans is exemplified in the following diagram.
 
 <img src="BreastTreatmentSummary.svg" alt="RT Summary Example" width="900px" style="float:none; margin: 0px 0px 0px 0px;" />
