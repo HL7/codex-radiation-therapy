@@ -14,7 +14,7 @@ Description: "The treatment of a single fraction of a radiotherapy treatment pla
     RadiotherapyFractionNumberInPlan named radiotherapyFractionNumberInPlan 0..1 MS and
     RadiotherapyFractionNumberInPhase named radiotherapyFractionNumberInPhase 0..1 MS and
     DicomReference named radiotherapyDicomRecord 0..*
-* code = SnomedRequestedCS#1297069006 "Fractionated dose radiotherapy (procedure)"
+* code = $SCT#1297069006 "Fractionated dose radiotherapy (procedure)"
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the delivered fraction number in the top-level extension radiotherapyFractionNumberInPlan."
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within this fraction, not including dose from any other fraction."

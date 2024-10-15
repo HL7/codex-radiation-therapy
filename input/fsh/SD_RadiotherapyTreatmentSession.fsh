@@ -22,7 +22,7 @@ Description: "A radiotherapy treatment session with the patient."
   * location MS
   * location only Reference(USCoreLocation)
 //* serviceProvider MS // Add with department modelling (Organization)
-* serviceType = SnomedRequestedCS#1287742003 "Radiotherapy (procedure)" // FHIR-45489
+* serviceType = $SCT#1287742003 "Radiotherapy (procedure)" // FHIR-45489
 * serviceType 1..1 
 * identifier  MS // Sushi will set the required minimum slices automatically based on slice cardinalities.  No value in hardwiring it here.
 * identifier ^slicing.discriminator.type = #value
