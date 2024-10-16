@@ -12,7 +12,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-01-22B-01-Common
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = $SCT#721031000124102 "External beam radiotherapy without respiratory motion management (procedure)"
 //* extension[intrafractionVerification][+].extension[procedure].valueCodeableConcept = SCT#77477000 "Computed tomography (procedure)"
 * extension[intrafractionVerification][+]  // Martin -- does this make sense here or do we need a separate example
-  * extension[procedure].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[procedure].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[qualifier].valueCodeableConcept = SCT#255204007 "Multiple (qualifier value)"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId

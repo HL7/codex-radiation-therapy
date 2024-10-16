@@ -11,10 +11,10 @@ RuleSet: RadiotherapyCourseSummary-XRTS-03-22B-01-Prostate-1P-3V-Common
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = $SCT#721031000124102 "External beam radiotherapy without respiratory motion management (procedure)"
 * extension[imageGuidedRadiotherapyModality][+]
-  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[imageGuidedRadiotherapyModality][+]
-  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 * identifier[displayName]
   * system = VarianRadiotherapyCourseId
@@ -128,10 +128,10 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-03-22B-01-01-Primary-Common
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = $SCT#721031000124102 "External beam radiotherapy without respiratory motion management (procedure)"
 * extension[imageGuidedRadiotherapyModality][+]
-  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[imageGuidedRadiotherapyModality][+]
-  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 
 * identifier[displayName]
@@ -234,10 +234,10 @@ Usage: #example
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = $SCT#721031000124102 "External beam radiotherapy without respiratory motion management (procedure)"
 //* extension[radiotherapySessions].valueUnsignedInt = 4
 * extension[imageGuidedRadiotherapyModality][+]
-  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[imageGuidedRadiotherapyModality][+]
-  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 
 * extension[radiotherapyDosePlannedToVolume][+]
@@ -292,10 +292,10 @@ Usage: #example
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = $SCT#721031000124102 "External beam radiotherapy without respiratory motion management (procedure)"
 * extension[imageGuidedRadiotherapyModality][+]
-  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#kV "kV"
 * extension[imageGuidedRadiotherapyModality][+]
-  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain radiography (procedure)"
+  * extension[modality][+].valueCodeableConcept = SCT#168537006 "Plain X-ray (procedure)"
   * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 * extension[radiotherapyFractionsPlanned].valuePositiveInt = 4
 * extension[radiotherapyDosePlannedToVolume][+]

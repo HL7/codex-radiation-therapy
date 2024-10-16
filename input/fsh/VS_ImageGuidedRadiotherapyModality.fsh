@@ -5,7 +5,7 @@ Description: "Modality used for imaging in Image Guided Radiotherapy (IGRT)"
 * ^experimental = false
 * insert SCTCopyright
 // These may be qualified by energy
-* SCT#168537006 "Plain radiography (procedure)"  // XRay
+* SCT#168537006 "Plain X-ray (procedure)"  // XRay
 * SCT#44491008 "Fluoroscopy (procedure)"         // Fluoroscopy
 * SCT#77477000 "Computed tomography (procedure)" // CT
 * SCT#717193008 "Cone beam computed tomography (procedure)" // Cone beam CT
