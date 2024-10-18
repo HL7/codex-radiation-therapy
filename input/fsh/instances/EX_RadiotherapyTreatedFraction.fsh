@@ -41,7 +41,7 @@ Usage: #example
 * basedOn[=].display = "Prostate-Phase1-Plan1"
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-04-Prostate-Phase1)
 * basedOn[=].display = "Prostate-Phase1"
-* partOf = Reference(RadiotherapyTreatedPlan-04-Prostate-Phase1-Plan1)
+* partOf = Reference(RadiotherapyTreatedPlan-05-Prostate-Phase1-Plan1)
 * partOf = Reference(RadiotherapyTreatedPhase-05-Prostate-Phase1)
 * status = #completed
 * subject = Reference(Patient-6)
