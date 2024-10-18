@@ -21,7 +21,6 @@ Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 // Local
 // Codesystems
 Alias: $CodexRTCategoryCS = http://snomed.info/sct //$SCT_TBD // 
-Alias: $SCT = http://snomed.info/sct
 
 // Varian
 Alias: VarianDoseReferenceId = http://varian.com/fhir/identifier/radiotherapyDoseReferenceId
