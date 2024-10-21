@@ -3,8 +3,8 @@ This extension is used to capture the type of intrafraction verificiation used d
 
 | **Intrafraction Verification Method** | **Procedure Code** | **Qualifier Code** | 
 |----------------------------------|----------------|----------------|
-| X-ray  - one source        | SCT#168537006 Plain radiography (procedure) |  SCT#50607009 "Singular (qualifier value)  or absent |   
-| X-ray  - multiple sources  | SCT#168537006 Plain radiography (procedure) |  SCT#255204007 "Multiple (qualifier value) |
+| X-ray  - one source        | SCT#168537006 Plain X-ray (procedure) |  SCT#50607009 "Singular (qualifier value)  or absent |   
+| X-ray  - multiple sources  | SCT#168537006 Plain X-ray (procedure) |  SCT#255204007 "Multiple (qualifier value) |
 | Ultrasound                 | SCT#16310003 Ultrasonography (procedure) |     None           |
 | CT                 | SCT#77477000 Computed tomography (procedure) |     None           |
 | MRI                | SCT#113091000 Magnetic resonance imaging (procedure) |     None           |

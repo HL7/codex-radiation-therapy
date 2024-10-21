@@ -229,3 +229,6 @@ ERROR: /Users/skravitz/git/Codex-Radiation-Therapy/output/StructureDefinition-co
 ERROR: /Users/skravitz/git/Codex-Radiation-Therapy/output/StructureDefinition-codexrt-radiotherapy-treatment-plan-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/p/a at Line 882, column 976: The link 'http://hl7.org/fhir/us/core/STU5.0.1/servicerequest-example-di.html' for "CT Scan example" cannot be resolved
 ERROR: /Users/skravitz/git/Codex-Radiation-Therapy/output/StructureDefinition-codexrt-radiotherapy-treatment-plan-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/p/a at Line 1438, column 457: The link 'http://hl7.org/fhir/us/core/STU5.0.1/servicerequest-example-di.html' for "CT Scan example" cannot be resolved
 ERROR: /Users/skravitz/git/Codex-Radiation-Therapy/output/StructureDefinition-codexrt-radiotherapy-treatment-plan-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/p/a at Line 1442, column 964: The link 'http://hl7.org/fhir/us/core/STU5.0.1/servicerequest-example-di.html' for "CT Scan example" cannot be resolved
+
+# THe inclusion of this code is intentional.   We support this code as an option for backwards compatibility. 
+INFORMATION: Condition/Diagnosis-101-Breast: Condition.code.coding[0].code: The code '372064008' is valid but is not active
