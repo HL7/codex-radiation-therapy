@@ -20,7 +20,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-04-22B-01-Breast-2P-3V-Common
 * basedOn[+] = Reference(RadiotherapyPlannedCourse-XRTS-04-22B-01-Breast-2P-3V)
 * subject = Reference(Patient-XRTS-04-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
-* reasonCode = SCT#372064008 "Malignant neoplasm of female breast (disorder)"
+* reasonCode = SCT#254837009 "Malignant neoplasm of breast (disorder)"
 //* reasonReference = Reference(Condition/Diagnosis-101-Breast"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * insert $CodexRTCategoryCode
@@ -291,7 +291,7 @@ Usage: #example
   * value = "urn:oid:1.2.246.352.74.842418.2121.20150602151.04.01.22.1"
 * status = #completed
 * subject = Reference(Patient-XRTS-04-22B)
-* reasonCode = SCT#372064008 "Malignant neoplasm of female breast (disorder)"
+* reasonCode = SCT#254837009 "Malignant neoplasm of breast (disorder)"
 * bodySite = SCT#76752008 "Breast structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#51440002	"Right and left (qualifier value)"
 * insert $CodexRTCategoryCodeRequired
