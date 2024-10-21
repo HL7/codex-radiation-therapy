@@ -73,15 +73,15 @@ RuleSet: MotionManagement
 Invariant:  codexrt-motion-management-none
 Description: "If the respiratory motion management is 'none', then no other respiratory motion management extensions are allowed.
 They would also be 'none' or contradict the 'none'.
-SNOMEDCT code 721031000124102 is \"Radiotherapy without respiratory motion management (regime/therapy)\""
+SNOMEDCT code 721031000124102 is \"External beam radiotherapy without respiratory motion management (procedure)\""
 Severity: #error
-Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and value.exists(coding.exists(code = '721031000124102' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs'))) implies extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management').count() = 1"
+Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and value.exists(coding.exists(code = '721031000124102' and system = 'http://snomed.info/sct'))) implies extension.where(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management').count() = 1"
 
 Invariant:  codexrt-free-breathing-technique
 Description: "The extension for the technique of free-breathing motion management is only allowed if motion management is free-breathing.
-SNOMEDCT code 721071000124104 is \"Radiotherapy with free breathing (regime/therapy)\""
+SNOMEDCT code 721071000124104 is \"External beam radiotherapy with free breathing (procedure)\""
 Severity: #error
-Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-free-breathing-motion-mgmt-technique') implies extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and value.exists(coding.exists(code = '721071000124104' and system = 'http://hl7.org/fhir/us/codex-radiation-therapy/CodeSystem/snomed-requested-cs')))"
+Expression: "extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-free-breathing-motion-mgmt-technique') implies extension.exists(url = 'http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-respiratory-motion-management' and value.exists(coding.exists(code = '721071000124104' and system = 'http://snomed.info/sct')))"
 
 
 RuleSet: RadiotherapyRequestCommon
