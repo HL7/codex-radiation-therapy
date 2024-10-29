@@ -8,7 +8,7 @@ Usage: #example
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
-* code = SCT#372064008 "Malignant neoplasm of female breast (disorder)"
+* code = SCT#254837009 "Malignant neoplasm of breast (disorder)"
 * subject = Reference(Patient/Patient-5)
 * onsetDateTime = "2018-03-16"
 * asserter = Reference(Practitioner/Practitioner-1005)
