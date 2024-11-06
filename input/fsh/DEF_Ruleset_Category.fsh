@@ -3,7 +3,7 @@ RuleSet: CategorySlicing
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
-* category 1.. MS
+* category 1..* MS
 * category contains
   radiotherapy 1..1 
 // "The preferred (108290001) or backward compatibility (1287742003) category code must be present"

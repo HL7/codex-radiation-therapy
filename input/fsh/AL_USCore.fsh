@@ -21,6 +21,7 @@ Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-ra
 
 // This makes it easy to change the IG to build on USCoreServiceRequest when the time is right.
 //Alias: $ServiceRequest = ServiceRequest 
-Alias: $ServiceRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+Alias: $ServiceRequest = USCoreServiceRequest
+
 
 
