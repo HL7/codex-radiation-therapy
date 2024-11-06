@@ -23,7 +23,7 @@ license: CC0-1.0
 dependencies:
   hl7.fhir.uv.extensions: 5.1.0-cibuild
   hl7.fhir.us.core: 
-    version: 5.0.1
+    version: 6.1.0
     id: hl7fhiruscore
   hl7.fhir.us.mcode: 
     version: current
