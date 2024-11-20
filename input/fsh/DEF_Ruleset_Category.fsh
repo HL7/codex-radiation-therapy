@@ -1,5 +1,6 @@
 RuleSet: CategorySlicing
-* category ^slicing.discriminator.type = #pattern
+// * category ^slicing.discriminator.type = #pattern -- warning in IGP 1.7.2
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
