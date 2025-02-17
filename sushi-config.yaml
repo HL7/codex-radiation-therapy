@@ -26,7 +26,7 @@ dependencies:
     version: 6.1.0
     id: hl7fhiruscore
   hl7.fhir.us.mcode: 
-    version: current
+    version: 4.0.0
     id: fhirmcode
   hl7.fhir.uv.ae-research-ig:
     version: 1.0.1
