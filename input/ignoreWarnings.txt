@@ -197,3 +197,12 @@ INFORMATION: StructureDefinition/codexrt-radiotherapy-planned-phase: StructureDe
 INFORMATION: StructureDefinition/codexrt-radiotherapy-planned-phase: StructureDefinition.snapshot.element[88].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/codexrt-radiotherapy-treatment-plan: StructureDefinition.differential.element[33].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/codexrt-radiotherapy-treatment-plan: StructureDefinition.snapshot.element[90].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# CodexRT Depends on the latest published ae-research-ig, and this issue relates to that IG, not codexRT.
+INFORMATION: StructureDefinition/codexrt-radiotherapy-adverse-event: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# This requirement came into force following the approval of the CodexRT IG 
+WARNING: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+
+# This requirement came into force following the approval of the CodexRT IG 
+ERROR: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: ImplementationGuide: HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
