@@ -207,5 +207,5 @@ WARNING: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: Implementation
 # This requirement came into force following the approval of the CodexRT IG 
 ERROR: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: ImplementationGuide: HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
 
-# New Warning... Unclear what it means
+# New Warning... the AE IG is indeed based on FHIR 5.0.0.   All that CodexRT takes from AE is two trivial extensions and their associated valuesets.  I think this dependency is safe.  These extensions and valuesets could be recapitulated in this IG to avoid this warning, but I think the cure would be worse than the illness.
 WARNING: This IG is version 4.0.1, while the IG 'hl7.fhir.uv.ae-research-ig' is from version 5.0.0
