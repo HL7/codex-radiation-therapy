@@ -206,3 +206,6 @@ WARNING: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: Implementation
 
 # This requirement came into force following the approval of the CodexRT IG 
 ERROR: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: ImplementationGuide: HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+
+# New Warning... Unclear what it means
+WARNING: This IG is version 4.0.1, while the IG 'hl7.fhir.uv.ae-research-ig' is from version 5.0.0
