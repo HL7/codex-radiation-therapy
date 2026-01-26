@@ -7,7 +7,7 @@ Usage: #example
 * meta.security = ActReason#HTEST
 * identifier[+]
   * use = #official
-  * system = "http://hl7.org.fhir/sid/us-npi"
+  * system = "http://hl7.org/fhir/sid/us-npi"
   * value = "19941339108"
 * identifier[+]
   * use = #usual

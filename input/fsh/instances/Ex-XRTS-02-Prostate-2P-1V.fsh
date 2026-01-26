@@ -23,7 +23,7 @@ RuleSet: RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V-Common
 * subject = Reference(Patient-XRTS-02-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
-* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* bodySite[+] = SCT#41216001 "Structure of prostate (body structure)"
 * insert $CodexRTCategoryCode
 
 Instance: RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V-1Fx
@@ -85,7 +85,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-01-Primary-Common
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V)
 * subject = Reference(Patient-XRTS-02-22B)
 * performedPeriod.start = "2021-09-06T13:15:17+01:00"
-* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* bodySite[+] = SCT#41216001 "Structure of prostate (body structure)"
 * insert $CodexRTCategoryCode
 
 Instance: RadiotherapyTreatedPhase-XRTS-02-22B-01-01-Primary-1Fx
@@ -137,7 +137,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-02-22B-01-02-PlanChange-Common
 * basedOn[+] = Reference(RadiotherapyPlannedPhase-XRTS-02-22B-01-02-PlanChange)
 * partOf = Reference(RadiotherapyCourseSummary-XRTS-02-22B-01-Prostate-2P-1V)
 * subject = Reference(Patient-XRTS-02-22B)
-* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* bodySite[+] = SCT#41216001 "Structure of prostate (body structure)"
 * performedPeriod.start = "2021-09-13T13:15:17+01:00"
 * insert $CodexRTCategoryCode
 
@@ -198,7 +198,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient-XRTS-02-22B)
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate"
-* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* bodySite[+] = SCT#41216001 "Structure of prostate (body structure)"
 * insert $CodexRTCategoryCodeRequired
 
 // --- Planned Phases ---------------------------------------------------------------------------------
@@ -232,7 +232,7 @@ Usage: #example
 * basedOn[=].display = "C1Prostate"
 * status = #revoked
 * subject = Reference(Patient-XRTS-02-22B)
-* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* bodySite[+] = SCT#41216001 "Structure of prostate (body structure)"
 * insert $CodexRTCategoryCodeRequired
 
 Instance: RadiotherapyPlannedPhase-XRTS-02-22B-01-02-PlanChange
@@ -264,7 +264,7 @@ Usage: #example
 * replaces = Reference(RadiotherapyPlannedPhase-XRTS-02-22B-01-01-Primary)
 * status = #completed
 * subject = Reference(Patient-XRTS-02-22B)
-* bodySite[+] = SCT#41216001 "Prostatic structure (body structure)"
+* bodySite[+] = SCT#41216001 "Structure of prostate (body structure)"
 * insert $CodexRTCategoryCodeRequired
 
 // --- Radiotherapy Volumes ---------------------------------------------------------------------------------
@@ -284,7 +284,7 @@ Usage: #example
   * system = DICOMUID
   * value = "urn:oid:1.2.246.352.71.842418.2121.20150602151.02.01.22.1" // DICOM UID
 * morphology = SCT#228793007 "Planning target volume (observable entity)" // type of volume
-* location = SCT#41216001 "Prostatic structure (body structure)"
+* location = SCT#41216001 "Structure of prostate (body structure)"
 * locationQualifier[+] = SCT#255503000 "Entire (qualifier value)"
 * patient = Reference(Patient-XRTS-02-22B)
 
