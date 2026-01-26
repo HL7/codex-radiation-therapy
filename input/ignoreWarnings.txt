@@ -184,6 +184,20 @@ INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-03-22B-01-01-Primary: 
 INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-03-22B-01-01-Primary: ServiceRequest.extension[7].extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: ServiceRequest/RadiotherapyPlannedPhase-XRTS-03-22B-01-01-Primary: ServiceRequest.extension[7].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-dose-planned-to-volume|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
+# https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925 -- Grahame says these can be ignored 11/25
+WARNING: StructureDefinition/codexrt-radiotherapy-course-prescription: StructureDefinition.differential.element[25].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-course-prescription: StructureDefinition.snapshot.element[84].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-phase-prescription: StructureDefinition.differential.element[28].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-phase-prescription: StructureDefinition.snapshot.element[85].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-plan-prescription: StructureDefinition.differential.element[29].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-plan-prescription: StructureDefinition.snapshot.element[86].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-planned-course: StructureDefinition.differential.element[29].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-planned-course: StructureDefinition.snapshot.element[87].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-planned-phase: StructureDefinition.differential.element[31].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-planned-phase: StructureDefinition.snapshot.element[88].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-treatment-plan: StructureDefinition.differential.element[33].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/codexrt-radiotherapy-treatment-plan: StructureDefinition.snapshot.element[90].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+
 # SUPPRESS 'The discriminator type 'pattern' has been deprecated' WARNINGS that are in US Core 6.1.0. See Grahame Grieve's comment in https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
 INFORMATION: StructureDefinition/codexrt-radiotherapy-course-prescription: StructureDefinition.differential.element[25].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/codexrt-radiotherapy-course-prescription: StructureDefinition.snapshot.element[84].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
@@ -205,7 +219,16 @@ INFORMATION: StructureDefinition/codexrt-radiotherapy-adverse-event: StructureDe
 WARNING: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
 
 # This requirement came into force following the approval of the CodexRT IG 
-ERROR: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: ImplementationGuide: HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+# ERROR: ImplementationGuide/hl7.fhir.us.codex-radiation-therapy: ImplementationGuide: HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
 
 # New Warning... the AE IG is indeed based on FHIR 5.0.0.   All that CodexRT takes from AE is two trivial extensions and their associated valuesets.  I think this dependency is safe.  These extensions and valuesets could be recapitulated in this IG to avoid this warning, but I think the cure would be worse than the illness.
-WARNING: This IG is version 4.0.1, while the IG 'hl7.fhir.uv.ae-research-ig' is from version 5.0.0
+# WARNING: This IG is version 4.0.1, while the IG 'hl7.fhir.uv.ae-research-ig' is from version 5.0.0
+
+# Deprecation message is new and does not refer to any element used in the current IG
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# This message appeared following TSC approval of publication of STU 1.0 upgrading to newer versions will be considered in future updates
+The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
+
+# The following error is internal to the IG generator and can be ignored
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'

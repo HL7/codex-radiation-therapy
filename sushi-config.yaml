@@ -3,6 +3,11 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.codex-radiation-therapy
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: cgp
 canonical: http://hl7.org/fhir/us/codex-radiation-therapy
 name: CodeX-Radiation-Therapy
 status: active
@@ -163,6 +168,3 @@ groups:
     - IntrafractionVerification
   #  - AdverseEventSeverityOrGrade
 
-extension:
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
-    valueCode: cgp
