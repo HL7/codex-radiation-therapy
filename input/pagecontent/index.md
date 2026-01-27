@@ -53,7 +53,7 @@ In addition to information obtained from subject matter experts, several existin
 - IHE Systematized Nomenclature of Medicine – Clinical Terms (SNOMED CT) Set (<https://wiki.ihe.net/index.php/SNOMED_CT_IHE_Set>)
 - Global Patient Set (GPS). The project team intends to include values from the IHE SNOMED CT Set into the SNOMED GPS.
 
-In addition, material was drawn from the [USCore][US Core Implementation Guide] and the [mCODE][mCODE Implementation Guide].
+In addition, material was drawn from the [USCore](https://hl7.org/fhir/us/core/STU6.1/index.html) and the [mCODE](https://hl7.org/fhir/us/mcode).
 
 
 {% include markdown-link-references.md %}
