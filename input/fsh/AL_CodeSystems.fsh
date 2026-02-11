@@ -23,12 +23,12 @@ Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias: $CodexRTCategoryCS = http://snomed.info/sct //$SCT_TBD // 
 
 // Varian
-Alias: VarianDoseReferenceId = http://varian.com/fhir/identifier/radiotherapyDoseReferenceId
-Alias: VarianRadiotherapyCourseId = http://varian.com/fhir/identifier/radiotherapyCourseId
-Alias: VarianRadiotherapyPhaseId = http://varian.com/fhir/identifier/radiotherapyPhaseId
-Alias: VarianRadiotherapyPlanId = http://varian.com/fhir/identifier/radiotherapyPlanId
-Alias: VarianRadiotherapyFractionId = http://varian.com/fhir/identifier/radiotherapyFractionId
-Alias: VarianRadiotherapyPrescriptionId = http://varian.com/fhir/identifier/radiotherapyPrescriptionId
+Alias: VarianDoseReferenceId = http://example.com/varian/fhir/identifier/radiotherapyDoseReferenceId
+Alias: VarianRadiotherapyCourseId = http://example.com/varian/fhir/identifier/radiotherapyCourseId
+Alias: VarianRadiotherapyPhaseId = http://example.com/varian/fhir/identifier/radiotherapyPhaseId
+Alias: VarianRadiotherapyPlanId = http://example.com/varian/fhir/identifier/radiotherapyPlanId
+Alias: VarianRadiotherapyFractionId = http://example.com/varian/fhir/identifier/radiotherapyFractionId
+Alias: VarianRadiotherapyPrescriptionId = http://example.com/varian/fhir/identifier/radiotherapyPrescriptionId
 
 //CTCAE CodeSystems
 Alias:   NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl

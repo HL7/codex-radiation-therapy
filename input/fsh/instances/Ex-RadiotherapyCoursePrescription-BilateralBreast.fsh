@@ -363,7 +363,7 @@ Usage: #example
 * identifier[+]
   * use = #usual
   * type = v2-0203#MR "Medical Record Number"
-  * system = "http://hospital.smarthealthit.org"
+  * system = "http://example.com/hospital/smarthealthit"
   * value = "101101101"
 * name[+]
   * use = #usual

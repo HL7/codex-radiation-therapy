@@ -11,7 +11,7 @@ Usage: #example
   * value = "19941339108"
 * identifier[+]
   * use = #usual
-  * system = "http://varian.com/fhir/identifier/practitionerUserName"
+  * system = "http://example.com/varian/fhir/identifier/practitionerUserName"
   * value = "aria\\user"
 * name[+]
   * use = #usual

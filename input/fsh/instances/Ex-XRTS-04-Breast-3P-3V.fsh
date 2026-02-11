@@ -106,7 +106,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-01-LeftBreastTang-Common
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SCT#721071000124104 "External beam radiotherapy with free breathing (procedure)"
 * extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SCT#721061000124106 "External beam radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
-  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
+  * system = "http://example.com/varian/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary - Left Breast Tangents"
 * identifier[official]
   * system = DICOMUID
@@ -173,7 +173,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-02-RightBreastTang-Common
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SCT#721071000124104 "External beam radiotherapy with free breathing (procedure)"
 * extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SCT#721061000124106 "External beam radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
-  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
+  * system = "http://example.com/varian/fhir/identifier/radiotherapyPhaseId"
   * value = "Right Breast Tangents"
 * identifier[official]
   * system = DICOMUID
@@ -211,7 +211,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-04-22B-01-03-LeftBreastBoost-Common
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SCT#721071000124104 "External beam radiotherapy with free breathing (procedure)"
 * extension[freeBreathingMotionManagementTechnique][+].valueCodeableConcept = SCT#721061000124106 "External beam radiotherapy with respiratory gating (procedure)"
 * identifier[displayName]
-  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
+  * system = "http://example.com/varian/fhir/identifier/radiotherapyPhaseId"
   * value = "Left Breast Boost"
 * identifier[official]
   * system = DICOMUID
@@ -478,7 +478,7 @@ Usage: #example
 * extension[us-core-birthsex].valueCode = 	http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#F
 * identifier[+]
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
-  * system = "http://hospital.smarthealthit.org"
+  * system = "http://example.com/hospital/smarthealthit"
   * value = "XRTS-04_22B"
 * name[+]
   * use = #usual

@@ -304,7 +304,7 @@ Usage: #example
 * identifier[+]
   * use = #usual
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
-  * system = "http://hospital.smarthealthit.org"
+  * system = "http://example.com/hospital/smarthealthit"
   * value = "XRTS-02_22B"
 * name[+]
   * use = #usual

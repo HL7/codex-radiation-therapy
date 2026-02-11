@@ -48,7 +48,7 @@ Usage: #example
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonReference = Reference(Diagnosis-2-Prostate)
-* bodySite = SCT#41216001 "Prostatic structure (body structure)" // "Body site that is treated with Radiotherapy"
+* bodySite = SCT#41216001 "Structure of prostate (body structure)" // "Body site that is treated with Radiotherapy"
 * bodySite.text = "Prostate"
 * locationReference = Reference(TreatmentLocation-1)
 * insert $CodexRTCategoryCodeRequired
@@ -98,7 +98,7 @@ Usage: #example
 * reasonCode = ICD10#C61 "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonCode.text = "Malignant neoplasm of prostate" //Try to use Condition resource for diagnosis in XRTS
 * reasonReference = Reference(Diagnosis-2-Prostate)
-* bodySite = SCT#41216001 "Prostatic structure (body structure)" // This is the SCT term for TG263 'Prostate'
+* bodySite = SCT#41216001 "Structure of prostate (body structure)" // This is the SCT term for TG263 'Prostate'
 * bodySite.text = "Prostate"
 * locationReference = Reference(TreatmentLocation-1)
 * insert $CodexRTCategoryCodeRequired

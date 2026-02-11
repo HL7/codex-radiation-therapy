@@ -9,7 +9,7 @@ Usage: #example
 * identifier[+]
   * use = #usual
   * type = v2-0203#MR "Medical Record Number"
-  * system = "http://hospital.smarthealthit.org"
+  * system = "http://example.com/hospital/smarthealthit"
   * value = "1032705"
 * name[+]
   * use = #usual
@@ -41,7 +41,7 @@ Usage: #example
 * identifier[+].
   * use = #usual
   * type = v2-0203#MR "Medical Record Number"
-  * system = "http://hospital.smarthealthit.org"
+  * system = "http://example.com/hospital/smarthealthit"
   * value = "1032706"
 * name[+]
   * use = #usual

@@ -114,7 +114,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-01-01-Primary-Common
   * extension[technique][+].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SCT#721031000124102 "External beam radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
-  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
+  * system = "http://example.com/varian/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
 * identifier[official]
   * system = DICOMUID
@@ -167,7 +167,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-05-22B-02-01-Primary-Common
   * extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric modulated arc therapy (procedure)"
 * extension[respiratoryMotionManagement][+].valueCodeableConcept = SCT#721031000124102 "External beam radiotherapy without respiratory motion management (procedure)"
 * identifier[displayName]
-  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
+  * system = "http://example.com/varian/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
 * identifier[official]
   * system = DICOMUID
@@ -384,7 +384,7 @@ Usage: #example
 * identifier[+]
   * use = #usual
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
-  * system = "http://hospital.smarthealthit.org"
+  * system = "http://example.com/hospital/smarthealthit"
   * value = "XRTS-05_22B"
 * name[+]
   * use = #usual

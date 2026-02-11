@@ -135,7 +135,7 @@ RuleSet: RadiotherapyTreatedPhase-XRTS-03-22B-01-01-Primary-Common
   * extension[energy][+].valueCodeableConcept = UCUM#MV "MV"
 
 * identifier[displayName]
-  * system = "http://varian.com/fhir/identifier/radiotherapyPhaseId"
+  * system = "http://example.com/varian/fhir/identifier/radiotherapyPhaseId"
   * value = "Primary"
 * identifier[official]
   * system = DICOMUID
@@ -409,7 +409,7 @@ Usage: #example
 * identifier[+]
   * use = #usual
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
-  * system = "http://hospital.smarthealthit.org"
+  * system = "http://example.com/hospital/smarthealthit"
   * value = "XRTS-03_22B"
 * name[+]
   * use = #usual
