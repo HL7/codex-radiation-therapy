@@ -3,7 +3,7 @@ Parent: $ServiceRequest
 Id: codexrt-radiotherapy-treatment-plan
 Title: "Radiotherapy Treatment Plan"
 Description: "A Radiotherapy Treatment Plan resource describes the radiotherapy treatment that is planned to be delivered with a single treatment plan."
-* ^status = #draft
+* ^status = #active
 * insert RadiotherapyPlannedPhaseAndTreatmentPlanCommon
 * code = SCT#1255724003 "Radiotherapy treatment plan (regime/therapy)"
 * extension contains

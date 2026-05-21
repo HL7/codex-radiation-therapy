@@ -4,7 +4,7 @@ Id: codexrt-radiotherapy-adverse-event
 Title: "Radiotherapy Adverse Event"
 Description: "A Radiotherapy Adverse Event is an adverse event resulting from radiation toxicity.   This profile is based on the work of the [Vulcan project](http://www.hl7.org/vulcan/).
 Future versions of this IG should reference adverse event profiles from Vulcan, once they are published.  The current profile is inspired by the work of Vulcan and Common Terminology Criteria (CTC) Adverse Event (CTCAE)."
-* ^status = #draft
+* ^status = #active
 * ^experimental = true
 * subject and date and outcome and recorder and encounter and actuality MS
 * actuality = #actual

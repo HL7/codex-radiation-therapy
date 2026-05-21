@@ -3,7 +3,7 @@ Parent: $mCODECancerDiseaseStatus
 Id: codexrt-radiotherapy-disease-status
 Title: "Radiotherapy Disease Status"
 Description: "Disease Status Reported by Radiation Oncologist"
-* ^status = #draft
+* ^status = #active
 // can't do this, so we add extension
 //  * focus only Reference($mCODEPrimaryCancerCondition or $mCODESecondaryCancerCondition or $mCODETumor or RadiotherapyVolume)
 * extension contains

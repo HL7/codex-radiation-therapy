@@ -4,7 +4,7 @@ Id: codexrt-radiotherapy-volume
 Title: "Radiotherapy Volume"
 Description: "A volume of the body used in radiotherapy planning or treatment delivery. This corresponds to the Conceptual Volume in DICOM."
 // * obeys mcode-description-or-id-required
-* ^status = #draft
+* ^status = #active
 * identifier  MS // Sushi will set the required minimum slices automatically based on slice cardinalities.  No value in hardwiring it here.
 * identifier ^definition = "SHALL have a display name with use = usual and at least one globally unique technical identifier, for example, the Conceptual Volume UID used in DICOM."
 //* identifier ^slicing.discriminator.type = #value

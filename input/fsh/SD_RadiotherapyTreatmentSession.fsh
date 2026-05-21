@@ -3,7 +3,7 @@ Parent:   USCoreEncounter
 Id:       codexrt-radiotherapy-treatment-session
 Title: "Radiotherapy Treatment Session"
 Description: "A radiotherapy treatment session with the patient."
-* ^status = #draft
+* ^status = #active
 
 * extension contains
   RadiotherapySessionNumber named radiotherapySessionNumber 0..1 MS

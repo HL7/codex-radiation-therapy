@@ -5,7 +5,7 @@ Title: "Radiotherapy Treated Plan"
 Description: "A summary of radiotherapy treatment delivered with a single treatment plan."
 * insert RadiotherapyTreatedPhaseAndPlanCommon
 * insert BodySiteQualifierAndLaterality
-* ^status = #draft
+* ^status = #active
 * extension contains
     DicomReference named radiotherapyDicomRecord 0..*
 * code = SCT#1255724003 "Radiotherapy treatment plan (regime/therapy)"

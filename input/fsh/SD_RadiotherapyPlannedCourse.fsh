@@ -3,7 +3,7 @@ Parent: $ServiceRequest
 Id: codexrt-radiotherapy-planned-course
 Title: "Radiotherapy Planned Course"
 Description: "A Radiotherapy Planned Course covers all radiotherapy plans to deliver a complete course."
-* ^status = #draft
+* ^status = #active
 * insert ModalityAndTechniqueZeroToMany
 * extension contains
     $mCODEProcedureIntent named treatmentIntent 0..1 MS and

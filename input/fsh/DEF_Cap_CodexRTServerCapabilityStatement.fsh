@@ -96,7 +96,7 @@ Usage: #definition
 * name = "CodeXRTServerCapabilityStatement"
 * description = "CodeX RT Server CapabilityStatement"
 * rest.mode = #server
-* status = #draft
+* status = #active
 * date = "2020-11-23"
 * kind = #requirements
 * fhirVersion = #4.0.1

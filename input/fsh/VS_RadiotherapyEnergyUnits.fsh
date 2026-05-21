@@ -6,7 +6,7 @@ For electrons, the maximum energy is given in MeV.
 For photons, the maximum acceleration voltage is given in MV or kV, although those are not units of energy."
 * ^copyright = "This value set includes content from The Unified Code for Units of Measure (UCUM), also known as the UCUM Specification which is copyright ©1999-2021, Regenstrief Institute, Inc. All rights reserved."
 //* ^copyright = "This value set includes content from The Unified Code for Units of Measure (UCUM), also known as the \“UCUM Specification,\” which is copyright ©1999-2021, Regenstrief Institute, Inc. All rights reserved."
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * UCUM#MeV "MeV"
 * UCUM#MV "MV"
