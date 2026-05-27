@@ -151,6 +151,11 @@ WARNING: ValueSet.where(id = 'codexrt-radiotherapy-adverse-event-termVS'): Error
 INFORMATION: AdverseEvent/RadiotherapyAdverseEvent-XRTS-07-22B: AdverseEvent.extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/adverse-event-severity|1.0.0
 INFORMATION: Condition/Diagnosis-1-Breast: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
 INFORMATION: Condition/Diagnosis-2-Prostate: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/conformance-expectation|4.0.1
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/v3-ActReason|2018-08-12
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/v3-ActCode|2018-08-12
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/adverse-event-severity|4.0.1
 
 # Retired extension -- yes included in the base mCODE profile for backward compatibility 
 INFORMATION: StructureDefinition/codexrt-radiotherapy-course-summary: Procedure.extension: The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|4.0.0 is retired
@@ -232,3 +237,9 @@ The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-
 
 # The following error is internal to the IG generator and can be ignored
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+# The concept '108290001' is included for legacy support and its use is flagged as an invariant warning
+The concept '108290001' has a status of inactive and its use should be reviewed
+
+# The following warning is expected and the example demonstrates the invariant working successfully to warn the user about the now deprecated code
+Constraint failed: CategoryPreferred: 'This code 108290001 is inactive and should be used only for backward compatibility. (category.exists() and category.coding.exists( code = '108290001' ).not())' (defined in http://hl7.org/fhir/us/codex-radiation-therapy/StructureDefinition/codexrt-radiotherapy-planned-course)
